@@ -1,9 +1,9 @@
 ---
 title: Home
-description: 
+description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2020-08-05T17:54:57.644Z
-tags: 
+date: 2020-08-05T17:57:52.723Z
+tags: welcome
 editor: markdown
 ---
 
