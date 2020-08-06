@@ -1,8 +1,8 @@
 ---
-title: Layered Defense Plan
+title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T17:17:02.544Z
+date: 2020-08-06T18:14:30.538Z
 tags: 
 editor: markdown
 ---
