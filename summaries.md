@@ -2,7 +2,7 @@
 title: Summaries
 description: Publications referenced or used to align BCSF. 
 published: true
-date: 2020-08-06T18:29:05.418Z
+date: 2020-08-06T18:30:00.213Z
 tags: 
 editor: markdown
 ---
@@ -23,10 +23,10 @@ Where the content came from
 
 No additional notes.
 
-# Layered Defense {.tabset}
-## Section 
 
-`BCSF-SA-LD`
+## Topic 
+
+Layered Defense
 
 ## Source
 
