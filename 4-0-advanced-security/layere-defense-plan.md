@@ -2,7 +2,7 @@
 title: Layered Defense Plan
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T17:01:13.556Z
+date: 2020-08-06T17:17:02.544Z
 tags: 
 editor: markdown
 ---
@@ -45,6 +45,32 @@ Adopting BCSF 1.0 is designed to address this entire area.
 # Internal Network
 
 # Host/Device
+
+Key terms:
+- Device refers to a computer, mobile phone, tablet, or smartwatch.
+- Computer refers to any computer or laptop, regarless of operating system.
+
+Policy Checklist (**choose your options**) 
+
+- [ ] Bring Your Own Device (BYOD) is restricted (see BYOD recommendations).
+- [ ] All devices purchased through existing vendor agreeements.
+- [ ] Device enrollment and provisioning program is used to provision new devices.
+- [ ] Each computer has company managed anti-malware (see anti-malware recommendations). 
+- [ ] Anti-malware uses behavior monitoring in addition to scanning.
+- [ ] Devices are part of a Mobile Device Management deployment.
+- [ ] Devices receive all operating system updates (see patch-management recommendations) within established policy.
+- [ ] Devices receive materially important application updates (see patch-management recommendations) within established policy.
+- [ ] Computers have remote management and monitoring.
+- [ ] Computers have employee monitoring solution.
+- [ ] Devices connect to office WiFi using certificate/RADIUS instead of a password.
+- [ ] Devices have the ability to be wiped when lost or stolen. 
+- [ ] Computers prohibit administrative actions by users.
+- [ ] Devices have encrypted hard drives.
+- [ ] Devices restrict file sharing.
+- [ ] Devices restrict personal cloud accounts.
+- [ ] Devices are audited automatically for compliance.
+- [ ] Devices are audited and reviewed manually for compliance. 
+
 
 # Application
 
