@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T18:22:55.992Z
+date: 2020-08-06T23:22:52.826Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -29,26 +29,81 @@ The current version of Bento Cyber Security Framework suggests small companies f
 
 # People, Policies, and Procedures
 
-Adopting BCSF 1.0 is designed to address this entire area.
+- [ ] Employees undergo background checks. 
+- [ ] Employees must sign NDAs.
+- [ ] Employees must sign BYOD policy.
+- [ ] Employees must sign Information Security policy.
+- [ ] Employees receive onboarding cybersecurity training.
+- [ ] Employees receive routine security awareness training.
+- [ ] Employees security risk is tested routinely.
+- [ ] Vendors must meet attestation requirements. 
+- [ ] Third-party access to data is controlled. 
+- [ ] Everyone is familiar with security incident reporting.
+- [ ] Incident communication method established.
+- [ ] Alarms and monitoring are used to safeguard data. 
+
+**Additionally...**
+> **Bento Cyber Security Framework** is deveoped specifically to cover people, policies, and procedures. It can be adopted in part or as a whole to meet and exceed all requirements in this category.
+{.is-info}
+
+
+- [ ] Organization has chosen to adopt BCSF.
+
 
 # Physical Security
+Key Terms
+- **Equipment** collectively refers to servers, network switches, access points, routers/firewalls, and critical hardware.
 
-## Office
-
-## Network Hardware
-
-## Server/Datcenter
-
+Policy Checklist (**choose your options**) 
+- [ ] Employees work in a safe environment. 
+- [ ] Inventory of all equipment is maintained. 
+- [ ] Visitors cannot access servers or network equipment.
+- [ ] Visitor log is maintained. 
+- [ ] Visitors are escorted and monitored. 
+- [ ] Individual access must be granted.
+- [ ] Equipment uses redundant power systems.
+- [ ] Emergency power is avaialble. 
+- [ ] Unauthorized network devices are detected.
+- [ ] Alternate work-site is available for key staff. 
+- [ ] Failover site(s) is/are available for mission-critical systems.
+- [ ] Data destruction equipment is availble. 
+- [ ] Fire protection.
+- [ ] Water damage protection. 
+- [ ] Temperature and Humidity control.
 
 # Perimeter
+Key Terms
+- **Equipment** collectively refers to servers, network switches, access points, routers/firewalls, and critical hardware.
+
+Policy Checklist (**choose your options**) 
+
+- [ ] Firewalls with advanced-malware and IDS/IPS are deployed.
+- [ ] Firewall traffic reports are reviewed periodically.
+- [ ] Firewalls nofity of configuration changes and anomalies.
+- [ ] Firewall firmware is kept current. 
+- [ ] Firewall performance meets requirements. 
+- [ ] Firewalls support high-level logging in case of incident.
+- [ ] Outbound traffic is under content filtration.
+- [ ] Secure browsing is available for remote workers.
+- [ ] Remote access requires two or more connection methods. 
+- [ ] Firewalls pass URL/traffic to additional processing.
+- [ ] Shadow IT applications are discovered and monitored. 
 
 # Internal Network
+
+- [ ] Guest network is isolated from data network.
+- [ ] Guests are isolated from each-other.
+- [ ] WiFi access points are out of reach. 
+- [ ] WiFi network traffic is encrypted.
+- [ ] WiFi networks require at least a password.
+- [ ] Guests require additional login.
+- [ ] Segmentation technology exists to isolate desired systems.
 
 # Host/Device
 
 Key terms:
-- Device refers to a computer, mobile phone, tablet, or smartwatch.
-- Computer refers to any computer or laptop, regarless of operating system.
+- **Device** refers to a computer, mobile phone, tablet, or smartwatch.
+- **Computer** refers to any computer or laptop, regarless of operating system.
 
 Policy Checklist (**choose your options**) 
 
@@ -58,8 +113,8 @@ Policy Checklist (**choose your options**)
 - [ ] Each computer has company managed anti-malware (see anti-malware recommendations). 
 - [ ] Anti-malware uses behavior monitoring in addition to scanning.
 - [ ] Devices are part of a Mobile Device Management deployment.
-- [ ] Devices receive all operating system updates (see patch-management recommendations) within established policy.
-- [ ] Devices receive materially important application updates (see patch-management recommendations) within established policy.
+- [ ] Devices receive all operating system updates (ref: patch-management) 
+
 - [ ] Computers have remote management and monitoring.
 - [ ] Computers have employee monitoring solution.
 - [ ] Devices connect to office WiFi using certificate/RADIUS instead of a password.
@@ -72,7 +127,12 @@ Policy Checklist (**choose your options**)
 - [ ] Devices are audited and reviewed manually for compliance. 
 
 
-# Application
+# Applications
+
+### Internal
+- [ ] Devices receive materially important application updates (ref: patch-management) 
+
+### SaaS
 
 # Data
 
