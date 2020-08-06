@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T23:22:52.826Z
+date: 2020-08-06T23:25:52.726Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -18,6 +18,9 @@ The current version of Bento Cyber Security Framework suggests small companies f
 
 
 ## Covered Areas:
+> Understanding scope is a critical step in using the list below effectively.  Materially signficant people, processes, systems, and devices are they key subject. If the entire list feels overwhelming, rethink your scope.
+{.is-success}
+
 
 1. People, Policies, and Procedures
 1. Physical Security
@@ -26,6 +29,7 @@ The current version of Bento Cyber Security Framework suggests small companies f
 1. Host/Device
 1. Application
 1. Data
+
 
 # People, Policies, and Procedures
 
@@ -133,6 +137,9 @@ Policy Checklist (**choose your options**)
 - [ ] Devices receive materially important application updates (ref: patch-management) 
 
 ### SaaS
+- [ ] All authentication events are tracked. 
+- [ ] Zero Trust Access is available. 
+- [ ] 
 
 # Data
 
