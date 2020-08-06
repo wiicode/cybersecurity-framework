@@ -2,7 +2,7 @@
 title: Getting Started...
 description: 
 published: true
-date: 2020-08-05T18:12:08.265Z
+date: 2020-08-06T16:33:06.425Z
 tags: 
 editor: markdown
 ---
@@ -46,8 +46,8 @@ Your first step is to identify your essential data. That is, the information tha
 
 Whether it's on a USB stick, on a separate drive or a separate computer, access to data backups should be restricted so that they:
 
-are not accessible by staff
-are not permanently connected (either physically or over a local network) to the device holding the original copy
+- are not accessible by staff
+- are not permanently connected (either physically or over a local network) to the device holding the original copy
 
 Ransomware (and other malware) can often move to attached storage automatically, which means any such backup could also be infected, leaving you with no backup to recover from. For more resilience, you should consider storing your backups in a different location, so fire or theft won't result in you losing both copies. Cloud storage solutions (see below) are a cost-effective and efficient way of achieving this.
 
@@ -101,9 +101,9 @@ We all know how tempting it is to use USB drives or memory cards to transfer fil
 
 When drives and cards are openly shared, it becomes hard to track what they contain, where they've been, and who has used them. You can reduce the likelihood of infection by:
 
-blocking access to physical ports for most users
-using antivirus tools
-only allowing approved drives and cards to be used within your organisation - and nowhere else
+- blocking access to physical ports for most users
+- using antivirus tools
+- only allowing approved drives and cards to be used within your organisation - and nowhere else
 
 Make these directives part of your company policy to prevent your organisation being exposed to unnecessary risks. You can also ask staff to transfer files using alternative means (such as by email or cloud storage), rather than via USB.
 
@@ -129,10 +129,10 @@ A suitably complex PIN or password (opposed to a simple one that can be easily g
 
 Staff are more likely to have their tablets or phones stolen (or lose them) when they are away from the office or home. Fortunately, the majority of devices include free web-based tools that are invaluable should you lose your device. You can use them to:
 
-track the location of a device
-remotely lock access to the device (to prevent anyone else using it)
-remotely erase the data stored on the device
-retrieve a backup of data stored on the device
+- track the location of a device
+- remotely lock access to the device (to prevent anyone else using it)
+- remotely erase the data stored on the device
+- retrieve a backup of data stored on the device
 
 Setting up these tools on all your organisation's devices may seem daunting at first, but by using mobile device management software, you can set up your devices to a standard configuration with a single click.
 
@@ -148,8 +148,8 @@ Just like the operating systems on your organisation's devices, all the applicat
 
 When you use public Wi-Fi hotspots (for example in hotels or coffee shops), there is no way to easily find out who controls the hotspot, or to prove that it belongs to who you think it does. If you connect to these hotspots, somebody else could access:
 
-what you're working on whilst connected
-your private login details that many apps and web services maintain whilst you're logged on
+- what you're working on whilst connected
+- your private login details that many apps and web services maintain whilst you're logged on
 
 The simplest precaution is not to connect to the Internet using unknown hotspots, and instead use your mobile 3G or 4G mobile network, which will have built-in security. This means you can also use 'tethering' (where your other devices such as laptops share your 3G/4G connection), or a wireless 'dongle' provided by your mobile network. You can also use Virtual Private Networks (VPNs), a technique that encrypts your data before it is sent across the Internet. If you're using third party VPNs, you'll need the technical ability to configure it yourself, and should only use VPNs provided by reputable service providers.
 
@@ -201,5 +201,3 @@ Understand the impact of information shared on your organisation's website and s
 Be aware of what your partners, contractors and suppliers give away about your organisation online.
 
 Help your staff understand how sharing their personal information can affect them and your organisation. This is not about expecting people to remove all traces of themselves from the Internet. Instead support them as they manage their digital footprint, shaping their profile so that it works for them and the organisation.
-
-CPNI’s Digital Footprint Campaign contains a range of useful materials (including posters and booklets) to help organisations work with employees to minimise online security risks.
