@@ -2,7 +2,7 @@
 title: Layered Defense Plan
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T16:56:41.505Z
+date: 2020-08-06T16:57:52.447Z
 tags: 
 editor: markdown
 ---
@@ -15,6 +15,7 @@ Layered Defense breaks information security into seven key areas and attempts to
 Zero Trust Architecture is a thread model where every action requires validation. Going back to the office worker example above, theoretically that employee would need to receive approval every step of the way.  While that may not work on humans, it is quickly becomin the standard for applications/systems/code.
 
 ![base6428667aaf500fb4c9.png](/article_images/base6428667aaf500fb4c9.png)
+ {.center}
 
 
 ## Covered Areas:
