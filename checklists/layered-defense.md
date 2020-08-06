@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T23:25:52.726Z
+date: 2020-08-06T23:38:04.682Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -106,8 +106,12 @@ Policy Checklist (**choose your options**)
 # Host/Device
 
 Key terms:
+> "**Systems**" is used to collectively represent devices, computers, and hosts.
+{.is-info}
+
 - **Device** refers to a computer, mobile phone, tablet, or smartwatch.
 - **Computer** refers to any computer or laptop, regarless of operating system.
+- **Host** refers to virtual machines or cloud instnces. 
 
 Policy Checklist (**choose your options**) 
 
@@ -129,17 +133,26 @@ Policy Checklist (**choose your options**)
 - [ ] Devices restrict personal cloud accounts.
 - [ ] Devices are audited automatically for compliance.
 - [ ] Devices are audited and reviewed manually for compliance. 
+- [ ] Systems require multi-factor authentication to login.
+- [ ] Systems have configured and immutable timeout/logoff settings.
+- [ ] System transfer or "dump" events are detected. 
 
 
 # Applications
 
 ### Internal
-- [ ] Devices receive materially important application updates (ref: patch-management) 
+- [ ] Maintenance and support is current on all critical apps.
+- [ ] Application updates (ref: patch-management).
+- [ ] Security vulnerabilities are patched. 
 
 ### SaaS
-- [ ] All authentication events are tracked. 
-- [ ] Zero Trust Access is available. 
-- [ ] 
+- [ ] All authentication events are tracked and monitored. 
+- [ ] Zero Trust Access is in use.
+- [ ] No account sharing is allowed.
+- [ ] Suspicious activity is detected.
+- [ ] Audit trails are required. 
+- [ ] Data protection policies are documented and reviewed.
+- [ ] Backups/export automation is in place. 
 
 # Data
 
