@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T23:40:37.330Z
+date: 2020-08-06T23:44:41.928Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -10,15 +10,12 @@ editor: markdown
 # Layered Defense
 
 <img src="/article_images/base6428667aaf500fb4c9.png" align=right width="350px">
+
 The current version of Bento Cyber Security Framework suggests small companies focus on a sound **Layered Defense** strategy while being aware for the increasing need to adopt **Zero Trust Architecture**. The recommendation is to build layered defenses around systems and application swhile increasingly demanding that third-party vendors and SaaS providers practice **Zero Trust Architecture** allowing for incremental improvements and adoption.
 
 **Layered Defense** breaks information security into seven key areas and attempts to guide an organization into building a strategy that protects each layer.  Any system, person, or application granted access into a layer is allowed to perform operations in that layer.  *For example, an office worker allowed into a space can use a comptuer avaialble in that space.*
 
 **Zero Trust Architecture** is a thread model where every action requires validation. Going back to the office worker example above, theoretically that employee would need to receive approval every step of the way.  While that may not work on humans, it is quickly becomin the standard for applications/systems/code.
-
-
-
-
 
 ## Covered Areas:
 > Understanding scope is a critical step in using the list below effectively.  Materially signficant people, processes, systems, and devices are they key subject. If the entire list feels overwhelming, rethink your scope.
@@ -49,19 +46,18 @@ The current version of Bento Cyber Security Framework suggests small companies f
 - [ ] Incident communication method established.
 - [ ] Alarms and monitoring are used to safeguard data. 
 
-**Additionally...**
+#### **Additionally...**
 > **Bento Cyber Security Framework** is deveoped specifically to cover people, policies, and procedures. It can be adopted in part or as a whole to meet and exceed all requirements in this category.
 {.is-info}
-
 
 - [ ] Organization has chosen to adopt BCSF.
 
 
 # Physical Security
-Key Terms
+#### Key Terms:
 - **Equipment** collectively refers to servers, network switches, access points, routers/firewalls, and critical hardware.
 
-Policy Checklist (**choose your options**) 
+#### Policy Checklist (**choose your options**) 
 - [ ] Employees work in a safe environment. 
 - [ ] Inventory of all equipment is maintained. 
 - [ ] Visitors cannot access servers or network equipment.
@@ -78,11 +74,12 @@ Policy Checklist (**choose your options**)
 - [ ] Water damage protection. 
 - [ ] Temperature and Humidity control.
 
+
 # Perimeter
-Key Terms
+#### Key Terms:
 - **Equipment** collectively refers to servers, network switches, access points, routers/firewalls, and critical hardware.
 
-Policy Checklist (**choose your options**) 
+#### Policy Checklist (**choose your options**) 
 
 - [ ] Firewalls with advanced-malware and IDS/IPS are deployed.
 - [ ] Firewall traffic reports are reviewed periodically.
@@ -96,8 +93,11 @@ Policy Checklist (**choose your options**)
 - [ ] Firewalls pass URL/traffic to additional processing.
 - [ ] Shadow IT applications are discovered and monitored. 
 
-# Internal Network
 
+# Internal Network
+#### Key Terms:
+
+#### Policy Checklist (**choose your options**) 
 - [ ] Guest network is isolated from data network.
 - [ ] Guests are isolated from each-other.
 - [ ] WiFi access points are out of reach. 
@@ -106,9 +106,10 @@ Policy Checklist (**choose your options**)
 - [ ] Guests require additional login.
 - [ ] Segmentation technology exists to isolate desired systems.
 
+
 # Host/Device
 
-Key terms:
+#### Key Terms:
 > "**Systems**" is used to collectively represent devices, computers, and hosts.
 {.is-info}
 
@@ -116,7 +117,8 @@ Key terms:
 - **Computer** refers to any computer or laptop, regarless of operating system.
 - **Host** refers to virtual machines or cloud instnces. 
 
-Policy Checklist (**choose your options**) 
+
+#### Policy Checklist (**choose your options**) 
 
 - [ ] Bring Your Own Device (BYOD) is restricted (see BYOD recommendations).
 - [ ] All devices purchased through existing vendor agreeements.
@@ -142,13 +144,16 @@ Policy Checklist (**choose your options**)
 
 
 # Applications
+#### Key Terms:
 
-### Internal
+#### Policy Checklist:
+
+##### Internal
 - [ ] Maintenance and support is current on all critical apps.
 - [ ] Application updates (ref: patch-management).
 - [ ] Security vulnerabilities are patched. 
 
-### SaaS
+##### SaaS
 - [ ] All authentication events are tracked and monitored. 
 - [ ] Zero Trust Access is in use.
 - [ ] No account sharing is allowed.
