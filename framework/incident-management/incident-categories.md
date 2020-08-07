@@ -2,7 +2,7 @@
 title: Incident Categories
 description: 
 published: true
-date: 2020-08-07T17:51:49.796Z
+date: 2020-08-07T17:54:14.594Z
 tags: 
 editor: markdown
 ---
@@ -21,7 +21,11 @@ The loss of information security is caused by natural disasters beyond human con
 
 ## Example
 
-Earthquake, volcano, flood, violent wind, lightning, tsunami, collapse, etc. 
+Pandemic, earthquake, volcano, flood, violent wind, lightning, tsunami, collapse, etc. 
+
+## Application
+
+For remote workers, you need to analyze which kinds of incidents can happen to the data stored on their computers and communicated over the Internet. Once you know this, only then can you decide whether your employees will be required to use VPN, complex passwords, encrypt data, use only pre-approved cloud services, regularly back up the data, etc. 
 
 # Tabs {.tabset}
 ## Category
