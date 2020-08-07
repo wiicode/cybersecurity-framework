@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:58:01.726Z
+date: 2020-08-07T13:09:34.068Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -49,6 +49,7 @@ The current version of Bento Cyber Security Framework suggests small companies f
 - [ ] Everyone is familiar with security incident reporting.
 - [ ] Incident communication method established.
 - [ ] Alarms and monitoring are used to safeguard data. 
+- [ ] Vendor security recommendations are adopted and practiced.
 
 #### **Additionally...**
 > **Bento Cyber Security Framework** is deveoped specifically to cover people, policies, and procedures. It can be adopted in part or as a whole to meet and exceed all requirements in this category.
