@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:50:31.735Z
+date: 2020-08-07T12:52:14.745Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -113,6 +113,12 @@ The following special topics are essential to every business, big and small. The
 - [ ] Remote access requires two or more connection methods. 
 - [ ] Firewalls pass URL/traffic to additional processing.
 - [ ] Shadow IT applications are discovered and monitored. 
+
+- [ ] Domains are configured to prevent spoofing.
+- [ ] DKIM/DMARC is used to validate email.
+- [ ] Domain registrations use dedicated email accounts.
+- [ ] Domains prevent transfer.
+- [ ] Domain registrar access is secured.
 
 
 # Internal Network
