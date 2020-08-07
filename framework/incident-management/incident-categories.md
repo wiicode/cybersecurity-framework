@@ -1,0 +1,161 @@
+---
+title: Incident Categories
+description: 
+published: true
+date: 2020-08-07T17:36:22.443Z
+tags: 
+editor: markdown
+---
+
+PMAccording to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
+
+
+# Tabs {.tabset}
+## Category
+
+Natural disaster incident 
+
+## Explanation
+
+The loss of information security is caused by natural disasters beyond human control. 
+
+## Example
+
+Earthquake, volcano, flood, violent wind, lightning, tsunami, collapse, etc. 
+
+## Category
+
+
+Social Unrest
+
+## Explanation
+
+The loss of information security is caused by the instability of society. 
+
+## Example
+
+Bedin, terrorist assault, war, etc. 
+
+
+## Category
+
+Physical Damage
+
+## Explanation
+
+The loss of information security is caused by deliberately or accidentally physical actions. 
+
+## Example
+
+Fire, water, electrostatic, abominable environment (such as pollution, dust, corrosion, freezing), destruction of equipment, destruction of media, theft of equipment, theft of media, loss of equipment, loss of media, tampering with equipment, tampering with media, etc. 
+
+
+## Category
+
+Infrastructure Failure
+
+## Explanation
+
+The loss of information security is caused by the failures of the basic systems and services that support the running of information systems. 
+
+## Example
+
+Power-supply failure, networking failure, air-conditioning failure, water-supply failure, etc.
+
+## Category
+
+Radiation disturbance
+
+## Explanation
+
+The loss of information security is caused by the disturbance due to radiation. 
+
+## Example
+
+Electromagnetic radiation, electromagnetic pulse, electronic jamming, voltage fluctuation, thermal radiation, etc. 
+
+
+## Category
+
+Technical Failure
+
+## Explanation
+
+The loss of information security is caused by the faults in information systems or related non-technical facilities, as well as unintentional man-made problems, resulting in information systems unavailability or destruction. 
+
+## Example
+
+Hardware failure, software malfunction, overloading (saturating the capacity of information systems), breach of maintainability, etc. 
+
+
+## Category
+
+Malware Incident
+
+## Explanation
+
+The loss of information security is caused by malicious programs that are created and disseminated deliberately. A malicious program is inserted into information systems to damage the confidentiality, integrity or availability of data, applications or operating systems, and/or affect the normal operation of information systems. 
+
+## Example
+
+Computer virus, network worm, Trojan horse, botnet, blended attacks, malicious code embedded web page, malicious code hosting site, etc
+
+
+## Category
+
+Technical Attack Incident
+
+## Explanation
+
+The loss of information security is caused by attacking information systems through networks or other technical means, either by exploiting information systems' vulnerabilities in configurations, protocols or programs, or by force, which results in an abnormal status of information systems, or potential harm to the current system operations. 
+
+## Example
+
+Network scanning, exploitation of vulnerability, exploitation of backdoor, login attempts, interference, DoS, etc. 
+
+
+## Category
+
+Breach of Rule Incident
+
+## Explanation
+
+The loss of information security is caused by breaching rules deliberately or accidentally.
+
+## Example
+
+Unauthorized use of resources, breach of copyright, etc. 
+
+## Category
+
+Compromise of functions.
+
+## Explanation
+
+The loss of information security is caused by deliberately or accidentally compromising the functions of information systems in terms of security
+
+## Example
+
+Abuse of rights, forging of rights, denial of actions, mis-operations, breach of personnel availability, etc.
+
+
+## Category
+
+Compromise of information.
+
+## Explanation
+
+The loss of information security is caused by deliberately or accidentally compromising the security of information such as confidentiality, integrity, availability and etc. 
+
+## Example
+
+Interception, spying, eavesdropping, disclosure, masquerade, social engineering, network phishing, theft of data, loss of data, tampering with data, data error, data flow analysis, position detection, etc
+
+## Category
+Harmful content.
+
+## Explanation
+The loss of information security is caused by propagating undesirable content through information networks, which endangers national security, social stability and/or public safety and benefits. 
+
+## Example
+Illegal content, panic content, malicious content, abusive content, etc. 
