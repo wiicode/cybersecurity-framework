@@ -2,12 +2,12 @@
 title: Incident Categories
 description: 
 published: true
-date: 2020-08-07T17:37:01.986Z
+date: 2020-08-07T17:37:32.880Z
 tags: 
 editor: markdown
 ---
 
-PMAccording to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
+According to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
 
 
 # Tabs {.tabset}
