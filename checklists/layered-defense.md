@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:54:18.449Z
+date: 2020-08-07T12:57:24.188Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -146,7 +146,7 @@ The following special topics are essential to every business, big and small. The
 > "**Systems**" is used to collectively represent devices, computers, and hosts.
 {.is-info}
 
-- **Device** refers to a computer, mobile phone, tablet, or smartwatch.
+- **Device** refers to a computer, mobile phone, tablet,  smartwatch, network printer, or an IoT device.
 - **Computer** refers to any computer or laptop, regarless of operating system.
 - **Host** refers to virtual machines or cloud instnces. 
 
@@ -154,6 +154,7 @@ The following special topics are essential to every business, big and small. The
 #### Policy Checklist (**choose your options**) 
 
 - [ ] Default passwords are immediately changed. 
+- [ ] Firmware is kept current on 
 - [ ] Bring Your Own Device (BYOD) is restricted (see BYOD recommendations).
 - [ ] All devices purchased through existing vendor agreeements.
 - [ ] Device enrollment and provisioning program is used to provision new devices.
