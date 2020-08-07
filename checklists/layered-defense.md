@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:48:33.907Z
+date: 2020-08-07T12:49:06.653Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -57,7 +57,7 @@ The current version of Bento Cyber Security Framework suggests small companies f
 - [ ] Organization has chosen to adopt BCSF.
 
 ## Training
-The following special topics are 
+The following special topics are essential to every business, big and small. They play a vital role in safeguarding data and systems.  
 
 - [ ] Phishing.
 - [ ] Ransomware.
