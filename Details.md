@@ -2,7 +2,7 @@
 title: Details
 description: 
 published: true
-date: 2020-08-05T18:03:26.414Z
+date: 2020-08-07T14:51:20.807Z
 tags: 
 editor: markdown
 ---
