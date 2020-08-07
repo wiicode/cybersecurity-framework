@@ -2,7 +2,7 @@
 title: Incident Categories
 description: 
 published: true
-date: 2020-08-07T17:36:22.443Z
+date: 2020-08-07T17:37:01.986Z
 tags: 
 editor: markdown
 ---
@@ -23,8 +23,8 @@ The loss of information security is caused by natural disasters beyond human con
 
 Earthquake, volcano, flood, violent wind, lightning, tsunami, collapse, etc. 
 
+# Tabs {.tabset}
 ## Category
-
 
 Social Unrest
 
@@ -36,7 +36,7 @@ The loss of information security is caused by the instability of society.
 
 Bedin, terrorist assault, war, etc. 
 
-
+# Tabs {.tabset}
 ## Category
 
 Physical Damage
@@ -49,7 +49,7 @@ The loss of information security is caused by deliberately or accidentally physi
 
 Fire, water, electrostatic, abominable environment (such as pollution, dust, corrosion, freezing), destruction of equipment, destruction of media, theft of equipment, theft of media, loss of equipment, loss of media, tampering with equipment, tampering with media, etc. 
 
-
+# Tabs {.tabset}
 ## Category
 
 Infrastructure Failure
@@ -62,6 +62,7 @@ The loss of information security is caused by the failures of the basic systems 
 
 Power-supply failure, networking failure, air-conditioning failure, water-supply failure, etc.
 
+# Tabs {.tabset}
 ## Category
 
 Radiation disturbance
@@ -74,7 +75,7 @@ The loss of information security is caused by the disturbance due to radiation.
 
 Electromagnetic radiation, electromagnetic pulse, electronic jamming, voltage fluctuation, thermal radiation, etc. 
 
-
+# Tabs {.tabset}
 ## Category
 
 Technical Failure
@@ -87,7 +88,7 @@ The loss of information security is caused by the faults in information systems 
 
 Hardware failure, software malfunction, overloading (saturating the capacity of information systems), breach of maintainability, etc. 
 
-
+# Tabs {.tabset}
 ## Category
 
 Malware Incident
@@ -100,7 +101,7 @@ The loss of information security is caused by malicious programs that are create
 
 Computer virus, network worm, Trojan horse, botnet, blended attacks, malicious code embedded web page, malicious code hosting site, etc
 
-
+# Tabs {.tabset}
 ## Category
 
 Technical Attack Incident
@@ -113,7 +114,7 @@ The loss of information security is caused by attacking information systems thro
 
 Network scanning, exploitation of vulnerability, exploitation of backdoor, login attempts, interference, DoS, etc. 
 
-
+# Tabs {.tabset}
 ## Category
 
 Breach of Rule Incident
@@ -126,6 +127,7 @@ The loss of information security is caused by breaching rules deliberately or ac
 
 Unauthorized use of resources, breach of copyright, etc. 
 
+# Tabs {.tabset}
 ## Category
 
 Compromise of functions.
@@ -138,7 +140,7 @@ The loss of information security is caused by deliberately or accidentally compr
 
 Abuse of rights, forging of rights, denial of actions, mis-operations, breach of personnel availability, etc.
 
-
+# Tabs {.tabset}
 ## Category
 
 Compromise of information.
@@ -151,6 +153,7 @@ The loss of information security is caused by deliberately or accidentally compr
 
 Interception, spying, eavesdropping, disclosure, masquerade, social engineering, network phishing, theft of data, loss of data, tampering with data, data error, data flow analysis, position detection, etc
 
+# Tabs {.tabset}
 ## Category
 Harmful content.
 
