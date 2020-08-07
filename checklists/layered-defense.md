@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-06T23:44:41.928Z
+date: 2020-08-07T02:33:28.630Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -120,6 +120,7 @@ The current version of Bento Cyber Security Framework suggests small companies f
 
 #### Policy Checklist (**choose your options**) 
 
+- [ ] Default passwords are immediately changed. 
 - [ ] Bring Your Own Device (BYOD) is restricted (see BYOD recommendations).
 - [ ] All devices purchased through existing vendor agreeements.
 - [ ] Device enrollment and provisioning program is used to provision new devices.
@@ -149,12 +150,18 @@ The current version of Bento Cyber Security Framework suggests small companies f
 #### Policy Checklist:
 
 ##### Internal
+- [ ] Default passwords are changed. 
+- [ ] Generic accounts are removed. 
+- [ ] Business Continuity plan covers critical apps.
 - [ ] Maintenance and support is current on all critical apps.
 - [ ] Application updates (ref: patch-management).
 - [ ] Security vulnerabilities are patched. 
 
 ##### SaaS
+- [ ] Default passwords are changed.
+- [ ] Business Continuity plan considers SaaS.
 - [ ] All authentication events are tracked and monitored. 
+- [ ] MFA is enforced where available. 
 - [ ] Zero Trust Access is in use.
 - [ ] No account sharing is allowed.
 - [ ] Suspicious activity is detected.
@@ -163,6 +170,18 @@ The current version of Bento Cyber Security Framework suggests small companies f
 - [ ] Backups/export automation is in place. 
 
 # Data
+
+- [ ] Data is classified.
+- [ ] Data has established owners.  
+- [ ] Personally identifiable information is treated with care.
+- [ ] Data Loss Protection policies are in place.
+- [ ] Insider threat policies are in place. 
+- [ ] Security access control is established by job role.
+- [ ] Least-privilige principles are used to assign access.
+- [ ] Unique passwords dominate.
+- [ ] Secrets storage sharing procedures are established.
+- [ ] Privacy first methodology.
+- [ ] Controls exist to prevent unauthorized storage of data.
 
 
 
