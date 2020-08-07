@@ -2,21 +2,20 @@
 title: Attestation Service
 description: BCSF subscriptions include attestation services and validation.  
 published: true
-date: 2020-08-06T23:49:55.930Z
+date: 2020-08-07T01:18:55.070Z
 tags: attestation
 editor: markdown
 ---
 
 # Process Explained
 
-```mermaid
-sequenceDiagram
-    Customer ->> Bob: Hello Bob, how are you?
-    Other Party-->>John: How about you John?
-    Bob--x Alice: I am good thanks!
-    Bob-x John: I am good thanks!
-    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+1. Customer visits BCSF Portal and completes a form with the requesting organization's contact data.
+1. BCSF Portal sends an email with a time-sensitive link to the attestation.
+1. Requstor clicks link and views the attestation status, coverage, and pertinant information.
 
-    Bob-->Alice: Checking with John...
-    Alice->John: Yes... John, how are you?
-```
+
+
+# BCSF Portal
+- Summarizes adopted and published framework components.
+- Provides vendor management.
+- Provides attestation. 
