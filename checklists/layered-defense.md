@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:57:33.326Z
+date: 2020-08-07T12:58:01.726Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -176,6 +176,7 @@ The following special topics are essential to every business, big and small. The
 - [ ] Systems require multi-factor authentication to login.
 - [ ] Systems have configured and immutable timeout/logoff settings.
 - [ ] System transfer or "dump" events are detected. 
+- [ ] Unnecessary ports and protocols are disabled.
 
 
 # Applications
