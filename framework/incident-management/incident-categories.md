@@ -2,7 +2,7 @@
 title: Incident Categories
 description: 
 published: true
-date: 2020-08-07T17:37:32.880Z
+date: 2020-08-07T17:50:19.843Z
 tags: 
 editor: markdown
 ---
@@ -13,7 +13,7 @@ According to US ISO/IEC 27035, security incidents may result from deliberate or 
 # Tabs {.tabset}
 ## Category
 
-Natural disaster incident 
+**Natural disaster incident **
 
 ## Explanation
 
