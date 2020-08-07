@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:49:58.683Z
+date: 2020-08-07T12:50:31.735Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -61,6 +61,7 @@ The following special topics are essential to every business, big and small. The
 
 - [ ] Phishing.
 - [ ] Ransomware.
+- [ ] Spoofing.
 - [ ] USB drives.
 - [ ] WiFi.
 - [ ] Password sharing.
@@ -70,6 +71,8 @@ The following special topics are essential to every business, big and small. The
 - [ ] Incident response.
 - [ ] Shared Responsibility.
 - [ ] Support procedures.
+- [ ] Shadow IT.
+- [ ] File exchange.
 
 # Physical Security
 #### Key Terms:
