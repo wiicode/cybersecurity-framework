@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:57:24.188Z
+date: 2020-08-07T12:57:33.326Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -154,7 +154,7 @@ The following special topics are essential to every business, big and small. The
 #### Policy Checklist (**choose your options**) 
 
 - [ ] Default passwords are immediately changed. 
-- [ ] Firmware is kept current on 
+- [ ] Firmware is kept current.
 - [ ] Bring Your Own Device (BYOD) is restricted (see BYOD recommendations).
 - [ ] All devices purchased through existing vendor agreeements.
 - [ ] Device enrollment and provisioning program is used to provision new devices.
