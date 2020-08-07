@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T02:33:28.630Z
+date: 2020-08-07T12:48:33.907Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -40,6 +40,10 @@ The current version of Bento Cyber Security Framework suggests small companies f
 - [ ] Employees receive onboarding cybersecurity training.
 - [ ] Employees receive routine security awareness training.
 - [ ] Employees security risk is tested routinely.
+- [ ] Employees are allowed to use personal mobile devices at work.
+- [ ] Employees are required to enable MFA whenver possible.
+- [ ] Password reset requires administrator.
+- [ ] Password change is available.
 - [ ] Vendors must meet attestation requirements. 
 - [ ] Third-party access to data is controlled. 
 - [ ] Everyone is familiar with security incident reporting.
@@ -52,6 +56,18 @@ The current version of Bento Cyber Security Framework suggests small companies f
 
 - [ ] Organization has chosen to adopt BCSF.
 
+## Training
+The following special topics are 
+
+- [ ] Phishing.
+- [ ] Ransomware.
+- [ ] USB drives.
+- [ ] WiFi.
+- [ ] Password sharing.
+- [ ] Password change and rotation.
+- [ ] MFA.
+- [ ] OAUTH.
+- [ ] Incident response.
 
 # Physical Security
 #### Key Terms:
