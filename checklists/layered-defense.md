@@ -2,7 +2,7 @@
 title: Checklist: Layered Defense
 description: Check the items that you would like to engage.
 published: true
-date: 2020-08-07T12:52:14.745Z
+date: 2020-08-07T12:54:18.449Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk-management
 editor: markdown
 ---
@@ -119,6 +119,12 @@ The following special topics are essential to every business, big and small. The
 - [ ] Domain registrations use dedicated email accounts.
 - [ ] Domains prevent transfer.
 - [ ] Domain registrar access is secured.
+
+
+- [ ] Email is scanned for phishing and malware.
+- [ ] Email (external) is marked accordingly.
+- [ ] Signatures are controlled centrally.
+- [ ] Signatures have been optimized.
 
 
 # Internal Network
