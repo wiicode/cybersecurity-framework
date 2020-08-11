@@ -2,7 +2,7 @@
 title: Home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2020-08-05T18:13:08.988Z
+date: 2020-08-11T02:09:29.469Z
 tags: welcome
 editor: markdown
 ---
@@ -16,7 +16,7 @@ editor: markdown
 Welcome to BENTO:GUIDES, an information security governance platform for professional service companies.  This web application enables us to continuously update and improve cybersecurity content your business needs to be successful.  To get started, visit one of the the major compartments:
 
 - Individuals & Families
-- Small Business
+- [start](/security-company/start)Small Business
 - Advanced Guidance 
 
 **We built this resource with the following objectives:**
