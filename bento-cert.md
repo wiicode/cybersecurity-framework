@@ -1,8 +1,8 @@
 ---
-title: BENTO:GUIDES Computer Emergency Response Team
+title: CERT
 description: As part of its mission, BENTO:GUIDES leads the effort to enhance the security, resiliency, and reliability of our customer cybersecurity and communications infrastructure.
 published: true
-date: 2020-08-12T01:10:29.411Z
+date: 2020-08-12T01:10:48.341Z
 tags: 
 editor: markdown
 ---
