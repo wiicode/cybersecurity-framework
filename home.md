@@ -2,7 +2,7 @@
 title: Home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2020-08-11T02:09:45.899Z
+date: 2020-08-29T18:47:26.210Z
 tags: welcome
 editor: markdown
 ---
@@ -37,3 +37,8 @@ Registered users are considered guests with read-only access to pages, comments,
 Paid subscriptions offer read and write access. This enables companies to integrate our dynamic content with organization-specific documentation.  
 
 Learn more about commercial licensing here.
+
+# Threat Landscape
+The Bento Cyber Security Framework is developed to mitigate risks to information technology through detailed guidence and recommendations every business can adopt.  While BCSF's focus is holisitc cybersecurity, this diagram illustrates the areas of focus. 
+
+![ransomware-vectors-generic.png](/ransomware-vectors-generic.png)
