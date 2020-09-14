@@ -2,7 +2,7 @@
 title: Details
 description: 
 published: true
-date: 2020-08-07T14:51:20.807Z
+date: 2020-09-14T15:00:37.217Z
 tags: 
 editor: markdown
 ---
@@ -28,6 +28,8 @@ This site allows anyone we interact with to login and access content.  Premium l
 
 ## Silver 
 
+Access to premium content and standard security awareness training for all members of your organization.  
+
 > All benefits of **Bronze** plus...
 {.is-success}
 
@@ -36,16 +38,19 @@ This site allows anyone we interact with to login and access content.  Premium l
 
 ## Gold 
 
+Premium access focused on customized content to your organization.  Each membership includes a edicated BENTO:GUIDES tenant fully managed by our team.
+
 > All benefits of **Silver** plus...
 {.is-success}
 
-- Dedicated BENTO:GUIDES instance dynamically updated with our latest content.
+- Dedicated BENTO:GUIDES instance (logically isolated, secured, and encrypted) dynamically updated with our latest content.
 - Ready to adopt policies, processes, and procedures for cybersecurity.
 - Templates for risk assessments, continuity planning, and incident response.
 
-Premium access is offered through dedicated BENTO:GUIDES instances which are logically isolated, secured, and encrypted. They are fully managed by our team and made available to your company through restricted access.  
 
 ## Platinum 
+
+All materials and means to accomplish your BCSF attestation and secure your organization. Virtual CISO and trust in your technology. By providing prebuilt policies and controls, BENTO:SECURITY acts as your virtual CISO guiding you to what you need to secure your organization. In addition, secure and dedicated BCSF:GUIDE instances provide a central system of record to assign controls to owners across your organization and store all evidentiary material. 
 
 > All benefits of **Gold** plus...
 {.is-success}
