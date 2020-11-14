@@ -2,7 +2,7 @@
 title: Personal Device (BYOD) Policy
 description: 
 published: true
-date: 2020-11-14T18:26:03.730Z
+date: 2020-11-14T18:29:29.332Z
 tags: soc2
 editor: markdown
 ---
@@ -27,7 +27,9 @@ Limited exceptions to the policy may occur due to variations in devices and plat
 
 ### 4.1 Acceptable Use
 {{organization.name}} defines acceptable business use as activities that directly or indirectly support the business of {{organization.name}}. 
+
 Employees are expected to follow {{organization.name}}’s acceptable use policy when using their devices to perform business activities. 
+
 Texting or emailing while driving is not permitted. Only hands-free talking while driving is permitted. 
 
 ### 4.2 Devices and Support
@@ -44,6 +46,7 @@ Rooted (Android) or jailbroken (iOS) devices are strictly forbidden from accessi
 Connectivity issues are supported by IT; employees should contact the device manufacturer or their carrier for operating system or hardware-related issues.
 
 Devices that are not on the {{organization.name}}’s list of supported devices are not allowed to connect to the network. 
+
 Employees shall ensure that password/pin/biometric locks are enabled on their devices. 
 
 Employees shall ensure that they are using the latest OS in their devices. 
