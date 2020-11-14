@@ -1,8 +1,8 @@
 ---
-title: Personal Device (BYOD) Policy
-description: 
+title: BYOD Policy
+description: Personal Device (BYOD) Policy
 published: true
-date: 2020-11-14T18:29:29.332Z
+date: 2020-11-14T18:31:28.574Z
 tags: soc2
 editor: markdown
 ---
