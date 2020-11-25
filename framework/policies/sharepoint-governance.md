@@ -2,7 +2,7 @@
 title: SharePoint Governance
 description: Using SharePoint for storing critical business info. 
 published: true
-date: 2020-11-25T02:53:46.802Z
+date: 2020-11-25T02:59:18.154Z
 tags: governance, policy
 editor: markdown
 ---
@@ -37,3 +37,83 @@ After you move your personal folders it may take a while for OneDrive to catchup
 
 ## What do I need to know about sharing?	
 You can share files from your OneDrive Business, Personal Folders, with team members. We locked down sharing to prevent external sharing as a security measure, thus you cannot send files to people outside. For that, we offer a special site described further down in this article. In practice, however, strongly advise against sharing personal folders and leveraging Team Sites as much as possible. The use of personal sharing can become confusing and difficult to manage.
+
+  
+# SharePoint Site Permissions
+
+## Members / Group Members	
+This is an effectively useless permission set. It controls communications from the SharePoint site into a distribution group that is Exchange Online only.
+
+## Site Permissions	
+This is what we rely on. It is accessed from Cog > Site Permissions and allows us to add people to a Group (see above) and also control permissions. In addition to individuals we have these main groups: team-<something>
+
+## Library Permissions	
+Although they come below Site Permissions and above Folder Permissions. These are effectively useless. They can only be set from the Team Site and can be difficult to discern and organize. As a general rule we let Library Permissions = Site Permissions, and then use Sharing/GrantAccess on folders for the rest.
+
+## Folder Permissions	
+Folder permissions are managed via the Share function. There are two settings to be aware of. The first is who has access in general, and this can default to everyone. From there, you can select a reduced scope and in cases of Specific People assign individuals.
+ 
+Share vs. Grant Access	Grant/Manage Access is an extension of Sharing and Site Permissions. It is weirdly difficult to find.
+
+##   Naming Convention
+
+Please use "~" in front of a folder that you will change permissions on. For example, in Sales and Marketing "~Contract Samples" is a folder that has different permissions from the rest of the library.
+  
+## Keeping Sanity.	
+We will manage sanity through three approaches:
+
+- Mindful configuration
+- Thoughtful policies (documented below) on how to use OneDrive
+- Site Permission Check.  
+  
+  
+# SharePoint Site Governance
+  
+## Sub-site creation	
+> Not permitted.
+{.is-danger}
+
+Sub-sites are presently discouraged because new sub-sites can be a great benefit to the group, but unrestricted site creation can get out of hand. When sub-sites proliferate freely, problems can arise. For example:
+
+It’s hard for users to find the right sub-site, or be sure if they have.
+
+Information can be duplicated in several sub-sites, using up expensive storage space, and requiring duplicated effort to maintain.
+
+Out-of-date information can reside on sub-sites, potentially for years, showing up in search results. It can be hard to tell what version of information is correct.
+
+Managing permissions for a multitude of sub-sites can become a major chore, and users might inadvertently wind up with access to information they really shouldn’t have.
+
+As employees leave the group, the sub-sites they create may be abandoned, creating confusion and muddying search results for remaining site users.
+
+More at https://support.office.com/en-us/article/create-a-team-site-in-sharepoint-online-ef10c1e7-15f3-42a3-98aa-b5972711777d
+
+## Permission Management	
+> Variable & Flexible.
+{.is-info}
+
+
+Each business owner, aka Site Owner, has the ability to grant Site Permissions to their Team Site. They can do this by
+
+Accessing Site Permissions and adding a member.
+- Delegating the request to IT.
+- Users can request access from Site Owners.
+
+Site Owners can also configure Folder Sharing by disabling inheritance on a folder and setting their own permissions. This is acceptable but should be used with extreme caution.
+
+Site Owners should not remove any groups or users from Site Permissions without clearing with IT, as original security settings were set with intent.
+
+## Information Architecture	
+> Simple Rules.
+> {.is-success}
+
+We primarily store data in Document Libraries. The data is files/folders. Key things to know are that:
+
+- We do not require check-in/check-out. This leaves room for conflicts. See https://support.office.com/en-us/article/set-up-a-library-to-require-check-out-of-files-0c73792b-f727-4e19-a1f9-3173899e695b.
+- We configure Version History for the last 50 revisions. https://support.office.com/en-us/article/how-does-versioning-work-in-a-sharepoint-list-or-library-0f6cd105-974f-44a4-aadb-43ac5bdfd247
+  
+## Site Landing Page	
+> Configured.
+{.is-success}
+
+Each site landing page will contain a Purpose statement defining the general usage of the site and what permissions are likely to be in effect.
+  
