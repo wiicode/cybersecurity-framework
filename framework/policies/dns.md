@@ -2,27 +2,27 @@
 title: Domain Name System
 description: 
 published: true
-date: 2020-10-31T18:35:44.902Z
+date: 2020-12-04T16:35:17.779Z
 tags: 
 editor: markdown
 ---
 
-Policy: Use a dedicated DNS provider such as RackSpace Cloud DNS or Amazon Route53 to manage DNS records independent of the organization's website host, mail host, and domain registrar.   For some organizations two exceptions can be made:
+**Policy**: Use a dedicated DNS provider such as RackSpace Cloud DNS or Amazon Route53 to manage DNS records independent of the organization's website host, mail host, and domain registrar.   For some organizations two exceptions can be made:
 - Office365 customers with GoDaddy will find that the convenience of automatic record management is so beneficial that managing DNS independently is difficult to justify.   Customers should note that GoDaddy is not SOC2 or ISO certified and should review vendor docs for security risks.
 - Google Domains customers  will find that the convenience of the entire system is too valuable to trade for the additional security. 
 - e-Commerce only business that sees value and benefits from the e-Commerce platform controlling the DNS. 
 
-Convenience:
+**Convenrience**:
 Organizations often will choose to use the webhost's DNS because they area lead to believe that is necessary or simply hand over control.   Alternatively, organizations frequently will frequently leave the DNS at the registrar.  In both cases this makes web hosting and management extremely easy, but it leaves the mail-record management at risk and the domain subject to compromise.  
 
-Control:
+**Control**:
 Choosing RackSpace Cloud DNS or Amazon Route 53  (or in some cases GoDaddy's DNS or Google Domains DNS) provides the most secure form of  DNS management in that it: 
 - Provides adequate MFA and security capabilities to prevent unauthorized changes.  
 - Provides a streamlined platform for experienced MSPs and managers to make necessary changes.
 - Provides redundant and resilient DNS infrastructure mitigating risks associated with availability.  
 - Enables infrastructure as code capabilities. 
 
-KEY CONCERNS:
+**KEY CONCERNS**:
 The primary concern here is supply chain compromise.  Domain registrations and DNS work collectively to supply a number of critical functions including:
 - Brand presence
 - Email Routing
