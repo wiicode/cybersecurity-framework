@@ -1,0 +1,71 @@
+<!--
+title: Network Security
+description: {{organization.name}} provides a protected, interconnected computing environment through the use of securely configured network devices to meet organizational missions, goals, and initiatives.
+published: true
+date: 2021-01-06T19:04:59.883Z
+tags: information and communication
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;"><strong>{{organization.name}} Network&nbsp;Security Policy</strong></h1>
+<p>&nbsp;</p>
+<h2>1.0 Purpose</h2>
+<p>One of {{organization.name}} objective is to secure its internal network, network connections and resources from intrusions and to provide/maintain the security of {{organization.name}} infrastructure and data and thus this policy provide guidelines to ensure availability and reliability of network devices for safe and secure connections to the information assets owned by {{organization.name}}.</p>
+<h2>2.0 Scope</h2>
+<p>This policy applies to all network devices (routers, switches, wireless access points, firewalls, other network services) that are owned and managed by {{organization.name}}. This policy shall be applicable to the entire IT Network administration related work including design, installation, testing, support and management</p>
+<h2>3.0 Policy</h2>
+<p>{{organization.name}}’s network and public web sites shall be secured against intrusions and network failures that would affect confidentiality, availability and integrity of information and information assets.</p>
+<p>Interconnection of networks between {{organization.name}} and third parties (vendors, customers and subsidiaries) shall be provided after a formal risk assessment and authorization.</p>
+<p>{{organization.name}} networks shall be segregated from external networks by firewalls. {{organization.name}} shall maintain due care for protecting the customer network interconnecting to its own from threats originating from within {{organization.name}}.</p>
+<h3>3.1 Network Security Management</h3>
+<p>Network devices owned and managed by {{organization.name}} must be configured securely and designed to secure network traffic between trusted and untrusted network zones.</p>
+<p>Every network device deployed in the {{organization.name}} network shall be appropriately configured and meet security requirements for their individual purposes (internal, public facing, demilitarized zones (DMZ)).</p>
+<p>All traffic and protocols should be expressly denied except for those necessary for business purposes.</p>
+<p>The {{organization.name}} network shall be isolated from unsecured networks, Internet and third party networks through firewalls and intrusion detection systems. IT department shall assess if personal firewalls should be installed on workstations.</p>
+<p>All remote access to {{organization.name}} systems shall be through an authorized medium like VPN is made available with appropriate risk assessment and based on authorizations.</p>
+<p>All intranet users originating connections from the Internet shall be authenticated, over an encrypted connection. The password policy is strictly enforced for all applications used over the Internet.</p>
+<p>Job responsibilities will be segregated for personnel assigned for Network operations and computer operations whenever possible.</p>
+<p>Authorization from the IT Department should be obtained before using Wireless connections.</p>
+<p>The information involved in application service transactions shall be protected to prevent incomplete transmission, misrouting, unauthorized message alteration, unauthorized disclosure, unauthorized message duplication or replay.</p>
+<h3>3.2 Third Party Interconnection</h3>
+<p>There shall be a third party agreement with vendors, customers or partners before interconnecting with the {{organization.name}} network.</p>
+<p>Customer or partner networks interconnecting with the {{organization.name}} network would be isolated from each other.</p>
+<p>All customer traffic over a dedicated link would be encrypted using appropriate technology and VPN connections if required by the customer.</p>
+<p>Access to customer networks shall be granted only to specific {{organization.name}} employees based on business need and after proper authorization.</p>
+<h3>3.3 Logging and Monitoring</h3>
+<p>Logging should be enabled, including log configuration changes, preferably back to a central source like a syslog server or a centralized log management platform.</p>
+<p>All administrator access to the network and network security products should be authorized, logged and monitored. All network services and their use shall be monitored by {{organization.name}}’s IT team. All firewall traffic should be monitored for possible misuse and intrusions.</p>
+<p>The use of resources shall be monitored, tuned and projections made of future capacity requirements to ensure the required system performance.</p>
+<h3>3.4 Set Correct Time and Date</h3>
+<p>Synchronize network device clocks with Network Time Protocol (NTP). The appropriate time zone should be set for all equipment.</p>
+<h3>3.5 Backup Network Device Configuration</h3>
+<p>Network device configuration is backed up regularly or whenever configuration changes are made to a central source. The central backup source shall be secured as well.</p>
+<h3>3.6 Router Security</h3>
+<h4>Physical Security (when applicable)</h4>
+<p>Routers and switches must be located in a locked room and not accessible to unauthorized personnel. Devices must have adequate cooling, a reliable power supply and/or plugged into a right-sized uninterruptible power supply (UPS). Wireless access points should either be in a locked room or located high on the ceiling where it would be obvious if someone were physically accessing the device.</p>
+<h4>Privilege Access Control</h4>
+<ul>
+  <li>Routers must be secured with complex passwords for all interfaces including the Console, AUX, and VTY (telnet/ssh) interfaces (to prevent initial access).</li>
+  <li>Privileged access to prevent configuration changes should be restricted to authorized personnel only.</li>
+  <li>Passwords shall follow strong password mechanisms outlined under the Password Guidelines.</li>
+  <li>Access control shall be used to provide separate authentication, authorization, and accounting services for network-based access.</li>
+  <li>A Privileged Access Management solution can control credentials accessing the device and commands that can be executed when a session is initiated, providing a complete audit of both commands and sessions.</li>
+</ul>
+<h3>3.7 Switch Security</h3>
+<p>Switch ports shall be locked down by configuring port security features allowing access only to the first authorized device connecting to that port.</p>
+<h3>3.8 Network Design and Audits</h3>
+<ul>
+  <li>Network design shall allow legitimate traffic to flow through the appropriate zones, segments and/or resources, and unwanted traffic detected and dropped. Firewalls, Virtual Local Area Networks (VLANs) and/or Access Control Lists (ACLs) shall be implemented to achieve the same.</li>
+  <li>Development/testing, production and corporate resources should not be in the same network segments.</li>
+  <li>IP phones and IoT devices should be logically separated on the network.</li>
+  <li>The network diagram should provide an overview of network devices deployed, network traffic flows and should identify physical and/or logical security controls that are in place to direct legitimate traffic and detect &amp; drop unnecessary or unwanted traffic.</li>
+  <li>Firewall policies and ACLs shall be tested to ensure that whatever is not permitted is denied. The network shall be audited based on the network diagram by conducting vulnerability scans and penetration tests on strategic areas in the network and mitigate identified high risks.</li>
+</ul>
+<h3>3.9 Encrypt Sensitive Network Traffic</h3>
+<p>Appropriate encryption and authentication methods should be used for the transmission of sensitive data and remote access.</p>
+<h3>3.10 Develop and Maintain Expertise</h3>
+<p>Ensure that network support personnel are adequately trained in implementing and supporting a secured network infrastructure through training and drills.</p>
+<h3>3.11 Patching</h3>
+<p>Network devices shall be patched and updated on a documented, regular, and timely schedule.&nbsp; Common Vulnerability Scoring System (CVSS) is recommended to be used to aid in setting patching guidelines.</p>
+<p>Applicable critical vendor-supplied security patches shall be applied within a defined time frame after release and installation of all other applicable vendor-supplied security patches as per the defined patching schedule.</p>
+<p>In addition to the patching guidelines, vulnerabilities and exploitable findings deemed critical by the {{organization.name}}, regardless of CVSS score, must be patched as soon as possible.</p>
