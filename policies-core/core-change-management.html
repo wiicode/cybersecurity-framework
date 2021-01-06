@@ -1,0 +1,62 @@
+<!--
+title: Change Management
+description: rmal change management policy governs changes to the applications and supporting infrastructure and aid in minimizing the impact that changes have on organization processes and systems.
+published: true
+date: 2021-01-06T20:53:14.481Z
+tags: 
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;">Change Management Policy</h1>
+<h2>&nbsp;</h2>
+<h2>1.0 Purpose</h2>
+<p>The purpose of this policy is to establish management direction and high-level objectives for the change management process. This policy guides the implementation of changes to reduce the impact on other tasks/projects as well as to mitigate associated risks such as:</p>
+<ul>
+  <li>Information being corrupted and/or destroyed</li>
+  <li>Adverse impact on other organizational processes</li>
+  <li>Computer performance being disrupted and/or degraded</li>
+  <li>Productivity losses being incurred</li>
+</ul>
+<h2>2.0 Scope</h2>
+<p>This policy applies to all IT systems and applications managed by {{organization.name}} that store, process or transmit information, including network and computer hardware, software and applications, mobile devices, and telecommunication systems. In addition, it applies to all business units that operate within the organization’s network environment or utilizes its information resources.</p>
+<h2>3.0 Policy</h2>
+<p>Changes to information resources shall be managed and executed according to a formal change control process. The change control process will ensure that the proposed changes are reviewed, authorized, tested, implemented, and released in a controlled manner; and that the status of each proposed change is monitored. In order to fulfill this policy, the following statements shall be adhered to:</p>
+<ul>
+  <li>A current baseline configuration of the information systems and its components shall be developed, documented and maintained.</li>
+  <li>The baseline configuration of the information systems shall be updated as an integral part of the information system component installation.</li>
+  <li>Changes to the information system shall be authorized, documented and controlled by the use of formal change control procedure.</li>
+  <li>Changes in the configuration of the information systems shall be monitored.</li>
+  <li>Automatic tools shall be employed (wherever possible) to initiate changes/change requests, to notify the appropriate approval authority and to record the approval and implementation details.</li>
+  <li>Changes that can’t follow the regular process because of their urgency (such as service outage) shall be considered as emergency changes and require immediate priority.</li>
+  <li>Changes that are a normal administrative function or process within a system, can be classified as standard changes.</li>
+  <li>Changes affecting customers shall be formally communicated to them prior to change implementation.</li>
+</ul>
+<h3>3.1 Change Initiation and Impact Analysis</h3>
+<p>All changes, both scheduled and unscheduled shall be documented, classified (Low impact- affect &lt; 1% individuals, Medium impact- affect 1% &lt; 5% individuals, High impact- affect &gt; 5% individuals) and tracked. The documentation must identify the scope of the change, areas affected, back-out process, test plan, communication plan and the planned date of deployment.</p>
+<p>Business and technical risks (including potential impact to performance and security), as well as costs, must be formally considered as part of impact assessment and documented in the change record before submitting for approval. In addition, an Implementation plan detailing all the stages that are required in order to successfully manage the change (including a test plan and roll-back strategy) shall be developed as part of this phase.</p>
+<h3>3.2 Change Approval and Implementation</h3>
+<p>Changes shall be approved formally prior to commencing the change or development, and prior to implementing the fully tested change into the live environment.</p>
+<p>{{organization.name}}’s management shall designate personnel as members of the Change Advisory Board (CAB) who would be responsible for approving the change request by assessing the impact and estimating the resource requirements. The CAB will be a cross-functional group comprising the technology leads along with representatives from other business processes to enable the assessment of the change from different perspectives.</p>
+<p>All changes shall be formally assigned to the designated CAB representative for authorization who can approve or disapprove the change depending upon the impact on business services.</p>
+<h3>3.3 Post Implementation Review</h3>
+<p>Once a change has been implemented, it is important that the situation is reviewed to identify any problems that could be prevented in the future or improvements that could be made. CAB meetings shall be scheduled on a periodic basis to discuss high and medium impact changes and their status (“successful” or “unsuccessful”).</p>
+<p>Post Implementation shall be performed to evaluate whether the desired result has been achieved. In the event a change does not perform as expected or causes issues to one or more areas of the production environment, the attendees of the change meeting will determine if the change should be removed and the production environment returned to its prior stable state.</p>
+<h3>3.4 Denials</h3>
+<p>The Business Owner/Change Advisory Board or their designee may deny a scheduled or unscheduled change for reasons including, but not limited to:</p>
+<ul>
+  <li>Inadequate change planning or unit testing</li>
+  <li>Lack of stakeholder acceptance (where applicable)</li>
+  <li>System integration or interoperability concerns</li>
+  <li>Missing or deficient roll-back plans</li>
+  <li>Security implications and risks</li>
+  <li>Timing of the change negatively impacting key business processes</li>
+  <li>Timeframes do not align with resource scheduling (e.g. late-night, weekends, holidays, or during special events</li>
+</ul>
+<h3>3.5 Emergency Changes</h3>
+<p>Changes that can not follow the regular process because of their urgency (such as service outage) shall be considered as emergency changes and require immediate attention and need to be implemented quickly in order to avoid disruption.</p>
+<p>Approvals shall be obtained for such changes in the form of discussing the matter with a relevant service manager. Such changes shall be assessed and formally approved retrospectively. In addition, such changes shall be discussed in periodic CAB meetings for analysis on lessons learned, root cause, impact and status.</p>
+<h3>3.6 Standard Changes and Patching</h3>
+<p>Standard changes (also called “Routine Changes”) tend to be pre-authorized changes that are considered to have little to no risk associated with them. These changes are already pre-approved by IT Management so they can be executed by creating a ticket but without following the change management approval workflow (for example, applying security patches).</p>
+<p>All systems shall be patched and updated on a documented, regular, and timely schedule. Common Vulnerability Scoring System (CVSS) is recommended to be used to aid in setting patching guidelines.</p>
+<p>Applicable critical vendor-supplied security patches shall be applied within a defined time frame after release and installation of all other applicable vendor-supplied security patches as per defined patching schedule.</p>
+<p>In addition to the patching guidelines, vulnerabilities and exploitable findings deemed critical by the {{organization.name}}, regardless of CVSS score, must be patched as soon as possible.</p>
