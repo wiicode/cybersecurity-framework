@@ -1,0 +1,79 @@
+<!--
+title: Untitled Page
+description: 
+published: true
+date: 2021-01-06T20:47:31.615Z
+tags: 
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;">Access Control</h1>
+<h2>1.0 Purpose</h2>
+<p>The purpose of this policy is to establish direction and requirements for access to {{organization.name}} data, information and systems, and, to ensure that users have the appropriate access levels to access information on systems and applications.</p>
+<h2>2.0 Scope</h2>
+<p>This policy covers access to all business processes and data, information systems and other IT resources owned or operated by {{organization.name}}. Any information not specifically identified as the property of other parties, that is transmitted or stored on {{organization.name}} IT resources (including e-mail, messages and files) is the property of {{organization.name}}.</p>
+<p>This policy applies to all employees, whether employed on a full-time or part-time basis by {{organization.name}} as well as contractors, subcontractors and vendors (collectively referred to as “individual” and “users”).</p>
+<h2>3.0 Policy</h2>
+<p>The following subsections outline the access control standards that constitute the {{organization.name}} policy.&nbsp;</p>
+<h3>3.1 Control of Access to Information Systems</h3>
+<p>User Access to information systems and IT assets shall be authorized based on their job roles and responsibilities and according to business requirements.</p>
+<p>Access control to information systems and services shall cover all stages in the life-cycle of user access: from granting user access, changes in access privileges based upon relevant changes, to access revocation when access is no longer required. Where possible, user policies shall be enforced by the operating system or by application system or other software.</p>
+<p>Grant access to the system based on (1) valid access authorization from the immediate supervisor or system owner, (2) intended system usage and (3) other attributes as required by the organization or associated missions/business functions.&nbsp;</p>
+<p>Administration and generic accounts shall be strictly controlled and shall be given based on special authorizations. {{organization.name}} shall authorize and monitor the use of guest/anonymous and temporary accounts.</p>
+<p>Deactivate temporary accounts that are no longer required and accounts of terminated or transferred users promptly. Review access privileges for the users as well as non-user accounts periodically including roles associated with each user account.</p>
+<p>Accounts that are inactive from a defined period must be disabled, after verification.&nbsp;</p>
+<p>Development, testing and operational environments shall be separated to reduce the risks of unauthorized access or changes to the operational environment.</p>
+<p>Event logs recording user activities, exceptions and information security events shall be produced, kept and regularly reviewed. Access to such logs shall be restricted to authorized personnel only based on job roles.</p>
+<h3>3.2 Access Control Rules</h3>
+<ul>
+  <li>Access shall be given by first denying access to everything, and then explicitly granting access to only the specific resources as per job needs.</li>
+  <li>Secure logon procedures shall control access to host-based information systems. Until successful authentication, logon procedures shall reveal minimal information about the system to minimize unauthorized access.</li>
+  <li>Separation of Duties: {{organization.name}} shall<ul>
+      <li>Separate duties of individuals as necessary, to prevent malicious activity without collusion.</li>
+      <li>Document separation of duties.</li>
+      <li>Implement separation of duties through assigned information asset access authorizations.</li>
+    </ul>
+  </li>
+  <li>Least Privilege: {{organization.name}} must employ the concept of least privilege, allowing only authorized accesses for users (and processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions.&nbsp;</li>
+  <li>Any change in access privileges must again go through the formal documented access approval process. When staff change job roles within the organization, an access request must be initiated by the new supervisor or line manager to permit to access the correct files and systems for the new role.</li>
+  <li>{{organization.name}} shall (whenever possible):&nbsp;<ul>
+      <li>Display an approved system use a notification message or banner before granting access to the system.</li>
+      <li>Retain the notification message or banner on the screen until users take explicit actions to log on to or further access the information assets.</li>
+      <li>In the case of contractors, subcontractors or vendors, access should be revoked as soon as the contract ends.</li>
+      <li>Documented access approval and revocation requests should be retained for audit purposes.</li>
+    </ul>
+  </li>
+</ul>
+<p>When {{organization.name}} allows the customer to access their systems, it will be granted based on the agreed contractual obligations. Such access shall be restricted and based on formal access requests from Customer representatives. Termination of access shall be done, if:</p>
+<ul>
+  <li>The customer has violated the terms of service</li>
+  <li>Customer license has expired</li>
+</ul>
+<p>All customer data must be anonymized upon request.</p>
+<h3>3.3 User Authentication and Secure log-on procedures</h3>
+<ul>
+  <li>Access to the {{organization.name}} information systems shall be controlled using password authentication or a public/private key system with a strong passphrase.</li>
+  <li>The initial password provided by the administrator shall be changed at first login.</li>
+  <li>Users shall not share their password with others or shall not reveal the same to others under any circumstances. If they do so then they shall be accountable for the actions taken by the other party with the password.</li>
+  <li>Users should not store passwords on a computer or at a place, which has public access.&nbsp;</li>
+  <li>Passwords for user and administrator accounts shall be changed periodically.</li>
+  <li>Account Lockout shall be explicitly applied after a defined number of unsuccessful password attempts.</li>
+  <li>Users shall be automatically logged-off from the information systems, after defined minutes of inactivity, by the system.</li>
+  <li>At a minimum password shall be at least 8 characters long. For improved security, choose longer passwords.</li>
+  <li>Passwords shall contain Alphanumeric and special characters (i.e. Consider using passwords containing both upper and lower case characters (e.g., a-z, A-Z) and have digits and punctuation characters as well as letters e.g., 0-9, !@#$%^&amp;*()_+|~-=\`{}[]:";'&lt;&gt;?,./)&nbsp;</li>
+  <li>Passwords shall not be repeated whenever required to be reset.</li>
+  <li>Users may not reuse any of their last five passwords.&nbsp;</li>
+  <li>Whenever possible, use multi-factor authentication for remote access to production systems.&nbsp;&nbsp;</li>
+  <li>All production system-level passwords must be part of the {{organization.name}} IT administered global password management database.&nbsp;</li>
+  <li>All applications, servers and other IT information systems shall automatically enforce the password requirements.</li>
+</ul>
+<h3>3.4 Privileged and System Accounts</h3>
+<p>All requests for changes/deletions/additions to a user’s privileged access shall be completed through a formal access authorization process. Privileged access (this includes (but not limited to) access to root and admin accounts, service accounts, system accounts) shall be granted based on least privilege, job roles and will be restricted to users who need the elevated permissions to maintain a system or service.</p>
+<p>Users with privileged access must have two accounts: one for normal day-to-day operations and the other for administrative duties (wherever possible). All privileged access to administrative systems must be done via multi-factor authentication (MFA) and shall be logged and monitored.</p>
+<p>Reviews of privileged access must be conducted by the department owner responsible for the system/service. Privileged access no longer required must be removed immediately.</p>
+<p>All privileged access account passwords must be changed immediately in the event of employee termination or change of job roles where such access is no longer required.</p>
+<h3>3.5 Physical Access to Office premises</h3>
+<p>Physical access to {{organization.name}} facilities shall be restricted through the use of appropriate access control and identification mechanisms such as access control readers. {{organization.name}} shall establish a formal process for granting users with physical access to the organization’s facility.</p>
+<p>Review of physical access rights to {{organization.name}}’s information processing facilities shall be performed periodically to review the appropriateness of current access and to remove access that is no longer required.</p>
+<p>In addition, a review of physical access logs shall be performed at a defined frequency and upon the occurrence of security incidents.</p>
+<p>Visitors shall be escorted by authorized personnel from the {{organization.name}} while accessing {{organization.name}}’s facilities and their entry shall be recorded either through an automated access control reader or in the visitor access log at the entrance/reception area.</p>
