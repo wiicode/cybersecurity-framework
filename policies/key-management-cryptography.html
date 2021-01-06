@@ -1,0 +1,134 @@
+<!--
+title: Key Management and Cryptography
+description: The organization utilizes the latest commercially accepted encryption protocols.
+published: true
+date: 2021-01-06T19:01:50.535Z
+tags: access control
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;"><strong>{{organization.name}} Key Management and Cryptography Policy</strong></h1>
+<p style="text-align:center;"><br>&nbsp;</p>
+<h2>1.0 Purpose</h2>
+<p>The purpose of this policy is to establish requirements for selecting cryptographic keys, managing keys, assigning key strengths and using and managing digital certificates. The protection methods outlined will include operational and technical controls,&nbsp; such as key backup procedures, encryption under a separate key and use of tamper-resistant hardware.</p>
+<h2>2.0 Scope</h2>
+<p>This Standard applies to all IT Resources that store, transmit or process {{organization.name}}’s or its customer’s information and that use encryption keys or digital certificates.</p>
+<h2>3.0 Definitions</h2>
+<ul>
+  <li>Cryptography: a method of storing and transmitting data in a form that only those it is intended for can read and process.</li>
+  <li>Encryption: the process of converting data from plain text to a form that is not readable to unauthorized parties, known as cipher-text.</li>
+  <li>Key: the input that controls the process of encryption and decryption. There are both secret and public keys used in cryptography.</li>
+  <li>Digital Certificate: An electronic document that is used to verify the identity of the certificate holder when conducting electronic transactions. Secure Sockets Layer (SSL) certificates are a common example that has identified data about a server on the Internet as well as the owning authority’s public encryption key.</li>
+  <li>Sensitive Data: Sensitive information is data that must be protected from unauthorized access to safeguard the privacy or security of an individual or organization.</li>
+  <li>Data at rest: Data at rest is data that is not actively moving from device to device or network to network such as data stored on a hard drive, laptop, flash drive, or archived/stored in some other way.</li>
+  <li>Data in transit, or data in motion, is data actively moving from one location to another such as across the internet or through a private network.</li>
+</ul>
+<h2>4.0 Use of Cryptographic Controls Policy</h2>
+<p>Encryption shall always be used to protect strictly confidential or sensitive information transmitted over data networks to protect against risks of interception. This includes when accessing network services that require authentication (for example, usernames and passwords) or when otherwise sending or accessing strictly confidential information (for example, in emails).</p>
+<p>Where confidential or sensitive data is stored on or accessed from mobile devices (for example, laptops, tablets, smartphones, external hard drives, USB sticks, digital recorders) the devices themselves must be encrypted (using "full disk" encryption), irrespective of ownership.</p>
+<p>Where strictly confidential data is stored in public, cloud based storage facilities, the data must be encrypted prior to storing to ensure that it is not possible for the cloud service provider to decrypt the data. Where data is subject to an agreement with an external organization, the data should be handled (stored, transmitted or processed) in accordance with the organization’s specified encryption requirements.</p>
+<p>Encryption key lengths should use current industry standard encryption algorithms for Confidential or Sensitive Information.</p>
+<h3>4.1 Encryption methods for data at rest</h3>
+<p>Sensitive data at rest shall be encrypted at all times.</p>
+<p>The encryption of data at rest shall only include strong encryption methods such as AES or RSA.</p>
+<p>Encrypted data shall remain encrypted when access controls such as usernames and passwords fail. Increasing encryption on multiple levels is recommended.</p>
+<p>Confidential or Sensitive Information at rest on computer systems owned or operated by {{organization.name}} shall be protected by one or more of the following mechanisms:</p>
+<ul>
+  <li>Disk/File System Encryption.</li>
+  <li>Use of Virtual Private Networks (VPN’s) and Firewalls with strict access controls that authenticate the identity of those individuals accessing the Confidential or Sensitive Information.</li>
+  <li>Sanitizing, redacting, and/or de-identifying the data requiring protection during storage to prevent unauthorized risk and exposure (e.g., masking or blurring).</li>
+  <li>Supplemental compensating or complementary security controls including complex passwords, and physical isolation/access to the data.</li>
+  <li>Strong cryptography on authentication credentials (i.e. passwords/phrases) shall be made unreadable during transmission and storage on all information systems.</li>
+  <li>Password protection to be used in combination with all controls including encryption.</li>
+  <li>File systems, disks, and tape drives in servers and Storage Area Network (SAN) environments are encrypted using industry standard encryption technology.</li>
+  <li>Computer hard drives and other storage media that have been encrypted shall be sanitized to prevent unauthorized exposure upon return for redistribution or disposal.</li>
+</ul>
+<h3>4.2 Encryption methods for data in transit</h3>
+<p>{{organization.name}} shall ensure that formal transfer policies, protocols, procedures, and controls are implemented to protect the transfer of information through the use of all types of communication and transmission facilities.</p>
+<p>The transfer of sensitive data shall be through a secure channel. A secure channel is an encrypted network connection.</p>
+<p>Strong cryptography and security protocols (e.g. TLS, IPSEC, SSH, etc.) shall be used to safeguard Confidential or Sensitive Information during transmission over open public networks. Such controls include:</p>
+<ul>
+  <li>Only accepting trusted keys and certificates, protocols in use only support secure versions or configurations, and encryption strength is appropriate for the encryption methodology in use.</li>
+  <li>Public networks include but are not limited to the Internet, Wireless technologies, Bluetooth, and cellular technologies.</li>
+  <li>Confidential or Sensitive Information transmitted in e-mail messages is encrypted. Any Confidential or Sensitive Information transmitted through a public network (e.g., Internet) to and from vendors, customers, or entities doing business with {{organization.name}} must be encrypted or transmitted through an encrypted tunnel (VPN) or point-to-point tunnelling protocols (PPTP) that include current Transport Layer Security (TLS) implementations.</li>
+  <li>Wireless (Wi-Fi) transmissions used to access {{organization.name}} computing devices or internal networks must be encrypted using current wireless security standard protocols (e.g. RADIUS, WPS private/public keys or other industry standard mechanisms).</li>
+  <li>Secure encrypted transfer of documents and Confidential or Sensitive Information over the internet using current secure file transfer programs such as “SFTP” (FTP over SSH) and secure copy command (SCP).</li>
+  <li>All non-console administrative access such as browser/web based management tools is encrypted using TLS based browser technologies using the most current security algorithm.</li>
+</ul>
+<h3>4.3 Encryption Standards for Devices</h3>
+<p>All new laptops, tablets and portable storage devices purchased through IT Purchasing will have encryption enabled during deployment. Any USB storage device may have encryption applied through an appropriate software tool.</p>
+<h2>5.0 Encryption Key Management</h2>
+<p>Effective enterprise public and private key management is a crucial element in ensuring encryption system security. Key management procedures must ensure that authorized users can access and decrypt all encrypted Confidential or Sensitive Information using controls that meet operational needs. {{organization.name}}’s key management systems shall be characterized by the following security precautions and attributes:</p>
+<ul>
+  <li>{{organization.name}} should use procedural controls to enforce the concepts of least privilege and separation of duties for staff. These controls apply to persons involved in encryption key management or who have access to security-relevant encryption key facilities and processes, including Certificate Authority (CA) and Registration Authority (RA), and/or contractor staff.</li>
+  <li>Keys in transit must be encrypted.</li>
+  <li>Private keys must be kept confidential.</li>
+  <li>Application and system resource owners should be responsible for establishing data encryption policies that grant exceptions based on demonstration of a business need and an assessment of the risk of unauthorized access to or loss of Confidential or Sensitive Information</li>
+  <li>Decryption keys shall not be associated with user accounts.</li>
+  <li>Restrict access to cryptographic keys to the fewest number of custodians necessary. Cryptographic keys are stored in the fewest possible locations.</li>
+  <li>Retirement or replacement (for example, archiving, destruction, and/or revocation) of keys should be done when the integrity of the key has been weakened or keys are suspected of being compromised.</li>
+  <li>Archived cryptographic keys should only be used for decryption/verification purposes.</li>
+  <li>Cryptographic key custodians shall formally acknowledge that they understand and accept their key-custodian responsibilities.</li>
+</ul>
+<h3>5.1 Requirements for Encryption Keys and Digital Certificates</h3>
+<p>{{organization.name}} must use industry-approved strong algorithms for encryption and/or digital signing processes. The following subsections detail requirements that also ensure an adequate level of protection. {{organization.name}} must protect private encryption keys to prevent their unauthorized disclosure and subsequent fraudulent use. All private keys protecting {organization.name}}’s and its customer’s information are classified as per Information Sensitivity/Classification policy.</p>
+<h4>Private Keys</h4>
+<p>{{organization.name}} handled private keys must:</p>
+<ul>
+  <li>Physically and logically secure them.</li>
+  <li>Store keys in/on:<ul>
+      <li>An encrypted key store or in an otherwise encrypted form.</li>
+      <li>A security token.</li>
+      <li>An Encryption keyring.</li>
+    </ul>
+  </li>
+  <li>Not share the key with anyone other than those expressly authorized.</li>
+  <li>Always use randomly generated key(s) to encrypt a set of unrelated or separate {{organization.name}} Information.</li>
+  <li>{{organization.name}} users handling private keys must record access so the use of the keys is auditable.</li>
+  <li>{{organization.name}} users handling private keys must follow the Disposal procedure when retiring keys.</li>
+  <li>{{organization.name}} users handling private keys protecting {{organization.name}’s or its customer information shall use a privileged access management tool.</li></ul><h4>Generating strong keys</h4><p>{{organization.name}} users generating private keys must:</p>
+    <ul>
+      <li>Select a key size using the minimum specified by the encryption method or greater when symmetric key encryption is employed.</li>
+      <li>Generate keys on the IT Resource itself or, if transmission of a private key is required, distribute keys manually using a public key transport mechanism or using a previously distributed or agreed-upon key-encrypting key.</li>
+      <li>Use a random key generation mechanism.</li>
+    </ul>
+    <h4>Emergency access to keys</h4>
+    <p>IT Ops Team must have auditable procedures in place to provide access to private keys in the event of an emergency and/or the passphrase holder being unavailable.</p>
+    <h4>Changing private keys and the private key lifecycle</h4>
+    <p>{{organization.name}} must:</p>
+    <ul>
+      <li>Have a process to approve key changes, record dispositions and change keys when a user with access to a private key(s) separates or changes roles.</li>
+      <li>Have a process to change keys as part of the response to an Information Security incident.</li>
+      <li>For private keys protecting {{organization.name}}’ or its Customers’ information, change keys at least once annually.</li>
+      <li>Private keys must be revoked and/or deleted when they are no longer needed to perform a business function.</li>
+      <li>Private keys must not be re-issued or reused.</li>
+    </ul>
+    <h4>Access to keys</h4>
+    <p>{{organization.name}} handling private keys must be limited to those who have a need-to-know based on job responsibilities.</p>
+    <h4>Encryption methods</h4>
+    <p>{{organization.name}} must select the stronger of the following methods:</p>
+    <ul>
+      <li>An encryption method based on the Risk Assessment;</li>
+      <li>Symmetric - using the minimum recommended key strength or higher; or</li>
+      <li>Asymmetric/Public-Private key pair - using the minimum recommended key strength or higher</li>
+    </ul>
+    <h4>Compromised keys</h4>
+    <ul>
+      <li>{{organization.name}} must change encryption keys immediately if the key becomes compromised or is discovered by any unauthorized person or party.</li>
+      <li>{{organization.name}} users must report any compromised key to the CISO.</li>
+    </ul>
+    <h4>Web server certificates</h4>
+    <p>{{organization.name}} users handling web server certificates must:</p>
+    <ul>
+      <li>Use digital certificates signed by a CISO approved Certificate Authority (CA).</li>
+      <li>Select a key size of 2048 bits or greater.</li>
+      <li>Select an expiration of not more than one year for IT Resources accessing {{organization.name}} and its customers' information.</li>
+      <li>Not use wildcard digital certificates for top level domains or subdomains.</li>
+    </ul>
+    <h4>Self-signed certificates</h4>
+    <p>{{organization.name}} users handling self-signed certificates must:</p>
+    <ul>
+      <li>Not use them for any production purpose on a public network.</li>
+      <li>Not use them for the testing of IT Resources processing, storing or transmitting {{organization.name}} or its customer information.</li>
+      <li>IT resources with factory-installed self-signed certificates can only be used on protected private networks.</li>
+    </ul>
