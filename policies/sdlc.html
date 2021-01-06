@@ -1,0 +1,139 @@
+<!--
+title: Software Development
+description: The organization designs and builds software with security and privacy as design principles.
+published: true
+date: 2021-01-06T19:37:51.908Z
+tags: sdlc security
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;"><strong>{{organization.name}} Software Development Policy</strong></h1>
+<p>&nbsp;</p>
+<h2>1.0 Purpose</h2>
+<p>The purpose of the Systems Development Life Cycle (SDLC) policy is to describe the requirements for developing and/or implementing software and systems at {{organization.name}} and to ensure that all development work is compliant as it relates to any and all regulatory, statutory, and/or contractual guidelines. This document establishes guidelines for the development of software and systems that are required to be applied to all developments to ensure their maintainability, security, protection against cyber-attacks and accessibility.&nbsp;</p>
+<h2>2.0 Scope</h2>
+<p>This policy covers all development activities carried out by the {{organization.name}} team during the design, implementation and maintenance of {{organization.name}} products and services. {{organization.name}} follows a branching strategy workflow for source control and uses the principles outlined in the <a href="https://www.owasp.org/index.php/OWASP_Secure_Coding_Practices_-_Quick_Reference_Guide">OWASP Secure Coding Practices</a> to defend against the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10</a> security vulnerabilities.</p>
+<h2>3.0 Policy</h2>
+<h3>3.1 Design Process</h3>
+<p>{{organization.name}} Engineering team will consider the security implications of any feature development and/or enhancement to ensure the security and stability of the {{organization.name}}’s application. Things to consider are:</p>
+<ul>
+  <li>How can this feature be misused?</li>
+  <li>Does this feature cause unnecessary data exposure?</li>
+  <li>Does this feature expose an attack vector?</li>
+  <li>Are the data sources used by the feature trusted or untrusted?</li>
+</ul>
+<h3>3.2 Development Process</h3>
+<p>{{organization.name}} follows a defined branching strategy.&nbsp;</p>
+<h4>3.2.1 Feature Development</h4>
+<p>All new features start with a Requirements Specification provided by {{organization.name}} product staff. A separate Jira issue will be raised for every new feature. For simple features the requirements will be documented on the Jira issue description. For more complex features a wiki page will be created and the Jira issue will link to that. In most cases, a technical specification will be created by the Engineering staff. This technical specification should provide the implementation details &amp; assumptions, data flows, database schema changes, endpoints and scope definition. The technical specification will be shared with the Product Owner for review.</p>
+<p>A branch will be created in our source control system for each new feature developed. The branch name will follow the convention:</p>
+<p>feature/XXXX</p>
+<p>where XXXX is the Jira issue number corresponding to the feature.</p>
+<p>All development for the feature is done on this feature branch. When the feature is complete, a pull request is made to merge the feature back into the release branch.</p>
+<h4>3.2.2 Pull Requests</h4>
+<p>Before a Pull Request (PR) can be merged into the release branch, it must be reviewed by another member of the Engineering team. The reviewer must not be the same person who created the pull request. A pull request comment must also indicate if there are any new dependencies added to the application, or database migration requirements.</p>
+<p>The following things will be evaluated on a pull request review:</p>
+<ul>
+  <li>Does the code follow {{organization.name}} coding style and naming conventions?</li>
+  <li>Does the code pass the code analysis tool?</li>
+  <li>Are there tests associated with the feature?</li>
+  <li>Is the code readable and/or properly commented?</li>
+  <li>Are there any obvious logic flaws or security holes?</li>
+  <li>Is there any debug code left behind?</li>
+  <li>Is audit logging properly implemented?</li>
+  <li>Is the code reusable? (Where applicable)</li>
+  <li>Are the tests within the pull request passed?</li>
+</ul>
+<p>Once the pull request is reviewed, it can be:</p>
+<p>Approved &amp; merged into the release branch</p>
+<p>Reviewer comments that the PR has been approved</p>
+<p>Rejected with changes</p>
+<p>Reviewer comments what the necessary changes are</p>
+<p>After a pull request is reviewed, approved and merged, the associated feature branch may be deleted. PRs that have been rejected for changes will not result in a new pull request being created. The Engineering team member will make the required changes, commit to the associated feature branch and comment on the PR that the changes are completed. The reviewer will then verify the changes are correct and appropriate. If the changes pass review, the PR will be approved and merged. The feature branch may be deleted at this point.</p>
+<h4>3.2.3 Releases</h4>
+<p>When the release branch contains the required features for a release, the branch will be frozen and the product handed over to the {{organization.name}} Quality Assurance (QA) team. At this point no new features will be added to the release. Bug fixes and other release oriented tasks only may go into this branch.</p>
+<p>Once the release is stable and ready to ship, the release branch is merged into <i>master</i> via a pull request. This provides one last opportunity to review the contents of the upcoming release. Once the release is merged into <i>master</i>, a tag is taken and an official release is created. This is what will be deployed to production. At this point, the release branch may be deleted.</p>
+<h4>3.2.4 Hotfixes</h4>
+<p>Occasionally, a bug is discovered in production that requires immediate patching. When this happens, a hotfix branch is created. The hotfix branch is forked from <i>master</i>. After the fix has been made, a PR is created to merge the fix back into <i>master</i>. The Standard PR review process shall apply. Once the hotfix branch is merged, it may be deleted. An official release is not necessary for hotfixes and the commit log will show the merging of the hotfix into the main code streams.</p>
+<p>Where applicable, a test should be written that exercises the bug fix in order to prevent future regressions.</p>
+<h4>3.2.5 Branching Strategy Summary</h4>
+<p>The overall flow of the branching strategy is:</p>
+<ol>
+  <li>The <i>master</i> branch is the main development trunk. Tags on <i>master</i> indicate official releases.</li>
+  <li>Release branches are created from <i>master</i>.</li>
+  <li>All features are developed on feature branches.</li>
+  <li>When a feature is complete it is merged into the release branch.</li>
+  <li>When the release branch is done it is merged into <i>master</i>.</li>
+  <li>If an issue in the main/production is detected a hotfix branch is created from <i>master</i>.</li>
+  <li>Once the hotfix is complete it is merged to <i>master</i>.</li>
+</ol>
+<h3>3.3 Service Vulnerability Reviews</h3>
+<p>Products and services released by {{organization.name}} require regular reviews for vulnerabilities and attacks.&nbsp;</p>
+<p>An external scan and penetration test will be performed annually.</p>
+<h3>3.4 Data Processing Input Validation</h3>
+<p>All data processing inputs are defined, including the source and criteria for processing. All data processed by the {{organization.name}} application is collected directly by the application.</p>
+<p>All data processing tasks include a data validation step that confirms the integrity of the data to be processed. Data integrity is enforced at the application level.</p>
+<p>Input fields in the {{organization.name}} application are validated on both the client side and the server side for proper formatting, data type and expected values. The definitive source for data validation is on the trusted system (server). Invalid data will be rejected by the server.</p>
+<p>All data inputs must be validated for:</p>
+<ul>
+  <li>Character encoding</li>
+  <li>Acceptable header / Cookie values</li>
+  <li>Expected data types / ranges / lengths / valid values</li>
+  <li>Allowed characters</li>
+</ul>
+<p>User supplied data must never be passed to any dynamic execution function.</p>
+<h4>3.4.1 Data Processing Schedules</h4>
+<p>Data processing schedules are defined within the {{organization.name}} application. The results of the processing tasks should be logged and reviewed periodically. Errors and/or exceptions encountered in the processing task generate a detailed exception email that is sent to the DevOps team for remediation.</p>
+<h3>3.5 Authentication and Password Management</h3>
+<p>{{organization.name}} adheres to the following practices for authentication and password management:</p>
+<ul>
+  <li>Authentication is required for all resources, except those explicitly intended to be public.</li>
+  <li>Authentication is enforced on a trusted system (server).</li>
+  <li>Authentication should fail securely.</li>
+  <li>All credentials are encrypted with a one-way salted hash performed on a trusted system.</li>
+  <li>Password complexity rules are enforced.</li>
+  <li>Account disabling enforced after repeated invalid login attempts.</li>
+  <li>Multi-factor authentication will be used.</li>
+</ul>
+<h3>3.6 Access Management</h3>
+<p>{{organization.name}} adheres to the following practices for access management:</p>
+<ul>
+  <li>Access token creation must be done on a trusted system.</li>
+  <li>Access token generation must use sufficiently random identifiers.</li>
+  <li>Token expiry should be as short as possible, balancing risk and business requirements.</li>
+  <li>Generate a new access token on every re-authentication.</li>
+  <li>Do not expose access tokens on an insecure channel.</li>
+  <li>Logout must destroy any active access tokens for the user.</li>
+  <li>Access controls should fail securely.</li>
+  <li>ACL must be enforced on all API requests, including the org context.</li>
+  <li>The <i>master</i> branch is a protected branch. Access to the protected branch is restricted to a limited number of DevOps personnel.</li>
+</ul>
+<h3>3.7 Error Handling and Logging</h3>
+<p>{{organization.name}} adheres to the following practices for error handling and logging:</p>
+<ul>
+  <li>Sensitive information must not be disclosed in error responses.</li>
+  <li>Debug or stack trace information will never be displayed on production systems.</li>
+  <li>All logging implemented on a trusted system.</li>
+  <li>Access to logs is restricted to specific personnel.</li>
+  <li>Passwords and other credentials must never appear in logs.</li>
+  <li>All system events must be logged.</li>
+</ul>
+<h3>3.8 Data Protection</h3>
+<p>{{organization.name}} adheres to the following practices for data protection:</p>
+<ul>
+  <li>Implement principle of least privilege. We restrict users access to only the functionality and data that is required based on job needs.</li>
+  <li>All temporary copies of data should be removed once processing is complete.</li>
+  <li>All access credentials must be encrypted using a one-way salted hash.</li>
+  <li>All transmission of data must be over secure channels.</li>
+  <li>Remove application comments from client side code.</li>
+  <li>Do not include sensitive data in GET parameters.</li>
+  <li>Disable caching on pages containing sensitive information.</li>
+</ul>
+<h3>3.9 Communication Security</h3>
+<p>{{organization.name}} adheres to the following practices for communication security and as described in the Key Management and Cryptography policy:</p>
+<ul>
+  <li>All transmission of data must be done over an encrypted channel using TLS.</li>
+  <li>Failed TLS connections must not fall back to an insecure connection.</li>
+</ul>
+<h2>4.0 Customer Notification</h2>
+<p>As currently available products and services are regularly assessed and reviewed, if a high-risk vulnerability is found, {{organization.name}} will notify the designated customer contacts within 24 hours. {{organization.name}} will provide a plan to address the issue and a timeline for when the software or service will have a solution available. Emergency updates will be available in the form of a hotfix patch deployed to the affected system.</p>
