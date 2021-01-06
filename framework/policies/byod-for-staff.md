@@ -2,7 +2,7 @@
 title: BYOD Agreement
 description: Personal Smart Device Usage Agreement (BYOD - Bring Your Own Device)
 published: true
-date: 2020-10-31T19:00:48.022Z
+date: 2021-01-06T21:04:47.746Z
 tags: 
 editor: markdown
 ---
@@ -33,4 +33,4 @@ Date**
 This document should be signed and submitted.  Plan for options such as
 1. Print and return to HR
 2. Email Signed Copy
-3. Use a Security Awareness Training product such as TugBoat to present this policy and log signatures. 
+3. Use a Security Awareness Training product to present this policy and log signatures. 
