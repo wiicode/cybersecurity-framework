@@ -1,0 +1,111 @@
+<!--
+title: Software Development (Waterfall)
+description: The organization designs and builds software with security and privacy as design principles.
+published: true
+date: 2021-01-06T19:49:19.983Z
+tags: sdlc security
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;"><strong>{{organization.name}} Software Development Policy</strong></h1>
+<p>&nbsp;</p>
+<h2>1.0 Purpose&nbsp;</h2>
+<p>The purpose of the Systems Development Life Cycle (SDLC) policy is to describe the requirements for developing and/or implementing software and systems at the {{organization.name}} and to ensure that all development work is compliant as it relates to any and all regulatory, statutory, and/or contractual guidelines. This document establishes guidelines for the development of software and systems that are required to be applied to all developments to ensure their maintainability, security, protection against cyber-attacks and accessibility.&nbsp;</p>
+<h2>2.0 Scope&nbsp;</h2>
+<p>This policy applies to all employees, consultants and/or contractors that perform any type of software or systems development work at or on behalf of {{organization.name}} and covers all {{organization.name}} engineering and operations groups during design, implementation and maintenance of {{organization.name}} products and services.&nbsp;</p>
+<h2>3.0 Policy&nbsp;</h2>
+<p>All software developed in-house which runs on production systems must be developed according to the SDLC Standards described in this document to ensure that the software will be adequately documented and tested before it is used in conjunction with critical and/or sensitive {{organization.name}} information. The security shall be embedded in all stages of the SDLC.&nbsp;</p>
+<p>Access to production systems shall be restricted to the minimal number of personnel absolutely required for their respective job duties.&nbsp;</p>
+<p>All application/program debugging interfaces or backdoors utilized in development or testing, other than the formal user access paths, must be deleted or disabled before the software is moved into production.</p>
+<p>All development work shall exhibit a separation between production, development, and test environments, and at a minimum have at least a defined separation between the development/test and production environments unless prohibited by licensing restrictions or an exception is made.&nbsp;</p>
+<p>Where these separation distinctions in environments have been established, development and QA/test staff must not be permitted access to production systems unless absolutely required by their respective job duties/descriptions.</p>
+<p>All changes, both scheduled and unscheduled, shall be logged, documented and handled according to the defined Change Management process. Updates and product releases shall be communicated to customers before changes are implemented.&nbsp;&nbsp;</p>
+<p>Documentation must be kept and updated during all phases of development from the initiation phase through implementation and ongoing maintenance phases. Additionally, security considerations should be noted and addressed through all phases.</p>
+<p>A critical component of {{organization.name}}’s SDLC initiatives is utilizing a framework consisting of well-established phases and other supporting best practices for ensuring a highly structured, formalized, and a&nbsp; well documented process shall be in place at all times. The SDLC phases are to include, at a minimum, the following:</p>
+<ul>
+  <li>Initial Phase</li>
+  <li>Feasibility Phase</li>
+  <li>Requirements Analysis Phase</li>
+  <li>Design Phase</li>
+  <li>Development Phase</li>
+  <li>Testing Phase</li>
+  <li>Implementation Phase</li>
+  <li>Operations and Maintenance Phase</li>
+  <li>Security Vulnerabilities</li>
+</ul>
+<h2>4.0 Software Development Lifecycle (SDLC) Phases&nbsp;</h2>
+<h3>4.1 Initial Phase&nbsp;</h3>
+<p>The purposes of the Initiation Phase should be to:</p>
+<ul>
+  <li>Identify and validate an opportunity to improve business accomplishments or a deficiency related to a business need</li>
+  <li>Identify significant assumptions and constraints on solutions</li>
+  <li>Recommend the exploration of alternative concepts and methods to satisfy the need</li>
+</ul>
+<h3>4.2 Feasibility Phase</h3>
+<p>The Feasibility Phase is the initial investigation or brief study of the problem to determine whether the systems project should be pursued. A feasibility study establishes the context through which the project addresses the requirements and investigates the practicality of a proposed solution. The feasibility study shall be used to determine if the project should get the go-ahead. If the project is to proceed, the feasibility study will produce a project plan and budget estimates for the future stages of development.</p>
+<h3>4.3 Requirements Analysis Phase</h3>
+<p>This phase formally defines the detailed functional user requirements, using high-level requirements identified in the Initiation and Feasibility Phases. In this phase, the requirements shall be defined to a sufficient level of detail for systems design to proceed. Requirements need to be measurable, testable and relate to the business need or opportunity identified in the Initiation Phase. The purpose of this phase is to:&nbsp;</p>
+<ul>
+  <li>Complete business process reengineering of the functions to be supported</li>
+  <li>Verify what information drives the business process</li>
+  <li>What information is generated</li>
+  <li>Who generates it</li>
+  <li>Where does the information go</li>
+  <li>Who processes it</li>
+  <li>Develop detailed data and process models including system inputs and outputs</li>
+  <li>Develop the test and evaluation requirements that will be used to determine acceptable system performance</li>
+</ul>
+<h3>4.4 Design Phase</h3>
+<p>During this phase, the system shall be designed to satisfy the functional requirements identified in the previous phase. Since problems in the design phase can be very expensive to solve in later stages of software development, a variety of elements should be considered in the design to mitigate risk. These include:</p>
+<ul>
+  <li>Identifying potential risks and defining mitigating design features</li>
+  <li>Performing a security risk assessment</li>
+  <li>Developing a conversion plan to migrate current data to the new system</li>
+  <li>Determining the operating environment</li>
+  <li>Allocating processes to resources</li>
+</ul>
+<p>To build security into the design of the application, threat modelling shall be used that consists of four major steps:</p>
+<ul>
+  <li>Decomposing the application</li>
+  <li>Categorizing threats</li>
+  <li>Ranking threats</li>
+  <li>Mitigation</li>
+</ul>
+<p>Countermeasures shall be designed to mitigate identified threats and to address the security requirements.&nbsp;A plan shall be developed to test the designed countermeasures.</p>
+<h3>4.5 Development Phase</h3>
+<p>Effective completion of the previous stages is a key factor in the success of the Development phase. The Development phase should consist of:&nbsp;</p>
+<ul>
+  <li>Translating the detailed requirements and design into system components</li>
+  <li>Testing individual elements (units) for usability</li>
+  <li>Preparing for integration and testing of the IT system</li>
+</ul>
+<p>Integration, system, security, and user acceptance testing is conducted during this phase as well. The user, with those responsible for quality assurance, shall validate that the functional requirements are met by the newly developed or modified system.</p>
+<h3>4.6 Testing Phase</h3>
+<p>Verification and testing are a core part of {{organization.name}} development methodology. Measures shall be taken to ensure the application meets the security standards and security testing is performed. The following includes the processes used to verify and test {{organization.name}} code:</p>
+<ul>
+  <li>Independent penetration testing, including infrastructure assessment</li>
+  <li>Executing test plans created during the design phase</li>
+  <li>Security release and sign off before deployment to the production environment</li>
+</ul>
+<p>Testing shall include unit, integration, and system acceptance testing to ensure the proper implementation of the requirements. Brings all the pieces together into a testing environment, then checks for errors, bugs and interoperability, accessibility, mobility, performance, standards compliance, and an independent security review.&nbsp;</p>
+<p>Test data shall be selected carefully, protected and controlled.</p>
+<h3>4.7 Implementation Phase</h3>
+<p>This phase shall be initiated only after the system has been tested and accepted by the end users. In this phase, the system is installed to support the intended business functions. Implementation includes user notification, user training, installation of hardware, installation of software onto production computers, and integration of the system into daily work processes. This phase continues until the system is operating in production in accordance with the defined user requirements.</p>
+<p>During this phase, all source code and configuration systems must be reviewed by another team-member before the product ship. Code and configuration reviews include:&nbsp;</p>
+<ul>
+  <li>Checklist review by team-member of code against known vulnerabilities and attacks</li>
+  <li>A functional code review to evaluate the code is designed as intended</li>
+  <li>Automated code scan by third party source code review systems</li>
+</ul>
+<p>All components deployed for cloud architecture shall be based on a defined secure standard from the vendor and security best practices and goes through a change control process that includes configuration, testing, and QA before it is deployed in Production.</p>
+<h3>4.8 Operations and Maintenance Phase</h3>
+<p>System operations and maintenance is an ongoing phase. The system is monitored for continued performance in accordance with user requirements and needed system modifications are incorporated when identified, approved, and tested. When modifications are identified, the system may re-enter the planning phase.</p>
+<h3>4.9 Security Vulnerabilities</h3>
+<p>Security vulnerabilities shall be identified, managed, and minimized by code fixes or configuration changes. Application security vulnerability scans and penetration tests are recommended to be based on the <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 Vulnerabilities</a>. The OWASP Top 10 shall be conducted by a team of security experts that focuses on the ten most important risk concerns and vulnerabilities contained in web applications and how to mitigate those risks. The requirements will be documented and will then be tested.&nbsp;</p>
+<p>Vulnerability assessments must be completed during feature reviews and once the product has been released, including:</p>
+<ul>
+  <li>Internal penetration testing for every new software release</li>
+  <li>Annual third party scans and penetration tests of all current releases</li>
+</ul>
+<p>Critical patches shall be assessed and evaluated within a defined timeframe and implemented as soon as possible. Priority certification and full QA testing shall be employed to validate the full system functionality and availability of the systems post-patching.&nbsp;</p>
+<h2><br><br>&nbsp;</h2>
