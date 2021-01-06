@@ -1,0 +1,196 @@
+<!--
+title: Server Security Policy
+description: 
+published: true
+date: 2021-01-06T20:45:45.767Z
+tags: 
+editor: ckeditor
+-->
+
+<h1 style="text-align:center;"><strong>Server Security Policy</strong></h1>
+<p>&nbsp;</p>
+<h2><strong>1.0 Purpose&nbsp;</strong></h2>
+<p>The purpose of this policy is to establish standards for the base configuration of internal server equipment that is owned and/or operated by {{organization.name}}. Effective implementation of this policy will minimize unauthorized access to {{organization.name}} proprietary information and technology.</p>
+<h2>2.0 Scope</h2>
+<p>This policy applies to server equipment owned and/or operated by {{organization.name}}, and to servers registered under any {{organization.name}}-owned internal network domain.</p>
+<p>Based on the type of servers, such as Cloud Managed Systems, Cloud Managed Instances or Physical Servers, the policy for handling patching, configuration, backups and monitoring shall vary. See the table below.</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <p style="text-align:center;"><strong>Cloud Managed System</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;"><strong>Cloud Managed Instance</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;"><strong>Physical Servers</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:center;"><strong>Infrastructure Ownership&nbsp;</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;">Service Provider</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Service Provider</p>
+        </td>
+        <td>
+          <p style="text-align:center;">{{organization.name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:center;"><strong>Configuration &amp; Backup</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by Provider</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by {{organization.name}}</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by{{organization.name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:center;"><strong>Monitoring</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by Provider</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by {{organization.name}}</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by {{organization.name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:center;"><strong>Patch Management</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by Provider</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by {{organization.name}}</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Managed by {{organization.name}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:center;"><strong>Decommissioning</strong></p>
+        </td>
+        <td>
+          <p style="text-align:center;">Not Applicable</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Not Applicable</p>
+        </td>
+        <td>
+          <p style="text-align:center;">Applicable</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>&nbsp;</h2>
+<h2><strong>3.0 Definitions&nbsp;</strong></h2>
+<p><strong>Demilitarized Zone (DMZ):</strong> A network segment external to the corporate production network. Server for purposes of this policy is defined as an internal {{organization.name}} Server. Desktop machines and Lab equipment are not relevant to the scope of this policy.</p>
+<p><strong>Intrusion Detection System (IDS):</strong> A system that monitors network traffic for malicious activity.</p>
+<p><strong>Intrusion Prevention System (IPS):</strong> A network security prevention technology that examines network traffic flow to detect and prevent vulnerability exploits.</p>
+<p><strong>SSH (Secure Shell): </strong>SSH is a network protocol that allows data to be exchanged using a secure channel between two networked devices.</p>
+<p><strong>IPSec (Internet Protocol Security):</strong> IPSec is a suite of protocols for securing IP communications by authenticating and encrypting each IP packet of a data stream.</p>
+<h2><strong>4.0 Policy&nbsp;</strong></h2>
+<h3><strong>4.1 Ownership and Responsibilities&nbsp;</strong></h3>
+<p>All servers deployed at {{organization.name}} must be the responsibility of corporate IT. Approved server configuration guides must be established and maintained by each operational group, based on business needs and approved by {{organization.name}} IT. Operational groups should monitor configuration compliance and implement an exception policy tailored to their environment. Each operational group must establish a process for changing the configuration guides, which includes review and approval by {{organization.name}} IT.</p>
+<p>Servers must be registered within the corporate enterprise management system. At a minimum, the following information is required to positively identify the point of contact:</p>
+<ul>
+  <li>Server contact(s) and location, and a backup contact</li>
+  <li>Hardware and Operating System/Version</li>
+  <li>Main functions and applications, if applicable</li>
+  <li>Information in the corporate enterprise management system must be kept up-to-date</li>
+  <li>Configuration changes for production servers must follow the appropriate change management procedures</li>
+</ul>
+<p><i>Policy Conditions:</i></p>
+<ul>
+  <li>Physical security and maintenance of the infrastructure (hardware, software, networking, and facilities that run the Cloud services) is the responsibility of the Provider in the case of Cloud Managed Systems and Cloud Managed Instances.</li>
+  <li>Physical security and maintenance of the infrastructure (hardware, software, networking, and facilities that run the server) is the responsibility of {{organization.name}} in the case of Physical servers being used.</li>
+</ul>
+<p><strong>4.2 General Configuration and Backup Guidelines&nbsp;</strong></p>
+<p>Operating System configuration should be in accordance with approved {{organization.name}} IT guidelines. Services and applications that will not be used must be disabled where practical.&nbsp;</p>
+<ul>
+  <li>Access to services should be logged and/or protected through access-control methods such as TCP Wrappers, if possible.</li>
+  <li>The most recent security patches must be installed on the system as soon as practical, the only exception being when the immediate application would interfere with business requirements.</li>
+  <li>Trust relationships between systems are a security risk, and their use should be avoided. Do not use a trust relationship when some other method of communication will do.</li>
+  <li>Always use standard security principles of least required access to perform a function. Do not use root when a non-privileged account is acceptable.</li>
+  <li>If a methodology for secure channel connection is available (i.e., technically feasible), privileged access must be performed over secure channels, (e.g., encrypted network connections using SSH or IPSec).</li>
+  <li>Servers should be physically located in an access-controlled environment.</li>
+  <li>Servers are specifically prohibited from operating from uncontrolled cubicle areas.</li>
+  <li>The production servers shall be backed up once a day.</li>
+  <li>There might be other servers that may require fewer backups. Define the frequency for regular backups of such servers.</li>
+</ul>
+<p><i>Policy Conditions:</i></p>
+<ul>
+  <li>Configurations and backups for Cloud Managed Systems shall be managed by the provider.</li>
+  <li>Configurations and backups for Cloud Managed Instances and Physical Servers shall be managed by {{organization.name}} in accordance with the Server Security Policy.</li>
+</ul>
+<h3><strong>4.3 Monitoring</strong></h3>
+<p>All security-related events on critical or sensitive systems must be logged and audit trails saved as follows:&nbsp;</p>
+<ul>
+  <li>Logs are accessible only to appropriate applications and trusted users (via sudo or similar access control).</li>
+  <li>A review of logs will only be done with read-only access tools (e.g., view, more, less, graphical web tools for accessing/filtering logs, etc.).</li>
+  <li>All security related logs will be kept online for a minimum of 1 week.</li>
+  <li>Security-related events will be reported to {{organization.name}} IT, who will review logs and report incidents to IT management. Corrective measures will be prescribed as needed. Security-related events include, but are not limited to:<ul>
+      <li>Port-scan attacks</li>
+      <li>Evidence of unauthorized access to privileged accounts</li>
+      <li>Anomalous occurrences that are not related to specific applications on the host</li>
+      <li>Loss or breach of sensitive data</li>
+    </ul>
+  </li>
+  <li>The server shall also be monitored for capacity and performance requirements. The incident management process shall be followed for confirmed events and anomalies.</li>
+  <li>Forecast future processing demand of system components on an ongoing basis and compare with schedule capacity. In addition, forecasts shall be reviewed and approved by IT management. Change requests must be initiated as needed based on approved forecasts.</li>
+</ul>
+<p><i>Policy Conditions:</i></p>
+<ul>
+  <li>Logging and monitoring for Cloud Managed Systems shall be managed by the provider.</li>
+  <li>Logging and monitoring for Cloud Managed Instances and Physical Servers shall be managed by {{organization.name}} in accordance with the Server Security Policy.</li>
+</ul>
+<h3><strong>4.4 Patch Management&nbsp;</strong></h3>
+<p>All servers under {{organization.name}} will be maintained with the latest security patches to their operating systems and key applications.&nbsp;</p>
+<p>Each department is responsible for servers under their control. When a patch is announced, an authorized system administrator must enter a change ticket according to the change management policy. A criticality rating of high or normal must be assigned. All high/critical patches must be applied as soon as practically possible, but not longer than thirty (30) calendar days after public release for any critical production server.&nbsp; All patches that are medium/high severity or for non-critical systems must be rolled out within ninety (90) calendar days.&nbsp; Any low priority patches will be installed on a case-by-case basis.&nbsp; All patches should be tested on development systems before being rolled out to production, where possible.</p>
+<p>In case the patches cannot follow the aforementioned schedule, a document must be produced explaining why the patch must be deferred. Permissible deferrals may include a lack of appropriate change windows within the appropriate timeframe or a conflict with other critical changes scheduled at that time. Approvals shall be granted by CTO.&nbsp;</p>
+<p>IT/Information Security is responsible for performing a vulnerability scan on their systems after each patch window to show that the patches were installed correctly.&nbsp; Clean vulnerability scan reports should be reviewed periodically.</p>
+<p><i>Policy Conditions:</i></p>
+<ul>
+  <li>Patch Management for Cloud Managed Systems shall be managed by the provider.</li>
+  <li>Patch Management for Cloud Managed Instances and Physical Servers shall be managed by {{organization.name}} in accordance with the Server Security Policy.</li>
+</ul>
+<h3><strong>4.5 Decommissioning a Server&nbsp;</strong></h3>
+<p><i>Policy Condition:</i></p>
+<ul>
+  <li>Applicable to Physical Servers only.</li>
+  <li>A set of defined measures should be followed to decommission servers.</li>
+  <li>A “final” backup shall be made before decommissioning the server. This backup is kept for a year and then will be deleted sometime after the year is up.</li>
+  <li>The data on the servers must be completely destroyed before the machine is taken out of service. The machine should be labelled accordingly.</li>
+</ul>
+<h3><strong>4.6 Compliance&nbsp;</strong></h3>
+<p>Audits will be performed on a regular basis by authorized organizations within {{organization.name}}.&nbsp;</p>
+<p>Audits will be managed by the internal audit group or {{organization.name}} IT, in accordance with the Internal Audit Policy. {{organization.name}} IT will filter findings not related to a specific operational group and then present the findings to the appropriate support staff for remediation or justification.&nbsp;</p>
+<p>Every effort will be made to prevent audits from causing operational failures or disruptions.&nbsp;</p>
+<p><i>Policy Conditions:</i></p>
+<ul>
+  <li>Applicable to Cloud Managed Systems and Cloud Managed Instances.</li>
+  <li>{{organization.name}} shall obtain and review ISO 27001/SOC 2 or equivalent compliance certificates for all Cloud Servers.</li>
+</ul>
+<h2><strong>5.0 Enforcement&nbsp;</strong></h2>
+<p>Any employee found to have violated this policy may be subject to disciplinary action, up to and including termination of employment.</p>
