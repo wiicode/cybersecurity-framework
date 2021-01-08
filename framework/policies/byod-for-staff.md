@@ -2,7 +2,7 @@
 title: BYOD Agreement
 description: Personal Smart Device Usage Agreement (BYOD - Bring Your Own Device)
 published: true
-date: 2021-01-06T21:04:47.746Z
+date: 2021-01-08T04:41:49.140Z
 tags: 
 editor: markdown
 ---
