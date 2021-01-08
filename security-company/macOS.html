@@ -1,0 +1,39 @@
+<!--
+title: Securing macOS
+description: 
+published: true
+date: 2021-01-08T05:15:52.652Z
+tags: security operations
+editor: ckeditor
+-->
+
+<h1>macOS</h1>
+<p>Secure configuration of macOS devices</p>
+<p>macOS is the default operating system on Apple's Mac, iMac, and Macbook devices.&nbsp;Whilst this guide&nbsp;does not apply to any specific version of macOS, it was last tested on macOS 10.15 in November 2019.</p>
+<h2>Securing macOS</h2>
+<p>There are a number of configuration options which you can use to make the platform work within your organisation. However, we specifically recommend you implement technical and procedural controls relating to the following areas.</p>
+<h3>General recommendations</h3>
+<p>For an enterprise deployment of macOS devices, you should:</p>
+<ul>
+  <li>Decide which macOS devices your organisation will use:<ul>
+      <li>Devices with a T2 security processor should be preferred, as they provide better full disk encryption, stronger secure boot and better resistance to physical attacks. Secure erase is also much more effective.</li>
+      <li>macOS devices typically receive&nbsp;software updates&nbsp;for around 6-7 years after first release. Once a device is&nbsp;vintage or obsolete, it no longer receives updates. At this point, you should purchase newer devices.</li>
+    </ul>
+  </li>
+  <li>Use one of the&nbsp;recommended network architectures to enable remote access&nbsp;to enterprise services.</li>
+  <li>Use a&nbsp;Mobile Device Management service&nbsp;to configure, monitor and enforce technical controls on your macOS devices. Enable any&nbsp;logging and monitoring&nbsp;features.</li>
+  <li>Use&nbsp;Apple Business Manager (ABM)&nbsp;to enrol and provision devices via&nbsp;zero touch enrolment.&nbsp;Using zero touch enrolment, the MDM can be configured to automatically provision the initial administrator account, and users will create non-administrative accounts during setup assistant.</li>
+  <li>Consider whether you will deploy&nbsp;antivirus or other security software&nbsp;on macOS. A combination of&nbsp;Gatekeeper&nbsp;settings and the built-in Xprotect service is normally sufficient, but in some cases you may want additional protection.</li>
+</ul>
+<h3>Device configuration</h3>
+<p>Once you have chosen your MDM service, architecture and approach to applications, you should then develop a device configuration which you can apply to enforce your technical controls. In particular, you should include policies that manage:</p>
+<ul>
+  <li>The use of&nbsp;biometrics, as well as&nbsp;passcodes and authentication policies. For devices without a&nbsp;<a href="https://support.apple.com/en-gb/HT208862">T2 security processor</a>, we recommend you use complex passcodes for user accounts as they directly protect disk encryption keys.</li>
+  <li>Setting a&nbsp;<a href="https://support.apple.com/en-us/HT204455">firmware password&nbsp;</a>to help mitigate a variety of physical attacks, including cold boot and direct memory access (DMA).</li>
+  <li>Configuration of&nbsp;<a href="https://support.apple.com/en-gb/HT204837">FileVault encryption</a>&nbsp;settings&nbsp;to prevent data extraction using physical attacks.&nbsp;Configure escrow of recovery keys so you can reset forgotten passwords.</li>
+  <li>External interface protection, including&nbsp;wired and wireless peripherals&nbsp;(e.g. disabling USB accessories when the device is locked).</li>
+  <li>Automatic&nbsp;operating system and application updates.</li>
+  <li>The built-in IKEv2&nbsp;virtual private network (VPN)&nbsp;if a VPN is required. However, always-on mode is not supported for any built-in VPNs on macOS.</li>
+  <li>Third-party apps&nbsp;for work use from an enterprise app catalogue, delivered via MDM. Alternatively, you can use tools like&nbsp;<a href="https://github.com/munki/munki">Munki</a>&nbsp;to manage software installation on your devices.</li>
+  <li>Your approach to&nbsp;iCloud accounts on users' devices, enabling or disabling the specific iCloud features that your need.</li>
+</ul>
