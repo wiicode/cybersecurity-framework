@@ -2,7 +2,7 @@
 title: Details
 description: 
 published: true
-date: 2021-01-15T02:31:40.795Z
+date: 2021-01-15T02:32:13.711Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:03:26.414Z
@@ -41,7 +41,7 @@ This site allows anyone we interact with to login and access content.  Premium l
 
 - Dedicated BENTO:GUIDES instance (logically isolated, secured, and encrypted) dynamically updated with our latest content.
 - Ready to adopt policies, processes, and procedures for cybersecurity.
-- Premium Policy Content
+- Expanded policy content for SOC2 Type II aligned organizations. 
 
 
 ## Platinum 
