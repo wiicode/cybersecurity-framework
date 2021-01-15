@@ -2,9 +2,10 @@
 title: Home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2020-08-29T18:50:13.194Z
+date: 2021-01-15T02:37:01.126Z
 tags: welcome
 editor: markdown
+dateCreated: 2020-08-05T17:54:57.644Z
 ---
 
 > 60% of small businesses that are victims of a cyber attack go out of business within six months. Business owners are responsible for cybersecurity. Information security is complicated and dynamic. An internally developed and implemented cybersecurity program is your company's best risk mitigation and management strategy. 
@@ -13,7 +14,6 @@ editor: markdown
 # Objectives
 Hello!  The objective behind **Bento Cyber Security Framework** and BENTO:GUIDES is to promote realistic and practical controls against common threats to organizational infrastructure.  
 
-![ransomware-vectors-generic.png](/ransomware-vectors-generic.png)
 
 # Getting Started
 BENTO:GUIDES information security governance platform for professional service companies.  This web application enables us to continuously update and improve cybersecurity content your business needs to be successful.  To get started, visit one of the the major compartments:
