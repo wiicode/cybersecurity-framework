@@ -2,9 +2,10 @@
 title: Details
 description: 
 published: true
-date: 2020-09-14T15:02:03.078Z
+date: 2021-01-15T02:30:03.210Z
 tags: 
 editor: markdown
+dateCreated: 2020-08-05T18:03:26.414Z
 ---
 
 > We have developed BENTO:GUIDES as a consumable "bento box" of information security governance complete with standardized policies and actionable processes. It is available in read-only format or as a living resource dedicated to your organization.  
@@ -28,11 +29,10 @@ This site allows anyone we interact with to login and access content.  Premium l
 
 ## Silver 
 
-> All benefits of **Bronze** plus... Access to premium content and standard security awareness training for all members of your organization.  
+> All benefits of **Bronze** plus... Access to the security awareness training stack for all members of your organization.  
 {.is-success}
 
 - Security Awareness Training
-- Premium Content
 
 ## Gold 
 > All benefits of **Silver** plus... Premium access focused on customized content to your organization.  Each membership includes a dedicated BENTO:GUIDES tenant fully managed by our team.
