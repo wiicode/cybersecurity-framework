@@ -2,7 +2,7 @@
 title: Details
 description: 
 published: true
-date: 2021-01-15T02:30:03.210Z
+date: 2021-01-15T02:31:40.795Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:03:26.414Z
@@ -33,6 +33,7 @@ This site allows anyone we interact with to login and access content.  Premium l
 {.is-success}
 
 - Security Awareness Training
+- Templates for risk assessments, continuity planning, and incident response.
 
 ## Gold 
 > All benefits of **Silver** plus... Premium access focused on customized content to your organization.  Each membership includes a dedicated BENTO:GUIDES tenant fully managed by our team.
@@ -40,7 +41,7 @@ This site allows anyone we interact with to login and access content.  Premium l
 
 - Dedicated BENTO:GUIDES instance (logically isolated, secured, and encrypted) dynamically updated with our latest content.
 - Ready to adopt policies, processes, and procedures for cybersecurity.
-- Templates for risk assessments, continuity planning, and incident response.
+- Premium Policy Content
 
 
 ## Platinum 
