@@ -1,10 +1,11 @@
 ---
-title: Release Notes
+title: release-notes
 description: The past, present, and future of BCSF
 published: true
-date: 2020-08-06T18:07:19.503Z
+date: 2021-02-13T16:39:19.609Z
 tags: 
 editor: markdown
+dateCreated: 2020-08-06T18:07:19.503Z
 ---
 
 # Release Notes
