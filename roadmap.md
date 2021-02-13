@@ -1,9 +1,9 @@
 ---
-title: release-notes
+title: release-notesc
 description: The past, present, and future of BCSF
 published: true
-date: 2021-02-13T16:39:19.609Z
-tags: 
+date: 2021-02-13T17:15:51.985Z
+tags: checklist, bronze
 editor: markdown
 dateCreated: 2020-08-06T18:07:19.503Z
 ---
