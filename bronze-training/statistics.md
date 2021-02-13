@@ -2,9 +2,10 @@
 title: Statistics
 description: 
 published: true
-date: 2020-08-05T17:59:45.632Z
-tags: 
+date: 2021-02-13T23:44:10.196Z
+tags: bronze, bronze-training
 editor: markdown
+dateCreated: 2020-08-05T17:59:45.632Z
 ---
 
 # Top Thirty Cybersecurity Statistics 
