@@ -2,9 +2,10 @@
 title: Domain Name System
 description: 
 published: true
-date: 2020-12-04T16:35:17.779Z
-tags: 
+date: 2021-02-13T23:44:52.898Z
+tags: bronze, bronze-training
 editor: markdown
+dateCreated: 2020-10-31T18:35:44.902Z
 ---
 
 **Policy**: Use a dedicated DNS provider such as RackSpace Cloud DNS or Amazon Route53 to manage DNS records independent of the organization's website host, mail host, and domain registrar.   For some organizations two exceptions can be made:
