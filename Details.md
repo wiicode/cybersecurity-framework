@@ -1,8 +1,8 @@
 ---
-title: -home-details
+title: - home-details
 description: 
 published: true
-date: 2021-02-13T16:38:20.832Z
+date: 2021-02-13T16:38:28.192Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:03:26.414Z
