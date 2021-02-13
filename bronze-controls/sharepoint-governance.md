@@ -2,9 +2,10 @@
 title: SharePoint Governance
 description: Using SharePoint for storing critical business info. 
 published: true
-date: 2020-11-25T02:59:18.154Z
-tags: governance, policy
+date: 2021-02-13T23:56:27.368Z
+tags: governance, policy, bronze, bronze-controls
 editor: markdown
+dateCreated: 2020-11-25T02:53:46.802Z
 ---
 
 # About
