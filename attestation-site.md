@@ -2,8 +2,8 @@
 title: - home-details-attestation
 description: BCSF subscriptions include attestation services and validation.  
 published: true
-date: 2021-02-13T16:40:41.813Z
-tags: attestation
+date: 2021-02-13T17:15:27.410Z
+tags: attestation, bronze
 editor: markdown
 dateCreated: 2020-08-06T23:49:55.930Z
 ---
