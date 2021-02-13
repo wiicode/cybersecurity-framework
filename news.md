@@ -2,8 +2,8 @@
 title: news
 description: As part of its mission, BENTO:GUIDES leads the effort to enhance the security, resiliency, and reliability of our customer cybersecurity and communications infrastructure.
 published: true
-date: 2021-02-13T16:37:49.777Z
-tags: 
+date: 2021-02-13T17:14:54.665Z
+tags: bronze
 editor: markdown
 dateCreated: 2020-08-12T01:10:29.411Z
 ---
