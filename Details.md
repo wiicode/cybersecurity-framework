@@ -2,8 +2,8 @@
 title: - home-details
 description: 
 published: true
-date: 2021-02-13T16:38:28.192Z
-tags: 
+date: 2021-02-13T17:15:09.358Z
+tags: bronze
 editor: markdown
 dateCreated: 2020-08-05T18:03:26.414Z
 ---
