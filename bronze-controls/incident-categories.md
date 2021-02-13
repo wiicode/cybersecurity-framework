@@ -1,10 +1,11 @@
 ---
 title: Incident Categories
-description: 
+description: This page contains the ISO 27000k based incident categories every information security program needs to consider for continuity and recovery.
 published: true
-date: 2020-08-07T17:54:14.594Z
-tags: 
+date: 2021-02-13T23:56:09.936Z
+tags: bronze, bronze-controls
 editor: markdown
+dateCreated: 2020-08-07T17:36:22.443Z
 ---
 
 According to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
