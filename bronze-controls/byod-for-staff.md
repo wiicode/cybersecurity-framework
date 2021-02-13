@@ -2,9 +2,10 @@
 title: BYOD Agreement
 description: Personal Smart Device Usage Agreement (BYOD - Bring Your Own Device)
 published: true
-date: 2021-01-08T04:41:59.903Z
-tags: 
+date: 2021-02-13T23:54:44.281Z
+tags: bronze, bronze-controls
 editor: markdown
+dateCreated: 2020-10-31T18:56:02.392Z
 ---
 
 I am seeking connectivity to `ORGANIZATION` (from here referred to as the Company) electronic messaging (email) services for my personally-owned smart device. In exchange for this connectivity, I agree to comply with all company policies and procedures concerning smart device utilization and permit the Company to take any action necessary to prevent data loss, unauthorized disclosure, and other incidents that may compromise the security of company data and systems.  Specifically, I understand the following:
