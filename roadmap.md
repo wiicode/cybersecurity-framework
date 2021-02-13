@@ -2,7 +2,7 @@
 title: release-notesc
 description: The past, present, and future of BCSF
 published: true
-date: 2021-02-13T17:15:51.985Z
+date: 2021-02-13T19:16:24.917Z
 tags: checklist, bronze
 editor: markdown
 dateCreated: 2020-08-06T18:07:19.503Z
@@ -16,9 +16,9 @@ dateCreated: 2020-08-06T18:07:19.503Z
 ### 1.0.0
 
 #### Content
-- [ ] BCSF 1.0 Overview
+- [X] BCSF 1.0 Overview
 - [ ] Personal and Family Security Guide
-- [ ] Small Business Guide
+- [X] Small Business Guide
 - [ ] Layered Defense Checklist
 - [ ] Layered Defense Explainers
 - [ ] Layered Defense Supplements
@@ -27,13 +27,13 @@ dateCreated: 2020-08-06T18:07:19.503Z
 - [ ] Security Awareness Training for Developers
 
 #### Capabilities
-- [ ] AWS Well-Architected environment
-- [ ] AWS RDS Database 
-- [ ] GIT integration (bi-directional)
-- [ ] Amazon S3 Storage  (one-direction) 
-- [ ] Microsoft Authentication
-- [ ] Slack Authentication
-- [ ] Google Authentication
+- [X] AWS Well-Architected environment
+- [X] AWS RDS Database 
+- [X] GIT integration (bi-directional)
+- [X] Amazon S3 Storage  (one-direction) 
+- [X] Microsoft Authentication
+- [X] Slack Authentication
+- [X] Google Authentication
 - [ ] AWS Cloud Formation for Gold and Platinum instances
 
 
@@ -42,9 +42,9 @@ dateCreated: 2020-08-06T18:07:19.503Z
 ## Releases.
 
 ### 0.0.1 
-- [ ] AWS Instance
-- [ ] Wiki platform 
-- [ ] Sample content
+- [X] AWS Instance
+- [X] Wiki platform 
+- [X] Sample content
 
 
 ## Short-Term Roadmap.
