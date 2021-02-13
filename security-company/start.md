@@ -1,8 +1,8 @@
 ---
-title: bronze-training-home
+title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-13T16:27:43.598Z
+date: 2021-02-13T16:28:19.167Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
