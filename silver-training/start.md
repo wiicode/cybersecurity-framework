@@ -2,8 +2,8 @@
 title: -silver-training-home
 description: 
 published: true
-date: 2021-02-13T16:32:57.051Z
-tags: 
+date: 2021-02-13T17:23:50.288Z
+tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
 ---
