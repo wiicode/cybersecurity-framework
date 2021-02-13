@@ -2,8 +2,8 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-13T17:14:29.289Z
-tags: bronze, home
+date: 2021-02-13T23:42:16.300Z
+tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
 ---
