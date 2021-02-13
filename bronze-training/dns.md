@@ -2,8 +2,8 @@
 title: Domain Name System
 description: 
 published: true
-date: 2021-02-13T23:44:52.898Z
-tags: bronze, bronze-training
+date: 2021-02-13T23:45:02.492Z
+tags: bronze, bronze-training, dns
 editor: markdown
 dateCreated: 2020-10-31T18:35:44.902Z
 ---
