@@ -2,7 +2,7 @@
 title: - home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-02-14T00:01:46.604Z
+date: 2021-02-14T00:02:12.719Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -23,7 +23,7 @@ BENTO:GUIDES information security content and management platform for profession
 - [Small Business](/security-company/start)
 - Advanced Guidance 
 
-**We built this resource with the following objectives:**
+**We built this resource with the following goals:**
 
 1. To enable companies to easily develop their information security governance.
 1. To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
@@ -32,13 +32,5 @@ BENTO:GUIDES information security content and management platform for profession
 1. To align information security practices with realistic needs and best practices.
 1. To disrupt traditional security awareness training offerings.
 
-## Standard Access:
 
-Registered users are considered guests with read-only access to pages, comments, and certain content.  
-
-## Premium Access:
-
-Paid subscriptions offer read and write access. This enables companies to integrate our dynamic content with organization-specific documentation.  
-
-Learn more about commercial licensing here.
 
