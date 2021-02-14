@@ -2,7 +2,7 @@
 title: - home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-02-14T00:03:44.854Z
+date: 2021-02-14T00:11:37.045Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -18,10 +18,16 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 # Getting Started
 **BENTO:GUIDES** information security content and management platform for professional service companies. To get started, begin with our learning modules and educate yourself about cyber security for small companies.  From there, use our tiered content to build a security program by adopting **policies**, developing **controls**, and eventually attesting it all works properly by auditing and tracking **evidence**. 
 
-## Learning Modules:
-- Individuals & Families
-- [Small Business](/security-company/start)
-- Advanced Guidance 
+## Core Learning Modules:
+
+{.grid-list}
+- [Getting Started *Bronze Level access to all core content.*](/home-subscriptions-bronze)
+- [Learning and Training *The basics of information security.*](/bronze-training/start)
+- [Policies *Rules and procedures for owners and staff.*](/bronze-policies/start)
+- [Implementation Checklists *Outlines foe your actionable steps*](/bronze-checklists/start)
+- [Controls and Evidence *Detailed implementation and oversight guidance*](/bronze-controls/start)
+{.links-list}
+
 
 **We built this resource with the following goals:**
 
