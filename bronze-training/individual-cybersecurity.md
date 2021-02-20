@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T23:00:02.864Z
+date: 2021-02-20T23:04:09.608Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -220,5 +220,5 @@ Scam emails, calls and texts are a problem for everyone. They're getting more co
 - You can check your credit reference file online. You should follow up on any unexpected or suspicious results.
 
 {.grid-list}
-- [Read More *For more guidance on protecting yourself from cyber-enabled fraud, please visit STOP. THINK. CONNECT.*](https://www.stopthinkconnect.org/)
+- [Read More *Please visit STOP. THINK. CONNECT.*](https://www.stopthinkconnect.org/)
 {.links-list}
