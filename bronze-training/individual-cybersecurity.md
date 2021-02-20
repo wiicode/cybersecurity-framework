@@ -2,13 +2,13 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T22:50:37.988Z
+date: 2021-02-20T23:00:02.864Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
 ---
 
-What is cyber security?
+# What is cyber security?
 Cyber security is the means by which individuals and organisations reduce the risk of being affected by cyber crime.
 
 Cyber security's core function is to protect the devices we all use (smartphones, laptops, tablets and computers), and the services we access online - both at home and work - from theft or damage. It's also about preventing unauthorised access to the vast amounts of personal information we store on these devices, and online.
@@ -156,3 +156,69 @@ How to turn on automatic backup for:
 - [Apple - iPhone and iPad ](https://support.apple.com/en-gb/HT203977)
 - [Android ](https://support.google.com/android/answer/2819582?hl=en-GB)
 - [Microsoft Windows 10 and Windows 8 OneDrive ](https://support.microsoft.com/en-us/office/turn-on-onedrive-backup-4e44ceab-bcdf-4d17-9ae0-6f00f6080adb)
+
+
+# Dealing with common cyber problems
+
+## I have been hacked. How do I recover my account?
+
+Gmail, Facebook, Twitter... it doesn't matter what the service is, from time to time someone will find a way in.
+
+If one of your accounts has been hacked, don't worry, we have a step by step guide to help you regain control and protect yourself against future attacks.
+
+{.grid-list}
+- [Read More *Read our advice on recovering accounts.*](#)
+{.links-list}
+
+## Should I pay a ransom to unlock my computer?
+
+If your device has become infected with ransomware, you are encouraged not to pay the ransom.
+
+If you do pay:
+
+- There is no guarantee that you will regain access to your data/device
+- Your computer will still be infected unless you complete extensive clean-up activities
+- Attackers may assume that you would be open to paying ransoms in the future
+- You will be funding criminal groups
+
+{.grid-list}
+- [Read More *Read our advice on removing viruses and malware from your device.*](#)
+{.links-list}
+
+
+## My username and password have been stolen
+
+Personal credentials, such as usernames and passwords, can be stolen directly from you by criminals using tricks such as phishing emails. They can also be stolen by hackers from the services you use, if they suffer a data breach. 
+
+If you suspect either has happened, you should change your password as soon as possible.
+
+If you have used the same password on any other accounts, you should change it there too.
+
+Services such as www.haveibeenpwned.com can tell you if your information has ever been made public in a major data breach, and even alert you if it happens in the future.
+
+## I might have malware on my device
+
+If you believe your laptop, PC, tablet or phone has been infected with a virus or some other type of malware, there are steps you can take.
+
+{.grid-list}
+- [Read More *Follow our guide to remove viruses and restore your device.*](#)
+{.links-list}
+
+## I've received a suspicious email, call or text
+
+Scam emails, calls and texts are a problem for everyone. They're getting more convincing day by day.
+
+{.grid-list}
+- [Read More *Read our advice on spotting and dealing with suspicious emails, calls and texts.*](#)
+{.links-list}
+
+
+## I am worried that my banking details have been stolen
+
+- Contact your bank or building society and speak to their fraud department.
+- Your bank will not ask you to reply to an e-mail with personal information, or details about your account. If you contact them, use a phone number/email address you have found yourself, rather than one sent to you in the email – it may be false.
+- You can check your credit reference file online. You should follow up on any unexpected or suspicious results.
+
+{.grid-list}
+- [Read More *For more guidance on protecting yourself from cyber-enabled fraud, please visit STOP. THINK. CONNECT.*](https://www.stopthinkconnect.org/)
+{.links-list}
