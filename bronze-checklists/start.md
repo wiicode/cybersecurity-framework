@@ -2,7 +2,7 @@
 title: -bronze-checklists-home
 description: Checklists Home Page
 published: true
-date: 2021-02-20T19:57:37.260Z
+date: 2021-02-20T22:27:58.287Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -39,7 +39,7 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 
 
 - [ ] Switch on your Firewall. 
-- [ ] Install and turn on Anti-virus software. 
+- [ ] Install and monitor centralized on Anti-virus software. 
 - [ ] Block access to physical ports for staff who do not need them. 
 - [ ] Consider making a password manager available to your staff to secure their passwords. 
 - [ ] Review the star ratings before choosing one from an app store. 
