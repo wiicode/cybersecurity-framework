@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T22:43:10.208Z
+date: 2021-02-20T22:50:37.988Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -17,7 +17,7 @@ Cyber security is important because smartphones, computers and the internet are 
 
 ## You can improve your cyber security by taking six actions: {.tabset}
 
-### Action 1 
+### Separate Passwords
 
 #### Use a strong and separate password for your email
 
@@ -38,7 +38,7 @@ You should also protect your other important accounts, such as banking or social
 - [Yahoo](https://help.yahoo.com/kb/account/reset-yahoo-password-sln27051.html)
 
 
-### Action 2 
+### Strong Passwords 
 
 #### Create strong passwords using 3 random words
 
@@ -50,7 +50,7 @@ Do not use words that can be guessed (like your pet’s name). You can include n
 
 Saving your passwords in your browser will help you manage them.
 
-### Action 3 
+### Saved Passwords 
 
 #### Save your passwords in your browser
 
@@ -87,7 +87,7 @@ To make sure you are protected, you should:
 You should also back up your data regularly. This will help you recover your important information if your device is lost or stolen.
 
 
-### Action 4 
+### Multi-Factor Auth 
 
 #### Turn on two-factor authentication (2FA)
 
@@ -98,7 +98,26 @@ Some online banking uses 2FA automatically. It does this by asking for more info
 - a PIN, password or code
 - Biometrics - a fingerprint or face ID
 
-### Action 5 
+#### How to turn on two-factor authentication (2FA)
+You will need to manually turn on 2FA for most of your accounts. Not all accounts will offer 2FA. Online banking uses 2FA automatically.
+
+2FA is also known as two-step verification or multi-factor authentication.
+
+##### Turn on 2FA for email
+
+- [Gmail](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome?pli=1)
+- [Outlook](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
+- [Yahoo](https://help.yahoo.com/kb/add-two-step-verification-extra-security-sln5013.html)
+
+
+##### Turn on 2FA for social media
+
+- [Instagram](https://help.instagram.com/1124604297705184)
+- [Facebook](https://www.facebook.com/help/148233965247823)
+- [Twitter](https://help.twitter.com/en/managing-your-account/two-factor-authentication)
+- [LinkedIn](https://www.linkedin.com/help/linkedin/answer/544/turn-two-step-verification-on-and-off?lang=en)
+- 
+### Updates
 
 #### Update your devices
 
@@ -110,8 +129,15 @@ Turn on automatic updates for your devices and software that offer it. This will
 
 Some devices and software need to be updated manually. You may get reminders on your phone or computer. Do not ignore these reminders. Updating will help to keep you safe online.
 
+#### How to turn on automatic updates
 
-### Action 6 
+- [Apple - Mac](https://support.apple.com/en-gb/HT202180)
+- [Apple - iPhone and iPad](https://support.apple.com/en-gb/HT204204)
+- [Microsoft Windows 10](ms-settings:windowsupdate)
+- [Android smartphones and tablets](https://support.google.com/android/answer/7680439?hl=en-GB)
+
+
+### Backup 
 
 #### Back up your data
 
@@ -122,3 +148,11 @@ Backing up regularly means you will always have a recent version of your informa
 You can also turn on automatic backup. This will regularly save your information into cloud storage, without you having to remember.
 
 If you back up your information to a USB stick or an external hard drive, disconnect it from your computer when a back up isn’t being done.
+
+#### How to turn on automatic backup
+How to turn on automatic backup for:
+
+- [Apple - Mac ](https://support.apple.com/en-gb/mac-backup)
+- [Apple - iPhone and iPad ](https://support.apple.com/en-gb/HT203977)
+- [Android ](https://support.google.com/android/answer/2819582?hl=en-GB)
+- [Microsoft Windows 10 and Windows 8 OneDrive ](https://support.microsoft.com/en-us/office/turn-on-onedrive-backup-4e44ceab-bcdf-4d17-9ae0-6f00f6080adb)
