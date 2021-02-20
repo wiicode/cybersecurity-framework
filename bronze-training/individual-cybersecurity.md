@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T23:06:12.974Z
+date: 2021-02-20T23:06:42.185Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -15,10 +15,11 @@ Cyber security's core function is to protect the devices we all use (smartphones
 
 Cyber security is important because smartphones, computers and the internet are now such a fundamental part of modern life, that it's difficult to imagine how we'd function without them. From online banking and shopping, to email and social media, it's more important than ever to take steps that can prevent cyber criminals getting hold of our accounts, data, and devices. 
 
+# You can improve your cyber security by taking six actions: 
 > If hackers get into your device or accounts, they could access your money, your personal information, or information about your workplace or business.
 {.is-warning}
 
-## You can improve your cyber security by taking six actions: {.tabset}
+## {.tabset}
 
 ### Separate Passwords
 
