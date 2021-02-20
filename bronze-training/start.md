@@ -2,7 +2,7 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-20T19:21:26.865Z
+date: 2021-02-20T19:22:48.104Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -19,6 +19,8 @@ dateCreated: 2020-08-05T18:12:08.265Z
 {.is-info}
 
 The CIA triad is a model designed to guide policies for information security within an organization. **Confidentiality** is protecting information from unauthorized access and disclosure. **Integrity** is protecting information from unauthorized modification. **Availability** is preventing disruption in how an organization accesses the data.
+
+## Small Business Information Security Guides
 
 {.grid-list}
 - [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
