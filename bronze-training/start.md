@@ -2,7 +2,7 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-20T18:59:30.438Z
+date: 2021-02-20T19:09:03.670Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -37,6 +37,9 @@ Cyber security researchers can generally find 359 ways to compromise your system
 - Insider threat detection. 
 
 ## People's Attitudes
+> Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
+{.is-danger}
+
 There are also five hazardous attitudes which contribute to the general vulnerabilities staff, managers, and owners. Like most things in security, or even human nature, they are not binary and exist on spectrums. All present a threat an organization and they are: impulsivity, invulnerability, machismo, resignation, and anti-authority.
 
 ### Tabs {.tabset}
@@ -60,6 +63,34 @@ Resignation can vary with roles and is the effective surrender to threats. For m
 
 Anti-authority is a non-conformist approach to cybersecurity. Despite being connected to the same internet, using similar hardware, working with the same software as most organizations around the world, anti-authoritarian managers and owners chose to avoid the work, fail to comply with standards, ignore education opportunities. Such individuals continue to conduct business as they always have and have not yet come to terms that the current cybersecurity needs.
 Traits.
+
+## Responses to Attitudes
+> Technology cannot fix culture or human error, at best it can help to mitigate it. Successful cybersecurity comes from within the individuals that work for your organization, and their relationship with you and your data security team. Research has shown, however, that there are key qualities beneficial to minimizing security risks and include: integrity, depth of knowledge, compliance, questioning attitude, and formality in communication. The people doing the work carrying your business forward are the best line of defense. As much as staff need awareness training, education, standards, policies, guidelines, and procedures they become exponentially more valuable to cybersecurity when they have a developed these traits.
+{.is-success}
+
+### Tabs {.tabset}
+
+#### Curiousity
+
+A questioning attitude is likely the most difficult trait to develop, but it is also the one that carries the greatest benefit. If people  listen to their internal alarm bells, search for the causes, and then take corrective action, the chances that they’ll forestall problems rise dramatically.
+
+#### Integrity
+
+Integrity is the deeply internalized ideal that leads people, without exception, to eliminate “sins of commission” (deliberate departures from protocol) and own up immediately to mistakes. Integrity is dependent on a culture that rewards honesty and offers consequences for lack thereof.
+
+#### Education
+
+Depth of knowledge is the result of proper education. Staff with thoroughly understand all aspects of a system—including the way it’s engineered, its vulnerabilities, and the procedures required to operate it—more readily recognize when something is wrong and handle any anomaly more effectively.
+
+#### Methodolgy 
+
+Procedural compliance is about knowing—or knowing where to find—proper operational procedures and to follow them to the letter. They’re also expected to recognize when a situation has eclipsed existing written procedures and new ones are called for.
+
+#### Mindfulness
+
+Having good judgement is a quality that any hiring manager ought to demand.  Wether your job is spent refilling vending machines or sending rockets to Mars, there is no substitue for making good choices in the moment. Encouraging mindfulness in every team is essential to cyber securiity.
+
+
 
 ## Stories
 {.grid-list}
