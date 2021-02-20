@@ -2,14 +2,33 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-13T23:45:25.417Z
+date: 2021-02-20T22:33:00.657Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ipsum sed justo tempor feugiat sodales eu justo. Nam et gravida nisl. Nulla vitae finibus risus. Mauris nec nibh nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in gravida ipsum. Nulla facilisi. Maecenas posuere odio eu dignissim scelerisque.
+What is cyber security?
+Cyber security is the means by which individuals and organisations reduce the risk of being affected by cyber crime.
 
-Maecenas erat arcu, molestie ac convallis et, dapibus vitae ipsum. Donec malesuada, tortor at pulvinar laoreet, libero sapien pretium dolor, eget vulputate metus lectus at risus. Vivamus sagittis dui ac felis viverra, in commodo orci eleifend. Nullam congue ullamcorper tortor, eget condimentum sem tempor tempus. Donec venenatis quam sit amet tellus convallis efficitur. Nullam convallis egestas lacus, sed varius eros euismod et. Nulla ac magna efficitur, aliquam tellus a, condimentum ligula. Fusce pharetra congue ornare. Donec nisl dolor, sodales vitae elementum et, tempor sit amet sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor ipsum sed justo tempor feugiat sodales eu justo. Nam et gravida nisl. Nulla vitae finibus risus. Mauris nec nibh nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in gravida ipsum. Nulla facilisi. Maecenas posuere odio eu dignissim scelerisque.
+Cyber security's core function is to protect the devices we all use (smartphones, laptops, tablets and computers), and the services we access online - both at home and work - from theft or damage. It's also about preventing unauthorised access to the vast amounts of personal information we store on these devices, and online.
 
-Maecenas erat arcu, molestie ac convallis et, dapibus vitae ipsum. Donec malesuada, tortor at pulvinar laoreet, libero sapien pretium dolor, eget vulputate metus lectus at risus. Vivamus sagittis dui ac felis viverra, in commodo orci eleifend. Nullam congue ullamcorper tortor, eget condimentum sem tempor tempus. Donec venenatis quam sit amet tellus convallis efficitur. Nullam convallis egestas lacus, sed varius eros euismod et. Nulla ac magna efficitur, aliquam tellus a, condimentum ligula. Fusce pharetra congue ornare. Donec nisl dolor, sodales vitae elementum et, tempor sit amet sapien.
+Cyber security is important because smartphones, computers and the internet are now such a fundamental part of modern life, that it's difficult to imagine how we'd function without them. From online banking and shopping, to email and social media, it's more important than ever to take steps that can prevent cyber criminals getting hold of our accounts, data, and devices. 
+
+## {.tabset}
+
+### Action 1 
+
+#### Use a strong and separate password for your email
+
+Use a strong and separate password for your email
+If a hacker gets into your email, they could:
+
+reset your other account passwords
+access information you have saved about yourself or your business
+Your email password should be strong and different to all your other passwords. This will make it harder to crack or guess.
+
+Using 3 random words is a good way to create a strong, unique password that you will remember.
+
+You should also protect your other important accounts, such as banking or social media.
+
