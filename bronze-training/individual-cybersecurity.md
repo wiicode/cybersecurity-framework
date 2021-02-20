@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T22:42:47.094Z
+date: 2021-02-20T22:43:10.208Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -32,7 +32,7 @@ Using 3 random words is a good way to create a strong, unique password that you 
 
 You should also protect your other important accounts, such as banking or social media.
 
-### How to change your e-mail password?
+#### How to change your e-mail password?
 - [Google G-Mail](https://support.google.com/accounts/answer/41078)
 - [Microsoft Outlook](https://support.microsoft.com/en-gb/office/change-your-password-in-outlook-com-2138d690-811c-4545-b2f3-e4dbe80c9735?ui=en-us&rs=en-gb&ad=gb)
 - [Yahoo](https://help.yahoo.com/kb/account/reset-yahoo-password-sln27051.html)
