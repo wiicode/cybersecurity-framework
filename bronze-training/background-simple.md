@@ -2,7 +2,7 @@
 title: Small Business: Improving Your Posture
 description: How to improve your cybersecurity posture when starting at zero. 
 published: true
-date: 2021-02-20T18:36:36.899Z
+date: 2021-02-20T19:39:43.219Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2021-02-20T18:32:43.513Z
@@ -27,9 +27,9 @@ Bento Cyber Security Framework (BCSF) is an information sercurity governance fra
 - Step 3 - Keeping your smartphones (and tablets) safe
 - Step 4 - Using passwords to protect your data
 - Step 5 - Avoiding phishing attacks
-- Actions to take
-- Video collection
-- Resources
+- Actions to take (Coming Soon)
+- Video collection (Coming Soon)
+- Resources (Coming Soon)
 
 # Step 1 - Backing up your data
 
