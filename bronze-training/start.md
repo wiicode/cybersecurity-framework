@@ -2,7 +2,7 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-20T19:22:48.104Z
+date: 2021-02-20T23:13:41.835Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -13,6 +13,11 @@ dateCreated: 2020-08-05T18:12:08.265Z
 > IBM’s “2014 Cyber Security Intelligence Index” reported that 95 percent of all security incidents involve human error. In 2016 they added that 60 percent of breaches are a result of insiders. Many of these are successful security attacks prey on human weakness in order to lure insiders within organizations to unwittingly provide them with access to sensitive information.
 {.is-warning}
 
+This section is a starting point to majority of our small business cyber security resources. A good starting point is looking at personal online life and individual security needs.
+
+{.grid-list}
+- [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
+{.links-list}
 
 # The Basics
 > All businesses use information. If that information is compromised in some way, the business may not be able to function. Protecting the information an organization creates, uses, or stores is information security. Information security concentrates on how to protect confidentiality, integrity, and availability of all business information; this is known as the CIA triad.
