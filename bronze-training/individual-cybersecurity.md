@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-21T00:07:09.109Z
+date: 2021-02-21T01:58:31.123Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -171,7 +171,7 @@ Gmail, Facebook, Twitter... it doesn't matter what the service is, from time to 
 If one of your accounts has been hacked, don't worry, we have a step by step guide to help you regain control and protect yourself against future attacks.
 
 {.grid-list}
-- [Read More *Read our advice on recovering accounts.*](bronze-training/individuals-recovering-hacked-accounts)
+- [Read More *Read our advice on recovering accounts.*](/bronze-training/individuals-recovering-hacked-accounts)
 {.links-list}
 
 ## Should I pay a ransom to unlock my computer?
