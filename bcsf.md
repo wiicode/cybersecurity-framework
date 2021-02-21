@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-21T02:54:01.595Z
+date: 2021-02-21T02:59:35.134Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -575,4 +575,161 @@ NIST Guide to Intrusion Detection and Intrusion Prevention Systems
 ISO 27002 / 27019
 IEC 62443`
 
+# C.2 Proactive security event discovery
+> Detecting anomalous events in relevant network and information systems.
+{.is-info}
 
+## Principle
+*The organisation detects, within networks and information systems, malicious activity affecting, or with the potential to affect, the operation of essential functions even when the activity evades standard signature based security prevent/detect solutions (or when standard solutions are not deployable).*
+
+## Description
+Some cyber attackers will go to great lengths to avoid detection via standard security monitoring tools such as anti-virus software, or signature-based intrusion detection systems, which give a direct indication of compromise.
+
+Other, less direct, security event indicators may provide additional opportunities for detecting attacks that could result in an adverse impact on essential functions.
+
+Examples of less direct indicators could include the following:
+
+- Deviations from normal interaction with systems (e.g. user activity outside normal working hours).
+- Unusual patterns of network traffic (e.g. unexpectedly high traffic volumes, or traffic of an unexpected type etc).
+- ‘Tell-tale’ signs of attack, such as attempts to laterally move across networks, or running privilege escalation software.
+- The retrieval of large numbers of essential function design documents
+
+It is not possible to give a generic list of suitable indicators since their usefulness in detecting malicious activity will vary considerably, depending on how a typical attacker’s actions might reveal themselves in relation to the normal operation of an organisation’s networks and information systems. Opportunities for exploiting these less direct security event indicators to improve network and information system security should be proactively investigated, assessed and implemented when feasible e.g. technically possible, cost effective etc.
+
+Successful attack detection by means of less direct security event indicators may depend on identifying combinations of network events that match likely attacker behaviour, and will therefore require an analysis and assessment capability to determine the security significance of detected events.
+
+Wherever possible, network and information systems supporting the operation  of essential functions should be designed with proactive security event discovery in mind.
+
+## Guidance
+Proactive security event discovery is more difficult than standard security monitoring because it looks beyond the known or prescriptive threat signatures and indicators described in C1. Security Monitoring.
+
+The aim is to build on what is known of past attacks to hypothesise what new or previously unseen intrusions might look like in essential functions environments. As such, this heuristic sort of monitoring should not be prioritised unless standard monitoring (see Principle C1) is already effective, or is not possible or practicable for some reason. It requires more experienced knowledge of network and system behaviour and of the general characteristics that a malicious intrusion might exhibit. This sort of proactive monitoring or threat discovery would normally involve:
+
+1. Designing your own alerts or trip-wires, using experience or reasoning of what an intrusion might do, rather than specifically around what past attacks have done
+1. A good understanding of normal system behaviour (e.g. what software is authorised and how it would normally behave, how user accounts normally access network resources or how network components connect to each other and transfer data)
+1. A good understanding of the ways that different types of anomaly might signify a malicious intrusion, based on a comprehensive and advanced understanding of threat intelligence
+
+The science of anomaly detection, which goes beyond using pre-defined or prescriptive pattern matching, is a challenging but growing area. Capabilities like machine learning are increasingly being shown to have applicability and potential in the field of intrusion detection. However, if they are not well designed and executed, these technologies can be expensive, difficult to implement and can produce high false-alarm rates. Organisations that want to use such tools should consult the NCSC's guidance on Intelligent Security Tools.
+
+# D.1 Response and recovery planning
+> Putting suitable incident management and mitigation processes in place.
+{.is-info}
+
+## Principle
+*There are well-defined and tested incident management processes in place, that aim to ensure continuity of essential functions in the event of system or service failure. Mitigation activities designed to contain or limit the impact of compromise are also in place.*
+
+## Description
+Incidents will invariably happen. When they do organisations should be prepared to deal with them, and as far as possible, have mechanisms in place that minimise the impact on the essential function.
+
+The particular mechanisms required should be determined as part of the organisation's overall risk management approach. Examples might include things such as DDoS protection, protected power supply, critical system redundancy, rate-limiting access to data or service commands, critical data backup or manual fail-over processes.
+
+> **Note**: Some cyber-related regulation (eg. NIS Directive) has mandatory reporting requirements around cyber security incidents that have the potential to affect essential functions. Organisations should make sure that they understand any mandatory incident reporting requirements that apply to them and include such requirements in their incident management planning.
+
+## Guidance
+The 10 Steps: Incident Management is the most concise guidance here, but organisations should use other more detailed guidance as and when appropriate. Other authoritative guidance pieces are referenced below.
+
+### Preparation - An Incident Response Plan
+In addition to meeting the expectations of 10 Steps: Incident Management, you should ensure that your organisation's incident response plans are grounded in thorough and comprehensive risk assessments. Response plans should prioritise essential functions along with the assets and systems that are required to ensure their continued effective operation, such as operational technologies, or key datasets.
+
+The business continuity implications of any compromise should also be taken into account and your cyber incident response plans should link to other business response functions. You should form a cyber response team that is capable of implementing the plan, with the appropriate skills, tools and reach into other parts of your organisation, such as security monitoring and business continuity.
+
+In practice, the Incident Response function should interoperate with the security monitoring function. The Incident Response Function needn't be a dedicated team and some members may have non-response related roles. Collectively, the team should have knowledge of IT security, IT infrastructure and Business Management, any specialist technologies (e.g. Operational Technologies or datacentres), incident reporting requirements, and Communications plans.
+
+Your plan should cover all relevant potential incidents. It should be auditable and testable (via exercises) across a range of incident scenarios and should encompass all realistic descriptions of what might constitute an incident and its severity. Your test scenarios should draw on threat intelligence, past incidents, exercises and the ways in which security capabilities (e.g. security monitoring and alerting) would feature in your response options. Your scenarios should also consider incidents that involve suppliers and your wider supply chain (e.g. incidents arising through supplier relations, or relying on suppliers as part of your response).
+
+These scenarios could include, but is not limited to:
+
+- malware infection
+- denial of service
+- hacker infiltration
+- an Insider Incident
+- an inability to view status of the network or operational system
+- emergency patching or antivirus signature roll-out
+- system backup and restore
+- confirmation of normal operations
+
+Your plan should work seamlessly with other system management and security functions, such as security monitoring. Changes and improvements to response plans should reflect changes to these functions and vice versa, where appropriate.
+
+Plans should articulate clear governance frameworks and roles with procedures for reporting to relevant internal or external stakeholders, such as regulators and competent authorities.
+
+Your plan should also set out a comprehensive range of containment, eradication and recovery strategies, specifying how and when they should be used.
+
+Your organisation should be able to describe its own state of readiness, using any criteria or expected standards from regulators or competent authorities, or from your internal governance arrangements, where appropriate.
+
+You should run exercises to test your ability to respond to incidents that could affect the operation of essential functions. These exercises should reflect past experience, red-teaming/scenario planning, or threat intelligence and should draw heavily on your risk assessment, considering all relevant assets and vulnerabilities, especially where they relate to essential functions.
+
+Exercises should record lessons learned, covering governance, roles and internal communication, quality of network and security monitoring data, containment and recovery strategies, or any other factors relevant to their effectiveness. This should integrate with lessons learned activities (see D2 Lessons Learned).
+
+In order to report coherently on incidents when required, your plan should set out reporting thresholds (i.e. what does and does not need to be reported) and standards (i.e. the level of detail that should be reported) and which authorities to report to.
+
+More detailed guidance on developing an incident response plan, and the underlying capability to implement it, can be found in Section 2 of the NIST Computer Security Incident Handling Guide, Part 4 of CREST Cyber Security Incident Response Guide or the Prepare section of ISO 27035.
+
+### Response and Containment
+Your organisation's security monitoring function should be capable of alerting with enough detail for a response team to triage and determine the most appropriate response, which might be to investigate further, to take predetermined action, or to take no action. Eventualities not covered in the plan should be dealt with by risk-based decisions, taking account of factors like potential disruption, cost-effectiveness of response and the need for evidence preservation.
+
+The resilience measures your organisation has in place should support incident response (see B5 Resilient Networks and Systems).
+
+Incidents should be reported to the appropriate internal and external authorities, in line with the relevant reporting thresholds and standards. The response team should be capable of prioritising incidents, according to the potential consequences and  possible adverse impact on essential functions, using risk-based methods. These events should be documented, including alerts provided, information passed and decisions taken.
+
+In addition to adhering to mandatory reporting requirements, organisations should seriously consider voluntarily reporting cyber security incidents to the NCSC, who may be able to provide situational awareness, drawing on incident reporting from other victims, as well as response and protective security advice. Assistance may also be sought from Cyber Incident Response (CIR) companies - see CIR scheme.
+
+Further guidance is found in Section 3 of NIST Computer Security Incident Handling Guide, Part 5 of CREST Computer Security Incident Response Guide or Part 4 of ISO 27035.
+
+`References
+NCSC 10 Steps: Incident Management
+NIST Computer Security Incident Handling Guide
+CREST Cyber Security Incident Response Guide
+Prepare section of ISO 27035
+CIR scheme
+ENISA Good practice guide for incident management
+NCSC Incident Management collection`
+
+# D.2 Lessons learned
+> Learning from incidents and implementing these lessons to improve the resilience of essential functions.
+{.is-info}
+
+## Principle
+*When an incident occurs, steps must be taken to understand its root causes and ensure appropriate remediating action is taken.*
+
+## Description
+If an incident does occur, it is important your organisation learns lessons as to why it happened and, where appropriate, takes steps to prevent the issue from reoccurring. The aim should be to address the root cause or to identify systemic problems, rather than to fix a very narrow issue. For example, to address the organisation's overall patch management process, rather than to just apply a single missing patch.
+
+## Guidance
+You should use all of the guidance points below to learn lessons and address shortfalls in:
+
+- your overall protective security (see Objectives A - C) and
+- your incident response plan (see Response and Recovery Planning).
+
+### Root Causes and Shortfall
+Each incident or exercise should include assessment of root causes and any other factors that obstructed the required standard of recovery. You should consider what measures would need to be in place to prevent similar incidents in the future or to improve your response capabilities. This might mean improving the quality or timeliness of detection, or designing the system so that simpler or more effective actions can be taken more quickly, or introducing mitigations to reduce the likelihood of such incidents occurring.
+
+Your organisation should produce good quality reporting during incident response and exercising. Factors that affect the quality of reporting include information sharing, governance or processes, or clearly defined roles, responsibilities and training.
+
+You should keep sufficiently detailed records to show how information was used to make decisions, so that the root causes of an incident can be identified and any shortfalls in response and preventive strategies can be assessed. These might include gaps in security monitoring, poor understanding of networks, insufficient business continuity planning, or inadequate internal communication
+
+These lessons should be clearly and comprehensively documented and fed into your protective security as well as your response plans. Further details can be found in Sections 3.1-2 of NIST Computer Security Incident Handling Guide, Part 5 of CREST Computer Security Incident Response Guide and parts 2-3 of ISO 27035.
+
+### Reduced Risk
+You should use post-incident and post-exercise reviews to actively reduce the risks associated with the same, or similar, incidents happening in future.
+
+Lessons learned can inform any aspect of your cyber security, including:
+
+- System configuration
+- Security monitoring and reporting
+- Investigation procedures
+- Containment/recovery strategies
+- Governance and communication around incident management
+
+### Reporting
+Lessons drawn from incidents or exercising should be shared with all relevant internal and external stakeholders e.g. regulators and competent authorities, as and when required, but also to internal governance, who can approve new preventive/responsive measures, or to organisations such as NCSC, who can provide insight around incident trends.
+
+### Data Retention
+Many incidents go undetected for long periods. You should consider your organisation's data retention policies, especially the retention period and quality of historical data (e.g. any data aggregation performed after a time may restrict investigation), in order to ensure that incidents detected several months after they occurred can still be analysed adequately.
+
+In determining adequate retention periods, you should consider how effective your monitoring capability is (i.e. how long might an incident go undetected), experience of past incidents and any examples available in threat intelligence. Ensure that, if an incident occurs, your organisation would have sufficient data to perform the required level of post-incident analysis, learn lessons from the analysis, and report the right details to the right people (e.g. internal decision-makers or external regulators or competent authorities).
+
+`References
+NCSC 10 Steps: Incident Management
+Chapter 8 of ENISA Good Practice Incident Management Guide
+ISO 27035:2016 - Principles of Incident Management
+Section 3 NIST Computer Security Incident Handling Guide`
