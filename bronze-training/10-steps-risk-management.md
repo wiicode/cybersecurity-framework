@@ -2,11 +2,15 @@
 title: Risk Management Regime
 description: Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.
 published: true
-date: 2021-02-21T15:55:30.325Z
+date: 2021-02-21T16:02:04.441Z
 tags: risk management, bronze, bronze-training, ncsc, 10-steps
 editor: markdown
 dateCreated: 2021-02-21T15:52:18.795Z
 ---
+
+> Why defining and communicating your Board’s Information Risk Management Regime is central to your organisation’s overall cyber security strategy.
+{.is-info}
+
 
 # Summary
 Organisations rely on technology, systems and Information to support their business goals. It is important that organisations apply a similar level of rigour to assessing the risks to its technology, systems and information assets as it would to other risks that might have a material business impact, such as regulatory, financial or operational risks. This can be achieved by embedding an appropriate risk management regime across the organisation, which is actively supported by the board, senior managers and an empowered governance structure.
