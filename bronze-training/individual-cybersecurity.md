@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-20T23:23:20.859Z
+date: 2021-02-21T00:07:09.109Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -205,7 +205,7 @@ Services such as www.haveibeenpwned.com can tell you if your information has eve
 If you believe your laptop, PC, tablet or phone has been infected with a virus or some other type of malware, there are steps you can take.
 
 {.grid-list}
-- [Read More *Follow our guide to remove viruses and restore your device.*](#)
+- [Read More *Follow our guide to remove viruses and restore your device.*](/bronze-training/individuals-recover-infected-device)
 {.links-list}
 
 ## I've received a suspicious email, call or text
