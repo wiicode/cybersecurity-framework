@@ -2,14 +2,15 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-21T02:36:41.481Z
+date: 2021-02-21T02:54:01.595Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
 ---
 
 # Cyber & safety introduction
-An introduction to cyber-related risks to safety, how to manage them, and resources related to cyber and safety provided by the NCSC.
+> An introduction to cyber-related risks to safety, how to manage them, and resources related to cyber and safety provided by the NCSC.
+{.is-info}
 
 ## General introduction
 Increasingly, computerised systems are performing vital safety-related functions designed to protect human lives. For example, such systems are controlling the safe operation of industrial sites processing and storing dangerous chemicals, and play a key role in the safety of aviation, rail transportation etc.
@@ -38,7 +39,8 @@ Please note that, as used in the CAF collection, the term ‘essential function�
 If your organisation is subject to regulation in relation to the maintenance of public safety you should consult your regulator concerning the use of the NCSC CAF collection in relation to meeting regulatory requirements.
 
 # A.1 Governance
-Putting in place the policies and processes which govern your organisation’s approach to the security of network and information systems.
+> Putting in place the policies and processes which govern your organisation’s approach to the security of network and information systems.
+{.is-info}
 
 ## Principle
 *The organisation has appropriate management policies and processes in place to govern its approach to the security of network and information systems.*
@@ -74,8 +76,16 @@ An industrial automation and control system (IACS) cyber security management sys
 
 The CSMS defined in IEC 62443-2-1 is designed to build on ISO 27001 & 27002 for IACS environments, with the aim of aligning cyber security risk management with existing safety risk management practices. A management system framework is provided as a baseline, which organisations are encouraged to tailor for their own context.
 
+`References
+NCSC Introduction to Security Governance
+NCSC Board Toolkit
+ISO 27001
+IEC 62443-2-1:2010`
+
 # A.2 Risk management
-Identification, assessment and understanding of security risks. And the establishment of an overall organisational approach to risk management.
+> Identification, assessment and understanding of security risks. And the establishment of an overall organisational approach to risk management.
+{.is-info}
+
 
 ## Principle
 *The organisation takes appropriate steps to identify, assess and understand security risks to the network and information systems supporting the operation of essential functions. This includes an overall organisational approach to risk management.*
@@ -96,8 +106,16 @@ Whichever approach you choose, the scope of your programme must include all syst
 
 Where industrial control and automation systems are in scope of the essential function, you should keep in mind that controls suitable for managing risks on the corporate IT network may be inappropriate or damaging in an operational technology environment. These systems will likely require a more tailored approach, and some frameworks and standards address specific concerns relating to such systems.
 
+`References
+NCSC Risk Management Guidance
+NCSC Assurance
+NCSC Penetration Testing Guidance
+NCSC Cloud Security Collection: Having confidence in cyber security`
+
 # A.3 Asset management
-Determining and understanding all systems and/or services required to maintain or support essential functions.
+> Determining and understanding all systems and/or services required to maintain or support essential functions.
+{.is-info}
+
 
 ## Principle
 *Everything required to deliver, maintain or support networks and information systems  necessary for the operation of essential functions is determined and understood. This includes data, people and systems, as well as any supporting infrastructure (such as power or cooling).*
@@ -125,8 +143,15 @@ This standard aligns with ISO 27001 and can be used in conjunction with it or in
 
 ITIL best practice recommends a staged approach to IT asset management. You may find this useful for improving management of your IT assets, but must keep in mind that there may be assets and dependencies beyond the corporate IT domain as outlined above.
 
+`References
+ISO 27001/2
+ISO 55001 - Asset Management
+ITIL`
+
 # A.4 Supply chain
-Understanding and managing the security risks to networks and information systems which arise from dependencies on external suppliers.
+> Understanding and managing the security risks to networks and information systems which arise from dependencies on external suppliers.
+{.is-info}
+
 
 ## Principle
 *The organisation understands and manages security risks to networks and information systems supporting the operation  of essential functions that arise as a result of dependencies on external suppliers. This includes ensuring that appropriate measures are employed where third party services are used.*
@@ -143,6 +168,11 @@ Organsations responsible for essential functions need to ensure that when third 
 - Effective specification of the security properties of products or services procured from a third party that are important for the protection of the essential function. This should include the security requirements derived from the rest of these Principles.
 - Ensure that any network connections or data sharing with third parties do not introduce unmanaged vulnerabilities that have the potential to affect the security of the essential function.
 - Confidence that third party suppliers are trustworthy such that malicious attempts to subvert the security of products or systems that could affect the essential function are managed.
+
+`References
+NCSC Supply Chain Security
+NCSC Cloud Security Principle 8: Supply Chain Security
+Cloud Security Alliance (CSA) Security, Trust & Assurance Registry (STAR)`
 
 # B.1 Service protection policies and processes
 Defining and communicating appropriate organisational policies and processes to secure systems and data that support the operation of essential functions.
@@ -193,4 +223,356 @@ Suitable data and metrics should be defined prior to implementation to evaluate 
 
 ### Improving policies and processes
 Cyber security and resilience policies and processes should be designed to be adaptable, to fit the needs of the changing environment. Organisations should regularly review their policies and processes in light of any recorded security breaches so that these documents and the organisation’s security can be continually improved.
+
+`References
+HP & University College London whitepaper The Compliance Budget
+SANS blog on security costs to people
+SANS information security policy templates
+ISO/IEC 27001 & 27002
+IEC TS 62443-1-1 & 62443-2-1
+CPNI's Personnel and People Security
+The NCSC's You shape security`
+
+# B.2 Identity and access control
+> Understanding, documenting and controlling access to networks and information systems supporting essential functions.
+{.is-info}
+
+
+## Principle
+*The organisation understands, documents and manages access to networks and information systems and supporting theoperation of essential functions. Users (or automated functions) that can access data or services are appropriately verified, authenticated and authorised.*
+
+## Description
+It is important that the organisation is clear about who (or what in the case of automated functions) has authorisation to interact with the network and information systems supporting an essential function in any way or access associated sensitive data. Rights granted should be carefully controlled, especially where those rights provide an ability to materially affect the operation of the essential function. Rights granted should be periodically reviewed and technically removed when no longer required such as when an individual changes role or perhaps leaves the organisation.
+
+Users, devices and systems should be appropriately verified, authenticated and authorised before access to data or services is granted. Verification of a user’s identity (they are who they say they are) is a prerequisite for issuing credentials, authentication and access management. For highly privileged access it might be appropriate to include approaches such as two-factor or hardware authentication.
+
+Unauthorised individuals should be prevented from accessing data or services at all points within the system. This includes system users without the appropriate permissions, unauthorised individuals attempting to interact with any online service presentation or individuals with unauthorised access to user devices (for example if a user device were lost or stolen).
+
+## Guidance
+### Identity and access management
+
+The Introduction to identity and access management sets out security fundamentals that operators should consider in designing and managing identity and access management systems. Identity and access control should be robust enough that essential functions are not adversely affected by unauthorised access.
+
+### Physical security
+
+In addition to technical security, organisations should protect physical access to networks and information systems supporting the essential function, to prevent unauthorised access, tampering or data deletion. Some organisations may already have physical security measures in place to comply withnon-cyber regulatory frameworks. See CPNI guidance for further information.
+
+`References
+NCSC Introduction to identity and access management
+CPNI Physical Security guidance
+BS ISO/IEC 27002
+IEC 62443-2-1
+NIST Identity and Access Management publications, e.g. SP 800-63 suite "Digital Identity Guidelines"`
+
+# B.3 Data security
+> Protecting stored or electronically transmitted data from actions that may cause an adverse impact on essential functions.
+{.is-info}
+
+## Principle
+*Data stored or transmitted electronically is protected from actions such as unauthorised access, modification, or deletion that may causean adverse impact  on essential functions. Such protection extends to the means by which authorised users, devices and systems access critical data necessary for the operation of essential functions. It also covers information that would assist an attacker, such as design details of networks and information systems.*
+
+## Description
+The protection in place for data that supports the operation of essential functions must be matched to the risks associated with that data.
+
+As a minimum, unauthorised access to sensitive information should be prevented (protecting data confidentiality). This may mean, for example, protecting data stored on mobile devices which could be lost or stolen.
+
+Data protection may also need to include measures such as the sanitisation of data storage devices and/or media before sending for maintenance or disposal.
+
+Protect data in accordance with the risks to essential functions posed by compromises of data integrity and/or availability. In addition to effective data access control measures, other relevant security measures might include maintaining up-to-date, isolated (e.g. offline) back-up copies of data, combined with the ability to detect data integrity failures where necessary. Software and/or hardware used to access critical data may also require protection.
+
+It is important to ensure that data supporting the operation of essential functions is protected in transit. This could be by physically protecting the network infrastructure, or using cryptographic means to ensure data is not inappropriately viewed or interfered with. Duplicating network infrastructure to prevent data flows being easily blocked provides data availability.
+
+Some types of information managed by an organisation responsible for an essential function would, if acquired by an attacker, significantly assist in the planning and execution of aserious attack. Such information could be, for example, detailed network and system designs, security measures, or certain staff details. These should be identified and appropriately protected.
+
+(Note: data supporting the operation of essential functions must be identified in accordance with Principle A3 Asset Management. Important data to protect may include operational data, network traffic, configurations, as well as data that could provide an insight or advantage to an attacker, such as network and information system designs)
+
+## Guidance
+### Design to protect data
+Networks and information systems should be designed to protect important data, for example:
+
+- protecting the confidentiality of sensitive data by minimising the number of copies of data, the detail these include and by retaining operationally sensitive data on segregated systems (this includes design documentation)
+- removing functionality that could allow greater access than has been authorised
+- protecting the integrity of data essential to the operation of the function by providing a read-only copy (e.g. through a DMZ) for non-essential business system consumption
+- only deploying well-tested cryptographic suites in common use by your chosen software stack
+- protecting availability through resilience measures such as multiple network paths and tested automatic backup systems
+- consider suitable means to retain access to essential information in the event of an incident. For example network diagrams needed for restoration, safety-critical information or essential forecasting data
+
+Consider applying the NCSC principles of protecting bulk personal data to data supporting the operation of essential functions.
+
+### Protecting data in transit
+Data in transit may be at risk of attacks such as interception, traffic replay, manipulation or jamming. VPNs are one of the most common and effective cryptographic methods used to assure the confidentiality and integrity of data transmitted over an untrusted network, such as remote access or between two sites.
+
+TLS is often used to protect external data connections such as web browser traffic and IPSec is a well-known encryption technology for individual communication links. Where cryptography is deployed to protect communication links, you should protect cryptographic material such as certificates and keys from external or unauthorised access.
+
+Alternative communications links or network paths are recommended for critical data paths.
+
+For cloud services, see our guidance on protecting data in transit.
+
+### Protecting data at rest
+Wherever data is stored, even temporarily, it may be vulnerable to unauthorised access, tampering or deletion.
+
+You should identify where data supporting the operation of essential functions is stored, including:
+
+- exports from core operational systems to other business systems
+- on mobile devices
+- removable media
+- in temporary caches
+- in systems used for remote access.
+
+You should reduce these unauthorised access, tampering and deletion risks to stored data by limiting the quantity and detail of data held to the minimum necessary for business purposes, especially on devices and media that are more vulnerable to unauthorised access or that could be stolen.
+
+Where dedicated systems and removable media are used, the storage devices can be hardware or software encrypted. You should take suitable measures to physically protect devices and media containing data supporting the operation of essential functions.
+
+Backups remain an essential part of resilience measures and should be appropriately secured.
+
+For cloud services, refer to NCSC cloud security principle 2 on asset protection and resilience.
+
+### Protecting data on mobile devices
+Mobile devices may be used by  an organisation responsible for essential functions, a partner or third-party supplier. Whether owned and managed by the responsible organisation or not, these devices are likely to contain business data. Potentially, data important to the operation of the essential function could be on these devices.
+
+Well-configured and managed, business-owned, devices are preferred to personal or external organisation equipment: refer to the NCSC End User Device Security Collection for security principles and platform-specific guidance.
+
+It may be possible to gain sufficient assurance that a partner or supplier applies security controls to the same rigour (or better).
+
+In addition to good mobile device management, ensure that mobile devices accessing data supporting service delivery are well monitored.
+
+### Secure disposal
+Data important to the operation of the essential function is likely to be found on network and information system media and operational equipment, including IT and operational technology (OT) assets. Service management systems, along with network and mobile devices are familiar targets for secure sanitisation. Some organisations responsible for essential functions may also need to consider the data stored on defunct OT and safety systems.
+
+# B.4 System security
+> Protecting critical network and information systems and technology from cyber attack.
+{.is-info}
+
+## Principle
+*Network and information systems and technology critical for the operation of essential functions are protected from cyber attack. An organisational understanding of risk to essential functions informs the use of robust and reliable protective security measures to effectively limit opportunities for attackers to compromise networks and systems.*
+
+## Description
+There is a range of protective security measures that an organisation can use to minimise the opportunities for an attacker to compromise the security of networks and information systems supporting essential functions. Not all such measures will necessarily be applicable in all circumstances – each organisation should determine and implement the protective security measures that are most effective in limiting those opportunities for attackers associated with the greatest risks to essential functions.
+
+Opportunities for attackers to compromise networks and information systems, also known as vulnerabilities, arise through flaws, features and user error. Organisations should ensure that all three types of vulnerability are considered when selecting and implementing protective security measures.
+
+Organisations should protect networks and information systems from attacks that seek to exploit software vulnerabilities (flaws in software). For example, software should be supported and up-to-date with security patches applied. Where this is not possible, other security measures should be in place to fully mitigate the software vulnerability risk.
+
+Limiting functionality (e.g. disabling services that are not required) and careful configuration will contribute to managing potential vulnerabilities arising from features in hardware and software.
+
+Some common user errors, such as leaving an organisation-issued laptop unattended in a public place, inadvertently revealing security-related information to an attacker (possibly as a result of social engineering) etc. can provide opportunities for attackers. Staff training and awareness on cyber security should be designed to minimise such occurrences (see B.6 Staff Training & Awareness).
+
+## Guidance
+The majority of cyber security incidents can be traced to common cyber attack vectors. The opportunity for successful attack can be minimised by managing the known vulnerabilities which these attacks exploit. Many opportunities for user error can be reduced by technical means.
+
+Attempts to circumvent the measures described below should be detected by security monitoring. Together with data security and resilience measures, the impact of any attempts to circumvent security on the operation of the essential function should be limited.
+
+### System design
+You should design the systems and networks operating or supporting the operation of essential functions to make compromise difficult, avoid disruption and reduce the impact of compromise. Where the design also makes compromise easy to detect, this will help achieve effective monitoring.
+
+Stronger security architectures usually include:
+
+- the most critical services and systems segregated into a higher security zone. This corresponds with the concept of zones and conduits described in the IEC 62443 reference model.
+- at boundaries with higher security zones where it's necessary to import and trust data from a lower security zone, where possible:
+- in a DMZ convert the data into the simplest appropriate alternate protocol, to create a "break" that makes protocol based attacks more difficult;
+- perform validation of both message format and content.
+- where messaging received from outside the organisation is used to control the essential function (e.g. customer or supplier system messages or critical telemetry), prefer a simple messaging format that can be validated and authenticated, or consider additional monitoring.
+- reduced attack surface by limiting software, network data flows, system access, etc. to only those essential and necessary
+- secured platform by default, with a system design that enables application of system updates without interrupting business, wherever possible
+- a separate management layer, preferably using dedicated equipment and a separate network
+- resilience and recovery features
+
+### Configuration
+Well-configured networks and information systems reduce unauthorised access to technologies and simplify security management across hardware, firmware, software and configuration data. This should include:
+
+- baseline build (also known as a “gold build”) is recommended to apply a well-understood, consistent and secured platform across the organisation, and can also apply system hardening techniques to minimise the attack surface. Gold build images should be appropriately protected from interference and be available for use in the event of system recovery.
+- Configuration management policies or software should be used to ensure that only permitted software is installed and authorised devices, e.g. mobile devices and removable media, are permitted to connect. An asset management inventory could be used to manage authorised devices.
+- In addition to the gold build and permitted software installed, maintain a record of the current "known good" configuration (including, for example, patch levels, OT ladder logic) and the resources, such as patch and configuration files, required to create this environment. It should be possible to revert or rebuild to this known good baseline.
+- Systems, software or devices that are not actively supported by the developers should be identified, with appropriate additional security measures in place until they can be retired and removed.
+- Users should not be able to change settings affecting the security of the service.
+- Network devices should be configured to limit access to the minimum required for business operation. It may also be possible to apply standardised network device builds.
+
+Some organisations responsible for essential functions may use automated decision making technologies, for example safety systems or machine learning in smart transport technologies. Where such automated decision making has the ability to affect an essential function, it must be possible to understand the data, process and thresholds used to make automated decisions so that it can be reproduced, audited and malicious changes detected.
+
+- For decisions based on pre-determined, unchanging behaviour this would entail knowing the exact hardware, firmware, software, and configuration of individual systems (this may be achieved with detailed configuration and asset management) and monitoring for any unplanned changes.
+- Where systems use some element of machine learning and the decision making process changes over time. The model used should be auditable, so that malicious changes can be detected. This should identify cases where changes have been made directly, or where malicious or misleading data has been used for learning.
+
+### System management
+Routine system management should support and maintain security. Technical documentation of the networks and information systems should be up to date.
+
+Access to the essential function's facilities and systems should be managed and monitored to restrict to authorised personnel, in line with guidance in B2 Identity and Access Control.
+
+As described in B2 Identity and Access Control Privileged User Management, technical means for access should separate essential functions from other activities, for example using dedicated separate systems or sandboxed email and Internet access.
+
+Further protection from physical interference can be afforded through tamper protection, such as port locks and tamper evident tape. Such physical tamper protections should be regularly checked.
+
+### Vulnerability management
+Flaws, features and user errors that impact the security of the essential function may be known to the organisation, or not yet discovered. System design, configuration and system management can reduce the likelihood of a vulnerability being accessed or exploited. New vulnerabilities need to be managed to maintain network and system security.
+
+Effective risk management should ensure that appropriate measures are taken to maintain awareness of and address known vulnerabilities. The organisation endeavours to detect when changes to internally managed settings and configurations introduce vulnerabilities.
+
+The latest mitigated vulnerabilities are often published by vendors, some providing automatic update functionality. Other vulnerabilities can be discovered through threat intelligence sources.
+
+You should prevent the exploitation of known vulnerabilities in networks and information systems supporting essential functions. Many of the most effective methods are well-known, including:
+
+- moving vulnerabilities by maintaining systems to the latest patch level and only applying authentic, vendor-sourced and validated updates.
+- removing access to vulnerabilities by segregation, or ensuring the vulnerable system only receives trusted data.
+- preventing, detecting and removing malware or unauthorised software.
+- verification of imported data and software. Where possible this should be automatic.
+- regular vulnerability and security assessments, e.g. penetration tests and vulnerability scans. NCSC guidance on penetration testing provides further detail. Operators should carefully consider their approach to the testing of live Operational Technology, as system operation or availability could be affected. Assurance could be gained without this additional risk by testing against non-operational environments or by testing individual components in a laboratory environment.
+- software that the essential function relies upon should be in active support, so vulnerabilities will be patched. You should provide additional protection where obsolete platforms cannot be easily replaced.
+
+`References
+NCSC Common Cyber Attacks: Reducing the Impact
+NCSC Mitigating malware
+NCSC Obsolete platforms security guidance
+NCSC Penetration testing
+NCSC Secure by default platforms
+IEC TS 62443-1-1
+ISO/IEC 27002`
+
+# B.5 Resilient networks and systems
+> Building resilience against cyber attack.
+{.is-info}
+
+## Principle
+*The organisation builds resilience against cyber attack into the design, implementation, operation and management of systems that support the operation of essential functions.*
+
+Description
+The essential functions performed by an organisation should be resilient to cyber attack. Building upon B.4 (the technical protection of systems), organisations should ensure that not only is technology well built and maintained, but consideration is also given to how operation of the essential function can continue in the event of technology failure or compromise. In addition to technical means, this might include additional contingency capability such as manual processes to ensure functions can continue.
+
+Organisations should ensure that systems are well maintained and administered through life. The devices and interfaces that are used for administration are frequently targeted, so should be well protected. Spear phishing remains a common method used to compromise accounts with privileged access. Preventing the use of these accounts for routine activities such as email and web browsing significantly limits the ability for a hacker to compromise them.
+
+## Guidance
+### Preparation
+It's important to be prepared to respond to significant disruption by having business continuity and disaster recovery planning in place. This should include a definition of your most critical resources and an understanding of the order of actions needed to restore service. Test that these plans work, for example through manually triggering failover testing, carrying out table-top scenario walk-throughs or red-teaming. You should be ready to adjust the security measures in place in response to changes in risk. For example, if threat intelligence indicates an increased likelihood of your organisation or sector being targeted you may decide to isolate operational networks until the threat has decreased. Alternatively, in the event of public disclosure of an unpatched vulnerability in equipment that you use, with reported use of exploits targeting the vulnerability, you may respond by elevating your protective monitoring, changing your configuration to avoid being susceptible, or taking other mitigating action in the period until a patch is made available and can be deployed.
+
+### Maintenance and repair
+You should reduce the likelihood of failure or attack by taking all reasonable measures to maintain networks, information systems and necessary technologies in good working order. Exceptions should be appropriately managed.
+
+### Segregation
+In the event of an incident, it is more likely that an essential function will be able to continue where the networks and information systems that support it are segregated from other business and external systems. Separation of system architecture, remote access and privileged access are some key principles that can protect more critical systems from external compromise.
+
+Some sectors responsible for the operation of essential functions may apply the industrial automation and control system security standard IEC 62443, which applies a reference model that separates systems into different logical layers. The standard's architecture model segregates equipment into security zones.
+
+### Capacity
+Limitations of networks and information systems, or external services or resources, such as network bandwidth, processing capability, or data storage capacity, should be understood and managed with suitable mitigations to avoid disruption through resource overload.
+
+### Diversity and dependencies
+Make appropriate use of diverse technologies, geographic locations and so on, to provide resilience. You should understand and manage external or lower-priority dependencies to ensure that alternative means are suitable for continuation of the essential function.
+
+### Working backups
+In the event of a adverse event, you should be able to revert to backups of hardware and data that are known to be functioning and accessible. Organisations should maintain secured offline, potentially off-site, backups of the operational data, equipment configurations, gold builds, etc. needed to recover from an extreme event.
+
+Suitable alternative backups may include paper-based information and manual processes. Other essential backups may include personnel with appropriate knowledge and access to up-to-date documentation. Consider how to make it easy to recover following an incident or compromise.
+
+`References
+NCSC Denial of Service (DoS) guidance
+IEC TS 62443-1-1
+IEC 62443-2-1
+HMG Emergency preparedness
+HMG Emergency Response and Recovery: Non statutory guidance accompanying the Civil Contingencies Act 2004
+The Business Continuity Institute has some freely available introductory business continuity guidance and members can access more detailed resources`
+
+# B.6 Staff awareness and training
+> Appropriately supporting staff to ensure they make a positive contribution to the cyber security of essential functions.
+{.is-info}
+
+## Principle
+*Staff have appropriate awareness, knowledge and skills to carry out their organisational roles effectively in relation to the security of network and information systems supporting the operation of essential functions.*
+
+## Description
+Staff are central to any organisation’s ability to operate securely. Therefore, organisations responsible for essential functions should ensure that their employees have the information, knowledge, and skills they need to support the security of networks and information systems.
+
+To be effective any security awareness and training programme needs to recognise and be tailored to reflect the way people really work with security in an organisation, as part of creating a positive security culture.
+
+## Guidance
+The people who operate and support essential functions should be provided with all they need to carry out their job while supporting the organisation's cyber security. In line with the design of service protection policies and processes, you should apply the same people-focussed approach to staff awareness and training.
+
+Training and awareness activities should provide appropriate cyber security skills for the job role based on an understanding of how people really work with the systems, with ongoing reminders and top-up training to maintain skills.
+
+Using a range of approaches to training and awareness can improve understanding and information retention, from briefings, online courses and blogs to simulated cyber attack. You may achieve the widest uptake of training and awareness by accommodating different learning preferences and using various delivery methods. Organisations may find the GCHQ certified training scheme useful when considering commercial offerings.
+
+### Security culture
+Organisations responsible for essential functions should aim to create a positive security culture, where people are aware of their role in maintaining security and actively take part and contribute to improving security. This is particularly important where a technical solution is not possible, so security relies on people making the right cyber security decisions. Developing a positive security culture is likely to take some time, with some changes possibly taking years to become established and is unlikely to be achieved simply through written guidance or training events.
+
+### Communications
+These outcomes are best achieved when organisations actively engage with staff and communicate effectively with them about network and information system security and how it relates to their jobs. This should be more easily achieved where organisations create and promote a long-term security culture vision that is endorsed and supported by senior management, then make incremental, focused changes to address specific business issues. In some cases, particularly where an essential function is safety-related, an organisation may be able to draw on activities supporting positive safety culture to build up the organisation's cyber security culture.
+
+`References
+NCSC 10 Steps: User Education and Awareness
+CPNI's guidance on developing a security culture
+GCHQ certified training scheme
+The NCSC's You shape security`
+
+# C.1 Security monitoring
+> Monitoring to detect potential security problems and track the effectiveness of existing security measures.
+{.is-info}
+
+## Principle
+*The organisation monitors the security status of the networks and systems supporting the essential functions in order to detect potential security problems and to track the ongoing effectiveness of protective security measures.*
+
+## Description
+An effective monitoring strategy is required so that actual or attempted security breaches are discovered and there are appropriate processes in place to respond. Good monitoring is more than simply the collection of logs. It is also the use of appropriate tools and skilled analysis to identify indicators of compromise in a timely manner so that corrective action can be taken.
+
+This principle also indicates the need to provide effective and ongoing operational security. As time goes on, new vulnerabilities are discovered, support arrangements for software and services change and functional needs and uses for technology change. Security is a continuous activity and the effectiveness of the security measures in place should be reviewed and maintained throughout the delivery and operational lifecycle of a system or service.
+
+## Guidance
+One clear focus of your security monitoring should be the detection of incidents or activity that  could have an adverse impact on the operation of essential functions and the network assets and systems that underpin them. Log and network data collection, analysis tools and threat intelligence should prioritise these assets and systems.
+
+### Known and unknown threats
+An organisation's monitoring capability should be able to find known threats on their network, for example detecting when known command and control traffic is communicating to the Internet, or an AV signature is present in a file. Organisations should endeavour to understand what automated tools do and how best to use them, in order to ensure they are getting value for money from them.
+
+While this guidance focuses on detection of known threats, organisations should also have the capability to find previously unknown threats, by looking for indicators of attack combined with local system knowledge and sector threat information. See C2 Proactive Security Event Discovery for guidance on detection of previously unknown threats.
+
+### Log collection and aggregation
+Having the correct visibility of your systems is critical to detect potentially malicious activities. It is possible to detect cyber-attacks at an early stage by collecting and aggregating the following non-exhaustive list of log sources and then comparing them against known indicators of compromise:
+
+- Web site traffic going to the Internet. As a minimum this should include domain names and URL’s, but if possible, stretch to the full HTTP header information. This is because the initial infection and persistent connections are often made through HTTP(S) traffic and could appear to come from user devices (most likely) or servers. HTTP headers often provide clues to malicious activity.
+- Email traffic.As a minimum, the metadata about what is sent and received, but if it is possible to capture both headers and contents then consider doing so. Phishing attacks, delivered over email, often tempt the user to click links, so getting visibility of these links in combination with web traffic helps detection and subsequent analysis.
+- IP connections between your network and the Internet. It is useful to capture 5-tuple metadata of accepted connections on the edge of your network. This would show any raw connections coming out of your network, such as HTTP traffic not going through a proxy server or direct malware command and control
+- IP connections between zones in OT (Operational Technology) networks. As a minimum, capturing 5-tuple metadata from critical OT zone boundaries such as the IT/OT interface is important. This IP traffic is likely to contain evidence of an attacker’s actions against cyber-physical systems and so detection strategies should be in place to identify the indicators of a compromise of OT systems.
+- Host-based activity. A host-based monitoring system can detect unauthorised activity on computer systems themselves (e.g. unusual or unauthorised activity by software systems), which might evade detection systems focused on network interfaces."
+
+Your log collection should capture staff use of corporate systems, both regular users and system administrators, at the application and operating system layers. This helps to identify suspicious user behaviour for either an attacker or insider.
+
+Duration and level of logging is a corporate choice, balancing storage cost with ability to retrospectively query data during (and after) an incident. Consider any legal data protection laws you may need to adhere to on the collected information, for example if collecting personal data in logs.
+
+The audit and log information should be held in a database with access controls that limit access to monitoring analysts, and is isolated from other corporate trust domains. This is important as it will prevent an attacker from deleting or modifying logs.
+
+Your organisation's asset management processes should ensure knowledge of network assets is sufficiently detailed and accurate to quickly and efficiently trace observed events to their sources.
+
+For more detail on how your organisation should approach security logging, see the NCSC’s Introduction to logging for security purposes.
+
+### Monitoring and analysis tools
+The collected logs should be compared against Indicators of Compromise (from threat intelligence sources) to detect known threats.
+
+You should choose appropriate tools to help analyse and correlate differently structured and normalised network datasets, to identify and investigate events of interest. These tools should be chosen to optimally scale to and use the types of network and logging data you expect to analyse and the workflows you have designed to analyse, triage and investigate security events. Your staff should receive the appropriate training to use these tools.
+
+Consider the flexibility of the tools used, as you do not want to preclude your analysts from proactively finding unknown threats (as described in C2). Avoid purchasing black box tools that do not allow flexible querying, or provide results without showing the corresponding rationale.
+
+### Threat intelligence
+This is a key requirement for any security monitoring capability and can come in many formats, volumes and quality. Threat intelligence can be collected from open discussion forums, trusted relationships, paid-for contracts with threat intelligence companies or even generated internally.
+
+Threat intelligence can be either automated feeds that describe Indicators of Compromise (e.g. hashes of known nefarious files or lists of IP addresses) or more descriptive human readable reports documenting indicators of attacks or reporting on a type of malware. You should consume both types of threat intelligence appropriately.
+
+We would recommend that when choosing automated threat intelligence feeds, favour quality over quantity (false positives can be costly for analyst time) and ensure the feeds can be automatically ingested by your chosen analysis platform.
+
+### Governance, roles and workflows
+Your operational monitoring teams should comprise roles and responsibilities that cover both security and performance related monitoring. Combining these functions can help bring greater business benefit and multi-purpose use of the same datasets.
+
+The size and structure of these teams will vary between organisations, but should usually include people who know the network, its hardware and software and the types of data that they process and produce. The team should also include investigators, who can work with threat intelligence to identify, investigate and triage security events and managers who understand the organisation's business and are able to assess the significance of security events in terms of their potential to cause harm, such as disrupting operations or leaking sensitive corporate or personal data.
+
+Your monitoring capability should work seamlessly with Incident Management (see Objective D), knowing when and how to alert on or escalate events and how to share the right sort of information with incident managers. Monitoring and Incident Management may even comprise some of the same staff, working as part of a Security Operations Centre (see NCSC guidance - SOC Buyer's Guide).
+
+### Regular review and update
+Your monitoring strategy and capability should evolve with your business requirements, networks and systems. That is, as the system develops (e.g. new systems, networks or software versions), the monitoring capability is updated in order to ensure that all essential functions and related assets are covered. Your capabilities should also evolve to keep up with changes in the threats you need to mitigate.
+
+Your tools should be configurable and adjustable to handle new datasets and your monitoring staff should be able to work with these changes. New IT systems should be designed to produce logging data that allows the appropriate level of monitoring, before they are made operational.
+
+`References
+NCSC Introduction to logging for security purposes
+10 Steps: Monitoring
+NCSC - SOC Buyer's Guide
+CREST - Protective Monitoring Guidance
+NIST - Continuous Security Monitoring
+NIST Guide to Intrusion Detection and Intrusion Prevention Systems
+ISO 27002 / 27019
+IEC 62443`
+
 
