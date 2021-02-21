@@ -2,7 +2,7 @@
 title: Introduction to logging for security purposes
 description: Laying the groundwork for incident readiness.
 published: true
-date: 2021-02-21T03:31:00.968Z
+date: 2021-02-21T03:36:58.853Z
 tags: security operations, bronze, bronze-training
 editor: markdown
 dateCreated: 2021-02-21T03:22:50.683Z
@@ -104,5 +104,121 @@ This helps an organisation gain context of assets when investigating (or confirm
 
 | What does a given server ‘do’? What is its business purpose, expected behaviour and system owner? Who should you call if there are issues? | An accurate Configuration Management Database (CMDB) is useful to record what a given server does on your estate. How this is captured will vary vastly between organisations, ranging from automatically recorded through orchestration and automation, all the way down to individual systems administrators storing this information in their heads. Cloud provider consoles, APIs or on-premise virtualisation consoles can provide a source of information about virtualised assets. Some providers allow users to add tags and descriptions to assets, which can be part of the engineering process and useful in incident investigations (as well as understanding spending). |
 
+# B. Decide how to retain logs
+Two primary decisions shape the approach you will take to logging.
 
+Firstly you need to look carefully at each of the log sources you identified in step 1 to see how these should be properly collected, stored and secured.
+
+Armed with this information, the next consideration is structural. Should you pull your logs into a central store, or are they best left where you found them?
+
+Once you have settled these two matters, you will have outlined the work needed to prime your logging system.
+
+### Assessing your log sources
+For each log source identified in step1, ask these four questions.
+
+> Do you have easy access to searchable logs?
+
+Logs should be readily available, and you should know where they are stored before any investigation starts. You should make querying logs as easy as possible, so it's important the service that holds the logs can perform searches. It is bad practice to have logs distributed across devices with no easy way to access them, other than a manual login or physical action. Also, having prohibitive contracts in place would cause issues if access is required rapidly - so it's best to work on these situations now.
+
+> Are the logs safe from tampering and unauthorised access?
+
+An attacker may well target the logging service in a bid to remove evidence of their actions. Is access to logs limited to individuals who need to perform log analysis? Are write permissions limited, and can changes be detected? As with any other management interface, logging solutions should be designed with good security practice in mind - it should be impossible for logs to be accessed or modified inappropriately.
+
+> Are logs held for long enough to answer incident questions?
+
+For each log source you hold, you need to decide how long to store the data. This will depend on a number of factors including the cost and availability of storage, and the volume and usefulness of different data types (see Logging source section below). In general, we recommend that you hold logs which allow you to answer the incident questions from step 2 for a minimum of 6 months. The M-Trends 2018 report suggests that the average time to detect a cyber attack is 101 days and it's not uncommon for this figure to be significantly longer, so you may wish to store for longer if budget allows. Review and fine-tune as necessary.
+
+> Do your logs contain enough information to answer the incident questions?
+
+A logging source might only capture minimal information in its default configuration, giving you insufficient detail to accurately answer the incident questions. You should attempt to answer the incident question with the logs that are being captured. If you find yourself short of data, change configuration so you capture more detail.
+
+### Structuring the system: Centralised versus decentralised logging
+Once you begin planning how to collect your logs, you'll very likely have to decide between pulling them into a central store, and keeping them where they are.
+
+A centralised solution can be used to provide a standalone logging service. The more sources that feed into a centralised store, the more useful it will be, and the better the return on your investment. Centralising logging will also mean you don’t have to physically go to each machine when investigating an incident. This will create a more responsive system, requiring minimal resources to operate it.
+
+A decentralised setup involves leaving the logs in-situ because, without any further work on your part, they allow you to answer 'yes' to the questions listed above. Cloud-based email services, for example, may already be in an easy to search interface and securely held for a suitable length of time. You could extract these logs to a centralised service, but for most common scenarios this won't give enough extra benefit to justify the costs.
+
+A determining factor is how you want to use the data in future. For example, if you want to combine it with other data sets (to query across both), moving these logs to your central storage system will be worthwhile. The other consideration is the ongoing maintenance and assurance that logs are being captured. A decentralised model could slowly change over time, becoming less effective.
+
+In most cases, a centralised store is used in combination with other vendor dashboards/APIs. Taking all logs to a centralised source is a never-ending (and resource intensive) job. In practice, you will cherry pick what you need to hold centrally (so you can run multi-dataset queries) and call out to other services that already hold the logs in a suitable manner (e.g. cloud services, network panel).
+
+# C. Implement log storage and tooling for analysis
+
+What you do at this stage will depend on the decisions you made in Step 2. If you chose a centralised solution, you will need to consider how to implement the following components.
+
+Some products combine multiple components, so the individual components may not always be obvious. This is particularly true of commercial products.
+
+## Logging source
+You will have established this in Step 1. Log sources may generate large volumes of traffic, so it's likely that you will need to refine what events (and context) you collect. Start with the default settings, then remove the information that is least likely to answer the incident questions until you achieve your desired cost/benefit balance.
+
+> It is important to configure log sources properly, including synchronisation to an accurate time source and a level of verbosity which captures the fields needed to answer the incident questions.
+{.is-warning}
+
+## Log transport
+This is dictated by the logging source and the service that ingests logs, although network overlays could be added. The NCSC recommends using transport encryption where possible. The NCSC has not examined and does not endorse particular protocols, but common choices include Syslog, SNMP traps, and Windows Event Forwarding. When sending logs across trust boundaries, they should be sent across a one-way flow control (e.g. UDP or a data diode) to make it harder for an attacker to modify stored logs.
+
+## Processing and storage
+Accepts logs pushed (or pulled) from device sources, cleans them up (formatting), normalises and then loads them into a data store. Plan for storage to roll-over, avoiding disks filling and the service failing.
+
+## Querying and analytics
+Authenticates users and allows searches to be performed on the data set.
+
+## Configuring log sources
+Some logs at their default settings may not provide all the information you require to pinpoint activity in an incident, so some configuration will be required.
+
+There is no single right way to do this, but consider some of the following points that the NCSC has found useful in real world scenarios.
+
+You should ensure that:
+
+- Your local operating system log cache is large enough to account for any network interruption between uploads to a central service.
+- The fields you are expecting are actually logged, including:
+	- Source and destination IP address/host name to identify the machine
+	- Account Names are available to identify the user
+- Log everything with UTC timestamps
+- Firewall and proxy logs identify the originating IPs, and not just the IP of the proxy or gateway
+- Detail on process execution or crashes provides context as fully as possible (Parent process, user, machine, failure codes, etc)
+
+Microsoft Windows event configuration guidance can be found at https://technet.microsoft.com/en-us/library/dd277416.aspx.
+
+## Open source logging tools
+Here are some open source tools we’ve seen used to good effect. The NCSC has not formally tested these products, and does not recommend a particular one. They are a starting point to help you establish what could work for your business. Commercial products are also available.
+
+### Log ingestion, processing, dashboard and analysis tools:
+
+- ELK: https://www.elastic.co/elk-stack.
+- Graylog: https://github.com/Graylog2.
+- HELK: https://github.com/Cyb3rWard0g/HELK.
+- Nagios: https://www.nagios.com/.
+- Security Onion: https://securityonion.net/.
+- STROOM: https://github.com/gchq/stroom.
+
+Log processing and transport tools:
+- ApacheNiFi: https://nifi.apache.org/.
+- Fluentd: https://www.fluentd.org/.
+- Hadoop: http://hadoop.apache.org/.
+
+Host based agents:
+- OSQuery: https://osquery.io/. 
+- Sysmon: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon.
+
+
+Other guides and interesting reads:
+- Cyber Wardog: Powershell and Sysmon logging. 
+- Windows event forwarding: WEFFLES.
+
+# D. Validate that your logging capability is working as intended
+
+As your technology and use of IT changes, you may find your logs become incomplete or incorrect. We recommend you review and validate your logging strategy every 6-12 months, to capture any relevant changes that have happened in the meantime. This essentially means repeating Step 1 to see if your log sources should have changed.
+
+You also need to ensure that existing logs are still being captured as expected. If you can automate a way of alerting when log messages stop arriving centrally, then do this. Otherwise, you could automate a way of initiating a test event that should be captured, and validating that it has been captured by your logging service.
+
+You may not need to query large portions of the data set for long periods of time, so check that any storage mechanism works as intended. Otherwise, you may discover that your logging data is unavailable during an incident.
+
+# In Summary...
+Once you have a logging strategy in place, you will be better prepared for the most pressing questions put to you by incident investigators should you suffer a cyber attack. This will give you the best chance of recovering swiftly, and learning how to defend your systems better against future incursions.
+
+Logging has benefits outside of security too. Logging data can be used to investigate performance issues, provide administrative alerts (such as a storage disk being near capacity) and help verify that organisational IT policy is working as intended. The costs associated with establishing a logging capability should be viewed in light of these benefits.
+
+The next step is to proactively search your collected information for known threats, which requires further investment in people, skills and business processes. Following the advice given in this guidance will mean that you start that process on a sound technical footing.
 
