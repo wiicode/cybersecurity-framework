@@ -2,7 +2,7 @@
 title: Dealing with suspicious emails, phone calls and text messages
 description: How to spot the most obvious signs of a scam, and what to do if you've already responded.
 published: true
-date: 2021-02-21T02:02:41.266Z
+date: 2021-02-21T02:07:46.561Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2021-02-21T02:02:41.266Z
@@ -59,5 +59,5 @@ To make life harder for the criminals, you can do the following:
 - Think about what you post (and who can see it).
 - Change your phone number to be unlisted, or 'ex-directory'.
 
-We have detailed advice on protecting your privacy on social media.
+We have detailed advice on [protecting your privacy on social media](bronze-training/individuals-social-media).
 
