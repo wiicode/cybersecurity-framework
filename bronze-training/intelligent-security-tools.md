@@ -2,7 +2,7 @@
 title: Intelligent security tools
 description: Assessing intelligent tools for cyber security
 published: true
-date: 2021-02-21T03:52:24.497Z
+date: 2021-02-21T03:55:56.839Z
 tags: guidance, security operations, bronze, bronze-training
 editor: markdown
 dateCreated: 2021-02-21T03:52:24.497Z
@@ -386,4 +386,97 @@ Due to the dynamic nature of the underlying technology, intelligent tools may ch
 - Have you identified what documentation and support material is available?
 - Do you know where gaps in support exist? Have you identified how those gaps can be filled?
 
+# Getting the most from artificial intelligence
+Understand what factors may affect an intelligent tool's ability to perform the task it was built for, including reliability and resilience.
+When considering the use of any kind of tool, intelligent or otherwise, you need to understand what factors may affect the tool's ability to perform the task it was built for.
 
+You should enquire how and why aspects of your intelligent system work, and what happens when they don't.
+
+Your research should cover the training of the intelligent system, how issues with the tool might impact your organisation, and the fundamental limitations of the tool.
+
+## Principles
+
+### 1. How reliable is the tool?
+
+Intelligent tools make decisions based on rules they've learned from data, and many tools will continue to learn throughout their use. A basic grasp of how this works can help you establish if the tool will do what is expected of it.
+
+#### Training data
+
+What data is used to train the system? This may just be data from your organisation, but could also involve data from other sources, including the vendor's proprietary data.
+
+If other data sources are used, you may want to question how relevant that data is to your organisation. Synthetic data, or data from significantly different operational processes, might not provide a useful baseline for your organisation. Likewise, if the training data is too narrow, it is less likely to work well in a live environment. 
+
+#### Static tools
+
+For static tools - which do not adapt after their initial training - can you be confident that the system remains accurate over time?
+
+If the problem and the environment remain the same, then initial training should be sufficient. For these systems, updates and changes only need to be considered when there is a significant improvement in the underlying technology.
+
+#### Adaptation and stability
+
+For security tools, adaptation is likely to be important. For example, being able to train your tool to recognise new types of attack will be essential, if it is to remain relevant. 
+
+If the system updates, you will want to be sure that it is going to remain stable. Updates to the system will change the performance of the tool, which may cause it to become unpredictable. This happens because a change to an intelligent tool can fundamentally alter the background processes used to make decisions. This means that it can be difficult to gain assurance in adaptive tools.
+
+Ensuring that intelligent tools remain stable and accurate as they update is an open question for researchers, so it's unlikely the vendor will have all the answers.
+
+However, you should try and understand how and when new data is incorporated into the tool. You should also look for assurance that the tool is performing as expected. It could be important for you to understand how long it takes to establish a new baseline that fits your needs once new data is added.
+
+#### Ensure stability
+
+- Do you know how the system was trained? Was the data representative of your organisation?
+- Do you know if the system continues to adapt. Do you know how it does this?
+- Is the adaptability of the system sufficient for your use case?
+
+### 2. Is the system resilient enough for the task?
+
+Intelligent tools can have vulnerabilities and these vulnerabilities might not be related to the coding of the program, but may exist as part of the tool's process. Some will be the result of weaknesses in design or configuration, others could come about as a result of data manipulation. 
+
+It's not possible to catalogue all the potential vulnerabilities of an intelligent tool, but you should tryto understand the impact of a tool not performing correctly, either through accident or attack.
+
+#### Failing safely
+
+Regardless of the type of tool, it is important to know that it fails safely. In other words, should the tool go wrong, there is no significant risk to a person or your organisation.
+
+From this perspective, it is also important to know what interventions are in place in the event of a failure, and how to shut the system down safely. 
+
+#### Fixes and fallbacks
+
+Where possible, you should be able to reliably fix a tool, or it's underlying model, if things go wrong. You should also be prepared for cases where it's simply not possible to fix the problem. 
+
+You should also know if there's a way to rollback to a known good configuration. Where this is possible, you should understand what the impact might be. It could, for example, result in a loss of accuracy when processing current data.
+
+#### Be clear about weaknesses and failures
+
+- Be aware of any vulnerabilities that might be introduced by using the tool.
+- Is the tool safe to fail?
+- Can the tool be fixed if it fails? What is the process for diagnosing and fixing issues?
+- Can the system be rolled back? What is the impact of doing so?
+
+### 3. What are the limitations?
+
+AI is not capable of solving every problem. It is therefore important to understand that while there are many uses for AI, the promises of the tool need to line up with what is currently possible with AI techniques.
+
+A particular tool will be designed and trained to solve a particular problem. Outside of this training it has limited use, so you need to understand the bounds that your tool has been designed to work within. 
+
+Since there are so many ways that an intelligent tool can work, it’s difficult to define a complete set of limitations for each approach. But there are some general concepts.
+
+#### Does the data do enough?
+
+Consider whether the data used contains enough detail to make the decision you are asking the tool to handle. For example, the data may contain sufficient information to detect anomalies, but further detail may be required to understand if a threat is real.
+
+If the system offers functionality that seems too good to be true, ask the vendor to explain how it achieves this. They should be able to provide some assurance without diving into the detail of how the technology works.
+
+#### The limits of the tool
+
+You should consider the point at which the functionality of the tool ends. In development, there would have been a set of bounds for the testing data and what can be represented and understood from the tool's output.
+
+A system will be limited by its design.  If the data and evaluation are specifically designed to identify or act on certain properties, then that is all it will do.  If something comes along that is malicious, but doesn't exhibit the signs that would be spotted by the system, then it will have no reason to consider it a threat.
+
+These bounds need to be made clear because there can be no guarantee of accuracy if the tool is working beyond the scope it was designed and tested for.
+
+#### Determine the scope of the tool
+
+- What are the limitations of the system?
+- Does the solution seem too good to be true?
+- Is there a defined scope of the tool?  Does that fit your use case?
