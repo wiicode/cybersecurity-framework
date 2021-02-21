@@ -2,13 +2,13 @@
 title: Introduction to identity and access management
 description: This guidance provides a primer on the essential techniques, technologies and uses of access management.
 published: true
-date: 2021-02-21T03:16:47.607Z
+date: 2021-02-21T03:17:00.631Z
 tags: access control, bronze, bronze-training, guidence
 editor: markdown
 dateCreated: 2021-02-21T03:16:47.607Z
 ---
 
-#Introduction
+# Introduction
 If identity and access management procedures and controls are badly designed or implemented, they can give attackers an easy way to gain access to your systems which could appear legitimate. You should consider the security of all the aspects of identity:
 
 - ensuring that a new user is who they say they are, and the level of trust and access you give them is commensurate with their personal and professional background
