@@ -2,7 +2,7 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-20T23:13:41.835Z
+date: 2021-02-21T02:12:55.041Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -45,11 +45,14 @@ BCSF applies to all companies, regardless of whether or not they elect to levera
 - Identity management and audit. 
 - Data export/backup for integrity and/or egress.  
 
-While all of those are covered in respective areas, there is a more important question to answer: 
 
+
+> While all of those are covered in respective areas, there is a more important question to answer: 
+>
 > **Is the service I am using truly "cloud" or does it just call itself that?**
+> 
+> Quite often the answer is "**no**" because "cloud" products must universally adhere to these principles:
 
-Quite often the answer is "**no**" because "cloud" products must universally adhere to these principles:
 
 
 ### Tabs {.tabset}
