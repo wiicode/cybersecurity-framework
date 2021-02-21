@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-21T01:58:31.123Z
+date: 2021-02-21T02:08:06.692Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -213,7 +213,7 @@ If you believe your laptop, PC, tablet or phone has been infected with a virus o
 Scam emails, calls and texts are a problem for everyone. They're getting more convincing day by day.
 
 {.grid-list}
-- [Read More *Read our advice on spotting and dealing with suspicious emails, calls and texts.*](#)
+- [Read More *Read our advice on spotting and dealing with suspicious emails, calls and texts.*](/bronze-training/individuals-suspicious-mail-phone)
 {.links-list}
 
 
