@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-21T02:08:06.692Z
+date: 2021-02-21T02:08:58.957Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -186,7 +186,7 @@ If you do pay:
 - You will be funding criminal groups
 
 {.grid-list}
-- [Read More *Read our advice on removing viruses and malware from your device.*](bronze-training/individuals-recover-infected-device)
+- [Read More *Read our advice on removing viruses and malware from your device.*](/bronze-training/individuals-recover-infected-device)
 {.links-list}
 
 
