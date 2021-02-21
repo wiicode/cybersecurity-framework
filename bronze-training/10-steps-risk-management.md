@@ -2,7 +2,7 @@
 title: Risk Management Regime
 description: Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.
 published: true
-date: 2021-02-21T15:52:18.795Z
+date: 2021-02-21T15:55:30.325Z
 tags: risk management, bronze, bronze-training, ncsc, 10-steps
 editor: markdown
 dateCreated: 2021-02-21T15:52:18.795Z
@@ -13,7 +13,7 @@ Organisations rely on technology, systems and Information to support their busin
 
 Defining and communicating the organisation’s attitude and approach to risk management is crucial. Boards may wish to consider communicating their risk management approach and policies across the organisation to ensure that employees, contractors and suppliers are aware of the organisation’s risk management boundaries.
 
-## What is the risk?
+# What is the risk?
 Taking risk is a necessary part of doing business in order to create opportunities and help deliver business objectives. For any organisation to operate successfully it needs to address risk and respond proportionately and appropriately to a level which is consistent with what risks an organisation is willing, or not, to tolerate. If an organisation does not identify and manage risk it can lead to business failure.
 
 The lack of an effective risk management and governance structure may lead to the following:
@@ -22,7 +22,7 @@ The lack of an effective risk management and governance structure may lead to th
 - Missed business opportunities: Risk decisions taken within a dedicated security function, rather than organisationally, will be motivated by achieving high levels of security. This may promote an overly cautious approach to risk leading to missed business opportunities or additional cost.
 - Ineffective policy implementation: The board has overall ownership of the corporate security policy. Without effective risk management and governance processes the Board won't have confidence that its stated policies are being consistently applied across the business as a whole.
 
-## How can the risk be managed?
+# How can the risk be managed?
 Establish a governance framework:  A governance framework needs to be established that enables and supports a consistent and empowered approach to risk management across the organisation, with ultimate responsibility residing at board level;
 
 Determine what risks an organisation is willing to tolerate and what is unacceptable: Agree what risks you are prepared to tolerate in pursuit of your business objectives. Produce guidance and statements that helps individuals throughout the organisation make appropriate risk based decisions.
