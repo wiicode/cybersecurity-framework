@@ -2,14 +2,18 @@
 title: Small Business Guide: Cyber Security in 10 Steps
 description: 10 pieces of technical advice you should consider putting in place
 published: true
-date: 2021-02-21T16:19:21.777Z
+date: 2021-02-21T16:21:41.760Z
 tags: security operations, bronze, bronze-training, ncsc, 10-steps
 editor: markdown
 dateCreated: 2021-02-21T16:16:24.127Z
 ---
 
-# Header
-Your content here
+> 10 pieces of technical guidance the Bento Cyber Security Framework and GUIDES is founded on.  
+{.is-success}
+
+
+# Small Business Cyber Security: Ten Milestones
+When dealing with the practicalities of cyber security it's extremely useful to understand what exactly you're protecting against. This guidance is designed to help organisations protect themselves in cyberspace. It breaks down the task of defending your networks, systems and information into its essential components, providing advice on how to achieve the best possible security in each of these areas. We believe that adopting security measures tailored to your situation, but which align with the 10 steps, will help protect your organisation from cyber attack.
 
 
 {.grid-list}
