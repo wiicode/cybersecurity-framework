@@ -2,7 +2,7 @@
 title: End user device (EUD) security guidance
 description: Guidance for organisations deploying a range of end user device platforms as part of a remote working solution
 published: true
-date: 2021-02-22T00:05:36.507Z
+date: 2021-02-22T00:20:17.410Z
 tags: silver, silver training, device management
 editor: markdown
 dateCreated: 2021-02-22T00:05:36.507Z
@@ -278,3 +278,190 @@ For example a single user to device password authentication mechanism can be use
 Where one authentication mechanism provides insufficient security, multi-factor authentication can be used.
 
 Further details about how each type of EUD supports authentication approaches can be found in the device-specific EUD Security Guidance documents.
+
+# Virtual Private Networks (VPN)
+> A Virtual Private Network (VPN) is a mechanism for securely connecting devices or networks together, even if geographically separated.
+{.is-info}
+
+
+A Virtual Private Network (VPN) is a mechanism for securely connecting devices or networks together, even if geographically separated. They are popular for enabling remote working from end-user devices (EUDs).
+
+This guidance provides risk owners and administrators with more generic advice than the per-platform guidance, which recommends a specific configuration for each type of EUD. It can be used to understand the risks and benefits of using a different configuration from the one we recommend.
+
+While anyone can use a VPN to secure their network usage, this guidance is aimed at organisations supporting remote working. It therefore assumes a degree of technical understanding and knowledge of topics related to the use and management of VPNs.
+
+We'll be discussing various types of VPN, but we won’t be focusing on individual products in this guidance. Instead, we discuss aspects of VPN technology and configuration so you can compare and contrast different products. Platform-specific recommendations are kept in the EUD Guidance for those platforms.
+
+## Why use a VPN?
+Regardless of the technologies involved, there are several common reasons why you may use VPNs to connect between EUDs and remote networks.
+
+When choosing network security technologies, keep in mind which of these you are trying to achieve:
+
+1. Protection of sensitive data in transit that would otherwise be unencrypted and vulnerable to interception (e.g. metadata, traffic to internal HTTP services)
+1. Enabling legacy systems to work remotely that were not designed to operate in such scenarios (e.g. SMB file servers)
+1. Providing a second layer of defence against misconfigured, unpatched, or poorly designed internal services (e.g. SSL intranet website with legacy cryptography)
+1. Protecting internal network servers from external, unauthenticated attackers by limiting network access to authenticated devices (e.g. file stores or databases)
+1. Protecting EUDs from network attack by preventing direct connections to/from the local network (e.g. ARP spoofing attacks, or attacking open network interfaces on the EUD)
+1. Forcing traffic between EUDs and external services through internal, protective monitoring tools guarding against a variety of threats (e.g. inspecting web content for malicious code)
+1. Enabling business monitoring and/or blocking of users’ network traffic for legal reasons, discipline, and duty of care (e.g. deny listing websites)
+
+## Aspects of VPN configurations
+NCSC’s EUD guidance recommends an automatic, always on, IPsec VPN, which routes traffic through a remote network for inspection. That guidance also provides a configuration for the platform to make that work.
+
+This section highlights some aspects of VPN configuration you may wish to change, and the resulting impact on risks.
+
+### Protocols
+The protocols most widely used for VPNs are Transport Layer Security (TLS) and IPsec. There are a variety of others, some of which (PPTP for example) have fallen out of use because of security concerns.
+
+Our recommendation is that IPsec be used for VPN access. IPsec is an open standard, meaning that anyone can build a client or server which will interoperate with other IPsec implementations. The UK EUD Security Strategy (for public sector organisations) advocates interoperability, open standards, and the use of native security controls.
+
+As an IPsec VPN client is built in to many operating systems, no additional products are required to deploy a VPN. However, some networks restrict or block IPsec traffic, so your EUDs may, in certain situations, be unable to create the VPN connection.
+
+TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely interoperate, so you will need to use both from the same vendor – whilst TLS is standardised in a variety of RFCs, exactly how those protocols are used to create a VPN is not. However, TLS VPN connections tend to be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
+
+From a security perspective, with all other things equal, there is very little difference in risk between using an IPsec and a TLS VPN.
+
+### Cryptography
+We recommend that client certificates are used for machine authentication when using a VPN. Certificates have several advantages over Pre-Shared Keys (PSKs), including the ability to revoke just one certificate on your network and to store private keys securely (e.g. in a TPM or TEE).
+
+Links to recommended configurations are provided at the end of this guidance, including details on the cryptographic algorithms we recommend are used in VPNs. As these recommended configurations are not always fully supported by built-in VPN clients on EUD operating systems, we also give per-platform recommendations in the per-platform EUD guidance.
+
+By using weaker profiles or algorithms than those recommended below, you will increase the risk of data compromise while in transit on the network.
+
+### Integrated vs third-party VPN clients
+Most operating systems have a built-in VPN client available which can either be configured on the device or managed remotely via enterprise management. Integrated clients are normally free to use, work reliably, and are updated automatically, but can also be relatively limited in functionality. For example, there’s often no ability to configure routing rules, exceptions, or split tunnelling.
+
+Our guidance recommends using the native client where possible, and provides a configuration for that client. However, a range of CPA Foundation Grade approved IPsec third-party clients, and other commercially available third-party VPN clients exist.
+
+Using a third-party VPN client increases the risk that operating system integration will be poor, and that some data may be sent outside the VPN. It also increases the number of software packages that need to be kept up to date, adding to the likelihood that some out-of-date software will be in use.
+
+### Forced vs optional
+Only traffic which is routed over the VPN will be protected by it, so you might want to force all traffic to go via the VPN, and no user traffic to transit outside that connection. This will require either the VPN client to enforce this, or a client firewall, configured to prevent connections being established outside of the VPN. If a forced VPN is unable to connect, then no network traffic from the device will be possible unless the VPN is disabled.
+
+Our guidance generally recommends forcing traffic down the VPN, and where possible, the per-platform EUD guidance provides ways of achieving this. Where it's not possible to force traffic, this is highlighted as a risk. However, forced connections can sometimes cause incompatibilities with captive portals on public Wi-Fi networks, unless the platform offers a solution for authenticating to them.
+
+Using an optional VPN allows users to disable the VPN and evade protective monitoring and auditing services. This increases the risk of EUDs being attacked over the network, and of users circumventing corporate policy restrictions.
+
+### Initiating a VPN connection
+VPNs need to be established in order to provide benefits, remain connected while the device is in use, and reconnect if the connection is temporarily lost. Typically, there are three ways of implementing this behaviour: automatic, triggered, and manual.
+
+- Automatic VPNs are brought up by the device whenever a network connection is requested by software on the device
+- Triggered VPNs are brought up whenever certain network connections from a defined list are made (internal intranet sites, for example)
+- Manual VPNs require the user of the device to initiate the VPN by explicitly deciding to take an action (such as launching an application and clicking connect). The user will likely need to take this step again if the connection drops during or after use
+
+> **Note**: We distinguish automatic from forced (in the previous section) because on some platforms it is possible for the user to disable the automatic VPN, whilst the platform still enforces VPN routing. This effectively prevents network connections from the device until the user re-enables automatic connections.
+> Depending on whether the VPN is forced or optional, choosing between automatic, triggered and manual could be a usability decision rather than security. If the VPN is forced but the initiation is manual, this will be a poor user experience as the device will not have any connectivity until the user manually starts the VPN. Conversely, if the VPN is optional, and the initiation is manual, then there is a risk of compromise from local attackers on an untrusted network, during the period when the device is not connected.
+{.is-warning}
+
+Our guidance generally is to use an automatic VPN, and where possible our per-platform EUD guidance gives a way of achieving this.
+
+### Full-device vs per-app VPN
+Some operating systems, and many third-party applications, provide the ability for you to configure only certain applications to be able to use a VPN on the device. This is mostly useful in a Bring Your Own Device (BYOD) scenario, where enterprises do not want network traffic from personal apps to traverse the corporate network. This approach can be used to prevent malicious personal apps attacking the corporate network, or to limit bandwidth consumption from data-intensive personal apps. A per-app VPN also enables latency-sensitive apps (such as secure voice) to avoid any increase in network latency from the VPN.
+
+However, if deploying in this way, you need to define all the applications you want protected by the VPN in advance. As this is generally used in a BYOD scenario, users can always download another application to work around the per-app VPN restrictions. In some cases, it may not be possible to force system applications to use a per-app VPN.
+
+NCSC’s per-platform EUD guidance recommends - and provides a configuration for - setting up a full-device VPN. Using a per-app VPN increases the risk that sensitive data may be sent outside the VPN by an application that is not included in a per-app VPN, or by a misconfiguration in the platform.
+
+### Split tunnelling
+Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, whilst other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
+
+This is generally used when the VPN is providing access to internal services on a corporate network, without attempting to prevent other connections. For example, high-bandwidth applications could be permitted direct access to the internet without being routed via corporate infrastructure to save on bandwidth costs. And, as with per-app VPNs, latency-sensitive applications, such as a secure voice client, could minimise network latency by connecting directly.
+
+Split tunnelling is generally not supported on EUD native clients, which have very simple configuration options. Windows operating systems can be configured to split tunnel by using custom routing rules, but the clients built into smartphones and tablets rarely support this configuration. Third-party clients are sometimes able to support this option.
+
+Enabling split tunnelling increases the risk that sensitive data will be exposed to an unprotected network, and could enable external attackers to access internal resources by ‘pivoting’ through the EUD. In a scenario where you are relying on the VPN to route traffic for protective monitoring or duty of care reasons, enabling split tunnelling will undermine the benefit gained from those protections.
+
+### Captive portals
+Captive portals are the login pages present on some public Wi-Fi networks. To use a captive portal, the EUD is required to establish a direct connection from a web browser to the portal before it has established a VPN connection. For this, one of two things must be configured:
+
+The user can disable any forced VPN configuration, so they can manually navigate to the portal in their main web browser.
+The platform itself can detect the presence of a captive portal and present the user with a captive portal helper application to authenticate with before (re)establishing the VPN. Some platforms, such as iOS and macOS have such a helper built in. Helpers are available as a third-party application for some other platforms, such as Windows 10.
+The use of a captive portal helper application is less risky and should be preferred if captive Wi-Fi networks are to be used. The risks of disabling forced VPNs are described earlier in this guidance.
+
+Further details on the risks of using captive portals can be found in EUD Guidance: Common Questions – Captive Portals.
+
+## Wider considerations
+This section discusses some of the wider considerations when deploying a VPN onto your EUDs. These are not directly related to the configuration of the VPN, but are features which will be affected by your choice of technologies and configurations, as outlined in the previous section.
+
+### Client and Gateway security updates
+As with all software, both the client and server component will need to be regularly updated. On devices where the client is integrated into the operating system, these updates will naturally happen as a result of regular platform updates. Third-party software will need to be updated in some other way.
+
+### Tethering to devices with a VPN
+Tethering, or mobile hotspots, involve connecting an external device to your smartphone in order to use the smartphone’s internet connection. However, full-device VPNs can often have an impact on how tethering works on the underlying platform. Some platforms will route tethered devices’ connections outside of the smartphone’s VPN connection, while some smartphones will not route tethered traffic if there is a full-device VPN connected. If your users rely on tethering, an appropriate configuration should be selected to enable it.
+
+## Platform compatibility summary
+The table below gives the configuration we recommend be used with the native clients on each platform. Generally, this is the configuration we have found which best provides the benefits described at the start of this guidance. For full details of these recommendations, see the per-platform EUD guidance.
+
+As with all our EUD guidance, the configurations we recommend are not mandatory. It is possible to configure VPNs to behave differently than given in the matrix below. You are free to do this, but if you choose a different configuration, you should consider the risks of doing so.
+
+| Features of integrated VPN client | Windows | iOS | macOS | Android | ChromeOS | Ubuntu |
+| --- | --- | --- | --- | --- | --- |
+| Protocol | IPsec | IPsec | IPsec | IPsec | IPsec | IPsec |
+| Product | Integrated | Integrated (IKEv2) | Integrated (IKEv2) | Integrated | Integrated (OpenVPN) | strongSwan |
+| Forced or Optional | Forced | Forced | Optional | Forced | Optional | Forced |
+| Initiation | Automatic | Automatic | Triggered | Automatic | Automatic | Automatic |
+| Full-device or Per-app | Full-device	 | Full-device	 | Full-device | Full-device | Full-device | Full-device |
+| Split tunnelling | Via firewall rules configured with Group Policy | Not supported | Via custom network routing rules | Not supported | Not supported | Via custom network routing rules and strongSwan configuration |
+| Tethering supported | n/a | No | n/a | No | n/a | n/a |
+| Captive-portal support | Via third-party app and custom firewall rules | Built-in helper | Built-in helper | None | Chrome browser | None |
+
+## Recommended configurations
+The NCSC has some additional guidance documents which provide advice on other aspects of configuring VPNs, including cryptographic profiles, and advice on managing a Certificate Authority (CA). These documents are:
+
+Using TLS to protect data
+{.grid-list}
+
+- [Using TLS to protect data *Including recommended cipher suites for TLS.*](#)
+- [Using IPsec to protect data *Including recommended cryptographic transforms for IPsec*](#)
+- [Provisioning and securing security certificates](#)
+{.links-list}
+
+# Advice for end users
+> This advice will need to be tailored to the particular device(s) being used, and matched to the local business procedures and activities.
+{.is-info}
+
+This advice will need to be tailored to the particular device(s) being used, and matched to the local business procedures and activities. Some advice to users is common across all types of device, and this is provided here as a suggestion.
+
+## General advice
+Some of the settings on your device have been configured by your system administrator to help keep the information on it secure. Changing or circumventing these settings could put information at risk. If you are unsure about any of the settings, or what to do in particular situations, please contact your IT helpdesk.
+
+This device is valuable and so it is attractive to thieves. Take sensible precautions to prevent its loss or theft - but don’t put yourself at risk. Don’t leave the device unattended in an insecure location (e.g. outside of your house or office) - lock it away if possible, or keep it on your person.
+
+If your device is lost or stolen contact your IT helpdesk immediately to report this. You won’t be in trouble - it is better to report such a loss as quickly as you can. The faster you get in contact, the better - there is more that can be done to prevent information being accessed.
+
+When you are using your device be aware of who might be able to see your screen, and consider, if applicable, using a screen privacy protector. Devices which have ‘touch screens’ are particularly easy for bystanders to see what you are typing - even passwords.
+
+## Physical connections
+You should only use the specific device(s) that your organisation has approved, this includes all of the peripherals that come with the device(s).
+
+Your device should only ever be recharged with trusted power adapters and cables.
+
+Don’t physically connect your device to any computer without the approval of your IT helpdesk. This includes USB, HDMI, Firewire etc.
+
+Any ability to bridge connections using your device (e.g. internet connection sharing) must not be used unless specifically approved by your IT administration.
+
+## Passwords
+Whatever the reason, you must never disclose your password to anyone (including IT support staff, your manager, or a colleague), either in person, by phone, or by email or text message.
+
+It is acceptable to write your password down, but it must be stored securely - and never with the device itself. For example, if you write your password down, seal it into an envelope, and then store it according to its sensitivity (e.g. kept in a secure, locked, cabinet). Under no circumstances should you ever carry this copy of the password with your device.
+
+Your organisation may set some rules about what you can use for a password. The most important thing is that it should be difficult for somebody else to guess that password, even if they know you well. Never share the same password across different systems or devices.
+
+## Overseas use
+In general, it is acceptable for you to take and use your device overseas, provided that your organisation has approved this.
+
+As highlighted above, you must be extra vigilant and take extra care to ensure that no one overlooks you when you are using your device, and must take all possible precautions to prevent the theft of your device.
+
+## If things go wrong
+When something goes wrong, or you suspect your device or its data may be compromised, it is important to take action promptly.
+
+If you have any reason to suspect that someone else knows your password then it must be changed immediately - either on the device itself or by contacting your IT helpdesk.
+
+If you forget the password for your device you should contact your IT helpdesk, who will confirm your identity before a password reset can take place.
+
+If your device stops functioning as normal, and/or experiences a significant decrease in performance or battery life, contact your IT helpdesk for further advice.
+
+If you are experiencing problems with the device, you must never give your device to anyone else (e.g. a commercial repairer) to try to fix; always contact your IT helpdesk.
+
+If you think someone may have tampered with your device (such as accessing the inside of it, or removing / replacing parts of it), stop using it immediately, turn it off, and contact your IT helpdesk for assistance.
+
