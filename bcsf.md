@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T01:55:20.056Z
+date: 2021-02-22T01:58:55.838Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -57,6 +57,17 @@ Decisions about risk can be made at all levels of your organization when delegat
 
 ## Risk management standards
 Following a standardized risk management approach can help in achieving good cyber security governance. There are many such standards to choose from. Some of the most well-known are:
+
+### NIST Special Publication (SP) 800-37
+*Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy*
+
+This publication provides guidelines for applying the Risk Management Framework (RMF) to information systems and organizations. The RMF includes a disciplined, structured, and flexible process for organizational asset valuation; security and privacy control selection, implementation, and assessment; system and control authorizations; and continuous monitoring. 
+
+It also includes enterprise-level activities to help better prepare organizations to execute the RMF at the system level. The RMF promotes the concept of near real-time risk management and ongoing system authorization through the implementation of continuous monitoring processes; provides senior leaders and executives with the necessary information to make cost-effective, risk management decisions about the systems supporting their missions and business functions; and integrates security and privacy controls into the system development life cycle. 
+
+Applying the RMF tasks enterprise-wide helps to link essential risk management processes at the system level to risk management processes at the organization level. In addition, it establishes responsibility and accountability for the security and privacy controls deployed within organizational systems and inherited by those systems. 
+
+The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act.
 
 ### ISO 27001
 *An Information Security Management System can aid governance of cyber security risk*
