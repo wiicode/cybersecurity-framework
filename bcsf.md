@@ -2,14 +2,14 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T02:03:32.859Z
+date: 2021-02-22T02:04:35.646Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
 ---
 
 # Cyber & safety introduction
-> An introduction to cyber-related risks to safety, how to manage them, and resources related to cyber and safety provided by the BCSF.
+> An introduction to cyber-related risks to safety, how to manage them, and resources related to cyber and safety provided by the BCSF Team.  
 {.is-info}
 
 ## General introduction
