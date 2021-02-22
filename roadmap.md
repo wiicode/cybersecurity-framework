@@ -2,7 +2,7 @@
 title: release-notesc
 description: The past, present, and future of BCSF
 published: true
-date: 2021-02-13T19:16:24.917Z
+date: 2021-02-22T02:08:31.778Z
 tags: checklist, bronze
 editor: markdown
 dateCreated: 2020-08-06T18:07:19.503Z
@@ -17,14 +17,18 @@ dateCreated: 2020-08-06T18:07:19.503Z
 
 #### Content
 - [X] BCSF 1.0 Overview
-- [ ] Personal and Family Security Guide
+- [X] BCSF 1.0 Release Candidate.
+- [X] Personal and Family Security Guide
 - [X] Small Business Guide
 - [ ] Layered Defense Checklist
 - [ ] Layered Defense Explainers
 - [ ] Layered Defense Supplements
-- [ ] Advanced Security Guide
+- [X] Advanced Security Guide
 - [ ] Security Awareness Training for Employees
 - [ ] Security Awareness Training for Developers
+- [ ] Board Toolkit
+- [ ] Cloud Security Principles
+
 
 #### Capabilities
 - [X] AWS Well-Architected environment
