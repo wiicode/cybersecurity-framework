@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T01:58:55.838Z
+date: 2021-02-22T02:03:32.859Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -29,7 +29,7 @@ The BCSF has developed some resources that organizations managing cyber-related 
 
 Collectively, these resources are known as the BCSF BCAF collection and can be found on the website by following the link below. Please note that the use of BCAF collection extends beyond organizations managing cyber-related risks to public safety. For that reason, the terminology of the BCAF collection is intended to be quite general and cover more than cyber-related safety risks. Specifically, in the BCAF collection:
 
-- ‘essential function’ may refer to maintenance of public safety or to another important activity carried out by an organization (eg. operation of an essential service in the context of the NIS Directive etc).
+- ‘essential function’ may refer to maintenance of public safety or to another important activity carried out by an organization.
 - ‘organization responsible for an essential function’ may refer to an organization responsible for the maintenance of public safety, or to another type of organization.
 
 Please note that, as used in the BCAF collection, the term ‘essential function’ may or may not refer to an activity subject to cyber regulation.
@@ -628,11 +628,11 @@ The science of anomaly detection, which goes beyond using pre-defined or prescri
 *There are well-defined and tested incident management processes in place, that aim to ensure continuity of essential functions in the event of system or service failure. Mitigation activities designed to contain or limit the impact of compromise are also in place.*
 
 ## Description
-Incidents will invariably happen. When they do organizations should be prepared to deal with them, and as far as possible, have mechanisms in place that minimise the impact on the essential function.
+Incidents will invariably happen. When they do organizations should be prepared to deal with them, and as far as possible, have mechanisms in place that minimize the impact on the essential function.
 
 The particular mechanisms required should be determined as part of the organization's overall risk management approach. Examples might include things such as DDoS protection, protected power supply, critical system redundancy, rate-limiting access to data or service commands, critical data backup or manual fail-over processes.
 
-> **Note**: Some cyber-related regulation (eg. NIS Directive) has mandatory reporting requirements around cyber security incidents that have the potential to affect essential functions. organizations should make sure that they understand any mandatory incident reporting requirements that apply to them and include such requirements in their incident management planning.
+> **Note**: Some cyber-related regulation have mandatory reporting requirements around cyber security incidents that have the potential to affect essential functions. organizations should make sure that they understand any mandatory incident reporting requirements that apply to them and include such requirements in their incident management planning.
 
 ## Guidance
 The 10 Steps: Incident Management is the most concise guidance here, but organizations should use other more detailed guidance as and when appropriate. Other authoritative guidance pieces are referenced below.
