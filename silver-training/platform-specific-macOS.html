@@ -1,0 +1,477 @@
+<!--
+title: macOS 10.14 Mojave
+description: Secure configuration for macOS 10.14 Mojave
+published: true
+date: 2021-02-22T00:24:14.551Z
+tags: silver, ncsc, silver training
+editor: ckeditor
+dateCreated: 2021-02-22T00:24:14.551Z
+-->
+
+<h1>macOS 10.14 Mojave</h1>
+<p>Secure configuration for macOS 10.14 Mojave</p>
+<p>This guidance was developed following testing performed on MacBook Pro and MacBook Air devices running macOS 10.14 (Mojave)</p>
+<p>It's important to remember that this guidance has been conceived as a way to satisfy&nbsp;the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles">12 End User Device Security Principles</a>.&nbsp;As such, it consists of&nbsp;recommendations&nbsp;and&nbsp;should not&nbsp;be seen as a set of mandatory&nbsp;instructions requiring no further thought.</p>
+<p>Risk owners and administrators should agree a configuration which balances business requirements, usability and security.</p>
+<hr>
+<h2>Risk owners' summary</h2>
+<p>We recommend the following architectural choices for macOS 10.14 as part of a remote working scenario:</p>
+<ul>
+  <li>All data should be routed over a secure enterprise VPN to ensure the confidentiality and integrity of the traffic, and to benefit from enterprise protective monitoring solutions.</li>
+  <li>User accounts should be created locally on macOS devices and managed remotely using Mobile Device Management (MDM).</li>
+  <li>Users should not be permitted to install arbitrary third-party applications on the device. Applications which users require should be pre-installed, provisioned as part of the device image, or installed using MDM.</li>
+</ul>
+<p>When configured in this way, risk owners should be aware of the following technical risks associated with this platform:</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Security principle</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Explanation of risks</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Data-in-transit protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The built-in VPN cannot be configured into an 'always-on' mode. Whilst triggers can be used to cause the VPN to connect regularly, users can disable these triggers and disconnect the VPN. Without a supported always-on mode, there is a risk that data in transit can be compromised.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Data-at-rest protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">On devices <strong>without</strong> a <a href="https://support.apple.com/en-gb/HT208862">T2 security processor</a>, FileVault 2 does not use any dedicated hardware to protect its keys. If an attacker can get physical access to the device, they can extract password hashes and perform an offline brute-force attack to recover the encryption password. As a result, passwords need to be much stronger to reduce this risk.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Secure boot</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">On devices <strong>without</strong> a <a href="https://support.apple.com/en-gb/HT208862">T2 security processor</a>, secure boot is not supported, making it easier for malware or a physical attacker to compromise the boot process and for such a compromise to be undetectable.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">External interface protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Most macOS devices have external interfaces which permit Direct Memory Access (DMA) from connected peripherals. Whilst the configuration in this section limits DMA to times when the user is logged in and the screen is unlocked, this still presents an opportunity for a local attacker to extract keys and data.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Device update policy</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">You cannot force the user to update their device or software remotely. However, it is possible to turn on automatic updates locally. Third-party utilities may be available that can mitigate this issue.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Administrators' deployment guide</h2>
+<h3><strong>Overview</strong></h3>
+<p>To meet the principles outlined in the&nbsp;<a href="https://www.gov.uk/government/publications/end-user-device-strategy-security-framework-and-controls">End User Devices Security Framework</a>, several recommendations are given in the table below.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Security Principle</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Recommendation and Explanation</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Data-in-transit protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Use a&nbsp;Foundation Grade&nbsp;IPsec VPN client configured as per that product's security procedures to provide data-in-transit protection, or the native IPsec VPN client.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Data-at-rest protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Use FileVault 2 to provide full-volume encryption. As the disk encryption password on non-T2 devices is not tied to hardware, it needs to be strong enough to resist an offline brute-force attack. The required strength should be determined by your organisation’s&nbsp;authentication policy. Use&nbsp;<i>recovery key escrow</i>&nbsp;to store encrypted copies of device recovery keys for occasions when users forget their disk encryption passwords.</p>
+          <p><a href="https://support.apple.com/en-gb/HT208862">Some&nbsp;MacBook Pro and Mac Pro devices</a>&nbsp;from late 2017 and newer have a T2 security processor. The T2 processor is used to strengthen user authentication to the device by preventing brute force and physical attacks. No action is required to enable this behaviour on these devices.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Authentication</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>On devices&nbsp;<strong>without</strong>&nbsp;a&nbsp;<a href="https://support.apple.com/en-gb/HT208862">T2 security processor</a>, either:</p>
+          <ul>
+            <li>Users have two passwords – one for FileVault 2, and one to login and unlock their device (see Provisioning Steps for how to achieve this)</li>
+            <li>Or&nbsp;users have one password which fulfills both requirements.</li>
+          </ul>
+          <p>The user should be required to authenticate to the device in line with your organisation’s authentication policy (see&nbsp;Authentication Policy).</p>
+          <p>This user’s login password derives a key which encrypts certificates and other credentials, giving access to organisational services.</p>
+          <p><a href="https://support.apple.com/en-gb/HT208862">Some&nbsp;MacBook Pro and Mac Pro devices</a>&nbsp;from late 2017 and newer have a T2 security processor, which is used to provide brute-force and physical attack protection for cryptographic keys. As a result, devices with a T2 processor can use much shorter login passcodes at no additional risk. Having a separate disk encryption passcode is not necessary.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Secure boot</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Set an EFI (firmware) password to make it more difficult for an attacker to modify the boot process. However, with physical access to a device without a T2 processor, the boot process can still be compromised.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Platform integrity and application sandboxing</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">System Integrity Protection (SIP) prevents users and applications from modifying files in several high-level directories. This feature is enabled by default in the OS and no user configuration is required.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Application allow listing</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Use the MDM to allow list default macOS applications. Use GateKeeper to prevent the installation and running of unsigned applications. An organisation application catalogue can also be used which only contains enterprise-approved or in-house applications.&nbsp;These should be&nbsp;verified to have valid Developer ID certificates, apps should have been properly&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/macos-10-14#notarised">notarised</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Malicious code detection and prevention</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>XProtect is built into macOS. It has a limited signature set which is maintained by Apple to detect widespread malware. XProtect will also restrict vulnerable plugin versions (such as Java) to limit exposure. Several third-party anti-malware products also exist, which attempt to detect malicious code for this platform. Content-based attacks can be filtered by scanning capabilities in the organisation.</p>
+          <p>Further protection can be achieved by forcing apps to be&nbsp;<strong>notarised</strong>. A notarised&nbsp;app has been approved and confirmed by Apple that it does not contain malware. It also makes it easy for Apple to revoke any specific application if it subsequently found to be compromised after installation.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Security policy enforcement</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Mark MDM profiles as non-removable so the user cannot remove them and alter their configuration.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">External interface protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">USB removable media can be blocked through MDM if required. If an EFI password is set, DMA is only possible when the device is booted and unlocked.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Device Update Policy</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">MDM can be used to audit which App Store software and OS versions are installed on a device.&nbsp;The&nbsp;attached script&nbsp;will turn on automatic updates, but this cannot be achieved remotely with MDM.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Event collection for enterprise analysis</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">macOS logs can be viewed by a local administrator on device, or from a distance using remote administration tools. Third-party software can also be used to automate log collection.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Incident Response</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">macOS devices can be locked, wiped, and configured remotely by their MDM.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Recommended network architecture</strong></p>
+<p>All remote or mobile working scenarios should use a typical remote access architecture with a&nbsp;VPN terminating into an access layer (or DMZ).&nbsp;The following network diagram describes the recommended architecture for this platform.</p>
+<figure class="image image_resized" style="width:auto;"><img src="https://www.ncsc.gov.uk/static-assets/images/macos1013.png"></figure>
+<p>A Mobile Device Management server is required. Apple's&nbsp;macOS Server Profile Manager is sufficient for this purpose. Alternatively, third-party products exist which may offer additional functionality over and above Profile Manager.</p>
+<hr>
+<h2>Preparation for deployment</h2>
+<p>The steps below should be followed to prepare your organisation's infrastructure for hosting a deployment of these devices:</p>
+<ul>
+  <li>Set up an MDM server (e.g. Profile Manager on macOS Server). This may require setting up the Open Directory component of a macOS Server.</li>
+  <li>Ensure all Configuration Profiles are signed to prevent modification in transit, or post install</li>
+  <li>Create policies on Profile Manager for:<ul>
+      <li>Ensure 'Use SSL' is selected for all server settings</li>
+      <li>VPN</li>
+      <li>Passcode</li>
+      <li>Disk encryption and key escrow</li>
+      <li>Exchange/Mail/Calendar Settings.</li>
+      <li>Disabling access to the Preference Panes in Restrictions (macOS) for iCloud and Network as access to these could be used to disable the VPN.</li>
+    </ul>
+  </li>
+</ul>
+<p>See the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/macos-10-14#policies">Recommended Policies and Settings</a>&nbsp;section for more detail on the above.</p>
+<p>You can also consider creating policies in other sections of Profile Manager. In particular, we recommend that administrators:</p>
+<ul>
+  <li>Allow list applications to further reduce the risk of malicious code being executed</li>
+  <li>Tighten permissions on USB mass storage and optical devices to help prevent data loss through removable media</li>
+  <li>Use Restrictions to deny list locations from which users should not run applications,&nbsp;or allow list trusted applications that users are allowed to run</li>
+  <li>Include internal&nbsp;CA&nbsp;Certificates where appropriate to ensure users can authenticate network services</li>
+  <li>Include corporate network profiles (e.g. 802.1X or Wi-Fi) to ensure that network access credentials are distributed securely</li>
+</ul>
+<p><strong>Device provisioning steps</strong></p>
+<p>Follow these steps to provision each end user device onto your organisation’s network in preparation for distribution to end users.</p>
+<p>These instructions assume the device is new or the operating system has been wiped and reinstalled.</p>
+<ol>
+  <li>On first boot, the device will present a number of prompts. In these prompts:<ul>
+      <li>Firstly, create a local Administrator account. This will be used to locally manage the device. Credentials should not be given to the end user. A strong password should be entered at this stage.</li>
+      <li>Secondly, skip the Apple ID creation and entry.</li>
+      <li>Location Services can be enabled if required.</li>
+      <li>The device can be registered with Apple if required.<br>&nbsp;</li>
+    </ul>
+  </li>
+  <li>Local settings should now be set.&nbsp;A&nbsp;script is provided&nbsp;to automatically provision these settings, but they can also be configured manually.<ul>
+      <li>Disable any non-required services (e.g.infrared)</li>
+      <li>Enable low-overhead security features (e.g. firewall, updates)</li>
+      <li>Set user security policies (e.g. timeouts, screen lock, password hints)</li>
+      <li>Create a standard user account</li>
+      <li>Make the user's home folder accessible only to that user</li>
+      <li>Lock down the user's Terminal/Shell access. The user should have a limited Bash profile, which can be set as part of .bash_profile. This file should be owned by the root user so that modifications cannot be made. The user's PATH should be set to a folder in the user's directory and required applications symlinked to this directory</li>
+      <li>If MDM policies are not used to enforce FileVault and key escrow, manually configure disk encryption on the device. Either:<ul>
+          <li>Create a separate Disk Encryption user which will have a strong password used to decrypt the disk.<ul>
+              <li>Only give the Disk Encryption user access to decrypt the disk</li>
+              <li>Part of this password could be from a password entry token such as a YubiKey</li>
+            </ul>
+          </li>
+          <li>Allow the primary user to unlock the disk using their login passcode.</li>
+        </ul>
+      </li>
+      <li>Turn on automatic updates via System Preferences -&gt; Software Update settings</li>
+      <li>Turn off initial iCloud login prompt for first user login. This will stop the user being prompted to use iCloud.</li>
+      <li>To help prevent DMA and cold-boot attacks, set a Firmware Password<br>&nbsp;</li>
+    </ul>
+  </li>
+  <li>The device should now be enrolled with the MDM server and the configuration profiles applied, including those to enforce FileVault and key escrow if not set locally</li>
+  <li>At this stage, any additional third-party applications can be installed (e.g. productivity apps)</li>
+  <li>Distribute the device, disk encryption password and user password separately to the user</li>
+  <li>The user should then change their password and skip the Apple ID registration step at the next time they log on</li>
+</ol>
+<p><br><strong>Device imaging</strong></p>
+<p>Instead of provisioning each device individually, an alternative option is to produce a master device image which can be deployed onto devices. The recommended approach for creating a standard disk image is to install the OS, create a local admin account and apply local policies, then install any required applications on a client machine.</p>
+<p>The client machine is then connected to an imaging server in target disk mode. Apple's System Image Utility can then be used to create a NetRestore or NetBoot image of the device. The image can then be used to provision other machines. NetBoot images can also be created from macOS installers downloaded from Apple, though care should be taken to ensure that the version downloaded can be deployed on the specific hardware you are using.</p>
+<p><i>Note</i></p>
+<p>Enabling FileVault 2 and MDM enrolment must only be done after the device has been imaged. This ensures that the cryptographic keys involved in these security features are&nbsp;unique. This, however, can be achieved during MDM enrolment using options under the 'FileVault' tab within the 'Security and Privacy' submenu, including the configuration of recovery key escrow.</p>
+<p>Apple's website has a support article that contains details about&nbsp;<a href="http://support.apple.com/kb/HT5599">creating images for device-specific versions of macOS</a>.</p>
+<hr>
+<h2>Recommended policies and settings</h2>
+<p>This section details important security policy settings which are recommended for a macOS deployment. Other settings (e.g. server address etc.) should be chosen according to the relevant network configuration. These settings should be applied through a profile (or combination of profiles) created on the MDM server.</p>
+<p>The settings below are named as they appear in Apple Configurator and Profile Manager. Other products may use different names for these settings.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>General Group</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>&nbsp;</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Automatic Push</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Security (when can profile be removed)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Never</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Automatic profile removal</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Never</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Mail/Exchange/Calendar Groups (as appropriate)</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>&nbsp;</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow messages to be moved</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Use Only in Mail</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Use SSL (for internal and external host)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>VPN Group (if using the native VPN client)</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Connection Type</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">IKEv2</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Machine Authentication</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Certificate</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Enable VPN on Demand</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Restrictions Group</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Restrict which system preferences are enabled</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Yes</p>
+          <p>Profiles, Sharing and iCloud should be disallowed. Other panes may be disabled at the organisation's&nbsp;discretion.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow use of Game Center</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow App Store app adoption</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Restrict App Store to MDM installed apps and software updates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Restrict which apps are allowed to launch</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Yes</p>
+          <p>Add a list of approved applications permitted by the business</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow only the following Dashboard widgets to run</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes<br>Do not add any widgets. This will stop any widgets from being able to access the Dashboard.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow use of iCloud password for local accounts</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud documents &amp; data</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Keychain</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Mail</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Contacts</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Calendars</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Reminders</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Bookmarks</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow iCloud Notes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Security &amp; Privacy Group</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>&nbsp;</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Do not allow user to override Gatekeeper setting</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Yes</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Allow user to unlock the Mac using an Apple Watch</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Send diagnostic and usage data to Apple</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">No</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>The media access settings can be used to limit user access to removable media such as USB drives, writeable optical media and AirDrop.</p>
+<hr>
+<h2>Authentication policy</h2>
+<p>Your organisation should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use the <a href="https://www.ncsc.gov.uk/collection/passwords">NCSC's published password guidance</a> to help inform any password policy. An administrator should configure the relevant on-device settings in line with your authentication policy.</p>
+<p>For further guidance on defining an authentication policy, see <a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview">the EUD Security Guidance introduction</a>.</p>
+<p>To enforce this policy on macOS devices, the following settings are available, and should be set according to the policy:</p>
+<ul>
+  <li>Allow simple value</li>
+  <li>Require alpha-numeric value</li>
+  <li>Minimum passcode length</li>
+  <li>Minimum number of complex characters</li>
+  <li>Maximum Auto-Lock</li>
+  <li>Maximum number of failed attempts</li>
+</ul>
+<p><strong>Hardware strengthening</strong></p>
+<p>On macOS devices <i>without</i> a T2 processor, passwords for FileVault 2 are not strengthened using hardware. As such, it must be sufficiently complex to prevent offline brute force attacks. Account login attempts are limited by policy, so user account passwords need to be strong enough to resist manual guessing attempts. If one password is used for both FileVault 2 and account login, it should be sufficiently complex to prevent offline brute force attacks.</p>
+<p>For devices <i>with</i> a T2 processor, the login password cannot be brute forced offline or extracted with a physical attack, so only needs to resist simple guessing attacks.</p>
+<p><strong>VPN profile</strong></p>
+<p>The deployed VPN should be configured according to <a href="https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data">NCSC PRIME profile for IPsec</a>.</p>
+<p>The recommended IPsec cipher suite profile for protecting information is called PRIME. A non-authoritative summary is provided in the table below:</p>
+<p>Encryption</p>
+<p>AES-128 in GCM-128 (and optionally CBC)</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>IKEv2</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Selection</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Pseudo-random function</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">HMAC-SHA256</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Diffie-Hellman Group</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">256bit random ECP (RFC5903)</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Group 19 Authentication</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">ECDSA-256 with SHA256 on P-256 curve</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>ESP</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Selection</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Encryption</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">AES-128 in GCM-128</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>VPN Settings</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Dead peer detection interval</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Medium</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Enable perfect forward secrecy</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">True</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Disable redirects</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">False</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Disable mobility and multihoming</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">True</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Enable certificate revocation check</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">True</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">VPN On Demand</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Always</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>The deployed VPN solution should be configured to negotiate the parameters below. Not all of these settings can be configured on the device or MDM VPN profile, therefore the configuration also needs to be enforced from the VPN server.</p>
+<p>In OS X 10.9, the mechanism for configuring the <i>VPN On Demand</i> settings changed, and none of the tested MDM utilities currently have a GUI for this new mechanism. To configure the <i>VPN On Demand</i> to trigger for all outgoing connections, follow the steps below:</p>
+<ul>
+  <li>Configure the VPN settings using the MDM and test the profile on the device to ensure it connects manually</li>
+  <li>Export the VPN configuration profile (unsigned) from the MDM as a .mobileconfig file. Convert this to text using `plutil` if required.</li>
+  <li>Using a text editor, modify the XML configuration inside the exported file. Within the IKEv2 key, add rules for OnDemandEnabled &amp; OnDemandRules as shown below:</li>
+</ul>
+<p>IKEv2</p>
+<p>OnDemandEnabled</p>
+<p>1</p>
+<p>OnDemandRules</p>
+<p>Action</p>
+<p>Connect</p>
+<ul>
+  <li>Import the modified configuration to the MDM and deploy to the device</li>
+</ul>
+<p>In Profile Manager, it is possible to set the option 'Always on VPN (supervised only)'. However, this causes the profile install to fail on macOS devices, so the approach described above should be used instead. Note also that for a macOS device to successfully verify the VPN server certificate, the certificate must have a Subject Alternative Name (SAN) entry that matches the common name.</p>
+<hr>
+<h2>Other considerations</h2>
+<p>The following additional points address issues&nbsp;specific to&nbsp;macOS deployments.</p>
+<p><strong>iCloud</strong></p>
+<p>We recommend that users do not use iCloud as this may allow data to leak through iCloud backup and application storage. This can be achieved by not signing into the Apple ID when prompted by the operating system. Other Apple applications such as iTunes can be used with an Apple ID without enabling iCloud integration if they are required.</p>
+<p><strong>FileVault</strong></p>
+<p>In order for the enterprise to retain the ability to access the device in the event the FileVault 2 encryption password is lost, it should be ensured that the local administrator user has permission to unlock the FileVault encryption. This option is available within the Security &amp; Privacy section of System Settings, under FileVault with the option to escrow recovery keys set under the 'Escrow Personal Recovery Key' option.</p>
+<p>If key escrow is not possible or multiple versions of macOS need to be supported, a keychain can also be created by setting a Master Password (from the Users &amp; Groups service menu). This keychain can be distributed to all managed macOS devices before enabling FileVault and will be acknowledged during the process of enabling FileVault.&nbsp;<a href="http://support.apple.com/kb/ht5077">Apple support has more information on this process</a>.</p>
+<p><strong>Extensions</strong></p>
+<p>In OS X 10.10, the extension feature was added. This allows application developers to extend the functionality of their application to third parties. As an example, the sharing extension could allow a user to share information to social network sites from an application.</p>
+<p>Your organisation should control which applications are installed in the environment and limit the ability for applications to interface to the user via Extensions. This can partially be configured as part of your organisation's MDM solution.</p>
+<p><strong>Firewall Configuration</strong></p>
+<p>The Security &amp; Privacy options allow additional configuration of the firewall. MDM policies can be used to give finer grained control over firewall rules on the system, if required. As an example, a policy can be enabled to block all incoming connections to the device.&nbsp;</p>
