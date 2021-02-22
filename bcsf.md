@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T21:53:52.596Z
+date: 2021-02-22T21:55:02.914Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -16,7 +16,7 @@ dateCreated: 2021-02-21T02:36:41.481Z
 > **BENTO:GUIDES** is the publishing platform for accessing **Bento Cyber Security Framework** and all supporting materials.  
 {.is-info}
 
-Bento Cyber Security Framework is an applied framework for small business cyber security. It is developed to help companies protect data, retain employees, and build trust with customers and vendors. 
+Bento Cyber Security Framework (BCSF) is an applied framework for small business cyber security. It is developed to help companies protect data, retain employees, and build trust with customers and vendors. 
 
 BCSF recognizes the diversity among organizations. Each businesses will have different needs and requirements based on a number of factors. BCSF is meant to apply to any organization looking to build a cybersecurity program. 
 
