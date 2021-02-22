@@ -1,0 +1,1209 @@
+<!--
+title: Windows 10 1809
+description: Secure configuration for Windows 10 1809
+published: true
+date: 2021-02-22T00:22:49.581Z
+tags: silver, ncsc, silver training, platform specific
+editor: ckeditor
+dateCreated: 2021-02-22T00:22:49.581Z
+-->
+
+<h1>Windows 10&nbsp;</h1>
+<p>This guidance has been updated to cover the 1809 “October 2018 Update” of Windows 10 Enterprise. It builds on the previous 1803 “April 2018 Update” guidance.</p>
+<p>Testing was performed on a <a href="http://msdn.microsoft.com/en-US/library/windows/hardware/dn423132.aspx">Windows Hardware Certified</a> device, running Windows 10 Enterprise. The hardware was a Dell Latitude E7490, managed with Active Directory on Server 2019. This guidance is not applicable to Windows devices managed via an MDM or Windows To Go. We have separate guidance on how <a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management">to configure devices with MDM</a>. Both documents will continue to be maintained.</p>
+<p>It's important to remember that this guidance has been conceived as a way to satisfy the <a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles">12 End User Device Security Principles</a>. As such, it consists of <i>recommendations </i>and should <i>not </i>be seen as a set of mandatory instructions requiring no further thought.</p>
+<p>Risk owners and administrators should agree a configuration which balances business requirements, usability and security.</p>
+<hr>
+<h2>Risk owners’ summary</h2>
+<p>We recommend the following architectural choices for Windows 10:</p>
+<p>All data should be routed over a secure enterprise VPN to ensure the confidentiality and integrity of the traffic. This also allows the devices, and data on them, to be protected by&nbsp;<a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes">enterprise&nbsp;protective monitoring solutions</a>.</p>
+<ul>
+  <li>Installation of arbitrary third-party applications by users is not permitted on the device. Applications should be authorised by an administrator and deployed via a trusted mechanism.</li>
+  <li>Most users should have accounts with no administrative privileges. Users that require administrative privileges should use a separate unprivileged account for email and web browsing. Administrator accounts should have a unique strong password per device.</li>
+</ul>
+<p>When configured in this way, risk owners should be aware of the following technical risks associated with this platform:</p>
+<p>&nbsp;</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Associated security principle</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Explanation of risks</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Secure boot</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Windows 10 can support secure boot, but is dependent on supported and correctly configured hardware</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Administrators’ deployment guide</h2>
+<h3><strong>Overview</strong></h3>
+<p>To meet the principles outlined in the <a href="https://www.gov.uk/government/publications/end-user-device-strategy-security-framework-and-controls">End User Devices Security Framework</a>, several recommendations are given in the table below.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Security principle</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Explanation</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Assured data-in-transit protection</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Use the <a href="https://docs.microsoft.com/en-gb/windows/security/identity-protection/vpn/vpn-connection-type?redirectedfrom=MSDN">Windows 10 Built-In VPN Client </a>configured as per customisation guide (this archive also includes the NCSC Captive Portal Helper app for always-on VPNs), this is available for public sector organisations by <a href="https://www.ncsc.gov.uk/section/about-this-website/contact-us">contacting NCSC enquiries</a>.<br>&nbsp;</p>
+          <p>Configure the built-in Windows firewall to block outbound connections when the VPN is not active. An example firewall profile is provided in the <a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#firewallconfiguration">Firewall configuration</a> section.</p>
+          <p>Use certificates for user or machine credentials. We recommend that <a href="https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/manage/component-updates/tpm-key-attestation">Windows Key Attestation</a> or <a href="https://technet.microsoft.com/en-us/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport">Windows Hello for Business</a> should be used to bind these credentials to the device’s hardware.</p>
+          <p>Alternatively, use a third-party, correctly configured, CPA Foundation grade VPN app which makes use of the UWP (<a href="https://docs.microsoft.com/en-gb/windows/uwp/get-started/universal-application-platform-guide">Universal Windows Platform</a>) VPN plug-in platform.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Assured data-at-rest protection</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Use one of the following configurations to provide full volume encryption:</p>
+          <p>· BitLocker with a TPM and PIN configured in alignment with the <a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#bitlockerconfig">BitLocker configuration</a> settings.</p>
+          <p>· An independently assured CPA Foundation Grade, Data at Rest encryption product that supports UEFI and Windows Secure Boot, configured in alignment with the security procedures for that product.</p>
+          <p>If using BitLocker, deploy the configuration settings before encryption is started.</p>
+          <p>BitLocker is not <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks">Foundation Grade</a> certified. However, the NCSC has determined that the level of protection it provides is equivalent to Foundation Grade when configured as per this guidance.</p>
+          <p><a href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-bitlocker">Device Encryption</a> introduced for Connected Standby devices in Windows 10 does not allow the use of a passphrase to unlock the disk and so does not support some of the mandatory requirements expected from assured disk encryption products. BitLocker, or an independently assured CPA Foundation Grade product, should be used instead.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Authentication</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>The user implicitly authenticates to the device by entering the <a href="https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-countermeasures#pre-boot-authentication">BitLocker PIN</a> at boot time.</p>
+          <p>The user then has a secondary credential to use when authenticating to the platform after boot and when unlocking the device. You should use Windows Hello for Business and allow the user to log in with a PIN code or Biometric. For both Windows Hello and traditional passwords, the credential derives a key which protects other credentials, which give access to corporate services.</p>
+          <p>In an enterprise environment, the user will also be issued with an Active Directory credential which will be required when they use a device for the first time. You should use <a href="https://docs.microsoft.com/en-us/windows/security/identity-protection/credential-guard/credential-guard">Credential Guard</a> to best protect this credential. The user should also be a member of the <a href="https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/protected-users-security-group">Protected Users Security Group</a> on the domain and that domain should be running a minimum of 2016 Functional Domain Level.</p>
+          <p>Windows Hello for Business also permits <a href="https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise">biometric unlock</a> of devices that have the necessary hardware. This can be used if desired.</p>
+          <p>Accounts with administrative privileges should only be present on End User Devices used to perform administrative functions and should take advantage of the <a href="https://blogs.technet.microsoft.com/canitpro/2016/06/23/step-by-step-enabling-restricted-admin-mode-for-remote-desktop-connections/">Restricted Admin</a> feature of Remote Desktop Connections. User accounts with administrative privileges should have a strong password and ideally a second factor to authenticate them to the platform at logon and unlock time. The credentials will be best protected if the administrative user is a member of the Protected Users Security Group on the domain, and have <a href="https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos">Authentication Policy Silos</a> applied.</p>
+          <p>Microsoft provides guidance on the use of <a href="https://aka.ms/cyberpaw">administrative workstations</a>, <a href="https://aka.ms/tiermodel">delegation of privilege</a> and other <a href="https://aka.ms/privsec">good administrative practices</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Secure boot</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>On Windows 10, this requirement is met on a correctly configured platform deployed on the <a href="https://docs.microsoft.com/en-us/windows-hardware/design/compatibility/whcp-specifications-policies">Hardware Compatibility Program</a>.</p>
+          <p>A UEFI password can make it more difficult for an attacker to modify the boot process. With physical access, the boot process can still be compromised.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Platform integrity and application sandboxing</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No configuration is required.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Application whitelisting</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>An enterprise configuration can be applied to implement application control using <a href="https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview">AppLocker</a>. A recommended sample configuration that only <a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#applockerconfig">allows Administrator-installed applications to run is provided</a> below.</p>
+          <p>Device Guard can also be used to reinforce application control rules. As it does not offer the same granularity as AppLocker, <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-device-guard-and-applocker">the two technologies should be used alongside one another</a>.</p>
+          <p><a href="https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-policies-design-guide">AppLocker</a> can be used to restrict which pre-installed Windows Apps are available to users, and if the public Windows Store is enabled it can control which applications a user can install.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Malicious code detection and prevention</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Windows 10 includes <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10">Windows Defender Antivirus</a> and <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview">Windows Defender SmartScreen</a> that attempt to detect malicious code for the platform. Cloud sample submission can be disabled. Alternatively, third party anti-malware products are available. If using a third-party product, those that implement the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587(v=vs.85).aspx">Anti-Malware Scan Interface (AMSI)</a> should be preferred to improve compatibility with future Feature Updates.</p>
+          <p>The <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/early-launch-antimalware">Early Launch Anti-Malware (ELAM)</a> driver provides signature checking for known bad drivers on ELAM-compliant systems that are configured to use Secure Boot.</p>
+          <p>Microsoft Store for Business, or a Company Store, can be used to distribute user-installable universal apps. Such stores should only contain vetted apps. If the public Microsoft Store is enabled, AppLocker can be used to control which applications a user is able to install. Content-based attacks can be filtered by scanning capabilities in the enterprise.</p>
+          <p><a href="https://docs.microsoft.com/en-us/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy">Windows Defender Exploit Guard</a> can be used to help prevent vulnerabilities in older software from being successfully exploited. See the <a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#exploitguardconfig">Windows Defender Exploit Guard</a> section below for more details.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Security policy enforcement</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Settings applied through Group Policy cannot be modified by unprivileged users.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>External interface protection</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Interfaces can be configured using group policy. USB removable media can be blocked through Group Policy if required. Direct Memory Access (DMA) is possible from peripherals connected to some external interfaces including FireWire and Thunderbolt unless disabled through group policy as <a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#systemhardening">detailed below</a>, or in the UEFI/BIOS. With <i>Windows 10 Connected Standby</i> devices, part of the hardware compliance mitigates DMA attacks by disallowing these interfaces.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Device updates</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Windows Update can automatically download and install updates. If the Microsoft Store is enabled, it should be configured to automatically update Microsoft Store apps.</p>
+          <p>Some devices will allow the UEFI firmware to be updated automatically via Windows Update. Devices that do not implement this will require updates via another mechanism whenever a new firmware is released.</p>
+          <p><a href="http://blogs.windows.com/windowsexperience/2015/05/04/announcing-windows-update-for-business/">Windows Update for Business</a> or <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus">Windows Server Update Services (WSUS)</a> can, optionally, be used to monitor and enforce updates of the core platform, system firmware and any Windows applications.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Event collection</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Event collection can be carried out using Windows Event Forwarding for central event log collection.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;"><strong>Incident response</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">The combination of BitLocker drive encryption and enterprise revocation of user credentials are appropriate for managing this security recommendation.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Recommended network architecture</h2>
+<p>For all remote or mobile working scenarios, you should consider using a typical remote access architecture based on the Walled Garden Architectural Pattern. The following network diagram describes the recommended architecture for this platform. The remote device will need Active Directory access in order&nbsp;to authenticate and retrieve group policy.</p>
+<figure class="image image_resized" style="width:auto;"><img src="https://www.ncsc.gov.uk/static-assets/images/network%20arc.jpg"></figure>
+<p>Figure 1: Recommended walled garden network architecture for Windows 10 deployments</p>
+<p>Alternatively, consider a reduced presentation layer that allows direct access from the VPN gateway to internal services via the internal firewall. The inner firewall should be used to restrict access where possible.</p>
+<p>The risk of allowing more direct access to the core network can be reduced by binding the authentication certificate to the end user device, ensuring that it is only possible for legitimate devices to connect.</p>
+<hr>
+<h2>Preparation for deployment</h2>
+<p>The steps below should be followed to prepare your organisational infrastructure to host a deployment of these devices:</p>
+<ol>
+  <li>Procure, deploy and configure network components, including an approved IPsec VPN Gateway.</li>
+  <li>Configure the&nbsp;<a href="https://technet.microsoft.com/en-us/windows/dn475741.aspx">Microsoft Deployment Toolkit</a>&nbsp;to deploy your organisation's standard desktop build, using a clean Windows 10 Enterprise image. Consider including credential management tools such as&nbsp;<a href="https://technet.microsoft.com/en-us/mt227395.aspx">LAPS</a>&nbsp;and&nbsp;<a href="https://technet.microsoft.com/en-us/windows/hh826072.aspx">MBAM</a>.</li>
+  <li>Create Group Policies for user and computer groups in accordance with the settings later in this section, ensuring that the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#microsoftbaselinesettings">Microsoft Baseline settings</a>&nbsp;have the lowest precedence when being deployed.</li>
+  <li>Deploy an AppLocker rule set using Group Policy following guidance in the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#whitelist">Application Whitelisting section</a>. A sample configuration, which allows only applications installed by an Administrator to run, is outlined in the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#systemhardening">Group Policy settings</a></li>
+  <li>Create Event Forwarding Subscriptions and configure Group Policy to forward at least AppLocker, Application, System and Security logs that have a level of Critical Error or Warning, to an event management system. The&nbsp;<a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes">NCSC has advice</a>&nbsp;on how this can be achieved.</li>
+  <li>Configure user groups according to the principle of least privilege. Where available, configure these users to be in the Protected Users group and apply Restricted Admin and Authentication Policy Silos to privileged users.</li>
+  <li>Deploy&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/index">System Center Configuration Manager (SCCM</a>) or additional OEM-dependent infrastructure if you wish to implement remote management of&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#devicefirmware">device firmware</a>.</li>
+</ol>
+<h3><strong>Device provisioning steps</strong></h3>
+<p>The steps below should be followed to provision each end user device onto your organisation’s network, preparing it for distribution to end users:</p>
+<ol>
+  <li>Update the system firmware to the latest version available from the vendor. This may be called a UEFI or BIOS update.</li>
+  <li>Configure the system firmware to boot in UEFI mode</li>
+  <li>Enable TPM, Secure Boot and virtualisation extensions</li>
+  <li>Disable unused hardware interfaces</li>
+  <li>Check the boot order to prioritise internal storage and set a password to prevent changes. Most of these settings will be pre-configured on a Windows Hardware Compatibility Program device.</li>
+  <li><a href="https://www.microsoft.com/en-gb/software-download/windows10">Install a clean version of Windows</a>&nbsp;from a known good source.</li>
+</ol>
+<p>&nbsp;</p>
+<h3><strong>Recommended policies and settings</strong></h3>
+<p>This section details important security policy settings which are recommended for a Windows 10 deployment. Other settings (e.g. server address) should be chosen according to the relevant network configuration.</p>
+<p>Remember, any guidance points given here are recommendations - they are not mandatory. Risk owners and administrators should agree a configuration which balances business requirements, usability and the security of the platform.&nbsp;</p>
+<p>Settings not listed in this section are either not applicable to this mode or should be chosen according to your organisational policy and requirements.</p>
+<h3><strong>Microsoft baselines</strong></h3>
+<p>The configuration below builds on the enterprise baselines distributed by Microsoft.&nbsp;<a href="https://www.microsoft.com/en-us/download/details.aspx?id=55319">Microsoft Security Compliance Toolkit 1.0</a>&nbsp;can be used to help assess the differences between security configurations. The configuration below has been tested to work with the Windows 10 version 1809 baselines.</p>
+<p>You should use the following Microsoft baseline GPO settings:</p>
+<ul>
+  <li>MSFT Windows 10 and Server 2019 Member Server - Credential Guard</li>
+  <li>MSFT Windows 10 and Server 2019 – Defender Antivirus</li>
+  <li>MSFT Windows 10 and Server 2019 – Domain Security</li>
+  <li>MSFT Windows 10 1809 - BitLocker</li>
+  <li>MSFT Windows 10 1809 - Computer</li>
+  <li>MSFT Windows 10 1809 - User</li>
+</ul>
+<p>These should be used in combination with the custom NCSC Group Policy Object (GPO) settings described throughout this document. For easy configuration, the NCSC &amp; MSFT GPO settings are also available&nbsp;<a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip">in this zip file</a>.</p>
+<p>We recommend organisations disable or remove Internet Explorer 11 from the provisioned enterprise image. Organisations that are not yet able to remove IE 11&nbsp;<a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/MSFT+IE+1803.zip">can use the IE11 baselines</a>&nbsp;(zip)&nbsp;which attempts to mitigate some of the risks remaining in IE11, which are mitigated by default in more modern web browsers.</p>
+<hr>
+<h2>User account hardening</h2>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Group Policy</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Value(s)</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Network &gt; Network Connections &gt; Require domain users to elevate when setting a network’s location</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Credential User Interface &gt; Do not display the password reveal button</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; OneDrive &gt; Prevent the usage of OneDrive for file storage</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Sync your settings &gt; Do not sync</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled</p>
+          <p>Allow users to turn syncing on: Disabled</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Search &gt;&nbsp;Allow Cortana</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Search &gt; Don’t search the web or display web results in Search</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Store &gt; Disable all apps from Microsoft Store</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Store &gt; Turn off Automatic Download and Install of updates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Store &gt; Turn off the Store application</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">User Configuration &gt; Administrative Templates &gt; Control Panel &gt; Personalization &gt; Screen saver timeout</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">600 seconds</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Logon &gt; Turn off picture password sign-in</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Hello for Business &gt; Use a hardware security device</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Enabled</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Authentication policy</strong></h3>
+<p>Your organisation should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use our published&nbsp;<a href="https://www.ncsc.gov.uk/collection/passwords?curPage=/collection/passwords/updating-your-approach">password guidance</a>&nbsp;to help inform any password policy.</p>
+<p>An administrator should configure the relevant on-device settings in line with your authentication policy.</p>
+<p>For further guidance on authentication policies, see the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/authentication-policy">NCSC EUD Authentication guidance</a>.</p>
+<p>Windows 10 Enterprise implements a number of relevant settings as Fine Grained Password Policies that should be configured on the Domain Controller.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Group Policy</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Value(s)</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">CN=System &gt; CN=Password Settings Container &gt; CN=Granular Password Settings Users</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Precedence: 2</p>
+          <p>Enforce minimum password length</p>
+          <p>Enforce lockout policy</p>
+          <p>Account will be locked out:&nbsp;Until an administrator manually unlocks the account</p>
+          <p>Directly Applies To: Domain Users</p>
+          <p><i>These settings are not configured in the NCSC Group Policy Object (GPO) settings&nbsp;</i><a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip"><i>zip file download</i></a><i>&nbsp;and must be configured separately.</i></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">CN=System &gt; CN=Password Settings Container &gt; CN=Granular Password Settings Administrators</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Precedence: 1</p>
+          <p>Enforce minimum password length</p>
+          <p>Password must meet complexity requirements</p>
+          <p>Enforce lockout policy</p>
+          <p>Account will be locked out: Until an administrator manually unlocks the account</p>
+          <p>Directly Applies To: Domain Admins</p>
+          <p>Protect from accidental deletion: Enabled</p>
+          <p><i>These settings are not configured in the NCSC Group Policy Object (GPO) settings&nbsp;</i><a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip"><i>zip file download</i></a><i>&nbsp;and must be configured separately.</i></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Active Directory</strong></h3>
+<p>A user’s Active Directory password will normally only be used when enrolling against a device for the first time. It is not backed by a second factor or by hardware-backed&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering">anti-hammer</a>, even when Credential Guard is deployed.</p>
+<p>Different requirements can be set for different account types using&nbsp;<a href="https://technet.microsoft.com/en-us/library/cc770394(v=ws.10).aspx">Fine Grained Password Policies</a>. If the Active Directory password is only used for device enrolment, it needs to be easy to type in but does not need to be memorable.</p>
+<h3><strong>Windows Hello and Hardware Strengthening</strong></h3>
+<p>We recommend that users should log in to and unlock devices using Windows Hello for Business instead of a Windows password. This creates a user credential that is tied to the physical device using a PIN or biometric. When used on Windows 10 Certified devices, it provides hardware-backed anti-hammer. Windows Hello should only be enabled on devices that use a TPM.&nbsp;Detailed guidance on Hello for Business deployment can be found in the&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-deployment-guide">Microsoft Hello for Business deployment guide</a>.</p>
+<p>Users can choose to set a PIN after they have logged on to the device for the first time. A number of group policies should be used to configure the PIN requirements.&nbsp;The following settings are&nbsp; not configured in the NCSC Group Policy Object (GPO) settings&nbsp;<a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip">zip file download</a>&nbsp;but are recommended to be configured separately. These settings will apply to all use of PINs including Windows Hello for Business.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;"><strong>Group Policy &gt;&nbsp;Computer&nbsp;Configuration &gt; Administrative Templates &gt; System &gt; PIN Complexity</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">PIN Complexity &gt; Maximum PIN length</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">PIN Complexity &gt; Minimum PIN length</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">PIN Complexity &gt; Require digits</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">PIN Complexity &gt; Require lowercase letters</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">PIN Complexity &gt; Require special characters</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 0px 30px;">PIN Complexity &gt; Require uppercase characters</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>The configuration provided in this guidance enables&nbsp;<a href="https://blogs.technet.microsoft.com/ash/2016/03/02/windows-10-device-guard-and-credential-guard-demystified/">Virtual Secure Mode and Credential Guard</a>&nbsp;on supported devices. Biometrics can be used if these features are installed and enabled. Biometrics are enabled by default on Windows 10, so group policy should be used to disable biometrics if they are not being used. For more information see Microsoft’s paper on&nbsp;<a href="https://technet.microsoft.com/en-gb/itpro/windows/keep-secure/credential-guard">credential guard</a>.</p>
+<hr>
+<h2>System hardening</h2>
+<h2>&nbsp;</h2>
+<figure class="table" style="width:713px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Data Collection and Preview Builds &gt; Allow Telemetry</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>0 - Security</p>
+          <p>Note - If using Windows Update for Business this will need to be set to 1 (Basic).</p>
+          <p>See&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#enterpriseconsiderations">Windows 10 feature updates</a>&nbsp;for more details.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Error Reporting &gt; Disable Windows Error Reporting</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Computer Configuration &gt; Administrative Templates &gt; System &gt; Device Installation &gt; Device Installation Restrictions &gt; Prevent installation of devices that match these device IDs</p>
+          <p>&nbsp;</p>
+          <p><i>This policy prevents all Thunderbolt devices from being used and provides the strongest protection from DMA attacks. If organisations require the use of Thunderbolt devices, they should first check if the host supports&nbsp;</i><a href="https://docs.microsoft.com/en-us/windows/security/information-protection/kernel-dma-protection-for-thunderbolt"><i>Kernel DMA protection</i></a><i>&nbsp;and has it enabled. If it is not supported, follow the&nbsp;</i><a href="https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-countermeasures"><i>Microsoft guidance</i></a><i>&nbsp;to&nbsp;</i><a href="https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings#disable-new-dma-devices-when-this-computer-is-locked"><i>disable new DMA devices when the computer is locked</i></a>.</p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled: PCI\CC_0C0A</p>
+          <p>Also apply to matching devices that are already installed: Disabled</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Device Installation &gt; Device Installation Restrictions &gt; Prevent installation of drivers matching these device setup classes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>{d48179be-ec20-11d1-b6b8-00c04fa372a7}</p>
+          <p>{7ebefbc0-3200-11d2-b4c2-00a0C9697d07}</p>
+          <p>{c06ff265-ae09-48f0-812c-16753d7cba83}</p>
+          <p>{6bdd1fc1-810f-11d0-bec7-08002be2092f}</p>
+          <p>Also apply to matching devices that are already installed: Disabled</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Store &gt; Turn off Automatic Download and Install of updates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; App runtime &gt; Block launching Universal Windows apps with Windows Runtime API access from hosted content.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Network &gt; Network Isolation &gt; Proxy definitions are authoritative</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Network &gt; Network Isolation &gt; Subnet definitions are authoritative</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Portable Operating System &gt; Windows To Go Default Startup Options</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Preferences &gt; Windows Settings &gt; Registry &gt; Replace &gt; HKLM\Software\Microsoft\Windows\CurrentVersion\policies\system\</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">(DWORD) SafeModeBlockNonAdmins = 1</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Preferences &gt; Windows Settings &gt; Registry &gt; Replace &gt; HKLM\System\CurrentControlSet\Control\SafeBoot\Network</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>(REG_SZ)</p>
+          <p>Appid = Service</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Preferences &gt; Windows Settings &gt; Registry &gt; Replace &gt; HKLM\System\CurrentControlSet\Control\SafeBoot\Network</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>(REG_SZ)</p>
+          <p>Appid.sys = Driver</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Preferences &gt; Windows Settings &gt; Registry &gt; Replace &gt; HKLM\System\CurrentControlSet\Control\SafeBoot\Network</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>(REG_SZ)</p>
+          <p>discache.sys = Driver</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Local Policies &gt; Security Options &gt; Accounts: Block Microsoft accounts</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Users can't add or log on with Microsoft accounts</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies &gt; Certificate Path Validation Settings &gt; Stores &gt; Allow user trusted root Certificate Authorities (CAs) to be used to validate certificates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies &gt; Certificate Path Validation Settings &gt; Stores &gt; Allow users to trust peer trust certificates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies &gt; Certificate Path Validation Settings &gt; Stores &gt; Root CAs that client computers can trust</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Third-Party Root Certification Authorities and Enterprise Root Certification Authorities</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Policies &gt; Windows Settings &gt; Security Settings &gt; Public Key Policies &gt; Certificate Path Validation Settings &gt; Stores&nbsp;&nbsp;</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">CAs must also be compliant with user principal name (UPN) constraints = Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt;Network &gt; Network Connections &gt; Require domain users to elevate when setting a network's location</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Group Policy &gt; Phone-PC linking on this device</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; OS Policies &gt; Allow upload of User Activities</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Edge &gt; Allow a shared Books folder</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Edge &gt; Allow configuration updates for the Books Library</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Edge &gt; Allow extended telemetry for the Books tab</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; Turn off Windows Defender Antivirus</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Logon Options &gt; Sign-in last interactive user automatically after a system-initiated restart</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Disable new DMA devices when this computer is locked</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Group Policy &gt; Continue experiences on this device</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Kernel DMA Protection &gt; Enumeration policy for external devices incompatible with Kernel DMA Protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>Enumeration policy: Block all</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; OS Policies &gt; Allow Clipboard History</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; OS Policies &gt; Allow Clipboard synchronization across devices</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; OS Policies &gt; Allow publishing of User Activities</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; OS Policies &gt; Enabled Activity Feed</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Data Collection and Preview Builds &gt; Configure collection of browsing data for Microsoft 365 Analytics</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled</p>
+          <p>&nbsp;</p>
+          <p>Configure telemetry collection: Do not allow sending intranet or internet history</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Data Collection and Preview Builds &gt; Disable diagnostic data viewer.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Edge &gt; Allow Microsoft Edge to start and load the Start and New Tab page at Windows startup and each time Microsoft Edge is closed</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled</p>
+          <p>Configure tab preloading: Prevent tab preloading</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Edge &gt; Allow Sideloading of extensions</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Disabled</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>Group Policy can be used to limit user access to removable media such as USB mass storage devices, if required by organisational policy. The settings can be found in Computer Configuration &gt; Administrative Templates &gt; System &gt; Removable Storage Access.</p>
+<p>Group Policy can also be used to fully allow list all devices or device classes which are allowed to be installed. In this way you could allow, for example, basic peripherals such as mice, keyboards, monitors and network cards, but refuse the connection and installation of other devices. It is important to allow list enough classes of device to allow a successful boot on a variety of hardware.</p>
+<p>Details on how to enable allow listing of specific devices can be found on&nbsp;<a href="http://msdn.microsoft.com/en-us/library/bb530324.aspx">MSDN</a>.</p>
+<h3><strong>Windows Defender configuration</strong></h3>
+<p>If using Windows Defender, configure it to enable&nbsp;<a href="https://technet.microsoft.com/en-gb/itpro/windows/keep-secure/windows-defender-block-at-first-sight">cloud-backed protections</a>&nbsp;while limiting its ability to send sensitive data for analysis. Organisations should consider the&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security">NCSC Cloud Security Principles</a>&nbsp;when accessing cloud enabled solutions.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; MAPS &gt; Configure the ‘Block at First Sight’ feature</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; MAPS &gt; Join Microsoft MAPS</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled: Advanced</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; MAPS &gt; Send file samples when further analysis is required</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled: Send safe samples automatically</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; Real-time Protection &gt; Turn off real-time protection</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Disabled</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>&nbsp;</strong></p>
+<h3><strong>AppLocker configuration</strong></h3>
+<p>This example set of AppLocker rules implements the application allow listing principles outlined in&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#enterpriseconsiderations">Enterprise Considerations</a>&nbsp;below. It can be modified to allow the user to install and run apps from either an enterprise software center or the Microsoft Store.</p>
+<p>Scripting languages such as Visual Basic Scripting should be disabled unless they are specifically needed. The Australian Cyber Security Center&nbsp;<a href="http://www.asd.gov.au/publications/protect/securing-powershell.htm">describe how to secure PowerShell in the enterprise</a>&nbsp;if it is to be used.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Enforcement &gt; Executable Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Configured: True Enforce Rules</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt;&nbsp;Executable Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Allow Everyone: All files located in the&nbsp;<a href="https://support.microsoft.com/en-us/help/4052623/update-for-windows-defender-antimalware-platform">Windows Defender\Platform</a>&nbsp;folder -</p>
+          <p>&nbsp;</p>
+          <p>%OSDrive%\ProgramData\Microsoft\Windows Defender\Platform\*</p>
+          <p>&nbsp;</p>
+          <p>Allow Everyone: All files located in the Program Files folder - with exceptions</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %PROGRAMFILES%\Windows Kits\*\Debuggers\*</p>
+          <p>&nbsp;</p>
+          <p>Allow Everyone: All files located in the Windows folder - with exceptions</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\com\dmp\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\FxsTmp\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\Spool\drivers\color\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\Spool\PRINTERS\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\Spool\SERVERS\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\Tasks\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %SYSTEM32%\microsoft\crypto\rsa\machinekeys\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\tasks\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\temp\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\tracing\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\registration\crmlog\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\servicing\packages\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Path) %WINDIR%\servicing\sessions\*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\WMIC.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\cmstp.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\mshta.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\PresentationHost.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\windbg.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %SYSTEM32%\cipher.exe,*</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %Microsoft.NET%\Framework64\*\IEExec.exe</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %Microsoft.NET%\Framework64\*\InstallUtil.exe</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %Microsoft.NET%\Framework\*\regsvcs.exe</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %Microsoft.NET%\Framework\*\msbuild.exe</p>
+          <p>&nbsp;</p>
+          <p>Exception: (Publisher) %Microsoft.NET%\Framework\*\regasm.exe</p>
+          <p>&nbsp;</p>
+          <p>Allow Administrators: All files</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Enforcement &gt; Windows Installer Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Configured: True Enforce Rules</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Windows Installer Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Allow Administrators: All Windows Installer files</p>
+          <p>Allow Everyone: (PATH) %WINDIR%\Installer\*</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Enforcement &gt; Script Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Configured: True Enforce Rules</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Script Rules &gt; Enforce rules of this type</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Allow Everyone: All Scripts located in the Program Files folder</p>
+          <p>&nbsp;Allow Everyone: All Scripts located in the Windows folder - with exceptions</p>
+          <p>Exception: (PATH) %SYSTEM32%\com\dmp\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\FxsTmp\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\drivers\color\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\PRINTERS\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\SERVERS\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Tasks\*</p>
+          <p>Exception: (PATH) %WINDIR%\registration\crmlog\*</p>
+          <p>Exception: (PATH) %WINDIR%\tasks\*</p>
+          <p>Exception: (PATH) %WINDIR%\temp\*</p>
+          <p>Exception: (PATH) %WINDIR%\tracing\*</p>
+          <p>Exception: (PATH) %WINDIR%\servicing\packages\*</p>
+          <p>Exception: (PATH) %WINDIR%\servicing\sessions\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\microsoft\crypto\rsa\machinekeys\*</p>
+          <p>Allow Administrators: All scripts</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Enforcement &gt; DLL Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Configured: True Enforce Rules</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; DLL Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Allow Everyone: All DLLs located in the&nbsp;<a href="https://support.microsoft.com/en-us/help/4052623/update-for-windows-defender-antimalware-platform">Windows Defender\Platform</a>&nbsp;folder -</p>
+          <p>%OSDrive%\ProgramData\Microsoft\Windows Defender\Platform\*</p>
+          <p>Allow Everyone: All DLLs located in the Program Files folder</p>
+          <p>&nbsp;</p>
+          <p>Allow Everyone: All DLLs located in the Windows folder - with exceptions</p>
+          <p>Exception: (PATH) %SYSTEM32%\com\dmp\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\FxsTmp\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\drivers\color\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\PRINTERS\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Spool\SERVERS\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\Tasks\*</p>
+          <p>Exception: (PATH) %SYSTEM32%\microsoft\crypto\rsa\machinekeys\*</p>
+          <p>Exception: (PATH) %WINDIR%\registration\crmlog\*</p>
+          <p>Exception: (PATH) %WINDIR%\tasks\*</p>
+          <p>Exception: (PATH) %WINDIR%\temp\*</p>
+          <p>Exception: (PATH) %WINDIR%\tracing\*</p>
+          <p>Exception: (PATH) %WINDIR%\servicing\packages\*</p>
+          <p>Exception: (PATH) %WINDIR%\servicing\sessions\*</p>
+          <p>&nbsp;</p>
+          <p>Allow Administrators: All DLLs</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Enforcement &gt; Packaged app Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Configured: True Enforce Rules</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Application Control Policies &gt; AppLocker &gt; Packaged app rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Allow Everyone: All signed packaged apps</p>
+          <p>Exception: (Publisher) Microsoft.Getstarted</p>
+          <p>Exception: (Publisher) Microsoft.MicrosoftOfficeHub</p>
+          <p>Exception: (Publisher) Microsoft.SkypeApp</p>
+          <p>Exception: (Publisher) Microsoft.WindowsFeedback</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>&nbsp;</strong></p>
+<h3><strong>BitLocker configuration</strong></h3>
+<p>The following settings should be configured to use full volume encryption in TPM and PIN mode.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Operating System Drives &gt; Enforce drive encryption type on operating system drives</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled</p>
+          <p>Select the encryption type: Full encryption</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Operating System Drives &gt; Configure use of hardware-based encryption for operating system drives</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Operating System Drives &gt; Require additional authentication at startup</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Enabled</p>
+          <p>Allow BitLocker without a compatible TPM (Requires a password or startup key on a USB flash drive): Unticked</p>
+          <p>Configure TPM startup: Do not allow TPM</p>
+          <p>Configure TPM startup PIN: Allow startup PIN with TPM</p>
+          <p>Configure TPM startup key: Do not allow startup key with TPM</p>
+          <p>Configure TPM startup key and PIN: Allow startup key and PIN with TPM</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>The BitLocker PIN should be in line with your organisation’s password policy. The NCSC has published&nbsp;<a href="https://www.ncsc.gov.uk/collection/passwords">password guidance</a>&nbsp;to inform this. Deployments that include fixed-location workstations may prefer to use&nbsp;<a href="https://technet.microsoft.com/en-us/library/jj574173.aspx">BitLocker Network Unlock</a>&nbsp;as an alternative to a PIN.</p>
+<p>Users can change the PIN after they have logged on to the device for the first time. A number of group policies can be used to configure the PIN requirements including:</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;"><strong>Group Policy &gt; Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Operating System Drives</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">Allow enhanced PINs for startup</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px 30px;">Configure minimum PIN length for startup</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 0px 30px;">Configure use of passwords for operating system drives</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h3><strong>Windows Defender Exploit Guard configuration</strong></h3>
+<p>The majority of Exploit Guard configuration is performed using an XML file, the location of which is specified through Group Policy. The XML file can be generated using the&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml#create-and-export-a-configuration-file">Windows Defender Security Center application</a>, or&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml#convert-an-emet-configuration-file-to-an-exploit-protection-configuration-file">exported from EMET</a>.</p>
+<p>As Exploit Guard can cause compatibility issues with some applications, Microsoft recommends that Exploit Guard policies are thoroughly tested before they are enforced across an organisation. "Audit mode" can be used to support this.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; Windows Defender Exploit Guard &gt; Controlled folder access</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled</p>
+          <p>&nbsp;</p>
+          <p>Mode: Block</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Window Defender Exploit Guard&gt; Use a common set of exploit protection settings</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled.</p>
+          <p>&nbsp;</p>
+          <p>A&nbsp;<i>UNC path to an XML file containing any desired settings should be configure</i>d.</p>
+          <p><i>This setting is not configured in the NCSC Group Policy Object (GPO) settings&nbsp;</i><a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip"><i>zip file download</i></a><i>&nbsp;and must be configured separately as described in&nbsp;the Microsoft guidance.<sup>&nbsp;</sup></i></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">
+          <p>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Antivirus &gt; Windows Defender Exploit Guard &gt; Attack Surface Reduction &gt; Configure Attack Surface Reduction rules</p>
+          <p>&nbsp;</p>
+          <p><i>Details on these policies can be found at&nbsp;</i><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard"><i>https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard</i></a></p>
+          <p>&nbsp;</p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>d4f940ab-401b-4efc-aadc-ad5f3c50688a: 1</p>
+          <p>&nbsp;</p>
+          <p>9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2: 1</p>
+          <p>&nbsp;</p>
+          <p>3b576869-a4ec-4529-8536-b80a7769e899: 1</p>
+          <p>&nbsp;</p>
+          <p>5beb7efe-fd9a-4556-801d-275e5ffc04cc: 1</p>
+          <p>&nbsp;</p>
+          <p>92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B: 1</p>
+          <p>&nbsp;</p>
+          <p>b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4: 1</p>
+          <p>&nbsp;</p>
+          <p>75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84: 1</p>
+          <p>&nbsp;</p>
+          <p>d3e037e1-3eb8-44c8-a917-57927947596d: 1</p>
+          <p>&nbsp;</p>
+          <p>be9ba2d9-53ea-4cdc-84e5-9b1eeee46550: 1</p>
+          <p>&nbsp;</p>
+          <p>26190899-1602-49e8-8b27-eb1d0a1ce869: 1</p>
+          <p>&nbsp;</p>
+          <p>7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c: 1</p>
+          <p>&nbsp;</p>
+          <p>d1e49aac-8f56-4280-b9ba-993a6d77406c: 2</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>If files stored outside of user and system directories should be protected with Controlled Folder access, these should be added to Exploit Guard with&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/customize-controlled-folders-exploit-guard">Group Policy</a>. A table of the various attack surface reduction rules, and what restrictions they impose, can be found&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/enable-attack-surface-reduction">here</a>.</p>
+<h3><strong>Windows Defender Device Guard and Application Control configuration</strong></h3>
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control#how-windows-defender-device-guard-features-help-protect-against-threats">Windows Defender Device Guard</a>&nbsp;includes&nbsp;<a href="https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control">Windows Defender Application Control</a>&nbsp;(WDAC), which allows administrators to permit only digitally signed applications to run on user devices. Where unsigned line of business applications are also used, administrators can permit these using a signed catalog file containing details of the trusted unsigned applications. It should however be noted that Windows Defender Device Guard rules will apply to all users, so it is not possible to allow administrators to run some applications that users cannot. Consequently,&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control#windows-defender-device-guard-with-applocker">Microsoft recommends that administrators deploy WDAC alongside AppLocker policies</a>.</p>
+<p>Organisations should create their own WDAC policies using gold builds of each device type,&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/device-guard-deployment-guide">and thoroughly test them prior to deployment</a>. Guidance on how to achieve this can be found on the&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/steps-to-deploy-windows-defender-application-control">Microsoft website</a>. The rules should include the exclusion list given by Microsoft in their WDAC guidance.</p>
+<p>Organisations should also enable Virtualisation Based Security to guard against malicious software being loaded into the Windows kernel. This can be achieved with the following Group Policy settings:</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Administrative Templates &gt; System &gt; Device Guard &gt; Turn On Virtualisation Based Security</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Enabled:</p>
+          <p>Platform Security: Secure Boot and DMA Protection</p>
+          <p>Virtualization Based Protection of Code Integrity: Enabled with UEFI Lock</p>
+          <p>Require UEFI Memory Attributes Table: Enabled*</p>
+          <p>Credential Guard Configuration:&nbsp; Enabled with UEFI Lock</p>
+          <p>Secure Launch Configuration: Enabled</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>*Please note - setting this value to Enabled will require UEFI 2.6+. See&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/identity-protection/credential-guard/credential-guard-requirements#2017-additional-security-qualifications-starting-with-windows-10-version-1703">this page from&nbsp;Microsoft</a>&nbsp;for more details.&nbsp;Microsoft have also&nbsp;<a href="https://www.microsoft.com/en-us/download/details.aspx?id=53337">provided tools to check whether</a>&nbsp;devices are ready for deploying Device Guard and Credential Guard.&nbsp;</p>
+<h3><strong>Windows Defender Application Guard configuration</strong></h3>
+<p><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview">Windows Defender Application Guard</a>&nbsp;uses Microsoft's Hyper-V virtualisation technology to load untrusted websites.</p>
+<p>We recommend that this is configured in Enterprise Mode, with the following Group Policy settings:</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Turn on Windows Defender Application Guard in Enterprise Mode</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow data persistence for Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow auditing events in Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Prevent enterprise websites from loading non-enterprise content</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Configure Windows Defender Application Guard clipboard settings</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>Enable clipboard operation from an isolated session to the host. Clipboard content options: 3 (Allow text and image copying)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Configure Windows Defender Application Guard print settings</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>Allowed Print types in Application Guard: 11 (Allow network, PDF and XPS printing)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow files to download and save to the host operating system from Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Configure additional sources for untrusted files in Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>Removable media: Enabled</p>
+          <p>Network shares: Enabled</p>
+          <p>Files with Mark of the Web: Enabled</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow Windows Defender Application Guard to use Root Certificate Authorities from the user’s device</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow users to trust files that open in Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p>0. Do not allow users to manually trust files</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Defender Application Guard &gt; Allow camera and microphone access in Windows Defender Application Guard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration&nbsp; &gt; Administrative Templates &gt; Network &gt; Network Isolation &gt; Enterprise resource domains hosted in the cloud</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Enabled:</p>
+          <p><i>Any trusted websites that should not load in Application Guard. To allow any subdomain of a given domain, the domain name can be preceded by a dot - e.g. .</i><a href="http://ncsc.gov.uk/"><i>ncsc.gov.uk</i></a><i>&nbsp;would allow any subdomain of&nbsp;</i><a href="http://ncsc.gov.uk/"><i>ncsc.gov.uk</i></a><i>&nbsp;to be accessed in Edge without Application Guard.</i></p>
+          <p><i>This setting is not configured in the NCSC Group Policy Object (GPO) settings&nbsp;</i><a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip"><i>zip file download</i></a><i>&nbsp;and must be configured separately as described in the&nbsp;</i><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard"><i>Microsoft guidance</i></a><i>.</i></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration&nbsp; &gt; Administrative Templates &gt; Network &gt; Network Isolation &gt; Private network ranges for apps</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Enabled:</p>
+          <p>Any IP address ranges that are used for internal applications. These can be specified in CIDR notation.</p>
+          <p><i>This setting is not configured in the NCSC Group Policy Object (GPO) settings&nbsp;</i><a href="https://s3.eu-west-2.amazonaws.com/eud-security-guidance/NCSC+MSFT+1809+GPOs.zip"><i>zip file download</i></a><i>&nbsp;and must be configured separately as described in the&nbsp;</i><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard"><i>Microsoft guidance</i></a><i>.</i></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h3><strong>Windows Defender Firewall configuration</strong></h3>
+<p>This firewall configuration is used to enforce the use of an always-on VPN.</p>
+<p>You may also need to add rules to allow your VPN client to make outbound connections when the device is in either a public or private profile. Sample rules are provided with the NCSC configuration guide.</p>
+<p>If you need to add firewall exceptions to allow for remote management, they should only be applied to the Domain profile.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Domain Profile</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Firewall State : On (Recommended)</p>
+          <p>Inbound connections : Block (default)</p>
+          <p>Outbound connections : Allow (default)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Domain Profile &gt; Settings &gt; Customize &gt; Apply local firewall rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Private Profile</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Firewall State : On (Recommended)</p>
+          <p>Inbound connections : Block (default)</p>
+          <p>Outbound connections : Block</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Private Profile &gt; Settings &gt; Customize &gt; Apply local firewall rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Public Profile</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Firewall State : On (Recommended)</p>
+          <p>Inbound connections : Block (default)</p>
+          <p>Outbound connections : Block</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Windows Firewall Properties &gt; Public Profile &gt; Settings &gt; Customize &gt; Apply local firewall rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">No</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Windows Firewall with Advanced Security &gt; Outbound Rules</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Enabled</p>
+          <p>Allow outbound DHCP</p>
+          <p>General &gt; Action: Allow the connection</p>
+          <p>Programs and Services &gt; Programs &gt; This Program &gt; %SystemRoot%\system32\svchost.exe</p>
+          <p>Allow Programs and Services &gt; Service &gt; Apply to this service &gt; DHCP Client (Dhcp)</p>
+          <p>Advanced &gt; Profiles: Private, Public</p>
+          <p>Protocols and Ports &gt; Local port: UDP 68</p>
+          <p>Protocols and Ports &gt; Remote port: UDP 67</p>
+          <p>Allow outbound DNS</p>
+          <p>General &gt; Action: Allow the connection</p>
+          <p>Programs and Services &gt; Programs &gt; This Program &gt; %SystemRoot%\system32\svchost.exe</p>
+          <p>Allow Programs and Services &gt; Service &gt; Apply to this service &gt; DNS Client (Dnscache)</p>
+          <p>Advanced &gt; Profiles: Private, Public</p>
+          <p>Protocols and Ports &gt; Remote port: TCP 53, UDP 53</p>
+          <p>Allow outbound Kerberos</p>
+          <p>General &gt; Action: Allow the connection</p>
+          <p>Programs and Services &gt; Programs &gt; This Program &gt; %SystemRoot%\system32\lsass.exe</p>
+          <p>Advanced &gt; Profiles: Private, Public</p>
+          <p>Protocols and Ports &gt; Remote port: All TCP and UDP ports</p>
+          <p>Allow outbound LDAP</p>
+          <p>General &gt; Action: Allow the connection</p>
+          <p>Programs and Services &gt; Programs &gt; This Program &gt; All programs that meet the specified conditions</p>
+          <p>Advanced &gt; Profiles: Private, Public</p>
+          <p>Protocols and Ports &gt; Remote port: TCP 389, UDP 389</p>
+          <p>Allow outbound NCSI Probe</p>
+          <p>General &gt; Action: Allow the connection</p>
+          <p>Programs and Services &gt; Programs &gt; This Program &gt; %SystemRoot%\system32\svchost.exe</p>
+          <p>Allow Programs and Services &gt; Service &gt; Apply to this service &gt; Network Location Awareness (NlaSvc)</p>
+          <p>Advanced &gt; Profiles: Private, Public</p>
+          <p>Protocols and Ports &gt; Remote port: TCP 80</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>&nbsp;</h3>
+<h3><strong>VPN configuration</strong></h3>
+<p>You should deploy VPN infrastructure configured either to support the PRIME or Foundation profiles as detailed in the&nbsp;<a href="https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data">NCSC's IPsec Guidance</a>&nbsp;and following our&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks">platform independent guidance on VPNs</a>.&nbsp;</p>
+<p>Customisation guides are available for public sector organisations for the Windows 10 Built-In VPN Client, please <a href="https://www.ncsc.gov.uk/section/about-this-website/contact-us">contact NCSC Enquiries</a>. This download also includes the NCSC Captive Portal Helper app for always-on VPNs. DirectAccess has now been formally deprecated by Microsoft, so this should not be used.</p>
+<p>Since version 1709, Windows 10's built-in VPN client has supported&nbsp;<a href="https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config">Device Tunnel</a>&nbsp;mode.&nbsp;This allows the computer to establish a tunnel prior to users logging in, so that policy or software updates can be obtained at startup. However, an always-on user VPN will still need to be configured to allow users to access corporate resources.</p>
+<p>If you are using a third-party VPN client, you should prefer one that has been built on top of the Windows 10 UWP VPN plug-in platform. These will likely integrate better into the platform and be more reliable, as the Windows platform is regularly updated.</p>
+<hr>
+<h2>Device firmware</h2>
+<p>Devices should meet the minimum required Unified Extensible Firmware Interface (UEFI) specification 2.3.1c, boot in UEFI mode, and enable secure boot by default. UEFI legacy fall back options and direct memory access (DMA) ports should also be disabled during boot. Devices certified under the&nbsp;<a href="https://docs.microsoft.com/en-us/windows-hardware/design/compatibility/whcp-specifications-policies">Windows 10 Hardware Compatibility</a>&nbsp;program implement these features by default.</p>
+<p>You should also ensure that purchased devices implement signed manufacturer firmware updates by default. This should be checked with the manufacturer as part of your procurement process.</p>
+<h3><strong>Management of UEFI firmware settings</strong></h3>
+<p>There are several ways in which you can manage the firmware settings of your devices:</p>
+<ul>
+  <li>Manage them locally on the device using the pre-boot UEFI console.</li>
+  <li>Use OEM-provided tools for management of firmware settings locally from within the running OS. Examples include&nbsp;<a href="http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools">HP BIOS Configuration Utility</a>&nbsp;and&nbsp;<a href="http://en.community.dell.com/techcenter/enterprise-client/w/wiki/7532.dell-command-configure">Dell Command Configure</a>.</li>
+  <li>Use these same tools in conjunction with device management infrastructure such as&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/index">System Center Configuration Manager (SCCM)</a>&nbsp;to remotely manage devices’ firmware settings.</li>
+  <li>Manage them remotely using enterprise management features provided by the OEM that are integrated specifically in to device management infrastructure such as&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/index">System Center Configuration Manager (SCCM)</a>. An example is&nbsp;<a href="http://www8.hp.com/us/en/ads/clientmanagement/overview.html#manageability-tools">HP Manageability Integration Kit (MIK)</a>.</li>
+</ul>
+<p>One of these approaches should be taken, and used to configure the settings below.</p>
+<h3><strong>Recommended settings</strong></h3>
+<p>The following UEFI settings should be applied. Some of these settings are hardware dependent and may not be available on all platforms.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Setting</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Administrator/Setup Password + UEFI Lockout</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">A UEFI administrator or setup password should be set and UEFI console lockout enabled to prevent unauthorised changes to UEFI settings.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Boot Mode</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">UEFI</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Secure Boot</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Legacy Boot Options and Legacy Option ROMs</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Manufacturer Signed Firmware Updates</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Trusted Platform Module (TPM)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">UEFI Firmware Rollback</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Boot Options</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Restricted to only those that are required. Priority should be given to internal storage.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Boot Order</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Locked</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">No Execute (NX)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Virtualisation Extensions</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Input/Output Memory Management Unit (IOMMU)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Thunderbolt</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Ports should be disabled if not required&nbsp;</p>
+          <p>If required</p>
+          <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disable Thunderbolt boot support if not required.</p>
+          <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disable Thunderbolt pre-boot module support.</p>
+          <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set a minimum Thunderbolt Security Level of User Authorisation.&nbsp;</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3>&nbsp;</h3>
+<h3><strong>Automating Updates</strong></h3>
+<p>Device firmware updates should be automated where possible. The NCSC recommends one of the following techniques for automating system firmware updates:</p>
+<ul>
+  <li>Windows 10 can support firmware updates via&nbsp;<a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/system-and-device-firmware-updates-via-a-firmware-driver-package">Windows Update</a>. This simplifies the automation of firmware updates. You should check with your OEM that they support this update mechanism, as it is typically only used with Microsoft’s own hardware.</li>
+  <li>Some OEMs, including&nbsp;<a href="http://en.community.dell.com/techcenter/enterprise-client/w/wiki/7536.dell-command-update-catalog">Dell</a>&nbsp;and&nbsp;<a href="http://www8.hp.com/us/en/ads/clientmanagement/overview.html#microsoft">HP</a>, distribute firmware updates as third-party Windows Server Update Services (WSUS) update package catalogues.&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/index">System Center Configuration Manager (SCCM)</a>&nbsp;and&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/sum/tools/updates-publisher">System Center Update Publisher (SCUP)</a>&nbsp;can be used to import these catalogues. The firmware updates can then be published directly in to SCCM and deployed as a&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/sum/understand/software-updates-introduction">software update</a>.</li>
+</ul>
+<p><strong>Note:</strong>&nbsp;In some cases, additional client agent software may be required to support the deployment. This is dependent on the OEM - their documentation should be consulted in addition to the steps described above.</p>
+<ul>
+  <li>Firmware update utilities that are available from the OEM as Microsoft Installer Packages (.msi) can be deployed directly as a required application through an Enterprise Management solution such as&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/apps/understand/introduction-to-application-management">System Center Configuration Manager (SCCM)</a>.</li>
+  <li><a href="https://docs.microsoft.com/en-us/sccm/osd/deploy-use/create-a-custom-task-sequence">Custom Task Sequences</a>&nbsp;in&nbsp;<a href="https://docs.microsoft.com/en-us/sccm/index">System Center Configuration Manager (SCCM)</a>&nbsp;can also provide a method to deploy firmware updates. They provide a flexible deployment option if built-in features in SCCM - such as application installation and software updates - cannot be used to deploy the firmware update. A typical task sequence would comprise steps to target the firmware update, perform a silent installation of the firmware update utility, an option to suspend BitLocker and a forced device restart.</li>
+</ul>
+<p>Note that there can be significant variation in the command line flags that are required to perform a silent installation for a specific OEM device and corresponding system firmware update utility. You should consult OEM documentation when designing the custom task sequence.</p>
+<ul>
+  <li>OEMs in many cases also provide their own client solutions that include management of firmware updates. You should refer to your OEM to determine if these solutions meet your needs.</li>
+</ul>
+<h3><strong>Firmware Integrity and Recovery</strong></h3>
+<p>Some OEM devices provide support for automated firmware recovery if an update fails or the firmware becomes corrupted. These features should be enabled if supported.</p>
+<p>In addition, some OEMs provide enhanced hardware-backed protection for the integrity of firmware, which can detect unauthorised changes to the firmware and alert or automatically recover from these changes. Devices with these features (e.g.&nbsp;<a href="https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/security-technologies-4th-gen-core-retail-paper.pdf">Intel Boot Guard</a>&nbsp;or&nbsp;<a href="http://h10032.www1.hp.com/ctg/Manual/c05163901?_sm_au_=iVV41QpLvNQFRv0M">HP Sure Start</a>) should be preferred, if available.</p>
+<hr>
+<h2>Enterprise considerations</h2>
+<h2>&nbsp;</h2>
+<p>The following points are in addition to the&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/common-questions">common enterprise considerations</a>&nbsp;and contain specific issues for Windows 10 deployments.</p>
+<h3><strong>Windows 10 Enterprise feature updates</strong></h3>
+<p>The Windows 10&nbsp;<a href="https://blogs.technet.microsoft.com/windowsitpro/2017/07/27/waas-simplified-and-aligned/">Semi-Annual Channel</a>&nbsp;receives&nbsp;<a href="https://support.microsoft.com/en-gb/help/4462896/updates-to-servicing-and-support-for-windows-10">feature updates twice-per-year</a>. All currently supported feature updates will be supported for 30 months from their original release date. All future feature updates with a targeted release month of September (starting with 1809) will be supported for 30 months from their release date. All future feature updates with a targeted release month of March (starting with 1903) will only be supported for 18 months from their release date.</p>
+<p>The NCSC recommends organisations deploy feature updates immediately to a targeted deployment to validate that the apps, devices and infrastructure used work well with the new release. Once validation is complete, begin deploying broadly. You can defer feature updates for up to 365 days from release. To help with this approach organisations using Azure Active Directory may deploy&nbsp;<i>Insider</i>&nbsp;<i>builds</i>&nbsp;to a select group of devices via the&nbsp;<a href="https://insider.windows.com/en-us/for-business/">Windows Insider Program for Business</a>.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;"><strong>Group Policy</strong></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><strong>Value(s)</strong></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration&nbsp; &gt; Administrative Templates &gt; Windows Components &gt; Windows Update &gt; Remove access to “Pause updates” feature</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Enabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Computer Configuration&nbsp; &gt; Administrative Templates &gt; Windows Components&gt; Windows Update &gt; Windows Update for Business &gt; Manage preview builds</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Disabled</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Computer Configuration&nbsp; &gt; Administrative Templates &gt; Windows Components &gt; Windows Update &gt; Windows Update for Business &gt; Select when Preview Builds and Feature Updates are received</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Select the Windows readiness level for the updates you want to receive: Semi-Annual Channel</p>
+          <p>After a Preview Build or Feature Update is released, defer receiving it for this many days: 0</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><strong>Monthly Quality Updates</strong>, which include critical security and driver updates should be downloaded and installed automatically.</p>
+<p>If your organisation is using Windows Update for Business you will need to set the Telemetry level from 0 (Security) to 1 (Basic) for update policies to be honoured, as no Windows update information is gathered when set to 0. If you are using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM) you will not be affected. For more information on Windows telemetry settings see&nbsp;<a href="https://docs.microsoft.com/en-us/windows/configuration/configure-windows-telemetry-in-your-organization">this document from Microsoft</a>&nbsp;and for more information on configuring Windows Update for Business see&nbsp;<a href="https://docs.microsoft.com/en-us/windows/deployment/update/waas-configure-wufb">here</a>.</p>
+<p>When choosing third party products that alter the behaviour of the platform (such as VPN clients, anti-malware tools, management agents and auditing tools), it is important to realise that these may also need to be updated to remain compatible with newer versions of Windows 10. Products are more likely to be supported on future versions of Windows 10 if they use legitimate API’s such as the Anti-Malware Scan Interface and the Windows Runtime API for VPN’s.</p>
+<p>This guidance may be updated in the future to cover significant new features in Windows 10 if they can improve the usability of the platform, while best addressing each of the security recommendations. The Windows 10 Long-Term Servicing Channel is designed for devices that never change, such as medical equipment and components in industrial control systems. It should not be deployed on End User Devices that are used to browse the web or use enterprise productivity software.</p>
+<h3><strong>Device selection</strong></h3>
+<p>Windows 10 can run on a wide variety of device types with a wide variety of internal hardware. Many of the newer Windows security mitigations require the device to have specific hardware components and for them to be turned on.</p>
+<p>Even if you are not deploying these mitigations at the moment, you should seek to buy a Windows Hardware Compatibility Program device that supports TPM 2.0, UEFI v2.3.1 or higher and has a processor with virtualisation extensions.</p>
+<p>The NCSC recommends devices that support InstantGo. Devices that are InstantGo certified will not have ports that allow DMA access and will have TPM 2.0 or later. InstantGo will maintain network connectivity when your screen is off in standby mode and will automatically have device encryption enabled.</p>
+<p>If you are using Windows Hello with biometric authentication, you will need to buy special hardware, see&nbsp;<a href="https://blogs.windows.com/windowsexperience/2015/03/17/making-windows-10-more-personal-and-more-secure-with-windows-hello/#RCyAP8aetlQZ8WR6.97">Microsoft's blog</a>&nbsp;for more information.</p>
+<p>Signature Edition devices can be used if the required hardware is available. If using these devices, you may not need to reinstall Windows.</p>
+<h3><strong>Application allow listing</strong></h3>
+<p>When configuring additional application allow lists for a Windows device, it is important that the following conditions are considered:</p>
+<ul>
+  <li>Users should&nbsp;<i>not</i>&nbsp;be allowed to run programs from areas where they are permitted to write files.</li>
+  <li>Care should be taken to ensure that application updates do not conflict with allow listing rules.</li>
+  <li>Applications should be reviewed before being approved enterprise-wide, to ensure they don’t undermine application allow listing. This is especially important for scripting languages which have their own execution environment.</li>
+</ul>
+<p>The suggested AppLocker configuration in this guidance will implement those rules if using software that adheres to the requirements of Microsoft’s&nbsp;<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/hh749939.aspx">Desktop App Certification Program</a>. If the rules do need to be customised, follow&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/applocker/applocker-policies-design-guide">Microsoft's Design Guide</a>&nbsp;to minimise the impact to enterprise operations.</p>
+<h3><strong>Universal applications</strong></h3>
+<p>The configuration given above prevents users from accessing the Windows Store to install applications, but an organisation can still host its own store to distribute in-house applications to their employees, if required. This can be implemented either using the Microsoft Store for Business in the cloud, or via a Company Store app deployed to devices.</p>
+<p>If the Windows Store is enabled, users should explicitly use their corporate Microsoft ID to sign into the Store app rather than associating their work device with their personal Microsoft ID. AppLocker can be configured to only allow installation of apps that are on an enterprise-configured “allow” list. The Windows Store can be configured to automatically update any installed Universal applications. The same mechanism can also be used to remove Universal Apps that come with Windows – ones that the user is not allowed to run will be disallowed and removed from the Start menu.</p>
+<h3><strong>Desktop applications</strong></h3>
+<p>Enterprise software that handles data downloaded from the Internet needs additional protections.</p>
+<p>Application sandboxing and content rendering controls should be considered essential. For applications such as Microsoft Office, or Adobe Acrobat, the use of their enterprise security controls should be considered. These security controls aim to help protect the end user when processing these potentially malicious files.</p>
+<p>As well as providing a trusted platform to run enterprise web apps, modern web browsers have to process a wide variety of rich content from the Internet – some of which must be considered untrustworthy. You should consider the security controls available when choosing a web browser. If choosing a Microsoft browser, Edge should be preferred, with Internet Explorer only being used for specific website compatibility. If feasible, remove Internet Explorer from the installed image.</p>
+<p>The update mechanisms built into Windows can be used to deploy and update Microsoft products but cannot keep third party products up to date. Where available, the auto-update mechanism built into third party products should be use to install updates. Where auto-update is not available, it will be necessary to deploy updates using an enterprise system management service.</p>
+<h3><strong>Cloud integration</strong></h3>
+<p>Windows 10 devices do not need to be associated with a Microsoft ID to operate as required within an enterprise. Users should not enable personal, non-enterprise Microsoft ID (Live ID) accounts on the device, as this may allow data to leak through Microsoft cloud services backup and application storage.</p>
+<p>However, organisations wishing to use cloud based services such as OneDrive can use the&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security">NCSC Cloud Security Guidance</a>&nbsp;to help them understand both the benefits and risks of using online services.</p>
