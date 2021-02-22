@@ -1,0 +1,86 @@
+<!--
+title: 1. Data in transit protection
+description: User data transiting networks should be adequately protected against tampering and eavesdropping.
+published: true
+date: 2021-02-22T01:31:52.677Z
+tags: silver, silver training, cloud-security-principles
+editor: ckeditor
+dateCreated: 2021-02-22T01:31:52.677Z
+-->
+
+<h1>1. Data in transit protection</h1>
+<p>User data transiting networks should be adequately protected against tampering and eavesdropping.</p>
+<p><i>This should be achieved through a combination of:</i></p>
+<ul>
+  <li><strong>network protection</strong>&nbsp;- denying your attacker the ability to intercept data</li>
+  <li><strong>encryption</strong>&nbsp;- denying your attacker the ability to read data</li>
+</ul>
+<h2>Goals</h2>
+<p><i>You should be sufficiently confident that:</i></p>
+<ul>
+  <li>Data in transit is protected between your end user device(s) and the service</li>
+  <li>Data in transit is protected internally within the service</li>
+  <li>Data in transit is protected between the service and other services (e.g. where APIs are exposed)</li>
+</ul>
+<h2>Implementation approaches - Data in transit protection</h2>
+<p>Additional notes:</p>
+<p>Points of attack to compromise data in transit, an attacker would need access to infrastructure over which the data transits. This could take the form of physical access, or logical access if the attacker has compromised software components within the service. It’s more likely that attackers would access infrastructure between the user and the service, as opposed to infrastructure within the service. However, the impact of an attacker accessing communications internal to the service would likely be significantly greater. Additional notes – TLS in addition to network layer protections across internal or community networks, you should use TLS protection for the following scenarios:</p>
+<ul>
+  <li>if additional confidentiality of data within your organisation or community is required</li>
+  <li>to support end user authentication and access control within applications</li>
+</ul>
+<p>Joiners and Leavers:<br><br>On-boarding and off-boarding of users and workloads may involve the transfer of bulk data into or out of the service. In this scenario, you should consider the protection of data during transit using one of the approaches described above. If storage media is being used to transit data, this should be protected in line with&nbsp;<a href="https://www.ncsc.gov.uk/guidance/cloud-security-principle-2-asset-protection-and-resilience">Principle 2: Asset protection and resilience</a>.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Private WAN service</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">You access the service via a private WAN circuits offered by a telecommunications provider.Privacy between different customers of private WAN services is typically by virtue of the routing protocols used, such as MPLS.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px;">
+          <p>Using private circuits will make it more difficult for an attacker to gain access to communications. These connections do not normally provide cryptographic protectionbut are likely to be hard to intercept and process, which may be adequate for your needs.</p>
+          <p>Cryptographic protections, should you choose to deploy them, would provide greater confidence in the protection of the confidentiality and integrity of your communications.</p>
+          <p>Public sector organisations can procure circuits which connect to the Public Services Network (PSN). This WAN, and the providers who give access to it, have had their services assessed against the CESG Assured Service (Telecoms) scheme.</p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Legacy SSL and TLS</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service is accessed using SSL or legacy versions of TLS (including TLS versions below 1.2).</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px;">Use of SSL or TLS versions earlier than version 1.2 is not recommended. There are known vulnerabilities in protocols which could be manipulated by an attacker to access your data.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">TLS (Version 1.2 or above)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Use of TLS, configured to use cipher suites and certificate sizes recommended in our&nbsp;<a href="https://www.ncsc.gov.uk/guidance/tls-external-facing-services">TLS guidance</a>.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px;">The lack of formal assurance in TLS implementations means there may be implementation weaknesses. Using recent, supported and fully patched versions of TLS implementations from reputable sources will help to manage this risk.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">IPsec or TLS VPN gateway</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service exposes a TLS or IPsec VPN Gateway which can be configured to support a strong cryptographic profile.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px;">
+          <p>See our advice on&nbsp;<a href="https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data">IPsec</a>&nbsp;and&nbsp;<a href="https://www.ncsc.gov.uk/guidance/tls-external-facing-services">TLS</a>&nbsp;configuration to ascertain whether the gateway supports a good profile.</p>
+          <p>Also, a list of VPN products which have been assessed against our Commercial Product Assurance scheme is available here.</p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Bonded fibre optic connections</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Bonded fibre optic connections between physically protected locations can be used to provide private connections between data centres.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px;">
+          <p>Independent validation of the service provider’s implementation of their bonded fibre optic connections by a recognised expert is advisable.</p>
+          <p>Note that the security of these links is dependent on effective monitoring - this should be one of the considerations for any&nbsp;<a href="https://www.ncsc.gov.uk/guidance/how-confident-can-you-be-cloud-security">independent validation</a>&nbsp;of the security provided.</p>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
