@@ -2,8 +2,8 @@
 title: Small Business Guide: Cyber Security in 10 Steps
 description: 10 pieces of technical advice you should consider putting in place
 published: true
-date: 2021-02-21T16:21:41.760Z
-tags: security operations, bronze, bronze-training, ncsc, 10-steps
+date: 2021-02-22T02:12:01.418Z
+tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:16:24.127Z
 ---
