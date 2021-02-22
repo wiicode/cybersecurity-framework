@@ -2,7 +2,7 @@
 title: -bronze-training-home
 description: 
 published: true
-date: 2021-02-22T02:09:17.787Z
+date: 2021-02-22T02:13:33.096Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -26,6 +26,10 @@ This section is a starting point to majority of our small business cyber securit
 The CIA triad is a model designed to guide policies for information security within an organization. **Confidentiality** is protecting information from unauthorized access and disclosure. **Integrity** is protecting information from unauthorized modification. **Availability** is preventing disruption in how an organization accesses the data.
 
 ## Small Business Information Security Guides
+
+> BCSF Guides provide management, technical, and oversight guidence.  These two sections contain extensive information on creating your own security program. 
+{.is-success}
+
 
 {.grid-list}
 - [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
