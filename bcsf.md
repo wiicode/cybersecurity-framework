@@ -2,39 +2,31 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T02:06:15.710Z
+date: 2021-02-22T21:53:52.596Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
 ---
 
-# Cyber & safety introduction
-> An introduction to cyber-related risks to safety, how to manage them, and resources related to cyber and safety provided by the BCSF Team.  
-{.is-info}
+# Bento Cyber Security Framework
+> BCSF defines the best practices an organization follows to manage its cybersecurity risk for small organizations engaged in professional services. It is primarily developed from managed information technology service practices for legal, financial, retail, industrial, veterinary, and professional service companies.  
+{.is-success}
 
 ## General introduction
-Increasingly, computerized systems are performing vital safety-related functions designed to protect human lives. For example, such systems are controlling the safe operation of industrial sites processing and storing dangerous chemicals, and play a key role in the safety of aviation, rail transportation etc.
+> **BENTO:GUIDES** is the publishing platform for accessing **Bento Cyber Security Framework** and all supporting materials.  
+{.is-info}
 
-Computerized safety systems could, potentially, be adversely affected by a cyber incident – either as a side-effect of a compromise not intended by the perpetrators to affect safety, or as a result of highly targeted cyber attack, specifically aimed at reducing the effectiveness of safety mechanisms. This is not just a theoretical possibility. There has been at least one well-documented example of a safety-related targeted cyber incident.
+Bento Cyber Security Framework is an applied framework for small business cyber security. It is developed to help companies protect data, retain employees, and build trust with customers and vendors. 
 
-## Managing cyber-related risks to safety
-The successful management of cyber-related risks to safety is based on the same fundamental principles that underpin effective cyber risk management more generally. However, an integrated approach is needed which combines the established good practices of both the security and safety communities. There are recognized challenges associated with achieving such an integrated approach, and BCSF is actively working with others to develop additional guidance. 
+BCSF recognizes the diversity among organizations. Each businesses will have different needs and requirements based on a number of factors. BCSF is meant to apply to any organization looking to build a cybersecurity program. 
 
-## Resources related to cyber and safety provided by the BCSF
-The BCSF has developed some resources that organizations managing cyber-related risks to public safety are likely to find useful. These are:
+BCSF draws extensively on `CIS, NIST SP800-17, NIST 800-53, and ISO/IEC 27001` for developing BCSF and associated guidance. 
 
-- a set of cyber security and resilience principles for managing cyber-related risks to safety
-- a collection of supporting guidance
-- a Bento Cyber Assessment Framework (BCAF) incorporating indicators of good practice
+As an applied framework, BCSF provides the general structure and specific guidance through supporting content. BCSF is designed to meet three key criteria:
+1. **Adoptable**:  developed with business owners in mind, the framework is written for boards, owners, and managers.  No technical knowledge necessary to understand the principles. 
+2. **Actionable**: extended by **BENTO:GUIDES**, BCSF allows companies to easily access the framework and supporting materials for implmentation.
+3. **Affordable**: cyber security is an investment of time, resources, and energy.  BCSF focuses on resiliency mechanisms that are high value and can be efficiently implemented at the small business level.
 
-Collectively, these resources are known as the BCSF BCAF collection and can be found on the website by following the link below. Please note that the use of BCAF collection extends beyond organizations managing cyber-related risks to public safety. For that reason, the terminology of the BCAF collection is intended to be quite general and cover more than cyber-related safety risks. Specifically, in the BCAF collection:
-
-- ‘essential function’ may refer to maintenance of public safety or to another important activity carried out by an organization.
-- ‘organization responsible for an essential function’ may refer to an organization responsible for the maintenance of public safety, or to another type of organization.
-
-Please note that, as used in the BCAF collection, the term ‘essential function’ may or may not refer to an activity subject to cyber regulation.
-
-If your organization is subject to regulation in relation to the maintenance of public safety you should consult your regulator concerning the use of the BCSF BCAF collection in relation to meeting regulatory requirements.
 
 # A.1 Governance
 > Putting in place the policies and processes which govern your organization’s approach to the security of network and information systems.
