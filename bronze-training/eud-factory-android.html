@@ -1,0 +1,100 @@
+<!--
+title: Reset and reprovision - Android devices
+description: Discover the ways in which organisations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.
+published: true
+date: 2021-02-22T00:28:50.527Z
+tags: bronze, bronze-training, ncsc
+editor: ckeditor
+dateCreated: 2021-02-22T00:28:50.527Z
+-->
+
+<h1>Reset and reprovision - Android devices</h1>
+<p>Discover the ways in which organisations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.</p>
+<p>The methods described here are&nbsp;not&nbsp;guaranteed&nbsp;data sanitisation methods; they may not completely erase data so it cannot be recovered. For more information about how to sanitise affordably, please refer to the NCSC guidance on&nbsp;<a href="https://www.ncsc.gov.uk/guidance/secure-sanitisation-storage-media">Secure sanitisation of storage media</a>.</p>
+<p>This guidance is for organisations deploying or redeploying Android devices onto their networks. It describes the ways in which devices can be restored from a misconfigured or potentially compromised state to a known-good state, using Android's native functionality.</p>
+<p>Android devices can be reset using two methods.</p>
+<ol>
+  <li><a href="https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-android-devices#factory">Factory reset</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-android-devices#firmware">Re-installation of stock firmware</a><br>&nbsp;</li>
+</ol>
+<p>Each of these methods is explained in full alongside the risks of using them. We then recommend methods to use in each of the following four common scenarios:</p>
+<p><strong>Scenario1: Sanitising a device believed to be compromised with malware</strong><br>Use this reset method if a user has reported that their device behaving strangely, or has executed potentially malicious code on the device. This method will remove any malware from the device so that it can be reused.</p>
+<p><strong>Scenario 2: Preparing a device which has not previously been managed</strong><br>Use this reset method if a device is to be provisioned onto the corporate network, but the history of the device is unclear. This method will restore the device to an 'out-of-box' state so that it can be provisioned as per existing guidance on deploying new devices.</p>
+<p><strong>Scenario 3: Reissuing a device to a different user in the same security environment</strong><br>Use this reset method where a device is to be transferred between different employees, and is to be reset to factory settings so that the reprovisioning steps for that platform can be followed as if the device were new.</p>
+<p><strong>Scenario 4: Sanitising a device for release to lower security domain or sale</strong><br>Use this reset method if the device is to be transferred out of a secure environment and you wish to perform a best-endeavours sanitisation of the device.</p>
+<h2>Factory reset</h2>
+<p>A factory reset wipes the user data partition. Any modifications made to the system partition (including operating system updates) are left untouched and not restored to factory state. The user’s data can be recovered using simple forensics tools and malware could persist in other partitions.<br>&nbsp;</p>
+<h3><strong>Performing a factory reset</strong></h3>
+<p>According to&nbsp;<a href="https://support.google.com/nexus/answer/2936226">Android documentation</a>, a device can be restored to factory settings from the settings menu, remotely with&nbsp;<a href="https://support.google.com/a/answer/173390?hl=en">Google Device Manager</a>&nbsp;or from the device’s recovery menu.</p>
+<p>The following option allows a user to delete all data from the data partition.</p>
+<p><code>Settings --&gt; System --&gt; Reset --&gt; Factory data reset</code></p>
+<p>If the device has a pre-boot recovery menu, then you can use this to perform a factory reset. This performs the same underlying actions as the factory reset option from the&nbsp;<code>Settings</code>&nbsp;menu.</p>
+<p>Finally, if the user has Google Sync configured, or has the Google Apps Device Policy app installed, then this method can be called remotely using&nbsp;<a href="https://support.google.com/a/answer/173390">Google’s remote wipe</a>.<br>&nbsp;</p>
+<h3><strong>What happens</strong></h3>
+<p>The factory reset function reboots the device into recovery mode and re-formats the data partition (and Cache partition if present). This is the same function as a manual wipe command from the recovery menu. With this method, the data partition is overwritten. The data partition holds all application data, including device settings. After performing a factory reset, the device returns to default settings.&nbsp;<br>&nbsp;</p>
+<h3><strong>Malware removal</strong></h3>
+<p>This method will remove all apps installed by the previous user, including any malicious Java based apps. If a malicious application was previously able to elevate its privileges to root, it would be able to place malicious root binaries on the system partition. If this has occurred, then this method would fail to remove the malware.<br>&nbsp;</p>
+<h3><strong>Rooted devices</strong></h3>
+<p>If a device had been rooted, then it would have modified the system partition to maintain root between handset resets. As this method does not touch the system partition, it would be likely that the device would remain rooted. If the bootloader of a device was unlocked, it would remain so after this method was used.<br>&nbsp;</p>
+<h3><strong>Risks</strong></h3>
+<ul>
+  <li>This method does not delete data outside the&nbsp;<strong>/data</strong>&nbsp;partition folder so some data may persist.</li>
+  <li>The external SD card is not wiped during the factory reset.</li>
+  <li>The data removed can sometimes be recovered using forensics tools.</li>
+</ul>
+<h2>Re-installation of stock firmware</h2>
+<p>The most comprehensive method for assuring all partitions contain only original files is to reinstall the stock firmware. This method is the only option that will overwrite the system partition. Any device that has been rooted (or infected with malware running as root) would likely have altered the system partition. This option, although offering a more complete reset, varies per device and in some cases may void the manufacturer’s warranty.<br>&nbsp;</p>
+<h3><strong>Reinstalling the stock firmware</strong></h3>
+<ul>
+  <li>Stock firmware for the device OEM is available from&nbsp;<a href="https://developers.google.com/android/images">https://developers.google.com/android/images</a>.</li>
+  <li>For Nexus and Pixel devices, a guide is available at&nbsp;<a href="https://developers.google.com/android/images#instructions">https://developers.google.com/android/images#instructions</a>.<br>&nbsp;</li>
+</ul>
+<h3><strong>What happens</strong></h3>
+<p>The exact process to flash a device with the official firmware will vary per device and may, in some cases void the warranty. For example, the Samsung Galaxy devices can be flashed with official firmware using the Odin application without unlocking the bootloader, however the others may require the user to unlock the bootloader first.</p>
+<p>Overwriting the partitions with the stock firmware means that the user can guarantee that any data including malware will be overwritten regardless of the partition it is on. We recommend that if the bootloader needs to be unlocked for this process, that it's re-locked on completion.</p>
+<p>As part of this method, the data partition is overwritten. The data partition holds all application data, including device settings. After performing a factory reset in this way, the device returns to default settings.&nbsp;<br>&nbsp;</p>
+<h3><strong>Malware removal</strong></h3>
+<p>This method will remove all apps installed by the previous user, including all Java based malware.</p>
+<p>If a malicious application was able to elevate its privileges to root, it would be able to place malicious root binaries on the system partition. If this has occurred, then this method would be effective in removing malware from the device.<br>&nbsp;</p>
+<h3><strong>Rooted devices</strong></h3>
+<p>This method will overwrite the system partition, undoing modifications made by rooting tools. If the bootloader of a device was unlocked, the only way to relock it is to install a signed firmware image. If the device was left unlocked, then an attacker would in theory be able to load the device in recovery mode and bypass any lock screen the user had placed on the device.<br>&nbsp;</p>
+<h3><strong>Risks</strong></h3>
+<ul>
+  <li>This method will vary per manufacturer and device in terms of method, difficulty, availability of resources and effect on warranty. We strongly recommend you seek official guidance from the manufacturer before attempting; if done incorrectly it can lead to permanent damage to the device.</li>
+  <li>All flashing relies on trusting at least one component of the device to correctly install the firmware. This means that sufficiently advanced malware on a device could manipulate the process and persist in spite of the factory reset.</li>
+  <li>Re-installing the firmware may not work in all cases.</li>
+</ul>
+<h2>Reprovisioning scenarios for Android devices</h2>
+<p>For the four common reprovisioning scenarios outlined above, the NCSC recommend the following methods.<br>&nbsp;</p>
+<h3><strong>Scenario 1: Sanitising device believed to be compromised with malware</strong></h3>
+<p>Malware within malicious applications can be removed using&nbsp;<strong>factory reset</strong>.</p>
+<p>Malware with root exploits that have compromised the system partition can be removed by&nbsp;<strong>re-installing firmware</strong>. Advanced malware cannot be removed as the wiping process must rely on code held on the boot sector of the device itself.</p>
+<h4><strong>Risks</strong></h4>
+<ul>
+  <li>Sufficiently advanced malware cannot be removed from a device.</li>
+  <li>It is difficult to determine how advanced the malware is, and which partitions are compromised. Therefore, in high security environments, a device with suspected malware should not be used, even after a full factory reset.<br>&nbsp;</li>
+</ul>
+<h3><strong>Scenario 2: Preparing a device which has not previously been managed</strong></h3>
+<p>The device should be assumed to be carrying malware. The only guarantee for removing this is to&nbsp;<strong>re-installing firmware</strong>&nbsp;as a&nbsp;<strong>factory reset</strong>&nbsp;will only remove all Android application based malware, and all user data from the previous user. Following either method, the device will need to be configured with appropriate security settings.</p>
+<h4><strong>Risks</strong></h4>
+<ul>
+  <li><strong>Factory reset</strong>&nbsp;will not remove malware that has infected any partition other than the data partition.</li>
+  <li><strong>Re-installing firmware&nbsp;</strong>may not remove malware that has infected the boot partition.</li>
+  <li><strong>Re-installing firmware</strong>&nbsp;may void warranty and relies on stock firmware images being made available by the manufacturer.<br>&nbsp;</li>
+</ul>
+<h3><strong>Scenario 3: Reissuing a device to a different user in the same security environment</strong></h3>
+<p>Performing a&nbsp;<strong>factory reset</strong>&nbsp;is sufficient to transfer a device in which personal data is not available to the new user, but the new user would be able to recover the data using forensic software. If the new user should in no way be able to recover personal data from the device, then you should<strong>&nbsp;re-install firmware</strong>.</p>
+<h4><strong>Risks</strong></h4>
+<ul>
+  <li><strong>Factory reset&nbsp;</strong>may allow application malware which has escalated privilege to persist on the device.</li>
+  <li><strong>Factory reset</strong>&nbsp;assumes that the new user will not use forensic tools to recover and restore the previous data, or would not benefit from doing so.</li>
+  <li><strong>Re-installing firmware</strong>&nbsp;may allow advanced malware to persist on the device.</li>
+  <li><strong>Re-installing firmware</strong>&nbsp;may void the warranty and relies on stock firmware images being made available by the manufacturer.<br>&nbsp;</li>
+</ul>
+<h3><strong>Scenario 4: Sanitising a device for release to lower security domain or sale</strong></h3>
+<p>As Android does not offer an official method to securely remove data from a device, it is recommended that an Android device is never released to lower security domain or sale.</p>
+<h4><strong>Risks</strong></h4>
+<ul>
+  <li>Android documentation makes no guarantees that either method can securely wipe a device.</li>
+  <li><strong>Re-installing firmware</strong>&nbsp;could wipe the user’s data partition so that it could not be recovered with forensics tools, but it is thought that this is device dependent and therefore should not be relied upon.</li>
+</ul>
