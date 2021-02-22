@@ -1,0 +1,276 @@
+<!--
+title: 2. Asset protection and resilience
+description: User data, and the assets storing or processing it, should be protected against physical tampering, loss, damage or seizure.
+published: true
+date: 2021-02-22T01:33:08.105Z
+tags: silver, silver training, cloud-security-principles
+editor: ckeditor
+dateCreated: 2021-02-22T01:33:08.105Z
+-->
+
+<h1>2. Asset protection and resilience</h1>
+<p>User data, and the assets storing or processing it, should be protected against physical tampering, loss, damage or seizure.</p>
+<h2>The aspects to consider are:</h2>
+<ul>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#physical">Physical location and legal jurisdiction</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#dataCentre">Data centre security</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#rest">Data at rest protection</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#sanitisation">Data sanitisation</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#disposal">Equipment disposal</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#resilience">Physical resilience and availability</a></li>
+</ul>
+<h2><strong>2.1 Physical location and legal jurisdiction</strong></h2>
+<p>In order to understand the legal circumstances under which your data could be accessed without your consent you must identify the locations at which it is stored, processed and managed.</p>
+<p>You will also need to understand how data-handling controls within the service are enforced, relative to UK legislation. Inappropriate protection of user data could result in legal and regulatory sanction, or reputational damage.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should understand:</p>
+<ul>
+  <li>In which countries your data will be stored, processed and managed. You should also consider how this affects your compliance with relevant legislation e.g. Data Protection Act (DPA)</li>
+  <li>Whether the legal jurisdiction(s) within which the service provider operates are acceptable to you<br>&nbsp;</li>
+</ul>
+<h3><strong>Implementation approaches - Physical location and legal jurisdiction</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Unknown processing and storage locations</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Service provider offers no information on data centre locations for storage and processing of information and workloads</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>(lightning bolt)</p>
+          <p>In this scenario you do not know the locations your data is accessible from, so it will not be possible for you to fully understand the legal jurisdiction your data is subject to.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Known locations for storage only</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Service provider presents detailed information on data centre locations</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Only knowing the storage locations for your data is a potential risk. The data may also be available in other locations, such as where it's processed or managed.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Known locations for storage, processing and management</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Service provider presents detailed information on all locations wheredata is stored and processed and where they manage the service from</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>This is the complete set of physical locations. You need this in order to fully understand the risks around physical access to your data.</p>
+          <p>The level of confidence you have in the lists provided will vary depending on whether you're reliant on the supplier's assertions or have additional assurance through independent validation.</p>
+          <p>Another important factor is whether the supplier is contractually committed to notify you of changes to the list.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes – Legal Jurisdiction</strong></h3>
+<p>Understanding the legal jurisdiction(s) to which your data is subject may be more complex than simply clarifying the physical locations where data is stored, processed or accessed by the service. It’s also necessary to consider the legal base and operating locations of the service provider, the governing legislation of any contracts, and the terms of use - or other agreements - between users of the service (or their suppliers) and the provider. It is important for organisations consuming cloud services to consider this topic and seek legal advice as necessary.</p>
+<h3><strong>Additional notes – Data Protection Act</strong></h3>
+<p>Data protection legislation will apply if personal data is processed in a cloud service. The ICO has published&nbsp;<a href="https://ico.org.uk/media/for-organisations/documents/1540/cloud_computing_guidance_for_organisations.pdf">guidance</a>&nbsp;on compliance with the Data Protection Act (DPA) in relation to cloud services. The DPA requires that personal data “shall not be transferred to any country or territory outside the European Economic Area (EEA) unless that country or territory ensures an adequate level of protection for the rights and freedoms of data subjects in relation to the processing of personal data.” There is a&nbsp;<a href="http://ec.europa.eu/justice/data-protection/international-transfers/adequacy/index_en.htm">list of countries</a>&nbsp;considered by the European Commission to be adequate. There are also model contractual clauses that you may be able to use in your contract which can avoid you having to make your own assessment of adequacy. The ICO's advice on the use of model contractual clauses is&nbsp;<a href="https://ico.org.uk/for-organisations/guide-to-data-protection/principle-8-international/">here</a>.</p>
+<h3><strong>Additional notes – Use of your data</strong></h3>
+<p>You should consider the implications of any rights the service provider will have relating to data stored within the service. Some usage agreements allow the service provider to employ user data for marketing or other purposes. You should also check whether any agreements with the service provider relating to their use of your data are acceptable to you and also not contrary to relevant legislation, such as the DPA.</p>
+<h2><strong>2.2 Data centre security</strong></h2>
+<p>Locations used to provide cloud services need physical protection against unauthorised access, tampering, theft or reconfiguration of systems. Inadequate protections may result in the disclosure, alteration or loss of data.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should be confident that the physical security measures employed by the provider are sufficient for your intended use of the service.</p>
+<h3><strong>Implementation approaches - Data centre security</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider does not disclose how their data centres are secured.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">In this scenario you will be taking the suppliers word for it that their data centres are appropriately secured. Whether you choose to do that will depend on the intrinsic trust you have in the service provider. Further advice on that is covered&nbsp;<a href="https://www.ncsc.gov.uk/guidance/how-confident-can-you-be-cloud-security">here</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Known controls</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider discloses information on the security controls around their (or their suppliers’) data centres.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">If no recognised standard is referred to by the service provider you will need to make your own assessment of the physical controls protecting their data centres.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Conforms to a recognised standard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>The service provider has had their data centre protections certified against a recognised and appropriate standard that covers physical security.</p>
+          <p>Appropriate standards include:&nbsp;<br><a href="https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions">CSA CCM v3.0</a>&nbsp;<br><a href="https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions">SSAE-16 / ISAE 3402</a></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Standards differ in terms of the level of detail applied to physical controls. The scope of the assessment must be relevant to locations where your data can be accessed.</p>
+          <p>Independent validation that the scope of a certification is correct can be obtained to provide reassurance in this area.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2><strong>2.3 Data at rest protection</strong></h2>
+<p>To ensure data is not available to unauthorised parties with physical access to infrastructure, user data held within the service should be protected regardless of the storage media on which it’s held. Without appropriate measures in place, data may be inadvertently disclosed on discarded, lost or stolen media.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should have sufficient confidence that storage media containing your data are protected from unauthorised access.</p>
+<h3><strong>Implementation approaches - Data at rest protection</strong></h3>
+<p>Service providers could use encryption, physical security controls, or a combination of both, to protect data at rest within the service.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Physical access control</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">A number of standards are appropriate when validating physical access control protections. These are backed by a variety of certification schemes:<br><a href="https://www.cesg.gov.uk/guidance/cloud-security-guidance-standards-and-definitions">CSA CCM v3.0</a>&nbsp;<br><a href="https://www.cesg.gov.uk/guidance/cloud-security-guidance-standards-and-definitions">SSAE-16 / ISAE 3402</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Levels of control differ between physical security standards. The scope of the assessment must be relevant to those locations where your data can be accessed.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Infeasibility of finding a specific customer’s data on physical media</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider states that their scale, obfuscation techniques, or data storage ‘sharding’ make it infeasible for a determined attacker with physical access to a data centre to locate a specific customer’s data.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">It is unlikely that independent assurance will be available to support the service provider’s claims that it is infeasible for someone to target your data in a theft of a physical disk. Therefore it may be worth also understanding what confidence you can gain from one of the two other approaches described.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Encryption of all physical media</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">The service provider employs encryption to ensure that no data is written to disk in an unencrypted form.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Management of the keys used to encrypt data before it is stored is the biggest challenge with this approach. Errors in use of cryptography or poor key management could result in exposure of your data.</p>
+          <p>It's also important to understand whether the encryption products used provide the confidence you’d expect. Products which have been assessed against a good standard are recommended.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes - Joiners and Leavers</strong></h3>
+<p>To support onboarding and offboarding processes it may be necessary for storage media to be transferred between you and the service provider. If this is the case, the storage media should be protected using one of the approaches given above.</p>
+<h2><strong>2.4 Data sanitisation</strong></h2>
+<p>The process of provisioning, migrating and de-provisioning resources should not result in unauthorised access to user data.</p>
+<p>Inadequate sanitisation of data could result in:</p>
+<ul>
+  <li>your data being retained by the service provider indefinitely</li>
+  <li>your data being accessible to other users of the service as resources are reused</li>
+  <li>your data being lost or disclosed on discarded, lost or stolen media</li>
+</ul>
+<h3><strong>Goals</strong></h3>
+<p>You should be sufficiently confident that:</p>
+<ul>
+  <li>Your data is erased when resources are moved or re-provisioned, when they leave the service or when you request it to be erased</li>
+  <li>Storage media which has held your data is sanitised or securely destroyed at the end of its life</li>
+</ul>
+<h3><strong>Implementation approaches - Data sanitisation</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">None/unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider is not able to explain how storage is sanitised when it is released by a user.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">It may be that the service provider's approach to their own data at rest protection (see section 2.3) gives you confidence that reallocated storage would not contain cleartext data if it was allocated to another user. If that's not the case, then you could choose to employ encryption of data that you store in the service.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Assurances media can't be directly addressed</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">The service provider may be able to provide assurances that previously stored data cannot be addressed by others after the it is released.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">It may be that the service provider's approach to their own data at rest protection (see section 2.3) gives you confidence that reallocated storage would not contain cleartext data if it was allocated to another user. If that is the case, then their assurances around how data is reallocated may provide you all of the confidence you need. However, depending on the service, you could also employ encryption to additionally protect your stored data.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Explicit overwriting of storage before reallocation</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Storage which is no longer required is sanitised according to a specified policy before being reallocated to another user.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">If you know that data you have previously used is overwritten before it is reallocated to another user of the service, then that will help provide reassurance that another user could not access your data. As with the other approaches described above, you can gain additional confidence if the service provider encrypts all stored data under user-specific keys, or if you encrypt your own data that you store in the service.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2><strong>2.5 Equipment disposal</strong></h2>
+<p>Once equipment used to deliver a service reaches the end of its useful life, it should be disposed of in a way which does not compromise the security of the service, or user data stored in the service.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should be sufficiently confident that:</p>
+<ul>
+  <li>All equipment potentially containing your data, credentials, or configuration information for the service is identified at the end of its life (or prior to being recycled).</li>
+  <li>Any components containing sensitive data are sanitised, removed or destroyed as appropriate.</li>
+  <li>Accounts or credentials specific to redundant equipment are revoked to reduce their value to an attacker.</li>
+</ul>
+<h3><strong>Implementation approaches – Equipment disposal</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Unknown or proprietary techniques used</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">-</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">In this scenario you will need to trust the service provider orcarry out your own assessment of whether the controls in place are appropriate.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">A recognised standard for equipment disposal is followed</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>A number of standards include controls which cover the need for secure equipment disposal. These include:</p>
+          <p><a href="https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions">CSA CCM v3.0</a></p>
+          <p><a href="https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions">ISO/IEC 27001</a></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>The standards referenced cover the need for secure equipment disposal, rather than validation of the process. It is worth checking the scope of any certification to verify that the existence of appropriate controls was covered as part of the assessment.</p>
+          <p>Independent validation is likely to play an important part in providing confidence that remnants of your data cannot be easily retrieved from equipment that has been disposed of.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">A third party destruction service is used</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A destruction service which specialises in secure disposal of equipment is used.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A number of these services have been assessed against a recognised standard, such as the CESG Assured Service (Destruction) scheme.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h2>2.6 Physical resilience and availability</h2>
+<p>Services have varying levels of resilience, which will affect their ability to operate normally in the event of failures, incidents or attacks. A service without guarantees of availability may become unavailable, potentially for prolonged periods, regardless of the impact on your business.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should be sufficiently confident that the availability commitments of the service, including their ability to recover from outages, meets your business needs.</p>
+<h3><strong>Implementation approaches - Physical resilience and availability</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">The service provider commits to a Service Level Agreement (SLA)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Contractual commitments or Service Level Agreements (SLAs) are used by the service provider to make commitments about the level of service availability.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>This approach may provide a mechanism for compensation in event of outages, but outages will not be prevented if the service design is not appropriate.</p>
+          <p>It is additionally beneficial to review the supplier’s historical records of service availability (see next point).</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Review of historical data</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider may present historical evidence of service availability.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">You should evaluate this evidence and draw your own conclusions on whether this, together with the service provider’s commitments and reputation, give you sufficient confidence.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Analysis of the design</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">The service provider may be willing to share information on how they have designed their service to be resilient.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Having this information reviewed by a specialist security expert would provide additional confidence.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes - Resilience</strong></h3>
+<p>You should evaluate whether the service provider can meet the availability and resilience requirements you have. Services procured with ‘best endeavours’ support should be considered to have no guaranteed support.</p>
