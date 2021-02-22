@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T02:04:35.646Z
+date: 2021-02-22T02:06:15.710Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -107,7 +107,7 @@ Threats can come from many sources, in and outside the organization. A good unde
 There should be a systematic process in place to ensure that identified risks are managed and the organization has confidence mitigations are working effectively. Confidence can be gained through, for example, product assurance, monitoring, vulnerability testing, auditing and supply chain security.
 
 ## Guidance
-Our Risk Management guidance aims to help you to choose an approach that's right for your organization.organizations responsible for essential functions are likely to benefit from a combination of a system-based approach, which looks at the interactions between components of the function, and a component-driven analysis, which considers the threats, vulnerabilities, and impacts relevant to particular critical components.
+Our Risk Management guidance aims to help you to choose an approach that's right for your organization. Organizations responsible for essential functions are likely to benefit from a combination of a system-based approach, which looks at the interactions between components of the function, and a component-driven analysis, which considers the threats, vulnerabilities, and impacts relevant to particular critical components.
 
 Your organization should choose a method or framework for managing risk that fits with the organization's business and technology needs. 
 
