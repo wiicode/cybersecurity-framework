@@ -1,0 +1,147 @@
+<!--
+title: Security operations centre (SOC) buyers guide
+description: Guidance is for organisations that are considering procuring a Security Operations Centre (SOC) from a third party.
+published: true
+date: 2021-02-22T00:42:28.037Z
+tags: security operations, silver, ncsc, silver training
+editor: ckeditor
+dateCreated: 2021-02-22T00:42:28.037Z
+-->
+
+<h2>Introduction</h2>
+<p>This guidance is for organisations that are considering procuring a Security Operations Centre (SOC) from a third party. It is equally applicable for those seeking to establish their own in-house SOC. It summarises the core functions of a SOC, and includes the different deployment options available, the SOC lifecycle, and other high-level considerations.</p>
+<hr>
+<h2>What does a SOC do?</h2>
+<p>The key aims of a SOC are:</p>
+<ul>
+  <li><strong>to detect and respond to threats</strong>, keeping the information held on systems and networks secure</li>
+  <li><strong>to increase resilience&nbsp;</strong>by learning about the changing threat landscape (both malicious and non-malicious, internal and external)</li>
+  <li><strong>to identify and address negligent or criminal behaviours</strong></li>
+  <li><strong>to derive business intelligence about user behaviours&nbsp;</strong>in order to shape and prioritise the development of technologies</li>
+</ul>
+<hr>
+<h2>Why might you need a SOC?</h2>
+<p>Some examples of why you might need a SOC include:</p>
+<ul>
+  <li>you are running an online service for the public</li>
+  <li>you host a number of sensitive databases which are accessed by staff on your premises, by remote staff, or by customers or partners</li>
+  <li>you have several different office locations and a unified security function delivers cost savings</li>
+  <li>you share large quantities of sensitive data with other organisations</li>
+  <li>you require a single point of visibility for all your threats</li>
+</ul>
+<hr>
+<h2>What type of SOC is best for you?</h2>
+<p>SOCs come in a variety of flavours and can cover the entire incident management process. This can include:</p>
+<ul>
+  <li>integration, management and review of traffic feeds</li>
+  <li>protective monitoring</li>
+  <li>initial triage and analysis</li>
+  <li>vulnerability management</li>
+  <li>alerting and response</li>
+  <li>incident management</li>
+  <li>root cause analysis</li>
+  <li>patching &amp; remediation</li>
+  <li>correlation management, Security Information and Event Management (SIEM) tuning</li>
+  <li>continuous improvement</li>
+  <li>key management</li>
+</ul>
+<p>The functions that&nbsp;<strong>your</strong>&nbsp;organisation require will depend on a number of factors, including but not limited to:</p>
+<ul>
+  <li>your budget</li>
+  <li>whether or not you choose a third party supplier</li>
+  <li>your willingness to share your information feeds with a commercial supplier</li>
+  <li>your own willingness/capability to perform forensic investigations</li>
+  <li>how you manage business continuity</li>
+  <li>whether you need an on-premise or an off-premise service (or a hybrid of the two)</li>
+  <li>if you outsource your SOC, it will likely be multi-tenanted. This means that any threat intelligence generated from your data feeds will be used to improve the service delivered to other customers. Consider the sensitivity of your data, your requirements and whether you'd be comfortable with a multi-tenanting arrangement (noting the higher costs of a dedicated service and the potential benefits to you derived from being a co-tenant).</li>
+  <li>how well you know the range of threats posed to your organisation</li>
+  <li>whether your requirements are unique - a generic service may suffice if your requirements are typical of other organisations</li>
+</ul>
+<hr>
+<h2>Top tips before you start</h2>
+<p>When defining your SOC requirements, we recommend you consider the following:</p>
+<ul>
+  <li><strong>Logs are not an end in themselves</strong>. It’s tempting to think they are, but it’s the way they are&nbsp;<i>correlated&nbsp;</i>that provides the power of a SOC. Logs must be collected, aggregated, analysed, stored and minimised. Most importantly, they must be available to your SOC at all times.</li>
+  <li><strong>SIEM is not a panacea</strong>. Be wary of any supplier that tells you that security information and event management (SIEM) is a panacea for all your analytic needs. Good SOC analysts don’t develop anything in the SIEM until they've proved an idea using scripts and logs first. A good supplier will have a content development checklist and a standard process for proposing, justifying and implementing rulesets in your SIEM.</li>
+  <li><strong>Don’t assume your business wants to hear what the SOC finds</strong>. Your SOC has detected something; who will care and what you do next? Work back from the end of the incident and verify you can achieve each stage before levying a requirement upon your SOC. Ensure the action you wish to take is legal and covered by internal policy.</li>
+  <li><strong>Review regularly which SIEM content is providing benefit</strong>, and use stats to justify its existence. Your SOC is an invaluable source of business intelligence and management information.</li>
+  <li><strong>Establish the basics</strong>. Don't bother with advanced concepts until you're confident you have the basics covered. Expensive and complex SIEM tools are all the rage, often the temptation is to jump from zero to 'behavioural analytics' using an expensive SIEM that nobody understands properly. Well trained and quality staff are crucial.</li>
+</ul>
+<hr>
+<h2>A secure SOC protects itself</h2>
+<p>An SOC exists to help manage your risks more effectively, which means the SOC itself must be protected adequately. A SOC must have mechanisms, processes and procedures to ensure that it can protect itself against threats comparative to those being faced by its customers. This includes protecting the service itself, and also the data within it.</p>
+<p>The SOC provider&nbsp;<strong>must</strong>&nbsp;be able to demonstrate that they understand the architecture of their monitoring system. A supplier ought to be able to provide documentation to include:</p>
+<ul>
+  <li>an overview of the system elements, such as perimeter, host and network, and specific application-based agents</li>
+  <li>clearly annotated network diagrams, which demonstrate a comprehensive understanding of how the SOC architecture is designed and managed</li>
+  <li>related technical documentation which demonstrates how architectural components are used to actively monitor the environment</li>
+  <li>mechanisms for managing the control of privileged user access</li>
+  <li>the monitoring and control of privileged user access, demonstrating an understanding of who has access and their activity</li>
+  <li>which parts of the architecture allow for automation, and which parts require analysts</li>
+  <li>descriptions of what the sensors within the monitoring service actually do</li>
+</ul>
+<hr>
+<h2>Feeding your SOC</h2>
+<p>Where will your information feeds come from? What inputs will you feed into your SOC? It depends on the kind of services you are running, but it might include:</p>
+<ul>
+  <li>data from the organisation's&nbsp;<a href="https://www.ncsc.gov.uk/guidance/vulnerability-management">vulnerability management</a></li>
+  <li>records of high-value database commands</li>
+  <li>requests made to your web servers</li>
+  <li>records of high-value privileged administrator commands</li>
+  <li>outputs from web content filters</li>
+  <li>logs from the mail gateway</li>
+  <li>logs of DNS requests made by your internal systems and servers</li>
+  <li>logs from your federated authentication system</li>
+  <li>if you use cloud, you may need to incorporate any alerting provided by the cloud service into your SOC, e.g. breaches of Data Loss Prevention policy</li>
+</ul>
+<p>A fuller picture of the logs and other outputs which can feed your SOC are shown below (this can also be downloaded at the bottom of the page). Discuss with your supplier how you will determine which inputs are required to deliver the best service to your business.</p>
+<figure class="image image_resized" style="width:auto;"><img src="https://www.ncsc.gov.uk/static-assets/images/NCSC_Soc_Feeds.JPG"></figure>
+<hr>
+<h2>The SOC lifecycle</h2>
+<p>A good SOC needs you to work with it. It's not uncommon for SOC suppliers to send their customers alerts, but to never receive a reply. Obviously, an organisation should not derive any security from simply knowing that a SOC is in place.</p>
+<p>A successful SOC will undergo some transformations during its lifetime, from requirements capture at start-up, through to effective operations. To adapt to the ever-changing threat landscape and to the introduction of new technologies, a SOC must learn from what it finds. As a result, false positives will be reduced, the reporting process will become smoother, and high impact threats will be detected sooner. A good contract with a SOC provider will not concentrate solely on initial requirements but will incorporate the ability of the SOC to evolve and adapt.</p>
+<h3><strong>Start-up and requirements capture</strong></h3>
+<p>In many cases, the service you are offered will be multi-tenanted, with other organisations benefiting from the threat intelligence generated from your feeds and vice versa. Provided you can gain assurance from your supplier that:</p>
+<ul>
+  <li>sensitive information about your business is kept in the strictest of confidence</li>
+  <li>your data is subject to appropriate levels of logical separation within the provider’s environment</li>
+</ul>
+<p>- you may judge the benefits to outweigh the risks.</p>
+<p>The starting point for negotiations may be the default service offered by a supplier. It is normal for organisations new to SOC to think that their business is somehow unique, but do not underestimate the benefits which a default service can deliver. Listen to what is provided by default and use your technical experts to analyse and identify any adaptations needed in order to meet your own business requirements. This is the cheapest and easiest approach to take.</p>
+<p>Ensure your prospective provider understands your business. This involves a significant commitment of your time and expertise. Make sure you’re conveying to your provider:</p>
+<ul>
+  <li>your business objectives</li>
+  <li>your operational environment</li>
+  <li>your risk appetite and incident reporting thresholds</li>
+  <li>how long you need data retained</li>
+</ul>
+<p>In return, your provider needs you to understand:</p>
+<ul>
+  <li>its core offering, so you understand what you need over and above that offering</li>
+  <li>that it depends on you to tell it when and to whom to send alerts</li>
+  <li>what third parties it's reliant on to deliver its service to you</li>
+</ul>
+<p>Together the ‘supplier’ and the ‘authority’ need to agree:</p>
+<ul>
+  <li>how SOC-related tasks will be divided; well-defined governance and ownership is essential to agree responsibilities</li>
+  <li>business continuity priorities/business impacts</li>
+  <li>escalation matrix/incident workflows</li>
+  <li>establishment of SLAs and KPIs, to set levels of expectation</li>
+  <li>rules and responsibilities around data sharing (including MI)</li>
+  <li>the boundary interfaces and inter-relationships with any network operations or incident response capabilities within your organisation</li>
+</ul>
+<h3><strong>Operations and data sharing</strong></h3>
+<p>During operation of your SOC service, your supplier is processing and analysing security monitoring data and applying your policy, compliance and business rules to identify and verify security incidents. Should an incident occur, the supplier’s job is to respond according to the agreements in place with you, working to return the service to normal operations. As a SOC enters the operational phase, your resourcing overheads will diminish, but expect a number of false positives to occur while the supplier learns to understand the way your business operates.</p>
+<p>For example, you may have a small number staff who are constantly on the move. For these staff, a logon from an IP geolocated in Dubai (from a user who logged on six hours earlier from an IP in the UK) may at first&nbsp;<i>seem</i>&nbsp;suspicious, but is in fact not. Over time, a good supplier will learn what constitutes genuinely anomalous behaviour. Until then, false positives can be a good opportunity to test the reporting chain.</p>
+<h3><strong>Continuous improvement</strong></h3>
+<p>SOC providers need to appreciate the different operational environments and business objectives of their customers. They should be able to adapt their offering in order to meet any changes in these requirements, in order to deliver a service which can continue to meet a customer’s needs. This involves learning from past experiences to deliver an improving service that strikes the right balance between cost of operations, security and customer fatigue.</p>
+<p>Suppliers should generate comprehensive and meaningful management information to help customers understand the patterns in incidents, near misses, root cause and methods of resolution. Retaining the right data, at the right level of detail, for the appropriate periods of time is therefore an important requirement. Note some data may be subject to UK statutory laws on retention.</p>
+<hr>
+<h2>Tools and technologies</h2>
+<p>The tools employed as part of a SOC capability are key to ensuring that a SOC provider is able to actively monitor and detect the latest threats. New SOC technologies are constantly emerging, so it is unlikely that the technologies in your SOC will remain the same over the duration of a typical contract. The tools deployed by the SOC should be properly commissioned and managed appropriately. The toolset should not only take into account technological developments in the marketplace, but more importantly changes in customer requirements. If the cost of your SOC services increases in the wake of a new tool, it will be prudent to ask your supplier to:</p>
+<ul>
+  <li>explain the business and technical reasons for implementing new technologies</li>
+  <li>demonstrate that the tool(s) is configured in line with developer’s recommendations</li>
+  <li>ensure SOC staff are trained in the use of the tools</li>
+  <li>ensure SOC have a strategic understanding of how the tools contribute to the customers’ overall SOC needs</li>
+</ul>
