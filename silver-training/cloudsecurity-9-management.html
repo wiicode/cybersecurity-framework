@@ -1,0 +1,100 @@
+<!--
+title: 9. Secure user management
+description: Your provider should make the tools available for you to securely manage your use of their service. 
+published: true
+date: 2021-02-22T01:40:26.794Z
+tags: silver, silver training, cloud-security-principles
+editor: ckeditor
+dateCreated: 2021-02-22T01:40:26.794Z
+-->
+
+<h1>9. Secure user management</h1>
+<p>Your provider should make the tools available for you to securely manage your use of their service. Management interfaces and procedures are a vital part of the security barrier, preventing unauthorised access and alteration of your resources, applications and data.</p>
+<h2>The aspects to consider are:</h2>
+<ul>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/secure-user-management#auth">Authentication of users to management interfaces and support channels</a></li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/secure-user-management#separation">Separation and access control within management interfaces</a></li>
+</ul>
+<h3><strong>9.1 Authentication of users to management interfaces and support channels</strong></h3>
+<p>In order to maintain a secure service, users need to be properly authenticated before being allowed to perform management activities, report faults or request changes to the service.</p>
+<p>These activities may be conducted through a service management web portal, or through other channels, such as telephone or email. They are likely to include such functions as provisioning new service elements, managing user accounts and managing consumer data.</p>
+<p>Service providers need to ensure that all management requests which could have a security impact are performed over secure and authenticated channels. If users are not strongly authenticated then an imposter may be able to successfully perform privileged actions, undermining the security of the service or data.</p>
+<h4><strong>Goals</strong></h4>
+<p>You should have sufficient confidence that:</p>
+<ul>
+  <li>you are aware of all of the mechanisms by which the service provider would accept management or support requests from you (telephone phone, web portal, email etc.)</li>
+  <li>only authorised individuals from your organisation can use those mechanisms to affect your use of the service (<a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/identity-and-authentication">Principle 10</a>&nbsp;can help you consider the strength of user identification and authentication in each of these mechanisms)</li>
+</ul>
+<h4><strong>Implementation – Authentication to management Interfaces and support</strong></h4>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Strong authentication in place</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider claims to have sufficient controls in place to ensure that only authorised users from your organisation can affect your account via support channels</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">It’s worth asking your service provider how they check that only your authorised users can affect your account. You may wish to carry out your own testing to confirm you are happy with the safeguards in place.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Strong authentication in place, which is subject to regular exercising</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">As above, but the service provider can demonstrate that they regularly test their security via these channels (e.g. through using social engineering techniques)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Whilst exercising the strength of authentication is a good way of gaining confidence, you should note that it only tests the authentication mechanisms at a given point in time, so it's important that it testing occurs often.</p>
+          <p>Unfortunately there are no recognised standards to assess the quality of social engineering testing. It’s best to ensure that&nbsp;<a href="https://www.ncsc.gov.uk/guidance/penetration-testing">experienced and reputable testers</a>&nbsp;are used.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>9.2 Separation and access control within management interfaces</strong></h3>
+<p>Many cloud services are managed via web applications or APIs. These interfaces are a key part of the service’s security. If users are not adequately separated within management interfaces, one user may be able to affect the service, or modify the data of another.</p>
+<p>Your privileged administrative accounts probably have access to large volumes of data. Constraining the permissions of individual users to those absolutely necessary can help to limit the damage caused by malicious users, compromised credentials or compromised devices.</p>
+<p>Role-based access control provides a mechanism to achieve this and is likely to be a particularly important capability for users managing larger deployments.</p>
+<p>Exposing management interfaces to less accessible networks (e.g. community rather than public networks) makes it more difficult for attackers to reach and attack them, as they would first need to gain access to one of these networks. Guidance on assessing the risks of exposing interfaces to different types of networks is provided under&nbsp;<a href="https://www.ncsc.gov.uk/guidance/cloud-security-principle-11-external-interface-protection">Principle 11</a>.</p>
+<h4><strong>Goals</strong></h4>
+<p>You should:</p>
+<ul>
+  <li>have confidence that other users cannot access, modify or otherwise affect your service management</li>
+  <li>manage the risks of privileged access using a system such as the ‘principle of least privilege’</li>
+  <li>understand how management interfaces are protected (see&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/external-interface-protection">Principle 11</a>) and what functionality they expose</li>
+</ul>
+<h4><strong>Implementation - access control within management interfaces</strong></h4>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">No digital service management interface for users to administer their service</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Some services may have no digital interface for users to administer their use of the service. This could be because the service is very simple or has no aspects that users manage.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">-</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Access control implemented in software</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The separation between users of digital service management interfaces is performed in software</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Service management interfaces are typically highly privileged, it is therefore important for you to be confident that they are well designed and well maintained.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Access control implemented in software, subject to regular testing</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">As above, but regular testing, including penetration tests, are used to assess the strength of separation within digital service management interfaces.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Penetration testing needs to be well scoped to ensure it is providing confidence in the security of the service management interfaces.</p>
+          <p>It's worth noting that a penetration test will normally detect common or publicly known weaknesses at the time of the test, rather than look for novel or previously unknown classes of vulnerability.</p>
+          <p>Appropriately qualified penetration testers should be used. For example, individuals certified under the CHECK, CREST or Tiger schemes.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Note: For guidance on the risks of exposing the management interface to different networks, refer to&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/external-interface-protection">Principle 11 - External interface protection</a>.</p>
