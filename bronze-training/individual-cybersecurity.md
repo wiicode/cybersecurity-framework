@@ -2,11 +2,14 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-21T02:08:58.957Z
+date: 2021-02-22T21:57:52.706Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
 ---
+
+> Encouraging safe practices at home leads to better practices in business. This section was developed to help your staff manage risks on personal computers and online. 
+{.is-info}
 
 # What is cyber security?
 Cyber security is the means by which individuals and organisations reduce the risk of being affected by cyber crime.
