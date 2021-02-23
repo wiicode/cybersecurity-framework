@@ -2,7 +2,7 @@
 title: -bronze-checklists-home
 description: Checklists Home Page
 published: true
-date: 2021-02-23T01:30:26.278Z
+date: 2021-02-23T01:34:48.813Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -15,8 +15,8 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [BCSF Advanced Controls *Extensive cyber security control environment. We maintain a significant set of controls common to our environments and those of our customers.  Collectively, this section informs small companies on what actions to take to meet specific policy areas.  It is highly recommended that you develop your Policies before starting on checklists.*](/bronze-checklists/bcsf-advanced-control-checklists)
 {.links-list}
 
-# Actions You Can Take Right Now
-> It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the most basic set of actions your company can do to address security comprehensively. 
+# Starting at zero? Here are actions You Can Take Right Now
+> It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the **most basic set of actions** your company can do to start improving your cyber security posture. If these seem a little too simple for you, great!, head over to [BCSF Advanced Controls](/bronze-checklists/bcsf-advanced-control-checklists) for the comprehensive list. 
 {.is-info}
 
 
