@@ -1,8 +1,8 @@
 ---
-title: Checklist: Layered Defense
+title: Layered Defense Example
 description: Check the items that you would like to engage.
 published: true
-date: 2021-02-22T00:47:57.303Z
+date: 2021-02-23T18:51:49.801Z
 tags: zta, layered-defense, checklist, nist-sp-800-53, multitiered, risk management
 editor: markdown
 dateCreated: 2020-08-06T16:54:23.555Z
