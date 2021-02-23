@@ -1,0 +1,226 @@
+<!--
+title: Checklist for Systems Monitoring
+description: 
+published: true
+date: 2021-02-23T00:35:33.412Z
+tags: checklist, bronze, bronze-controls, ccf, system-design, monitoring
+editor: ckeditor
+dateCreated: 2021-02-23T00:35:33.412Z
+-->
+
+<p>More text coming soon!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Category</th>
+        <th>Sub-Category</th>
+        <th>Name</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="height:104.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;width:93pt;">Logging</td>
+        <td style="border-left:none;width:93pt;">Audit Logging</td>
+        <td style="border-left:none;width:340pt;">[The organization] logs critical information system activity.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:153.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Secure Audit Logging</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] logs critical information system activity to a secure repository. [the organization] disables administrators ability to delete or modify enterprise audit logs; the number of administrators with access to audit logs is limited.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:314.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Audit Logging:<br>Cardholder Data<br>Environment<br>Activity</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] logs the following activity for cardholder data environments:<br>• individual user access to cardholder data<br>• administrative actions<br>• access to logging servers<br>• failed logins<br>• modifications to authentication mechanisms and user privileges<br>• initialization, stopping, or pausing of the audit logs<br>• creation and deletion of system-level objects<br>• security events<br>• logs of all system components that store, process, transmit, or could impact the security of cardholder data (CHD) and/or sensitive authentication data (SAD)<br>• logs of all critical system components<br>• logs of all servers and system components that perform security functions (e.g., firewalls, intrusion-detection systems/intrusion-prevention systems (IDS/IPS), authentication servers, ecommerce redirection servers, etc.)</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:200.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Audit Logging: Cardholder Data Environment Event Information</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] records the following information for confirmed events in the cardholder data environment:<br>• user identification<br>• type of event<br>• date and time<br>• event success or failure indication<br>• origination of the event<br>• identification of affected data, system component, or resource</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:176.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Audit Logging:<br>Service Provider<br>Logging<br>Requirements</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] establishes unique logging and audit trails for each entity's cardholder<br>data environment and complies with the following:<br>• logs are enabled for third-party applications<br>• logs are active by default<br>• logs are available for review by and communicated to the owning entity</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:148.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Log Reconciliation: CMDB</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] reconciles the established device inventory against the enterprise log repository [in accordance with the organization-defined frequency]; devices which do not forward log data are remediated.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:169.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Audit Log<br>Capacity and<br>Retention</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] allocates audit record storage capacity in accordance with logging<br>storage and retention requirements; Audit logs are retained [in accordance with the organization-defined duration] with [the organization-defined duration] of data immediately available for analysis.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:154.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Logging</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Enterprise<br>Antivirus Logging</td>
+        <td style="border-left:none;border-top:none;width:340pt;">If applicable, [the organization's] managed enterprise antivirus deployments generate audit logs which are retained [in accordance with the organization-defined duration] with [the organization-defined duration] of data immediately available for analysis.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:102.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security<br>Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security<br>Monitoring Alert Criteria</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines security monitoring alert criteria, how alert criteria will be flagged, and identifies authorized personnel for flagged system alerts.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:83.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Log-tampering Detection</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] monitors and flags tampering to the audit logging and monitoring tools in the production environment.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:76.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring Alert<br>Criteria: Failed Logins</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines security monitoring alert criteria for failed login attempts on [the organization's] network.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:84.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security<br>Monitoring Alert<br>Criteria:<br>Privileged<br>Functions</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines security monitoring alert criteria for privileged functions executed by both authorized and unauthorized users.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:68.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security<br>Monitoring Alert<br>Criteria: Audit<br>Log Integrity</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines security monitoring alert criteria for changes to the integrity of audit logs.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:119.25pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security<br>Monitoring Alert<br>Criteria:<br>Cardholder<br>System<br>Components</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines security monitoring alert criteria for system components that store, process, transmit, or could impact the security of cardholder data and/or sensitive authentication data.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:114.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">System Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:340pt;">Critical systems are monitored in accordance to predefined security criteria and alerts are sent to authorized personnel. Confirmed incidents are tracked to resolution.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:229.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Security Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Intrusion Detection Systems</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] has an Intrusion Detection System (IDS) or Intrusion Prevention System (IPS) deployment(s) and ensures the following:&nbsp;<br>• signature definitions are updated including the removal of false positive signatures<br>• non-signature based attacks are defined<br>• IDS/IPS are configured to capture malicious (both signature and non-signature based) traffic<br>• alerts are reviewed and resolved by authorized personnel when malicious traffic is detected</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:123.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Availability Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Availability Monitoring Alert Criteria</td>
+        <td style="border-left:none;border-top:none;width:340pt;">[The organization] defines availability monitoring alert criteria, how alert criteria will be flagged, and identifies authorized personnel for flagged system alerts.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td style="border-top:none;height:111.0pt;width:86pt;">Systems Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">Availability<br>Monitoring</td>
+        <td style="border-left:none;border-top:none;width:93pt;">System<br>Availability Monitoring</td>
+        <td style="border-left:none;border-top:none;width:340pt;">Critical systems are monitored in accordance to predefined availability criteria and alerts are sent to authorized personnel.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
