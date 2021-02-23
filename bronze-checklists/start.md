@@ -2,17 +2,17 @@
 title: -bronze-checklists-home
 description: Checklists Home Page
 published: true
-date: 2021-02-23T00:57:11.464Z
+date: 2021-02-23T01:30:26.278Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
 ---
 
 # Checklists
-BCSF provides a series of core and advanced check-lists for securing your environments.  
+BCSF provides a series of core and advanced check-lists for securing your environments.  These checklists, also known as control sets, describe activities ranging from **Asset** all the way to **Vulnerability** Management.  Before diving into checklists, be sure to review the [Learning and Training](/bronze-training/start) for critical understanding of why these controls exist and what they can do for your organization.
 
 {.grid-list}
-- [BCSF Advanced Controls *Extensive cyber security control environment.*](/#)
+- [BCSF Advanced Controls *Extensive cyber security control environment. We maintain a significant set of controls common to our environments and those of our customers.  Collectively, this section informs small companies on what actions to take to meet specific policy areas.  It is highly recommended that you develop your Policies before starting on checklists.*](/bronze-checklists/bcsf-advanced-control-checklists)
 {.links-list}
 
 # Actions You Can Take Right Now
