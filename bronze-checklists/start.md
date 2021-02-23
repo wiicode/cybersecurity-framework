@@ -2,7 +2,7 @@
 title: -bronze-checklists-home
 description: Checklists Home Page
 published: true
-date: 2021-02-20T22:27:58.287Z
+date: 2021-02-23T00:57:11.464Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -15,7 +15,7 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [BCSF Advanced Controls *Extensive cyber security control environment.*](/#)
 {.links-list}
 
-# Actions You Can Take
+# Actions You Can Take Right Now
 > It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the most basic set of actions your company can do to address security comprehensively. 
 {.is-info}
 
