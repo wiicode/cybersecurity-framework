@@ -1,0 +1,791 @@
+<!--
+title: NIST SP 800-171 Compliance
+description: 
+published: true
+date: 2021-02-23T17:56:57.913Z
+tags: checklist, bronze, bronze-controls, nist, nist-sp-800-171
+editor: ckeditor
+dateCreated: 2021-02-23T17:56:57.913Z
+-->
+
+<h1>NIST SP 800-171 Compliance Checklist</h1>
+<p>Department of Defense has started requiring NIST 800-171 compliance in all of its contracts.&nbsp; In fact, all research projects governed by a Department of Defense (DoD) contract must be in compliance with NIST 800-171 by December 2017.&nbsp; The requirements for protecting Controlled Unclassified Information (CUI) can be complex and difficult to implement.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th style="height:52.5pt;width:76pt;">NIST 800-171 Control Number</th>
+        <th style="border-left:none;width:127pt;">Control Family</th>
+        <th style="border-left:none;width:312pt;">Requirement</th>
+        <th style="border-left:none;width:244pt;">Recommendations</th>
+        <th style="border-left:none;width:363pt;">Assessed System Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.1.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Maintain list of authorized users defining their identity and associated role and sync with system, application and data layers. Account requests must be authorized before access is granted.&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Identity policy, in conjunction with Data Owner approval for individual access requests.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.1.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Utilize access control lists (derived from 3.1.1) to limit access to applications and data based on role and/or identity. Log access as appropriate.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">User access requests checked against AD database for authorization.&nbsp; All access requests are recorded and logged.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.1.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enforce approved authorizations for controlling the flow of information within the system and between interconnected systems based on UI policies.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Enforcement includes: (i) prohibiting information transfers between interconnected systems; (ii) employing hardware mechanisms to enforce one-way information flows; and (iii) implementing trustworthy regrading mechanisms to reassign security attributes and labels.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.1.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">If a system user accesses data as well as maintains the system in someway, create separate accounts with appropriate access levels to separate functions.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System administrative accounts are separate from user accounts.&nbsp; Further, administrative responsibilities are separated within System Operations Team by function, providing a full separation of administrative and security duties.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.1.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only grant enough privileges to a system user to allow them to sufficiently fulfill their job duties. 3.1.4 references account separation.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System Operations Team user accounts are only authorized the minimum number of rights needed to operate the system; all additional privileges require administrative access, hierarchically arranged through.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.1.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Users with multiple accounts (as defined in 3.1.4 and 3.1.5) must logon with the least privileged account. Access to non-security functions must be performed with an unprivileged account.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Implements GPO and IAM controls to limit security-relevant account access to non-security functions.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.1.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enable auditing of all privileged functions, and control access using access control lists based on identity or role.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Configures system to enable logging of all privileged functions on the system.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.1.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Configure system to lock logon mechanism for a predetermined time and lock user account out of system after a predetermined number of invalid logon attempts.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Configures system to enable system lock based on a small number of unsuccessful logon attempts.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.1.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Logon screen should display appropriate notices.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Updates logon screen to display privacy and security notices consistent with applicable CUI rules.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.1.10</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Configure system to lock session after a predetermined time of inactivity. Allow user to lock session for temporary absence.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Configures system to enable session lock after no more than 10 minutes of inactivity, and allow user to manually lock session for temporary absence.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:47.0pt;width:76pt;">3.1.11</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Configure system to end a user session after a predetermined time based on duration and/or inactivity of session.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Configures system to terminate sessions after a finite period of time (less than 24 hours) or after a finite period of inactivity (less than 4 hours).</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.1.12</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Run network and system monitoring applications to monitor remote system access and log accordingly.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Remote access authorized through VPN only.&nbsp; &nbsp;Monitors remote system access and logs to central repository.&nbsp; Uses access control lists to limit remote access to authorized users and locations only.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.1.13</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Any application used to remotely access the system must use approved encryption methods.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">VPN uses approved encryption for all remote access.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.1.14</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system routes all remote access through managed network access control points.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">All remote access occurs via VPN portal.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.1.15</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization authorizes the execution of privileged commands and access to security-relevant information via remote access only for emergency purposes, and documents the rationale for such access in the security plan for the information system</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Remote security administration performed exclusively by ISPO; privileged remote access not authorized for non-ISPO personnel.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.1.16</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization establishes usage restrictions, configuration/ connection requirements, and implementation guidance for wireless access; and authorizes wireless access to the IS before allowing such connections</td>
+        <td style="border-left:none;border-top:none;width:244pt;">WiFi access requires acknowledgement of UI Network Citizenship Policy; only authorized users allowed access.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.1.17</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system protects wireless access to the system using authentication of users and encryption.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">WiFi uses WPA2/Enterprise encryption and requires authentication prior to access</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.1.18</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization establishes usage restrictions, configuration requirements, connection requirements, and implementation guidance for organization-controlled mobile devices, and authorizes the connection of mobile devices to the information system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Mobile access only authorized via VPN.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.1.19</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization employs full-device drive encryption to protect the confidentiality and integrity of information on organization-defined mobile devices</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Full-device encryption required on all mobile devices that process UI sensitive data</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:90.0pt;width:76pt;">3.1.20</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization establishes terms and conditions, consistent with any trust relationships established with other external information systems, allowing authorized individuals to access the UI information system from external locations; and process, store, and transmit organization-controlled information using external information systems.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">VPN connection required to access &nbsp;information system; a formal <a href="/bronze-controls/data-handling-controls">Data Handling Control</a> policy is in place</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.1.21</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization restricts the use of portable storage devices by authorized individuals on external information systems.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Policy to prevent release of sensitive data outside UI control; portable storage devices are encrypted per UI policy.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:90.0pt;width:76pt;">3.1.22</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Access Control</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization designates individuals authorized to post information at publicly-accessible locations; trains authorized individuals to ensure public information does not contain non-public information; reviews proposed content prior to public posting; and annually reviews the content of public data for non-public information release (and removes such information if discovered).</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:90.0pt;width:76pt;">3.2.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Awareness and Training</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Users, managers, and system administrators of the information system will receive initial and annual training commensurate with their role and responsibilities.&nbsp; The training will provide a basic understanding of the need for information security, applicable policies, standards, and procedures related to the security of the information system, as well as user actions to maintain security and respond to suspected security incidents.&nbsp; The content will also address awareness of the need for operations security.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Personnel receive annual security training.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:134.0pt;width:76pt;">3.2.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Awareness and Training</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Personnel with security-related duties and responsibilities will receive initial and annual training on their specific operational, managerial, and technical roles and responsibilities covering physical, personnel, and technical safeguards and countermeasures.&nbsp; &nbsp;Training will address required security controls related to environmental and physical security risks, as well as training on indications of potentially suspicious email or web communications, to include suspicious communications and other anomalous system behavior.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Personnel receive initial and annual training on their specific roles and responsibilities to meet this requirement.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:176.0pt;width:76pt;">3.2.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Awareness and Training</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Users, managers, and administrators of the information system will receive annual training on potential indicators and possible precursors of insider threat, to include long-term job dissatisfaction, attempts to gain unauthorized access to information, unexplained access to financial resources, bullying or sexual harassment of fellow employees, workplace violence, and other serious violations of organizational policies, procedures, directives, rules, or practices.&nbsp; Security training will include how to communicate employee and management concerns regarding potential indicators of insider threat in accordance with established organizational policies and procedures.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Multi-tiered training.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:85.0pt;width:76pt;">3.3.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization creates, protects, retains information system audit records for between 30-days and 1-year (depending on data source) in order to enable the monitoring, analysis, investigation, and reporting of unlawful, unauthorized, or inappropriate information system activity.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Audit information retained in accordance with policy</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.3.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization correlates network activity to individual user information order to uniquely trace and hold accountable users responsible for unauthorized actions.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Varies by organization.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.3.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization reviews and updates audited events annually.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">ISPO reviews audit scope regularly.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.3.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system alerts the Security Office in the event of an audit processing failure, and maintains audit records on host servers</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Failure to submit logs into &nbsp;log management solution results in alert notifications</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.3.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization analyzes and correlates audit records across different repositories to gain organization-wide situational awareness.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Audit records stored in log management solution for correlation and organization-wide situational awareness.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.3.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system's audit capability provides an audit reduction and report generation capability that supports on-demand audit review, analysis, and reporting requirements and after-the-fact security investigations; and does not alter the original content or time ordering of audit records.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Audit functions retained in log management platform.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.3.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system uses internal system clocks to generate time stamps for audit records, and records time stamps that can be mapped to UTC; compares system clocks with authoritative NTP servers, and synchronizes system clocks when the time difference is greater than 1 second.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Network Time coordinated with NTP servers and Microsoft/Apple NTP servers.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.3.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system protects audit information and audit tools from unauthorized access, modification, and deletion.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Log management solution data cannot be deleted without administrative credentials.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.3.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Audit and Accountability</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization authorizes access to management of audit functionality to only authorized individuals</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Only System Operations Team personnel authorized to access Log management solution.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:75.0pt;width:76pt;">3.4.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Baseline configurations will be developed, documented, and maintained for each information system type. Baseline configurations will include software versions and patch level, configuration parameters, network information including topologies, and communications with connected systems. Baseline configurations will be updated as needed to accommodate security risks or software changes. Baseline configurations will be developed and approved in conjunction with the CISO (or equivalent) and the information security owner. Deviations from baseline configurations will be documented.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System Operations Team maintains baseline configurations and change management functions.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.4.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Security settings will be included as part of baseline configurations. Security settings will reflect the most restrictive appropriate for compliance requirements. Changes or deviations to security settings will be documented.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System Operations Team baseline security settings retained in change management policy.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.4.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Changes or deviations to information system security control configurations that affect compliance requirements will be reviewed and approved by a change advisory board. The changes will also be tracked and documented in an approved service management system (ITSM) or equivalent tracking service. Change control tracking will be audited annually.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">ISPO reviews deviations from approved configurations and recorded in IRDB.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.4.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Changes or deviations that affect information system security controls pertaining to compliance requibments will be tested prior to implementation to test their effectiveness. Only those changes or deviations that continue to meet compliance requirements will be approved and implemented.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">All changes must be tested prior to implementation.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.4.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only those individuals approved to make physical or logical changes on information systems will be allowed to do so. Authorized personnel will be approved and documented by the service owner and IT security. All change documentation will include the authorized personnel making the change.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System configuration changes are centrally managed by System Operations Team.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.4.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Information systems will be configured to deliver one function per system where practical.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System Operations Team (and ISPO) monitor system functionality and approve network architecture to achieve best-possible application of least-functionality principle.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.4.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only those ports and protocols necessary to provide the service of the information system will be configured for that system. Applications and services not necessary to provide the service of the information system will not be configured or enabled. Systems services will be reviewed to determine what is essential for the function of that system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.4.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The information system will be configured to only allow authorized software to run. The system will be configured to disallow running unauthorized software. The controls for allowing or disallowing the running of software may include but is not limited to the use of firewalls to restrict port access and user operational controls.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System configurations prevent unsigned/unauthorized software installation.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.4.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Configuration Management</td>
+        <td style="border-left:none;border-top:none;width:312pt;">User controls will be in place to prohibit the installation of unauthorized software. All software for information systems must be approved.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT policy prohibits use of unauthorized software.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:88.5pt;width:76pt;">3.5.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Systems will make use of institutionally assigned accounts for unique access by individual. Should service accounts be necessary for device or process authentication, the accounts will be created by the central identity management team and assigned to a member of the research team. Institutional and service accounts are managed centrally and deprovisioned automatically when an individual leaves.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Users assigned account per user; service accounts supervised and managed by identity management team, and assigned to a specific user for implementation.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:208.0pt;width:76pt;">3.5.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Per control 3.5.1, the accounts in use will be assigned and managed by a central identity management system. Accounts are provisioned as part of the established account creation process. Initial passwords are randomly generated strings provided via a password reset mechanism. The password must be reset upon first use. All passwords are at least 8 characters, and require a mix of upper and lower case letters, numbers, and special characters.&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">User authentication via user/password which meets password policy standards.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:47.0pt;width:76pt;">3.5.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Any network access to servers and virtual machines hosting the project data requires multi-factor authentication regardless if the account is privileged or unprivileged.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Network access restricted to system administrators.&nbsp; &nbsp;Multi-factor authentication.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.5.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only anti-replay authentication mechanisms will be used. The authentication front-end technologies include shibboleth, SSH, Microsoft remote desktop protocol, and Cisco SSL VPN. Backend authentication mechanisms in use include Kerberos and Active Directory.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">User Authentication utilizes SAML authentication for non-UI hosted sites; Active Directory / Kerberos authentication required for UI-hosted resources.&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.5.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Per control 3.5.1, the accounts in use will be assigned and managed by a central identity management system. Accounts are provisioned as part of the established account creation process. Accounts are uniquely assigned. Account identifiers are not reused.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Username is uniquely assigned.&nbsp; IDs are not reused.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.5.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">User accounts or identifiers associated with a project or contract covered by NIST 800-171 are monitored for inactivity. Account access to the in-scope systems after 90/180/365 days of inactivity.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Accounts are disabled after XXXX months of inactivity.&nbsp; Local system account configuration may be required to disable after a specified period of inactivity.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.5.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Account passwords must be a minimum of 8 characters and a mix of upper/lower case, numbers and symbols.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Passwords conform to password policy.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.5.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Passwords may not be re-used for &lt;XX days&gt;.<br>&nbsp;<br>&nbsp;Users may not re-use the same password when changing their password for at least XX changes.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Passwords conform to password policy.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.5.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">New employees will receive an account and instructions for creating a password from HR during the hiring process. New students receive notification of their account via email with an activation link to set their initial password. Temporary password activation links are sent to validated. Temporary passwords are only good to allow for a password reset.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Temporary passwords are restricted to new employees only, and require password reset upon login.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.5.10</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Passwords are not stored in reversible encryption form in any of our systems. Instead, they are stored as one-way hashes constructed from passwords.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Active Directory stores passwords in a one-way hash format (currently using SHA-256 algorithm)</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.5.11</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Identification and Authentication</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The most basic feedback control is never informing the user in an error message what part of the of the authentication transaction failed.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Login pages obscure password input; error feedback does not specify username or password error.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.6.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Incident Response</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization maintains a standardized incident-response framework that includes adequate preparation, detection, analysis, containment, recovery, and user response activities.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Cyber Security Incident Escalation</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.6.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Incident Response</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization tracks, documents, and reports incidents to appropriate authorities and/or officials both inside and outside the organization.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Cyber Security Incident Escalation</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:72.0pt;width:76pt;">3.6.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Incident Response</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization tests the incident response capability for the information system at least annually using tabletop exercises and simulations to determine incident response effectiveness and documents the results.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Cyber Security Incident Escalation</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.7.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All systems, devices, supporting systems for organizational information systems must be maintained according to manufacturer recommendations or organizationally defined schedules&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Maintenance performed on all system and network systems in accordance with manufacturer recommendations.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.7.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Organizations will put in place controls that limit the tools, techniques, mechanisms and personnel that will be used to maintain information systems, devices, and supporting systems.&nbsp; This can include a lists of authorized tools, authorized personnel, and authorized techniques and mechanisms.&nbsp; Any such maintenance must occur within the context of other information systems controls in place.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System maintenance centralized with System Operations Team sections.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.7.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Any media that is removed from the premises for maintenance or disposal must be sanitized according to the organization's media sanitization policies.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Computer Data and Media Disposal Policy</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.7.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Any media that is provided by authorized maintenance personnel (and not normal Systems administrators/owners) for troubleshooting, diagnostics, or other maintenance must be run through an anti-virus/anti-malware program prior to use in an organizational information system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Tools being used for system maintenance undergo software review prior to use on UI networks.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.7.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All remote access to an information system for maintenance or diagnostics must occur via an approved remote solution using multi-factor authentication.&nbsp; A remote session must be disconnected when maintenance is complete</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Remote maintenance activities logically segregated from production servers; remote administrative access requires use of multi-factor authentication.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.7.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Maintenance</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All activities of maintenance personnel who do not normally have access to a system must be monitored.&nbsp; The organization will define approved methods for supervision.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data Centers log all maintenance and visitors.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.8.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Responsible parties for data in these systems will document and ensure proper authorization controls for data in media and print.&nbsp; Documented workflow, data access contols and media policy will be enforced to ensure proper access controls.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.8.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All CUI systems will be managed under least access rules.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.8.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All managed data storage will be erased, encrypted or destroyed using mechanisms with sufficient power to ensure that no usable data is retrievable from storage devices identified in the workflow of these systems/services.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.8.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All CUI system will be identified with an asset control identifier</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:60.0pt;width:76pt;">3.8.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only approved individuals are to have access to media from CUI systems.&nbsp; Chain of evidence will be maintained for any media removed from these systems.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.8.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All CUI data on media will be encrypted or physically locked prior to transport outside of the institutions secure locations.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.8.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Removable media will only be allowed if there are processes in place to control them. Removable media must be able to support physical encryption and key vaulting must be utilized to ensure recoverability</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Removable media not authorized on devices processing CUI data.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.8.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Only approved portable storage devices under asset management are to be used to store CUI data.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Portable Storage not authorized to store or process CUI data.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:30.0pt;width:76pt;">3.8.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Media Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Data backups will be encrypted on media before removal from a secured facility</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Backup data remains encrypted until retrieval by System Owner</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.9.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Personnel Security</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will screen individuals prior to authorizing access to the information system, in accordance with applicable federal laws, Executive Orders, directives, regulations, policies, standards, guidance, and specific criteria established for the risk designations of assigned positions.&nbsp; Criteria may include, for example, position sensitivity background screening requirements.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:144.0pt;width:76pt;">3.9.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Personnel Security</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organzation will disable information system accesss prior to individual termination or transfer.&nbsp; Within 24 hours of termination or transfer, the organization will revoke any authenticators/credentials associated with the individual, retrieve all organizational information system-related property from the individual, retain access to organizational information and information systems formerly controlled by the individual, and notify the information security office and data owner of the change in authorization.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data Custodian must notify System Operations Team prior to termination or transfer of an individual with access to CUI.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.10.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The Area/Building Manager will desginate building areas as "sensitve" and design physical security protections (including guards, locks, cameras, card readers, etc) as necessary to limit physical access to the area to only authorized individuals.&nbsp; Output devices such as printers should be placed in areas where their use does not expose data to unauthorized individuals.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data centers designated as locations for sensitive data with extensive physical security controls.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.10.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The Area/Building Manager will review the location and type of physical security in use (including guards, locks, card readers, etc) and evaluate its suitability for the organization's needs.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data centers designated as locations for sensitive data with extensive physical security controls.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:32.0pt;width:76pt;">3.10.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All visitors to sensitive areas will be escorted by an authorized employee at all times.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data centers require all visitors be escorted at all times.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.10.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Logs of physical access to sensitive areas are maintained according to retention policies.&nbsp; This includes authorized access as well as visitor access.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data center access logs maintained according to Log Retention Guidelines</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.10.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Physical access devices (such as card readers, proximity readers, and locks) will be maintained and operated according to the manufacturer recommendations.&nbsp; These devices will be updated with any changed access control information as necessary to prevent unauthorized access.&nbsp; &nbsp;The Area/Building Manager will review the location and type of each physical access device and evaluate its suitability for the organization's needs.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data center physical access devices are maintained by facilities management personnel and vendors IAW manufacturer requirements.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:32.0pt;width:76pt;">3.10.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Physical Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">All alternate sites where sensitive data is stored or processed must meet the same physical security requirements as the main site.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data center backup site meets same physical security requirements as ITF</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:90.0pt;width:76pt;">3.11.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Risk Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The stewards of the system/services will provide an initial and periodic risk assessment.&nbsp; The assessments will be impact scored using FIPS 199.&nbsp; Changes in the environment that may affect the system or service, changes in use of or infrastructure will be documented and assessed as modified.&nbsp; The impact analysis is to be a living document and incorporated into a larger risk assessment profile for the system/service.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.11.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Risk Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Systems will be periodically scanned for common and new vulnerabilities.&nbsp; Any vulnerability not documented will be risk assessed and documented.&nbsp; Reports regarding the scans will be made available to system stewards and owners in a timely manner.&nbsp;&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Vulnerability scanning performed quarterly and upon request.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.11.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Risk Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Stewards and owners upon recognition of any vulnerability will provide an action plan for remediation, acceptance, aversion or transference of the vulnerability risk including a reasonable time frame for implementation.&nbsp; All high vulnerabilities will be prioritized.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:224.0pt;width:76pt;">3.12.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Security Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">An annual security assessment will be conducted to ensure that security controls are implemented correctly and meet the security requirements for the compliance environment. The assessment scope includes all information systems and networks in or directly connected to the compliance environment and all security controls and procedures necessary to meet the compliance requirements of the environment. The assessment will include, but is not limited to, vulnerability scanning, penetration testing, security control testing and reviews, configuration testing and reviews, log reviews, and personnel interviews. A representative sampling of systems will be assessed. Information Security, or an independent security auditor, will conduct the assessment. A final written assessment report and findings will be provided to the CIO at the conclusion of the assessment.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">An annual security assessment will be performed on the information system maintaining CUI.&nbsp;&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.12.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Security Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">An action plan to remediate identified weaknesses or deficiencies will be maintained. The action plan will designate remediation dates and milestones for each item. Deficiencies and weaknesses identified in security controls assessments, security impact analyses, and<br>continuous monitoring activities will be added to the action plan within 30 days of the findings being reported.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.12.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">Security Assessment</td>
+        <td style="border-left:none;border-top:none;width:312pt;">At a minimum, systems will be monitored for privileged access, permission changes, kernel modifications, and binary changes, against a control and system baseline. Continuous monitoring reports and alerts will be reviewed daily. Unauthorized changes or unauthorized access will be reported to the CISO and information system owner within 24 hours of it being reported.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">System security monitoring in place.&nbsp; Controls are reviewed regularly for effectiveness and updated when necessary.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.13.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enumerate policies for managed interfaces such as gateways, routers, firewalls, VPNs; organizational DMZs; and restricting external web traffic to only designated servers.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT Policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.13.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline organizational information security policies, to include standards for architectural design, software development, and system engineering principles designed to promote information security.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT Policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.13.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enumerate the physical or logical controls used to separate user functionality from system management-related functionality (e.g., to ensure that administration (e.g. privilege) options are not available to general users).</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT Policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.13.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enumerate the controls implemented to prevent object reuse and to protect residual information.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT Policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline the policies for organizational DMZs.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">IT Policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Document all business need exceptions to network communications traffic (inbound/outbound) “deny all” policies.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Firewall ACL changes noted in IRDB.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline controls to prevent split tunneling in remote devices, and to mandate VPN use when necessary for business functions.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">ACL rules noted in IT Policies, validated via ISPO scanning</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.13.8</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline the processes and automated mechanisms used to provide encryption of CUI during transmission; or document all alternative physical safeguards used to provide confidentiality of CUI during transmission.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data transfer between systems must occur over encrypted channels only.&nbsp; This includes use of HTTPS, TLS, and other standard protocol encryption methodologies.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.13.9</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline controls for terminating communications sessions on both internal and external networks (e.g., deallocating TCP/IP addresses/port pairs); and institute time periods of inactivity based on type of network accesses.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Network sessions are deactivated upon termination of a session.&nbsp; Systems have varying inactivity timelines for termination.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:48.0pt;width:76pt;">3.13.10</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline the processes and automated mechanisms used to provide key management within the information system (should also follow any relevant laws, regulations, and policies).</td>
+        <td style="border-left:none;border-top:none;width:244pt;">ISPO manages signed keys for network services via InCommon.&nbsp; Self-signed keys for internal systems are managed by System Operations Team.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.11</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline where FIPS-validated cryptographic is used.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">DES/AES encryption used for CUI protection.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:64.0pt;width:76pt;">3.13.12</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Enumerate actions to remove or disable collaborative computing devices from information systems housing CUI; and to notify users when collaborative computing devices are in use (e.g., cameras, microphones, etc.).</td>
+        <td style="border-left:none;border-top:none;width:244pt;">&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.13</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Define limits of mobile code usage, establish usage restrictions, and specifically authorize use of mobile code (e.g., Java, ActiveX, Flash, etc.) within an information system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">May not be met by existing policies</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.14</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Define and establish usage restrictions, and specifically authorize the business necessary use of VoIP technologies within an information system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">No VoIP used in CUI networks.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:80.0pt;width:76pt;">3.13.15</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline the controls implemented to protect session communications (e.g., the controls implemented to validate identities and information transmitted to protect against MITM attacks, session hijacking, and insertion of false information into sessions).</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Web communications use signed certificates via InCommon that are managed by ISPO.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.13.16</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Communications Protection</td>
+        <td style="border-left:none;border-top:none;width:312pt;">Outline controls used to protect CUI while stored in organizational information systems.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Data-At-Rest Encryption required for all CUI servers.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:160.0pt;width:76pt;">3.14.1</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will perform all security-relevant software updates, to include patching, service packs, hot fixes, and anti-virus signature additions in response to identified system flas and vulnerabilities within the time prescribed by organizational policy (Critical/High: 5 days, Moderate: 30 days, Low: As-Available).&nbsp; When available, managers and administrators of the information system will rely on centralized management of the flaw remediation process, to include the use of automated update software, patch management tools, and automated status scanning.&nbsp;&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Achieved via SCCM, SCEP, and ISPO Vulnerability Scanning procedures.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:96.0pt;width:76pt;">3.14.2</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will employ malicious code protection mechanisms at information system entry and exit points to minimize the presence of malicious code.&nbsp; These protection mechanisms may include, for example, firewalls, electronic mail servers, web servers, proxy servers, remote-access servers, workstations, notebook computers, and mobile devices.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Cisco FireSIGHT IDS enabled at border, along with firewalls between network segments.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.14.3</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will receive security alerts, advisories, and directives from reputable external agencies, and disseminate this information to individuals with need-to-know in the organization.&nbsp; &nbsp;In the event of alerts, advisories, or directives that have widespread impact on the organization, internal security directives will be disseminated directly to information system users, managers, and administrators.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">ISPO receives security alerts, advisories, and alerts from a variety of government and non-governmental resources, to include REN-ISAC, MS-ISAC, FBI, Trustwave, SourceFire, et. al.&nbsp; Alerts that require system user or data custodian need-to-know are disseminated to the lowest level.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.14.4</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will update information system protection mechanisms within 5 days of new releases.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">SCEP and IDS threat feeds update signatures at least hourly; SCEP updates to endpoints occur either immediately or at next logon.</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.14.5</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will perform quarterly scans of the information system, as well as real-time scanning of files from external sources.&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Network Vulnerability Scanning &amp; Penetration Testing</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:112.0pt;width:76pt;">3.14.6</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will monitor the information system to detect attacks and indicators of potential attacks, as well as unauthorized local, network, and remote connections.&nbsp; The organization will strategically deploy monitoring devices within the information system to collect essential information system.&nbsp; &nbsp;Information gained from these monitoring tools will be protected from unauthorized access, modification, and deletion.&nbsp;</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Information Security Framework</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="border-top:none;height:45.0pt;width:76pt;">3.14.7</td>
+        <td style="border-left:none;border-top:none;width:127pt;">System and Information Integrity</td>
+        <td style="border-left:none;border-top:none;width:312pt;">The organization will monitor the information system to identify unauthorized access and use, as well as potential misuse of the information system.</td>
+        <td style="border-left:none;border-top:none;width:244pt;">Information Security Framework</td>
+        <td style="border-left:none;border-top:none;width:363pt;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
