@@ -2,7 +2,7 @@
 title: Risk Management Regime
 description: Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.
 published: true
-date: 2021-02-23T19:04:50.637Z
+date: 2021-02-23T19:08:03.238Z
 tags: risk management, bronze, bronze-training, 10-steps, sourced, adapted
 editor: markdown
 dateCreated: 2021-02-21T15:52:18.795Z
