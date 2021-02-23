@@ -2,7 +2,7 @@
 title: -bronze-checklists-home
 description: Checklists Home Page
 published: true
-date: 2021-02-23T18:59:52.965Z
+date: 2021-02-23T19:01:05.178Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
