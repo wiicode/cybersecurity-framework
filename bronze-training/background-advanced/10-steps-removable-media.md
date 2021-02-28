@@ -2,7 +2,7 @@
 title: Removable media controls
 description: Removable media provide a common route for the introduction of malware and the accidental or deliberate export of sensitive data. You should be clear about the business need to use removable media and apply appropriate security controls to its use.
 published: true
-date: 2021-02-28T02:12:43.186Z
+date: 2021-02-28T02:13:03.681Z
 tags: bronze, bronze-training, 10-steps, sourced, data-security
 editor: markdown
 dateCreated: 2021-02-21T16:08:58.081Z
@@ -33,6 +33,6 @@ Removable media introduces the capability to transfer and store huge volumes of 
 
 **Encrypt information held on media**: Sensitive information should be encrypted at rest on media. If encryption is not employed then appropriate physical protection of the media is critical.
 
-Actively manage the reuse and disposal of removable media: Where removable media is to be reused or destroyed then appropriate steps should be taken to ensure that previously stored information will not be accessible. The processes will be dependent on the value of the information and the risks posed to it and could range from an overwriting process to the physical destruction of the media by an approved third party. For more information refer to Secure sanitisation of storage media.
+**Actively manage the reuse and disposal of removable media**: Where removable media is to be reused or destroyed then appropriate steps should be taken to ensure that previously stored information will not be accessible. The processes will be dependent on the value of the information and the risks posed to it and could range from an overwriting process to the physical destruction of the media by an approved third party. For more information refer to Secure sanitisation of storage media.
 
-Educate users and maintain awareness: Ensure that all users are aware of their personal responsibilities for following the removable media security policy.
+**Educate users and maintain awareness**: Ensure that all users are aware of their personal responsibilities for following the removable media security policy.
