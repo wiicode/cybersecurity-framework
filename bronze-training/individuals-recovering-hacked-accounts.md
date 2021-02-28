@@ -2,7 +2,7 @@
 title: Recovering a hacked account
 description: A step by step guide to recovering an online account
 published: true
-date: 2021-02-20T23:10:15.270Z
+date: 2021-02-28T01:49:01.662Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2021-02-20T23:10:15.270Z
