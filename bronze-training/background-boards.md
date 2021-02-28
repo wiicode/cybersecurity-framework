@@ -2,7 +2,7 @@
 title: Board and Ownership Toolkit
 description: While written for corporate boards, business owners will benefit from this information equally.
 published: true
-date: 2021-02-28T02:42:41.839Z
+date: 2021-02-28T02:45:50.531Z
 tags: bronze, bronze-training, board
 editor: markdown
 dateCreated: 2021-02-22T02:48:59.292Z
@@ -15,7 +15,7 @@ The BCSF is often asked 'what does good look like?' The simple answer is 'whatev
 # Board Member Guidance
 
 {.grid-list}
-- [Embedding cyber security into your structure and objectives *Cyber security is not just 'good IT' - it must enable your organisation's digital activity to flourish.*](/bronze-training/background-boards/board-embedding)
+- [Embedding cyber security into your structure and objectives *Cyber security is not just 'good IT' - it must enable your organisation's digital activity to flourish. The role of cyber security is to enable the organization's objectives and, increasingly, enable competitive advantage. It should be adding value to your organization rather than hindering progress. This requires a positive cyber security culture and appropriate investment and management of cyber security.*](/bronze-training/background-boards/board-embedding)
 - [Growing cyber security expertise *As the demand for cyber security professionals grows, you need to plan ahead to ensure your organisation can draw upon expertise.*](/bronze-training/background-boards/board-growing)
 - [Developing a positive cyber security culture *Board members should lead by example to help promote a healthy cyber security culture.*](/bronze-training/background-boards/board-culture)
 - [Establishing your baseline and identifying what you care about most *Understanding what technical assets you have, and how they're critical to your organisation's objectives, are both key to effective risk management*](/bronze-training/background-boards/board-baseline)
