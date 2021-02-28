@@ -1,8 +1,8 @@
 ---
-title: -bronze-training-home
-description: 
+title: Learning and Training
+description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-23T19:05:52.439Z
+date: 2021-02-28T01:57:54.623Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
