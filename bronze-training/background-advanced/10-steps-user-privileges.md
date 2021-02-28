@@ -2,7 +2,7 @@
 title: Managing user privileges
 description: Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
 published: true
-date: 2021-02-28T02:11:04.659Z
+date: 2021-02-28T19:50:43.800Z
 tags: bronze, bronze-training, 10-steps, sourced, access-control
 editor: markdown
 dateCreated: 2021-02-21T16:04:07.910Z
@@ -16,14 +16,14 @@ dateCreated: 2021-02-21T16:04:07.910Z
 Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
 
 # What is the risk?
-Organisations should understand what level of access employees need to information, services and resources in order to do their job otherwise it won't be possible to manage rights appropriately. Failure to effectively manage user privileges could result in the following risks being realised:
+Organizations should understand what level of access employees need to information, services and resources in order to do their job otherwise it won't be possible to manage rights appropriately. Failure to effectively manage user privileges could result in the following risks being realised:
 
 - Misuse of privileges: Users could either accidentally or deliberately misuse the privileges assigned to them. This may result in unauthorised access to information to either the user or a third party or to unauthorised system changes having a direct security or operational impact.
 - Increased attacker capability: Attackers may use redundant or compromised user accounts to carry out attacks and, if able, they may return to reuse the compromised account or possibly sell access to others. The system privileges provided to the original user of the compromised account will be available to the attacker to use which is why they particularly seek to gain access to highly privileged or administrative accounts.
 - Negating established security controls: Where attackers have privileged system access they may make changes to security controls to enable further or future attack or might attempt to cover their tracks by making changing or audit logs.
 
 # How can the risk be managed?
-Organisations should determine what rights and privileges users need to effectively perform their duties and implement a policy of 'least privilege'.
+Organizations should determine what rights and privileges users need to effectively perform their duties and implement a policy of 'least privilege'.
 
 **Establish effective account management processes:** Manage user accounts from creation, through-life and eventually revocation when a member of staff leaves or changes role. Redundant accounts, perhaps provided for temporary staff or for testing, should be removed or suspended when no longer required.
 
