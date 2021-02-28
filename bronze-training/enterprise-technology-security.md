@@ -2,8 +2,8 @@
 title: Approaching enterprise technology with cyber security in mind
 description: How organisations can approach enterprise technology in order to deter cyber attacks.
 published: true
-date: 2021-02-21T22:09:10.059Z
-tags: security operations, bronze, bronze-training, ncsc
+date: 2021-02-28T20:42:41.539Z
+tags: bronze, bronze-training, sourced, security-operations, favorite
 editor: markdown
 dateCreated: 2021-02-21T22:09:10.059Z
 ---
