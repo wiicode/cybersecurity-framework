@@ -2,13 +2,16 @@
 title: Statistics
 description: 
 published: true
-date: 2021-02-13T23:44:10.196Z
+date: 2021-02-28T20:00:34.706Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T17:59:45.632Z
 ---
 
 # Top Thirty Cybersecurity Statistics 
+> IBM’s “2014 Cyber Security Intelligence Index” reported that 95 percent of all security incidents involve human error. In 2016 they added that 60 percent of breaches are a result of insiders. Many of these are successful security attacks prey on human weakness in order to lure insiders within organizations to unwittingly provide them with access to sensitive information.  
+{.is-info}
+
 
 - 43% of cyber attacks target small businesses.
 - 60% of small businesses that are victims of a cyber attack go out of business within six months.
