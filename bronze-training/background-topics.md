@@ -2,7 +2,7 @@
 title: Deep Dives
 description: A complete guide to your governance program
 published: true
-date: 2021-02-28T20:32:37.259Z
+date: 2021-02-28T20:41:00.854Z
 tags: governance, bronze, bronze-training, security-governance, guide
 editor: markdown
 dateCreated: 2021-02-28T20:12:57.095Z
@@ -16,11 +16,9 @@ dateCreated: 2021-02-28T20:12:57.095Z
 {.links-list}
 
 # Risk Management
-.grid-list}
-- [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
-- [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
-- [Small Business Cyber Security - Level 2*A more complete approach to information security.*](/bronze-training/background-advanced)
-- [Small Business Cyber Security - Level 3*A guide to information security governance.*](/bronze-training/background-governance)
-- [Boards and Company Leadership *Education for business owners and boards alike.*](/bronze-training/background-boards)
-
+{.grid-list}
+- [Introduction to the risk management for cyber security guidance*Every organisation has to make difficult decisions around how much time and money to spend protecting their technology and services; one of the main goals of risk management is to inform and improve these decisions. People have had to deal with dangers throughout history, but it’s only relatively recently that they’ve been able do so in a way that systematically anticipates and aspires to control risk. The purpose of this guidance is to give you a range of risk management techniques which will help you improve the decisions you make with regard to cyber security.*](/bronze-training/background-topics/risk-1-intro)
+- [The fundamentals of risk*This section focuses on the fundamental principles of risk management. Here, we won’t be talking about standards or policies, or even anything directly to do with cyber security. Rather, we'll be introducing some fundamental principles of risk management, which are relevant whether you’re studying disease outbreaks, the rise and fall of stock markets, or the risks of a cyber attack.*](/bronze-training/background-topics/risk-2-fundamentals)
+- [Get the basics right: risk management principles for cyber security*This section describes some basic risk management principles that will suffice for most small and medium sized enterprises (SMEs) or sole proprietors.*](/bronze-training/background-topics/risk-3-principles)
+- [Variety in risk information*Why recognising different types of information is essential when assessing cyber risk. Risk information is any information which can influence a decision. Some organisations have a tendency to only accept certain types of information as legitimate risk information. Such limitations increase the chance of something important being missed.*](/bronze-training/background-topics/risk-4-riskinfo)
 {.links-list}
