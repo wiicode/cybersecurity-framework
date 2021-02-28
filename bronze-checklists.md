@@ -1,8 +1,8 @@
 ---
-title: -bronze-checklists-home
+title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-02-28T03:21:29.069Z
+date: 2021-02-28T03:22:26.396Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
