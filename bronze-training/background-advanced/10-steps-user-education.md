@@ -2,8 +2,8 @@
 title: User education and awareness
 description: Users have a critical role to play in their organisation’s security and so it's important that security rules and the technology provided enable users to do their job as well as help keep the organisation secure. 
 published: true
-date: 2021-02-21T16:10:59.327Z
-tags: bronze, bronze-training, ncsc, 10-steps
+date: 2021-02-28T02:13:36.580Z
+tags: bronze, bronze-training, 10-steps, sourced
 editor: markdown
 dateCreated: 2021-02-21T16:10:59.327Z
 ---
@@ -25,17 +25,17 @@ Users have a critical role to play in helping to keep the organisation secure, b
 - Insider threat: Changes over time in an employee’s personal situation could make them vulnerable to coercion, and they may release personal or sensitive commercial information to others. Dissatisfied employees may try to abuse their system level privileges or coerce other employees to gain access to information or systems to which they are not authorised. Equally, they may attempt to steal or physically deface computer resources.
 
 # How can the risk be managed?
-Produce a user security policy: Develop a user security policy, as part of the overarching corporate security policy. Security procedures for all systems should be produced with consideration to different business roles and processes. A 'one size fits all' approach is typically not appropriate for many organisations. Policies and procedures should be described in simple business-relevant terms with limited jargon.
+**Produce a user security policy:** Develop a user security policy, as part of the overarching corporate security policy. Security procedures for all systems should be produced with consideration to different business roles and processes. A 'one size fits all' approach is typically not appropriate for many organisations. Policies and procedures should be described in simple business-relevant terms with limited jargon.
 
-Establish a staff induction process: New users (including contractors and third party users) should be made aware of their personal responsibility to comply with the corporate security policies as part of the induction process. The terms and conditions for their employment, or contract, should be formally acknowledged and retained to support any subsequent disciplinary action.
+**Establish a staff induction process:** New users (including contractors and third party users) should be made aware of their personal responsibility to comply with the corporate security policies as part of the induction process. The terms and conditions for their employment, or contract, should be formally acknowledged and retained to support any subsequent disciplinary action.
 
-Maintain user awareness of the security risks faced by the organisation: All users should receive regular refresher training on the security risks to the organisation. Consider providing a platform for users to enquire about security risks and discuss the advice they are given. On the whole, users want to do the right thing, so giving them guidance to put security advice into practice will help.
+**Maintain user awareness of the security risks faced by the organisation**: All users should receive regular refresher training on the security risks to the organisation. Consider providing a platform for users to enquire about security risks and discuss the advice they are given. On the whole, users want to do the right thing, so giving them guidance to put security advice into practice will help.
 
-Support the formal assessment of security skills: Staff in security roles should be encouraged to develop and formally validate their security skills through enrolment on a recognised certification scheme. Some security related roles such as system administrators, incident management team members and forensic investigators may require specialist training.
+**Support the formal assessment of security skills**: Staff in security roles should be encouraged to develop and formally validate their security skills through enrolment on a recognised certification scheme. Some security related roles such as system administrators, incident management team members and forensic investigators may require specialist training.
 
-Monitor the effectiveness of security training: Establish mechanisms to test the effectiveness and value of the security training provided to all users. This will allow training improvements and the opportunity to clarify any possible misunderstandings. Ideally the training provided will allow for a two-way dialogue between the security team and users.
+**Monitor the effectiveness of security training**: Establish mechanisms to test the effectiveness and value of the security training provided to all users. This will allow training improvements and the opportunity to clarify any possible misunderstandings. Ideally the training provided will allow for a two-way dialogue between the security team and users.
 
-Promote an incident reporting culture: The organisation should enable a security culture that empowers staff to voice their concerns about poor security practices and security incidents to senior managers, without fear of recrimination. This should be reciprocated with a culture where security professionals acknowledge that security-related effort by non-security staff is time away from their work, and is helping to protect the organisation.
+**Promote an incident reporting culture**: The organisation should enable a security culture that empowers staff to voice their concerns about poor security practices and security incidents to senior managers, without fear of recrimination. This should be reciprocated with a culture where security professionals acknowledge that security-related effort by non-security staff is time away from their work, and is helping to protect the organisation.
 
-Establish a formal disciplinary process: All staff should be made aware that any abuse of the organisation’s security policies will result in disciplinary action being taken against them. All sanctions detailed in policy should be enforceable at a practical level.
+**Establish a formal disciplinary process**: All staff should be made aware that any abuse of the organisation’s security policies will result in disciplinary action being taken against them. All sanctions detailed in policy should be enforceable at a practical level.
 
