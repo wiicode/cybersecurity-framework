@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-28T20:11:48.576Z
+date: 2021-02-28T20:22:29.954Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -19,13 +19,13 @@ This section is a starting point to majority of our small business cyber securit
 - [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
 {.links-list}
 
-# The Basics
+# Information Security Training 
 > All businesses use information. If that information is compromised in some way, the business may not be able to function. Protecting the information an organization creates, uses, or stores is information security. Information security concentrates on how to protect confidentiality, integrity, and availability of all business information; this is known as the CIA triad.
 {.is-info}
 
 The CIA triad is a model designed to guide policies for information security within an organization. **Confidentiality** is protecting information from unauthorized access and disclosure. **Integrity** is protecting information from unauthorized modification. **Availability** is preventing disruption in how an organization accesses the data.
 
-## Small Business Information Security Guides
+## Information Security Guides
 
 > BCSF Guides provide management, technical, and oversight guidence.  These two sections contain extensive information on creating your own security program. 
 {.is-success}
