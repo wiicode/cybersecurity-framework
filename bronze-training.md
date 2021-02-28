@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-28T19:58:13.079Z
+date: 2021-02-28T20:03:08.530Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -10,7 +10,7 @@ dateCreated: 2020-08-05T18:12:08.265Z
 
 # Learning and Training
 
-> IBM’s “2014 Cyber Security Intelligence Index” reported that 95 percent of all security incidents involve human error. In 2016 they added that 60 percent of breaches are a result of insiders. Many of these are successful security attacks prey on human weakness in order to lure insiders within organizations to unwittingly provide them with access to sensitive information.
+> Deloitte estimates that some common criminal businesses can be operated for as little as $34 month and could return $25,000, while others may routinely require nearly $3,800 a month and could return up to $1 million per month.
 {.is-warning}
 
 This section is a starting point to majority of our small business cyber security resources. A good starting point is looking at personal online life and individual security needs.
