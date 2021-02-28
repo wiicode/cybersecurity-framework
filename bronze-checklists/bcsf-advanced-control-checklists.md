@@ -2,7 +2,7 @@
 title: BCSF Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
 published: true
-date: 2021-02-28T03:24:58.296Z
+date: 2021-02-28T03:29:04.120Z
 tags: checklist, bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-02-23T01:06:15.574Z
@@ -35,7 +35,7 @@ Information governance often begins with a risk assessment and develop their inf
 
 
 {.grid-list}
-- [Asset Management *More.*](/bronze-checklists/bcsf-advanced-control-checklists/controls-asset-management)
+- [Asset Management *More.*](/bronze-checklists/bcsf-advanced-control-checklists/controls-asset-management) 
 - [Backup Management *More.*](/bronze-checklists/bcsf-advanced-control-checklists/checklist-backup-management)
 - [Business Continuity *More.*](/bronze-checklists/bcsf-advanced-control-checklists/checklist-business-continuity)
 - [Change Management *More.*](/bronze-checklists/bcsf-advanced-control-checklists/checklist-change-management)
