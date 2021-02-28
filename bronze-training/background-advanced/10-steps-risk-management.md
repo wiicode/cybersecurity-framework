@@ -2,7 +2,7 @@
 title: Risk Management Regime
 description: Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.
 published: true
-date: 2021-02-23T19:08:03.238Z
+date: 2021-02-28T19:49:44.760Z
 tags: risk management, bronze, bronze-training, 10-steps, sourced, adapted
 editor: markdown
 dateCreated: 2021-02-21T15:52:18.795Z
@@ -13,7 +13,7 @@ dateCreated: 2021-02-21T15:52:18.795Z
 
 
 # Summary
-organizations rely on technology, systems and Information to support their business goals. It is important that organizations apply a similar level of rigor to assessing the risks to its technology, systems and information assets as it would to other risks that might have a material business impact, such as regulatory, financial or operational risks. This can be achieved by embedding an appropriate risk management regime across the organization, which is actively supported by the board, senior managers and an empowered governance structure.
+Organizations rely on technology, systems and Information to support their business goals. It is important that organizations apply a similar level of rigor to assessing the risks to its technology, systems and information assets as it would to other risks that might have a material business impact, such as regulatory, financial or operational risks. This can be achieved by embedding an appropriate risk management regime across the organization, which is actively supported by the board, senior managers and an empowered governance structure.
 
 Defining and communicating the organization’s attitude and approach to risk management is crucial. Boards may wish to consider communicating their risk management approach and policies across the organization to ensure that employees, contractors and suppliers are aware of the organization’s risk management boundaries.
 
