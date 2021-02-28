@@ -2,8 +2,8 @@
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
 published: true
-date: 2021-02-21T15:59:15.003Z
-tags: security operations, incident management, bronze, bronze-training, ncsc, 10-steps
+date: 2021-02-28T02:09:29.939Z
+tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:59:15.003Z
 ---
@@ -28,22 +28,22 @@ If businesses fail to implement an incident management capability to detect, man
 The organisation’s business profile or role will determine the type and nature of incidents that could occur and the impact they might have, so a risk-based approach should be used to shape incident management plans.
 
 # How can the risk be managed?
-Establish an incident response capability: Identify the funding and resources to develop, deliver and maintain an organisation-wide incident management capability. Resources could be in house or you might pre-establish a relationship with an specialist incident management company. This should address the full range of incidents that could occur and set out appropriate responses. The supporting policy, processes and plans should be risk based and cover any legal or regulatory reporting requirements.
+**Establish an incident response capability**: Identify the funding and resources to develop, deliver and maintain an organisation-wide incident management capability. Resources could be in house or you might pre-establish a relationship with an specialist incident management company. This should address the full range of incidents that could occur and set out appropriate responses. The supporting policy, processes and plans should be risk based and cover any legal or regulatory reporting requirements.
 
-Provide specialist training: The incident response team may need specialist knowledge and expertise across a number of technical (including forensic investigation) and non-technical areas. You should identify recognised sources (internal or external) of specialist incident management training and maintain the organisation’s skill base.
+**Provide specialist training**: The incident response team may need specialist knowledge and expertise across a number of technical (including forensic investigation) and non-technical areas. You should identify recognised sources (internal or external) of specialist incident management training and maintain the organisation’s skill base.
 
-Define the required roles and responsibilities: Appoint and empower specific individuals (or suppliers) to handle incidents and provide them with clear terms of reference to make decisions and manage any incident that may occur. Ensure that the contact details of key personnel are readily available to use in the event of an incident.
+**Define the required roles and responsibilities**: Appoint and empower specific individuals (or suppliers) to handle incidents and provide them with clear terms of reference to make decisions and manage any incident that may occur. Ensure that the contact details of key personnel are readily available to use in the event of an incident.
 
-Establish a data recovery capability: Data losses can occur and so a systematic approach to the backup of essential data should be implemented. Where physical backup media is used this should be held in a physically secure location, ideally offsite. The ability to recover archived data for operational use should be regularly tested.
+**Establish a data recovery capability**: Data losses can occur and so a systematic approach to the backup of essential data should be implemented. Where physical backup media is used this should be held in a physically secure location, ideally offsite. The ability to recover archived data for operational use should be regularly tested.
 
-Test the incident management plans: All plans supporting security incident management (including business continuity and disaster recover plans) should be regularly tested. The outcome of the tests should be used to inform the future development of the incident management plans.
+**Test the incident management plans**: All plans supporting security incident management (including business continuity and disaster recover plans) should be regularly tested. The outcome of the tests should be used to inform the future development of the incident management plans.
 
-Decide what information will be shared and with whom: For services or information bound by specific legal or regulatory reporting requirements you may have to report incidents. All internal and external reporting requirements should be clearly identified in the incident management plan.
+**Decide what information will be shared and with whom**: For services or information bound by specific legal or regulatory reporting requirements you may have to report incidents. All internal and external reporting requirements should be clearly identified in the incident management plan.
 
-Collect and analyse post-incident evidence: The preservation and analysis of the sequence of events that led up to the incident is critical to identify and remedy the root cause. The collected evidence could also potentially support any follow on disciplinary or legal action and the incident management policy should set out clear guidelines to follow.
+**Collect and analyse post-incident evidence**: The preservation and analysis of the sequence of events that led up to the incident is critical to identify and remedy the root cause. The collected evidence could also potentially support any follow on disciplinary or legal action and the incident management policy should set out clear guidelines to follow.
 
-Conduct a lessons learned review: Log the actions taken during an incident and review the performance of the incident management process post incident (or following a test) to see what aspects worked well and what could be improved. Review the organisational response and update any relevant policies or user training that could have prevented the incident from occurring.
+**Conduct a lessons learned review**: Log the actions taken during an incident and review the performance of the incident management process post incident (or following a test) to see what aspects worked well and what could be improved. Review the organisational response and update any relevant policies or user training that could have prevented the incident from occurring.
 
-User awareness: Users should be aware of their responsibilities and how they can report and respond to incidents. Users should be encouraged to report any security weaknesses or incident as soon as possible, without fear of recrimination.
+**User awareness:** Users should be aware of their responsibilities and how they can report and respond to incidents. Users should be encouraged to report any security weaknesses or incident as soon as possible, without fear of recrimination.
 
-Report criminal incidents to law enforcement: It is important that potential or actual cyber crime is reported to Action Fraud or other relevant law enforcement agency.
+**Report criminal incidents to law enforcement**: It is important that potential or actual cyber crime is reported to Action Fraud or other relevant law enforcement agency.
