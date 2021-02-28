@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-28T20:24:01.051Z
+date: 2021-02-28T20:29:59.288Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -28,7 +28,7 @@ The CIA triad is a model designed to guide policies for information security wit
 - [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
 - [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
 - [Small Business Cyber Security - Level 2*A more complete approach to information security.*](/bronze-training/background-advanced)
-- [Small Business Cyber Security - Level 3*A guide to information security governance.*](/bronze-training/background-governance)
+- [Small Business Cyber Security - Level 3*A guide to information security governance.*](/bronze-training/background-topics)
 - [Boards and Company Leadership *Education for business owners and boards alike.*](/bronze-training/background-boards)
 
 {.links-list}
