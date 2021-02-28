@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-28T01:57:54.623Z
+date: 2021-02-28T19:58:13.079Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -38,7 +38,7 @@ The CIA triad is a model designed to guide policies for information security wit
 
 {.links-list}
 
-# Training Materials
+# Humans
 > Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
 {.is-info}
 
