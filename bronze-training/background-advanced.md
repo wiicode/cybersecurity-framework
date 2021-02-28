@@ -2,7 +2,7 @@
 title: Small Business Guide: Cyber Security in 10 Steps
 description: 10 pieces of technical advice you should consider putting in place
 published: true
-date: 2021-02-28T02:06:59.430Z
+date: 2021-02-28T02:07:19.622Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:16:24.127Z
@@ -18,7 +18,7 @@ When dealing with the practicalities of cyber security it's extremely useful to 
 
 {.grid-list}
 - [Risk Management Regime *Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.*](/bronze-training/background-advanced/10-steps-risk-management)
-- [Secure Configuration *Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems. You should develop a strategy to remove or disable unnecessary functionality from systems, and to quickly fix known vulnerabilities, usually via patching. Failure to do so is likely to result in increased risk of compromise of systems and information.*](/bronze-training/10-steps-secure-config)
+- [Secure Configuration *Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems. You should develop a strategy to remove or disable unnecessary functionality from systems, and to quickly fix known vulnerabilities, usually via patching. Failure to do so is likely to result in increased risk of compromise of systems and information.*](/bronze-training/background-advanced/10-steps-secure-config)
 - [Home and mobile working *Mobile working and remote system access offers great business benefits but exposes new risks that need to be managed. You should establish risk based policies and procedures that support mobile working or remote access to systems that are applicable to users, as well as service providers.*](/bronze-training/background-advanced/10-steps-home-mobile)
 - [Incident management *All organizations will experience security incidents at some point. Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.*](/bronze-training/background-advanced/10-steps-incident-management)
 - [Malware prevention *Malicious software, or malware is an umbrella term to cover any code or content that could have a malicious, undesirable impact on systems. Any exchange of information carries with it a degree of risk that malware might be exchanged, which could seriously impact your systems and services. The risk may be reduced by implementing appropriate security controls as part of an overall 'defense in depth' approach.*](/bronze-training/background-advanced/10-steps-malware-prevention)
