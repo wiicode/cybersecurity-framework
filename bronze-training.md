@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-02-28T20:22:29.954Z
+date: 2021-02-28T20:24:01.051Z
 tags: bronze, home, bronze-training
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -13,25 +13,19 @@ dateCreated: 2020-08-05T18:12:08.265Z
 > Deloitte estimates that some common criminal businesses can be operated for as little as $34 month and could return $25,000, while others may routinely require nearly $3,800 a month and could return up to $1 million per month.
 {.is-warning}
 
-This section is a starting point to majority of our small business cyber security resources. A good starting point is looking at personal online life and individual security needs.
-
-{.grid-list}
-- [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
-{.links-list}
-
-# Information Security Training 
 > All businesses use information. If that information is compromised in some way, the business may not be able to function. Protecting the information an organization creates, uses, or stores is information security. Information security concentrates on how to protect confidentiality, integrity, and availability of all business information; this is known as the CIA triad.
 {.is-info}
 
 The CIA triad is a model designed to guide policies for information security within an organization. **Confidentiality** is protecting information from unauthorized access and disclosure. **Integrity** is protecting information from unauthorized modification. **Availability** is preventing disruption in how an organization accesses the data.
 
-## Information Security Guides
+## BCSF Core Training Modules
 
 > BCSF Guides provide management, technical, and oversight guidence.  These two sections contain extensive information on creating your own security program. 
 {.is-success}
 
 
 {.grid-list}
+- [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
 - [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
 - [Small Business Cyber Security - Level 2*A more complete approach to information security.*](/bronze-training/background-advanced)
 - [Small Business Cyber Security - Level 3*A guide to information security governance.*](/bronze-training/background-governance)
@@ -39,7 +33,7 @@ The CIA triad is a model designed to guide policies for information security wit
 
 {.links-list}
 
-# Humans
+# A Note about Humans
 > Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
 {.is-info}
 
