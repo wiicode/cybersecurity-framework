@@ -2,8 +2,8 @@
 title: Network security
 description: The connections from your networks to the Internet, and other partner networks, expose your systems and technologies to attack. 
 published: true
-date: 2021-02-21T16:07:27.716Z
-tags: security operations, bronze, bronze-training, ncsc, 10-steps
+date: 2021-02-28T02:12:13.636Z
+tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:07:27.716Z
 ---
@@ -29,12 +29,12 @@ Networks need to be protected against both internal and external threats. Organi
 # How can the risk be managed?
 Produce, implement and maintain network security designs and policies that align with the organisation’s broader risk management approach. It may be helpful to follow recognised network design principles (eg ISO 27033) to help define an appropriate network architecture including both the network perimeter, any internal networks, and links with other organisations such as service providers or partners.
 
-Manage the network perimeter: Manage access to ports, protocols and applications by filtering and inspecting all traffic at the network perimeter to ensure that only traffic which is required to support the business is being exchanged. Control and manage all inbound and outbound network connections and deploy technical controls to scan for malicious content:
+**Manage the network perimeter**: Manage access to ports, protocols and applications by filtering and inspecting all traffic at the network perimeter to ensure that only traffic which is required to support the business is being exchanged. Control and manage all inbound and outbound network connections and deploy technical controls to scan for malicious content:
 
 - Use firewalls: Use firewalls to create a buffer zone between the Internet (and other untrusted networks) and the networks used by the business. The firewall rule set should deny traffic by default and a whitelist should be applied that only allows authorised protocols, ports and applications to exchange data across the boundary. This will reduce the exposure of systems to network based attacks. Ensure you have effective processes for managing changes to avoid workarounds.
 - Prevent malicious content: Deploy malware checking solutions and reputation-based scanning services to examine both inbound and outbound data at the perimeter in addition to protection deployed internally. The antivirus and malware solutions used at the perimeter should ideally be different to those used to protect internal networks and systems in order to provide some additional defence in depth.
 
-Protect the internal network: Ensure that there is no direct routing between internal and external networks (especially the Internet), which limits the exposure of internal systems to network attack from the Internet. Monitor network traffic to detect and react to attempted or actual network intrusions.
+**Protect the internal network:** Ensure that there is no direct routing between internal and external networks (especially the Internet), which limits the exposure of internal systems to network attack from the Internet. Monitor network traffic to detect and react to attempted or actual network intrusions.
 
 - Segregate networks as sets: Identify, group and isolate critical business systems and apply appropriate network security controls to them.
 - Secure wireless access: All wireless access points should be appropriately secured, only allowing known devices to connect to corporate Wi-Fi services. Security scanning tools may be useful to detect and locate unauthorised or spoof wireless access points.
