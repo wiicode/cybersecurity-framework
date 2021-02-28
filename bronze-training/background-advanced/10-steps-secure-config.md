@@ -2,8 +2,8 @@
 title: Secure Configuration
 description: Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems.
 published: true
-date: 2021-02-21T15:54:59.854Z
-tags: security operations, bronze, bronze-training, ncsc, 10-steps
+date: 2021-02-28T02:08:09.180Z
+tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:54:59.854Z
 ---
@@ -32,22 +32,22 @@ Establishing and actively maintaining the secure configuration of systems should
 # How can the risk be managed?
 Organisations need to ensure that they have put in place measures to minimise the risk of poor system configuration. The following security controls should be considered:
 
-Use supported software: Use versions of operating systems, web browsers and applications that are vendor (or community) supported.
+**Use supported software**: Use versions of operating systems, web browsers and applications that are vendor (or community) supported.
 
-Develop and implement policies to update and patch systems: Implement policies to ensure that security patches are applied in an appropriate time frame, such a 14 days for critical patches. Automated patch management and software update tools might be helpful. In cases where it is not possible to patch a vulnerability steps should be taken to make it very difficult to exploit. This might include making it difficult for an attacker to communicate with the system.
+**Develop and implement policies to update and patch systems**: Implement policies to ensure that security patches are applied in an appropriate time frame, such a 14 days for critical patches. Automated patch management and software update tools might be helpful. In cases where it is not possible to patch a vulnerability steps should be taken to make it very difficult to exploit. This might include making it difficult for an attacker to communicate with the system.
 
-Create and maintain hardware and software inventories: Create inventories of all authorised hardware and software used across the organisation. Ideally the inventory should capture the physical location, business owner and purpose of hardware together with the version and patch status of all software. Tools can be used to help identify unauthorised hardware or software.
+**Create and maintain hardware and software inventories**: Create inventories of all authorised hardware and software used across the organisation. Ideally the inventory should capture the physical location, business owner and purpose of hardware together with the version and patch status of all software. Tools can be used to help identify unauthorised hardware or software.
 
-Manage your operating systems and software: Implement a secure baseline build for all systems and components, including hardware and software. Any functionality or application that does not support a user or business need should be removed or disabled. The secure build profile should be managed by a configuration control process and any deviation from the standard build should be documented and approved.
+**Manage your operating systems and software**: Implement a secure baseline build for all systems and components, including hardware and software. Any functionality or application that does not support a user or business need should be removed or disabled. The secure build profile should be managed by a configuration control process and any deviation from the standard build should be documented and approved.
 
-Conduct regular vulnerability scans: Regularly run automated vulnerability scanning tools against all networked devices and remedy or manage any identified vulnerabilities within an agreed time frame.
+**Conduct regular vulnerability scans**: Regularly run automated vulnerability scanning tools against all networked devices and remedy or manage any identified vulnerabilities within an agreed time frame.
 
-Establish configuration control and management: Implement policies that set out a configuration control and change management process for all systems.
+**Establish configuration control and management**: Implement policies that set out a configuration control and change management process for all systems.
 
-Disable unnecessary peripheral devices and removable media access: Assess the need for access to peripheral devices and removable media. Disable ports and system functionality that does not support a user or business need.
+**Disable unnecessary peripheral devices and removable media access**: Assess the need for access to peripheral devices and removable media. Disable ports and system functionality that does not support a user or business need.
 
-Implement white-listing and execution control: Create and maintain a whitelist of authorised applications and software that can be executed. In addition, systems should be capable of preventing the installation and execution of unauthorised software by employing process execution controls.
+**Implement white-listing and execution control**: Create and maintain a whitelist of authorised applications and software that can be executed. In addition, systems should be capable of preventing the installation and execution of unauthorised software by employing process execution controls.
 
-Limit user ability to change configuration: Provide users with the permissions that they need to fulfil their business role. Users with ‘normal’ privileges should be prevented from installing or disabling any software or services running on the system.
+**Limit user ability to change configuration**: Provide users with the permissions that they need to fulfil their business role. Users with ‘normal’ privileges should be prevented from installing or disabling any software or services running on the system.
 
-Limit privileged user functionality: Ensure that users with privileged system rights (administrators) have constrained internet and email access from their privileged account. This limits exposure to spear phishing and reduces the ability of an attacker to achieve wide system access through exploiting a single vulnerability.
+**Limit privileged user functionality**: Ensure that users with privileged system rights (administrators) have constrained internet and email access from their privileged account. This limits exposure to spear phishing and reduces the ability of an attacker to achieve wide system access through exploiting a single vulnerability.
