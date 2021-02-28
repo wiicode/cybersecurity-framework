@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-02-28T01:49:47.584Z
+date: 2021-02-28T01:50:55.812Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -189,7 +189,7 @@ If you do pay:
 - You will be funding criminal groups
 
 {.grid-list}
-- [Read More *Read our advice on removing viruses and malware from your device.*](/bronze-training/individuals-recover-infected-device)
+- [Read More *Read our advice on removing viruses and malware from your device.*](/bronze-training/individual-cybersecurity/individuals-recover-infected-device)
 {.links-list}
 
 
@@ -208,7 +208,7 @@ Services such as www.haveibeenpwned.com can tell you if your information has eve
 If you believe your laptop, PC, tablet or phone has been infected with a virus or some other type of malware, there are steps you can take.
 
 {.grid-list}
-- [Read More *Follow our guide to remove viruses and restore your device.*](/bronze-training/individuals-recover-infected-device)
+- [Read More *Follow our guide to remove viruses and restore your device.*](/bronze-training/individual-cybersecurity/individuals-recover-infected-device)
 {.links-list}
 
 ## I've received a suspicious email, call or text
@@ -216,7 +216,7 @@ If you believe your laptop, PC, tablet or phone has been infected with a virus o
 Scam emails, calls and texts are a problem for everyone. They're getting more convincing day by day.
 
 {.grid-list}
-- [Read More *Read our advice on spotting and dealing with suspicious emails, calls and texts.*](/bronze-training/individuals-suspicious-mail-phone)
+- [Read More *Read our advice on spotting and dealing with suspicious emails, calls and texts.*](/bronze-training/individual-cybersecurity/individuals-suspicious-mail-phone)
 {.links-list}
 
 
