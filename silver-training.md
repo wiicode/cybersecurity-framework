@@ -1,8 +1,8 @@
 ---
-title: -silver-training-home
+title: Cloud Security Principles
 description: 
 published: true
-date: 2021-03-02T03:32:29.214Z
+date: 2021-03-02T03:34:16.713Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
