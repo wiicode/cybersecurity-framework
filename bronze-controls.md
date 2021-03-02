@@ -2,58 +2,58 @@
 title: Procedures & Controls
 description: 
 published: true
-date: 2021-03-02T03:57:32.388Z
+date: 2021-03-02T04:24:10.442Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
 ---
 
-# Header
-Your content here
 
-Lorem 
+# Business/Organization Management
+{.grid-list}
+- [Code of Conduct](/bronze-controls/code-of-conduct)
+- [Incident Categories](/bronze-controls/incident-categories)
+{.links-list}
 
-Index
+# Data Management
+{.grid-list}
+- [Data Handling Controls](/bronze-controls/data-handling-controls)
+- [Secure sanitisation of storage media](/bronze-controls/topic-sanitization)
+- [SharePoint Governance](/bronze-controls/sharepoint-governance)
+{.links-list}
 
-Control
 
-Link
+# Identity and Access Management
+{.grid-list}
+- [Introduction to identity and access management](/bronze-controls/designing-controls/identity-and-access-management)
+{.links-list}
 
-Incident Categories
 
-/bronze-controls/incident-categories
+# Mobile Device Management
+{.grid-list}
+- [BYOD Agreement](/bronze-controls/byod-for-staff)
 
-Code of Conduct
+{.links-list}
 
-/bronze-controls/code-of-conduct
+# Systems Monitoring
+{.grid-list}
+- [Introduction to logging for security purposes](/bronze-controls/designing-controls/logging-for-security)
+{.links-list}
 
-BYOD Agreement
 
-/bronze-controls/byod-for-staff
+# Vulnerability Management
+{.grid-list}
+- [Intelligent security tools](/bronze-training/background-topics/intelligent-security-tools)
+{.links-list}
 
-Data Handling Controls
 
-/bronze-controls/data-handling-controls
 
-SharePoint Governance
 
-/bronze-controls/sharepoint-governance
 
-Introduction to logging for security purposes
 
-/bronze-training/logging-for-security
 
-Introduction to identity and access management
 
-/bronze-training/identity-and-access-management
 
-Intelligent security tools
-
-/bronze-training/intelligent-security-tools
-
- Secure sanitisation of storage media
-
- /bronze-training/topic-sanitization
 
  
 
