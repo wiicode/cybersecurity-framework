@@ -2,7 +2,7 @@
 title: Deep Dives
 description: A complete guide to your governance program
 published: true
-date: 2021-03-02T03:15:00.790Z
+date: 2021-03-02T03:42:53.567Z
 tags: governance, bronze, bronze-training, security-governance, guide
 editor: markdown
 dateCreated: 2021-02-28T20:12:57.095Z
@@ -13,7 +13,6 @@ dateCreated: 2021-02-28T20:12:57.095Z
 {.grid-list}
 - [Approaching enterprise technology with cyber security in mind*The majority of cyber attacks an organisation faces will be ineffective if enterprise technology is deployed, operated, and maintained with cyber security in mind. This guidance explains how organisations should approach enterprise technology in order to deter cyber attacks.*](/bronze-training/background-topics/enterprise-technology-security)
 - [Growing positive security cultures*Security culture, and how to improve it, is a hot topic for many organizations. This is a good thing, because - I think we can all agree - healthy and positive security cultures actively contribute to supporting and enabling business. Poor security cultures can undermine the efforts of otherwise diligent staff.*](/bronze-training/background-topics/topic-culture)
-- [Common cyber attacks - reducing the impact*Common Cyber Attacks: Reducing The Impact helps organisations understand what a common cyber attack looks like and explains why all organisations should establish basic security controls and processes, to protect themselves from such attacks.*](/bronze-training/background-topics/topic-common-cyber-attacks)
 - [Intelligent security tools*This guidance is designed for those looking to use an off the shelf security tool that employs AI as a core component. It may also be of use to those developing in-house AI security tools or when considering AI for some non-security business function.*](/bronze-training/background-topics/intelligent-security-tools)
 {.links-list}
 # Governance
