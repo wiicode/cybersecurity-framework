@@ -2,7 +2,7 @@
 title: Removable media controls
 description: Removable media provide a common route for the introduction of malware and the accidental or deliberate export of sensitive data. You should be clear about the business need to use removable media and apply appropriate security controls to its use.
 published: true
-date: 2021-03-02T03:48:15.175Z
+date: 2021-03-03T19:28:16.004Z
 tags: bronze, bronze-training, 10-steps, sourced, data-security
 editor: markdown
 dateCreated: 2021-02-21T16:08:58.081Z
