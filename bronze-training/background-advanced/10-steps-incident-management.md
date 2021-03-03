@@ -2,130 +2,46 @@
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
 published: true
-date: 2021-03-03T19:22:33.893Z
+date: 2021-03-03T19:23:03.934Z
 tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:59:15.003Z
 ---
 
-
-BENTO:GUIDES
-Incident management
-1
-> All organizations will experience security incidents at some point. Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
-2
+> Mobile working and remote system access offers great business benefits but exposes new risks that need to be managed. You should establish risk based policies and procedures that support mobile working or remote access to systems that are applicable to users, as well as service providers.
 {.is-info}
-3
-​
-4
-​
-5
-​
-6
+
 # Summary
-7
-All organizations will experience security incidents at some point. Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
-8
-​
-9
+Mobile working and remote system access offers great business benefits but exposes new risks that need to be managed. You should establish risk based policies and procedures that support mobile working or remote access to systems that are applicable to users, as well as service providers.
+
+
 # What is the risk?
-10
-Security incidents will inevitably happen and they will vary in their level of impact. All incidents need to be managed effectively, particularly those serious enough to warrant invoking the organization’s business continuity or disaster recovery plans. Some incidents can, on further analysis, be indicative of more severe underlying problems.
-11
-​
-12
-If businesses fail to implement an incident management capability to detect, manage and analyse security incidents the following risks could be realized:
-13
-​
-14
-- Managing business harm: Failure to realize that an incident is happening or has occurred limits your ability to manage it effectively. This may lead to a much greater overall business impact, such as significant system outage, serious financial loss or erosion of customer confidence.
-15
-- Continual disruption: An organization that fails to address the root cause of incidents (such as poor technology or weaknesses in the corporate security approach) could be exposed to repeated or continual compromise or disruption.
-16
-- Failure to comply with legal and regulatory reporting requirements: An incident resulting in the compromise of sensitive information covered by mandatory reporting requirements could lead to legal or regulatory penalties.
-17
-​
-18
-The organization’s business profile or role will determine the type and nature of incidents that could occur and the impact they might have, so a risk-based approach should be used to shape incident management plans.
-19
-​
-20
+Mobile working and remote access extends the transit and storage of information (or operation of systems) outside of the corporate infrastructure, typically over the Internet. Mobile devices will also typically be used in spaces that are subject to additional risks such as oversight of screens, or the theft/loss of devices. Organizations that do not establish sound mobile working and remote access practices might be vulnerable to the following risks:
+
+- Loss or theft of the device: Mobile devices are highly vulnerable to being lost or stolen, potentially offering access to sensitive information or systems. They are often used in open view in locations that cannot offer the same level of physical security as your own premises.
+- Being overlooked: Some users will have to work in public open spaces, such as on public transport, where they are vulnerable to being observed when working. This can potentially compromise sensitive information or authentication credentials.
+- Loss of credentials: If user credentials (such as username, password, or token) are stored with a device used for remote working or remote access and it is lost or stolen, the attacker could use those credentials to compromise services or information stored on (or accessible from) that device.
+- Tampering: An attacker may attempt to subvert the security controls on the device through the insertion of malicious software or hardware if the device is left unattended. This may allow them to monitor all user activity on the device, including authentication credentials.
+
 # How can the risk be managed?
-21
-**Establish an incident response capability**: Identify the funding and resources to develop, deliver and maintain an organization-wide incident management capability. Resources could be in house or you might pre-establish a relationship with an specialist incident management company. This should address the full range of incidents that could occur and set out appropriate responses. The supporting policy, processes and plans should be risk based and cover any legal or regulatory reporting requirements.
-22
-​
-23
-**Provide specialist training**: The incident response team may need specialist knowledge and expertise across a number of technical (including forensic investigation) and non-technical areas. You should identify recognized sources (internal or external) of specialist incident management training and maintain the organization’s skill base.
-24
-​
-25
-**Define the required roles and responsibilities**: Appoint and empower specific individuals (or suppliers) to handle incidents and provide them with clear terms of reference to make decisions and manage any incident that may occur. Ensure that the contact details of key personnel are readily available to use in the event of an incident.
-26
-​
-27
-**Establish a data recovery capability**: Data losses can occur and so a systematic approach to the backup of essential data should be implemented. Where physical backup media is used this should be held in a physically secure location, ideally offsite. The ability to recover archived data for operational use should be regularly tested.
-28
-​
-29
-**Test the incident management plans**: All plans supporting security incident management (including business continuity and disaster recover plans) should be regularly tested. The outcome of the tests should be used to inform the future development of the incident management plans.
-30
-​
-31
-**Decide what information will be shared and with whom**: For services or information bound by specific legal or regulatory reporting requirements you may have to report incidents. All internal and external reporting requirements should be clearly identified in the incident management plan.
-32
-​
-33
-**Collect and analyse post-incident evidence**: The preservation and analysis of the sequence of events that led up to the incident is critical to identify and remedy the root cause. The collected evidence could also potentially support any follow on disciplinary or legal action and the incident management policy should set out clear guidelines to follow.
-34
-​
-35
-**Conduct a lessons learned review**: Log the actions taken during an incident and review the performance of the incident management process post incident (or following a test) to see what aspects worked well and what could be improved. Review the organizational response and update any relevant policies or user training that could have prevented the incident from occurring.
-36
-​
-37
-**User awareness:** Users should be aware of their responsibilities and how they can report and respond to incidents. Users should be encouraged to report any security weaknesses or incident as soon as possible, without fear of recrimination.
-38
-​
-39
-**Report criminal incidents to law enforcement**: It is important that potential or actual cyber crime is reported to Action Fraud or other relevant law enforcement agency.
-All organizations will experience security incidents at some point. Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
+**Assess the risks and create a mobile working policy**: Assess the risks associated with all types of mobile working and remote access. The resulting mobile security policy should determine aspects such as the processes for authorizing users to work off-site, device provisioning and support, the type of information or services that can be accessed or stored on devices and the minimum procedural security controls. The risks to the corporate network or systems from mobile devices should be assessed and consideration given to an increased level of monitoring on all remote connections and the systems being accessed.
 
-Summary
-All organizations will experience security incidents at some point. Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
+**Educate users and maintain awareness**: All users should be trained on the use of their mobile device for the locations they will be working in. Users should be supported to look after their mobile device and operate securely by following clear procedures. This should include direction on:
 
-What is the risk?
-Security incidents will inevitably happen and they will vary in their level of impact. All incidents need to be managed effectively, particularly those serious enough to warrant invoking the organization’s business continuity or disaster recovery plans. Some incidents can, on further analysis, be indicative of more severe underlying problems.
+- secure storage and management of user credentials
+- incident reportingApply the secure baseline build: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
 
-If businesses fail to implement an incident management capability to detect, manage and analyse security incidents the following risks could be realized:
+**Protect data at rest**: Minimize the amount of information stored on a mobile device to only that which is needed to fulfill the business activity that is being delivered outside the normal office environment. If the device supports it, encrypt the data at rest.
 
-Managing business harm: Failure to realize that an incident is happening or has occurred limits your ability to manage it effectively. This may lead to a much greater overall business impact, such as significant system outage, serious financial loss or erosion of customer confidence.
-Continual disruption: An organization that fails to address the root cause of incidents (such as poor technology or weaknesses in the corporate security approach) could be exposed to repeated or continual compromise or disruption.
-Failure to comply with legal and regulatory reporting requirements: An incident resulting in the compromise of sensitive information covered by mandatory reporting requirements could lead to legal or regulatory penalties.
-The organization’s business profile or role will determine the type and nature of incidents that could occur and the impact they might have, so a risk-based approach should be used to shape incident management plans.
+**Protect data in transit**: If the user is working remotely the connection back to the corporate network will probably use the Internet. All information exchanged should be appropriately encrypted. See Using IPsec to Protect Data and Using TLS to protect data.
 
-How can the risk be managed?
-Establish an incident response capability: Identify the funding and resources to develop, deliver and maintain an organization-wide incident management capability. Resources could be in house or you might pre-establish a relationship with an specialist incident management company. This should address the full range of incidents that could occur and set out appropriate responses. The supporting policy, processes and plans should be risk based and cover any legal or regulatory reporting requirements.
+**Review the corporate incident management plans**: Mobile working attracts significant risks and security incidents will occur even when users follow the security procedures. The incident management plans should be sufficiently flexible to deal with the range of security incidents that could occur, including the loss or compromise of a device. Ideally, technical processes should be in place to remotely disable a device that has been lost or at least deny it access to the corporate network.
+- environmental awareness (the risks from being overlooked, etc.)
 
-Provide specialist training: The incident response team may need specialist knowledge and expertise across a number of technical (including forensic investigation) and non-technical areas. You should identify recognised sources (internal or external) of specialist incident management training and maintain the organization’s skill base.
+**Apply the secure baseline build**: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
 
-Define the required roles and responsibilities: Appoint and empower specific individuals (or suppliers) to handle incidents and provide them with clear terms of reference to make decisions and manage any incident that may occur. Ensure that the contact details of key personnel are readily available to use in the event of an incident.
+**Protect data at rest**: Minimize the amount of information stored on a mobile device to only that which is needed to fulfill the business activity that is being delivered outside the normal office environment. If the device supports it, encrypt the data at rest.
 
-Establish a data recovery capability: Data losses can occur and so a systematic approach to the backup of essential data should be implemented. Where physical backup media is used this should be held in a physically secure location, ideally offsite. The ability to recover archived data for operational use should be regularly tested.
+**Protect data in transit**: If the user is working remotely the connection back to the corporate network will probably use the Internet. All information exchanged should be appropriately encrypted. See Using IPsec to Protect Data and Using TLS to protect data.
 
-Test the incident management plans: All plans supporting security incident management (including business continuity and disaster recover plans) should be regularly tested. The outcome of the tests should be used to inform the future development of the incident management plans.
-
-Decide what information will be shared and with whom: For services or information bound by specific legal or regulatory reporting requirements you may have to report incidents. All internal and external reporting requirements should be clearly identified in the incident management plan.
-
-Collect and analyse post-incident evidence: The preservation and analysis of the sequence of events that led up to the incident is critical to identify and remedy the root cause. The collected evidence could also potentially support any follow on disciplinary or legal action and the incident management policy should set out clear guidelines to follow.
-
-Conduct a lessons learned review: Log the actions taken during an incident and review the performance of the incident management process post incident (or following a test) to see what aspects worked well and what could be improved. Review the organizational response and update any relevant policies or user training that could have prevented the incident from occurring.
-
-User awareness: Users should be aware of their responsibilities and how they can report and respond to incidents. Users should be encouraged to report any security weaknesses or incident as soon as possible, without fear of recrimination.
-
-Report criminal incidents to law enforcement: It is important that potential or actual cyber crime is reported to Action Fraud or other relevant law enforcement agency.
-
-EN
-/bronze-training/background-advanced/10-steps-incident-management
-Markdown
-Ln 2, Col 1
+**Review the corporate incident management plans**: Mobile working attracts significant risks and security incidents will occur even when users follow the security procedures. The incident management plans should be sufficiently flexible to deal with the range of security incidents that could occur, including the loss or compromise of a device. Ideally, technical processes should be in place to remotely disable a device that has been lost or at least deny it access to the corporate network.
