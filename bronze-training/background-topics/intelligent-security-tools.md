@@ -2,8 +2,8 @@
 title: Intelligent security tools
 description: Assessing intelligent tools for cyber security
 published: true
-date: 2021-02-21T03:55:56.839Z
-tags: guidance, security operations, bronze, bronze-training
+date: 2021-03-03T19:39:34.324Z
+tags: guidance, bronze, bronze-training, security-operations
 editor: markdown
 dateCreated: 2021-02-21T03:52:24.497Z
 ---
@@ -38,9 +38,9 @@ There are many definitions of AI in use, and very little agreement. Here we desc
 ### How AI works in simple terms
 Modern AI is usually built using machine learning algorithms. These find complex patterns in data, which can be used to form rules which are useful to us.
 
-For example, a machine learning algorithm could find similarities in pictures of cats. If you tell it which pictures are of your cat, this can form rules that allows the system to recognise your cat. When you show it a new picture, it will be able to predict whether the new image is your cat or not, based on it's learned definition.
+For example, a machine learning algorithm could find similarities in pictures of cats. If you tell it which pictures are of your cat, this can form rules that allows the system to recognize your cat. When you show it a new picture, it will be able to predict whether the new image is your cat or not, based on it's learned definition.
 
-For us, a key part of AI is that it takes those patterns and definitions and uses them to automate a decision. For example, you could just use this to automatically file your photos. Or you could build this into your cat flap, along with a camera, with the action that it only unlocks when it recognises your cat. The decision to let cats in, and therefore your 'security', has been automated.
+For us, a key part of AI is that it takes those patterns and definitions and uses them to automate a decision. For example, you could just use this to automatically file your photos. Or you could build this into your cat flap, along with a camera, with the action that it only unlocks when it recognizes your cat. The decision to let cats in, and therefore your 'security', has been automated.
 
 ### What can AI currently do?
 AI is very good at solving well bounded problems, where the solution, and the method to find it, iscompletely contained within the data and feedback provided. Here they regularly excel beyond human abilities, for both speed and accuracy.
@@ -52,7 +52,7 @@ Another fruitful field for AI has been image recognition and generation, where t
 ### What is AI not so good at today?
 AI is less good at solving problems where you need additional context to reach an answer, even if that context would be 'common sense' for a person. It may be possible to provide some of this context to an AI in the form of additional data, a model, or feedback from a human, but expanding the bounds of the problem is often expensive and may result in poor performance if expanded too far. At this point, the decision should be passed to a person who is able to use their knowledge of the context to reach a decision.
 
-Cyber security often involves situations where context is important. Accessing a sensitive document might be a suspicious action for one person, but normal behaviour for another. Installing updates is essential for most of your business, but a business risk where it causes compatibility issues with critical software. This is why it is important to find a tool that can work within the context of your business. And why you may need to ensure that a person has the opportunity to step in and apply their knowledge.
+Cyber security often involves situations where context is important. Accessing a sensitive document might be a suspicious action for one person, but normal behavior for another. Installing updates is essential for most of your business, but a business risk where it causes compatibility issues with critical software. This is why it is important to find a tool that can work within the context of your business. And why you may need to ensure that a person has the opportunity to step in and apply their knowledge.
 
 The technology underpinning AI is constantly evolving, and we can expect any limitations to be continually tested and redefined. Despite it's rapid pace of change, you need to be aware that there will be some areas where it is too difficult (or expensive) to develop AI capable of solving the problem.
 
@@ -85,7 +85,7 @@ In many intelligent tools, we still manually program the 'that', because we know
 
 Some modern AIs find their own 'that' by trial and error, using an ultimate goal as the criteria for a successful rule. For example, winning a chess match. This needs a huge number of trials to learn and usually can't be done in real time. Results are achieved by modelling the environment and simulating the trial and error process.
 
-This is not commonly used in cyber security tools, because the ultimate goal of cyber security is difficult to measure and we cannot model all the variables necessary to allow the AI to learn through trial and error. There is also a risk that the AI will find a novel solution that is detrimental. For example, keeping all the computers switched off would fulfill the goal of preventing attacks, but our common sense tells us this is not a viable option.
+This is not commonly used in cyber security tools, because the ultimate goal of cyber security is difficult to measure and we cannot model all the variables necessary to allow the AI to learn through trial and error. There is also a risk that the AI will find a novel solution that is detrimental. For example, keeping all the computers switched off would fulfilll the goal of preventing attacks, but our common sense tells us this is not a viable option.
 
 ### Model
 The rules are stored in a trained model. An AI can be made up of multiple trained models, each with their own rules, which are then combined to make the decision.
@@ -104,7 +104,7 @@ The quality of an AI is highly dependent on the quality of the data used during 
 
 - **Completeness** - If there are blanks in the data - for example fields left incomplete - the AI will only have part of the information it needs to train or make decisions. This will lower the accuracy of any output, as some of the patterns in the data can't be discovered. 
 - **Diversity** - If all of the examples an AI uses to train look the same, then the capability for the AI to learn anything outside of those few cases is limited. A diverse data set for training will look to have a wide variety of both desirable and non-desirable characteristics for the AI to learn from. A system can only be as good as the data that it's trained on, having a diverse data set will mean that a greater variety of cases can be addressed in the trained system. 
-- **Accuracy** - The way data is presented to train an AI is important. Misrepresenting the data being processed by the AI - for example through incorrect labelling - will result in a less reliable trained system. In the live system, this will result in misclassifications and unwanted behaviours from the AI.
+- **Accuracy** - The way data is presented to train an AI is important. Misrepresenting the data being processed by the AI - for example through incorrect labelling - will result in a less reliable trained system. In the live system, this will result in misclassifications and unwanted behaviors from the AI.
 
 ### Intelligence
 AI today, and for the foreseeable future, is not intelligent in the same way as humans. They cannot reason, feel or apply common sense to a problem.
@@ -165,9 +165,9 @@ These principles will help you identify tools which have functionality suited to
 
 ### 1. Does the product aim to solve a problem that is important to you?
 
-Before considering an intelligent tool, you need to think about the kinds of security problems that you face as an organisation.
+Before considering an intelligent tool, you need to think about the kinds of security problems that you face as an organization.
 
-It's important to be sure you have a real problem which is not being addressed by other means. You should explore whether augmenting your current approaches would be a sufficient remedy. This entails a clear understanding of the risk which your problem poses to your organisation.
+It's important to be sure you have a real problem which is not being addressed by other means. You should explore whether augmenting your current approaches would be a sufficient remedy. This entails a clear understanding of the risk which your problem poses to your organization.
 
 Maintaining your current solution in tandem with any intelligent systems will not only ensure you have a fallback you understand, it will also give you a baseline against which to measure the outcomes produced by the AI based approach.
 
@@ -177,7 +177,7 @@ Once you have an intelligent tool in use, you will want to establish whether it 
 
 #### Establishing utility
 
-- How does the decision, task, or automated action of the tool, contribute to the security of your organisation? What is the impact of this being incorrect?
+- How does the decision, task, or automated action of the tool, contribute to the security of your organization? What is the impact of this being incorrect?
 - If the tool provides information, who will be using this information? Will this information help them make decisions or perform their task? 
 - How would the tool improve on the information already available? How will it improve the actions already taken?
 - What process is currently used to make the decision, or undertake the task, or action? Is the tool going to augment this process, or replace it?
@@ -194,7 +194,7 @@ There are also some problems that cannot be fully automated for legal reasons. F
 
 AI is much better than simple rule-based automation at handling complex tasks. In fact, this is the primary purpose of many intelligent tools.
 
-However, AI will also introduce additional complexity into your system, reducing your ability to understand the behaviour of your system, making it potentially more unpredictable.
+However, AI will also introduce additional complexity into your system, reducing your ability to understand the behavior of your system, making it potentially more unpredictable.
 
 This unpredictability could introduce new vulnerabilities to your systems, and these could potentially be exploited by attackers.
 
@@ -221,16 +221,16 @@ Even if, in practice, a person is ultimately responsible for carrying out the ac
 This could be particularly difficult where decisions are being made in real time and the operator needs to respond quickly.
 
 #### When to intervene
-You need to understand how the intelligent tool will impact decisions made within your organisation, and who may be expected to intervene, to prevent mistakes.
+You need to understand how the intelligent tool will impact decisions made within your organization, and who may be expected to intervene, to prevent mistakes.
 
 Ultimately, you should know who is accountable for decisions and actions made or influenced by the intelligent tool. This person, or persons, should have the opportunity to act to change the decision made by the tool, and feel enabled to do so.
 
-Unfortunately, some tools provide little or no opportunity to intervene. Whenever this is the case, the associated risk must be recognised by a suitable risk owner, when choosing the tool. Where intervention isn't part of the design, the only way to change a decision is to bypass the intelligent tool entirely. You should consider the alternative ways of making those decisions independent of the tool.
+Unfortunately, some tools provide little or no opportunity to intervene. Whenever this is the case, the associated risk must be recognized by a suitable risk owner, when choosing the tool. Where intervention isn't part of the design, the only way to change a decision is to bypass the intelligent tool entirely. You should consider the alternative ways of making those decisions independent of the tool.
 
 #### Sensitive information
 You should think carefully about the information produced by the tool. It could be personal or sensitive, or require actions beyond the capabilities of the person receiving the information. 
 
-For example, tools observing the behaviour of your staff may inadvertently reveal information about their personal lives, and tools scanning for vulnerabilities may report far more than can be acted upon.
+For example, tools observing the behavior of your staff may inadvertently reveal information about their personal lives, and tools scanning for vulnerabilities may report far more than can be acted upon.
 
 Those receiving this information need to be supported so that the information is properly handled, and they don't inadvertently end up carrying the risk of holding that information.
 
@@ -245,7 +245,7 @@ Those receiving this information need to be supported so that the information is
 
 # Dealing with data
 Discover some guiding principles that will give your intelligent tool the best chance of working effectively, using the right data and handling it correctly.
-Many intelligent tools require data about your organisation in order to function. This data is processed by the tool to either determine an action, or provide information to the user. It may also be used to further train the tool, allowing it to adapt to new situations.
+Many intelligent tools require data about your organization in order to function. This data is processed by the tool to either determine an action, or provide information to the user. It may also be used to further train the tool, allowing it to adapt to new situations.
 
 Having the right data, and ensuring it's handled correctly, is a very important consideration forintelligent tools generally, because the quality and quantity of this data will determine the how effectively your tool functions.
 
@@ -268,9 +268,9 @@ While you may have access to the right type of data, you should also check that 
 #### Rules and regulations
 Care needs to be taken in verifying that you are able to use the data required by the tool.
 
-Check that the use of any sensitive data complies with your organisation's data handling processes and associated regulations. For those unclear wanting further support, the Information Commissioners Office (ICO) have provided some insights and advice for how to approach this.
+Check that the use of any sensitive data complies with your organization's data handling processes and associated regulations. For those unclear wanting further support, the Information Commissioners Office (ICO) have provided some insights and advice for how to approach this.
 
-You should consider whether you can anonymise the data, such that it is no longer sensitive. If this isn't possible, then look to minimise the number of data fields needed for the tool to operate, especially those involving sensitive data. You should verify with the vendor that the tool can still provide the desired functionality without using some or all sensitive data.
+You should consider whether you can anonymise the data, such that it is no longer sensitive. If this isn't possible, then look to minimize the number of data fields needed for the tool to operate, especially those involving sensitive data. You should verify with the vendor that the tool can still provide the desired functionality without using some or all sensitive data.
 
 #### Priorities
 There may be some data that is absolutely essential to the operation of the tool, while other data may simply enhance its accuracy, or enable additional features.
@@ -309,9 +309,9 @@ Here, your data may be combined with other's to build a much broader picture of 
 
 Depending on your data, and your business sector, there may also be important considerations about where and how this data is sent. 
 
-It's important that potentially sensitive data you send to a third party is treated in a way that complies with any regulations surrounding data privacy or protection. This might involve knowing how to work with training data that includes Personal Identifiable Information. This includes usage or destruction of data after the end of a tools life or data relating to an individual that has left the organisation.
+It's important that potentially sensitive data you send to a third party is treated in a way that complies with any regulations surrounding data privacy or protection. This might involve knowing how to work with training data that includes Personal Identifiable Information. This includes usage or destruction of data after the end of a tools life or data relating to an individual that has left the organization.
 
-Many of these issues are consistent with other Software as a Service (SaaS) concerns, more details of which can be found in the current NCSC guidance on the topic.
+Many of these issues are consistent with other Software as a Service (SaaS) concerns, more details of which can be found in the current BCSF guidance on the topic.
 
 #### Correct handling of data
 - Will the processing be done within your existing system, in the vendor's system, or on a third party platform? If your data is sent out, where will it be hosted? Is the processing secure?
@@ -323,7 +323,7 @@ Many of these issues are consistent with other Software as a Service (SaaS) conc
 Discover some guiding principles to help you evaluate what skills and resources you need to effectively support the use of an intelligent tool.
 One of the most significant factors determining the effectiveness of any intelligent tool is the availability of resources needed to support its use, and skills required to set-up or manage it.
 
-Identifying and implementing intelligent tools should be seen as a step that will improve the security operations of an organisation, by complementing current activity. 
+Identifying and implementing intelligent tools should be seen as a step that will improve the security operations of an organization, by complementing current activity. 
 
 ## Interaction
 Although intelligent tools may act autonomously, there are often many forms of interaction required for them to be effective.
@@ -341,7 +341,7 @@ Using and maintaining the tool could require some very specialised expertise. As
 
 As well as the requirements for collecting and storing data, you may need to consider other hardware and software upgrades to ensure the tool will function correctly. AI can be computationally expensive and is often run in the cloud for this reason. 
 
-With intelligent tools, there is no guarantee that installation will be as simple as plug and play. It's likely that there will be some configuration needed. This may be manual, requiring appropriate skills and knowledge about your organisation. Or it may be automatic, meaning the tool 'learns' about how your organisation works. If the tool needs to learn about your organisation, it can take some time to become operational.
+With intelligent tools, there is no guarantee that installation will be as simple as plug and play. It's likely that there will be some configuration needed. This may be manual, requiring appropriate skills and knowledge about your organization. Or it may be automatic, meaning the tool 'learns' about how your organization works. If the tool needs to learn about your organization, it can take some time to become operational.
 
 It's important to know what purpose the tool serves and ensure that it's configured appropriately. There is a generally acknowledged trade-off between fast computation of results and the accuracy of the results produced. 
 
@@ -362,7 +362,7 @@ In many cases, the number of people who will directly interact with the tool wil
 
 At this stage, the nature of the interaction needs to be considered. Specifically, what is expected of the user if they are to get what they need from the tool.
 
-In most cases this will just be familiarisation with the functionality and interfaces, however in some cases it might require specific skills.
+In most cases this will just be familiarization with the functionality and interfaces, however in some cases it might require specific skills.
 
 Working with intelligent devices is a new experience for many people, so you may find your current user base requires training. Ask your vendor what skills are required and whether training is available. Your current people may not find the tools easy to adapt to, and you may need to hire additional specialist operators to work directly with the tool.
 
@@ -392,7 +392,7 @@ When considering the use of any kind of tool, intelligent or otherwise, you need
 
 You should enquire how and why aspects of your intelligent system work, and what happens when they don't.
 
-Your research should cover the training of the intelligent system, how issues with the tool might impact your organisation, and the fundamental limitations of the tool.
+Your research should cover the training of the intelligent system, how issues with the tool might impact your organization, and the fundamental limitations of the tool.
 
 ## Principles
 
@@ -402,9 +402,9 @@ Intelligent tools make decisions based on rules they've learned from data, and m
 
 #### Training data
 
-What data is used to train the system? This may just be data from your organisation, but could also involve data from other sources, including the vendor's proprietary data.
+What data is used to train the system? This may just be data from your organization, but could also involve data from other sources, including the vendor's proprietary data.
 
-If other data sources are used, you may want to question how relevant that data is to your organisation. Synthetic data, or data from significantly different operational processes, might not provide a useful baseline for your organisation. Likewise, if the training data is too narrow, it is less likely to work well in a live environment. 
+If other data sources are used, you may want to question how relevant that data is to your organization. Synthetic data, or data from significantly different operational processes, might not provide a useful baseline for your organization. Likewise, if the training data is too narrow, it is less likely to work well in a live environment. 
 
 #### Static tools
 
@@ -414,7 +414,7 @@ If the problem and the environment remain the same, then initial training should
 
 #### Adaptation and stability
 
-For security tools, adaptation is likely to be important. For example, being able to train your tool to recognise new types of attack will be essential, if it is to remain relevant. 
+For security tools, adaptation is likely to be important. For example, being able to train your tool to recognize new types of attack will be essential, if it is to remain relevant. 
 
 If the system updates, you will want to be sure that it is going to remain stable. Updates to the system will change the performance of the tool, which may cause it to become unpredictable. This happens because a change to an intelligent tool can fundamentally alter the background processes used to make decisions. This means that it can be difficult to gain assurance in adaptive tools.
 
@@ -424,7 +424,7 @@ However, you should try and understand how and when new data is incorporated int
 
 #### Ensure stability
 
-- Do you know how the system was trained? Was the data representative of your organisation?
+- Do you know how the system was trained? Was the data representative of your organization?
 - Do you know if the system continues to adapt. Do you know how it does this?
 - Is the adaptability of the system sufficient for your use case?
 
@@ -436,7 +436,7 @@ It's not possible to catalogue all the potential vulnerabilities of an intellige
 
 #### Failing safely
 
-Regardless of the type of tool, it is important to know that it fails safely. In other words, should the tool go wrong, there is no significant risk to a person or your organisation.
+Regardless of the type of tool, it is important to know that it fails safely. In other words, should the tool go wrong, there is no significant risk to a person or your organization.
 
 From this perspective, it is also important to know what interventions are in place in the event of a failure, and how to shut the system down safely. 
 
