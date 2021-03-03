@@ -2,7 +2,7 @@
 title: Managing user privileges
 description: Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
 published: true
-date: 2021-02-28T19:50:43.800Z
+date: 2021-03-03T19:26:13.214Z
 tags: bronze, bronze-training, 10-steps, sourced, access-control
 editor: markdown
 dateCreated: 2021-02-21T16:04:07.910Z
@@ -16,9 +16,9 @@ dateCreated: 2021-02-21T16:04:07.910Z
 Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
 
 # What is the risk?
-Organizations should understand what level of access employees need to information, services and resources in order to do their job otherwise it won't be possible to manage rights appropriately. Failure to effectively manage user privileges could result in the following risks being realised:
+Organizations should understand what level of access employees need to information, services and resources in order to do their job otherwise it won't be possible to manage rights appropriately. Failure to effectively manage user privileges could result in the following risks being realized:
 
-- Misuse of privileges: Users could either accidentally or deliberately misuse the privileges assigned to them. This may result in unauthorised access to information to either the user or a third party or to unauthorised system changes having a direct security or operational impact.
+- Misuse of privileges: Users could either accidentally or deliberately misuse the privileges assigned to them. This may result in unauthorized access to information to either the user or a third party or to unauthorized system changes having a direct security or operational impact.
 - Increased attacker capability: Attackers may use redundant or compromised user accounts to carry out attacks and, if able, they may return to reuse the compromised account or possibly sell access to others. The system privileges provided to the original user of the compromised account will be available to the attacker to use which is why they particularly seek to gain access to highly privileged or administrative accounts.
 - Negating established security controls: Where attackers have privileged system access they may make changes to security controls to enable further or future attack or might attempt to cover their tracks by making changing or audit logs.
 
@@ -29,7 +29,7 @@ Organizations should determine what rights and privileges users need to effectiv
 
 **Establish policies and standards for user authentication and access control**: A corporate password policy should be developed that seeks an effective balance between security and usability as set out in our password guidance. For some accounts an additional authentication factor (such as a token) may be appropriate.
 
-**Limit user privileges**: Users should be provided with the reasonable minimum rights and permissions to systems, services and information that they need to fulfil their business role.
+**Limit user privileges**: Users should be provided with the reasonable minimum rights and permissions to systems, services and information that they need to fulfill their business role.
 
 **Limit the number and use of privileged accounts**: Strictly control the granting of highly privileged system rights, reviewing the ongoing need regularly. Highly privileged administrative accounts should not be used for high risk or day to day user activities, for example web browsing and email. Administrators should use normal accounts for standard business use.
 
