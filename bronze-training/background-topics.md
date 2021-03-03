@@ -2,7 +2,7 @@
 title: Deep Dives
 description: A complete guide to your governance program
 published: true
-date: 2021-03-02T03:42:53.567Z
+date: 2021-03-03T19:42:59.761Z
 tags: governance, bronze, bronze-training, security-governance, guide
 editor: markdown
 dateCreated: 2021-02-28T20:12:57.095Z
@@ -28,7 +28,7 @@ dateCreated: 2021-02-28T20:12:57.095Z
 - [Variety in risk information*Why recognising different types of information is essential when assessing cyber risk. Risk information is any information which can influence a decision. Some organisations have a tendency to only accept certain types of information as legitimate risk information. Such limitations increase the chance of something important being missed.*](/bronze-training/background-topics/risk-4-riskinfo)
 {.links-list}
 # Cloud Security 
-> This section is a prelude to **The BCSF Fourteen Cloud Security Principles** available in the Silver tier.
+> This section is a prelude to **[The BCSF Fourteen Cloud Security Principles](/silver-training)** available in the Silver tier. 
 {.is-warning}
 
 {.grid-list}
