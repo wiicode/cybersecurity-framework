@@ -2,7 +2,7 @@
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
 published: true
-date: 2021-03-03T19:23:03.934Z
+date: 2021-03-03T19:23:42.232Z
 tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:59:15.003Z
@@ -29,7 +29,9 @@ Mobile working and remote access extends the transit and storage of information 
 **Educate users and maintain awareness**: All users should be trained on the use of their mobile device for the locations they will be working in. Users should be supported to look after their mobile device and operate securely by following clear procedures. This should include direction on:
 
 - secure storage and management of user credentials
-- incident reportingApply the secure baseline build: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
+- incident reporting
+
+**Apply the secure baseline build**: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
 
 **Protect data at rest**: Minimize the amount of information stored on a mobile device to only that which is needed to fulfill the business activity that is being delivered outside the normal office environment. If the device supports it, encrypt the data at rest.
 
