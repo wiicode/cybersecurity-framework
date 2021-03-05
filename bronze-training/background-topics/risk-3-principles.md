@@ -2,8 +2,8 @@
 title: Get the basics right: risk management principles for cyber security
 description: Risk management principles that can be applied to all organisations, regardless of size.
 published: true
-date: 2021-03-05T01:54:51.578Z
-tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance
+date: 2021-03-05T01:57:58.927Z
+tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance, favorite
 editor: markdown
 dateCreated: 2021-03-05T01:54:51.578Z
 ---
@@ -16,7 +16,7 @@ dateCreated: 2021-03-05T01:54:51.578Z
 Start with a cyber security baseline
 ------------------------------------
 
-If you can afford to do nothing else, SMBs should adopt a recognized baseline of security controls, such as those defined in [Cyber Essentials](https://www.cyberessentials.ncsc.gov.uk/). This approach doesn't require any risk analysis at all; it's just about applying some basic security controls and demonstrating that your organization takes cyber security seriously. Make sure the security baseline you chose takes into account any laws and regulations your organizations must comply with.
+If you can afford to do nothing else, SMBs should adopt a recognized baseline of security controls. This approach doesn't require any risk analysis at all; it's just about applying some basic security controls and demonstrating that your organization takes cyber security seriously. Make sure the security baseline you chose takes into account any laws and regulations your organizations must comply with.
 
 All organizations face risks, no matter the size
 ------------------------------------------------
@@ -47,7 +47,7 @@ As you work backwards, it should become clear that there are many ways in which 
 Accept *some* risk
 ------------------
 
-When you've made a business decision (such as deploying some new technology in your organization) you will have to accept some possibility that it could be attacked, subverted, destroyed or otherwise messed with. We all experience risk because [the future is uncertain](https://www.ncsc.gov.uk/collection/risk-management-collection?curPage=/collection/risk-management-collection/essential-topics/fundamentals), and cyber risk is no different.
+When you've made a business decision (such as deploying some new technology in your organization) you will have to accept some possibility that it could be attacked, subverted, destroyed or otherwise messed with. We all experience risk because [the future is uncertain](/bronze-training/background-topics/risk-2-fundamentals), and cyber risk is no different.
 
 We're not saying that you should just shrug your shoulders and ignore cyber risks, rather you need to focus on those risks which you can practically do something about. Getting this right depends on:
 
@@ -62,14 +62,14 @@ Balance cyber risks against other types of risk
 
 Some security measures can reduce one *type* of risk, whilst increasing risk somewhere else.
 
-For example, let's imagine you want your customers' online accounts to be secure, so you introduce strong password requirements on your website. This might ([or might not](https://www.ncsc.gov.uk/collection/passwords?curPage=/collection/passwords/updating-your-approach)) reduce some risks, but it is likely to introduce the new risk of customers leaving your website and going to a competitor's (where the overall user experience is better).
+For example, let's imagine you want your customers' online accounts to be secure, so you introduce strong password requirements on your website. This might reduce some risks, but it is likely to introduce the new risk of customers leaving your website and going to a competitor's (where the overall user experience is better).
 
 Whilst this isn't really a *cyber security* risk, it still affects your organization, and treating both risks as being separate and unconnected is unrealistic. So, when you decide to adopt a security measure, try to imagine any unintended consequences.
 
 Learn from security solutions used by other organizations
 ---------------------------------------------------------
 
-It's rarely worth re-inventing the wheel. We don't advocate you blindly copying security solutions without any reflecting on how they fit your own context, but you can learn a lot from studying how other organizations have solved similar cyber security problems to yours. For example, the description of [the BCSF's own IT architecture](https://www.ncsc.gov.uk/blog-post/ncsc-it-architecture-behind-ncscs-it-system-0) might be a useful starting point for some organizations. Keep an eye out for how other organizations have solved security problems.
+It's rarely worth re-inventing the wheel. We don't advocate you blindly copying security solutions without any reflecting on how they fit your own context, but you can learn a lot from studying how other organizations have solved similar cyber security problems to yours.
 
 Keep an eye out for cyber security myths
 ----------------------------------------
