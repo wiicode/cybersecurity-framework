@@ -2,13 +2,39 @@
 title: Incident Categories
 description: This page contains the ISO 27000k based incident categories every information security program needs to consider for continuity and recovery.
 published: true
-date: 2021-02-13T23:56:09.936Z
+date: 2021-03-05T19:33:36.994Z
 tags: bronze, bronze-controls
 editor: markdown
 dateCreated: 2020-08-07T17:36:22.443Z
 ---
 
-According to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
+Containment strategies vary based on the **type of incident**. For example, the strategy for containing an
+email-borne malware infection is quite different from that of a network-based DDoS attack. Organizations
+should create separate containment strategies for each major incident type, with criteria documented
+clearly to facilitate decision-making. Criteria for determining the appropriate strategy include:
+
+- Potential damage to and theft of resources
+- Need for evidence preservation
+- Service availability (e.g., network connectivity, services provided to external parties)
+- Time and resources needed to implement the strategy
+- Effectiveness of the strategy (e.g., partial containment, full containment)
+- Duration of the solution (e.g., emergency workaround to be removed in four hours, temporary workaround to be removed in two weeks, permanent solution).
+
+![incident-categoryvspriority.webp](/article_images/incident-categoryvspriority.webp)
+
+
+# Why is incident classification important?
+
+There are several reasons, main ones are:
+
+- categorization directly helps improve incident management;
+- it also helps event/incident long-term analysis;
+- it supports incident information exchange;
+- categorization helps automate event/incident reporting and response.
+
+> According to US ISO/IEC 27035, security incidents may result from deliberate or accidental actions of humans through technical or physical means. The Standard presents incident categories below and their ranking at Organization as they are viewed today.
+{.is-info}
+
 
 
 # Tabs {.tabset}
