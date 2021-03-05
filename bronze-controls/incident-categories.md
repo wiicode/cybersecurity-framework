@@ -2,16 +2,13 @@
 title: Incident Categories
 description: This page contains the ISO 27000k based incident categories every information security program needs to consider for continuity and recovery.
 published: true
-date: 2021-03-05T19:33:36.994Z
+date: 2021-03-05T19:34:08.062Z
 tags: bronze, bronze-controls
 editor: markdown
 dateCreated: 2020-08-07T17:36:22.443Z
 ---
 
-Containment strategies vary based on the **type of incident**. For example, the strategy for containing an
-email-borne malware infection is quite different from that of a network-based DDoS attack. Organizations
-should create separate containment strategies for each major incident type, with criteria documented
-clearly to facilitate decision-making. Criteria for determining the appropriate strategy include:
+Containment strategies vary based on the **type of incident**. For example, the strategy for containing an email-borne malware infection is quite different from that of a network-based DDoS attack. Organizations should create separate containment strategies for each major incident type, with criteria documented clearly to facilitate decision-making. Criteria for determining the appropriate strategy include:
 
 - Potential damage to and theft of resources
 - Need for evidence preservation
