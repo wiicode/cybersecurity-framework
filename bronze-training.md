@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-03-05T01:25:08.101Z
+date: 2021-03-05T02:05:46.736Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -98,13 +98,4 @@ Procedural compliance is about knowing—or knowing where to find—proper opera
 #### Mindfulness
 
 Having good judgement is a quality that any hiring manager ought to demand.  Wether your job is spent refilling vending machines or sending rockets to Mars, there is no substitue for making good choices in the moment. Encouraging mindfulness in every team is essential to cyber securiity.
-
-
-
-## Stories
-{.grid-list}
-- [The Tale of the Nigerian Prince *Understanding Email Compromise.*](/bronze-training/story-nigerian-prince)
-- [The Tale of the Hostage *Learning from ransomware.*](/bronze-training/story-hostage)
-- [The Tale of the Secret Word *Credential hygiene.*](/bronze-training/story-secret-word)
-{.links-list}
 
