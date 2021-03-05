@@ -1,8 +1,8 @@
 ---
-title: component-system-driven-approaches/understanding-system-driven-risk-management
+title: Understanding system-driven risk management
 description: The principles of system-driven risk management in cyber security.
 published: true
-date: 2021-03-05T01:32:42.158Z
+date: 2021-03-05T01:33:22.157Z
 tags: risk-management, bronze, bronze-training, sourced, component-system-risk
 editor: markdown
 dateCreated: 2021-03-05T01:32:42.158Z
