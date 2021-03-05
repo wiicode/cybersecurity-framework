@@ -2,42 +2,38 @@
 title: Separation and cloud security
 description: Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.
 published: true
-date: 2021-02-22T00:55:57.696Z
-tags: risk management, bronze, bronze-training, cloud security guidance
+date: 2021-03-05T02:19:54.400Z
+tags: risk management, bronze, bronze-training, cloud-security-guidance, favorite
 editor: ckeditor
 dateCreated: 2021-02-22T00:55:57.696Z
 -->
 
-<h1>Separation and cloud security</h1>
-<p>Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.</p>
-<h2>Deployment models and service models</h2>
 <p>When assessing the separation measures of a given cloud service, there are two factors determining your security and assurance requirements: The&nbsp;<i>deployment model</i>&nbsp;and the&nbsp;<i>service model.</i></p>
-<p>We have isolated three deployment models:&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#publicC"><strong>public cloud</strong></a>,&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#CommunityC"><strong>community cloud</strong></a>&nbsp;and<strong>&nbsp;</strong><a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#privateC"><strong>private cloud</strong></a>&nbsp;deployments.</p>
-<p>And three service models: Infrastructure as a Service&nbsp;<strong>(</strong><a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#Iaas"><strong>IaaS</strong></a><strong>)</strong>, Platform as a Service&nbsp;<strong>(</strong><a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#paas"><strong>PaaS</strong></a><strong>)</strong>&nbsp;and Software as a Service<strong>(</strong><a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#saas"><strong>SaaS</strong></a><strong>).</strong></p>
-<p>We’ll look at deployment models first, then move on to consider the separation requirements of the various service models. The concluding section summarises&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/separation-and-cloud-security#risks">the risks associated with each of the service models</a>.</p>
-<h2>Separation and deployment models</h2>
-<p><strong>Public cloud</strong></p>
+<p>We have isolated three deployment models:&nbsp;<strong>public cloud</strong>,&nbsp;<strong>community cloud</strong>&nbsp;and<strong>&nbsp;private cloud</strong>&nbsp;deployments.</p>
+<p>And three service models: Infrastructure as a Service&nbsp;<strong>(IaaS)</strong>, Platform as a Service&nbsp;<strong>(PaaS)</strong>&nbsp;and Software as a Service<strong>(SaaS).</strong></p>
+<h1>Separation and deployment models</h1>
+<h2><strong>Public cloud</strong></h2>
 <p>Public cloud services can normally be accessed by anyone in possession of a credit card. For some services, an email address is all that’s required to access free trial versions.</p>
 <p>So, if you are using public cloud service, you have to accept that your adversaries can legitimately purchase a service ‘next door’ to yours.</p>
 <p>In such instances, you probably want a high level of confidence in the controls separating your data from that of others.</p>
-<p><strong>Community cloud</strong></p>
+<h2><strong>Community cloud</strong></h2>
 <p>Community cloud services host users from a specific community, such as the public sector.</p>
 <p>These communities often have a shared risk appetite and generally expect members to conform to an agreed minimum standard or legal agreement.</p>
-<p>Community cloud providers can often tailor their offerings to match community requirements. For example, a service provider could choose to meet specific UK government standards for personnel security screening, or conform to the required standard to connect to a government community network. These tailored offerings can sometimes reduce risks relating to one or more of the&nbsp;<a href="https://www.ncsc.gov.uk/guidance/cloud-security-collection">cloud security principles</a>.</p>
+<p>Community cloud providers can often tailor their offerings to match community requirements. For example, a service provider could choose to meet specific UK government standards for personnel security screening, or conform to the required standard to connect to a government community network. These tailored offerings can sometimes reduce risks relating to one or more of the&nbsp;<a href="/silver-training">cloud security principles</a>.</p>
 <p>Dedicating a service to a single community (where there is trust between members of that community) reduces the risks associated with separation between users.</p>
 <p>The level of trust between users will depend upon the standards community members are obliged to conform to. Along with the types of applications deployed, this trust level will determine whether a community cloud service meets the required separation controls.</p>
-<p><strong>Private cloud</strong></p>
-<p>Private cloud services are deployed to support a single organisation. They normally offer the ability to tailor the architecture to meet specific security and business requirements. For example, if all consumers of the service are well known and low risk, then the level of assurance in separation required may be low.</p>
+<h2><strong>Private cloud</strong></h2>
+<p>Private cloud services are deployed to support a single organization. They normally offer the ability to tailor the architecture to meet specific security and business requirements. For example, if all consumers of the service are well known and low risk, then the level of assurance in separation required may be low.</p>
 <p>For processing untrusted (possibly malicious) or very sensitive data you may require higher confidence in the separation controls. You will need to manage, monitor and maintain the infrastructure, unless an agreement exists with the cloud service provider to do this.</p>
 <p>In many situations a private cloud service will operate within a single security domain (for example providing a virtual desktop, or test and development resources). In such scenarios, the cloud platform is simply another part of the enterprise IT environment and should be configured, managed and monitored as such.</p>
 <p>Security controls in private cloud environments normally do not need high levels of assurance,&nbsp;<i>unless you have particularly challenging security requirements.</i></p>
-<h2>Separation and cloud service models</h2>
+<h1>Separation and cloud service models</h1>
 <p>The technical controls required to provide separation will vary depending on the service model employed. We’ll consider these for each service type in turn.</p>
-<p><strong>Infrastructure as a Service (IaaS)</strong></p>
+<h2><strong>Infrastructure as a Service (IaaS)</strong></h2>
 <p>IaaS products generally provide compute, networking and storage services. User separation needs to be enforced in all of these elements.</p>
 <p><strong>IaaS: compute separation</strong></p>
 <p>Within the compute environment, separation between users is typically enforced by a hypervisor (though in some circumstances it may also be achieved by allocating physical hardware to consumers).</p>
-<p>The strength of separation usually depends on the virtualisation technology in use. Using hardware virtualisation and&nbsp;<strong>assured virtualisation products</strong>&nbsp;should provide higher confidence in the separation within the compute environment. Obviously, this depends on the correct configuration and operation of the product.</p>
+<p>The strength of separation usually depends on the virtualization technology in use. Using hardware virtualization and&nbsp;<strong>assured virtualization products</strong>&nbsp;should provide higher confidence in the separation within the compute environment. Obviously, this depends on the correct configuration and operation of the product.</p>
 <p>The administration tools supporting the virtualisation product should be secured too, as they are fundamental to the security provided by the product.</p>
 <p><strong>IaaS: network separation</strong></p>
 <p>It is important to understand the network separation model of an IaaS offering since users will normally be constructing their own virtual networks on multi-tenanted network infrastructure.</p>
@@ -47,14 +43,14 @@ dateCreated: 2021-02-22T00:55:57.696Z
 <p><strong>IaaS: storage</strong></p>
 <p>In an IaaS model, users may have direct control over some portion of a multi-tenanted storage environment. Providing users with this direct control makes it possible for a malicious or compromised user to attack the storage components of the service in order to gain access to another user’s data. Effective separation within the storage of the service will help tackle this problem.</p>
 <p>IaaS users can reduce their reliance on the cloud service provider's storage separation by encrypting their own data. This presents its own challenges, and will only be effective if the encryption keys for the data can be stored in such a way that they would not be accessible to an attacker who has access to the storage.</p>
-<p><strong>Platform as a Service (PaaS)</strong></p>
+<h2><strong>Platform as a Service (PaaS)</strong></h2>
 <p>PaaS offerings can provide users with rich and complex interfaces. They cover a wide range of implementation technologies, and are likely to be at different levels of security maturity.</p>
 <p>Depending on the technologies involved, it may be difficult, time-consuming and expensive to gain high levels of assurance in the separation provided by a PaaS offering.</p>
-<p>Applications wanting more assurance in the separation provided by a PaaS offering may instead build upon an IaaS offering which has sufficient assurance in such a way that separation will be enforced by the underlying IaaS. Alternatively, it may be appropriate to run the PaaS solution within a&nbsp;<a href="https://www.cesg.gov.uk/guidance/cloud-security-guidance-separation#community-cloud">private or community cloud service</a>.</p>
+<p>Applications wanting more assurance in the separation provided by a PaaS offering may instead build upon an IaaS offering which has sufficient assurance in such a way that separation will be enforced by the underlying IaaS. Alternatively, it may be appropriate to run the PaaS solution within a&nbsp;private or community cloud service.</p>
 <p>Two common PaaS approaches, with different associated risks, are described below.</p>
 <p><strong>Shared application hosting</strong></p>
 <p>A common PaaS model, particularly for the delivery of web application hosting, involves the hosting of users’ applications on top of a shared operating system. In this model, the operating system and application host (eg the web server and the scripting host or runtime) are responsible for preventing users from affecting each other.</p>
-<p>If attackers can legitimately run an application on the same host, they have access to a large attack surface to attempt to escalate privileges and gain unauthorised access.</p>
+<p>If attackers can legitimately run an application on the same host, they have access to a large attack surface to attempt to escalate privileges and gain unauthorized access.</p>
 <p><strong>Managed host services</strong></p>
 <p>Another common PaaS model is the provision of managed operating system services. In this model, the user has a dedicated physical or virtual machine, but rather than manage the operating system themselves, they purchase this as a service from the service provider.</p>
 <p>The risks in this model are very similar to that of an IaaS service, since the separation enforcement is likely to be based on the same underlying technology (typically a hypervisor).</p>
@@ -63,15 +59,15 @@ dateCreated: 2021-02-22T00:55:57.696Z
   <li>The service provider’s administrators will have privileged access to the operating system. This means it is easier for them to access your data than if they only had access to disk images.</li>
   <li>In providing the management service, additional connections between your machines and the management infrastructure are likely. This infrastructure is an additional attack vector compared to the simple IaaS case.</li>
 </ul>
-<p><strong>Software as a Service (SaaS)</strong></p>
+<h2><strong>Software as a Service (SaaS)</strong></h2>
 <p>In SaaS offerings the separation between users is often enforced by software controls running within a single instance of an application. The strength of the separation is dependent on the application architecture and implementation.</p>
 <p>The underlying platform and infrastructure is not usually relied upon to enforce separation, which makes it difficult to gain high degrees of confidence in the strength of separation. In SaaS offerings it may be difficult to understand where and how your data is protected.</p>
 <p>Some SaaS offerings may be dedicated to a single consumer, leveraging the controls of an IaaS or PaaS solution to give users confidence in the separation of their data.</p>
 <p>In SaaS offerings the service provider will typically rely on application level controls rather than controls in the infrastructure or platform - meaning that if a component in the service is compromised then the data of many users may be visible to that component.</p>
 <p>If you need more assurance in the separation provided by an SaaS offering you may want to build upon an IaaS or PaaS offering which has sufficient assurance in the underlying separation controls. Alternatively, it may be appropriate to run the SaaS solution within a private or community cloud service.</p>
-<h2>Risks associated with service models</h2>
-<p>The following table summarises the main risks associated with each of the service models.</p>
-<figure class="table" style="width:635px;">
+<h1>Risks associated with service models</h1>
+<p>The following table summarizes the main risks associated with each of the service models.</p>
+<figure class="table">
   <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
     <thead>
       <tr>
@@ -83,7 +79,7 @@ dateCreated: 2021-02-22T00:55:57.696Z
       <tr>
         <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Infrastructure as a Service (IaaS)</td>
         <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
-          <p>Offerings implemented using hardware virtualisation and leading virtualisation products can provide a good level of separation between workloads and data in community and public cloud platforms.</p>
+          <p>Offerings implemented using hardware virtualization and leading virtualization products can provide a good level of separation between workloads and data in community and public cloud platforms.</p>
           <p>However, like all complex software, IaaS offerings will never be free from vulnerabilities and the risks that these bring.</p>
           <p>IaaS services also have a much greater burden on the user to configure and operate well.</p>
         </td>
