@@ -2,7 +2,7 @@
 title: End user device (EUD) security guidance
 description: Guidance for organisations deploying a range of end user device platforms as part of a remote working solution
 published: true
-date: 2021-02-28T19:55:44.016Z
+date: 2021-03-05T19:56:31.485Z
 tags: silver, device-management, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:05:36.507Z
@@ -95,7 +95,7 @@ You should read and understand all the points raised by this section before proc
 # Wi-Fi
 In general, devices which support Wi-Fi can be used securely on any Wi-Fi network which allows VPN traffic to transit the network. However, there are risks associated with using Wi-Fi which must be considered and accepted before its use is permitted.
 
-Many devices expose a rich set of services when connected over Wi-Fi. Risk owners of deployments which use Wi-Fi should be content that the increased attack surface of these devices is within the bounds of acceptability. For example, some devices may expose synchronisation services over Wi-Fi to allow media and data to be synchronised.
+Many devices expose a rich set of services when connected over Wi-Fi. Risk owners of deployments which use Wi-Fi should be content that the increased attack surface of these devices is within the bounds of acceptability. For example, some devices may expose synchronisation services over Wi-Fi to allow media and data to be synchronized.
 
 Others may present a screen sharing service which allows the contents of the device’s screen to be shared with networked peripherals. Services may also be accessible locally when the VPN is connected, effectively causing a split tunnel. These attack surfaces should be considered on a device-by-device basis and only permitted where the risk is acceptable.
 
@@ -306,7 +306,7 @@ When choosing network security technologies, keep in mind which of these you are
 1. Enabling business monitoring and/or blocking of users’ network traffic for legal reasons, discipline, and duty of care (e.g. deny listing websites)
 
 ## Aspects of VPN configurations
-NCSC’s EUD guidance recommends an automatic, always on, IPsec VPN, which routes traffic through a remote network for inspection. That guidance also provides a configuration for the platform to make that work.
+BCSF’s EUD guidance recommends an automatic, always on, IPsec VPN, which routes traffic through a remote network for inspection. That guidance also provides a configuration for the platform to make that work.
 
 This section highlights some aspects of VPN configuration you may wish to change, and the resulting impact on risks.
 
@@ -317,7 +317,7 @@ Our recommendation is that IPsec be used for VPN access. IPsec is an open standa
 
 As an IPsec VPN client is built in to many operating systems, no additional products are required to deploy a VPN. However, some networks restrict or block IPsec traffic, so your EUDs may, in certain situations, be unable to create the VPN connection.
 
-TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely interoperate, so you will need to use both from the same vendor – whilst TLS is standardised in a variety of RFCs, exactly how those protocols are used to create a VPN is not. However, TLS VPN connections tend to be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
+TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely interoperate, so you will need to use both from the same vendor – whilst TLS is standardized in a variety of RFCs, exactly how those protocols are used to create a VPN is not. However, TLS VPN connections tend to be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
 
 From a security perspective, with all other things equal, there is very little difference in risk between using an IPsec and a TLS VPN.
 
@@ -343,7 +343,7 @@ Our guidance generally recommends forcing traffic down the VPN, and where possib
 Using an optional VPN allows users to disable the VPN and evade protective monitoring and auditing services. This increases the risk of EUDs being attacked over the network, and of users circumventing corporate policy restrictions.
 
 ### Initiating a VPN connection
-VPNs need to be established in order to provide benefits, remain connected while the device is in use, and reconnect if the connection is temporarily lost. Typically, there are three ways of implementing this behaviour: automatic, triggered, and manual.
+VPNs need to be established in order to provide benefits, remain connected while the device is in use, and reconnect if the connection is temporarily lost. Typically, there are three ways of implementing this behavior: automatic, triggered, and manual.
 
 - Automatic VPNs are brought up by the device whenever a network connection is requested by software on the device
 - Triggered VPNs are brought up whenever certain network connections from a defined list are made (internal intranet sites, for example)
@@ -360,7 +360,7 @@ Some operating systems, and many third-party applications, provide the ability f
 
 However, if deploying in this way, you need to define all the applications you want protected by the VPN in advance. As this is generally used in a BYOD scenario, users can always download another application to work around the per-app VPN restrictions. In some cases, it may not be possible to force system applications to use a per-app VPN.
 
-NCSC’s per-platform EUD guidance recommends - and provides a configuration for - setting up a full-device VPN. Using a per-app VPN increases the risk that sensitive data may be sent outside the VPN by an application that is not included in a per-app VPN, or by a misconfiguration in the platform.
+BCSF’s per-platform EUD guidance recommends - and provides a configuration for - setting up a full-device VPN. Using a per-app VPN increases the risk that sensitive data may be sent outside the VPN by an application that is not included in a per-app VPN, or by a misconfiguration in the platform.
 
 ### Split tunnelling
 Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, whilst other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
@@ -406,7 +406,7 @@ As with all our EUD guidance, the configurations we recommend are not mandatory.
 | Captive-portal support | Via third-party app and custom firewall rules | Built-in helper | Built-in helper | None | Chrome browser | None |
 
 ## Recommended configurations
-The NCSC has some additional guidance documents which provide advice on other aspects of configuring VPNs, including cryptographic profiles, and advice on managing a Certificate Authority (CA). These documents are:
+The BCSF has some additional guidance documents which provide advice on other aspects of configuring VPNs, including cryptographic profiles, and advice on managing a Certificate Authority (CA). These documents are:
 
 Using TLS to protect data
 {.grid-list}
