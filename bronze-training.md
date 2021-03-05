@@ -2,83 +2,109 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-03-05T01:23:30.059Z
-tags: bronze, home, bronze-training
+date: 2021-03-05T01:25:08.101Z
+tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
 ---
 
-# Understanding component-driven risk management
-The principles of component-driven risk management in cyber security.
-Component-driven risk assessments are the most mature and common types of assessment within the cyber security profession. This section describes what component-driven techniques have in common, where they add value, and where they don't.
+# Learning and Training
 
-- Once you've understood these basics, you should be able to pick up any component-driven standard or framework (as they are based on a similar perspective on risk) and understand how they differ from system-driven approaches.
-- If you've not already done so, please read Introducing component-driven and system-driven risk assessments before reading this section.
+> Deloitte estimates that some common criminal businesses can be operated for as little as $34 month and could return $25,000, while others may routinely require nearly $3,800 a month and could return up to $1 million per month.
+{.is-warning}
 
-## Scope and assets
-Unsurprisingly, component-driven risk assessments are focused on system components. So what do we mean by 'system components'? Typical examples include:
+> All businesses use information. If that information is compromised in some way, the business may not be able to function. Protecting the information an organization creates, uses, or stores is information security. Information security concentrates on how to protect confidentiality, integrity, and availability of all business information; this is known as the CIA triad.
+{.is-info}
 
-- hardware (computers, servers, etc.)
-- software
-- data sets
-- services
-- personal information
-- business critical information
-- staff
+The CIA triad is a model designed to guide policies for information security within an organization. **Confidentiality** is protecting information from unauthorized access and disclosure. **Integrity** is protecting information from unauthorized modification. **Availability** is preventing disruption in how an organization accesses the data.
 
-The focus on system components requires you to start by defining the function that you are analyzing (for example, a payroll function). This function is known as the 'scope' of your assessment. You then need to state which components you are considering in your risk assessment of the scope, and which you aren't. This is generally referred to as an 'asset list' or 'asset register'.
+## BCSF Core Training Modules
 
-Components which you have no control over (but which your own system depends on) are known as dependencies, and can be included alongside your asset list, provided as long it is clear how these dependencies affect those components which you can control. A scope is sometimes best presented as a diagram, which clearly shows what is in, what is out, and how the key assets are connected.
+> BCSF Guides provide management, technical, and oversight guidence.  These two sections contain extensive information on creating your own security program. 
+{.is-success}
 
-## Elements of risk
-Once you have identified your scope, most component-driven approaches require the risk analyst to assess three elements of risk. These three elements are typically described by the terms impact, vulnerability and threat.
 
-### Impact
-Impact is the consequences of a risk being realized. When conducting component-driven risk assessments, impact is usually described in terms of the consequences of a given asset being compromised in a given way. This impact is described in different ways, but one of the more common techniques is to assess the impacts to confidentiality, integrity and availability, of information. For example, an impact might be described in terms of a loss of confidentiality of a customer dataset, or the corruption (loss of integrity) of your company's accounts. A loss of one of these properties can be connected to other types of consequence, such as lost money, loss of life, delays to projects, or any other kind of undesirable outcome.
+{.grid-list}
+- [Individual Security - Level 1*Comprehensive info for personal information security.*](/bronze-training/individual-cybersecurity)
+- [Small Business Cyber Security - Level 1*Quick, easy, and inexpensive ways to secure your business.*](/bronze-training/background-simple)
+- [Small Business Cyber Security - Level 2*A more complete approach to information security.*](/bronze-training/background-advanced)
+- [Small Business Cyber Security - Level 3*A guide to information security governance.*](/bronze-training/background-topics)
+- [Boards and Company Leadership *Education for business owners and boards alike.*](/bronze-training/background-boards)
 
-### Vulnerability
-A vulnerability is a weakness in a component that would enable an impact to be realized, either deliberately, or by accident. For instance, a vulnerability could be a piece of software which allows a user to illegitimately increase their user account privileges, or a weakness in a business process (e.g. not properly checking the identity of someone before issuing them credentials for access to an online system or service). Regardless of the type of vulnerability in question, it is something which can be used to cause a impact.
+{.links-list}
 
-### Threat
-Threat is the individual, group or circumstance which causes a given impact to occur. For example, this could be:
+# A Note about Humans
+> Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
+{.is-info}
 
-- a lone hacker, or a state-sponsored group
-- a member of staff who has made an honest mistake
-- a situation beyond the control of the organization (such as high-impact weather)
+Cyber security researchers can generally find 359 ways to compromise your systems, but not all will work for your business.  BCSF encourages companies delop their own materials rather than outousrce that responsibility to tools and subscriptions.  With that said, a subscription may be part of your program, but it should not be the whole process.  A successful program often includes:
 
-The purpose of assessing threat is to improve the assessment of how likely a given risk is to be realized. Typically, when assessing a human threat actor, analysts consider people who are likely to want to harm the organization. This then allows them to consider both the capability and intent of these groups. Risk experts use threat taxonomies and categorisation methods to provide a common language of threat capability.
+- Policies and Procedures training during onboarding and annually.
+- Regular team meetings where cyber security is given 1-5 minutes.
+- Case studies and stories of compromise for review.
+- Security Awareness testing. 
+- Insider threat detection. 
 
-One of the weaknesses of threat assessments is that a threat's capability can change rapidly, and reliable information on these changes can be hard to come by. Because of this, don't treat your assessments of threat capability as if they are static, and make sure you recognize uncertainty and variability in your threat assessments.
+## People's Attitudes
+> Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
+{.is-danger}
 
-## Applying and communicating threat, vulnerability and impact
-Once these elements of risk have been assessed, the next step is to combine these assessments to identify which risks are most concerning. Some techniques do this by combining the assessments of threat, vulnerability and impact into a single measurement of risk for each system component. This is not as straightforward as some standards claim; the three components of risk are fundamentally different from each other, and comparing them is like comparing apples with oranges. Some approaches recommend the use of risk matrices to combine assessments of threat, vulnerability and impact.
+There are also five hazardous attitudes which contribute to the general vulnerabilities staff, managers, and owners. Like most things in security, or even human nature, they are not binary and exist on spectrums. All present a threat an organization and they are: impulsivity, invulnerability, machismo, resignation, and anti-authority.
 
-### Prioritizing your risks
-Once the various threats, vulnerabilities and impacts have been assessed and combined to create a list of risks, they can be prioritized according to how concerning they are. This allows you to manage the most concerning risks first. You can communicate this prioritisation of risks in a variety of ways. For example, you could:
+### Tabs {.tabset}
+#### Impulsivity
 
-- estimate the financial loss of an impact, if it were to be realized
-- provide a narrative of the chain of events that would need to occur if an asset were to be compromised
+Impulsivity is attributed to heavy workloads and due to the general demand competitive work environments. Often, staff are attempting to get work done quickly. In the flurry of activity they can easily can mis-click, misread, or misinterpret an obvious threat or dismiss it after it had been triggered.
 
-Many standardized component-driven risk management techniques use qualitative labels to describe levels of impact, usually with labels like 'high', 'medium' and 'low'. Whilst these are fairly intuitive, research shows that there is a huge difference between how different individuals interpret these labels. When considering this lack of consistency of understanding, these labels (and similar 'traffic light' approaches) should be used very cautiously. The technique you use should be tailored to the risk assessment's audience; who is it seeking to influence? What decision are you trying to inform? Does the information you are presenting from your assessment aid decision making or hinder it?
+#### Invulnerability
 
-Some approaches have a ready-made list of tasks or objectives that can be used to mitigate the risks you have identified. These are known as 'control sets', from which you can select the most appropriate set of mitigations for each risk.
+Invulnerability is mostly associated with managers, or owners, and represents the false assumption that they are too small, too insignificant, or too simple to be a targeted. Such individuals often have fast, or direct, responses to security concerns and have taken basic measures to protect systems. The incomplete understanding of the cybersecurity landscape leads to profound gaps in the security process for the organization and general shortsightedness.
 
-## Commonly used component-driven cyber risk management methods and frameworks
-This section provides a brief description of commonly used component-driven cyber risk management methods and frameworks. Click on the relevant hyperlinks for more detailed information about each method/framework. There are many more component-driven risk management techniques which have not been listed here. This list does not include system-driven techniques.
+#### Machismo
 
-### Selecting a technique that's right for you
-When selecting a risk method or framework, you need to consider:
+Machismo is a compliment to invulnerability and also is a quality of managers and owners. Generally, it is associated with lack of sufficient understanding of security and threat management technologies, and thus fail to see the inadequacies of such controls. Suggesting that the mere presence of a firewall is sufficient to protect a system is an example.
 
-- The overall cost of using the method. For example, the procurement of tools, licensing and expertise.
-- The scope of the project. Is the risk method proportionate to what is being assessed?
-- Ensuring the required resources are proportionate and sustainable. What specialist resources are required, and do you have them?
-- Are there any licensing restrictions?
+#### Resignation
 
-| Method / Framework                                                 	| What is it?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    	| How does it work?                                                                                                                                                                                                                                                                                                                                                                                                                               	| Who is it for?                                                                                                                                                                                                                                                                                                                                  	| Cost and prerequisites                                                                                                                                                                                                                              	|
-|--------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| ISO/IEC 27005:2011                                                 	| An international standard providing guidelines for information risk management. Although it does outline a generic risk assessment process, it leaves the choice of that risk assessment technique to the business. ISO 27005 is part of the ISO 27000 family of standards.                                                                                                                                                                                                                                                                                    	| The standard is not prescriptive about which risk management technique should be used. As such, this could encompass system-driven as well as component-driven techniques. However, ISO 27005 requires that a risk assessment takes into account threats, vulnerabilities, and impacts, which emphasizes a component-driven approach.                                                                                                           	| The principles of ISO 27005 can be applied to a variety of types and sizes of organization.                                                                                                                                                                                                                                                     	| Given the broad nature of the guidance, specialist skilled resources are needed to tailor the implementation to the requirements of the business. The cost of these resources should be considered along with the cost of purchasing the standards. 	|
-| Information Security Forum (ISF) IRAM 2                            	| The ISF's risk management methodology is intended to help organizations better understand and manage information risks.                                                                                                                                                                                                                                                                                                                                                                                                                                        	| This approach uses a number of phases to identify, evaluate and treat risks through the analysis and assessment of risk components (threat, vulnerability and impact).                                                                                                                                                                                                                                                                          	| IRAM 2 is aimed at organizations.                                                                                                                                                                                                                                                                                                               	| IRAM 2 is only provided to members of the ISF and organizations will need to have in place information risk management expertise to use it effectively. This should be factored into the cost.                                                      	|
-| HMG Information Assurance Standard 1 & 2                           	| Information Assurance Standard 1 & 2 (IS 1&2) and its supporting documents is a legacy suite of information risk management guidance, produced by CESG, prior to the creation of the Corporate Cyber Security Centre. The use of IS 1 & 2 for conducting technical risk management used to be mandatory for public sector organizations. Whilst this ceased to be the case in 2015, after which time the standard was no longer supported, the risk assessment method within IS 1 & 2 is still available for use.                                               	| The risk treatment method includes: the production of a risk treatment plan, defining an implementation approach for the identified controls (largely based on ISO 27002), the development of an assurance plan, a residual risk assessment and gap analysis. The risk assessment method includes defining the scope, the corresponding information assets and then conducting an impact, threat and vulnerability assessment of them.          	| IS 1 & 2 is used predominantly by public sector organizations. However it could also be used by any organization to assess and manage their technical risks.                                                                                                                                                                                    	| The steps presented in IS1 & 2 are complex and achieving a consistent and reasoned outcome requires a skilled practitioner.                                                                                                                         	|
-| US Corporate Institute of Standards and Technology (NIST) SP 800-30 	| The US government’s preferred risk assessment methodology, mandated for US government agencies. It features a detailed step-by-step process from the initial stages of preparing for an assessment, through conducting it, communicating the results, and maintaining the assessment. The guidance itself is comprehensive and clear. Unsurprisingly, as a US standard, much of the supporting documentation in the NIST Risk Management Framework is heavily US-focussed, often dwelling on regulatory issues that may have little relevance to non-US users. 	| The risk assessment process in SP 800-30 takes inputs from a preparatory step that establishes the context, scope, assumptions, and key information sources for the process, and then uses identified threats and vulnerabilities to determine likelihood, impact and risk. The process next requires that the results are communicated and the assessment maintained, including monitoring effectiveness of controls and verifying compliance. 	| The methodology should be usable by organizations of all sizes in both the private and public sectors. It is designed to be consistent with the ISO standards, and flexible enough to be used with other risk management frameworks.                                                                                                            	| It is freely available directly from the NIST website.                                                                                                                                                                                              	|
-| Octave Allegro                                                     	| The Operationally Critical Threat, Asset, and Vulnerability Evaluation (OCTAVE) methodology originates from Carnegie Mellon University in the USA. Older versions are still in use but the most recent version, OCTAVE Allegro, is more streamlined and is actively supported. It is primarily intended as a qualitative assessment, although may be used for simple quantitative analysis.                                                                                                                                                                    	| Octave Allegro is an asset-focussed method. The first step is establishing consistent, qualitative risk measurement criteria specific to the organization’s drivers and objectives. After assets have been profiled, threats and impacts are considered in light of real world scenarios to identify risks. These risks are then prioritized according to the risk measurement criteria and planned mitigation.                                 	| OCTAVE is intended to be managed in a ‘workshop’ style, with a small group of participants from the operational and IT areas of the business, not requiring extensive expertise. Therefore, this approach might suit organizations looking for a risk assessment process that can be done without investing heavily in training or consultants. 	| The resources to perform a risk assessment can be downloaded for free and are integral to the process.                                                                                                                                              	|
-| ISACA COBIT 5 for Risk                                             	| COBIT 5 for Risk is provided by ISACA and provides guidance covering the governance of and understanding of enterprise IT risk.                                                                                                                                                                                                                                                                                                                                                                                                                                	| COBIT 5 for Risk provides risk management and governance framework in the form of principles and guidance.                                                                                                                                                                                                                                                                                                                                      	| COBIT 5 for Risk is likely to suit organizations seeking to improve their approach to security risk management and governance                                                                                                                                                                                                                   	| The COBIT 5 for Risk book is available for purchase on the ISACA website. An organization looking use COBIT 5 for Risk will also need to take into account any specialist resources necessary to implement its guidance and principles.             	|
+Resignation can vary with roles and is the effective surrender to threats. For managers, resignation is choosing not to do the work necessary to prevent incidents or transferring the responsibility for dealing with an incident to someone else instead of managing it. For staff, it is failing to learn safe computing practices, take training seriously, or act thoughtfully when faced with an incident.
+
+#### Anti-authority
+
+Anti-authority is a non-conformist approach to cybersecurity. Despite being connected to the same internet, using similar hardware, working with the same software as most organizations around the world, anti-authoritarian managers and owners chose to avoid the work, fail to comply with standards, ignore education opportunities. Such individuals continue to conduct business as they always have and have not yet come to terms that the current cybersecurity needs.
+Traits.
+
+## Responses to Attitudes
+> Technology cannot fix culture or human error, at best it can help to mitigate it. Successful cybersecurity comes from within the individuals that work for your organization, and their relationship with you and your data security team. Research has shown, however, that there are key qualities beneficial to minimizing security risks and include: integrity, depth of knowledge, compliance, questioning attitude, and formality in communication. The people doing the work carrying your business forward are the best line of defense. As much as staff need awareness training, education, standards, policies, guidelines, and procedures they become exponentially more valuable to cybersecurity when they have a developed these traits.
+{.is-success}
+
+### Tabs {.tabset}
+
+#### Curiousity
+
+A questioning attitude is likely the most difficult trait to develop, but it is also the one that carries the greatest benefit. If people  listen to their internal alarm bells, search for the causes, and then take corrective action, the chances that they’ll forestall problems rise dramatically.
+
+#### Integrity
+
+Integrity is the deeply internalized ideal that leads people, without exception, to eliminate “sins of commission” (deliberate departures from protocol) and own up immediately to mistakes. Integrity is dependent on a culture that rewards honesty and offers consequences for lack thereof.
+
+#### Education
+
+Depth of knowledge is the result of proper education. Staff with thoroughly understand all aspects of a system—including the way it’s engineered, its vulnerabilities, and the procedures required to operate it—more readily recognize when something is wrong and handle any anomaly more effectively.
+
+#### Methodolgy 
+
+Procedural compliance is about knowing—or knowing where to find—proper operational procedures and to follow them to the letter. They’re also expected to recognize when a situation has eclipsed existing written procedures and new ones are called for.
+
+#### Mindfulness
+
+Having good judgement is a quality that any hiring manager ought to demand.  Wether your job is spent refilling vending machines or sending rockets to Mars, there is no substitue for making good choices in the moment. Encouraging mindfulness in every team is essential to cyber securiity.
+
+
+
+## Stories
+{.grid-list}
+- [The Tale of the Nigerian Prince *Understanding Email Compromise.*](/bronze-training/story-nigerian-prince)
+- [The Tale of the Hostage *Learning from ransomware.*](/bronze-training/story-hostage)
+- [The Tale of the Secret Word *Credential hygiene.*](/bronze-training/story-secret-word)
+{.links-list}
+
