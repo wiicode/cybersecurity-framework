@@ -2,24 +2,23 @@
 title: BYOD Guidance
 description: 
 published: true
-date: 2021-02-13T23:44:36.935Z
-tags: security operations, bronze, bronze-training
+date: 2021-03-05T19:47:35.942Z
+tags: bronze, bronze-training, security-operations
 editor: ckeditor
 dateCreated: 2021-01-08T05:05:29.692Z
 -->
 
 <h1>Bring Your Own Device (BYOD)</h1>
-<p>Guidance for companies on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information. This guidance is for companies considering a ‘<i>Bring Your Own Device</i>’ (BYOD) approach. It describes the key security issues you'll need to consider in order to maximise the advantages of BYOD, while also minimising the risks.</p>
+<p>Guidance for companies on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information. This guidance is for companies considering a ‘<i>Bring Your Own Device</i>’ (BYOD) approach. It describes the key security issues you'll need to consider in order to maximize the advantages of BYOD, while also minimizing the risks.</p>
 <p>Note that whilst we talk in this article about device <i>ownership</i> as distinguishing BYOD from more traditional management, it’s really device <i>management</i> that is important. If your users are happy to allow traditional full-device management of devices they own (effectively making it corporately issued), then you can continue to follow our detailed platform guidance.</p>
 <h2>Why use BYOD?</h2>
-<p>Workers often want to use their own laptops, smartphones and tablets to carry out their business functions. One clear advantage is that the user will be familiar with the device and will be saved the trouble of carrying both work and personal devices. It can also minimise overheads for the business relating to procurement and provisioning.</p>
+<p>Workers often want to use their own laptops, smartphones and tablets to carry out their business functions. One clear advantage is that the user will be familiar with the device and will be saved the trouble of carrying both work and personal devices. It can also minimize overheads for the business relating to procurement and provisioning.</p>
 <p>However, companies should still apply proportionate security controls and monitoring to these devices if they are to be adequately secured.&nbsp;</p>
 <p>Balancing your company's need to protect its data and systems against the expectations of the device owner can be difficult. Without careful consideration, you will either end up with your users rejecting BYOD, or finding other ways to do their job using <a href="https://en.wikipedia.org/wiki/Shadow_IT"><u>'shadow IT.'</u></a></p>
 <h2>Preparing for BYOD</h2>
 <p>When getting ready to deploy a BYOD solution you should first understand the additional risks involved and then develop a policy which will balance security for your company with acceptability for your users.</p>
 <h2>Additional risks from BYOD</h2>
 <p>It's to be expected that you will have less control and visibility of a user's personal devices than you would corporate IT. As a result, BYOD deployments may come with greater security risks than a traditional setup.</p>
-<p>&nbsp;</p>
 <p>However, with the right technical and procedural controls, many of these risks can be managed. How you might achieve this depends on the mix of technology you use. This includes any corporately owned devices and authentication solutions. You should think about how much the following risks matter to you before deciding to allow BYOD within your company.</p>
 <ul>
   <li>Easier user-initiated deliberate data loss (e.g. copying data from work app to personal)</li>
@@ -34,51 +33,37 @@ dateCreated: 2021-01-08T05:05:29.692Z
 <p>Many of these risks can also be present in corporately - managed solutions.</p>
 <h2>Developing a BYOD policy</h2>
 <p>Once you have established your tolerance for the types of risk associated with BYOD you should start developing your BYOD policy.</p>
-<p>Your BYOD policy should clarify both companyal <i>and</i> employee responsibilities.</p>
+<p>Your BYOD policy should clarify both company <i>and</i> employee responsibilities.</p>
 <p>There are two stages to developing a BYOD policy. First you establish your policy goals, then you determine the controls you can use to achieve them</p>
 <p>These questions will help you develop your policy goals:</p>
 <ol>
-  <li>What tasks will employees be permitted or encouraged to do,<i> from their own devices?&nbsp;</i><br>For example, you may want your employees to submit expense reports from their personal devices but not access emails.&nbsp;<br><br>&nbsp;</li>
-  <li>What services will you expose to personal devices? And, what data you will expose from within those services?<br>For example, you might permit users to submit expenses to your HR tool from personal devices, but not change their bank details. Or you might permit access to the holiday booking tool, but not allow access to your sensitive financial documents store.<br><br>&nbsp;</li>
-  <li>How much control will your employees be willing to grant you over their devices?<br>If you expect users to reject any control of their devices, your ability to manage risks will be compromised. For example, users may not like the idea of their employer being able to remotely wipe their entire device.<br><br>&nbsp;</li>
-  <li>How enforceable are your policies?<br>If your policies rely entirely on users following specific procedures to keep devices secure, you should also consider what happens if users don’t follow those procedures, and how you might respond in such circumstances.</li>
+  <li><strong>What tasks will employees be permitted or encouraged to do,</strong><i><strong> from their own devices?&nbsp;</strong></i><br>For example, you may want your employees to submit expense reports from their personal devices but not access emails.&nbsp;</li>
+  <li><strong>What services will you expose to personal devices? And, what data you will expose from within those services?</strong><br>For example, you might permit users to submit expenses to your HR tool from personal devices, but not change their bank details. Or you might permit access to the holiday booking tool, but not allow access to your sensitive financial documents store.</li>
+  <li><strong>How much control will your employees be willing to grant you over their devices?</strong><br>If you expect users to reject any control of their devices, your ability to manage risks will be compromised. For example, users may not like the idea of their employer being able to remotely wipe their entire device.</li>
+  <li><strong>How enforceable are your policies?</strong><br>If your policies rely entirely on users following specific procedures to keep devices secure, you should also consider what happens if users don’t follow those procedures, and how you might respond in such circumstances.</li>
 </ol>
 <h2>Enforcing your policy with technical controls</h2>
 <p>It is likely that you’ll need to develop your policy in conjunction with the technical controls you will use to implement the policy.</p>
 <ol>
-  <li>What types of access are permitted?</li>
+  <li><strong>What types of access are permitted? </strong>For example, phones with native apps, third-party container apps, web browsers – see <i>technical approaches</i> for more detail</li>
+  <li><strong>What minimum standards for hardware and software versions will you enforce?</strong></li>
+  <li>Older or unsupported platform versions are more likely to contain security weaknesses and lack modern mitigations which makes them harder to exploit.</li>
+  <li><strong>What device policies will you enforce, and how will you enforce them? </strong>You may be able to enforce some policies, including minimum passcode length and preventing copy and paste between work and personal apps. You will need to check your MDM service documentation for what policies are supported on your chosen devices.</li>
+  <li><strong>What service access policies will you enforce?</strong> For example, you could use compliance policies and strong authentication to verify <i>devices</i> before they are allowed access to enterprise services if supported. Either way, strong <i>user</i> authentication including Multi-Factor Authentication is especially important for BYOD as it may not be possible to implement strong machine authentication for personal devices.</li>
+  <li><strong>How will individual services prevent personal devices from accessing sensitive data? </strong>You might want to restrict access from personal devices to certain areas of a single service. For example, you may block access from personal devices to the most sensitive internal documents within your file storage services, whilst still allowing them to access less sensitive material in the same service.</li>
+  <li><strong>How and where will you enforce these policies?</strong> They could be enforced at an authentication service, network firewall, or on specific services.</li>
 </ol>
-<p>For example, phones with native apps, third-party container apps, web browsers – see <i>technical approaches</i> for more detail</p>
-<ol>
-  <li>What minimum standards for hardware and software versions will you enforce?<br><br>&nbsp;</li>
-  <li>Older or unsupported platform versions are more likely to contain security weaknesses and lack modern mitigations which makes them harder to exploit See our <i>Obsolete platforms</i> guidance for more information.<br><br>&nbsp;</li>
-  <li>What device policies will you enforce, and how will you enforce them?</li>
-</ol>
-<p>You may be able to enforce some policies, including minimum passcode length and preventing copy and paste between work and personal apps. You will need to check your MDM service documentation for what policies are supported on your chosen devices.</p>
-<ol>
-  <li>What service access policies will you enforce?</li>
-</ol>
-<p>For example, you could use compliance policies and strong authentication to verify <i>devices</i> before they are allowed access to enterprise services if supported. Either way, strong <i>user</i> authentication including Multi-Factor Authentication is especially important for BYOD as it may not be possible to implement strong machine authentication for personal devices.</p>
-<ol>
-  <li>How will individual services prevent personal devices from accessing sensitive data?</li>
-</ol>
-<p>You might want to restrict access from personal devices to certain areas of a single service. For example, you may block access from personal devices to the most sensitive internal documents within your file storage services, whilst still allowing them to access less sensitive material in the same service.</p>
-<ol>
-  <li>How and where will you enforce these policies?</li>
-</ol>
-<p>They could be enforced at an authentication service, network firewall, or on specific services.</p>
 <p>Security controls which adversely effect the usability of a device will drive down adoption and so undermine your approach.&nbsp;</p>
 <p>Overly restrictive controls may even encourage staff to find workarounds, which might increase your security risk.</p>
 <h2>Good practices for BYOD</h2>
-<p>Where possible, the NCSC recommends using fully corporate-managed devices, which you could enable for personal use in a risk-managed way. This can be done using built-in technologies on modern smartphone platforms.&nbsp;</p>
+<p>Where possible, the BCSF recommends using fully corporate-managed devices, which you could enable for personal use in a risk-managed way. This can be done using built-in technologies on modern smartphone platforms.&nbsp;</p>
 <p>Regardless of the technical approach chosen, you need to take special care around the following two areas:</p>
 <h2>Protecting against data loss</h2>
 <p>Where it's reasonable to do so, you should provide workers with a ‘presentation’ of information on their device, rather than storing it locally. You could do this using remote apps or remote desktop technology.</p>
-<p>This minimises the amount of data that can be easily accessed if the device is lost or stolen, and helps prevent bulk data theft if the device is infected. Be aware that security solutions, such as encryption or container products, can be circumvented if malware is present on the device.</p>
+<p>This minimizes the amount of data that can be easily accessed if the device is lost or stolen, and helps prevent bulk data theft if the device is infected. Be aware that security solutions, such as encryption or container products, can be circumvented if malware is present on the device.</p>
 <p>If you use a third-party container application as your BYOD solution you should ensure that the product uses good practice cryptography. You may want to also consider using a Virtual Private Network (VPN) to further protect data in transit.&nbsp;</p>
 <h2>Strongly authenticating users and devices</h2>
 <p>Staff should be made to strongly authenticate themselves before being given access to business data.</p>
-<p>&nbsp;</p>
 <p>Since you may not be able to ensure that all personally owned devices are up to date, some authentication credentials could become compromised as a result.&nbsp;</p>
 <p>You should consider using separate credentials for BYOD access to business systems. For example, usernames and passwords should not be shared between personally owned devices and the business desktop environment. Multi-factor authentication is also highly recommended.&nbsp;</p>
 <p>As BYOD has very different enrollment processes to corporately owned devices – BYOD typically uses self-enrollment – securing device authentication to the same level as corporately owned devices may not be possible, and you will likely need to adopt a <i>trust on first use</i> approach for these devices. Nonetheless, using machine certificates stored in the dedicated, tamper-resistant hardware, present in many modern devices, can help improve machine authentication security. Alternatively, you can achieve similar results using applications which support secure storage for authentication credentials.</p>
@@ -117,7 +102,6 @@ dateCreated: 2021-01-08T05:05:29.692Z
 <p>A variety of third-party vendors – typically MDM vendors – also provide <i>container applications, </i>where users are expected to perform work-related tasks within a single application provided by one vendor. These can be managed using <a href="https://en.wikipedia.org/wiki/Mobile_application_management"><u>Mobile Application Management (MAM)</u></a>.&nbsp;</p>
 <p>Sometimes there may be multiple container applications from the same vendor, which appear as separate apps, but behave as if they were one container.</p>
 <p>In general, whilst a container application approach provides less control of whole device settings, it tends to offer stronger controls for you to protect and isolate corporate data from the user’s personal applications. Many container applications can, for example, prohibit copy and paste actions across the container boundary.</p>
-<p>&nbsp;</p>
 <p>Container apps also allow for some monitoring of the device, including checking operating system versions.&nbsp;</p>
 <p>Some users may view the container approach as having worse usability than the native BYOD technologies. For example, users generally won't be able to use a platform’s built-in Mail and Calendar apps. Some users may appreciate the clear separation of personal and work spaces created by the container approach.</p>
 <p>Some MDM vendors provide a hybrid of models 2 and 3. In this set up there is partial MDM management of the device, but most work data is held within a container. This approach can help manage more of the risks of using container applications, but may also require the user to accept more enterprise control of their devices as a result.</p>
@@ -161,7 +145,7 @@ dateCreated: 2021-01-08T05:05:29.692Z
 <p>As your BYOD implementation expands, ensure you have sufficient IT support capability and expertise to manage a growing range of devices and device platforms.</p>
 <p>The associated cost of supporting a variety of devices, operating systems and user devices, which may change rapidly in response to technical advances or user preferences, should also be considered.</p>
 <h3>Increased reliance on procedural controls</h3>
-<p>You might communicate your <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device#policy"><u>BYOD policy</u></a> through employee training, user security procedures and education. If you do this, you will need to ensure that your staff understand their responsibilities when using their own devices for business.</p>
+<p>You might communicate your <u>BYOD policy</u> through employee training, user security procedures and education. If you do this, you will need to ensure that your staff understand their responsibilities when using their own devices for business.</p>
 <p>This is important because people often approach security differently when using their own device rather than a corporately owned laptop or PC. Plus, you will be increasingly reliant on procedural controls where technical controls are unavailable. For example, staff may be happy to let family members use their own device, or provide credentials (including passwords) to a third party for maintenance or repair.</p>
 <p>You should also conduct regular audits of the business data stored on devices <i>and</i> accessible to devices - technical solutions can help with this. When staff leave your company or replace their device, you should ensure all business data is removed and credentials to access business systems are revoked.</p>
 <h3>Potential legal issues</h3>
