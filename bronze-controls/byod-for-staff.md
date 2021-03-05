@@ -2,11 +2,22 @@
 title: BYOD Agreement
 description: Personal Smart Device Usage Agreement (BYOD - Bring Your Own Device)
 published: true
-date: 2021-02-13T23:54:44.281Z
+date: 2021-03-05T19:54:10.339Z
 tags: bronze, bronze-controls
 editor: markdown
 dateCreated: 2020-10-31T18:56:02.392Z
 ---
+
+> BCSF recommends that organizations restrict BYOD access to mobile phones only.  Personal devices such as computers and latops should never be used to access corporate data due to risks in control, compliance, and confidentiality. 
+{.is-success}
+
+> BYOD (Bring Your Own Device) brings additional challenges and BCSF strongly recommends written agremeents between employees and the business that explicitly state the risks/requirements for using personal devices at work. 
+{.is-info}
+
+> While your organization my choose to allow BYOD devices (including mobile phones, laptops, desktops, tablets, etc) you should also consider how those devices will be supported. Your IT Provider may not support personal devices due to policy or insurance concerns.  
+{.is-warning}
+
+# Sample BYOD Agreement
 
 I am seeking connectivity to `ORGANIZATION` (from here referred to as the Company) electronic messaging (email) services for my personally-owned smart device. In exchange for this connectivity, I agree to comply with all company policies and procedures concerning smart device utilization and permit the Company to take any action necessary to prevent data loss, unauthorized disclosure, and other incidents that may compromise the security of company data and systems.  Specifically, I understand the following:
 
