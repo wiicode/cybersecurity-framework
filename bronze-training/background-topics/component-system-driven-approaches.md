@@ -2,7 +2,7 @@
 title: Component-driven and system-driven approaches
 description: An overview of component-driven (bottom up) and system-driven (top down) risk management techniques.
 published: true
-date: 2021-03-05T01:34:00.188Z
+date: 2021-03-05T01:34:37.170Z
 tags: risk-management, bronze, bronze-training, sourced, component-system-risk
 editor: markdown
 dateCreated: 2021-03-05T01:08:38.314Z
@@ -14,7 +14,7 @@ dateCreated: 2021-03-05T01:08:38.314Z
 {.is-info}
 
 {.grid-list}
-- [Click here for detailed information on component-driven management.*Component-driven risk assessments are the most mature and common types of assessment within the cyber security profession. This section describes what component-driven techniques have in common, where they add value, and where they don't.*](/#)
+- [Click here for detailed information on component-driven management.*Component-driven risk assessments are the most mature and common types of assessment within the cyber security profession. This section describes what component-driven techniques have in common, where they add value, and where they don't.*](/bronze-training/background-topics/component-system-driven-approaches/understanding-component-driven-risk-management)
 - [Click here for detailed information on system-driven risk management.*System-driven risk analyzes are best suited to identifying risks which emerge from the interaction of all a system’s components. These risks can occur without any individual component breaking or being compromised, so they identify risks that component-driven approaches cannot. In small, simple systems, it is possible to identify these interaction risks without any particularly formal approach. However, this becomes unfeasible with larger, more complex systems, which is where system-driven approaches add real value.*](/bronze-training/background-topics/component-system-driven-approaches/understanding-system-driven-risk-management)
 {.links-list}
 
