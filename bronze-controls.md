@@ -2,7 +2,7 @@
 title: Procedures & Controls
 description: 
 published: true
-date: 2021-03-02T04:30:37.326Z
+date: 2021-03-05T02:44:30.088Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -18,7 +18,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # Data Management
 {.grid-list}
 - [Data Handling Controls](/bronze-controls/data-handling-controls)
-- [Secure sanitisation of storage media](/bronze-controls/topic-sanitization)
+- [Secure sanitization of storage media](/bronze-controls/topic-sanitization)
 - [SharePoint Governance](/bronze-controls/sharepoint-governance)
 {.links-list}
 
