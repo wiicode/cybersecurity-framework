@@ -2,7 +2,7 @@
 title: Small Business: Improving Your Posture
 description: How to improve your cybersecurity posture when starting at zero. 
 published: true
-date: 2021-02-20T19:39:43.219Z
+date: 2021-03-05T19:16:44.060Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2021-02-20T18:32:43.513Z
@@ -15,7 +15,6 @@ dateCreated: 2021-02-20T18:32:43.513Z
 
 Cyber security needn't be a daunting challenge for small business owners. Following the five quick and easy steps outlined in the guide below could save time, money and even your business’ reputation. This guide can’t guarantee protection from all types of cyber attack, but the steps outlined below can significantly reduce the chances of your business becoming a victim of cyber crime.
 
-If you want to improve your cyber security further, then you can also seek certification under the Cyber Essentials scheme, which has the benefit of demonstrating to your clients (or prospective clients) that you take the protection of their data seriously.
 
 # BCSF
 Bento Cyber Security Framework (BCSF) is an information sercurity governance framework developed for small companies. Based on international standards, this framework combines guidence with actionable processes. It is designed to offer as-is adoptable governance and expandable modules for customization. While BCSF offers granular methods for cyber security, it does not impose requirements in depth or breadth. Thus, organizations that choose to adopt BCSF may do so in pieces under a concept known as best-effort.
