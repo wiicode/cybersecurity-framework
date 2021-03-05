@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-03-05T02:05:46.736Z
+date: 2021-03-05T02:06:41.920Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -79,7 +79,7 @@ Traits.
 
 ### Tabs {.tabset}
 
-#### Curiousity
+#### Curiosity
 
 A questioning attitude is likely the most difficult trait to develop, but it is also the one that carries the greatest benefit. If people  listen to their internal alarm bells, search for the causes, and then take corrective action, the chances that they’ll forestall problems rise dramatically.
 
