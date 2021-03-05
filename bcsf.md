@@ -2,13 +2,12 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-02-22T21:55:02.914Z
+date: 2021-03-05T15:38:25.800Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
 ---
 
-# Bento Cyber Security Framework
 > BCSF defines the best practices an organization follows to manage its cybersecurity risk for small organizations engaged in professional services. It is primarily developed from managed information technology service practices for legal, financial, retail, industrial, veterinary, and professional service companies.  
 {.is-success}
 
