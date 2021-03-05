@@ -2,7 +2,7 @@
 title: Getting Started with Silver Access
 description: 
 published: true
-date: 2021-03-05T02:36:17.408Z
+date: 2021-03-05T02:36:29.066Z
 tags: home, silver
 editor: markdown
 dateCreated: 2021-03-02T03:44:44.740Z
@@ -21,7 +21,7 @@ There are effective and affordable ways to reduce your organization’s exposure
 - **boundary firewalls and internet gateways** - establish network perimeter defenses, particularly web proxy, web filtering, content checking, and firewall policies to detect and block executable downloads, block access to known malicious domains and prevent users’ computers from communicating directly with the Internet
 - **malware protection** - establish and maintain malware defenses to detect and respond to known attack code
 - **patch management** - patch known vulnerabilities with the latest version of the software, to prevent attacks which exploit software bugs
-- **whitelisting and execution control **- prevent unknown software from being able to run or install itself, including AutoRun on USB and CD drives
+- **whitelisting and execution control** - prevent unknown software from being able to run or install itself, including AutoRun on USB and CD drives
 - **secure configuration** - restrict the functionality of every device, operating system and application to the minimum needed for business to function
 - **password policy **- ensure that an appropriate password policy is in place and followed
 - **user access control** - include limiting normal users’ execution permissions and enforcing the principle of least privilege
