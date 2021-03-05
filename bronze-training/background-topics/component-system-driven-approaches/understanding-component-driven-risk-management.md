@@ -2,20 +2,19 @@
 title: Understanding component-driven risk management
 description: The principles of component-driven risk management in cyber security.
 published: true
-date: 2021-03-05T01:19:52.855Z
-tags: risk-management, bronze, bronze-training, component-system-risk
+date: 2021-03-05T01:43:21.398Z
+tags: risk-management, bronze, bronze-training, favorite, component-system-risk
 editor: markdown
 dateCreated: 2021-03-05T01:19:52.855Z
 ---
 
-# Understanding component-driven risk management
 The principles of component-driven risk management in cyber security.
 Component-driven risk assessments are the most mature and common types of assessment within the cyber security profession. This section describes what component-driven techniques have in common, where they add value, and where they don't.
 
 - Once you've understood these basics, you should be able to pick up any component-driven standard or framework (as they are based on a similar perspective on risk) and understand how they differ from system-driven approaches.
 - If you've not already done so, please read Introducing component-driven and system-driven risk assessments before reading this section.
 
-## Scope and assets
+# Scope and assets
 Unsurprisingly, component-driven risk assessments are focused on system components. So what do we mean by 'system components'? Typical examples include:
 
 - hardware (computers, servers, etc.)
@@ -30,16 +29,16 @@ The focus on system components requires you to start by defining the function th
 
 Components which you have no control over (but which your own system depends on) are known as dependencies, and can be included alongside your asset list, provided as long it is clear how these dependencies affect those components which you can control. A scope is sometimes best presented as a diagram, which clearly shows what is in, what is out, and how the key assets are connected.
 
-## Elements of risk
+# Elements of risk
 Once you have identified your scope, most component-driven approaches require the risk analyst to assess three elements of risk. These three elements are typically described by the terms impact, vulnerability and threat.
 
-### Impact
+## Impact
 Impact is the consequences of a risk being realised. When conducting component-driven risk assessments, impact is usually described in terms of the consequences of a given asset being compromised in a given way. This impact is described in different ways, but one of the more common techniques is to assess the impacts to confidentiality, integrity and availability, of information. For example, an impact might be described in terms of a loss of confidentiality of a customer dataset, or the corruption (loss of integrity) of your company's accounts. A loss of one of these properties can be connected to other types of consequence, such as lost money, loss of life, delays to projects, or any other kind of undesirable outcome.
 
-### Vulnerability
+## Vulnerability
 A vulnerability is a weakness in a component that would enable an impact to be realised, either deliberately, or by accident. For instance, a vulnerability could be a piece of software which allows a user to illegitimately increase their user account privileges, or a weakness in a business process (e.g. not properly checking the identity of someone before issuing them credentials for access to an online system or service). Regardless of the type of vulnerability in question, it is something which can be used to cause a impact.
 
-### Threat
+## Threat
 Threat is the individual, group or circumstance which causes a given impact to occur. For example, this could be:
 
 - a lone hacker, or a state-sponsored group
@@ -50,10 +49,10 @@ The purpose of assessing threat is to improve the assessment of how likely a giv
 
 One of the weaknesses of threat assessments is that a threat's capability can change rapidly, and reliable information on these changes can be hard to come by. Because of this, don't treat your assessments of threat capability as if they are static, and make sure you recognise uncertainty and variability in your threat assessments.
 
-## Applying and communicating threat, vulnerability and impact
+# Applying and communicating threat, vulnerability and impact
 Once these elements of risk have been assessed, the next step is to combine these assessments to identify which risks are most concerning. Some techniques do this by combining the assessments of threat, vulnerability and impact into a single measurement of risk for each system component. This is not as straightforward as some standards claim; the three components of risk are fundamentally different from each other, and comparing them is like comparing apples with oranges. Some approaches recommend the use of risk matrices to combine assessments of threat, vulnerability and impact.
 
-### Prioritising your risks
+## Prioritising your risks
 Once the various threats, vulnerabilities and impacts have been assessed and combined to create a list of risks, they can be prioritised according to how concerning they are. This allows you to manage the most concerning risks first. You can communicate this prioritisation of risks in a variety of ways. For example, you could:
 
 - estimate the financial loss of an impact, if it were to be realised
@@ -63,10 +62,10 @@ Many standardised component-driven risk management techniques use qualitative la
 
 Some approaches have a ready-made list of tasks or objectives that can be used to mitigate the risks you have identified. These are known as 'control sets', from which you can select the most appropriate set of mitigations for each risk.
 
-## Commonly used component-driven cyber risk management methods and frameworks
+# Commonly used component-driven cyber risk management methods and frameworks
 This section provides a brief description of commonly used component-driven cyber risk management methods and frameworks. Click on the relevant hyperlinks for more detailed information about each method/framework. There are many more component-driven risk management techniques which have not been listed here. This list does not include system-driven techniques.
 
-### Selecting a technique that's right for you
+## Selecting a technique that's right for you
 When selecting a risk method or framework, you need to consider:
 
 - The overall cost of using the method. For example, the procurement of tools, licencing and expertise.
