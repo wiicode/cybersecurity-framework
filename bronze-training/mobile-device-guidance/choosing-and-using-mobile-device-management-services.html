@@ -1,0 +1,64 @@
+<!--
+title: Mobile Device Management
+description: Advice on the selection and implementation of Mobile Device Management within your enterprise
+published: true
+date: 2021-03-06T02:31:31.365Z
+tags: guidance, bronze, bronze-training, mdm, favorite
+editor: ckeditor
+dateCreated: 2021-03-06T02:31:31.365Z
+-->
+
+<p>A Mobile Device Management (MDM) service combines device applications, built-in device management features and infrastructure services. Together, these components allow your organisation to remotely control, monitor, and enforce policies on employee devices.</p>
+<p>This guidance will discuss the importance of MDM, our recommendations when choosing an MDM, and how best to use them to securely manage smartphones, tablets, laptops and desktop PCs.</p>
+<hr>
+<h2>Why use MDM?</h2>
+<p>Mobile Device Management is designed to simplify management of devices within an organisation.</p>
+<p>Typical functionality includes device enrolment, the ability to control device configuration, protect data, monitor the status and compliance of devices, and manage enterprise approved apps. All across a range of platforms and operating systems.</p>
+<p>Most MDM services work over the internet, allowing devices to be managed and&nbsp;<strong>remotely controlled</strong>&nbsp;wherever they are in the world. This means staff can work off-premises, securely.</p>
+<p>Some example use cases include&nbsp;<strong>enforcing policies</strong>&nbsp;on a device, such as the use of a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks">VPN</a>, performing a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/erasing-mobile-devices">remote device wipe</a>&nbsp;if the device is lost. MDM would also allow the&nbsp;<strong>monitoring&nbsp;</strong>of devices, to help determine&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date">if the they have been kept up to date</a>, been jail broken, or if a policy violation has occurred.&nbsp; Additionally, it is important to keep MDMs secure as they hold the keys to unlock, decrypt and remote wipe all the devices within your enterprise.</p>
+<hr>
+<h2>Preparing for mobile device management</h2>
+<p>There are several things to consider before choosing an MDM for your organisation.</p>
+<h2>Deployment model</h2>
+<p>MDM services can be on-premises or in the cloud, for example as SaaS solutions. Some products come in both flavours, others only one.</p>
+<p>There may also be significant differences and trade-offs in terms of feature support between the two approaches. For example, it may be slower patching with an on-premises service so you will not always have the latest features.&nbsp;</p>
+<p>If you choose to use a cloud MDM service, the NCSC's&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security">Cloud Security Guidance</a>&nbsp;may help you assess its suitability.&nbsp;&nbsp;</p>
+<p>For on-premises MDM deployments, in <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access">walled garden architecture</a>, you should decide whether you want the service to be deployed&nbsp;<i>inside</i>&nbsp;or&nbsp;<i>outside</i>&nbsp;the boundary firewall.</p>
+<p>If you put the MDM service inside the network boundary, a high-value asset containing cryptographic keys that can control, access and wipe your device is more protected from external attackers, but can make it harder to remotely wipe a lost devices if you also want to revoke its VPN credentials.</p>
+<h2>Device and Feature Support</h2>
+<p>Individual MDM services will often only support&nbsp;<i>some</i>&nbsp;device types, security features, and management options. This being so, it's important to ascertain whether the following features are supported for the devices that you use:</p>
+<h3><strong>Device Enrolment</strong></h3>
+<p>The enrolment options you require will vary depending on your approach to device management. If your organisation owns and fully manages devices&nbsp;your needs are likely to be more easily satisfied than if you run a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device">BYOD</a> scheme.</p>
+<p>For enterprise owned devices, you should use an MDM platform which supports&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/zero-touch-enrolment">zero touch enrolment</a>. If you choose to use a technical approach that also permits&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/provisioning-and-distributing-devices">admin enrolment or self enrolment</a>, it is important to consider available methods of&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy">authentication</a>&nbsp;during enrolment, including MFA for user and device authentication.</p>
+<h3><strong>Device Configuration</strong></h3>
+<p>The technical controls that will be available, and that you can enforce, will vary depending on the devices that you use in your organisation.</p>
+<p>You will need to consider which device configuration polices you need to enforce and whether these are available in the MDM that you choose. You could develop a candidate configuration using our&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides">detailed platform guidance</a>&nbsp;and see which MDM services are able to deploy that configuration.</p>
+<h3><strong>Device Compliance and Monitoring</strong></h3>
+<p>MDMs can provide options for&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/logging-and-protective-monitoring">monitoring of mobile devices</a>&nbsp;and reporting on device compliance. This can tell you things such as whether the device and applications are up to date, detect jailbreak or the presence of banned apps. Some MDMs also include more advanced reporting, using device attestation, which can provide stronger assertions of device compliance and device health.</p>
+<p>If these features are available, and your authentication service supports it,&nbsp;they can be integrated with your authentication process to provide finer grained access policies. This would enable you to check for device compliance before allowing it to access your organisational data and applications.</p>
+<h3><strong>Application Management and Data Isolation</strong></h3>
+<p>Some MDMs provide custom app store functionality. You can use this to ensure users only <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications">install applications from an allowed&nbsp;</a>list, such as an enterprise application catalogue.</p>
+<p>This will often be the preferred option where devices are fully managed, meaning corporately owned and business only (COBO) or corporately owned and personally enabled (COPE). If using a fully managed approach, it is important to consider support for&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date">automatic updates</a>&nbsp;and the ability to&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/logging-and-protective-monitoring">monitor and report</a>&nbsp;on the status of installed apps on mobile devices.</p>
+<p>If using a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device">BYOD</a>&nbsp;approach to device management, it may not be possible to enforce device wide restrictions. In this case, you should consider support for alternative approaches that combine both mobile device management (MDM) and&nbsp;<a href="https://en.wikipedia.org/wiki/Mobile_application_management">mobile application management (MAM)</a>. Together, this may provide isolation of work and personal apps and data and to protect against data loss if the device is lost or stolen. &nbsp;&nbsp;</p>
+<h2>Further considerations</h2>
+<p>Other desirable characteristics of MDM services are responsiveness and reliability. High responsiveness is essential in instances where policies must be rapidly applied, for example - wiping a device that has been lost or stolen.&nbsp;</p>
+<hr>
+<h2>How to choose an MDM service</h2>
+<p>When choosing and using a Mobile Device Management service, based on the considerations above, you should:</p>
+<ul>
+  <li>Select an MDM service that supports the devices and features you require, based on the technical approach that your organisation uses. It should be noted that if using a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device">BYOD approach</a>, this may significantly limit the technical controls you are able to enforce and the features that are available.</li>
+  <li>If possible, pilot a range of MDM services and assess support for the devices and features that you require. You should also factor in accessibility, reliability and responsiveness during this pilot phase.</li>
+  <li>Choose an MDM service that provides automatic updates to the service itself and ensure that the MDM software is kept up to date.</li>
+  <li>Depending on whether you choose to deploy the MDM service completely on-premises or in the cloud using an IaaS or SaaS model, ensure that robust patching processes are in place to keep back-end infrastructure up to date. In an IaaS model, you have more responsibility for patching services yourself.</li>
+  <li>Prefer MDM services that use built in platform management features and integrate with existing app stores, as opposed to those requiring additional client-side agents.</li>
+  <li>If you are using an enterprise application catalogue, then this should support automatic application updates. These updates should be applied as soon as apps are updated in the public store.</li>
+  <li>Where possible, device configuration policies should be applied to reflect the&nbsp;NCSC&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides">platform specific guides</a>&nbsp;for mobile platforms.</li>
+  <li>Device enrolment should support strong methods of authentication for users and devices for both <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/zero-touch-enrolment">zero touch enrolment</a>&nbsp;and self-enrolment, including support for&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy">multi-factor authentication (MFA)</a>.</li>
+  <li>Admin interfaces and user self service portals should have strong methods of&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy">enterprise authentication</a>.</li>
+  <li>Choose an MDM service that supports&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/logging-and-protective-monitoring">logging and monitoring</a>&nbsp;of devices. This should include the ability to configure&nbsp;appropriate device compliance policies to monitor the state of devices. If device attestation is supported, this can be used to provide stronger assertions on the state and health of devices.</li>
+</ul>
+<hr>
+<h2>More information</h2>
+<p>For detailed guidance on how to securely use a particular MDM service, consult the documentation available from the service provider.</p>
+<p>It may also be worth looking at <a href="https://www.niap-ccevs.org/Profile/Info.cfm?PPID=428&amp;id=428">Common Criteria assessment</a> reports of MDM services, and third-party reviews or guides of these services for more detailed information. Many MDM services provide trials so the service can be tested first.</p>
+<p>For more information on implementing a <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device">BYOD model, read our BYOD guidance.</a></p>
