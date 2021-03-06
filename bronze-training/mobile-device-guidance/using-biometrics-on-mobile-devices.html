@@ -1,0 +1,55 @@
+<!--
+title: Using biometrics
+description: Advice for IT system administrators on using biometric authentication on smartphones, tablets, laptops and desktop PCs.
+published: true
+date: 2021-03-06T02:38:31.201Z
+tags: guidance, bronze, bronze-training, mdm
+editor: ckeditor
+dateCreated: 2021-03-06T02:38:31.201Z
+-->
+
+<p>Biometrics are biological characteristics of an individual,&nbsp;such as face or fingerprint, which can be used to verify their identity.</p>
+<p>Use of fingerprint or face recognition for device authentication is now commonplace on smartphones and tablets. It is also increasingly becoming available on laptops. This guidance will present the benefits of using biometrics whilst also highlighting potential security risks.</p>
+<hr>
+<h2>Why use biometrics?</h2>
+<p>On mobile devices, authentication is the primary method for verifying a user’s identity and protecting against unauthorised access.</p>
+<p>Use of biometrics on mobile devices is becoming increasingly common, as most recent smartphone models have at least one built-in mechanism for biometric authentication, most commonly face or fingerprint recognition. These can offer a secure and convenient alternative to passwords or PINs.</p>
+<p>However, vulnerabilities do still exist in biometric systems, including spoofing of biometrics, or attacks against the systems and devices themselves.</p>
+<p>This guidance will help organisations assess the benefits of using biometrics on mobile devices against potential security risks.</p>
+<hr>
+<h2>Preparing for biometrics</h2>
+<p>The most common methods of biometric authentication on smartphones, tablets, PCs and laptops are face and fingerprint recognition. Other examples include iris, vein or voice recognition.</p>
+<h3><strong>How do they work?</strong></h3>
+<p>Biometrics work in a slightly different way to something like a PIN or password. In the case of a PIN or a password, an access control system will compare the stored value with the one entered by an individual. If they are identical, access will be granted.</p>
+<p>However, in the case of biometrics, no two captures of biometric data can produce truly identical results. So, verification of a user’s identity is not a simple comparison. Instead, biometric data captured at login is compared to the enrolled biometric data, stored on the device. The system then&nbsp;<i>judges</i>&nbsp;whether these two biometrics are sufficiently similar to be the same person.</p>
+<p>Stored samples are normally held in such a way that they cannot be reversed to reproduce the original face or fingerprint that was initially enrolled.</p>
+<h3><strong>What are the benefits?</strong></h3>
+<p>Biometric authentication on mobile devices can offer significant benefit.</p>
+<p>Most users are already very familiar with biometric authentication for device unlock, so the system's ease of use will likely make uptake high.</p>
+<p>Biometrics can also provide a secure alternative to passwords and in most cases are far more convenient than passwords, particularly on most modern smartphones.</p>
+<p>On mobile devices, the device passcode is still required as a fallback. However, because passcodes will be entered far less often,&nbsp;organisations can enforce more complex passcodes without causing a huge dip in usability.</p>
+<p>On some devices and operating systems, biometrics can replace passwords completely.&nbsp;<a href="https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-identity-verification">Windows Hello for Business</a>, for example, allows use of biometrics to protect access to hardware protected cryptographic keys. This system provides passwordless multi-factor&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy">enterprise authentication</a>&nbsp;on Windows, to Active Directory or Azure Active Directory.</p>
+<h3><strong>What are the risks?</strong></h3>
+<p>As with any authentication mechanism, biometrics can have vulnerabilities and common attack methods do exist. Some of the risks you should consider are as follows:</p>
+<h4><strong>Presentation attacks</strong></h4>
+<p>A presentation attack involves an attempt by an impostor, using an artefact of some kind, to impersonate a valid user. Modern mobile devices usually include additional protections, such as 'liveness' checks, to prevent this sort of attack from working. Additionally, only a small number of biometric authentication attempts are allowed before a PIN or password must entered, protecting against brute-force attack.</p>
+<p>In some cases, weaknesses have been shown to exist in biometrics on smartphones. Examples include facial recognition&nbsp;<a href="https://www.bbc.co.uk/news/technology-50085630">not testing for alertness</a>, making it possible for&nbsp;a device to be unlocked whilst a user is asleep, or has their eyes shut.&nbsp;You should research these weaknesses when choosing to use biometrics, or when&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-devices">choosing which devices to use in your organisation</a>.</p>
+<h4><strong>Replay attacks</strong></h4>
+<p>If a biometric data sample can be captured or stolen from a device, it may be possible to replay it to authenticate to the device. Most modern devices are well protected against this type of attack.</p>
+<h4><strong>Fall back mechanisms</strong></h4>
+<p>Before a user can register a biometric on a mobile device, a PIN or&nbsp;password must be set. This will be used in situations where biometric authentication fails. The security of this mechanism and the security policies associated with it should be strong enough to protect the device by itself. Otherwise, attackers can force the device to fall back to this more easily guessed or forced alternative.</p>
+<h4><strong>Performance</strong></h4>
+<p>On most mobile devices today, the expected false acceptance rate is usually less than one in a thousand.</p>
+<p>As an example,&nbsp;<a href="https://support.apple.com/en-gb/HT208108">Apple report</a>&nbsp;the probability that a random person could unlock your iPhone or iPad using Face ID is less than 1 in 1,000,000. However, when assessing manufacturer published performance metrics, it should be noted that they are usually based on optimal testing conditions, so may not actually be achievable in real world conditions.</p>
+<h4><strong>Privacy</strong></h4>
+<p>Biometric data is classed as personally identifying information and therefore is subject to regulation, such as GDPR. On mobile devices, explicit consent to use biometrics must be gained since the user must choose to enrol a biometric.</p>
+<p>For the built-in biometric authentication features, the processing and capture of data is also usually performed entirely on the device. It will not, for example, be backed up to&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-built-in-cloud-services">built-in cloud services</a>. If you are using third-party apps that implement a separate biometric authentication step you should investigate how those biometric templates will be protected.</p>
+<hr>
+<h2>How to use biometrics</h2>
+<p>Unless you have specific users with a particularly high physical attack risk, we recommend biometrics be enabled for users who wish to use them.&nbsp;More specifically, when using biometrics on mobile devices, you should:</p>
+<ul>
+  <li>Assess the security risks, privacy and performance of biometrics based on the considerations above. Manufacturer documentation can help with this, as well as researching any published vulnerabilities in the particular&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-devices">device(s) you are intending to use</a>.</li>
+  <li>Provide&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/advising-end-users">guidance to your users</a>&nbsp;on the use of biometrics, security risks, and the associated security policy.</li>
+  <li>Where necessary and if possible, use&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management (MDM)</a>&nbsp;to manage use of biometrics in line with your organisation’s&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy">authentication</a>&nbsp;policy. More detailed guidance for particular operating systems can be found in the&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides">NCSC platform specific guidance</a>.</li>
+  <li>Ensure appropriate fallback mechanisms, such as device PIN or device password, are configured and security policies enforced, if possible, using&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">MDM</a>.</li>
+</ul>
