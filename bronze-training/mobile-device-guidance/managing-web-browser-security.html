@@ -1,0 +1,104 @@
+<!--
+title: Managing web browser security
+description: Advice for IT Admins on the management of security settings for web browsers
+published: true
+date: 2021-03-06T02:40:36.791Z
+tags: guidance, bronze, bronze-training, mdm
+editor: ckeditor
+dateCreated: 2021-03-06T02:40:36.791Z
+-->
+
+<p>In recent years browser security has steadily improved. Today, they are generally secure in their default state. As a result, the NCSC <a href="https://www.ncsc.gov.uk/blog-post/parting-our-browser-guidance-such-sweet-sorrow">no longer has detailed configuration guidance</a> for each major browser. Instead, this high-level guidance will help you develop an approach to secure web browsing that works for your organisation.</p>
+<hr>
+<h2>Why manage web browser security?</h2>
+<p>Web browsers are widely used within organisations to access a variety of online content, including corporate data held within enterprise web services and intranet sites. This broad access to sensitive data on one hand and exposure to public internet sites on the other, makes browsers an attractive target for attackers. Moreover, browsers are highly configurable and extensible, so it's important to ensure that they use a configuration which minimises your organisation's exposure to risk.</p>
+<p>The good news is that the most popular browsers are largely<i>&nbsp;secure by default. S</i>o, your job as an enterprise admin is to&nbsp;<i>prevent&nbsp;them from becoming insecure</i>. This entails a combination of keeping them up to date and managing a small number of settings. If plugins or extensions are used, you'll also need to manage their configuration.</p>
+<hr>
+<h2>Preparation for browser management</h2>
+<p>In many respects, browsers&nbsp;should be managed in much the same way as any other <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications">third party application.</a> This includes using your approvals process to choose a web browser, ensuring a legitimate version of the browser is installed with secure app distribution, and ensuring updates are installed promptly.</p>
+<p>However, there are some additional factors:</p>
+<h3><strong>Choosing a web browser</strong></h3>
+<p>Firstly, you will need to decide on which web browser or browsers to use.</p>
+<p>When deciding, you should consider:</p>
+<ul>
+  <li><strong>Compatibility:&nbsp;</strong>Whilst much less of a concern than it used to be, some of your corporate tools may only support a subset of browsers. However, if one of your web applications requires an old, unsupported browser and you can't migrate away from the application, then you should investigate ways of using a separate browser for accessing that web application and using a modern, secure web browser for everything else.</li>
+  <li><strong>Performance</strong>, including impact on battery life for mobile devices.</li>
+  <li><strong>Security features:&nbsp;</strong>Most popular web browsers have similar security features, but you may want to look specifically for:<br>
+    <ul>
+      <li>Integration with safe browsing list services, so that known malicious or fraudulent sites are blocked (including known phishing sites)</li>
+      <li>Sandboxing, including virtualisation-based security (e.g. Windows Defender Application Guard)</li>
+    </ul>
+  </li>
+  <li><strong>Platform support</strong> for the devices and operating systems you use. If you make use of multiple operating systems in your organisation, you may want to use a cross-platform browser to simplify management. Equally, if you're using <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/managing-the-risks-from-obsolete-products%20">obsolete platforms</a>, you may want to use a more up-to-date third-party browser which supports the platform.</li>
+  <li><strong>Enterprise management</strong>&nbsp;capabilities,&nbsp;Including integration into the mobile device management service(s) you use.</li>
+  <li><strong>Support dates:</strong>&nbsp;Some browser developers support their products for longer, or have extended support versions. If you intend on having the same browser for a while, make sure you choose one that will be supported throughout the period.</li>
+</ul>
+<h3><strong>Managing web browsers</strong></h3>
+<p>We advise that you investigate the security of the browsers you use on your devices and configure settings to mitigate risks in the following areas.</p>
+<ul>
+  <li>Enterprise management of the following features:<ul>
+      <li><strong>Updates:</strong>&nbsp;Users may&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date">not have the most up-to-date</a>&nbsp;version of the browser. If your browser is not updated, it may have known vulnerabilities that can be exploited by an attacker, resulting in the device becoming compromised. You may wish to consider a method to monitor which version of the browser your users have on their device.</li>
+      <li><strong>Malware protection:</strong>&nbsp;Browsers are one of your first lines of defence against malware. Depending on your platform configuration, users may be able to download and run malicious executables. You should consider how this can be mitigated either with the use of&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/antivirus-and-other-security-software">anti-virus software</a>&nbsp;configured to scan downloads, or by <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications">enforcing an application whitelisting policy.</a></li>
+      <li><strong>Critical security features</strong> such as preventing users bypassing certificate warnings.</li>
+      <li><strong>Sign-in to cloud synchronisation accounts:&nbsp;</strong>like&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-built-in-cloud-services">built-in cloud accounts on mobile devices</a>, third-party browsers often also have cloud accounts that users can sign in to. If you are concerned about risks from synchronisation of work data to personal accounts you might want to limit the ability to sign into those accounts from your devices' browsers.</li>
+      <li><strong>Browser plug-ins,&nbsp;</strong>such as Java, Flash and Silverlight are one of the top ways that users devices are compromised. They are also rarely needed on the modern web, so you should think about how necessary they are to your organisation.</li>
+      <li><strong>Third-party extensions:&nbsp;</strong>Browsers have many third party plugins/extensions available, but should you allow their use? A common example is an&nbsp;<i>advertisement blocker</i>&nbsp;extension. While such software may be useful, you should consider the following security risks:<ul>
+          <li>As with any third-party software, you should consider the likelihood and impact should the application be malicious or vulnerable. This is a similar approach to considering which&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications">third-party applications</a>&nbsp;to allow on your devices.</li>
+          <li>Extensions typically have permissions to read or change the data on any websites a user visits. This could include sensitive or personal data.</li>
+          <li>Extensions will increase the potential attack surface of your web browser, as this software may also contain security vulnerabilities. You should think about how you might keep users' extensions up to date.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Many users will want to use their browser's&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/what-does-ncsc-think-password-managers">built-in password manager</a>&nbsp;to&nbsp;save passwords and credentials, making it easy to use strong authentication strategies. For more information see broader&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/what-does-ncsc-think-password-managers">guidance on the use of password managers</a>.</li>
+  <li>Configuration of privacy-related settings including cookies,&nbsp;<i>do not track,</i>&nbsp;and pop-up blocking might be useful to your organisation, but are not&nbsp;required from a security perspective.</li>
+  <li>Developer features such as the JavaScript Console might be useful to some users but can be used to facilitate social engineering attacks. You might want to disable them for users who don't need them.</li>
+  <li>Some organisations may have a legal or policy need to configure users' browsers to enable traffic inspection. If this applies to you, you might want to also configure trusted certificates and/or proxy settings for the browser.</li>
+</ul>
+<hr>
+<h2>How to manage browsers</h2>
+<p>When choosing and using a web browser, based on the considerations above, we recommend the following steps:</p>
+<ul>
+  <li>Choose which browser or browsers meet your organisational needs using the considerations above. This may be the one built in to your operating system (e.g. Edge or Safari), or a third-party product installed separately.</li>
+  <li>Review the&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications">third-party applications guidance</a>, and apply the advice about reviewing and distributing third-party software to your browser deployment</li>
+  <li>Review any enterprise management guidance from the developers for the browser(s) that you have chosen to use.</li>
+  <li>Develop the settings and policies that you&nbsp;deem important enough to enforce on your users' devices. Specifically, develop a policy around the installation of third-party extensions on your browser.</li>
+  <li>Where possible, use&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">Mobile Device Management (MDM)</a>&nbsp;to enforce those policies.</li>
+  <li>Ensure&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date">automatic updates</a>&nbsp;are turned on for both the browser and it's extensions.</li>
+  <li>You may wish to include some security tips for browsing the web securely within your&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/advising-end-users">user guidance</a>. These should include 'do&nbsp;<i>not browse the web when logged in as an administrator</i>', and&nbsp;<i>'install updates when prompted</i>'.</li>
+</ul>
+<p>We recommend&nbsp;<strong>not</strong>&nbsp;disabling crucial usability features like JavaScript and Password Auto-fill. Whilst there have been security vulnerabilities in these features in the past, using the web reliably and securely can be very difficult without them enabled.&nbsp;</p>
+<hr>
+<h2>More information</h2>
+<p>Enterprise&nbsp;management of browsers documentation:</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Web browser</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Additional information</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Google Chrome</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://cloud.google.com/chrome-enterprise/browser-management/">Chrome Browser: Manage your browsers</a></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Mozilla Firefox</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Enterprise_deployment">Deploying Firefox in an enterprise environment</a></td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Apple Safari</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p><a href="https://www.apple.com/business/docs/resources/Managing_Devices_and_Corporate_Data_on_iOS.pdf">Managing Devices &amp;&nbsp;Corporate Data on iOS</a></p>
+          <p>(Safari management is integrated with iOS and macOS management)</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Microsoft Edge</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;"><a href="https://docs.microsoft.com/en-us/microsoft-edge/deploy/">Microsoft Edge: Microsoft Edge Group Policy configuration options</a></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
