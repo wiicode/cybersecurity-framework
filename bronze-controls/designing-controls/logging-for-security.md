@@ -2,8 +2,8 @@
 title: Introduction to logging for security purposes
 description: Laying the groundwork for incident readiness.
 published: true
-date: 2021-02-21T03:36:58.853Z
-tags: security operations, bronze, bronze-training
+date: 2021-03-06T02:07:53.293Z
+tags: bronze, bronze-training, security-operations
 editor: markdown
 dateCreated: 2021-02-21T03:22:50.683Z
 ---
@@ -19,16 +19,16 @@ This guidance will help you devise an approach to logging that will help answer 
 - Has any post-incident remediation been effective?
 - Are our security controls working?
 
-If you can answer these questions, even partially, it will help you to recover quickly from a cyber incident and develop your defences. This will reassure your customers, suppliers, investors and regulators that you have taken all measures necessary to protect your data and systems.
+If you can answer these questions, even partially, it will help you to recover quickly from a cyber incident and develop your defenses. This will reassure your customers, suppliers, investors and regulators that you have taken all measures necessary to protect your data and systems.
 
 In later guidance, the logging approach we design here will form the basis of a more richly featured capability, geared towards detecting attacks as they happen.
 
 # Audience
 This guidance is for you if:
 
-- Your organisation currently has little or no logging capability OR You would like to assess the suitability of your current logging capability
+- Your organization currently has little or no logging capability OR You would like to assess the suitability of your current logging capability
 - You would like to be better prepared for a cyber incident
-- You want to understand the NCSC’s expectations regarding basic good practice for logging
+- You want to understand the BCSF’s expectations regarding basic good practice for logging
 
 # Steps to Implementation
 This guidance proposes a four step program for putting in place a simple but effective logging capability.
@@ -42,7 +42,7 @@ You will learn how to:
 
 ## A. Choose which logs to generate or retain: What questions do you need to answer?
 
-Your first step is to generate a list of logs that could be used to determine whether your organisation’s IT has been compromised, and to what extent.
+Your first step is to generate a list of logs that could be used to determine whether your organization’s IT has been compromised, and to what extent.
 
 In the table below we've listed the common questions you're likely to be asked during the initial phases of a cyber incident. Working through these will help to focus your efforts and guide next steps.
 
@@ -68,13 +68,13 @@ This information allows you to determine if an Indicator of Compromise has been 
 
 | Incident questions | Event sources |
 | --- | ----------- |
-| Are any of our systems talking to a suspect external IP address? | IP connections are usually made from network devices such as firewalls, routers, and switches. These generate netflow or firewall logs containing the desired information (which you can also obtain by passively analysing network traffic at the boundary). Note: Captured logs should take into account if (and where) Network Address Translation (NAT) is used on the network, to capture the internal and external IP details. |
+| Are any of our systems talking to a suspect external IP address? | IP connections are usually made from network devices such as firewalls, routers, and switches. These generate netflow or firewall logs containing the desired information (which you can also obtain by passively analyzing network traffic at the boundary). Note: Captured logs should take into account if (and where) Network Address Translation (NAT) is used on the network, to capture the internal and external IP details. |
 
 | Have any devices queried for a given specific domain? | Web proxy or host based agent logs should be able to generate domain (and URL) lookup information. Domain Name System (DNS) logs can find which domains are being looked up (resolved), and will show you the domain part of the link the user has clicked (but not the full url). |
 
-| Has anyone in your organisation received an email with a similar subject to a given example? Has anyone clicked on the link? | Email events (including subjects and contents) can be generated from SMTP servers, MS Exchange, mail scanning appliances, cloud provider APIs or by passively parsing traffic. Web proxy logs can provide information on malware command and control traffic, or initial stages of an infection – such as clicking a link or downloading a malware dropper. Devices need to be configured to use web proxies, and the logs may miss on-device infections if web traffic reaches the Internet without going through the proxy |
+| Has anyone in your organization received an email with a similar subject to a given example? Has anyone clicked on the link? | Email events (including subjects and contents) can be generated from SMTP servers, MS Exchange, mail scanning appliances, cloud provider APIs or by passively parsing traffic. Web proxy logs can provide information on malware command and control traffic, or initial stages of an infection – such as clicking a link or downloading a malware dropper. Devices need to be configured to use web proxies, and the logs may miss on-device infections if web traffic reaches the Internet without going through the proxy |
 
-| Has anyone in your organisation executed a given, suspect binary, or does a specified file exist on one of our systems? Has any anomalous activity happened on any host? E.g. Out of hours crashes, etc | This data can be derived from centralising already generated local system logs (e.g. Microsoft EVTX, Syslog), deploying free Windows tools (like Microsoft Sysmon), right through to purchasing commercial host agent tools. Host based agents and host logs (OS and application) are a rich source of information. They can generate process information, DNS lookup events, file system changes, file hashes, web requests, and so on. Their main limitation is that they must be consciously installed and configured onto operating systems, which leaves coverage gaps for unofficial ‘shadow’ IT, network devices, unsupported operating systems or where the malware has disabled the agent. |
+| Has anyone in your organization executed a given, suspect binary, or does a specified file exist on one of our systems? Has any anomalous activity happened on any host? E.g. Out of hours crashes, etc | This data can be derived from centralising already generated local system logs (e.g. Microsoft EVTX, Syslog), deploying free Windows tools (like Microsoft Sysmon), right through to purchasing commercial host agent tools. Host based agents and host logs (OS and application) are a rich source of information. They can generate process information, DNS lookup events, file system changes, file hashes, web requests, and so on. Their main limitation is that they must be consciously installed and configured onto operating systems, which leaves coverage gaps for unofficial ‘shadow’ IT, network devices, unsupported operating systems or where the malware has disabled the agent. |
 
 ### Table 2: Authentication and access
 Capturing authentication and access attempts helps you to understand the impact of a compromise.
@@ -92,7 +92,7 @@ This is particularly useful in understanding the ‘Affect’ phase of the kill 
 | Who has logged in remotely out of hours recently? Have authentication events happened at unexpected times or from unexpected locations? | VPN servers, remote desktop and VDI logs can capture IP address information and user logs, to show who has accessed the corporate network remotely. |
 
 ### Table 3: IT asset and configuration information
-This helps an organisation gain context of assets when investigating (or confirming) a cyber attack. Without accurate asset information, organisations will struggle to delve into more detailed root cause analysis, or even have the right information to hand for recovery.
+This helps an organization gain context of assets when investigating (or confirming) a cyber attack. Without accurate asset information, organizations will struggle to delve into more detailed root cause analysis, or even have the right information to hand for recovery.
 
 | Incident questions | Event sources |
 | --- | ----------- |
@@ -100,9 +100,9 @@ This helps an organisation gain context of assets when investigating (or confirm
 
 | Where is a specified device physically located? | Managed network switches should allow an administrator to identify (in combination with DHCP logs) a MAC address to a physical port. WiFi networking hardware can sometimes identify the approximate location of the device. |
 
-| When did a network, server or end user device administrative configuration change occur? e.g. new local administrator account created on EUD, firewall rule change, etc | Capturing logs from network appliances (routers, firewalls, switches, etc) and operating systems should record events where administrative changes have been made. This document from Microsoftshows how to capture when a new local administrative user account is created on Windows. For more advanced and detailed analysis, a privileged access tool would help tie change request tickets to configuration changes. |
+| When did a network, server or end user device administrative configuration change occur? e.g. new local administrator account created on EUD, firewall rule change, etc | Capturing logs from network appliances (routers, firewalls, switches, etc) and operating systems should record events where administrative changes have been made. This document from Microsoft shows how to capture when a new local administrative user account is created on Windows. For more advanced and detailed analysis, a privileged access tool would help tie change request tickets to configuration changes. |
 
-| What does a given server ‘do’? What is its business purpose, expected behaviour and system owner? Who should you call if there are issues? | An accurate Configuration Management Database (CMDB) is useful to record what a given server does on your estate. How this is captured will vary vastly between organisations, ranging from automatically recorded through orchestration and automation, all the way down to individual systems administrators storing this information in their heads. Cloud provider consoles, APIs or on-premise virtualisation consoles can provide a source of information about virtualised assets. Some providers allow users to add tags and descriptions to assets, which can be part of the engineering process and useful in incident investigations (as well as understanding spending). |
+| What does a given server ‘do’? What is its business purpose, expected behavior and system owner? Who should you call if there are issues? | An accurate Configuration Management Database (CMDB) is useful to record what a given server does on your estate. How this is captured will vary vastly between organizations, ranging from automatically recorded through orchestration and automation, all the way down to individual systems administrators storing this information in their heads. Cloud provider consoles, APIs or on-premise virtualization consoles can provide a source of information about virtualized assets. Some providers allow users to add tags and descriptions to assets, which can be part of the engineering process and useful in incident investigations (as well as understanding spending). |
 
 # B. Decide how to retain logs
 Two primary decisions shape the approach you will take to logging.
@@ -120,7 +120,7 @@ For each log source identified in step1, ask these four questions.
 
 Logs should be readily available, and you should know where they are stored before any investigation starts. You should make querying logs as easy as possible, so it's important the service that holds the logs can perform searches. It is bad practice to have logs distributed across devices with no easy way to access them, other than a manual login or physical action. Also, having prohibitive contracts in place would cause issues if access is required rapidly - so it's best to work on these situations now.
 
-> Are the logs safe from tampering and unauthorised access?
+> Are the logs safe from tampering and unauthorized access?
 
 An attacker may well target the logging service in a bid to remove evidence of their actions. Is access to logs limited to individuals who need to perform log analysis? Are write permissions limited, and can changes be detected? As with any other management interface, logging solutions should be designed with good security practice in mind - it should be impossible for logs to be accessed or modified inappropriately.
 
@@ -132,20 +132,20 @@ For each log source you hold, you need to decide how long to store the data. Thi
 
 A logging source might only capture minimal information in its default configuration, giving you insufficient detail to accurately answer the incident questions. You should attempt to answer the incident question with the logs that are being captured. If you find yourself short of data, change configuration so you capture more detail.
 
-### Structuring the system: Centralised versus decentralised logging
+### Structuring the system: Centralised versus decentralized logging
 Once you begin planning how to collect your logs, you'll very likely have to decide between pulling them into a central store, and keeping them where they are.
 
-A centralised solution can be used to provide a standalone logging service. The more sources that feed into a centralised store, the more useful it will be, and the better the return on your investment. Centralising logging will also mean you don’t have to physically go to each machine when investigating an incident. This will create a more responsive system, requiring minimal resources to operate it.
+A centralized solution can be used to provide a standalone logging service. The more sources that feed into a centralized store, the more useful it will be, and the better the return on your investment. Centralising logging will also mean you don’t have to physically go to each machine when investigating an incident. This will create a more responsive system, requiring minimal resources to operate it.
 
-A decentralised setup involves leaving the logs in-situ because, without any further work on your part, they allow you to answer 'yes' to the questions listed above. Cloud-based email services, for example, may already be in an easy to search interface and securely held for a suitable length of time. You could extract these logs to a centralised service, but for most common scenarios this won't give enough extra benefit to justify the costs.
+A decentralized setup involves leaving the logs in-situ because, without any further work on your part, they allow you to answer 'yes' to the questions listed above. Cloud-based email services, for example, may already be in an easy to search interface and securely held for a suitable length of time. You could extract these logs to a centralized service, but for most common scenarios this won't give enough extra benefit to justify the costs.
 
-A determining factor is how you want to use the data in future. For example, if you want to combine it with other data sets (to query across both), moving these logs to your central storage system will be worthwhile. The other consideration is the ongoing maintenance and assurance that logs are being captured. A decentralised model could slowly change over time, becoming less effective.
+A determining factor is how you want to use the data in future. For example, if you want to combine it with other data sets (to query across both), moving these logs to your central storage system will be worthwhile. The other consideration is the ongoing maintenance and assurance that logs are being captured. A decentralized model could slowly change over time, becoming less effective.
 
-In most cases, a centralised store is used in combination with other vendor dashboards/APIs. Taking all logs to a centralised source is a never-ending (and resource intensive) job. In practice, you will cherry pick what you need to hold centrally (so you can run multi-dataset queries) and call out to other services that already hold the logs in a suitable manner (e.g. cloud services, network panel).
+In most cases, a centralized store is used in combination with other vendor dashboards/APIs. Taking all logs to a centralized source is a never-ending (and resource intensive) job. In practice, you will cherry pick what you need to hold centrally (so you can run multi-dataset queries) and call out to other services that already hold the logs in a suitable manner (e.g. cloud services, network panel).
 
 # C. Implement log storage and tooling for analysis
 
-What you do at this stage will depend on the decisions you made in Step 2. If you chose a centralised solution, you will need to consider how to implement the following components.
+What you do at this stage will depend on the decisions you made in Step 2. If you chose a centralized solution, you will need to consider how to implement the following components.
 
 Some products combine multiple components, so the individual components may not always be obvious. This is particularly true of commercial products.
 
@@ -156,7 +156,7 @@ You will have established this in Step 1. Log sources may generate large volumes
 {.is-warning}
 
 ## Log transport
-This is dictated by the logging source and the service that ingests logs, although network overlays could be added. The NCSC recommends using transport encryption where possible. The NCSC has not examined and does not endorse particular protocols, but common choices include Syslog, SNMP traps, and Windows Event Forwarding. When sending logs across trust boundaries, they should be sent across a one-way flow control (e.g. UDP or a data diode) to make it harder for an attacker to modify stored logs.
+This is dictated by the logging source and the service that ingests logs, although network overlays could be added. The BCSF recommends using transport encryption where possible. The BCSF has not examined and does not endorse particular protocols, but common choices include Syslog, SNMP traps, and Windows Event Forwarding. When sending logs across trust boundaries, they should be sent across a one-way flow control (e.g. UDP or a data diode) to make it harder for an attacker to modify stored logs.
 
 ## Processing and storage
 Accepts logs pushed (or pulled) from device sources, cleans them up (formatting), normalises and then loads them into a data store. Plan for storage to roll-over, avoiding disks filling and the service failing.
@@ -167,7 +167,7 @@ Authenticates users and allows searches to be performed on the data set.
 ## Configuring log sources
 Some logs at their default settings may not provide all the information you require to pinpoint activity in an incident, so some configuration will be required.
 
-There is no single right way to do this, but consider some of the following points that the NCSC has found useful in real world scenarios.
+There is no single right way to do this, but consider some of the following points that the BCSF has found useful in real world scenarios.
 
 You should ensure that:
 
@@ -182,7 +182,7 @@ You should ensure that:
 Microsoft Windows event configuration guidance can be found at https://technet.microsoft.com/en-us/library/dd277416.aspx.
 
 ## Open source logging tools
-Here are some open source tools we’ve seen used to good effect. The NCSC has not formally tested these products, and does not recommend a particular one. They are a starting point to help you establish what could work for your business. Commercial products are also available.
+Here are some open source tools we’ve seen used to good effect. The BCSF has not formally tested these products, and does not recommend a particular one. They are a starting point to help you establish what could work for your business. Commercial products are also available.
 
 ### Log ingestion, processing, dashboard and analysis tools:
 
@@ -218,7 +218,7 @@ You may not need to query large portions of the data set for long periods of tim
 # In Summary...
 Once you have a logging strategy in place, you will be better prepared for the most pressing questions put to you by incident investigators should you suffer a cyber attack. This will give you the best chance of recovering swiftly, and learning how to defend your systems better against future incursions.
 
-Logging has benefits outside of security too. Logging data can be used to investigate performance issues, provide administrative alerts (such as a storage disk being near capacity) and help verify that organisational IT policy is working as intended. The costs associated with establishing a logging capability should be viewed in light of these benefits.
+Logging has benefits outside of security too. Logging data can be used to investigate performance issues, provide administrative alerts (such as a storage disk being near capacity) and help verify that organizational IT policy is working as intended. The costs associated with establishing a logging capability should be viewed in light of these benefits.
 
 The next step is to proactively search your collected information for known threats, which requires further investment in people, skills and business processes. Following the advice given in this guidance will mean that you start that process on a sound technical footing.
 
