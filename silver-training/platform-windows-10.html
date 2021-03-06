@@ -1,45 +1,43 @@
 <!--
-title: Windows 10 1809
-description: Secure configuration for Windows 10 1809
+title: Windows 10
+description: Secure configuration for Windows 10
 published: true
-date: 2021-02-22T00:22:49.581Z
-tags: silver, ncsc, silver training, platform specific
+date: 2021-03-06T02:04:19.953Z
+tags: silver, sourced, platform-specific, silver-training
 editor: ckeditor
 dateCreated: 2021-02-22T00:22:49.581Z
 -->
 
 <h1>Windows 10&nbsp;</h1>
 <p>This guidance has been updated to cover the 1809 “October 2018 Update” of Windows 10 Enterprise. It builds on the previous 1803 “April 2018 Update” guidance.</p>
-<p>Testing was performed on a <a href="http://msdn.microsoft.com/en-US/library/windows/hardware/dn423132.aspx">Windows Hardware Certified</a> device, running Windows 10 Enterprise. The hardware was a Dell Latitude E7490, managed with Active Directory on Server 2019. This guidance is not applicable to Windows devices managed via an MDM or Windows To Go. We have separate guidance on how <a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management">to configure devices with MDM</a>. Both documents will continue to be maintained.</p>
-<p>It's important to remember that this guidance has been conceived as a way to satisfy the <a href="https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles">12 End User Device Security Principles</a>. As such, it consists of <i>recommendations </i>and should <i>not </i>be seen as a set of mandatory instructions requiring no further thought.</p>
+<p>Testing was performed on a <a href="http://msdn.microsoft.com/en-US/library/windows/hardware/dn423132.aspx">Windows Hardware Certified</a> device, running Windows 10 Enterprise. The hardware was a Dell Latitude E7490, managed with Active Directory on Server 2019. This guidance is not applicable to Windows devices managed via an MDM or Windows To Go. We have separate guidance on how to configure devices with MDM.&nbsp;</p>
+<p>It's important to remember that this guidance has been conceived as a way to satisfy the <a href="silver-training/end-user-device-guidance">12 End User Device Security Principles</a>. As such, it consists of <i>recommendations </i>and should <i>not </i>be seen as a set of mandatory instructions requiring no further thought.</p>
 <p>Risk owners and administrators should agree a configuration which balances business requirements, usability and security.</p>
-<hr>
 <h2>Risk owners’ summary</h2>
 <p>We recommend the following architectural choices for Windows 10:</p>
 <p>All data should be routed over a secure enterprise VPN to ensure the confidentiality and integrity of the traffic. This also allows the devices, and data on them, to be protected by&nbsp;<a href="https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes">enterprise&nbsp;protective monitoring solutions</a>.</p>
 <ul>
-  <li>Installation of arbitrary third-party applications by users is not permitted on the device. Applications should be authorised by an administrator and deployed via a trusted mechanism.</li>
+  <li>Installation of arbitrary third-party applications by users is not permitted on the device. Applications should be authorized by an administrator and deployed via a trusted mechanism.</li>
   <li>Most users should have accounts with no administrative privileges. Users that require administrative privileges should use a separate unprivileged account for email and web browsing. Administrator accounts should have a unique strong password per device.</li>
 </ul>
 <p>When configured in this way, risk owners should be aware of the following technical risks associated with this platform:</p>
 <p>&nbsp;</p>
-<figure class="table" style="width:635px;">
+<figure class="table">
   <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
     <thead>
       <tr>
-        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Associated security principle</strong></th>
-        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Explanation of risks</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:20px;vertical-align:top;width:113px;"><strong>Associated security principle</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:20px;vertical-align:top;width:261px;"><strong>Explanation of risks</strong></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Secure boot</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Windows 10 can support secure boot, but is dependent on supported and correctly configured hardware</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;vertical-align:top;">Secure boot</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;vertical-align:top;">Windows 10 can support secure boot, but is dependent on supported and correctly configured hardware</td>
       </tr>
     </tbody>
   </table>
 </figure>
-<hr>
 <h2>Administrators’ deployment guide</h2>
 <h3><strong>Overview</strong></h3>
 <p>To meet the principles outlined in the <a href="https://www.gov.uk/government/publications/end-user-device-strategy-security-framework-and-controls">End User Devices Security Framework</a>, several recommendations are given in the table below.</p>
