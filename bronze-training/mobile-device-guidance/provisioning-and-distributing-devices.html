@@ -1,0 +1,96 @@
+<!--
+title: Provisioning and distributing devices
+description: Advice for IT administrators on how to provision and distribute smartphones, tablets and laptops to end users
+published: true
+date: 2021-03-06T02:28:34.777Z
+tags: guidance, bronze, bronze-training, mdm
+editor: ckeditor
+dateCreated: 2021-03-06T02:28:34.777Z
+-->
+
+<p>Provisioning new devices and distributing them to end users efficiently is central to the running of an IT estate. How you choose to implement these processes will have a direct impact on the security of your deployment.</p>
+<p>This guidance discusses some of the security aspects of provisioning and gives advice on ways to secure this part of the device lifecycle.</p>
+<hr>
+<h2>Why secure your provisioning process?</h2>
+<p>Before your corporate devices can be used by staff, they need to be set up to use the corporate services they need to do their job.</p>
+<p>This setup can be done in one of three ways:</p>
+<ul>
+  <li>Manually by end users following instructions (self enrolment)</li>
+  <li>Manually by an administrator</li>
+  <li>Automatically using&nbsp;zero-touch enrolment</li>
+</ul>
+<p>Each of these has pros and cons, which you should take into account when developing your provisioning procedures.</p>
+<p>There are plenty of opportunities for problems to occur during the provisioning process. For example, you may wish to allow users to enrol their devices into your&nbsp;MDM service&nbsp;themselves, using their corporate username and password. To do this, you will have an internet-connected service that permits single-factor authentication, leaving you vulnerable to&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/spray-you-spray-me-defending-against-password-spraying-attacks">credential stuffing and password spraying attacks</a>.</p>
+<p>You might also need to distribute devices to users in remote locations, sometimes using untrusted distribution channels. You should be confident that a device intercepted in transit can’t be used to access work data. This is especially important as un-enrolled devices will be particularly difficult to monitor without their enterprise configuration in place.</p>
+<hr>
+<h2>Preparing for secure provisioning</h2>
+<p>There are several separate steps we consider part of the provisioning process. You should consider each of these in turn.</p>
+<p>Choosing who enrols the device into mobile device management</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Topic</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Points to consider</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Assigning devices to users</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">When you buy devices, how will you track who they are assigned to? If an issue is reported with a device (e.g. by protective monitoring) you need the ability to find out who its owner is. You may also have obligations to keep track of corporate assets.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Choosing who enrols the device into mobile device management</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>There are essentially three approaches for enrolling devices into MDM:</p>
+          <ul>
+            <li><strong>Self enrolment</strong>. End users are expected to enrol their device into MDM themselves. This is often used in&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device">BYOD deployments</a>. Self-enrolment typically requires users to be given access to enrolment infrastructure via the internet, therefore also exposing this infrastructure to potential attackers. If you do this, multi-factor authentication should be required. This approach also requires users to reliably follow instructions, or be at risk of social engineering attacks that could compromise their new device.</li>
+            <li><strong>Admin enrolment</strong>. Trusted administrators are responsible for all the setup work required to prepare devices for use. For large deployments, this can be an onerous process. Admin enrolment can alleviate the issues that arise in self enrolment, but puts the onus on a small number of individuals to do the enrolment process on behalf of a potentially large number of users. With this approach, dedicated provisioning networks can also be used to limit the enrolment infrastructure’s exposure to attackers on the Internet.</li>
+            <li><strong>Zero-touch enrolment</strong>. Devices can automatically enrol themselves when users first turn them on, because&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">MDM service</a>&nbsp;details were provided&nbsp;when the device was purchased. Zero-touch enrolment simplifies and automates much admin enrolment, but requires some co-ordination between procurement and device management. There are many advantages to&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/zero-touch-enrolment">dedicated, zero touch enrolment</a>.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Applying any local configuration to the device</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>Some devices cannot be completely provisioned automatically and may require manual setup. For example, you may need to&nbsp;configure the&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/managing-mobile-device-firmware">firmware settings</a>&nbsp;of your laptops manually (and also&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/automating-uefi-firmware-updates">automate firmware updates</a>&nbsp;using OEM tools).</p>
+          <p>Your process might need to include steps where trusted administrators can apply settings locally before devices are given to users. If so, you will need to think carefully about how to manage administrative credentials here, as having one re-used password (e.g. a local admin account) across your entire fleet is a bad idea. Tools like&nbsp;<a href="https://www.microsoft.com/en-us/download/details.aspx?id=46899">LAPS (for Windows)</a>&nbsp;can help with this.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Delivery of the device and credentials to users</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">
+          <p>You’ll need to get the device and some credentials (for the device itself, or for enrolment) to your users. However you do this, you should ensure that an intercepted device can’t be used to access your data. For example, posting devices with no passcode set is not a secure distribution method, nor is distributing a device and its passcode together.</p>
+          <p>Send device passwords separately, out of band. Or, let users use their existing credentials (with multifactor authentication) to enrol themselves when they receive the device. If at any point, their password was transmitted or known to another person, they should be required to change it before they start using the device.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Enrolment into biometric authentication</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://www.ncsc.gov.uk/collection/biometrics">Biometric authentication</a>&nbsp;set up requires the end user to be present, so this cannot be done remotely. If you are going to allow biometrics, you should provide guidance on how your users can set this up once they receive and start using their device.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Securing the enrolment process and monitoring for issues</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Because devices are not yet fully provisioned during enrolment, your protective monitoring solutions may not have full visibility of them. So, you may want to take additional steps to harden the enrolment process, including:</p>
+          <ul>
+            <li>Only permitting pre-registered devices to enrol</li>
+            <li>Using multi-factor authentication to enrol</li>
+            <li>Having time-bounded periods during which users can enrol, so that intercepted or lost devices cannot be used</li>
+          </ul>
+          <p>Review our&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/logging-and-protective-monitoring">Logging and protective monitoring&nbsp;</a>guidance for further advice.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>How to provision securely</h2>
+<p>When provisioning and distributing devices to users, you should:</p>
+<ul>
+  <li>Use&nbsp;zero-touch enrolment&nbsp;to automate as much of the device provisioning process as possible.</li>
+  <li>Ensure any manual enrolment (such as your&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/zero-touch-enrolment">MDM service</a>) endpoints are secure, including using&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/stepping-multi-factor-authentication">authentication</a>.</li>
+  <li>Ensure local accounts on devices have unique credentials per device, including BIOS and local administrator passwords.</li>
+  <li>Use trusted channels such as internal email to distribute device or enrolment credentials to users. Ensure these credentials are changed at first use.</li>
+  <li>Monitor for devices that should have been activated but have not, and/or time limit activation.</li>
+  <li>Many MDMs support placeholder accounts for pre-enrolling devices you expect users to subsequently enrol. You should use these placeholder accounts to ensure that only expected devices are enrolled.</li>
+</ul>
