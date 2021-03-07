@@ -2,7 +2,7 @@
 title: Procedures & Controls
 description: 
 published: true
-date: 2021-03-07T22:46:54.930Z
+date: 2021-03-07T22:57:45.771Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -10,12 +10,17 @@ dateCreated: 2021-03-02T03:57:32.388Z
 
 
 # Business/Organization Management
+>  Implementing processs for sticking to strategic direction, managing risks, and verifying that your systems work as designed today and will work as expected during an incident.
+{.is-success}
+
 {.grid-list}
 - [Code of Conduct](/bronze-controls/code-of-conduct)
 - [Incident Categories](/bronze-controls/incident-categories)
 {.links-list}
 
 # Data Management
+>  Practices for classifying, managing, and storing your information/data electonically. 
+{.is-success}
 {.grid-list}
 - [Data Handling Controls](/bronze-controls/data-handling-controls)
 - [Secure sanitization of storage media](/bronze-controls/topic-sanitization)
@@ -24,11 +29,15 @@ dateCreated: 2021-03-02T03:57:32.388Z
 
 
 # Identity and Access Management
+>  Technologies for ensuring that the proper people in an enterprise have the appropriate access to technology resources.
+{.is-success}
 {.grid-list}
 - [Introduction to identity and access management](/bronze-controls/designing-controls/identity-and-access-management)
 {.links-list}
 
 # Device Management 
+Device management is the process of managing the implementation, operation and maintenance of a physical and/or virtual device. It is a broad term that includes various administrative tools and processes for the maintenance and upkeep of a computing, network, mobile and/or virtual device. Majority of this section emphasizes **Mobile Device Management**, which is an industry accepted term for nearly all **End-User Devices**. While historically **worksations** and **desktops** were treated differently from phones and tables, the convergence of these technologies has made them ubquitious. BCSF assumes that all **end-user devices** are mobile devices whether they are a workstation, desktop, laptop, phone, tablet, or thin-client. 
+
 
 ## Mobile Device Guidance
 > Securing mobile devices is an essential part of guarding your organisation against a variety of threats, many of which herald from the internet.  You can also begin with our forward for [Mobile Device Guidance](/bronze-training/mobile-device-guidance).
@@ -45,8 +54,8 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Provisioning and distributing devices *Advice for IT administrators on how to provision and distribute smartphones, tablets and laptops to end users*](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices)
 - [Zero-touch enrolment *Using zero-touch enrolment to automatically provision smartphones, tablets and laptops*](/bronze-training/mobile-device-guidance/zero-touch-enrolment)
 - [Mobile Device Management *Advice on the selection and implementation of Mobile Device Management within your enterprise*](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services)
-
 {.links-list}
+
 ### Policies and Settings
 > Once you’ve chosen which devices your staff will use and decided how they should use them, you’ll need to start thinking about how to configure these devices and the services on them. Ideally, there will be a combination of settings and controls which makes it easy for your users to get their jobs done but makes it hard for attackers to compromise your systems.
 {.is-info}
@@ -59,6 +68,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Using third-party applications *Advice on the assessment, distribution and use of third-party applications on smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/using-third-party-applications)
 - [Enterprise instant messaging *Advice on assessing the security features of enterprise instant messaging systems for smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/choosing-an-enterprise-instant-messaging-solution)
 {.links-list}
+
 ### Managing Deployed Devices
 > Even once your devices are in the hands of your users, there is still more work to do. In particular, you’ll want to make sure your deployment remains secure.
 {.is-info}
@@ -71,7 +81,9 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Advising end users *Advising your organisation’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/advising-end-users)
 - [Obsolete products *Reducing the risks from using out of date smartphones, tablets, laptops, desktop PCs, appliances or software applications.*](/bronze-training/mobile-device-guidance/managing-the-risks-from-obsolete-products)
 - [Bring Your Own Device (BYOD) *Guidance for organisations on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information.*](/bronze-controls/byod-guidance)
+- [BYOD/Personal Device Agreement Sample *Template for stating the oversight capabilities your organization has over personal devices whehn accessing company resources.*](/bronze-controls/byod-for-staff)
 {.links-list}
+
 ### Infrastructure
 > Any deployment of mobile devices will be built upon a network of supporting infrastructure. This section includes our guidance on how to develop, manage, and secure the systems which underpin your mobile devices.
 {.is-info}
@@ -96,26 +108,29 @@ dateCreated: 2021-03-02T03:57:32.388Z
 {.links-list}
 
 # Network Management
+> Network management is the process of administering and managing computer networks. Services provided by this discipline include fault analysis, performance management, provisioning of networks and maintaining quality of service.
+{.is-success}
+
 {.grid-list}
 - [Domain Name System](/bronze-controls/dns)
 {.links-list}
 
 
 # Systems Monitoring
+> System monitoring is essentially about checking the operation of devices and applications across the IT infrastructure, including measuring traffic and activity between different network components. It can also include catching discrete occurrences or patterns within event logs signaling errors or security issues.
+{.is-success}
+
 {.grid-list}
 - [Introduction to logging for security purposes](/bronze-controls/designing-controls/logging-for-security)
 {.links-list}
 
 
 # Vulnerability Management
+> Vulnerability management is the "cyclical practice of identifying, classifying, prioritizing, remediating, and mitigating" software vulnerabilities. Vulnerability management is integral to computer security and network security
+{.is-success}
+
 {.grid-list}
 - [Intelligent security tools](/bronze-training/background-topics/intelligent-security-tools)
-{.links-list}
-
-# Bring Your Own Device Management
-{.grid-list}
-- [BYOD/Personal Device Guidance](/bronze-controls/byod-guidance)
-- [BYOD/Personal Device Agreement Sample](/bronze-controls/byod-for-staff)
 {.links-list}
 
 
