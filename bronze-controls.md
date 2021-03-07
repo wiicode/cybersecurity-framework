@@ -2,7 +2,7 @@
 title: Procedures & Controls
 description: 
 published: true
-date: 2021-03-07T22:33:48.134Z
+date: 2021-03-07T22:46:54.930Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -31,7 +31,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # Device Management 
 
 ## Mobile Device Guidance
-> Securing mobile devices is an essential part of guarding your organisation against a variety of threats, many of which herald from the internet.
+> Securing mobile devices is an essential part of guarding your organisation against a variety of threats, many of which herald from the internet.  You can also begin with our forward for [Mobile Device Guidance](/bronze-training/mobile-device-guidance).
 {.is-success}
 
 ### Getting Ready
