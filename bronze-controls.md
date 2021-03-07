@@ -2,7 +2,7 @@
 title: Procedures & Controls
 description: 
 published: true
-date: 2021-03-07T22:57:45.771Z
+date: 2021-03-07T22:59:36.389Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -93,6 +93,7 @@ Device management is the process of managing the implementation, operation and m
 - [Network architectures *Advice for network architects and systems administrators on the design of remote access architecture for enterprise services*](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-access)
 {.links-list}
 
+## Device Management Operations
 ### Securing Devices
 {.grid-list}
 - [Securing Windows 10](/silver-training/platform-windows-10)
