@@ -2,7 +2,7 @@
 title: Erasing mobile devices
 description: Advice for IT admins and individuals on the secure removal of data or malware from smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-03-07T23:19:07.387Z
+date: 2021-03-07T23:47:22.127Z
 tags: guidance, bronze, mdm
 editor: ckeditor
 dateCreated: 2021-03-06T02:45:31.040Z
@@ -13,31 +13,8 @@ dateCreated: 2021-03-06T02:45:31.040Z
     <tbody>
       <tr>
         <td style="background-color:hsl(0, 0%, 90%);padding:20px;">
-          <p><strong>WARNING</strong>: &nbsp;Very often an organization falsely believes they can wipe a device in the event of an <strong>employee termination</strong> using a <strong>remote wipe command</strong>. &nbsp;While remote wipe technology may be available for some/all mobile devices, it is unlikely you can use this feature during an employee departure. &nbsp;As you will learn from this guide, remote wipe is intended to be used for lost/stolen or compromised devices. &nbsp;We strongly recommend that, for cases where a data-wipe is required, your company maintain procedures and request that company applications and accounts are removed in the presence of a manager/owner during termination.</p>
-          <p><strong>To understand this better, consider these key points:</strong></p>
-          <ul>
-            <li>Most organizations allow other connection types that do not provide a wipe command. For example, POP, SMTP, and IMAP are just some examples of e-mail technology that are not capable of being managed. An organization would need to have these capabilities disabled - or controlled via conditional access - in order&nbsp;</li>
-            <li>Devices using certain synchronization technologies like ActiveSync can be wiped as a whole, or in part, by the mail system. This is designed for a lost/stolen device and has some likelihood of success. &nbsp; A whole-device wipe will destroy all data on the device and would be unethical (and possibly illegal) without written consent from the employee (see <a href="/bronze-controls/byod-for-staff">BYOD Sample Agreement</a>)</li>
-            <li>ActiveSync is a legacy technology and is being actively replaced by native apps like the Gmail App or the Outlook App which can be removed from a device - with all data - without affecting the remainder of the devices. &nbsp;In 2021 it is highly anticipated that security changes within Microsoft 365 and Google Workspace will prevent users from self-enrolling using ActiveSync and such enrollments will only be possible via Mobile Device Management profiles.&nbsp;</li>
-            <li>In order to remove an app with all of its data, the device must have been enrolled in a Mobile Device Management platform.</li>
-            <li>Mobile Device Management platforms needs to be audited and verified routinely to make sure they are capable of executing critical commands during an incident. &nbsp;</li>
-          </ul>
-          <p><strong>Unless your organization has a comprehensive mobile device strategy, it is unlikely able to execute a termination-related wipe. &nbsp;A comprehensive strategy would generally consist of:</strong></p>
-          <ol>
-            <li>Information Classification Policy, &nbsp;which outlines and instructs what systems can be accessible by personal devices.</li>
-            <li>Application systems and mission-critical apps configured to allow connections only from trusted devices, with legacy protocols disabled. &nbsp;</li>
-            <li>Mobile Device Management policy that includes management of company owned and personal devices.&nbsp;</li>
-            <li>Bring Your Own Device (Personal Device) policy with signed agreements from staff.&nbsp;</li>
-            <li>Documented off-boarding procedures with verified steps for device sanitization.&nbsp;</li>
-          </ol>
-          <p><strong>Additionally, the organization would need a technology stack that includes:</strong></p>
-          <ol>
-            <li>Advanced directory services such as those provided by Azure Premium (P2) or Google Workspace Business Plus (or Enterprise). &nbsp;</li>
-            <li>Conditional Access Control along with some form of trusted access or Zero Trust Access</li>
-            <li>Mobile Device Management platform with unique configuration profiles for mission-critical data systems</li>
-            <li>Apps acquired via a volume purchase program and deployed using device-based licensing via a Mobile Device Management platform.&nbsp;</li>
-            <li>Recent audit/verification trail that confirms that certificates are good, devices are either enrolled and connected, and all recent tests of capabilities.&nbsp;</li>
-          </ol>
+          <p><strong>WARNING</strong>: &nbsp;Very often an organization falsely believes they can wipe a device in the event of an <strong>employee termination</strong> using a <strong>remote wipe command</strong>. &nbsp;While remote wipe technology may be available for some/all mobile devices, it is unlikely you can use this feature during an employee departure. &nbsp;As you will learn from this guide, remote wipe is intended to be used for lost/stolen or compromised devices. &nbsp;We strongly recommend that, for cases where a data-wipe is required, your company maintain procedures and request that company applications and accounts are removed in the presence of a manager/owner during termination. &nbsp;</p>
+          <p>For more information on this topic, please see “<a href="https://www.techbento.com/2021/03/07/employee-fired-wipe-device/">Employee is being fired: an explanation for why wiping a device is likely not an option</a>.”</p>
         </td>
       </tr>
     </tbody>
