@@ -2,8 +2,8 @@
 title: Mobile Device Guidance
 description: Help for organizations, from choosing and purchasing devices to the advice you give the end users.
 published: true
-date: 2021-03-07T22:44:35.128Z
-tags: guidance, bronze, mdm
+date: 2021-03-07T22:45:44.949Z
+tags: guidance, bronze, bronze-training, mdm, rmm, msp
 editor: markdown
 dateCreated: 2021-03-07T22:44:35.128Z
 ---
