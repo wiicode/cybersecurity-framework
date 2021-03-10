@@ -2,21 +2,21 @@
 title: Mobile Device Management
 description: Advice on the selection and implementation of Mobile Device Management within your enterprise
 published: true
-date: 2021-03-10T02:41:46.115Z
+date: 2021-03-10T02:42:49.707Z
 tags: guidance, bronze, bronze-training, mdm, favorite
 editor: ckeditor
 dateCreated: 2021-03-06T02:31:31.365Z
 -->
 
-<p>A Mobile Device Management (MDM) service combines device applications, built-in device management features and infrastructure services. Together, these components allow your organisation to remotely control, monitor, and enforce policies on employee devices.</p>
+<p>A Mobile Device Management (MDM) service combines device applications, built-in device management features and infrastructure services. Together, these components allow your organization to remotely control, monitor, and enforce policies on employee devices.</p>
 <p>This guidance will discuss the importance of MDM, our recommendations when choosing an MDM, and how best to use them to securely manage smartphones, tablets, laptops and desktop PCs.</p>
 <h2>Why use MDM?</h2>
-<p>Mobile Device Management is designed to simplify management of devices within an organisation.</p>
+<p>Mobile Device Management is designed to simplify management of devices within an organization.</p>
 <p>Typical functionality includes device enrollment, the ability to control device configuration, protect data, monitor the status and compliance of devices, and manage enterprise approved apps. All across a range of platforms and operating systems.</p>
 <p>Most MDM services work over the internet, allowing devices to be managed and&nbsp;<strong>remotely controlled</strong>&nbsp;wherever they are in the world. This means staff can work off-premises, securely.</p>
 <p>Some example use cases include&nbsp;<strong>enforcing policies</strong>&nbsp;on a device, such as the use of a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks">VPN</a>, performing a&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/erasing-mobile-devices">remote device wipe</a>&nbsp;if the device is lost. MDM would also allow the&nbsp;<strong>monitoring&nbsp;</strong>of devices, to help determine&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date">if the they have been kept up to date</a>, been jail broken, or if a policy violation has occurred.&nbsp; Additionally, it is important to keep MDMs secure as they hold the keys to unlock, decrypt and remote wipe all the devices within your enterprise.</p>
 <h2>Preparing for mobile device management</h2>
-<p>There are several things to consider before choosing an MDM for your organisation.</p>
+<p>There are several things to consider before choosing an MDM for your organization.</p>
 <h2>Deployment model</h2>
 <p>MDM services can be on-premises or in the cloud, for example as SaaS solutions. Some products come in both flavors, others only one.</p>
 <p>There may also be significant differences and trade-offs in terms of feature support between the two approaches. For example, it may be slower patching with an on-premises service so you will not always have the latest features.&nbsp;</p>
@@ -26,10 +26,10 @@ dateCreated: 2021-03-06T02:31:31.365Z
 <h2>Device and Feature Support</h2>
 <p>Individual MDM services will often only support&nbsp;<i>some</i>&nbsp;device types, security features, and management options. This being so, it's important to ascertain whether the following features are supported for the devices that you use:</p>
 <h3><strong>Device Enrollment</strong></h3>
-<p>The enrollment options you require will vary depending on your approach to device management. If your organisation owns and fully manages devices&nbsp;your needs are likely to be more easily satisfied than if you run a&nbsp;<a href="/bronze-controls/byod-guidance">BYOD</a> scheme.</p>
+<p>The enrollment options you require will vary depending on your approach to device management. If your organization owns and fully manages devices&nbsp;your needs are likely to be more easily satisfied than if you run a&nbsp;<a href="/bronze-controls/byod-guidance">BYOD</a> scheme.</p>
 <p>For enterprise owned devices, you should use an MDM platform which supports&nbsp;<a href="/bronze-training/mobile-device-guidance/zero-touch-enrollment">zero touch enrollment</a>. If you choose to use a technical approach that also permits&nbsp;<a href="/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices">admin enrollment or self enrollment</a>, it is important to consider available methods of&nbsp;<a href="bronze-training/mobile-device-guidance/enterprise-authentication-policy">authentication</a>&nbsp;during enrollment, including MFA for user and device authentication.</p>
 <h3><strong>Device Configuration</strong></h3>
-<p>The technical controls that will be available, and that you can enforce, will vary depending on the devices that you use in your organisation.</p>
+<p>The technical controls that will be available, and that you can enforce, will vary depending on the devices that you use in your organization.</p>
 <p>You will need to consider which device configuration polices you need to enforce and whether these are available in the MDM that you choose. You could develop a candidate configuration&nbsp;and see which MDM services are able to deploy that configuration.</p>
 <h3><strong>Device Compliance and Monitoring</strong></h3>
 <p>MDMs can provide options for&nbsp;<a href="/bronze-training/mobile-device-guidance/logging-and-protective-monitoring">monitoring of mobile devices</a>&nbsp;and reporting on device compliance. This can tell you things such as whether the device and applications are up to date, detect jailbreak or the presence of banned apps. Some MDMs also include more advanced reporting, using device attestation, which can provide stronger assertions of device compliance and device health.</p>
@@ -43,7 +43,7 @@ dateCreated: 2021-03-06T02:31:31.365Z
 <h2>How to choose an MDM service</h2>
 <p>When choosing and using a Mobile Device Management service, based on the considerations above, you should:</p>
 <ul>
-  <li>Select an MDM service that supports the devices and features you require, based on the technical approach that your organisation uses. It should be noted that if using a&nbsp;<a href="/bronze-controls/byod-guidance">BYOD approach</a>, this may significantly limit the technical controls you are able to enforce and the features that are available.</li>
+  <li>Select an MDM service that supports the devices and features you require, based on the technical approach that your organization uses. It should be noted that if using a&nbsp;<a href="/bronze-controls/byod-guidance">BYOD approach</a>, this may significantly limit the technical controls you are able to enforce and the features that are available.</li>
   <li>If possible, pilot a range of MDM services and assess support for the devices and features that you require. You should also factor in accessibility, reliability and responsiveness during this pilot phase.</li>
   <li>Choose an MDM service that provides automatic updates to the service itself and ensure that the MDM software is kept up to date.</li>
   <li>Depending on whether you choose to deploy the MDM service completely on-premises or in the cloud using an IaaS or SaaS model, ensure that robust patching processes are in place to keep back-end infrastructure up to date. In an IaaS model, you have more responsibility for patching services yourself.</li>
