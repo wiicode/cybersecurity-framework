@@ -2,77 +2,73 @@
 title: Zero-touch enrollment
 description: Using zero-touch enrollment to automatically provision smartphones, tablets and laptops
 published: true
-date: 2021-03-10T01:06:26.039Z
+date: 2021-03-10T02:27:25.138Z
 tags: guidance, bronze, bronze-training, bronze-controls, mdm
 editor: ckeditor
 dateCreated: 2021-03-06T02:30:00.367Z
 -->
 
-<p>Zero-touch automates much of the manual work involved in traditional device enrolment flow. This allows organisations to supply devices directly to users without requiring administrators to manually set up or enrol each device first. Zero-touch enrolment is available in most mobile platforms today, though generally has different names on each.</p>
-<p>This guide is aimed at IT admins in organisations with large numbers of devices to distribute to end users. It gives some basic context on zero-touch enrolment and outlinegood practices, without going into the details of specific platforms.</p>
-<hr>
+<p>Zero-touch automates much of the manual work involved in traditional device enrollment flow. This allows organizations to supply devices directly to users without requiring administrators to manually set up or enroll each device first. Zero-touch enrollment is available in most mobile platforms today, though generally has different names on each.</p>
+<p>This guide is aimed at IT admins in organizations with large numbers of devices to distribute to end users. It gives some basic context on zero-touch enrollment and outline good practices, without going into the details of specific platforms.</p>
 <h2>Why use Zero-touch?</h2>
-<p>Zero touch cuts down on administrator time required to enrol each device and the likelihood for mistakes, as well as securing unenrolled devices in transit to users. The strength of these benefits grows with the number of devices to deploy.</p>
-<p>In some cases, zero-touch enrolment may also provide additional security benefits. For example, on iOS, devices deployed through <a href="https://support.apple.com/en-gb/guide/apple-business-manager/apdd344cdd9d/web">Apple Business Manager</a> can be prevented from unenrolling from <a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a> by the end user. It also means that wiped devices can't be re-used if lost or stolen, even if&nbsp;<a href="https://support.apple.com/en-gb/HT201365">activation lock</a>&nbsp;is not enabled.</p>
+<p>Zero touch cuts down on administrator time required to enroll each device and the likelihood for mistakes, as well as securing unenrolled devices in transit to users. The strength of these benefits grows with the number of devices to deploy.</p>
+<p>In some cases, zero-touch enrollment may also provide additional security benefits. For example, on iOS, devices deployed through <a href="https://support.apple.com/en-gb/guide/apple-business-manager/apdd344cdd9d/web">Apple Business Manager</a> can be prevented from unenrolling from <a href="/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a> by the end user. It also means that wiped devices can't be re-used if lost or stolen, even if&nbsp;<a href="https://support.apple.com/en-gb/HT201365">activation lock</a>&nbsp;is not enabled.</p>
 <p>End-users also benefit by receiving a brand new, boxed device, which hasn't been opened or pre-used by an administrator.</p>
-<hr>
 <h2>Preparation for Zero-touch</h2>
-<p>Specific requirements for each zero-touch enrolment programme vary, but in general:</p>
+<p>Specific requirements for each zero-touch enrollment program vary, but in general:</p>
 <ul>
-  <li>You'll need&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management (MDM)</a>&nbsp;infrastructure which supports the zero-touch enrolment programme you want to use.</li>
-  <li>You'll need an entirely automated, over-the-air device management process that does not require administrators to manually configure each device - follow NCSC's&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides">detailed platform guidance</a>&nbsp;and guidance from your MDM supplier.</li>
+  <li>You'll need&nbsp;<a href="/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management (MDM)</a>&nbsp;infrastructure which supports the zero-touch enrollment program you want to use.</li>
+  <li>You'll need an entirely automated, over-the-air device management process that does not require administrators to manually configure each device.</li>
   <li>You'll need to decide how you'll do asset tracking, as your administrators will not be able to label each device before distribution.</li>
 </ul>
-<hr>
 <h2>How to use Zero-touch</h2>
-<p>Due to its security and administration benefits, the NCSC strongly recommends that large organisations use zero-touch enrolment programmes relevant to their devices.</p>
+<p>Due to its security and administration benefits, the BCSF strongly recommends that large organizations use zero-touch enrollment programs relevant to their devices.</p>
 <p><strong>For Windows devices</strong></p>
-<p>If you use&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management">MDM management of Windows 10</a>, you should use&nbsp;<a href="https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot">Windows Autopilot</a>. For traditional&nbsp;<a href="https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809">Windows domains with Group Policy management</a>, manually re-imaging is likely to continue to be the best approach.</p>
-<p>Where you are managing&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/managing-mobile-device-firmware">firmware settings</a>&nbsp;on your devices, you may still need to manually configure these options on each device, as a standardised way to do this remotely has not yet been created.</p>
+<p>If you use&nbsp;<a href="/silver-training/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management">MDM management of Windows 10</a>, you should use&nbsp;<a href="https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot">Windows Autopilot</a>. For traditional&nbsp;<a href="/silver-training/platform-windows-10">Windows domains with Group Policy management</a>, manually re-imaging is likely to continue to be the best approach.</p>
+<p>Where you are managing&nbsp;<a href="/bronze-training/mobile-device-guidance/managing-mobile-device-firmware">firmware settings</a>&nbsp;on your devices, you may still need to manually configure these options on each device, as a standardized way to do this remotely has not yet been created.</p>
 <p><strong>For other devices</strong></p>
 <p>Follow the manufacturer guide for the exact process to follow. At a high level, you'll need to:</p>
 <ul>
-  <li>Register for a zero-touch enrolment programmes for your chosen devices.</li>
-  <li>When you&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/purchasing-devices">buy new devices</a>, let your supplier know they need to assign the devices to your zero-touch enrolment programme account, and provide them with the details</li>
-  <li>Configure your&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a>&nbsp;services to automatically enrol new devices provisioned using zero-touch enrolment, including setting up policies to automatically apply to new devices.</li>
-  <li>You'll need to provide&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/advising-end-users">user guidance</a>&nbsp;on steps to take when receiving a new device, as your administrators won't be setting up devices before they reach the end user.</li>
+  <li>Register for a zero-touch enrollment programs for your chosen devices.</li>
+  <li>When you&nbsp;<a href="/bronze-training/mobile-device-guidance/purchasing-devices">buy new devices</a>, let your supplier know they need to assign the devices to your zero-touch enrollment program account, and provide them with the details</li>
+  <li>Configure your&nbsp;<a href="/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a>&nbsp;services to automatically enroll new devices provisioned using zero-touch enrollment, including setting up policies to automatically apply to new devices.</li>
+  <li>You'll need to provide&nbsp;<a href="/bronze-training/mobile-device-guidance/advising-end-users">user guidance</a>&nbsp;on steps to take when receiving a new device, as your administrators won't be setting up devices before they reach the end user.</li>
 </ul>
 <p>You may also want to:</p>
 <ul>
-  <li>Try and retrospectively enrol your current fleet of devices into the chosen zero-touch enrolment programme so that if they are wiped they can be easily re-enrolled.</li>
-  <li>Create an exception process for devices that can't be zero-touch enrolled, so they can be added to your&nbsp;<a href="https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a>&nbsp;infrastructure.</li>
+  <li>Try and retrospectively enroll your current fleet of devices into the chosen zero-touch enrollment program so that if they are wiped they can be easily re-enrolled.</li>
+  <li>Create an exception process for devices that can't be zero-touch enrolled, so they can be added to your&nbsp;<a href="/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services">mobile device management</a>&nbsp;infrastructure.</li>
 </ul>
-<hr>
 <h2>More information?</h2>
-<p>More information on zero-touch enrolment can be found on the various manufacturer websites:</p>
-<figure class="table" style="width:635px;">
+<p>More information on zero-touch enrollment can be found on the various manufacturer websites:</p>
+<figure class="table">
   <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
     <thead>
       <tr>
-        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Device type</strong></th>
-        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Programme</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:20px;width:113px;"><strong>Device type</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:20px;width:261px;"><strong>Program</strong></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Android (excluding Samsung)</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://support.google.com/work/android/answer/7514005?hl=en">Android zero-touch enrolment programme</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;">Android (excluding Samsung)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;"><a href="https://support.google.com/work/android/answer/7514005?hl=en">Android zero-touch enrollment program</a></td>
       </tr>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Chrome OS</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://services.google.com/fh/files/misc/chrome_device_deployment_guide.pdf#page=11">White Glove Prep Enrolment Service</a>&nbsp;(PDF)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;">Chrome OS</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;"><a href="https://services.google.com/fh/files/misc/chrome_device_deployment_guide.pdf#page=11">White Glove Prep Enrollment Service</a>&nbsp;(PDF)</td>
       </tr>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">iOS, macOS</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://help.apple.com/businessmanager/#/apdd344cdd9d">Apple Business Manager</a>&nbsp;(formerly known as the Device Enrolment Programme [DEP])</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;">iOS, macOS</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;"><a href="https://help.apple.com/businessmanager/#/apdd344cdd9d">Apple Business Manager</a>&nbsp;(formerly known as the Device Enrollment Program [DEP])</td>
       </tr>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Samsung devices</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;"><a href="https://www.samsungknox.com/en/solutions/it-solutions/knox-mobile-enrollment">Knox Mobile Enrolment</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;">Samsung devices</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;"><a href="https://www.samsungknox.com/en/solutions/it-solutions/knox-mobile-enrollment">Knox Mobile Enrollment</a></td>
       </tr>
       <tr>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Windows</td>
-        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;"><a href="https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot">Windows Autopilot</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;">Windows</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:20px;"><a href="https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot">Windows Autopilot</a></td>
       </tr>
     </tbody>
   </table>
