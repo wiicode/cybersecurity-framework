@@ -2,7 +2,7 @@
 title: - home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-03-09T02:26:57.186Z
+date: 2021-04-21T13:49:51.167Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -11,8 +11,18 @@ dateCreated: 2020-08-05T17:54:57.644Z
 # Hello!
 The objective behind **Bento Cyber Security Framework (BCSF)** is to promote realistic and practical controls against common threats to organizational infrastructure. BCSF will help you create an information security program that is based on standards and adapts to your organization's needs.  **BENTO:GUIDES** is the tool for learning about, developing, and maintaining your *BCSF-based* information security program. The tool gives you access to a collection of materials which you can use to build your own program. 
 
-> **Why?** 60% of small businesses that are victims of a cyber attack go out of business within six months. Business owners are responsible for cybersecurity. Information security is complicated and dynamic. An internally developed and implemented cybersecurity program is your company's best risk mitigation and management strategy. 
+
+## Cybercrime is profitable.
+
+> Deloitte estimated even a **low-end cyber attack costing just $34 per month could return $25,000**, while the more expensive and sophisticated attacks costing a few thousand dollars could return as much as $1 million per month. 
 {.is-warning}
+
+## Butterfly Effect.
+
+> Cybsersecurity disruptios will **harm your customers and/or employees**. The extent of that harm will vary from minor inconveniences to risks of death. Even small breaches can have catastrophic impacts. BCSF is to help your organization reach the **minimum safeguards** necessary to protect your customers and your employees. 
+{.is-warning}
+
+
 
 
 # Getting Started
