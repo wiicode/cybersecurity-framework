@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-03-05T19:22:18.077Z
+date: 2021-04-22T14:29:18.052Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -29,7 +29,9 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 
 - [ ] Identify and record essential data for regular backups. 
 - [ ] Create a password policy. 
-- [ ] Decide what access controls your users need so they can access only the information and systems required for their job role. 
+- [ ] Enforce a strong password policy and but avoid using forced/scheduled password changes.  
+- [ ] Enable user ability to change and rotate passwords on their terms.
+- [ ] Decide what access controls your users need so they can access only the information and systems required for their job role (least privilege principle). 
 - [ ] Decide what staff need access to USB drives Sign up to threat alerts and read cyber local advice e.g. briefing sheets/threat reports from www.bentosecurity.org/us-cert
 - [ ] Create an inventory of approved USB drives and their issued owners, and review whether the ownership is necessary periodically
 
@@ -38,9 +40,11 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 > These actions should be carried out by technical staff responsible for the setup and configuration of devices, networks and software.
 {.is-success}
 
-
-- [ ] Switch on your Firewall. 
-- [ ] Install and monitor centralized on Anti-virus software. 
+- [ ] Use separate administrative accounts on separate administration workstations.
+- [ ] Implement the principle of least privilege on data access.
+- [ ] Enable a personal firewall on organization workstations that is configured to deny unsolicited connection requests.
+- [ ] Install and monitor centralized on Anti-virus software (endpoint defense tools)
+- [ ] Maintain up-to-date antivirus signatures and engines.
 - [ ] Block access to physical ports for staff who do not need them. 
 - [ ] Consider making a password manager available to your staff to secure their passwords. 
 - [ ] Review the star ratings before choosing one from an app store. 
@@ -49,13 +53,21 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [ ] Switch on password protection for all available devices. 
 - [ ] Change default passwords on all internet-enabled devices as per password policy. 
 - [ ] Install and turn on tracking applications for all available devices e.g. Find my iPhone. 
-- [ ] Enable two-factor authentication for all important accounts (e.g email). 
+- [ ] Enable two-factor authentication (MFA) for all important accounts (e.g email). 
+- [ ] Implement Local Administrator Password Solution (LAPS).
 - [ ] Apply restrictions to prevent users downloading 3rd party apps. 
+- [ ] Check for instances of common executables executing with the hash of another process (e.g., splunklogger.exe with the hash of procdump).
 - [ ] Install the latest software updates on all devices and switch on automatic updates with periodic checks. 
 - [ ] Ensure all applications on devices are up to date and automatic updates have been set to download as soon as they are released. 
 - [ ] Schedule regular manual checks on updates. 
 - [ ] Set up encryption on all office equipment. 
 - [ ] Use products such as Bitlocker for Windows using a Trusted Platform Module (TPM) with a PIN, or FileVault (on mac OS).
+- [ ] Secure Remote Desktop Protocol (RDP) and other remote access solutions using MFA and “jump boxes” for access.
+- [ ] Disable unnecessary services on organization workstations and servers.
+
+### Special Recommendations
+- [ ] If your organization has ever used SolarWinds Orion versions 2019.4 through 2020.2.1 HF1, refer to CISA’s Emergency Directive ED 21-01, associated supplemental guidance, and CISA’s Activity Alert AA20-352A for additional guidance prior to applying patches.  Although ED 21-01 and associated guidance only apply to Federal Civilian Executive Branch agencies, CISA encourages non-federal entities to review them for recommendations on operating the SolarWinds Orion platform.
+
 
 ## Training and awareness actions
 
