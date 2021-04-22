@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-04-22T14:52:01.366Z
+date: 2021-04-22T14:56:00.649Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -27,7 +27,7 @@ As an applied framework, BCSF provides the general structure and specific guidan
 3. **Affordable**: cyber security is an investment of time, resources, and energy.  BCSF focuses on resiliency mechanisms that are high value and can be efficiently implemented at the small business level.
 
 
-# A.1 Governance
+# Mindful Governance (A.1)
 > Putting in place the policies and processes which govern your organization’s approach to the security of network and information systems.
 {.is-info}
 
@@ -82,7 +82,7 @@ BCSF Board Toolkit
 ISO 27001
 IEC 62443-2-1:2010`
 
-# A.2 Risk management
+# Mindful Risk management (A.2)
 > Identification, assessment and understanding of security risks. And the establishment of an overall organizational approach to risk management.
 {.is-info}
 
@@ -112,7 +112,7 @@ BCSF Assurance
 BCSF Penetration Testing Guidance
 BCSF Cloud Security Collection: Having confidence in cyber security`
 
-# A.3 Asset management
+# Mindful Asset management (A.3)
 > Determining and understanding all systems and/or services required to maintain or support essential functions.
 {.is-info}
 
@@ -148,7 +148,7 @@ ISO 27001/2
 ISO 55001 - Asset Management
 ITIL`
 
-# A.4 Supply chain
+# Mindful Supply chain (A.3)
 > Understanding and managing the security risks to networks and information systems which arise from dependencies on external suppliers.
 {.is-info}
 
@@ -174,7 +174,7 @@ BCSF Supply Chain Security
 BCSF Cloud Security Principle 8: Supply Chain Security
 Cloud Security Alliance (CSA) Security, Trust & Assurance Registry (STAR)`
 
-# B.1 Service protection policies and processes
+# Methodical Service protection policies and processes (B.1)
 Defining and communicating appropriate organizational policies and processes to secure systems and data that support the operation of essential functions.
 
 ## Principle
@@ -233,7 +233,7 @@ IEC TS 62443-1-1 & 62443-2-1
 CPNI's Personnel and People Security
 The BCSF's You shape security`
 
-# B.2 Identity and access control
+# Methodical Identity and access control (B.2)
 > Understanding, documenting and controlling access to networks and information systems supporting essential functions.
 {.is-info}
 
@@ -264,7 +264,7 @@ BS ISO/IEC 27002
 IEC 62443-2-1
 NIST Identity and Access Management publications, e.g. SP 800-63 suite "Digital Identity Guidelines"`
 
-# B.3 Data security
+# Methodical Data security (B.3)
 > Protecting stored or electronically transmitted data from actions that may cause an adverse impact on essential functions.
 {.is-info}
 
@@ -339,7 +339,7 @@ In addition to good mobile device management, ensure that mobile devices accessi
 ### Secure disposal
 Data important to the operation of the essential function is likely to be found on network and information system media and operational equipment, including IT and operational technology (OT) assets. Service management systems, along with network and mobile devices are familiar targets for secure sanitization. Some organizations responsible for essential functions may also need to consider the data stored on defunct OT and safety systems.
 
-# B.4 System security
+# Methodical System security (B.4)
 > Protecting critical network and information systems and technology from cyber attack.
 {.is-info}
 
@@ -426,7 +426,7 @@ BCSF Secure by default platforms
 IEC TS 62443-1-1
 ISO/IEC 27002`
 
-# B.5 Resilient networks and systems
+# Methodical Resilient networks and systems (B.5)
 > Building resilience against cyber attack.
 {.is-info}
 
@@ -469,7 +469,7 @@ HMG Emergency preparedness
 HMG Emergency Response and Recovery: Non statutory guidance accompanying the Civil Contingencies Act 2004
 The Business Continuity Institute has some freely available introductory business continuity guidance and members can access more detailed resources`
 
-# B.6 Staff awareness and training
+# Methodical Staff awareness and training (B.6)
 > Appropriately supporting staff to ensure they make a positive contribution to the cyber security of essential functions.
 {.is-info}
 
@@ -500,7 +500,7 @@ CPNI's guidance on developing a security culture
 GCHQ certified training scheme
 The BCSF's You shape security`
 
-# C.1 Security monitoring
+# Curious Security monitoring (C.1)
 > Monitoring to detect potential security problems and track the effectiveness of existing security measures.
 {.is-info}
 
@@ -575,7 +575,7 @@ NIST Guide to Intrusion Detection and Intrusion Prevention Systems
 ISO 27002 / 27019
 IEC 62443`
 
-# C.2 Proactive security event discovery
+# Curious Proactive security event discovery (C.2)
 > Detecting anomalous events in relevant network and information systems.
 {.is-info}
 
@@ -611,7 +611,7 @@ The aim is to build on what is known of past attacks to hypothesize what new or 
 
 The science of anomaly detection, which goes beyond using pre-defined or prescriptive pattern matching, is a challenging but growing area. Capabilities like machine learning are increasingly being shown to have applicability and potential in the field of intrusion detection. However, if they are not well designed and executed, these technologies can be expensive, difficult to implement and can produce high false-alarm rates. organizations that want to use such tools should consult the BCSF's guidance on Intelligent Security Tools.
 
-# D.1 Response and recovery planning
+# Humble Response and recovery planning (D.1)
 > Putting suitable incident management and mitigation processes in place.
 {.is-info}
 
@@ -684,7 +684,7 @@ CIR scheme
 ENISA Good practice guide for incident management
 BCSF Incident Management collection`
 
-# D.2 Lessons learned
+# Humble Lessons learned (D.2)
 > Learning from incidents and implementing these lessons to improve the resilience of essential functions.
 {.is-info}
 
