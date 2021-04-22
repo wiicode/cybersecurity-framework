@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-03-05T15:38:25.800Z
+date: 2021-04-22T14:52:01.366Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -626,7 +626,7 @@ The particular mechanisms required should be determined as part of the organizat
 > **Note**: Some cyber-related regulation have mandatory reporting requirements around cyber security incidents that have the potential to affect essential functions. organizations should make sure that they understand any mandatory incident reporting requirements that apply to them and include such requirements in their incident management planning.
 
 ## Guidance
-The 10 Steps: Incident Management is the most concise guidance here, but organizations should use other more detailed guidance as and when appropriate. Other authoritative guidance pieces are referenced below.
+[Incident Management in Ten Steps](/bronze-training/background-advanced/10-steps-incident-management) is the most concise guidance here, but organizations should use other more detailed guidance as and when appropriate. Other authoritative guidance pieces are referenced below.
 
 ### Preparation - An Incident Response Plan
 In addition to meeting the expectations of 10 Steps: Incident Management, you should ensure that your organization's incident response plans are grounded in thorough and comprehensive risk assessments. Response plans should prioritise essential functions along with the assets and systems that are required to ensure their continued effective operation, such as operational technologies, or key datasets.
