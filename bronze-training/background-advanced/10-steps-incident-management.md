@@ -2,7 +2,7 @@
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
 published: true
-date: 2021-03-03T19:23:42.232Z
+date: 2021-04-22T14:50:20.574Z
 tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:59:15.003Z
@@ -24,26 +24,37 @@ Mobile working and remote access extends the transit and storage of information 
 - Tampering: An attacker may attempt to subvert the security controls on the device through the insertion of malicious software or hardware if the device is left unattended. This may allow them to monitor all user activity on the device, including authentication credentials.
 
 # How can the risk be managed?
-**Assess the risks and create a mobile working policy**: Assess the risks associated with all types of mobile working and remote access. The resulting mobile security policy should determine aspects such as the processes for authorizing users to work off-site, device provisioning and support, the type of information or services that can be accessed or stored on devices and the minimum procedural security controls. The risks to the corporate network or systems from mobile devices should be assessed and consideration given to an increased level of monitoring on all remote connections and the systems being accessed.
+## Step 1
+**Assess the risks and create a mobile working policy**: 
+Assess the risks associated with all types of mobile working and remote access. The resulting mobile security policy should determine aspects such as the processes for authorizing users to work off-site, device provisioning and support, the type of information or services that can be accessed or stored on devices and the minimum procedural security controls. The risks to the corporate network or systems from mobile devices should be assessed and consideration given to an increased level of monitoring on all remote connections and the systems being accessed.
 
+## Step 2
 **Educate users and maintain awareness**: All users should be trained on the use of their mobile device for the locations they will be working in. Users should be supported to look after their mobile device and operate securely by following clear procedures. This should include direction on:
 
 - secure storage and management of user credentials
 - incident reporting
 
+## Step 3
 **Apply the secure baseline build**: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
 
+## Step 4
 **Protect data at rest**: Minimize the amount of information stored on a mobile device to only that which is needed to fulfill the business activity that is being delivered outside the normal office environment. If the device supports it, encrypt the data at rest.
 
+## Step 5
 **Protect data in transit**: If the user is working remotely the connection back to the corporate network will probably use the Internet. All information exchanged should be appropriately encrypted. See Using IPsec to Protect Data and Using TLS to protect data.
 
+## Step 6
 **Review the corporate incident management plans**: Mobile working attracts significant risks and security incidents will occur even when users follow the security procedures. The incident management plans should be sufficiently flexible to deal with the range of security incidents that could occur, including the loss or compromise of a device. Ideally, technical processes should be in place to remotely disable a device that has been lost or at least deny it access to the corporate network.
 - environmental awareness (the risks from being overlooked, etc.)
 
+## Step 7
 **Apply the secure baseline build**: Develop and apply a secure baseline build and configuration for all types of mobile device used by the organization. Consider integrating the security controls provided in the End User Device guidance into the baseline build for mobile devices.
 
+## Step 8
 **Protect data at rest**: Minimize the amount of information stored on a mobile device to only that which is needed to fulfill the business activity that is being delivered outside the normal office environment. If the device supports it, encrypt the data at rest.
 
+## Step 9
 **Protect data in transit**: If the user is working remotely the connection back to the corporate network will probably use the Internet. All information exchanged should be appropriately encrypted. See Using IPsec to Protect Data and Using TLS to protect data.
 
+## Step 10
 **Review the corporate incident management plans**: Mobile working attracts significant risks and security incidents will occur even when users follow the security procedures. The incident management plans should be sufficiently flexible to deal with the range of security incidents that could occur, including the loss or compromise of a device. Ideally, technical processes should be in place to remotely disable a device that has been lost or at least deny it access to the corporate network.
