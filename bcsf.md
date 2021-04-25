@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-04-22T14:56:00.649Z
+date: 2021-04-25T20:33:34.567Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -11,7 +11,7 @@ dateCreated: 2021-02-21T02:36:41.481Z
 > BCSF defines the best practices an organization follows to manage its cybersecurity risk for small organizations engaged in professional services. It is primarily developed from managed information technology service practices for legal, financial, retail, industrial, veterinary, and professional service companies.  
 {.is-success}
 
-## General introduction
+# General introduction
 > **BENTO:GUIDES** is the publishing platform for accessing **Bento Cyber Security Framework** and all supporting materials.  
 {.is-info}
 
@@ -25,6 +25,14 @@ As an applied framework, BCSF provides the general structure and specific guidan
 1. **Adoptable**:  developed with business owners in mind, the framework is written for boards, owners, and managers.  No technical knowledge necessary to understand the principles. 
 2. **Actionable**: extended by **BENTO:GUIDES**, BCSF allows companies to easily access the framework and supporting materials for implmentation.
 3. **Affordable**: cyber security is an investment of time, resources, and energy.  BCSF focuses on resiliency mechanisms that are high value and can be efficiently implemented at the small business level.
+
+# BCSF Principles
+BCSF encourages you look at each problem or task with these four key principles in mind: 
+- [Be Mindful *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/emplotee/vendor having a bad moment, a bad experience, or worse.*](#)
+- [Be Methodical *When process exists - follow it every time.  Don’t let the pressures of time and noise distract you from process and methods.*](#)
+- [Be Curious *Take time to educate yourself, access documentation, and become familiar with the policy, process, and security documents your organization has made avaialble.*](#)
+- [Be Humble *Recognize that cybersecurity is a dynamic field and requires perpetual education, retrospection, and adjustment.*](#)
+{.links-list}
 
 
 # Mindful Governance (A.1)
