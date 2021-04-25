@@ -2,7 +2,7 @@
 title: - home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-04-21T13:49:51.167Z
+date: 2021-04-25T20:43:51.195Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -16,6 +16,8 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 
 > Deloitte estimated even a **low-end cyber attack costing just $34 per month could return $25,000**, while the more expensive and sophisticated attacks costing a few thousand dollars could return as much as $1 million per month. 
 {.is-warning}
+
+![bcsf-stats.png](/bcsf-stats.png)
 
 ## Butterfly Effect.
 
