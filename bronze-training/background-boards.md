@@ -2,7 +2,7 @@
 title: Board and Ownership Toolkit
 description: While written for corporate boards, business owners will benefit from this information equally.
 published: true
-date: 2021-02-28T02:50:26.780Z
+date: 2021-05-11T18:29:34.126Z
 tags: bronze, bronze-training, board
 editor: markdown
 dateCreated: 2021-02-22T02:48:59.292Z
@@ -27,6 +27,6 @@ The BCSF is often asked 'what does good look like?' The simple answer is 'whatev
 {.links-list}
 
 {.grid-list}
-- [Board toolkit: five questions for your board's agenda *A range of questions that the NCSC believe will help generate constructive cyber security discussions between board members and their CISOs.*](/bronze-training/background-boards/board-five-questions)
+- [Board toolkit: five questions for your board's agenda *A range of questions that the BCSF team believes will help generate constructive cyber security discussions between board members and their CISOs.*](/bronze-training/background-boards/board-five-questions)
 {.links-list}
 
