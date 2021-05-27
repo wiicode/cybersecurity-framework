@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-05-27T19:16:55.877Z
+date: 2021-05-27T19:20:48.337Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -239,4 +239,4 @@ To make life harder for the criminals, you can do the following:
 - Think about what you post (and who can see it).
 - Change your phone number to be unlisted, or 'ex-directory'.
 
-We have detailed advice on [protecting your privacy on social media](bronze-training/individuals-social-media).
+We have detailed advice on [protecting your privacy on social media](bronze-training/individual-cybersecurity/individuals-social-media).
