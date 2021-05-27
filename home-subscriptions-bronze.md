@@ -2,7 +2,7 @@
 title: Getting Started 
 description: Bronze (Core) Content Introduction
 published: true
-date: 2021-05-27T18:39:17.753Z
+date: 2021-05-27T18:41:09.185Z
 tags: bronze, home, adapted
 editor: markdown
 dateCreated: 2021-02-13T16:49:27.989Z
@@ -52,11 +52,6 @@ The BCSF Team provides cyber security guidance to small companies and supports t
 -   **responds** to cyber security incidents to reduce the harm they cause to organisations
 -   **connects** organizations with cyber security services providers
 
-
-# How do feelings affect cybersecurity?
-> Until machines become sentient and aware, it is ultimately people who make cybersecurity work. Cybersecurity thrives in trickle-down economics. Business leaders set the expectations, and are responsible for nurturning a culture that supports cybersecurity all the way down to the bottom. 
-{.is-info}
-
 Cyber security researchers can generally find 359 ways to compromise your systems, but not all will work for your business.  BCSF encourages companies delop their own materials rather than outousrce that responsibility to tools and subscriptions.  With that said, a subscription may be part of your program, but it should not be the whole process.  A successful program often includes:
 
 - Policies and Procedures training during onboarding and annually.
@@ -64,6 +59,12 @@ Cyber security researchers can generally find 359 ways to compromise your system
 - Case studies and stories of compromise for review.
 - Security Awareness testing. 
 - Insider threat detection. 
+- Auditing and control validation. 
+
+
+# How do feelings affect cybersecurity?
+> Until machines become sentient and aware, it is ultimately people who make cybersecurity work. Cybersecurity thrives in trickle-down economics. Business leaders set the expectations, and are responsible for nurturning a culture that supports cybersecurity all the way down to the bottom. 
+{.is-info}
 
 ## People's Attitudes
 > Humans are the primary vulnerability in majority of the scams and hacks that affect today’s small business. It is important to understand that, despite the plethora of vulnerabilities and exploits available to attackers, the ones that are low-effort and high-reward are the greatest threat to a business. Passwords, attachments, and links are the lowest-effort means of exploitation, and all are at full control and discretion of the people working for the organization. Whether it is through human error or willful acts, humans factors are the of greatest concern in cybersecurity.
