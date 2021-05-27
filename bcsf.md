@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-05-27T18:27:24.692Z
+date: 2021-05-27T18:28:20.811Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -127,7 +127,7 @@ BCSF Cloud Security Collection: Having confidence in cyber security`
 > Determining and understanding all systems and/or services required to maintain or support essential functions.
 {.is-info}
 
-![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png)
+![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png =66%x)
 
 ## Principle
 *Everything required to deliver, maintain or support networks and information systems  necessary for the operation of essential functions is determined and understood. This includes data, people and systems, as well as any supporting infrastructure (such as power or cooling).*
@@ -164,7 +164,7 @@ ITIL`
 > Understanding and managing the security risks to networks and information systems which arise from dependencies on external suppliers.
 {.is-info}
 
-![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png)
+![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png =66%x)
 
 
 ## Principle
@@ -191,7 +191,7 @@ Cloud Security Alliance (CSA) Security, Trust & Assurance Registry (STAR)`
 # Methodical service protection policies and processes (B.1)
 Defining and communicating appropriate organizational policies and processes to secure systems and data that support the operation of essential functions.
 
-![bcsf-2-develop.png](/bcsf-cycle/bcsf-2-develop.png)
+![bcsf-2-develop.png](/bcsf-cycle/bcsf-2-develop.png =66%x)
 
 
 ## Principle
@@ -254,7 +254,7 @@ The BCSF's You shape security`
 > Understanding, documenting and controlling access to networks and information systems supporting essential functions.
 {.is-info}
 
-![bcsf-2-develop.png](/bcsf-cycle/bcsf-2-develop.png)
+![bcsf-2-develop.png](/bcsf-cycle/bcsf-2-develop.png =66%x)
 
 ## Principle
 *The organization understands, documents and manages access to networks and information systems and supporting the operation of essential functions. Users (or automated functions) that can access data or services are appropriately verified, authenticated and authorized.*
@@ -286,7 +286,7 @@ NIST Identity and Access Management publications, e.g. SP 800-63 suite "Digital 
 > Protecting stored or electronically transmitted data from actions that may cause an adverse impact on essential functions.
 {.is-info}
 
-![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png)
+![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png =66%x)
 
 ## Principle
 *Data stored or transmitted electronically is protected from actions such as unauthorized access, modification, or deletion that may cause an adverse impact  on essential functions. Such protection extends to the means by which authorized users, devices and systems access critical data necessary for the operation of essential functions. It also covers information that would assist an attacker, such as design details of networks and information systems.*
@@ -363,7 +363,7 @@ Data important to the operation of the essential function is likely to be found 
 > Protecting critical network and information systems and technology from cyber attack.
 {.is-info}
 
-![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png)
+![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png =66%x)
 
 ## Principle
 *Network and information systems and technology critical for the operation of essential functions are protected from cyber attack. An organizational understanding of risk to essential functions informs the use of robust and reliable protective security measures to effectively limit opportunities for attackers to compromise networks and systems.*
@@ -452,7 +452,7 @@ ISO/IEC 27002`
 > Building resilience against cyber attack.
 {.is-info}
 
-![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png)
+![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png =66%x)
 
 ## Principle
 *The organization builds resilience against cyber attack into the design, implementation, operation and management of systems that support the operation of essential functions.*
@@ -497,7 +497,7 @@ The Business Continuity Institute has some freely available introductory busines
 > Appropriately supporting staff to ensure they make a positive contribution to the cyber security of essential functions.
 {.is-info}
 
-![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png)
+![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png =66%x)
 
 ## Principle
 *Staff have appropriate awareness, knowledge and skills to carry out their organizational roles effectively in relation to the security of network and information systems supporting the operation of essential functions.*
@@ -530,7 +530,7 @@ The BCSF's You shape security`
 > Monitoring to detect potential security problems and track the effectiveness of existing security measures.
 {.is-info}
 
-![bcsf-4-confirm.png](/bcsf-cycle/bcsf-4-confirm.png)
+![bcsf-4-confirm.png](/bcsf-cycle/bcsf-4-confirm.png =66%x)
 
 ## Principle
 *The organization monitors the security status of the networks and systems supporting the essential functions in order to detect potential security problems and to track the ongoing effectiveness of protective security measures.*
@@ -607,7 +607,7 @@ IEC 62443`
 > Detecting anomalous events in relevant network and information systems.
 {.is-info}
 
-![bcsf-4-confirm.png](/bcsf-cycle/bcsf-4-confirm.png)
+![bcsf-4-confirm.png](/bcsf-cycle/bcsf-4-confirm.png =66%x)
 
 ## Principle
 *The organization detects, within networks and information systems, malicious activity affecting, or with the potential to affect, the operation of essential functions even when the activity evades standard signature based security prevent/detect solutions (or when standard solutions are not deployable).*
@@ -645,7 +645,7 @@ The science of anomaly detection, which goes beyond using pre-defined or prescri
 > Putting suitable incident management and mitigation processes in place.
 {.is-info}
 
-![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png)
+![bcsf-3-safeguard.png](/bcsf-cycle/bcsf-3-safeguard.png =66%x)
 
 ## Principle
 *There are well-defined and tested incident management processes in place, that aim to ensure continuity of essential functions in the event of system or service failure. Mitigation activities designed to contain or limit the impact of compromise are also in place.*
@@ -720,7 +720,7 @@ BCSF Incident Management collection`
 > Learning from incidents and implementing these lessons to improve the resilience of essential functions.
 {.is-info}
 
-![bcsf-5-learn.png](/bcsf-cycle/bcsf-5-learn.png)
+![bcsf-5-learn.png](/bcsf-cycle/bcsf-5-learn.png =66%x)
 
 ## Principle
 *When an incident occurs, steps must be taken to understand its root causes and ensure appropriate remediating action is taken.*
