@@ -2,7 +2,7 @@
 title: The fundamentals of risk
 description: Understanding the key principles that underpin the BCSF's risk management guidance for cyber security.
 published: true
-date: 2021-03-05T01:50:30.737Z
+date: 2021-05-27T20:17:05.448Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown
 dateCreated: 2021-03-05T01:50:30.737Z
@@ -13,7 +13,7 @@ This section focuses on the fundamental principles of risk management. Here, we 
 Why risk management matters
 ---------------------------
 
-Risk management exists to help us to create plans for the future in a deliberate, responsible and ethical manner. This requires risk managers to explore what could go right or wrong in an organization, a project or a service, and recognising that we can never fully know the future as we try to improve our prospects.
+Risk management exists to help us to create plans for the future in a deliberate, responsible and ethical manner. This requires risk managers to explore what could go right or wrong in an organization, a project or a service, and recognizing that we can never fully know the future as we try to improve our prospects.
 
 Risk management is often perceived as a technocratic and dull profession; this isn't how the BCSF see risk management at all. Risk management is about analyzing our options and their future consequences, and presenting that information in an understandable, usable form to improve decision making.
 
