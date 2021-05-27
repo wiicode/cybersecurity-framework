@@ -2,7 +2,7 @@
 title: Dealing with suspicious emails, phone calls and text messages
 description: How to spot the most obvious signs of a scam, and what to do if you've already responded.
 published: true
-date: 2021-02-21T02:07:46.561Z
+date: 2021-05-27T19:16:07.713Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2021-02-21T02:02:41.266Z
@@ -50,14 +50,4 @@ If you think a message or call might really be from an organisation you have an 
 - **Go back to something you can trust.** Visit the official website, log in to your account, or phone their advertised phone number. Don't use the links or contact details in the message you have been sent or given over the phone.
 - **Check to see if the official source has already told you what they will never ask you.** For example, your bank may have told you that they will never ask for your password.
 
-# Make yourself a harder target
-Criminals can use publicly available information about you to make their phishing messages more convincing. This could be gleaned from your social media accounts.
-
-To make life harder for the criminals, you can do the following:
-
-- For your social media applications and other online accounts, review your privacy settings.
-- Think about what you post (and who can see it).
-- Change your phone number to be unlisted, or 'ex-directory'.
-
-We have detailed advice on [protecting your privacy on social media](bronze-training/individuals-social-media).
 
