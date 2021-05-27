@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-05-27T18:27:05.121Z
+date: 2021-05-27T18:27:24.692Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -39,7 +39,7 @@ BCSF encourages you look at each problem or task with these four key principles 
 > Putting in place the policies and processes which govern your organization’s approach to the security of network and information systems.
 {.is-info}
 
-![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png)
+![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png =66%x)
 
 ## Principle
 *The organization has appropriate management policies and processes in place to govern its approach to the security of network and information systems.*
