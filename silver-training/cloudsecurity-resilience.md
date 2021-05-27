@@ -2,7 +2,7 @@
 title: 2. Asset protection and resilience
 description: User data, and the assets storing or processing it, should be protected against physical tampering, loss, damage or seizure.
 published: true
-date: 2021-05-27T20:26:27.271Z
+date: 2021-05-27T20:31:14.983Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:33:08.105Z
@@ -14,18 +14,18 @@ User data, and the assets storing or processing it, should be protected against 
 
 ## The aspects to consider are:
 
--   [Physical location and legal jurisdiction](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#physical)
--   [Data centre security](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#dataCentre)
--   [Data at rest protection](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#rest)
--   [Data sanitisation](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#sanitisation)
--   [Equipment disposal](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#disposal)
--   [Physical resilience and availability](https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/asset-protection-and-resilience#resilience)
+-   Physical location and legal jurisdiction
+-   Data center security
+-   Data at rest protection
+-   Data sanitzsation
+-   Equipment disposal
+-   Physical resilience and availability
 
 ## **2.1 Physical location and legal jurisdiction**
 
 In order to understand the legal circumstances under which your data could be accessed without your consent you must identify the locations at which it is stored, processed and managed.
 
-You will also need to understand how data-handling controls within the service are enforced, relative to UK legislation. Inappropriate protection of user data could result in legal and regulatory sanction, or reputational damage.
+You will also need to understand how data-handling controls within the service are enforced, relative to UK legislation. Inappropriate protection of user data could result in legal and regulatory sanction, or reputation damage.
 
 ### **Goals**
 
@@ -45,19 +45,19 @@ You should understand:
 
 ### **Additional notes – Legal Jurisdiction**
 
-Understanding the legal jurisdiction(s) to which your data is subject may be more complex than simply clarifying the physical locations where data is stored, processed or accessed by the service. It’s also necessary to consider the legal base and operating locations of the service provider, the governing legislation of any contracts, and the terms of use - or other agreements - between users of the service (or their suppliers) and the provider. It is important for organisations consuming cloud services to consider this topic and seek legal advice as necessary.
+Understanding the legal jurisdiction(s) to which your data is subject may be more complex than simply clarifying the physical locations where data is stored, processed or accessed by the service. It’s also necessary to consider the legal base and operating locations of the service provider, the governing legislation of any contracts, and the terms of use - or other agreements - between users of the service (or their suppliers) and the provider. It is important for organizations consuming cloud services to consider this topic and seek legal advice as necessary.
 
 ### **Additional notes – Data Protection Act**
 
-Data protection legislation will apply if personal data is processed in a cloud service. The ICO has published [guidance](https://ico.org.uk/media/for-organisations/documents/1540/cloud_computing_guidance_for_organisations.pdf) on compliance with the Data Protection Act (DPA) in relation to cloud services. The DPA requires that personal data “shall not be transferred to any country or territory outside the European Economic Area (EEA) unless that country or territory ensures an adequate level of protection for the rights and freedoms of data subjects in relation to the processing of personal data.” There is a [list of countries](http://ec.europa.eu/justice/data-protection/international-transfers/adequacy/index_en.htm) considered by the European Commission to be adequate. There are also model contractual clauses that you may be able to use in your contract which can avoid you having to make your own assessment of adequacy. The ICO's advice on the use of model contractual clauses is [here](https://ico.org.uk/for-organisations/guide-to-data-protection/principle-8-international/).
+Data protection legislation will apply if personal data is processed in a cloud service. The ICO has published [guidance](https://ico.org.uk/media/for-organizations/documents/1540/cloud_computing_guidance_for_organizations.pdf) on compliance with the Data Protection Act (DPA) in relation to cloud services. The DPA requires that personal data “shall not be transferred to any country or territory outside the European Economic Area (EEA) unless that country or territory ensures an adequate level of protection for the rights and freedoms of data subjects in relation to the processing of personal data.” There is a [list of countries](http://ec.europa.eu/justice/data-protection/international-transfers/adequacy/index_en.htm) considered by the European Commission to be adequate. There are also model contractual clauses that you may be able to use in your contract which can avoid you having to make your own assessment of adequacy. The ICO's advice on the use of model contractual clauses is [here](https://ico.org.uk/for-organizations/guide-to-data-protection/principle-8-international/).
 
 ### **Additional notes – Use of your data**
 
 You should consider the implications of any rights the service provider will have relating to data stored within the service. Some usage agreements allow the service provider to employ user data for marketing or other purposes. You should also check whether any agreements with the service provider relating to their use of your data are acceptable to you and also not contrary to relevant legislation, such as the DPA.
 
-## **2.2 Data centre security**
+## **2.2 Data center security**
 
-Locations used to provide cloud services need physical protection against unauthorised access, tampering, theft or reconfiguration of systems. Inadequate protections may result in the disclosure, alteration or loss of data.
+Locations used to provide cloud services need physical protection against unauthorized access, tampering, theft or reconfiguration of systems. Inadequate protections may result in the disclosure, alteration or loss of data.
 
 ### **Goals**
 
@@ -67,17 +67,17 @@ You should be confident that the physical security measures employed by the prov
 
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
-| Unknown | The service provider does not disclose how their data centres are secured. | In this scenario you will be taking the suppliers word for it that their data centres are appropriately secured. Whether you choose to do that will depend on the intrinsic trust you have in the service provider. Further advice on that is covered [here](https://www.ncsc.gov.uk/guidance/how-confident-can-you-be-cloud-security). |
-| Known controls | The service provider discloses information on the security controls around their (or their suppliers’) data centres. | If no recognised standard is referred to by the service provider you will need to make your own assessment of the physical controls protecting their data centres. |
-| Conforms to a recognised standard | The service provider has had their data centre protections certified against a recognised and appropriate standard that covers physical security.<br><br>Appropriate standards include:   <br>[CSA CCM v3.0](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)   <br>[SSAE-16 / ISAE 3402](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions) | Standards differ in terms of the level of detail applied to physical controls. The scope of the assessment must be relevant to locations where your data can be accessed.<br><br>Independent validation that the scope of a certification is correct can be obtained to provide reassurance in this area. |
+| Unknown | The service provider does not disclose how their data centres are secured. | In this scenario you will be taking the suppliers word for it that their data centres are appropriately secured. Whether you choose to do that will depend on the intrinsic trust you have in the service provider.  |
+| Known controls | The service provider discloses information on the security controls around their (or their suppliers’) data centres. | If no recognized standard is referred to by the service provider you will need to make your own assessment of the physical controls protecting their data centres. |
+| Conforms to a recognized standard | The service provider has had their data centre protections certified against a recognized and appropriate standard that covers physical security.<br><br>Appropriate standards include:   <br>[CSA CCM v3.0](#)   <br>[SSAE-16 / ISAE 3402](#) | Standards differ in terms of the level of detail applied to physical controls. The scope of the assessment must be relevant to locations where your data can be accessed.<br><br>Independent validation that the scope of a certification is correct can be obtained to provide reassurance in this area. |
 
 ## **2.3 Data at rest protection**
 
-To ensure data is not available to unauthorised parties with physical access to infrastructure, user data held within the service should be protected regardless of the storage media on which it’s held. Without appropriate measures in place, data may be inadvertently disclosed on discarded, lost or stolen media.
+To ensure data is not available to unauthorized parties with physical access to infrastructure, user data held within the service should be protected regardless of the storage media on which it’s held. Without appropriate measures in place, data may be inadvertently disclosed on discarded, lost or stolen media.
 
 ### **Goals**
 
-You should have sufficient confidence that storage media containing your data are protected from unauthorised access.
+You should have sufficient confidence that storage media containing your data are protected from unauthorized access.
 
 ### **Implementation approaches - Data at rest protection**
 
@@ -85,7 +85,7 @@ Service providers could use encryption, physical security controls, or a combina
 
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
-| Physical access control | A number of standards are appropriate when validating physical access control protections. These are backed by a variety of certification schemes:  <br>[CSA CCM v3.0](https://www.cesg.gov.uk/guidance/cloud-security-guidance-standards-and-definitions)   <br>[SSAE-16 / ISAE 3402](https://www.cesg.gov.uk/guidance/cloud-security-guidance-standards-and-definitions) | Levels of control differ between physical security standards. The scope of the assessment must be relevant to those locations where your data can be accessed. |
+| Physical access control | A number of standards are appropriate when validating physical access control protections. These are backed by a variety of certification schemes:  <br>[CSA CCM v3.0](#)   <br>[SSAE-16 / ISAE 3402](#) | Levels of control differ between physical security standards. The scope of the assessment must be relevant to those locations where your data can be accessed. |
 | Infeasibility of finding a specific customer’s data on physical media | The service provider states that their scale, obfuscation techniques, or data storage ‘sharding’ make it infeasible for a determined attacker with physical access to a data centre to locate a specific customer’s data. | It is unlikely that independent assurance will be available to support the service provider’s claims that it is infeasible for someone to target your data in a theft of a physical disk. Therefore it may be worth also understanding what confidence you can gain from one of the two other approaches described. |
 | Encryption of all physical media | The service provider employs encryption to ensure that no data is written to disk in an unencrypted form. | Management of the keys used to encrypt data before it is stored is the biggest challenge with this approach. Errors in use of cryptography or poor key management could result in exposure of your data.<br><br>It's also important to understand whether the encryption products used provide the confidence you’d expect. Products which have been assessed against a good standard are recommended. |
 
@@ -95,7 +95,7 @@ To support onboarding and offboarding processes it may be necessary for storage 
 
 ## **2.4 Data sanitisation**
 
-The process of provisioning, migrating and de-provisioning resources should not result in unauthorised access to user data.
+The process of provisioning, migrating and de-provisioning resources should not result in unauthorized access to user data.
 
 Inadequate sanitisation of data could result in:
 
@@ -135,8 +135,8 @@ You should be sufficiently confident that:
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
 | Unknown or proprietary techniques used | \-  | In this scenario you will need to trust the service provider orcarry out your own assessment of whether the controls in place are appropriate. |
-| A recognised standard for equipment disposal is followed | A number of standards include controls which cover the need for secure equipment disposal. These include:<br><br>[CSA CCM v3.0](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)<br><br>[ISO/IEC 27001](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions) | The standards referenced cover the need for secure equipment disposal, rather than validation of the process. It is worth checking the scope of any certification to verify that the existence of appropriate controls was covered as part of the assessment.<br><br>Independent validation is likely to play an important part in providing confidence that remnants of your data cannot be easily retrieved from equipment that has been disposed of. |
-| A third party destruction service is used | A destruction service which specialises in secure disposal of equipment is used. | A number of these services have been assessed against a recognised standard, such as the CESG Assured Service (Destruction) scheme. |
+| A recognized standard for equipment disposal is followed | A number of standards include controls which cover the need for secure equipment disposal.  | The standards referenced cover the need for secure equipment disposal, rather than validation of the process. It is worth checking the scope of any certification to verify that the existence of appropriate controls was covered as part of the assessment.<br><br>Independent validation is likely to play an important part in providing confidence that remnants of your data cannot be easily retrieved from equipment that has been disposed of. |
+| A third party destruction service is used | A destruction service which specialises in secure disposal of equipment is used. | A number of these services have been assessed against a recognized standard, such as the CESG Assured Service (Destruction) scheme. |
 
 ## 2.6 Physical resilience and availability
 
