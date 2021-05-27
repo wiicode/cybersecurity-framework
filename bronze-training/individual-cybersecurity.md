@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-03-05T15:41:37.266Z
+date: 2021-05-27T19:16:55.877Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -229,3 +229,14 @@ Scam emails, calls and texts are a problem for everyone. They're getting more co
 {.grid-list}
 - [Read More: *Please visit STOP. THINK. CONNECT.*](https://www.stopthinkconnect.org/)
 {.links-list}
+
+# Make yourself a harder target
+Criminals can use publicly available information about you to make their phishing messages more convincing. This could be gleaned from your social media accounts.
+
+To make life harder for the criminals, you can do the following:
+
+- For your social media applications and other online accounts, review your privacy settings.
+- Think about what you post (and who can see it).
+- Change your phone number to be unlisted, or 'ex-directory'.
+
+We have detailed advice on [protecting your privacy on social media](bronze-training/individuals-social-media).
