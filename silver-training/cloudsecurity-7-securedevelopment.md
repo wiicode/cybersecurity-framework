@@ -2,7 +2,7 @@
 title: 7. Secure development
 description: Services should be designed and developed to identify and mitigate threats to their security. Those which aren’t may be vulnerable to security issues which could compromise your data, cause loss of service or enable other malicious activity.
 published: true
-date: 2021-05-27T21:28:04.801Z
+date: 2021-05-27T21:58:13.983Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:38:56.609Z
@@ -25,8 +25,8 @@ Services should be designed and developed to identify and mitigate threats to th
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
 | Engineering approaches consider security as an important factor | The service provider asserts that they implement a number of controls to ensure the security of their service. | In this scenario you will need to carry out your own assessment of whether the controls in place are appropriate. |
-| Engineering approach adheres to a secure development standard or recognised good practice | A number of security standards or good practice guides exist which service providers could claim support their achievement of the goals outlined above. These include:<br><br>-   [Safecode ‘Fundamental Practices for Secure Software Development’](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)<br>-   [ISO/IEC 27034](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions) | It’s reassuring that the service provider claims to implement one of these standards, but without independent confirmation of that you will need to make a judgement on whether that gives you sufficient confidence in whether all parts of the system are securely engineered. |
-| Independent review of engineering approach against recognised secure development standard | A number of security standards with supporting certification mechanisms exist which could be used to demonstrate conformance with the goals outlined above. These include:<br><br>-   [CPA Build Standard](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)<br>-   [ISO/IEC 27034](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)<br>-   [ISO/IEC 27001](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions)<br>-   [CSA CCM v3.0](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions) | It's advisable to check that any certification has been performed by an appropriately independent and recognised party and that the scope of the assessment included the incident management aspects required. |
+| Engineering approach adheres to a secure development standard or recognized good practice | A number of security standards or good practice guides exist which service providers could claim support their achievement of the goals outlined above. These include:<br><br>-   Safecode ‘Fundamental Practices for Secure Software Development’<br>-   [ISO/IEC 27034](#) | It’s reassuring that the service provider claims to implement one of these standards, but without independent confirmation of that you will need to make a judgement on whether that gives you sufficient confidence in whether all parts of the system are securely engineered. |
+| Independent review of engineering approach against recognized secure development standard | A number of security standards with supporting certification mechanisms exist which could be used to demonstrate conformance with the goals outlined above. These include:<br><br>-   [CPA Build Standard](#)<br>-   [ISO/IEC 27034](#)<br>-   [ISO/IEC 27001](#)<br>-   [CSA CCM v3.0](#) | It's advisable to check that any certification has been performed by an appropriately independent and recognized party and that the scope of the assessment included the incident management aspects required. |
 
 ### **Additional notes – Secure development requirements**
 
