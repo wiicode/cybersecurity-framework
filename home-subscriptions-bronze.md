@@ -2,7 +2,7 @@
 title: Getting Started 
 description: Bronze (Core) Content Introduction
 published: true
-date: 2021-05-27T18:41:09.185Z
+date: 2021-05-27T19:31:11.956Z
 tags: bronze, home, adapted
 editor: markdown
 dateCreated: 2021-02-13T16:49:27.989Z
@@ -29,8 +29,8 @@ You are also likely thinking that this is too complicated, or feel powerless, or
 |     |     |
 | --- | --- |
 | **Cyber-security is complex, I won't understand it.** | **You don't need to be a technical expert to make an informed cyber security decision.**<br><br>We all make security decisions every day (whether to put the alarm on, for example) without necessarily knowing how the alarm works. Boards regularly make financial or risk decisions without needing to know the details of every account or invoice. The Board should rely on its cyber security experts to provide **insight**, so that **the Board** can make informed decisions about cyber security. |
-| **Cyber-attacks are sophisticated, I can't do anything to stop them.** | **Taking a methodical approach to cyber security and enacting relatively small changes can greatly reduce the risk to your organization.**<br><br>The vast majority of attacks are still based upon well known techniques (such as phishing emails) which can be defended against. Some threats can be very sophisticated, using advanced methods to break into extremely well defended networks, but we normally only see that level of commitment and expertise in attacks by nation states. Most organisations are unlikely to be a target for a sustained effort of this type, and even those that are will find that even the most sophisticated attacker will start with the simplest and cheapest option, so as not to expose their advanced methods. |
-| **Cyber-attacks are targeted, I'm not at risk.** | **Many cyber attacks are opportunistic and any organization could be impacted by these un-targeted attacks.** <br><br>The majority of cyber attacks are un-targeted and opportunistic in nature, with the attacker hoping to take advantage of a weakness (or vulnerability) in a system, without any regard for who that system belongs to. These can be just as damaging as targeted attacks; the impact of WannaCry on global organisations - from shipping to the NHS - being a good example. If you’re connected to the internet then you are exposed to this risk. This trend of un-targeted attacks is unlikely to change because every organization - including yours - will have value to an attacker, even if that is simply the money you might pay in a ransomware attack. |
+| **Cyber-attacks are sophisticated, I can't do anything to stop them.** | **Taking a methodical approach to cyber security and enacting relatively small changes can greatly reduce the risk to your organization.**<br><br>The vast majority of attacks are still based upon well known techniques (such as phishing emails) which can be defended against. Some threats can be very sophisticated, using advanced methods to break into extremely well defended networks, but we normally only see that level of commitment and expertise in attacks by nation states. Most organizations are unlikely to be a target for a sustained effort of this type, and even those that are will find that even the most sophisticated attacker will start with the simplest and cheapest option, so as not to expose their advanced methods. |
+| **Cyber-attacks are targeted, I'm not at risk.** | **Many cyber attacks are opportunistic and any organization could be impacted by these un-targeted attacks.** <br><br>The majority of cyber attacks are un-targeted and opportunistic in nature, with the attacker hoping to take advantage of a weakness (or vulnerability) in a system, without any regard for who that system belongs to. These can be just as damaging as targeted attacks; the impact of WannaCry on global organizations - from shipping to the NHS - being a good example. If you’re connected to the internet then you are exposed to this risk. This trend of un-targeted attacks is unlikely to change because every organization - including yours - will have value to an attacker, even if that is simply the money you might pay in a ransomware attack. |
 
 # What should I be doing?
 
@@ -49,7 +49,7 @@ With sufficient understanding and the right relationships, you can put in place 
 The BCSF Team provides cyber security guidance to small companies and supports the methods for implementing information security programs.  
 
 -   **understands** cyber security, and summarizes this knowledge into practical guidance that we make available to all
--   **responds** to cyber security incidents to reduce the harm they cause to organisations
+-   **responds** to cyber security incidents to reduce the harm they cause to organizations
 -   **connects** organizations with cyber security services providers
 
 Cyber security researchers can generally find 359 ways to compromise your systems, but not all will work for your business.  BCSF encourages companies delop their own materials rather than outousrce that responsibility to tools and subscriptions.  With that said, a subscription may be part of your program, but it should not be the whole process.  A successful program often includes:
