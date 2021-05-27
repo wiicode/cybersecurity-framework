@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-05-27T18:31:15.602Z
+date: 2021-05-27T19:34:28.924Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -29,7 +29,7 @@ The CIA triad is a model designed to guide policies for information security wit
 - [Small Business Cyber Security. *Solo propriators, department heads, and owners looking for quick, easy, and inexpensive ways to reduce major risks and lay the foundation for attaining the bare minimum standards for cyber security. This guide can’t guarantee protection from all types of cyber attack, but the steps outlined below can significantly reduce the chances of your business becoming a victim of cyber crime.*](/bronze-training/background-simple)
 - [Small Business Cyber Security in Ten Milestones.*The bare minimum owners and managers can do to meet current cyber security standards. This section covers risk management, secure configurations, mobile networking, incident management, malware, user access control, monitoring, network security, media controls, and training.*](/bronze-training/background-advanced)
 - [Deep Dives into Mindfulness, Governance, and Risk Management*In-depth exploration aimed at small to medium busniess owners, managers, and security professionals.  In this collection, we'll be outlining the fundamentals of risk management, and describing techniques you can use to manage cyber security risks. Focus is primarily on risk management principles that can be applied to all organizations, regardless of size.*](/bronze-training/background-topics)
-- [Boards and Company Leadership *Education for business owners and boards alike. Good cyber security is all about managing risks. The process for improving and governing cyber security will be similar to the process you use for other organisational risks.*](/bronze-training/background-boards)
+- [Boards and Company Leadership *Education for business owners and boards alike. Good cyber security is all about managing risks. The process for improving and governing cyber security will be similar to the process you use for other organizational risks.*](/bronze-training/background-boards)
 
 {.links-list}
 
