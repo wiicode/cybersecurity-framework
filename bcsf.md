@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-05-27T18:28:20.811Z
+date: 2021-05-27T19:33:59.380Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -377,7 +377,7 @@ organizations should protect networks and information systems from attacks that 
 
 Limiting functionality (e.g. disabling services that are not required) and careful configuration will contribute to managing potential vulnerabilities arising from features in hardware and software.
 
-Some common user errors, such as leaving an organization-issued laptop unattended in a public place, inadvertently revealing security-related information to an attacker (possibly as a result of social engineering) etc. can provide opportunities for attackers. Staff training and awareness on cyber security should be designed to minimise such occurrences (see B.6 Staff Training & Awareness).
+Some common user errors, such as leaving an organization-issued laptop unattended in a public place, inadvertently revealing security-related information to an attacker (possibly as a result of social engineering) etc. can provide opportunities for attackers. Staff training and awareness on cyber security should be designed to minimize such occurrences (see B.6 Staff Training & Awareness).
 
 ## Guidance
 The majority of cyber security incidents can be traced to common cyber attack vectors. The opportunity for successful attack can be minimized by managing the known vulnerabilities which these attacks exploit. Many opportunities for user error can be reduced by technical means.
@@ -402,7 +402,7 @@ Stronger security architectures usually include:
 ### Configuration
 Well-configured networks and information systems reduce unauthorized access to technologies and simplify security management across hardware, firmware, software and configuration data. This should include:
 
-- baseline build (also known as a “gold build”) is recommended to apply a well-understood, consistent and secured platform across the organization, and can also apply system hardening techniques to minimise the attack surface. Gold build images should be appropriately protected from interference and be available for use in the event of system recovery.
+- baseline build (also known as a “gold build”) is recommended to apply a well-understood, consistent and secured platform across the organization, and can also apply system hardening techniques to minimize the attack surface. Gold build images should be appropriately protected from interference and be available for use in the event of system recovery.
 - Configuration management policies or software should be used to ensure that only permitted software is installed and authorized devices, e.g. mobile devices and removable media, are permitted to connect. An asset management inventory could be used to manage authorized devices.
 - In addition to the gold build and permitted software installed, maintain a record of the current "known good" configuration (including, for example, patch levels, OT ladder logic) and the resources, such as patch and configuration files, required to create this environment. It should be possible to revert or rebuild to this known good baseline.
 - Systems, software or devices that are not actively supported by the developers should be identified, with appropriate additional security measures in place until they can be retired and removed.
@@ -541,7 +541,7 @@ An effective monitoring strategy is required so that actual or attempted securit
 This principle also indicates the need to provide effective and ongoing operational security. As time goes on, new vulnerabilities are discovered, support arrangements for software and services change and functional needs and uses for technology change. Security is a continuous activity and the effectiveness of the security measures in place should be reviewed and maintained throughout the delivery and operational lifecycle of a system or service.
 
 ## Guidance
-One clear focus of your security monitoring should be the detection of incidents or activity that  could have an adverse impact on the operation of essential functions and the network assets and systems that underpin them. Log and network data collection, analysis tools and threat intelligence should prioritise these assets and systems.
+One clear focus of your security monitoring should be the detection of incidents or activity that  could have an adverse impact on the operation of essential functions and the network assets and systems that underpin them. Log and network data collection, analysis tools and threat intelligence should prioritize these assets and systems.
 
 ### Known and unknown threats
 An organization's monitoring capability should be able to find known threats on their network, for example detecting when known command and control traffic is communicating to the Internet, or an AV signature is present in a file. organizations should endeavour to understand what automated tools do and how best to use them, in order to ensure they are getting value for money from them.
@@ -633,7 +633,7 @@ Wherever possible, network and information systems supporting the operation  of 
 ## Guidance
 Proactive security event discovery is more difficult than standard security monitoring because it looks beyond the known or prescriptive threat signatures and indicators described in C1. Security Monitoring.
 
-The aim is to build on what is known of past attacks to hypothesize what new or previously unseen intrusions might look like in essential functions environments. As such, this heuristic sort of monitoring should not be prioritised unless standard monitoring (see Principle C1) is already effective, or is not possible or practicable for some reason. It requires more experienced knowledge of network and system behavior and of the general characteristics that a malicious intrusion might exhibit. This sort of proactive monitoring or threat discovery would normally involve:
+The aim is to build on what is known of past attacks to hypothesize what new or previously unseen intrusions might look like in essential functions environments. As such, this heuristic sort of monitoring should not be prioritized unless standard monitoring (see Principle C1) is already effective, or is not possible or practicable for some reason. It requires more experienced knowledge of network and system behavior and of the general characteristics that a malicious intrusion might exhibit. This sort of proactive monitoring or threat discovery would normally involve:
 
 1. Designing your own alerts or trip-wires, using experience or reasoning of what an intrusion might do, rather than specifically around what past attacks have done
 1. A good understanding of normal system behavior (e.g. what software is authorized and how it would normally behave, how user accounts normally access network resources or how network components connect to each other and transfer data)
@@ -661,7 +661,7 @@ The particular mechanisms required should be determined as part of the organizat
 [Incident Management in Ten Steps](/bronze-training/background-advanced/10-steps-incident-management) is the most concise guidance here, but organizations should use other more detailed guidance as and when appropriate. Other authoritative guidance pieces are referenced below.
 
 ### Preparation - An Incident Response Plan
-In addition to meeting the expectations of 10 Steps: Incident Management, you should ensure that your organization's incident response plans are grounded in thorough and comprehensive risk assessments. Response plans should prioritise essential functions along with the assets and systems that are required to ensure their continued effective operation, such as operational technologies, or key datasets.
+In addition to meeting the expectations of 10 Steps: Incident Management, you should ensure that your organization's incident response plans are grounded in thorough and comprehensive risk assessments. Response plans should prioritize essential functions along with the assets and systems that are required to ensure their continued effective operation, such as operational technologies, or key datasets.
 
 The business continuity implications of any compromise should also be taken into account and your cyber incident response plans should link to other business response functions. You should form a cyber response team that is capable of implementing the plan, with the appropriate skills, tools and reach into other parts of your organization, such as security monitoring and business continuity.
 
@@ -701,7 +701,7 @@ Your organization's security monitoring function should be capable of alerting w
 
 The resilience measures your organization has in place should support incident response (see B5 Resilient Networks and Systems).
 
-Incidents should be reported to the appropriate internal and external authorities, in line with the relevant reporting thresholds and standards. The response team should be capable of prioritising incidents, according to the potential consequences and  possible adverse impact on essential functions, using risk-based methods. These events should be documented, including alerts provided, information passed and decisions taken.
+Incidents should be reported to the appropriate internal and external authorities, in line with the relevant reporting thresholds and standards. The response team should be capable of prioritizing incidents, according to the potential consequences and  possible adverse impact on essential functions, using risk-based methods. These events should be documented, including alerts provided, information passed and decisions taken.
 
 In addition to adhering to mandatory reporting requirements, organizations should seriously consider voluntarily reporting cyber security incidents to the BCSF, who may be able to provide situational awareness, drawing on incident reporting from other victims, as well as response and protective security advice. Assistance may also be sought from Cyber Incident Response (CIR) companies - see CIR scheme.
 
