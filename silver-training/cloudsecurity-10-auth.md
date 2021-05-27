@@ -2,7 +2,7 @@
 title: 10. Identity and authentication
 description: All access to service interfaces should be constrained to authenticated and authorised individuals.
 published: true
-date: 2021-05-27T22:02:26.905Z
+date: 2021-05-27T22:03:29.060Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:41:34.268Z
@@ -10,15 +10,15 @@ dateCreated: 2021-02-22T01:41:34.268Z
 
 # 10\. Identity and authentication
 
-All access to service interfaces should be constrained to authenticated and authorised individuals.
+All access to service interfaces should be constrained to authenticated and authorized individuals.
 
-Weak authentication to these interfaces may enable unauthorised access to your systems, resulting in the theft or modification of your data, changes to your service, or a denial of service.
+Weak authentication to these interfaces may enable unauthorized access to your systems, resulting in the theft or modification of your data, changes to your service, or a denial of service.
 
 Importantly, authentication should occur over secure channels. Email, HTTP or telephone are vulnerable to interception and social engineering attacks.
 
 ## **Goals**
 
-You should have confidence that identity and authentication controls ensure users are authorised to access specific interfaces.
+You should have confidence that identity and authentication controls ensure users are authorized to access specific interfaces.
 
 ## **Implementation – Identity and authentication**
 
@@ -34,7 +34,7 @@ You should have confidence that identity and authentication controls ensure user
 
 The risks associated with a compromised user account will vary depending on the privileges granted to the account. Highly privileged accounts, with access to large volumes of user data (or the ability to alter service configuration and security) are of high potential value to an attacker. Weak authentication of these privileged accounts is normally a higher risk than that of regular service users.
 
-Very long passwords, complexity requirements or change frequencies can increase the chances of users handling passwords badly, storing them insecurely, sharing or reusing them. Alternative protections (such as two-factor authentication) are often a better choice than requiring very long passwords. [See our password guidance for more specific advice](https://www.ncsc.gov.uk/guidance/password-collection).
+Very long passwords, complexity requirements or change frequencies can increase the chances of users handling passwords badly, storing them insecurely, sharing or reusing them. Alternative protections (such as two-factor authentication) are often a better choice than requiring very long passwords. [See our password guidance for more specific advice](#).
 
 Active monitoring and protection can be a valuable mitigation against authentication risks. The hampering of brute force attacks through locking, blocking or rate limiting provides useful mitigation and can aid detection.
 
