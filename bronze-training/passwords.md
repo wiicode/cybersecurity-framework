@@ -2,17 +2,20 @@
 title: Password administration for system owners
 description: Password strategies that can help your organization remain secure.
 published: true
-date: 2021-05-27T22:13:58.207Z
+date: 2021-05-27T22:16:03.113Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-27T22:07:36.867Z
 ---
 
-This collection outlines the various password strategies that can help your *organisation* remain secure, from technical *defences* to helping your users manage their passwords. This guidance is primarily for system owners responsible for determining password policy.
+This collection outlines the various password strategies that can help your *organization* remain secure, from technical *defenses* to helping your users manage their passwords. This guidance is primarily for system owners responsible for determining password policy.
 
 For information about how to use passwords at home, please refer to the following:
 
--   Password /passwords/updating-your-approach
--   [Password managers: how they help you secure passwords](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online?curPage=/collection/top-tips-for-staying-secure-online/password-managers)
--   [Three random words or think random](https://www.ncsc.gov.uk/blog-post/three-random-words-or-thinkrandom-0)
--   /passwords/password-manager-buyers-guide
+{.grid-list}
+- [Passwords: Update Your Approach](/passwords/updating-your-approach)
+- [Password managers: how they help you secure passwords](/bronze-training/passwords/password-managers)
+- [Password managers: buyers guide](/bronze-training/passwords/password-manager-buyers-guide)
+- [Three random words or think random](/bronze-training/passwords/three-random-words-or-thinkrandom-0)
+{.links-list}
+
