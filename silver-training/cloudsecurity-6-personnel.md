@@ -2,7 +2,7 @@
 title: 6. Personnel security
 description: Where service provider personnel have access to your data and systems you need a high degree of confidence in their trustworthiness. 
 published: true
-date: 2021-05-27T20:57:30.787Z
+date: 2021-05-27T20:58:52.527Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:38:04.727Z
@@ -26,8 +26,8 @@ You should be confident that:
 | **Approach** | **Description** | **Guidance** |     |
 | --- | --- | --- | --- |
 | Personnel screening not performed | Some organizations may be unwilling or unable to perform personnel screening checks. | Unscreened individuals may have the ability to access your information or affect your service. |     |
-| Personnel screening performed but does not conform with BS7858:2012 | [BS7858:2012](#) sets out a basic standard for personnel screening. Many multinational companies will perform background checks on staff that encompass the requirements of this standard, though in some countries it is not possible to perform all of the checks. | In these cases we recommend you ask the service provider to describe the personnel security screening functions they carry out on staff with access to your data, or the ability to affect user services. You will need to make a judgement over whether that is sufficient.<br><br>Where service providers are unable to verify the identity, check for unspent criminal convictions, and right to work of staff there is an increased risk of insider threat. | ## ! |
-| Personnel screening performed which conforms to BS7858:2012 | Personnel screening is in place which includes or exceeds the requirements of [BS7858:2012](#). | Whilst personnel screening is valuable, it’s worth noting that it’s extremely difficult to design systems capable of defending data from attack by a privileged user who is both skilled and motivated.<br><br>It is likely that service provider personnel with privileged roles will be able to gain access to your data and/or affect the reliability of your service.<br><br>If possible, you may find it valuable to understand the service provider’s approach to detecting potential malicious insiders and use this information as part of your risk management decision. |     |
+| Personnel screening performed but does not conform with BS7858:2012 | [BS7858:2019](#) sets out a basic standard for personnel screening. Many multinational companies will perform background checks on staff that encompass the requirements of this standard, though in some countries it is not possible to perform all of the checks. | In these cases we recommend you ask the service provider to describe the personnel security screening functions they carry out on staff with access to your data, or the ability to affect user services. You will need to make a judgement over whether that is sufficient.<br><br>Where service providers are unable to verify the identity, check for unspent criminal convictions, and right to work of staff there is an increased risk of insider threat. |  |
+| Personnel screening performed which conforms to BS7858:2012 | Personnel screening is in place which includes or exceeds the requirements of [BS7858:2019](#). | Whilst personnel screening is valuable, it’s worth noting that it’s extremely difficult to design systems capable of defending data from attack by a privileged user who is both skilled and motivated.<br><br>It is likely that service provider personnel with privileged roles will be able to gain access to your data and/or affect the reliability of your service.<br><br>If possible, you may find it valuable to understand the service provider’s approach to detecting potential malicious insiders and use this information as part of your risk management decision. |     |
 
 ### **Additional information - Authenticating and securing service administration**
 
