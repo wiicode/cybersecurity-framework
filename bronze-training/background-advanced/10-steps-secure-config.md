@@ -2,7 +2,7 @@
 title: Secure Configuration
 description: Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems.
 published: true
-date: 2021-03-03T19:18:53.644Z
+date: 2021-05-27T19:24:09.024Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:54:59.854Z
@@ -30,7 +30,7 @@ Establishing and actively maintaining the secure configuration of systems should
 	- creating a back door to use in the future for malicious purposes
   
 # How can the risk be managed?
-Organisations need to ensure that they have put in place measures to minimize the risk of poor system configuration. The following security controls should be considered:
+Organizations need to ensure that they have put in place measures to minimize the risk of poor system configuration. The following security controls should be considered:
 
 **Use supported software**: Use versions of operating systems, web browsers and applications that are vendor (or community) supported.
 
@@ -48,6 +48,6 @@ Organisations need to ensure that they have put in place measures to minimize th
 
 **Implement white-listing and execution control**: Create and maintain a whitelist of authorized applications and software that can be executed. In addition, systems should be capable of preventing the installation and execution of unauthorized software by employing process execution controls.
 
-**Limit user ability to change configuration**: Provide users with the permissions that they need to fulfill their business role. Users with ‘normal’ privileges should be prevented from installing or disabling any software or services running on the system.
+**Limit user ability to change configuration**: Provide users with the permissions that they need to fulfilll their business role. Users with ‘normal’ privileges should be prevented from installing or disabling any software or services running on the system.
 
 **Limit privileged user functionality**: Ensure that users with privileged system rights (administrators) have constrained internet and email access from their privileged account. This limits exposure to spear phishing and reduces the ability of an attacker to achieve wide system access through exploiting a single vulnerability.
