@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-04-25T20:41:40.590Z
+date: 2021-05-27T18:27:05.121Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -96,7 +96,7 @@ IEC 62443-2-1:2010`
 > Identification, assessment and understanding of security risks. And the establishment of an overall organizational approach to risk management.
 {.is-info}
 
-![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png)
+![bcsf-1-understand.png](/bcsf-cycle/bcsf-1-understand.png =66%x)
 
 ## Principle
 *The organization takes appropriate steps to identify, assess and understand security risks to the network and information systems supporting the operation of essential functions. This includes an overall organizational approach to risk management.*
