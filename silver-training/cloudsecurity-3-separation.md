@@ -2,7 +2,7 @@
 title: 3. Separation between users
 description: A malicious or compromised user of the service should not be able to affect the service or data of another.
 published: true
-date: 2021-05-27T20:49:11.770Z
+date: 2021-05-27T20:50:12.351Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:34:53.622Z
@@ -14,13 +14,13 @@ A malicious or compromised user of the service should not be able to affect the 
 
 ## Factors affecting user separation include:
 
--   where the separation controls are implemented – this is heavily influenced by the service model (e.g. [IaaS, PaaS, SaaS](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions))
+-   where the separation controls are implemented – this is heavily influenced by the service model (e.g. IaaS, PaaS, SaaS)
 -   who you are sharing the service with - this is dictated by the deployment model (e.g. public, private or community cloud)
 -   the level of assurance available in the implementation of separation controls
 
 Note: In an IaaS service you should consider separation provided by compute, storage and networking components. Also, SaaS and PaaS services built upon IaaS may inherit some of the separation properties of the underlying IaaS infrastructure.
 
-For more information on the importance of separation requirements in cloud services, please refer to the [Separation Guide](https://www.ncsc.gov.uk/guidance/separation-and-cloud-security).
+For more information on the importance of separation requirements in cloud services, please refer to the [Separation Guide](/bronze-training/background-topics/cloud-security-3-separation)
 
 ## Goals
 
@@ -28,7 +28,7 @@ You:
 
 -   understand the types of user you share the service or platform with
 -   have confidence that the service provides sufficient separation of your data and service from other users of the service
--   have confidence that management of your service is kept separate from other users (covered separately as part of [Principle 9](https://www.ncsc.gov.uk/guidance/cloud-security-principle-9-secure-user-management))
+-   have confidence that management of your service is kept separate from other users (covered separately as part of [Principle 9](/silver-training/cloudsecurity-9-management)
 
 ## Implementation approaches – Separation of users
 
