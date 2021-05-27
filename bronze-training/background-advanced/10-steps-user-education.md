@@ -1,8 +1,8 @@
 ---
 title: User education and awareness
-description: Users have a critical role to play in their organisation’s security and so it's important that security rules and the technology provided enable users to do their job as well as help keep the organisation secure. 
+description: Users have a critical role to play in their organization’s security and so it's important that security rules and the technology provided enable users to do their job as well as help keep the organization secure. 
 published: true
-date: 2021-03-03T19:28:34.804Z
+date: 2021-05-27T19:26:25.477Z
 tags: bronze, bronze-training, 10-steps, sourced
 editor: markdown
 dateCreated: 2021-02-21T16:10:59.327Z
