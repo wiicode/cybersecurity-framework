@@ -2,7 +2,7 @@
 title: Cloud Security Principles
 description: 
 published: true
-date: 2021-03-02T03:34:16.713Z
+date: 2021-05-27T20:21:36.755Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
@@ -33,7 +33,7 @@ Details for a set of possible implementations
 - [6. Personnel security*Where service provider personnel have access to your data and systems you need a high degree of confidence in their trustworthiness. Thorough screening, supported by adequate training, reduces the likelihood of accidental or malicious compromise by service provider personnel.*](/silver-training/cloudsecurity-6-personnel)
 - [7. Secure development*Services should be designed and developed to identify and mitigate threats to their security. Those which aren’t may be vulnerable to security issues which could compromise your data, cause loss of service or enable other malicious activity.*](/silver-training/cloudsecurity-7-securedevelopment)
 - [8. Supply chain security*The service provider should ensure that its supply chain satisfactorily supports all of the security principles which the service claims to implement.*](/silver-training/cloudsecurity-8-supplychain)
-- [9. Secure user management*Your provider should make the tools available for you to securely manage your use of their service. Management interfaces and procedures are a vital part of the security barrier, preventing unauthorised access and alteration of your resources, applications and data.*](/silver-training/cloudsecurity-9-management)
+- [9. Secure user management*Your provider should make the tools available for you to securely manage your use of their service. Management interfaces and procedures are a vital part of the security barrier, preventing unauthorized access and alteration of your resources, applications and data.*](/silver-training/cloudsecurity-9-management)
 - [10. Identity and authentication*All access to service interfaces should be constrained to authenticated and authorised individuals.*](/silver-training/cloudsecurity-10-auth)
 - [11. External interface protection*All external or less trusted interfaces of the service should be identified and appropriately defended.*](/silver-training/cloudsecurity-11-externalinterface)
 - [12. Secure service administration*Systems used for administration of a cloud service will have highly privileged access to that service. Their compromise would have significant impact, including the means to bypass security controls and steal or manipulate large volumes of data.*](/silver-training/cloudsecurity-12-secservice)
