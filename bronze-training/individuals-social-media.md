@@ -2,7 +2,7 @@
 title: Social Media: how to use it safely
 description: Use privacy settings across social media platforms to manage your digital footprint.
 published: true
-date: 2021-02-21T02:07:09.908Z
+date: 2021-05-27T19:19:17.177Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2021-02-21T02:07:09.908Z
@@ -48,4 +48,6 @@ Although aimed at businesses, CPNI’s Digital Footprint Campaign, contains a ra
 Most social media accounts require users to be at least 13 years old. However, it is easy to sign-up with a false date of birth. For expert advice about how to keep children safe online, please refer to:
 
 - [Internet Matters.Org: Social Media Tips](https://www.internetmatters.org/advice/social-media/)
+- [KidsHealth.org: Social Media Health](https://kidshealth.org/en/parents/social-media-smarts.html)
+
 
