@@ -2,7 +2,7 @@
 title: Get the basics right: risk management principles for cyber security
 description: Risk management principles that can be applied to all organisations, regardless of size.
 published: true
-date: 2021-03-05T01:57:58.927Z
+date: 2021-05-27T20:17:51.634Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance, favorite
 editor: markdown
 dateCreated: 2021-03-05T01:54:51.578Z
@@ -21,7 +21,7 @@ If you can afford to do nothing else, SMBs should adopt a recognized baseline of
 All organizations face risks, no matter the size
 ------------------------------------------------
 
-Many cyber attacks use indiscriminate scatter-gun approaches to targeting victims. If you're an SME or sole trader, you're just as likely to be a victim of these scatter-gun attacks as a large organization. Attackers may not know (or care) who you are until they get a foothold in your organization.
+Many cyber attacks use indiscriminate scatter-gun approaches to targeting victims. If you're a small business or sole propriator, you're just as likely to be a victim of these scatter-gun attacks as a large organization. Attackers may not know (or care) who you are until they get a foothold in your organization.
 
 Understand what you care about, and why
 ---------------------------------------
