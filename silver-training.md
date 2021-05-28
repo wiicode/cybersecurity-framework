@@ -2,13 +2,13 @@
 title: Security Principles
 description: 
 published: true
-date: 2021-05-28T02:32:24.339Z
+date: 2021-05-28T02:32:47.639Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
 ---
 
-# Security Principles
+# Advanced Security Principles
 
 **For each of the 14 principles, we answer three questions:**
 
