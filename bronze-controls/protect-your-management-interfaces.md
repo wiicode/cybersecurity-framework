@@ -2,7 +2,7 @@
 title: Protect your management interfaces
 description: Why it's important to protect the interfaces used to manage your infrastructure, and some some recommendations on how you might do this.
 published: true
-date: 2021-05-28T03:14:23.150Z
+date: 2021-05-28T03:15:04.106Z
 tags: guidance, bronze
 editor: markdown
 dateCreated: 2021-05-28T03:14:14.294Z
@@ -14,7 +14,6 @@ There are a wide variety of management interfaces for different technologies. Th
 
 **This blog focuses on the more traditional management interfaces for managing servers and network infrastructure.** Some of the points will be equally applicable to protecting cloud-based services too, and we'll follow up with a blog that covers protecting the management interfaces of cloud services at a later date.
 
----
 
 ## Three main problems...
 
@@ -28,13 +27,12 @@ Thirdly, there's the need for a trail of breadcrumbs. Without an audit record of
 
 Let’s examine these problems in more detail.
 
----
 
 ## 1: Protecting devices used for administration
 
-Techies - particularly systems administrators - tend to have the best accesses of anyone in an *organisation*. If an attacker can get hold of privileged accesses from the get-go, then they’ll save themselves a lot of work later on.
+Techies - particularly systems administrators - tend to have the best accesses of anyone in an *organization*. If an attacker can get hold of privileged accesses from the get-go, then they’ll save themselves a lot of work later on.
 
-An attacker looking to breach an *organisation* will typically start researching potential victims on the Internet. They’ll search company and conference websites and trawl social media looking for their preferred targets. Finally, they'll select the victims they believe will have the best accesses.
+An attacker looking to breach an *organization* will typically start researching potential victims on the Internet. They’ll search company and conference websites and trawl social media looking for their preferred targets. Finally, they'll select the victims they believe will have the best accesses.
 
 Attacks from adversaries of all skill levels are often launched with a phishing email. Depending on the depth of background research the attacker has carried out, the email could be crude or very well crafted. The aim of it is to entice the user into opening a malicious attachment, or clicking a link that will load malicious content into their browser.
 
@@ -51,9 +49,8 @@ It’s best to assume that your system administrators will be targeted and that 
 
 Now, I know asking anyone to use two devices isn't popular, which is why it's important to come up with a smart approach to meeting these requirements. You might simply use a KVM, or create separation between the the 'management' and 'corporate' worlds using virtual machines, a remote desktop style approach, or something else. If you go down the virtual machine or remote desktop path, then we’d advise you to treat the end user device as part of the clean admin environment, and that the virtual machine or remote desktop as part of the dirty environment. This way, if the dirty environment gets compromised, then it’s not underneath the clean environment in the processing stack.
 
-We tend to refer to this as a 'browse-down' architecture, and in our experience it makes a **big** difference to the amount of work an attacker has to do to get privileged accesses. If you want more advice on this topic, keep an eye on the [guidance section](https://www.ncsc.gov.uk/section/advice-guidance/all-topics) of our website where we'll soon be publishing more on browse-down approaches for management or operations of essential services.
+We tend to refer to this as a 'browse-down' architecture, and in our experience it makes a **big** difference to the amount of work an attacker has to do to get privileged accesses. 
 
----
 
 ## 2: Reducing the exposure of management interfaces
 
@@ -71,7 +68,7 @@ Finally, if you do create a separate management network, it's important to re-cr
 
 ### **Tips to protect management interfaces:**
 
-1.  Expose management interfaces to dedicated management networks where you can. At the very least, limit authorised inbound IP addresses to those used by dedicated management devices.
+1.  Expose management interfaces to dedicated management networks where you can. At the very least, limit authorized inbound IP addresses to those used by dedicated management devices.
 2.  Deploy jump servers where you need to expose management interfaces to less trusted networks. Ensure these are very well configured and maintained.
 3.  Use only the latest versions of secure protocols and configure them to use strong authentication mechanisms. For example, use the latest version of SSH rather than Telnet, and use public-key authentication to secure access.
 4.  Create similar tiers in your management networks to those in the systems being managed.
@@ -83,11 +80,11 @@ If an attack occurs (despite taking the steps above), it can be hard to find out
 
 If your infrastructure is managed via jump servers as described above, then they can be a handy place to record commands executed from them. There are various tools and software packages that can help you automate analysis of these logs for potentially dangerous activity.
 
-### **Tips to improve your chances of detecting an attack (or** ***analysing*** **what happened):**
+### **Tips to improve your chances of detecting an attack (or** ***analyzing*** **what happened):**
 
 1.  Record the commands issued by users on jump servers, and store them securely.
 2.  Ensure all network and server infrastructure audit records are also kept securely.
 3.  Send these records to a service that administrators don't have readily available access to, and would need multiple people to modify.
-4.  Automate the analysis of logs to identify suspicious *behaviour*.
+4.  Automate the analysis of logs to identify suspicious *behavior*.
 
 If you want to take a more proactive approach to securing privileged access to your infrastructure, then there are some great techniques emerging where access keys are held in escrow and administrators are only permitted to use them on a time-bounded basis in connection with an open service desk ticket. If you do this, ensure you have a good backup plan for 'break-glass' access, just in case.
