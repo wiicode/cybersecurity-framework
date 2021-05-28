@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-28T02:35:23.987Z
+date: 2021-05-28T03:30:08.227Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -41,7 +41,7 @@ Device management is the process of managing the implementation, operation and m
 
 
 ## Mobile Device Guidance
-> Securing mobile devices is an essential part of guarding your organisation against a variety of threats, many of which herald from the internet.  You can also begin with our forward for [Mobile Device Guidance](/bronze-training/mobile-device-guidance).
+> Securing mobile devices is an essential part of guarding your organization against a variety of threats, many of which herald from the internet.  You can also begin with our forward for [Mobile Device Guidance](/bronze-training/mobile-device-guidance).
 {.is-success}
 
 ### Getting Ready
@@ -50,10 +50,10 @@ Device management is the process of managing the implementation, operation and m
 > The choices you make at this stage of your deployment can have a huge impact on the resulting security of your networks, so it’s important to get them right. The guides in this section will walk you through these key decisions, highlighting the security issues at stake and suggesting 'best practice' solutions where possible.
 {.is-info}
 {.grid-list}
-- [Choosing mobile devices *Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organisation.*](/bronze-training/mobile-device-guidance/choosing-devices)
+- [Choosing mobile devices *Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organization.*](/bronze-training/mobile-device-guidance/choosing-devices)
 - [Purchasing devices *Managing supply chain security when buying smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/purchasing-devices)
 - [Provisioning and distributing devices *Advice for IT administrators on how to provision and distribute smartphones, tablets and laptops to end users*](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices)
-- [Zero-touch enrollment *Using zero-touch enrollment to automatically provision smartphones, tablets and laptops*](/bronze-training/mobile-device-guidance/zero-touch-enrollment)
+- [Zero-touch enrolllment *Using zero-touch enrolllment to automatically provision smartphones, tablets and laptops*](/bronze-training/mobile-device-guidance/zero-touch-enrolllment)
 - [Mobile Device Management *Advice on the selection and implementation of Mobile Device Management within your enterprise*](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services)
 {.links-list}
 
@@ -76,12 +76,12 @@ Device management is the process of managing the implementation, operation and m
 
 {.grid-list}
 - [Erasing mobile devices *Advice for IT admins and individuals on the secure removal of data or malware from smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/erasing-mobile-devices)
-- [Keeping devices and software up to date *Advice for individuals and organisations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.*](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date)
+- [Keeping devices and software up to date *Advice for individuals and organizations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.*](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date)
 - [Logging and protective monitoring *Using logging and monitoring to identify threats and protect smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring)
 - [Managing mobile device firmware *Advice for IT system administrators on firmware management for smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/managing-mobile-device-firmware)
-- [Advising end users *Advising your organisation’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/advising-end-users)
+- [Advising end users *Advising your organization’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/advising-end-users)
 - [Obsolete products *Reducing the risks from using out of date smartphones, tablets, laptops, desktop PCs, appliances or software applications.*](/bronze-training/mobile-device-guidance/managing-the-risks-from-obsolete-products)
-- [Bring Your Own Device (BYOD) *Guidance for organisations on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information.*](/bronze-controls/byod-guidance)
+- [Bring Your Own Device (BYOD) *Guidance for organizations on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information.*](/bronze-controls/byod-guidance)
 - [BYOD/Personal Device Agreement Sample *Template for stating the oversight capabilities your organization has over personal devices whehn accessing company resources.*](/bronze-controls/byod-for-staff)
 {.links-list}
 
