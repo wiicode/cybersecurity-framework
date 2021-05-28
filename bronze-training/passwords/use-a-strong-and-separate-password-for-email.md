@@ -2,7 +2,7 @@
 title: Protect your email by using a strong and separate password
 description: Cyber criminals can use your email to access many of your personal accounts, leaving you vulnerable to identity theft.
 published: true
-date: 2021-05-28T02:47:55.066Z
+date: 2021-05-28T02:48:06.414Z
 tags: guidance, bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T02:47:46.793Z
@@ -16,7 +16,7 @@ Having a strong, separate password for your email means that if cyber criminals 
 
 ## Use three random words to create a strong password
 
-A good way to create a strong and memorable password is to use three random words. Numbers and symbols can still be used if needed, for example 3redhousemonkeys27!
+A good way to create a strong and memorable password is to use three random words. Numbers and symbols can still be used if needed, for example `3redhousemonkeys27!`
 
 Be creative and use words memorable to you, so that people can’t guess your password. Your social media accounts can give away vital clues about yourself so don’t use words such as your child’s name or favourite sports team which are easy for people to guess.
 
