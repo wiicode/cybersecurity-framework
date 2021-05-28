@@ -2,7 +2,7 @@
 title: Getting Started with Silver Access
 description: 
 published: true
-date: 2021-03-05T02:36:29.066Z
+date: 2021-05-28T02:13:24.954Z
 tags: home, silver
 editor: markdown
 dateCreated: 2021-03-02T03:44:44.740Z
@@ -23,7 +23,7 @@ There are effective and affordable ways to reduce your organization’s exposure
 - **patch management** - patch known vulnerabilities with the latest version of the software, to prevent attacks which exploit software bugs
 - **whitelisting and execution control** - prevent unknown software from being able to run or install itself, including AutoRun on USB and CD drives
 - **secure configuration** - restrict the functionality of every device, operating system and application to the minimum needed for business to function
-- **password policy **- ensure that an appropriate password policy is in place and followed
+- **password policy** - ensure that an appropriate password policy is in place and followed
 - **user access control** - include limiting normal users’ execution permissions and enforcing the principle of least privilege
 
 If your organization is likely to be targeted by a more technically capable attacker, give yourself greater confidence by putting in place these additional controls set out in the 10 Steps to Cyber Security:
