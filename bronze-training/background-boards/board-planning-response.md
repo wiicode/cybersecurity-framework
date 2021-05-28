@@ -2,7 +2,7 @@
 title: Planning your response to cyber incidents
 description: Good incident management will help reduce the financial and operational impact when they do occur.
 published: true
-date: 2021-05-28T03:25:11.026Z
+date: 2021-05-28T03:25:20.497Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown
 dateCreated: 2021-02-22T01:14:00.674Z
@@ -14,7 +14,7 @@ Incidents can have a huge impact on an organization in terms of cost, productivi
 
 ### **Ensure you have a plan**
 
-1 in 10 organisations don't have an incident management plan. If you're one of these organisations, then you should address this immediately.   
+1 in 10 organizations don't have an incident management plan. If you're one of these organizations, then you should address this immediately.   
  
 
 ### **Understand your role in incident management**
@@ -125,14 +125,14 @@ An often overlooked aspect of incident management is the post-incident review.
 ###   
 **Working with suppliers and partners**
 
-Your plan should also consider how you mitigate the impact on any ***partners or customer organisations*** if you were compromised. When do you inform them? What mechanisms are in place to limit the damage it could do to them? You should also consider what you would do in the event that a supplier is compromised; you may not have control over how they deal with the incident. What would you be able to do independently to reduce the impact on your organization? The best way to mitigate this risk is to have a collaborative approach to your security with your partners and suppliers.  
+Your plan should also consider how you mitigate the impact on any ***partners or customer organizations*** if you were compromised. When do you inform them? What mechanisms are in place to limit the damage it could do to them? You should also consider what you would do in the event that a supplier is compromised; you may not have control over how they deal with the incident. What would you be able to do independently to reduce the impact on your organization? The best way to mitigate this risk is to have a collaborative approach to your security with your partners and suppliers.  
  
 
 ## What does good look like?
 
 The following questions can be used to generate productive discussions with your technical team. The aim is to identify what constitutes 'good' cyber security in terms of responding to cyber incidents.
 
-The organisations best equipped to respond to incidents treat them as a matter of when they occur, not if.
+The organizations best equipped to respond to incidents treat them as a matter of when they occur, not if.
 
 ###   
 **Q1. As an** organization**, do we have an incident management plan and how do we ensure it is effective for cyber incidents?**
@@ -164,7 +164,7 @@ It's important to learn lessons from incidents as well as from 'near-misses'. T
 ###   
 **Q4. As an** organization**, how would we know when an incident occurred?**
 
-This incorporates two aspects; what are the triggers that can tell us an incident has happened, and how do we then share that information within the organisation?
+This incorporates two aspects; what are the triggers that can tell us an incident has happened, and how do we then share that information within the organization?
 
 When considering what might trigger an incident, you need to consider:
 
@@ -186,7 +186,7 @@ When considering how an incident will be shared internally, consider:
 This will depend on your organizational structure. It might sit with the one member of the Board, or one of the executives, or it might be divided out into different roles. Ideally you should:
 
 -   Specify exactly who is able to take decisions on which aspects.
--   Have backup plans in place if those decision makers are unable to fulfill that duty (for example, out of hours).
+-   Have backup plans in place if those decision makers are unable to fulfilll that duty (for example, out of hours).
 -   Test this decision making process, with a focus on potential areas of overlapping responsibility.
 
 ###   
