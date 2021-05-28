@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-28T02:09:22.206Z
+date: 2021-05-28T02:35:23.987Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -25,6 +25,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Data Handling Controls](/bronze-controls/data-handling-controls)
 - [Secure sanitization of storage media](/bronze-controls/topic-sanitization)
 - [SharePoint Governance](/bronze-controls/sharepoint-governance)
+- [Protecting SMS messages](/bronze-controls/protecting-sms-messages-used-in-critical-business-processes)
 {.links-list}
 
 
