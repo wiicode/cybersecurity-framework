@@ -2,13 +2,13 @@
 title: Mobile Device Guidance
 description: Help for organizations, from choosing and purchasing devices to the advice you give the end users.
 published: true
-date: 2021-03-07T22:47:15.263Z
+date: 2021-05-28T03:30:29.349Z
 tags: guidance, bronze, bronze-training, mdm, favorite, rmm, msp
 editor: markdown
 dateCreated: 2021-03-07T22:44:35.128Z
 ---
 
-> Securing mobile devices is an essential part of guarding your organisation against a variety of threats, many of which herald from the internet.
+> Securing mobile devices is an essential part of guarding your organization against a variety of threats, many of which herald from the internet.
 {.is-info}
 
 Mobile devices come in many different shapes and sizes: smartphones, tablets, laptops and even desktop PCs. When thinking about how to secure these devices, a number of questions come to mind, such as:
