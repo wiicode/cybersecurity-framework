@@ -2,13 +2,13 @@
 title: Cloud Security Principles
 description: 
 published: true
-date: 2021-05-27T20:21:36.755Z
+date: 2021-05-28T02:31:36.884Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
 ---
 
-# BCSF Fourteen Cloud Security Principles
+# BCSF Fourteen Security Principles
 
 **For each of the 14 principles, we answer three questions:**
 
