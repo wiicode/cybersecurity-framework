@@ -2,7 +2,7 @@
 title: Living with password re-use
 description: In a perfect world we'd use unique passwords for every online service. But the world isn't perfect...
 published: true
-date: 2021-05-28T02:56:53.064Z
+date: 2021-05-28T02:57:27.792Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T02:19:50.168Z
@@ -62,9 +62,9 @@ Here are three simple ways to help you avoid re-using passwords.
 
 ## Where do I start?
 
-We *realise* there's a lot of information to take in here. However, you don't need to organise all of your passwords straight away. You can make small steps, and every step will help.
+We *realize* there's a lot of information to take in here. However, you don't need to organise all of your passwords straight away. You can make small steps, and every step will help.
 
-Here is what the *NCSC* recommend you *prioritise*:
+Here is what the *BCSF* recommend you *prioritize*:
 
 -   If you have re-used your email password, change this one as soon as possible. [And make it a good one](/bronze-training/passwords/three-random-words-or-thinkrandom-0). Your other important accounts can be done when you have some time (don't forget!)
 -   Make sure you use a [lock screen](https://en.wikipedia.org/wiki/Lock_screen) on any device where your passwords are saved.
