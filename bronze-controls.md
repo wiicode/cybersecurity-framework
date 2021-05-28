@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-03-10T02:17:10.121Z
+date: 2021-05-28T02:09:22.206Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -114,6 +114,7 @@ Device management is the process of managing the implementation, operation and m
 
 {.grid-list}
 - [Domain Name System](/bronze-controls/dns)
+- [Preventing Lateral Movement](/bronze-controls/preventing-lateral-movement)
 {.links-list}
 
 
