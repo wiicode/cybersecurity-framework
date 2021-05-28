@@ -2,7 +2,7 @@
 title: Password policy: updating your approach
 description: Advice for system owners responsible for determining password policies and identity management within their organizations.
 published: true
-date: 2021-05-28T02:04:14.329Z
+date: 2021-05-28T02:20:31.747Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-27T22:08:48.689Z
@@ -73,7 +73,7 @@ Technical solutions (such as single sign-on) can also reduce the burden on staff
 
 ### **Use multi-factor authentication (MFA) for important accounts**
 
-One of the most effective ways of providing additional protection to a password protected account is to use MFA. Accounts that have been set up to use MFA require  a second factor, which is something that you (and **only** you) can access. This could be a code that's sent to you by text message, or that's created by an app, so even if an attacker discovers a password, they won't be able to access the associated account without also compromising the other factor. MFA is best used where there may be additional risk (such as logging into an account on a new device, internet facing systems or for priority accounts). For more detailed information, refer to the [*BCSF*'s guidance on Multi-factor authentication for online services]()
+One of the most effective ways of providing additional protection to a password protected account is to use MFA. Accounts that have been set up to use MFA require  a second factor, which is something that you (and **only** you) can access. This could be a code that's sent to you by text message, or that's created by an app, so even if an attacker discovers a password, they won't be able to access the associated account without also compromising the other factor. MFA is best used where there may be additional risk (such as logging into an account on a new device, internet facing systems or for priority accounts). 
 
 ### **Use single sign-on systems**
 
@@ -133,11 +133,11 @@ This section gives advice for system developers and engineers, and will help sec
 
 ### **Protect passwords in transit**
 
-Passwords can be intercepted when in transit. To protect them you should ensure that all corporate web apps requiring authentication use HTTPS. A common type of attack involves stealing a security token to gain access to another device or server. [‘Pass the hash’](https://technet.microsoft.com/en-us/security/dn785092) is an example of this, where a stolen hash is used to authenticate the attacker. For more information, prefer to the [*BCSF* guidance on preventing lateral movement](https://www.ncsc.gov.uk/guidance/preventing-lateral-movement).
+Passwords can be intercepted when in transit. To protect them you should ensure that all corporate web apps requiring authentication use HTTPS. A common type of attack involves stealing a security token to gain access to another device or server. [‘Pass the hash’](https://technet.microsoft.com/en-us/security/dn785092) is an example of this, where a stolen hash is used to authenticate the attacker. For more information, prefer to the [*BCSF* guidance on preventing lateral movement](/bronze-controls/preventing-lateral-movement).
 
 ### **Protect the access management system** 
 
-The access management system needs to be protected to prevent attackers using it to gain access to your system (for example by modifying password policies, or stealing tokens), whether this is within your own *organization* or a cloud or other online service. While you can't influence the *defenses* of the third party systems, you should take steps to protect the access management systems you manage internally, and you should find out how third party suppliers do the same. For some further information, please refer to the [*BCSF* guidance on identity and access management](https://www.ncsc.gov.uk/guidance/introduction-identity-and-access-management).
+The access management system needs to be protected to prevent attackers using it to gain access to your system (for example by modifying password policies, or stealing tokens), whether this is within your own *organization* or a cloud or other online service. While you can't influence the *defenses* of the third party systems, you should take steps to protect the access management systems you manage internally, and you should find out how third party suppliers do the same. For some further information, please refer to the [*BCSF* guidance on identity and access management](/bronze-controls/designing-controls/identity-and-access-management).
 
 ### **Protect passwords at rest**
 
@@ -147,7 +147,7 @@ All passwords should be stored in a hashed format, using multiple iterations of
 
 An attacker who has accessed a password hash file will not know the actual passwords. But if the passwords have been hashed poorly, or the attacker has enough computing power, it may be possible for them to recover some of the passwords. For this reason it is important to protect access to the user database. As well as being a target for attackers looking to compromise your system, these are a target in their own right, even if the information is out of date.
 
-### ***Prioritise*** **securing important or vulnerable accounts**
+### ***Prioritize*** **securing important or vulnerable accounts**
 
 While all passwords should be protected, accounts that have highly privileged access to systems, services and data (or accounts that are accessible externally such as cloud services or remote access) are especially attractive to attackers. MFA should be the primary method for protecting these accounts. Imposing additional password complexity requirements on such accounts will increase the burden on these users, but may not provide any more protection. 
 
@@ -161,7 +161,7 @@ Administrator accounts for infrastructure devices may have pre-set passwords tha
 -   Protect any access management systems you manage.
 -   Choose services and products that protect passwords using multiple iterations of a salted cryptographic hash function.
 -   Protect access to user databases.
--   *Prioritise* privileged and vulnerable accounts such as administrators, cloud accounts and remote users.
+-   *Prioritize* privileged and vulnerable accounts such as administrators, cloud accounts and remote users.
 -   Change all default passwords.
 
 ---
@@ -172,7 +172,7 @@ Users have traditionally been told to remember passwords, and to not share them,
 
 ### **Use password management software or other secure storage**
 
-You should provide appropriate facilities to store passwords. The *BCSF* recommend the use of password managers for secure storage wherever appropriate. As well as providing secure storage, password managers can help users by generating and auto-filling passwords when required. We recommend that all online services permit the use of password managers, and that users should be [allowed to paste passwords into web forms](https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords). However, like any piece of security software, password managers are not impregnable and are an attractive target for attackers. For more information, refer to the [*BCSF* Password Manager Buyers Guide](https://www.ncsc.gov.uk/collection/passwords/password-manager-buyers-guide).
+You should provide appropriate facilities to store passwords. The *BCSF* recommend the use of password managers for secure storage wherever appropriate. As well as providing secure storage, password managers can help users by generating and auto-filling passwords when required. We recommend that all online services permit the use of password managers, and that users should be [allowed to paste passwords into web forms](/bronze-training/passwords/let-them-paste-passwords). However, like any piece of security software, password managers are not impregnable and are an attractive target for attackers. For more information, refer to the [*BCSF* Password Manager Buyers Guide](/bronze-training/passwords/password-manager-buyers-guide).
 
 If a password manager is not suitable you should provide physical storage for recorded passwords such as a secure cabinet. You may also need secure storage for MFA tokens. This should be separate from the stored password.
 
@@ -256,7 +256,7 @@ Password strength meters aim to help users assess the strength of their self-gen
 
 Using complexity requirements (that is, where staff can only use passwords that are suitably complex) is a poor *defense* against guessing attacks. It places an extra burden on users, many of whom will use predictable patterns (such as replacing the letter ‘o’ with a zero) to meet the required 'complexity' criteria. Attackers are familiar with these strategies and use this knowledge to optimise their attacks. Additionally, complexity requirements provide no *defense* against common attack types such as social engineering or insecure storage of passwords.
 
-For the above reasons, the *BCSF* do **not** recommend the use of complexity requirements when implementing user generated passwords. The use of technical controls to defend against automated guessing attacks is far more effective than relying on users to generate (and remember) complex passwords. However, you should specify a minimum password length, to prevent very short passwords from being used. Avoid using any maximum length requirements that a user might try to exceed, as they will make it harder for users to choose a suitable password that fits the length criteria. Password length should only be capped by the capabilities of your system. Be aware that enforcing excessively long passwords will introduce other burdens (such as time taken to enter passwords, and the increased likelihood of mistyping especially on touch screen devices). Adopting the '[three random words](https://www.ncsc.gov.uk/blog-post/three-random-words-or-thinkrandom-0)' technique can help users to use suitably complex passphrases that they can actually remember.
+For the above reasons, the *BCSF* do **not** recommend the use of complexity requirements when implementing user generated passwords. The use of technical controls to defend against automated guessing attacks is far more effective than relying on users to generate (and remember) complex passwords. However, you should specify a minimum password length, to prevent very short passwords from being used. Avoid using any maximum length requirements that a user might try to exceed, as they will make it harder for users to choose a suitable password that fits the length criteria. Password length should only be capped by the capabilities of your system. Be aware that enforcing excessively long passwords will introduce other burdens (such as time taken to enter passwords, and the increased likelihood of mistyping especially on touch screen devices). Adopting the '[three random words](/bronze-training/passwords/three-random-words-or-thinkrandom-0)' technique can help users to use suitably complex passphrases that they can actually remember.
 
 #### **In summary**
 
@@ -291,12 +291,12 @@ There are a number of ways you can help your staff to manage their passwords:
 You may want to consider providing extra guidance to help users manage their passwords at home. This will help them manage their full portfolio of passwords covering both work and personal accounts, and reduce their overall password burden. The *BCSF* recommend the following guidance to help users manage their passwords for home accounts:
 
 -   [Cyber Aware: Password Guidance](https://www.cyberaware.gov.uk/passwords)
--   [*BCSF* Guidance: Setting up two-factor authentication](https://www.ncsc.gov.uk/guidance/setting-two-factor-authentication-2fa)
--   [*BCSF* Blog: Living with password re-use](https://www.ncsc.gov.uk/blog-post/living-password-re-use)
+-   [*BCSF* Guidance: Setting up two-factor authentication](#))
+-   [*BCSF* Blog: Living with password re-use](/bronze-training/passwords/living-password-re-use)
 
 **In summary**
 
--   *Emphasise* the risks of re-using passwords across work and home accounts.
+-   *Emphasize* the risks of re-using passwords across work and home accounts.
 -   Help users to choose passwords that are difficult to guess.
 -   Help users to *prioritize* their high value accounts.
 -   Consider making your training applicable to their personal lives.
