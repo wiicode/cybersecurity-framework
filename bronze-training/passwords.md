@@ -2,7 +2,7 @@
 title: Password administration for system owners
 description: Password strategies that can help your organization remain secure.
 published: true
-date: 2021-05-28T02:18:18.925Z
+date: 2021-05-28T02:20:56.020Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-27T22:07:36.867Z
@@ -18,6 +18,6 @@ For information about how to use passwords at home, please refer to the followin
 - [Password managers: buyers guide](/bronze-training/passwords/password-manager-buyers-guide)
 - [Three random words or think random](/bronze-training/passwords/three-random-words-or-thinkrandom-0)
 - [Let them paste passwords in webforms](/bronze-training/passwords/let-them-paste-passwords)
-- [Living with password re-use]
+- [Living with password re-use](/bronze-training/passwords/living-password-re-use)
 {.links-list}
 
