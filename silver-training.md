@@ -1,8 +1,8 @@
 ---
-title: Cloud Security Principles
+title: Security Principles
 description: 
 published: true
-date: 2021-05-28T02:31:47.346Z
+date: 2021-05-28T02:32:24.339Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
