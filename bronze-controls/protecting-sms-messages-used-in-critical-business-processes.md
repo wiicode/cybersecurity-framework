@@ -2,13 +2,13 @@
 title: Protecting SMS messages used in critical business processes
 description: Security advice for organizations using text messages to communicate with end users
 published: true
-date: 2021-05-28T03:07:27.658Z
+date: 2021-05-28T03:08:21.339Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-05-28T02:34:40.137Z
 ---
 
-Short Messaging Service (SMS), commonly called text messages, are a convenient way for organisations to communicate with customers, staff and others. However, SMS messages are also frequently used to send highly sensitive data. For example, one-time passcodes used to access critical systems and services as part of a multi-factor authentication (MFA) system.
+Short Messaging Service (SMS), commonly called text messages, are a convenient way for organizations to communicate with customers, staff and others. However, SMS messages are also frequently used to send highly sensitive data. For example, one-time passcodes used to access critical systems and services as part of a multi-factor authentication (MFA) system.
 
 Unfortunately, while the qualities of SMS make it a valuable business tool, the technology was never intended to be used to transmit high risk content. Consequently, there are a number of inherent weaknesses in the ecosystem which support SMS.
 
@@ -16,9 +16,9 @@ These weaknesses mean that, where the value of the message content is of interes
 
 ### **Advice**
 
-This guidance does not rule out the use of SMS for transmitting sensitive data. Instead, we advise that you should understand how your *organisation* uses SMS, and determine whether to put in place additional controls. To aid with that process we outline common use cases for SMS, relevant threats to the technology and possible measures to defend against them.
+This guidance does not rule out the use of SMS for transmitting sensitive data. Instead, we advise that you should understand how your *organization* uses SMS, and determine whether to put in place additional controls. To aid with that process we outline common use cases for SMS, relevant threats to the technology and possible measures to defend against them.
 
-Mobile telecoms companies are aware of the problems with SMS and are actively working to close vulnerabilities. However, these are complex issues and it may be impossible to fully compensate for the inherent weaknesses of the system. So, any *organisation* using SMS must have a clear understand of how and where the technology is used and take steps to mitigate or reduce associated risks, where appropriate.
+Mobile telecoms companies are aware of the problems with SMS and are actively working to close vulnerabilities. However, these are complex issues and it may be impossible to fully compensate for the inherent weaknesses of the system. So, any *organization* using SMS must have a clear understand of how and where the technology is used and take steps to mitigate or reduce associated risks, where appropriate.
 
 ### **Audience**
 
@@ -26,7 +26,6 @@ This advice is aimed at technical staff at UK enterprises using SMS, particularl
 
 Non-UK telecoms companies may have characteristics which would reduce the effectiveness of some of the suggested controls. For example, for the UK ‘roaming’ means the handset is (or appears to be) out of the country. In the USA and in other countries, it is possible for a handset to roam on another network whilst still in the country.
 
----
 
 ## Why SMS is popular
 
@@ -40,33 +39,32 @@ SMS has a number of qualities which make it attractive for business use:
 -   **inexpensive** – relatively low cost to use
 -   **reliability** – the store and forward nature of SMS means it is often seen as a ‘fire and forget service’
 
-Organisations, particularly Banks, use SMS for the following purposes:
+Organizations, particularly Banks, use SMS for the following purposes:
 
 -   **to send information to customers**
 -   **to send one-time passcodes to customers**
 -   **to confirm a questionable transaction**
 
----
 
 ## General threat protection advice
 
 ### **1\. Know your estate**
 
-Before you can determine which protections you should put in place, you must first understand exactly where and how your *organisation* uses SMS. You should then assess the level of risk associated with these business process.
+Before you can determine which protections you should put in place, you must first understand exactly where and how your *organization* uses SMS. You should then assess the level of risk associated with these business process.
 
 For example, simple updates on the progress of a product application are likely to be deemed ‘low risk.’ Their value to an attacker is unlikely to justify the effort needed to subvert the SMS sending process. This situation is unlikely to warrant investment in additional protective controls.
 
-Conversely, a one-time passcode sent by SMS and used to *authorise* new payments could be deemed 'high risk'. This type of message would be high value to an attacker and therefore justify investment in additional controls.
+Conversely, a one-time passcode sent by SMS and used to *authorize* new payments could be deemed 'high risk'. This type of message would be high value to an attacker and therefore justify investment in additional controls.
 
 #### **Suggested Controls**
 
-You should create and maintain a formal record of how and where your *organisation* uses SMS.
+You should create and maintain a formal record of how and where your *organization* uses SMS.
 
 Even if the risks are deemed to be low, this inventory is vital in order to rapidly assess the impacts of new or increased attacks against SMS.
 
 ### **2\. Consider alternatives to SMS**
 
-There are many ways by which SMS can be compromised and full *defence* against such attacks is not possible.
+There are many ways by which SMS can be compromised and full *defense* against such attacks is not possible.
 
 #### **Suggested Controls**
 
@@ -88,11 +86,10 @@ When a phone number is updated, the change should be time stamped. When the numb
 
 You should treat the customer’s mobile phone number as having value. As such, when displayed (for example as confirmation of the number an SMS will be sent to), the number should be partially masked so that it's of no value to an attacker, but still recognisable by the customer.
 
-The *organisation* should identify, and if appropriate take action, where the same mobile number appears to be in use by different customers.
+The *organization* should identify, and if appropriate take action, where the same mobile number appears to be in use by different customers.
 
-This could be an indicator of fraudulent use or could be the reallocation by a telecoms company of an old number. In the latter case it is important from a *reputational* risk perspective not to send the former holder’s message to the new owner of the number.
+This could be an indicator of fraudulent use or could be the reallocation by a telecoms company of an old number. In the latter case it is important from a *reputation* risk perspective not to send the former holder’s message to the new owner of the number.
 
----
 
 ## SMS attacks and compensating controls
 
@@ -108,9 +105,9 @@ Attackers use social engineering to convince mobile phone retailers into transfe
 
 #### **Suggested Controls**
 
-A number of telecoms companies, SMS aggregators and other commercial organisations offer the ability to query the mobile networks to ascertain if the SIM has been (recently) swapped.
+A number of telecoms companies, SMS aggregators and other commercial organizations offer the ability to query the mobile networks to ascertain if the SIM has been (recently) swapped.
 
-Prior to sending a high risk SMS, organisations should gather SIM swap data from mobile networks. With this data, a risk based decision can be made on whether it is ‘safe to send’ the message. Such a decision is likely to be based on the elapsed time since the swap. The shorter the time, the higher the likelihood of a compromise.
+Prior to sending a high risk SMS, organizations should gather SIM swap data from mobile networks. With this data, a risk based decision can be made on whether it is ‘safe to send’ the message. Such a decision is likely to be based on the elapsed time since the swap. The shorter the time, the higher the likelihood of a compromise.
 
 #### **Points to note**
 
@@ -131,7 +128,7 @@ Whilst there is debate about how easy it would be to carry out SS7 attacks at sc
 
 #### **Suggested Controls**
 
-A number of telecoms companies, SMS aggregators and other commercial organisations offer the ability to query mobile networks to ascertain if the phone (IMSI) is roaming. Roaming is a potential IOC (indicator of compromise) but could also be legitimate.
+A number of telecoms companies, SMS aggregators and other commercial organizations offer the ability to query mobile networks to ascertain if the phone (IMSI) is roaming. Roaming is a potential IOC (indicator of compromise) but could also be legitimate.
 
 Enterprises should consider gathering roaming data from mobile networks prior to sending a high risk SMS.
 
@@ -171,7 +168,6 @@ Enterprises should undertake customer security awareness activity.
 
 Enterprises which have an app on the device should consider monitoring for jailbreaking/rooting. If a device has been jailbroken/rooted, a risk-based decision could be taken not to trust high value SMSs sent to it.
 
----
 
 ## General purpose SMS protection techniques
 
@@ -195,7 +191,7 @@ If the content from the SMS (e.g. a onetime code) is being entered on a device w
 
 The physical location of the device can assist in determining whether the content of an SMS is being used by the intended individual.
 
-For example if your *organisation* stores address details for its users, proximity to these addresses (within a defined ‘geofence’) would be a good indicator that the SMS had been delivered to the legitimate device and user.
+For example if your *organization* stores address details for its users, proximity to these addresses (within a defined ‘geofence’) would be a good indicator that the SMS had been delivered to the legitimate device and user.
 
 Geolocation could be used in combination with a query of the device's roaming status. Impossible combinations, would indicate compromise.
 
@@ -207,8 +203,8 @@ Many enterprises rely on third parties to operate high value, high risk SMS serv
 
 You should make sure that these 3rd party vendors apply appropriate controls to identify/prevent fraudulent use of SMS.
 
-### **3\. Understand your** ***organisation*****’s SMS integration points**
+### **3\. Understand your** ***organization*****’s SMS integration points**
 
-Many third party organisations offer services for sending SMSs on behalf of enterprises. Not all of these have direct connection relationships with Mobile Network Owners (MNOs) and use one or more fourth parties to pass SMS traffic to MNOs.
+Many third party organizations offer services for sending SMSs on behalf of enterprises. Not all of these have direct connection relationships with Mobile Network Owners (MNOs) and use one or more fourth parties to pass SMS traffic to MNOs.
 
 In general, so called *Tier 1 SMS aggregators* who have a direct connection with MNOs reduce the risk of SMS compromise. These aggregators can ask MNOs to block messages which have a sender claiming to be from the enterprise but which have not originated from the aggregator.
