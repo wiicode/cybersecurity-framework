@@ -2,7 +2,7 @@
 title: Small Business Guide: Cyber Security in 10 Steps
 description: 10 pieces of technical advice you should consider putting in place
 published: true
-date: 2021-05-29T19:06:10.454Z
+date: 2021-05-29T19:11:28.538Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:16:24.127Z
@@ -33,3 +33,5 @@ When dealing with the practicalities of cyber security it's extremely useful to 
 
 [Asset Managment](/bronze-training/background-advanced/10-steps-asset-management)
 [Vulnerability Management](/silver-training/vulnerability-management)
+[Data Security](/bronze-training/background-advanced/10-steps-risk-data-security)
+[Supply Chain Security](/bronze-training/background-advanced/10-steps-risk-supply-chain-security)
