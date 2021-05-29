@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-28T14:59:08.273Z
+date: 2021-05-29T19:43:30.428Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -133,6 +133,7 @@ Device management is the process of managing the implementation, operation and m
 {.is-success}
 
 {.grid-list}
+- [Vulnerability Scanning Tools and Services](/bronze-controls/vulnerability-scanning-tools-and-services)
 - [Intelligent security tools](/bronze-training/background-topics/intelligent-security-tools)
 {.links-list}
 
