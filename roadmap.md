@@ -2,7 +2,7 @@
 title: release-notesc
 description: The past, present, and future of BCSF
 published: true
-date: 2021-04-22T14:40:26.972Z
+date: 2021-05-29T18:22:45.955Z
 tags: checklist, bronze
 editor: markdown
 dateCreated: 2020-08-06T18:07:19.503Z
@@ -10,12 +10,9 @@ dateCreated: 2020-08-06T18:07:19.503Z
 
 # Release Notes
 
+## 1.0.0
 
-## In-Development. 
-
-### 1.0.0
-
-#### Content
+### Content
 - [X] BCSF 1.0 
 - [X] Personal and Family Security Guide
 - [X] Small Business Guide - Simple
@@ -26,12 +23,11 @@ dateCreated: 2020-08-06T18:07:19.503Z
 - [X] Board Module
 - [X] Cloud Module
 - [X] Advanced Security Guide
-- [ ] Security Awareness Training for Employees
-- [ ] Security Awareness Training for Developers
+- [ ] Security Awareness Training for Employees (BETA)
+- [ ] Security Awareness Training for Developers (ALPHA)
 - [X] Cloud Security Principles
 
-
-#### Capabilities
+### Capabilities
 - [X] AWS Well-Architected environment
 - [X] AWS RDS Database 
 - [X] GIT integration (bi-directional)
@@ -39,18 +35,10 @@ dateCreated: 2020-08-06T18:07:19.503Z
 - [X] Microsoft Authentication
 - [X] Slack Authentication
 - [X] Google Authentication
-- [ ] AWS Cloud Formation for Gold and Platinum instances
+- [ ] AWS Cloud Formation for Gold and Platinum instances (BETA)
 
 
----
-
-## Releases.
-
-### 0.0.1 
-- [X] AWS Instance
-- [X] Wiki platform 
-- [X] Sample content
 
 
-## Short-Term Roadmap.
+# Short-Term Roadmap.
 - [ ] Attestation Validation: key issued by customer to third-party to come and validate the customer. 
