@@ -2,7 +2,7 @@
 title: Small Business Guide: Cyber Security in 10 Steps
 description: 10 pieces of technical advice you should consider putting in place
 published: true
-date: 2021-05-29T18:57:25.283Z
+date: 2021-05-29T19:06:10.454Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:16:24.127Z
@@ -28,3 +28,8 @@ When dealing with the practicalities of cyber security it's extremely useful to 
 - [Removable media controls *Removable media provide a common route for the introduction of malware and the accidental or deliberate export of sensitive data. You should be clear about the business need to use removable media and apply appropriate security controls to its use.*](/bronze-training/background-advanced/10-steps-removable-media)
 - [User education and awareness *Users have a critical role to play in their organization’s security and so it's important that security rules and the technology provided enable users to do their job as well as help keep the organization secure. This can be supported by a systematic delivery of awareness programs and training that deliver security expertise as well helping to establish a security-conscious culture.*](/bronze-training/background-advanced/10-steps-user-education)
 {.links-list}
+
+# DRAFTS
+
+[Asset Managment](/bronze-training/background-advanced/10-steps-asset-management)
+[Vulnerability Management](/silver-training/vulnerability-management)
