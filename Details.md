@@ -1,8 +1,8 @@
 ---
-title: - home-details
+title: BENTO:GUIDES:DETAILS
 description: 
 published: true
-date: 2021-02-13T17:15:09.358Z
+date: 2021-05-29T17:45:39.083Z
 tags: bronze
 editor: markdown
 dateCreated: 2020-08-05T18:03:26.414Z
