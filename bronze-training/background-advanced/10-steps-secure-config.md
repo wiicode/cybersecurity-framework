@@ -2,7 +2,7 @@
 title: Secure Configuration
 description: Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems.
 published: true
-date: 2021-05-29T19:02:03.505Z
+date: 2021-05-29T19:02:29.035Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:54:59.854Z
@@ -70,13 +70,13 @@ Organizations need to ensure that they have put in place measures to minimize th
 {.is-success}
 
 ## Understand what you are building and why
-Understand the context before designing a system, including the risks your organization are, and are not, willing to accept, and the threat model for your system. Identifying the most critical systems and components in relation to your organizational objectives will help you focus your effort in the right places. Choose security controls based on the risks identified, and how effective they are at mitigating the types of attacks you expect, based on that threat model
-Consider the expected lifetime of your systems, and how they can adapt to an evolving context. The cyber security landscape changes rapidly, so systems will need to adapt to new and emerging threats to remain secure. Ensure that your approach to system development and delivery can help you evolve your security controls to keep pace.
-
+- Understand the context before designing a system, including the risks your organization are, and are not, willing to accept, and the threat model for your system. Identifying the most critical systems and components in relation to your organizational objectives will help you focus your effort in the right places. Choose security controls based on the risks identified, and how effective they are at mitigating the types of attacks you expect, based on that threat model
+- Consider the expected lifetime of your systems, and how they can adapt to an evolving context. The cyber security landscape changes rapidly, so systems will need to adapt to new and emerging threats to remain secure. Ensure that your approach to system development and delivery can help you evolve your security controls to keep pace.
+- 
 ## Make systems easy to maintain and update
-Before designing a system, consider if there are existing, securely designed products or services that you can make use of (instead of investing in the resource and expertise necessary to implement it all yourself). For example, consider how to benefit from the shared responsibility model of cloud services. Using concepts such as Platform as a Service (PaaS) and Software as a Service (SaaS) allows you to shift some of the responsibility for the management of the underlying technology and its security to the service provider, allowing you to focus more of your effort on the applications and services that are bespoke to you. You will also benefit from the vendor’s investment and expertise in security. You should still seek assurance that the service delivered by the cloud provider meets your needs.
-Design systems so that security updates can be applied as soon as they become available, in ways that minimize your exposure to vulnerabilities without adversely affecting the availability of your system.
-Use configuration management technologies such as Mobile Device Management systems and use Infrastructure as Code to formalizesystem deployments so that it is easier to track, update and re-deploy systems over time.
+- Before designing a system, consider if there are existing, securely designed products or services that you can make use of (instead of investing in the resource and expertise necessary to implement it all yourself). For example, consider how to benefit from the shared responsibility model of cloud services. Using concepts such as Platform as a Service (PaaS) and Software as a Service (SaaS) allows you to shift some of the responsibility for the management of the underlying technology and its security to the service provider, allowing you to focus more of your effort on the applications and services that are bespoke to you. You will also benefit from the vendor’s investment and expertise in security. You should still seek assurance that the service delivered by the cloud provider meets your needs.
+- Design systems so that security updates can be applied as soon as they become available, in ways that minimize your exposure to vulnerabilities without adversely affecting the availability of your system.
+- Use configuration management technologies such as Mobile Device Management systems and use Infrastructure as Code to formalizesystem deployments so that it is easier to track, update and re-deploy systems over time.
 
 ## Make compromise and disruption difficult
 - Make compromise harder by adopting a layered approach to security so that an attacker would have to get through multiple controls to be successful. Consider using a framework such as MITRE ATT&CK to help identify possible ways of disrupting an attacker at different stages of an attack.
