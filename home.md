@@ -2,7 +2,7 @@
 title: - home
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-05-27T18:25:58.205Z
+date: 2021-05-29T15:21:49.114Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -15,7 +15,7 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 ## Cybercrime is profitable.
 
 > Deloitte estimated even a **low-end cyber attack costing just $34 per month could return $25,000**, while the more expensive and sophisticated attacks costing a few thousand dollars could return as much as $1 million per month. 
-![bcsf-stats.png](/bcsf-stats.png =66%x)
+![bcsf-stats.png](/bcsf-stats.png =50%x)
 {.is-warning}
 
 
@@ -27,6 +27,13 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 
 # Getting Started
 **BENTO:GUIDES** information security content and management platform for professional service companies. To get started, begin with our learning modules and educate yourself about cyber security for small companies.  From there, use our tiered content to build a security program by adopting **policies**, developing **controls**, and eventually attesting it all works properly by auditing and tracking **evidence**. 
+
+## The Framework:
+{.grid-list}
+- [Bento Cyber Security Framework *A policy framework of computer security guidance for how small & medium sized comapnies can assess and improve their ability to prevent, detect, and respond to cyber attacks.*](/bcsf)
+- [Bento Cyber Security Framework Guides *Library of articles, guides, policies, and procedures that educates and instructs how companies can implement cyber security strategy and processes based on BCSF.*](/bronze-controls)
+{.links-list}
+
 
 ## Core Modules:
 
