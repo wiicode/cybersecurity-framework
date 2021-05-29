@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-29T19:55:26.706Z
+date: 2021-05-29T20:03:03.020Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -26,6 +26,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Secure sanitization of storage media](/bronze-controls/topic-sanitization)
 - [SharePoint Governance](/bronze-controls/sharepoint-governance)
 - [Protecting SMS messages](/bronze-controls/protecting-sms-messages-used-in-critical-business-processes)
+- [Offline backups](/bronze-controls/offline-backups-in-an-online-world)
 {.links-list}
 
 
