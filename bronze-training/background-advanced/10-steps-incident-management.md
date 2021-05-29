@@ -2,7 +2,7 @@
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
 published: true
-date: 2021-05-29T18:53:43.697Z
+date: 2021-05-29T18:56:59.460Z
 tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown
 dateCreated: 2021-02-21T15:59:15.003Z
@@ -42,7 +42,7 @@ The organization’s business profile or role will determine the type and nature
 > Effective incident management lessens the impact of a cyber incident
 {.is-success}
 
-> A practised plan will help you make good decisions under the pressure of a real incident
+> A practiced plan will help you make good decisions under the pressure of a real incident
 {.is-success}
 
 > A well-managed response, with clear communication throughout, builds trust with shareholders and customers
@@ -66,8 +66,8 @@ The organization’s business profile or role will determine the type and nature
 ![10-steps-2021-incident-management-diagram.png](/article_images/10-steps-2021-incident-management-diagram.png)
 
 ## Practice your response plans
-- Practising response plans ensures staff know how to respond in during an incident, and can also highlight any problem areas in your planned response . The BCSF’s Exercise in a Box is a free online tool which helps organizations test and practise their response to different types of cyber attack, including everything you need for setting up, planning, delivery, and post-exercise activity.
-- Practise restoring files from backups. After an incident ensure only clean data is copied back onto clean systems and networks.
+- Practicing response plans ensures staff know how to respond in during an incident, and can also highlight any problem areas in your planned response . The BCSF’s Exercise in a Box is a free online tool which helps organizations test and practice their response to different types of cyber attack, including everything you need for setting up, planning, delivery, and post-exercise activity.
+- Practice restoring files from backups. After an incident ensure only clean data is copied back onto clean systems and networks.
 
 ## Respond appropriately (and communicate clearly) during an incident
 - Don't be drawn into over-reacting during the containment phase of an incident; you might need to gather more information before deciding on a suitable course of action. Over-reacting can cause more damage than the incident itself - in the case of targeted attacks, the attacker could react or bury themselves more deeply in your network. Consider the repercussions of any actions you may take, and discuss with colleagues.
