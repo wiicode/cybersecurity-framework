@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-29T19:48:41.611Z
+date: 2021-05-29T19:55:26.706Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -143,8 +143,9 @@ Device management is the process of managing the implementation, operation and m
 
 
 {.grid-list}
-- [Understanding Software as a Service (SaaS) security](#)
-- [SaaS security principless](#)
+- [Understanding Software as a Service (SaaS) security](/bronze-controls/saas-security/understanding-saas-security)
+- [SaaS security principles](/bronze-controls/saas-security/saas-security-principles)
+- [Product Evaluations](/bronze-controls/saas-security)
 {.links-list}
 
 
