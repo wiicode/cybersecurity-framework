@@ -2,7 +2,7 @@
 title: Asset management
 description: Know what data and systems you manage, and what business need they support.
 published: true
-date: 2021-05-29T19:30:51.819Z
+date: 2021-05-29T19:31:06.211Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2021-05-29T19:05:15.208Z
@@ -47,7 +47,7 @@ Asset management encompasses the way you can establish and *maintain* the requir
 
 -   Consider a variety of information sources for your asset management system. There are likely to be many existing sources of asset information within your environment, for example configuration management tools and mobile device management systems as well as non-technical sources such as procurement records. Each potential source may provide different properties, such as the level of detail, ease of collection or how accurate and up to date the information is, and so a combination of sources will help generate a comprehensive and accurate view.
 -   Use your logging and monitoring capabilities (or other asset discovery tools) to help identify unknown assets and reduce the chances of missing anything. This approach may be particularly helpful in scenarios where there are significant gaps in knowledge because the asset management capability is not very mature.
--   *Recognise* that you are unlikely to have a complete understanding of your *organization*’s assets. You should be able to collect very detailed data from large homogeneous systems, such as a typical enterprise desktop environment. However, this is more challenging in diverse environments, such as research labs or OT systems. The benefits of collecting specific details should always be considered in relation to the cost of doing so. Where it is less practical to collect a full range of data, other controls such as network separation should be considered, to mitigate the resulting risks.
+-   Recognize that you are unlikely to have a complete understanding of your *organization*’s assets. You should be able to collect very detailed data from large homogeneous systems, such as a typical enterprise desktop environment. However, this is more challenging in diverse environments, such as research labs or OT systems. The benefits of collecting specific details should always be considered in relation to the cost of doing so. Where it is less practical to collect a full range of data, other controls such as network separation should be considered, to mitigate the resulting risks.
 -   Have a plan to validate your asset management system. For example, you should test your system to ensure *unauthorized* devices or non-compliant software configurations can be detected. This validation helps ensure that your understanding of your systems and data is accurate and therefore that you are not exposed to unidentified risks.
 
 ## **Only keep what you really need**
