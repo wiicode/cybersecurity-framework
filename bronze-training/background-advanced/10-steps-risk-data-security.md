@@ -2,7 +2,7 @@
 title: Data security
 description: Guidance on how organisations can protect themselves in cyberspace.
 published: true
-date: 2021-05-29T20:01:21.400Z
+date: 2021-05-29T20:01:36.506Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2021-05-29T19:10:09.343Z
@@ -48,7 +48,7 @@ Data needs to be protected from *unauthorized* access, modification, or deletion
 -   Test your backups regularly and ensure you know how to restore files from a backup before you have to do it for real. Ensure you can gain access to your backups in the event of a complete system failure.
 -   Reduce the risk of re-infection when restoring data from backups by re-installing executables from trusted sources instead of backup, and ensuring operating systems and application software is up to date on the target systems. Malware may persist in backups, so you should ensure files are scanned using up to date antivirus software when they are being restored.
 
-## Securely sanitise storage media when no longer needed for its designated purpose
+## Securely sanitize storage media when no longer needed for its designated purpose
 
 -   You should have a policy for the re-use, repair, disposal and destruction of storage media and any devices that could store data, (including office equipment such as printers and photocopiers, monitors and TVs). If your data is not properly sanitised, there is a risk that it could be recovered and viewed at a later date without your knowledge. Our [secure sanitization of storage media guidance](/bronze-controls/topic-sanitization) gives more information on how to sanitise different types of media.
 -   Plan for sanitization when you are procuring equipment, including understanding what you will need to do and the associated costs. Ensure sanitization methods chosen for your data storage devices and/or media are proportionate to the risk of *unauthorized* access for that data, including *reputation* risk if it were to be publicised. This will help you avoid unexpected costs and risk when you come to dispose or re-use storage media. For example, Solid State Disks (SSDs) can be difficult to sanitise reliably, so you should consider destroying them.
