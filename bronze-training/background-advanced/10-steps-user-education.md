@@ -2,7 +2,7 @@
 title: User education and awareness
 description: Users have a critical role to play in their organization’s security and so it's important that security rules and the technology provided enable users to do their job as well as help keep the organization secure. 
 published: true
-date: 2021-05-27T19:26:25.477Z
+date: 2021-05-29T18:43:35.934Z
 tags: bronze, bronze-training, 10-steps, sourced
 editor: markdown
 dateCreated: 2021-02-21T16:10:59.327Z
@@ -17,12 +17,12 @@ Users have a critical role to play in their organization’s security and so it'
 # What is the risk?
 Users have a critical role to play in helping to keep the organization secure, but they must also be able to effectively do their jobs. organizations that do not effectively support employees with the right tools and awareness may be vulnerable to the following risks:
 
-- Removable media and personally owned devices:Without clearly defined and usable policies on the use of removable media and personally owned devices, staff may connect devices to the corporate infrastructure that might lead to the inadvertent import of malware or compromise of sensitive information
-- Legal and regulatory sanction: If users are not aware and supported in how they handle particular classes of sensitive information, the organization may be subject to legal and regulatory sanction
-- Incident reporting culture: Without an effective reporting culture there will be poor dialogue between users and the security team. This is essential to uncovering near misses and areas where technology and processes can be improved, as well as reporting actual incidents.
-- Security Operating Procedures: If security operating procedures are not balanced to support how users perform their duties, security can be seen as a blocker and possibly ignored entirely. Alternatively, if users follow the procedures carefully this might damage legitimate business activity.
-- External attack: Since users have legitimate system accesses and rights, they can be a primary focus for external attackers. Attacks such as phishing or social engineering attempts rely on taking advantage of legitimate user capabilities and functions.
-- Insider threat: Changes over time in an employee’s personal situation could make them vulnerable to coercion, and they may release personal or sensitive commercial information to others. Dissatisfied employees may try to abuse their system level privileges or coerce other employees to gain access to information or systems to which they are not authorized. Equally, they may attempt to steal or physically deface computer resources.
+- **Removable media and personally owned devices**: Without clearly defined and usable policies on the use of removable media and personally owned devices, staff may connect devices to the corporate infrastructure that might lead to the inadvertent import of malware or compromise of sensitive information
+- **Legal and regulatory sanction**: If users are not aware and supported in how they handle particular classes of sensitive information, the organization may be subject to legal and regulatory sanction
+- **Incident reporting culture:** Without an effective reporting culture there will be poor dialogue between users and the security team. This is essential to uncovering near misses and areas where technology and processes can be improved, as well as reporting actual incidents.
+- **Security Operating Procedures**: If security operating procedures are not balanced to support how users perform their duties, security can be seen as a blocker and possibly ignored entirely. Alternatively, if users follow the procedures carefully this might damage legitimate business activity.
+- **External attack:** Since users have legitimate system accesses and rights, they can be a primary focus for external attackers. Attacks such as phishing or social engineering attempts rely on taking advantage of legitimate user capabilities and functions.
+- **Insider threat:** Changes over time in an employee’s personal situation could make them vulnerable to coercion, and they may release personal or sensitive commercial information to others. Dissatisfied employees may try to abuse their system level privileges or coerce other employees to gain access to information or systems to which they are not authorized. Equally, they may attempt to steal or physically deface computer resources.
 
 # How can the risk be managed?
 **Produce a user security policy:** Develop a user security policy, as part of the overarching corporate security policy. Security procedures for all systems should be produced with consideration to different business roles and processes. A 'one size fits all' approach is typically not appropriate for many organizations. Policies and procedures should be described in simple business-relevant terms with limited jargon.
