@@ -2,7 +2,7 @@
 title: Monitoring
 description: System monitoring provides a capability that aims to detect actual or attempted attacks on systems and business services.
 published: true
-date: 2021-05-29T18:37:56.109Z
+date: 2021-05-29T18:38:27.724Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown
 dateCreated: 2021-02-21T16:05:27.930Z
@@ -42,13 +42,21 @@ Monitoring provides the means to assess how systems are being used and whether t
 
 # What are the benefits?
 
-Good logging practices provides the ability to understand, trace and react to system and security events
+> Good logging practices provides the ability to understand, trace and react to system and security events
+{.is-success}
 
-Security monitoring provides insight into systems, and allows for the active detection of threats and potential security incidents
 
-Security monitoring introduces an additional layer of defense to systems
+> Security monitoring provides insight into systems, and allows for the active detection of threats and potential security incidents
+{.is-success}
 
-Actively monitoring systems affords the opportunity to react to early signs of compromise, meaning organizations can respond effectively
+
+> Security monitoring introduces an additional layer of defense to systems
+{.is-success}
+
+
+> Actively monitoring systems affords the opportunity to react to early signs of compromise, meaning organizations can respond effectively
+{.is-success}
+
 
 # What should you do?
 ## Understand your objectives for logging and monitoring
