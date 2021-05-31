@@ -2,7 +2,7 @@
 title: Password policy: updating your approach
 description: Advice for system owners responsible for determining password policies and identity management within their organizations.
 published: true
-date: 2021-05-28T02:20:31.747Z
+date: 2021-05-31T15:09:11.583Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-27T22:08:48.689Z
@@ -290,7 +290,6 @@ There are a number of ways you can help your staff to manage their passwords:
 
 You may want to consider providing extra guidance to help users manage their passwords at home. This will help them manage their full portfolio of passwords covering both work and personal accounts, and reduce their overall password burden. The *BCSF* recommend the following guidance to help users manage their passwords for home accounts:
 
--   [Cyber Aware: Password Guidance](https://www.cyberaware.gov.uk/passwords)
 -   [*BCSF* Guidance: Setting up two-factor authentication](#))
 -   [*BCSF* Blog: Living with password re-use](/bronze-training/passwords/living-password-re-use)
 
