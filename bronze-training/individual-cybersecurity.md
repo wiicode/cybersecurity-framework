@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-05-27T19:21:40.952Z
+date: 2021-06-01T18:26:46.621Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -14,7 +14,7 @@ dateCreated: 2020-08-05T18:06:15.045Z
 # What is cyber security?
 Cyber security is the means by which individuals and organisations reduce the risk of being affected by cyber crime.
 
-Cyber security's core function is to protect the devices we all use (smartphones, laptops, tablets and computers), and the services we access online - both at home and work - from theft or damage. It's also about preventing unauthorised access to the vast amounts of personal information we store on these devices, and online.
+Cyber security's core function is to protect the devices we all use (smartphones, laptops, tablets and computers), and the services we access online - both at home and work - from theft or damage. It's also about preventing unauthorized access to the vast amounts of personal information we store on these devices, and online.
 
 Cyber security is important because smartphones, computers and the internet are now such a fundamental part of modern life, that it's difficult to imagine how we'd function without them. From online banking and shopping, to email and social media, it's more important than ever to take steps that can prevent cyber criminals getting hold of our accounts, data, and devices. 
 
