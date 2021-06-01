@@ -2,7 +2,7 @@
 title: Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
 published: true
-date: 2021-06-01T19:31:02.234Z
+date: 2021-06-01T19:32:52.230Z
 tags: checklist, home, silver, silver-controls
 editor: markdown
 dateCreated: 2021-02-23T01:06:15.574Z
@@ -19,7 +19,7 @@ Information governance often begins with a risk assessment and develop their inf
 4. **How?** Obtain implementaiton guideance from our team on how to implement the controls in a way that brings value and fits your needs.
 
 
-# Advanced Controls
+# The Twenty-Six Controls
 > When faced with a control item that seems daunting, consider the impacts if you avoided the risk alltogether. Sometimes stopping an activity is the best option. 
 {.is-info}
 
