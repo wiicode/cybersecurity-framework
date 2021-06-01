@@ -2,7 +2,7 @@
 title: Variety in risk information
 description: Why recognizing different types of information is essential when assessing cyber risk.
 published: true
-date: 2021-03-05T02:04:37.971Z
+date: 2021-06-01T18:38:37.391Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown
 dateCreated: 2021-03-05T02:04:37.971Z
@@ -12,8 +12,7 @@ dateCreated: 2021-03-05T02:04:37.971Z
 {.is-info}
 
 
-Why variety matters
--------------------
+# Why variety matters
 
 Imagine your organization's risk management approach can only deal with qualitative information (such as policy papers, incident reports, or assessments) that describe risk in terms of high, medium and low. Such an approach would miss the patterns and trends that could be spotted by including quantitative information (such as network flows, or numbers of security incidents). Drawing on a *variety* of information sources may reveal risks that would otherwise be missed.
 
@@ -21,8 +20,7 @@ It is rare for organizations to explicitly *exclude* certain types of informat
 
 You're more likely to fall into this trap if your organization adopts a single, standardized approach for *every* kind of cyber risk assessment. This is more likely to occur when organizations focus on *completing the process* of risk management, rather than on the *risk reduction activities* which should *flow from it*. When organizations get into this '[defensive](/bronze-training/background-topics/risk-2-fundamentals)' pattern of risk management behavior, this closing down of what counts as 'legitimate' risk information can be exacerbated.
 
-Help with assessing information sources
----------------------------------------
+# Help with assessing information sources
 
 How can you know if you're considering enough information sources?
 
@@ -59,8 +57,7 @@ The goal of this exercise is to help you spot situations where your risk assessm
 
 This is by no means the only way of categorising risk information. There are other properties of risk information which may be just as useful. For example, it is also worth considering whether you are using a balance of information about the past, and information about how you anticipate the future will unfold, with some interpretation.
 
-Common organizational bias
-----------------------------------------------------------------------------------------------------------------------------------------
+# Common organizational bias
 
 By using the qualitative/quantitative, objective/subjective technique, the BCSF have recognized a common bias in many organizations, where the grid is heavily populated in the top-left and bottom-right quadrants, and empty in the other two. In such organizations, when assessing cyber risk, the terms 'objective' and 'quantitative' were taken to mean the same thing.
 
