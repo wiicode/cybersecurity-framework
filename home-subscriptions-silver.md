@@ -2,7 +2,7 @@
 title: Getting Started with Silver Access
 description: 
 published: true
-date: 2021-06-01T19:45:11.985Z
+date: 2021-06-01T19:46:01.055Z
 tags: home, silver
 editor: markdown
 dateCreated: 2021-03-02T03:44:44.740Z
@@ -20,13 +20,12 @@ In the [Core Training](/bronze-training) sections you have spent your time learn
 
 In the [Core Controls](/bronze-controls) section you became familiar with specific actionable steps to take in an effort to improve your organization's resiliency. 
 
-![bentosecurityprojectdiagram_v4.png](/public/bentosecurityprojectdiagram_v4.png)
+![bentosecurityprojectdiagram_v4.png](/public/bentosecurityprojectdiagram_v4.png =50%x)
 
 At this stage you are ready to look beyond the internal operations and consider more developed implementations for:
 
-
+- [Advanced Security Principles *Deep focus on the security and trust of your SaaS/Cloud based applications*]()
 - [Advanced Security Controls *Standardized controls aligned with evidence collection and attestation programs.*](/silver-controls)
-- [Cloud Application Oversight *Deep focus on the security and trust of your SaaS/Cloud based applications*]()
 - [Security Awareness Training *Staff should understand their role in keeping your organization secure and report any unusual activity*]()
 {.links-list}
 
