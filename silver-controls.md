@@ -2,7 +2,7 @@
 title: Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
 published: true
-date: 2021-06-01T19:48:52.954Z
+date: 2021-06-01T19:56:17.119Z
 tags: checklist, home, silver, silver-controls
 editor: markdown
 dateCreated: 2021-02-23T01:06:15.574Z
@@ -15,7 +15,7 @@ Information governance often begins with a risk assessment and develop their inf
 1. **Why?** Determine an high-level cyber security risk policy for your organization that informs stakeholders and vendors on why this matters to you. 
 2. **Where?**  Adopt (and adapt) information security policies to your organizational needs/wants. These policies with inform where to focus control activities. 
 3. **What?**  Use the checklists to select items that align control activities with your polciies. These lists inform what actions you will take as an organization to improve your posture.
-4. **How?** Obtain implementaiton guideance from our team on how to implement the controls in a way that brings value and fits your needs.
+4. **How?** Obtain implementaiton guidance from our team on how to implement the controls in a way that brings value and fits your needs.
 
 **Additionally, we also track all NIST SP 800-171 Controls.** These can be viewed here:
 {.grid-list}
