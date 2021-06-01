@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-04-22T14:29:18.052Z
+date: 2021-06-01T18:57:12.918Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -29,21 +29,35 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 
 - [ ] Identify and record essential data for regular backups. 
 - [ ] Create a password policy. 
-- [ ] Enforce a strong password policy and but avoid using forced/scheduled password changes.  
+- [ ] Enforce a strong password policy and but avoid using forced/scheduled password changes. 
 - [ ] Enable user ability to change and rotate passwords on their terms.
 - [ ] Decide what access controls your users need so they can access only the information and systems required for their job role (least privilege principle). 
-- [ ] Decide what staff need access to USB drives Sign up to threat alerts and read cyber local advice e.g. briefing sheets/threat reports from www.bentosecurity.org/us-cert
-- [ ] Create an inventory of approved USB drives and their issued owners, and review whether the ownership is necessary periodically
+- [ ] Develop an incident response plan. 
+- [ ] Inventory, review, and document all of your materially signifcant vendors/applications/systems and develop a continuity policy for each. 
+- [ ] Conduct risk assessments of your critical apps and services.
+- [ ] Develop a training plan for staff. 
+- [ ] Determine how personal devices (BYOD) should be used and how will they be managed in the future as Microsoft and Google change support for unmanaged devices. 
+- [ ] Determine the approppriate level of insider threat detection. 
+- [ ] Write a clear procedure for onboarding staff (and workstations)
+- [ ] Write a clear procedure for offboarding staff (and retiring hardware)
 
 ## Technical actions 
-
 > These actions should be carried out by technical staff responsible for the setup and configuration of devices, networks and software.
 {.is-success}
-
+- [ ] Secure the domain registrar account by randomizing the password, storing it safely, and enabling all available security features such as PIN, MFA, and security questions.
+- [ ] Configure anti-spoofing systems (DMARC, DKIM, and SPF) on your domains.
+- [ ] Purchase/Deploy advanced security protection for e-mail. 
+- [ ] Pirchase/Deploy an advanced authentication management technology for SaaS. 
+- [ ] Enable "external" email notification on inbound email. 
+- [ ] Purchase/Deploy a CASB system to monitor your Microsoft 365/G-Suite/DropBox/SharePoint/OneDrive.
+- [ ] Purchase/Deploy a third-party backup for your Microsoft/Google e-mail system.
+- [ ] Purchase/Deploy an insider threat detection product. 
+- [ ] Configure Data Loss Protection features of your Microsoft 365/Google Workspace environment. 
 - [ ] Use separate administrative accounts on separate administration workstations.
 - [ ] Implement the principle of least privilege on data access.
 - [ ] Enable a personal firewall on organization workstations that is configured to deny unsolicited connection requests.
 - [ ] Install and monitor centralized on Anti-virus software (endpoint defense tools)
+- [ ] Deploy sufficient environment/system/application monitoring and alerts to meet your expectations for uptime, detection, and resolution of issues.
 - [ ] Maintain up-to-date antivirus signatures and engines.
 - [ ] Block access to physical ports for staff who do not need them. 
 - [ ] Consider making a password manager available to your staff to secure their passwords. 
@@ -65,8 +79,18 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [ ] Secure Remote Desktop Protocol (RDP) and other remote access solutions using MFA and “jump boxes” for access.
 - [ ] Disable unnecessary services on organization workstations and servers.
 
+### Hardware
+- [ ] Purchase and deploy cloud-controlled security appliance(s).
+- [ ] Purchase and deploy cloud-controlled end-user gateways for mobile workers.
+- [ ] Purchase and deploy cloud-controlled enterprise WiFi access points.
+- [ ] Purchase and deploy cloud-controlled smart switch(es).
+- [ ] Give each teleworker a company owned and managed computer.
+- [ ] Purchase hardware MFA keys. 
+
 ### Special Recommendations
 - [ ] If your organization has ever used SolarWinds Orion versions 2019.4 through 2020.2.1 HF1, refer to CISA’s Emergency Directive ED 21-01, associated supplemental guidance, and CISA’s Activity Alert AA20-352A for additional guidance prior to applying patches.  Although ED 21-01 and associated guidance only apply to Federal Civilian Executive Branch agencies, CISA encourages non-federal entities to review them for recommendations on operating the SolarWinds Orion platform.
+- [ ] If using Apple products, sign up for Apple Business Manager (with DEP)
+
 
 
 ## Training and awareness actions
