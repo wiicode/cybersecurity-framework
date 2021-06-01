@@ -2,7 +2,7 @@
 title: Antivirus and other security software
 description: Advice on the selection, configuration and use of antivirus and other security software on smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-01T20:47:37.838Z
+date: 2021-06-01T20:48:42.554Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:39:26.668Z
@@ -10,21 +10,19 @@ dateCreated: 2021-03-06T02:39:26.668Z
 
 Antivirus (AV) software are types of software products which attempt to detect, quarantine and/or block malware from running on devices.
 
-AV works in conjunction with network defences, device configuration and App Store scanning to try and block malware before it can cause harm to you or your organisation.
+AV works in conjunction with network defenses, device configuration and App Store scanning to try and block malware before it can cause harm to you or your organization.
 
-This guidance covers when AV might be beneficial, and gives some tips on how to manage AV products within an organisation.
+This guidance covers when AV might be beneficial, and gives some tips on how to manage AV products within an organization.
 
----
 
 ## Why use antivirus?
 
 Getting infected with malware - often ransomware - is one of the most common ways that IT systems can be compromised.
 
-Malware infection can result in theft of intellectual property, ransoming of data, and/or disruption to services provided by your organisation. As such, it's important for organisations try and prevent malware from infecting your devices.
+Malware infection can result in theft of intellectual property, ransoming of data, and/or disruption to services provided by your organization. As such, it's important for organizations try and prevent malware from infecting your devices.
 
-Using AV is one way of helping prevent infection, but there are many things to think about. Which product(s) should you use? How should you configure your AV? And how might AV interact with other defences your organisation deploys?
+Using AV is one way of helping prevent infection, but there are many things to think about. Which product(s) should you use? How should you configure your AV? And how might AV interact with other defenses your organization deploys?
 
----
 
 ## Preparation for antivirus use
 
@@ -45,24 +43,24 @@ This will be true when:
 -   Devices can only run software that is delivered through a public App Store which monitors for malicious code - e.g. the default configuration on most smartphones
 -   Devices can only run software that is delivered through an enterprise app catalogue, and you have a process for ensuring known malware is not added to that catalogue.
 -   You have software execution policies on your devices that prevent code from non-trusted signers from executing.
--   You enforce policies that prevent users from executing code from writable locations (including [non-application code such as macros](https://www.ncsc.gov.uk/guidance/macro-security-for-microsoft-office)), and trust all code that is present in read-only locations.
+-   You enforce policies that prevent users from executing code from writable locations (including [non-application code such as macros](/guidance/macro-security-for-microsoft-office)), and trust all code that is present in read-only locations.
 
 This means you should not need to use AV products on platforms like Chrome OS, Android and iOS in their default configuration.
 
-You can find advice on how to do achieve the same effect on other platforms in our [third-party applications guidance](https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications), and in the [detailed platform guides](https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides) for the specific platforms.
+You can find advice on how to do achieve the same effect on other platforms in our [third-party applications guidance](/collection/mobile-device-guidance/using-third-party-applications), and in the [detailed platform guides](/collection/mobile-device-guidance/platform-guides) for the specific platforms.
 
 **2\. If you decide you need to use AV products on your devices, you need to decide which one(s).**
 
-Windows, macOS and Android include built-in AV products by default and these will meet the needs of many organisations, but you may also wish to look at commercial third parties.
+Windows, macOS and Android include built-in AV products by default and these will meet the needs of many organizations, but you may also wish to look at commercial third parties.
 
 When deciding on which products to use, think about:
 
 -   Is third-party software required in order to protect your devices from malware?
 -   How will you keep the AV product up to date, including new signatures?
--   Using third-party AV that is still supported on [obsolete platforms](https://www.ncsc.gov.uk/collection/mobile-device-guidance/managing-the-risks-from-obsolete-products) might help manage some of the risks.
+-   Using third-party AV that is still supported on [obsolete platforms](/collection/mobile-device-guidance/managing-the-risks-from-obsolete-products) might help manage some of the risks.
 -   There are a variety of commercial paid and free products available, and some may have additional features you may find useful. Conduct a survey to find out which ones meet your needs.
 -   We don't recommend using more than one AV product on any device, the security benefit of doing so is minimal and the products may conflict with each other, potentially causing device stability issues.
--   An infected device within an organisation may quickly spread malware through your entire fleet of devices within your network, you should consider methods of [preventing lateral movement](https://www.ncsc.gov.uk/guidance/preventing-lateral-movement) if they become compromised.
+-   An infected device within an organization may quickly spread malware through your entire fleet of devices within your network, you should consider methods of [preventing lateral movement](/guidance/preventing-lateral-movement) if they become compromised.
 
 ---
 
@@ -71,9 +69,9 @@ When deciding on which products to use, think about:
 When choosing and configuring an AV or endpoint security application:
 
 -   If you are relying on built-in AV, you should ensure that it is enabled within your device configuration settings.
--   Decide which of your devices need AV products using the considerations above. This will mostly depend on the platforms used within your organisation.
--   Choose an AV product - or selection of products - that meets your organisation's needs and is compatible with the devices you use.
--   Ensure you [update the AV software](https://www.ncsc.gov.uk/collection/mobile-device-guidance/antivirus-and-other-security-softwar) when a new version is released and configure automatic updates where possible.
+-   Decide which of your devices need AV products using the considerations above. This will mostly depend on the platforms used within your organization.
+-   Choose an AV product - or selection of products - that meets your organization's needs and is compatible with the devices you use.
+-   Ensure you [update the AV software](/collection/mobile-device-guidance/antivirus-and-other-security-softwar) when a new version is released and configure automatic updates where possible.
 -   Test the AV product on your devices, and ensure that it does not conflict with existing AV or endpoint security applications.
 
 ---
@@ -82,21 +80,21 @@ When choosing and configuring an AV or endpoint security application:
 
 ### **Android**
 
-Use an *allow lists* to manage [permitted third-party applications](https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications) on Android. Disable installation of applications from unknown sources using your MDM.
+Use an *allow lists* to manage [permitted third-party applications](/collection/mobile-device-guidance/using-third-party-applications) on Android. Disable installation of applications from unknown sources using your MDM.
 
 However, there’s also [Play Protect](https://support.google.com/accounts/answer/2812853?hl=en) which acts much like a traditional AV product and regularly scans apps, reducing the risk of malware being loaded onto the platform from an untrusted source.
 
-Ensure your Android devices are [kept up to date](https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) and are supported by the manufacturer so that you have the latest defences against malware. Security updates in Android 10 will be distributed via Google Play. However, OEM-specific updates will still require independent patches from the manufacturer.
+Ensure your Android devices are [kept up to date](/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) and are supported by the manufacturer so that you have the latest defenses against malware. Security updates in Android 10 will be distributed via Google Play. However, OEM-specific updates will still require independent patches from the manufacturer.
 
 ### **iOS**
 
-The risk of becoming infected by malware on iOS is minimal, though we still recommend the use of an *allow list* to manage [permitted third-party applications](https://www.ncsc.gov.uk/collection/mobile-device-guidance/using-third-party-applications) on iOS.
+The risk of becoming infected by malware on iOS is minimal, though we still recommend the use of an *allow list* to manage [permitted third-party applications](/collection/mobile-device-guidance/using-third-party-applications) on iOS.
 
 Apple app review and your own third-party assessment process should combine to prevent malware from infecting your devices.
 
 In addition, as each application runs in a sandbox, AV products are unable to perform meaningful scans, so their use is of very limited value. 
 
-The only other ways to load applications are using Enterprise Developer accounts which should be blocked using MDM policies. The other route is by [jailbreaking the device, which we've blogged about previously](https://cesgdigital.blog.gov.uk/2015/11/23/do-i-need-jailbreak-detection-on-my-mobile-devices/). 
+The only other ways to load applications are using Enterprise Developer accounts which should be blocked using MDM policies. The other route is by jailbreaking the device.. 
 
 ### **Windows**
 
@@ -114,11 +112,11 @@ XProtect has a limited signature set, which is maintained by Apple to detect wid
 
 There is little evidence to suggest that AV is effective or necessary on Chrome OS.
 
-Enterprise administrators can (and should) enforce application control policies based on code signatures, as described in our [detailed platform guidance](https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides), reducing the risk of malware infection.
+Enterprise administrators can (and should) enforce application control policies based on code signatures, as described in our [detailed platform guidance](/collection/mobile-device-guidance/platform-guides), reducing the risk of malware infection.
 
-Furthermore, Chrome OS only allows you to install software that has been authorised in their store (including Android store), so applications have been through the various checks that are implemented there.
+Furthermore, Chrome OS only allows you to install software that has been authorized in their store (including Android store), so applications have been through the various checks that are implemented there.
 
-Users who configure their Chrome OS into Developer Mode may still be able to run malicious code, so Developer Mode should be prevented using [mobile device management](https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services), unless needed.
+Users who configure their Chrome OS into Developer Mode may still be able to run malicious code, so Developer Mode should be prevented using [mobile device management](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services), unless needed.
 
 ### **Linux**
 
