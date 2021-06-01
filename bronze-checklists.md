@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-06-01T18:57:12.918Z
+date: 2021-06-01T18:58:04.359Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -79,7 +79,7 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [ ] Secure Remote Desktop Protocol (RDP) and other remote access solutions using MFA and “jump boxes” for access.
 - [ ] Disable unnecessary services on organization workstations and servers.
 
-### Hardware
+## Hardware
 - [ ] Purchase and deploy cloud-controlled security appliance(s).
 - [ ] Purchase and deploy cloud-controlled end-user gateways for mobile workers.
 - [ ] Purchase and deploy cloud-controlled enterprise WiFi access points.
@@ -87,11 +87,9 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [ ] Give each teleworker a company owned and managed computer.
 - [ ] Purchase hardware MFA keys. 
 
-### Special Recommendations
+## Special Recommendations
 - [ ] If your organization has ever used SolarWinds Orion versions 2019.4 through 2020.2.1 HF1, refer to CISA’s Emergency Directive ED 21-01, associated supplemental guidance, and CISA’s Activity Alert AA20-352A for additional guidance prior to applying patches.  Although ED 21-01 and associated guidance only apply to Federal Civilian Executive Branch agencies, CISA encourages non-federal entities to review them for recommendations on operating the SolarWinds Orion platform.
 - [ ] If using Apple products, sign up for Apple Business Manager (with DEP)
-
-
 
 ## Training and awareness actions
 
