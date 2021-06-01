@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-06-01T19:15:24.901Z
+date: 2021-06-01T19:15:58.759Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -15,8 +15,8 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [NIST SP 800-171 Controls *Governmentwide Controlled Unclassified Information (CUI) 3 Program to standardize the way the executive branch handles unclassified information that requires protection. The CUI Program is designed to address several deficiencies in managing and protecting unclassified information to include inconsistent markings, inadequate safeguarding, and needless restrictions, both by standardizing procedures and by providing common definitions through a CUI Registry.*](/bronze-checklists/compliance-checklist-NIST-800-171)
 {.links-list}
 
-# Starting at zero? Here are actions You Can Take Right Now
-> It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the **most basic set of actions** your company can do to start improving your cyber security posture. If these seem a little too simple for you, great!, head over to [BCSF Advanced Controls](/bronze-checklists/bcsf-advanced-control-checklists) for the comprehensive list. 
+# BCSF Core Controls List
+> It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the **most basic set of actions** your company can do to start improving your cyber security posture. If these seem a little too simple for you, great!, head over to [Advanced Controls](/silver-controls) for the comprehensive list. 
 {.is-info}
 
 
