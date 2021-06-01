@@ -2,13 +2,13 @@
 title: Choosing mobile devices
 description: Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organization.
 published: true
-date: 2021-06-01T20:09:44.075Z
+date: 2021-06-01T20:09:55.403Z
 tags: bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:26:13.051Z
 ---
 
-When choosing laptops, mobile phones and tablets for use by your organisation, there will be many competing factors to consider. Price, functionality and portability will all play a part in your decision-making process, and security should too.
+When choosing laptops, mobile phones and tablets for use by your organization, there will be many competing factors to consider. Price, functionality and portability will all play a part in your decision-making process, and security should too.
 
 This guidance will help you properly assess the security aspects of the devices you are considering. The goal is to ensure you purchase and use devices which are able to provide the level of security your work requires.
 
@@ -22,7 +22,7 @@ If your users can't work effectively with the devices you give them, they will f
 
 ## Preparation for device procurement
 
-Once you know that the devices under consideration will fulfill all the needs of your users, you should apply some thought to the security of the machines, and the systems they run.
+Once you know that the devices under consideration will fulfilll all the needs of your users, you should apply some thought to the security of the machines, and the systems they run.
 
 We've listed the most important aspects you should consider below. These are grouped by device type, for Android, macOS and Windows. In the most part, iOS and Chrome OS devices do not have specific security considerations to distinguish between them. Linux device considerations, including Ubuntu, are mostly the same as Windows devices.
 
@@ -95,7 +95,7 @@ In some cases though, certain security features require a combination of specifi
 
 ### **BYOD**
 
-If you're permitting [Bring Your Own Device (BYOD)](/bronze-controls/byod-guidance) within your organisation, you might not be able to choose your users' devices.
+If you're permitting [Bring Your Own Device (BYOD)](/bronze-controls/byod-guidance) within your organization, you might not be able to choose your users' devices.
 
 In this case, it's likely not possible to impose any of the above security measures on your users, and your security may suffer as a result.
 
@@ -108,9 +108,9 @@ Ultimately, the process for deciding which devices to use is a few short steps.
 You should:
 
 -   Assess which operating systems support the software features and apps your users need to use to get their jobs done
--   Decide on device manufacturer(s) that can meet the security requirements for your organisation as described above
+-   Decide on device manufacturer(s) that can meet the security requirements for your organization as described above
 -   Decide on device types(s) that have the performance and hardware features that your users need, and that come within your budget
--   Pilot devices before deploying them widely to ensure you have covered all aspects of the device selection that are relevant to your organisation.
+-   Pilot devices before deploying them widely to ensure you have covered all aspects of the device selection that are relevant to your organization.
 -   Select the device or devices that best meet your business requirements and budget.
 -   Develop a strategy for updating your list of approved devices.
 
