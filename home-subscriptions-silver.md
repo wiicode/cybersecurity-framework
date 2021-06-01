@@ -2,7 +2,7 @@
 title: Getting Started with Silver Access
 description: 
 published: true
-date: 2021-06-01T19:46:01.055Z
+date: 2021-06-01T19:53:04.323Z
 tags: home, silver
 editor: markdown
 dateCreated: 2021-03-02T03:44:44.740Z
@@ -24,8 +24,8 @@ In the [Core Controls](/bronze-controls) section you became familiar with specif
 
 At this stage you are ready to look beyond the internal operations and consider more developed implementations for:
 
-- [Advanced Security Principles *Deep focus on the security and trust of your SaaS/Cloud based applications*]()
+- [Advanced Security Principles *Deep focus on the security and trust of your SaaS/Cloud based applications*](/silver-training)
 - [Advanced Security Controls *Standardized controls aligned with evidence collection and attestation programs.*](/silver-controls)
-- [Security Awareness Training *Staff should understand their role in keeping your organization secure and report any unusual activity*]()
+- [Security Awareness Training *Staff should understand their role in keeping your organization secure and report any unusual activity*](/silver-training-modules)
 {.links-list}
 
