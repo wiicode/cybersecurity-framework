@@ -2,7 +2,7 @@
 title: Small Business: Improving Your Posture
 description: How to improve your cybersecurity posture when starting at zero. 
 published: true
-date: 2021-03-05T19:16:44.060Z
+date: 2021-06-01T18:28:14.989Z
 tags: bronze, bronze-training
 editor: markdown
 dateCreated: 2021-02-20T18:32:43.513Z
@@ -161,9 +161,9 @@ The simplest precaution is not to connect to the Internet using unknown hotspots
 > 5 things to keep in mind when using passwords.
 {.is-info}
 
-Your laptops, computers, tablets and smartphones will contain a lot of your own business-critical data, the personal information of your customers, and also details of the online accounts that you access. It is essential that this data is available to you, but not available to unauthorised users.
+Your laptops, computers, tablets and smartphones will contain a lot of your own business-critical data, the personal information of your customers, and also details of the online accounts that you access. It is essential that this data is available to you, but not available to unauthorized users.
 
-Passwords - when implemented correctly - are a free, easy and effective way to prevent unauthorised users accessing your devices. This section outlines 5 things to keep in mind when using passwords.
+Passwords - when implemented correctly - are a free, easy and effective way to prevent unauthorized users accessing your devices. This section outlines 5 things to keep in mind when using passwords.
 
 ## Tip 1: Make sure you switch on password protection
 
