@@ -2,13 +2,13 @@
 title: Supply chain attack examples
 description: Constantly evolving attacks mean organisations should ensure they also evolve defences
 published: true
-date: 2021-03-10T02:01:19.027Z
+date: 2021-06-01T19:57:29.940Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:54:57.644Z
 ---
 
-Outlined in this section are examples of supply chain attacks that illustrate the challenges organisations face. Attacks are constantly evolving and you should ensure you keep up to date with these. Whilst these are primarily cyber attacks it is important to also consider threats such as fraud, theft and insiders.
+Outlined in this section are examples of supply chain attacks that illustrate the challenges organizations face. Attacks are constantly evolving and you should ensure you keep up to date with these. Whilst these are primarily cyber attacks it is important to also consider threats such as fraud, theft and insiders.
 
 # Third party software providers
 > Learn about an example of a supply chain attack through a third party software provider, where a legitimate industrial control system is 'trojanised'.
@@ -62,7 +62,7 @@ The victim was a credit bureau for numerous businesses, providing “knowledge-b
 > Learn what supply chain attacks known as watering hole attacks are, how they work, and real-world examples of this type of attack.
 {.is-info}
 
-A watering hole attack works by identifying a website that's frequented by users within a targeted organisation, or even an entire sector, such as defence, government or healthcare.That website is then compromised to enable the distribution of malware.
+A watering hole attack works by identifying a website that's frequented by users within a targeted organization, or even an entire sector, such as defense, government or healthcare.That website is then compromised to enable the distribution of malware.
 
 The attacker identifies weaknesses in the main target’s cyber-security, then manipulates the watering hole site to deliver malware that will exploit these weaknesses.
 
