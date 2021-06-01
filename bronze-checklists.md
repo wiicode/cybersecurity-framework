@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-06-01T19:15:58.759Z
+date: 2021-06-01T19:33:37.747Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -12,7 +12,6 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 
 {.grid-list}
 - [BCSF Layered Defense Example *This checklist is a relatively common example of activities/controls used by our customers. While it does not meet minimum standards for cyber security, it is a list that offers substantial value in risk-reduction when implemented.*](/bronze-checklists/layered-defense)
-- [NIST SP 800-171 Controls *Governmentwide Controlled Unclassified Information (CUI) 3 Program to standardize the way the executive branch handles unclassified information that requires protection. The CUI Program is designed to address several deficiencies in managing and protecting unclassified information to include inconsistent markings, inadequate safeguarding, and needless restrictions, both by standardizing procedures and by providing common definitions through a CUI Registry.*](/bronze-checklists/compliance-checklist-NIST-800-171)
 {.links-list}
 
 # BCSF Core Controls List
