@@ -2,15 +2,13 @@
 title: Security Principles
 description: 
 published: true
-date: 2021-05-28T02:32:47.639Z
+date: 2021-06-01T19:09:26.053Z
 tags: home, silver
 editor: markdown
 dateCreated: 2020-08-05T18:05:00.302Z
 ---
 
-# Advanced Security Principles
-
-**For each of the 14 principles, we answer three questions:**
+**For each of the principles, we answer three questions:**
 
 > **What is the principle?**
 A description giving the principle some context
@@ -23,6 +21,8 @@ Concrete objectives for the implementation to achieve
 > **How is the principle implemented?** 
 Details for a set of possible implementations
 {.is-info}
+
+# Advanced Security Principles
 
 {.grid-list}
 - [1. Data in transit protection*User data transiting networks should be adequately protected against tampering and eavesdropping.*](/silver-training/cloudsecurity-1-data)
