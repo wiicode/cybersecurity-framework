@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-06-01T18:58:04.359Z
+date: 2021-06-01T18:58:47.887Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -102,3 +102,4 @@ BCSF provides a series of core and advanced check-lists for securing your enviro
 - [ ] Include how to spot the obvious signs of phishing. 
 - [ ] Include details of your reporting process if staff suspect phishing. 
 - [ ] Include details on how your business operates and how they deal with requests via email. Include details of Wi-Fi hotspot vulnerabilities and how to use alternative options (e.g VPN/ Mobile network).
+- [ ] Test their compliance. 
