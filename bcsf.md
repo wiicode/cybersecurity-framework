@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-05-27T19:33:59.380Z
+date: 2021-06-01T13:57:55.591Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -665,7 +665,7 @@ In addition to meeting the expectations of 10 Steps: Incident Management, you sh
 
 The business continuity implications of any compromise should also be taken into account and your cyber incident response plans should link to other business response functions. You should form a cyber response team that is capable of implementing the plan, with the appropriate skills, tools and reach into other parts of your organization, such as security monitoring and business continuity.
 
-In practice, the Incident Response function should interoperate with the security monitoring function. The Incident Response Function needn't be a dedicated team and some members may have non-response related roles. Collectively, the team should have knowledge of IT security, IT infrastructure and Business Management, any specialist technologies (e.g. Operational Technologies or datacentres), incident reporting requirements, and Communications plans.
+In practice, the Incident Response function should interoperate with the security monitoring function. The Incident Response Function needn't be a dedicated team and some members may have non-response related roles. Collectively, the team should have knowledge of IT security, IT infrastructure and Business Management, any specialist technologies (e.g. Operational Technologies or datacenters), incident reporting requirements, and Communications plans.
 
 Your plan should cover all relevant potential incidents. It should be auditable and testable (via exercises) across a range of incident scenarios and should encompass all realistic descriptions of what might constitute an incident and its severity. Your test scenarios should draw on threat intelligence, past incidents, exercises and the ways in which security capabilities (e.g. security monitoring and alerting) would feature in your response options. Your scenarios should also consider incidents that involve suppliers and your wider supply chain (e.g. incidents arising through supplier relations, or relying on suppliers as part of your response).
 
