@@ -2,7 +2,7 @@
 title: Getting Started with Silver Access
 description: 
 published: true
-date: 2021-06-01T19:05:39.304Z
+date: 2021-06-01T19:38:42.525Z
 tags: home, silver
 editor: markdown
 dateCreated: 2021-03-02T03:44:44.740Z
@@ -11,6 +11,8 @@ dateCreated: 2021-03-02T03:44:44.740Z
 
 > The Internet can be a hostile environment. The threat of attack is ever present as new vulnerabilities are released and commodity tools are produced to exploit them. Doing nothing is no longer an option. Protect your organization and your reputation by establishing some basic cyber defenses to ensure that your name is not added to the growing list of victims.
 {.is-info}
+
+![bentosecurityprojectdiagram_v4.png](/public/bentosecurityprojectdiagram_v4.png)
 
 Before investing in defenses, many organizations often want concrete evidence that they are, or will be targeted, by specific threats. Unfortunately, in cyberspace it is often difficult to provide an accurate assessment of the threats that specific organizations face.
 
