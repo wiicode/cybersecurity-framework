@@ -2,7 +2,7 @@
 title: Using biometrics
 description: Advice for IT system administrators on using biometric authentication on smartphones, tablets, laptops and desktop PCs.
 published: true
-date: 2021-06-01T20:16:10.120Z
+date: 2021-06-01T20:47:26.095Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:38:31.201Z
@@ -12,7 +12,6 @@ Biometrics are biological characteristics of an individual, such as face or fin
 
 Use of fingerprint or face recognition for device authentication is now commonplace on smartphones and tablets. It is also increasingly becoming available on laptops. This guidance will present the benefits of using biometrics whilst also highlighting potential security risks.
 
----
 
 ## Why use biometrics?
 
@@ -24,7 +23,6 @@ However, vulnerabilities do still exist in biometric systems, including spoofing
 
 This guidance will help organizations assess the benefits of using biometrics on mobile devices against potential security risks.
 
----
 
 ## Preparing for biometrics
 
@@ -34,9 +32,9 @@ The most common methods of biometric authentication on smartphones, tablets, PCs
 
 Biometrics work in a slightly different way to something like a PIN or password. In the case of a PIN or a password, an access control system will compare the stored value with the one entered by an individual. If they are identical, access will be granted.
 
-However, in the case of biometrics, no two captures of biometric data can produce truly identical results. So, verification of a user’s identity is not a simple comparison. Instead, biometric data captured at login is compared to the enrollled biometric data, stored on the device. The system then *judges* whether these two biometrics are sufficiently similar to be the same person.
+However, in the case of biometrics, no two captures of biometric data can produce truly identical results. So, verification of a user’s identity is not a simple comparison. Instead, biometric data captured at login is compared to the enrolllled biometric data, stored on the device. The system then *judges* whether these two biometrics are sufficiently similar to be the same person.
 
-Stored samples are normally held in such a way that they cannot be reversed to reproduce the original face or fingerprint that was initially enrollled.
+Stored samples are normally held in such a way that they cannot be reversed to reproduce the original face or fingerprint that was initially enrolllled.
 
 ### **What are the benefits?**
 
@@ -76,17 +74,16 @@ As an example, [Apple report](https://support.apple.com/en-gb/HT208108) the pr
 
 #### **Privacy**
 
-Biometric data is classed as personally identifying information and therefore is subject to regulation, such as GDPR. On mobile devices, explicit consent to use biometrics must be gained since the user must choose to enroll a biometric.
+Biometric data is classed as personally identifying information and therefore is subject to regulation, such as GDPR. On mobile devices, explicit consent to use biometrics must be gained since the user must choose to enrolll a biometric.
 
 For the built-in biometric authentication features, the processing and capture of data is also usually performed entirely on the device. It will not, for example, be backed up to [built-in cloud services](/bronze-training/mobile-device-guidance/using-built-in-cloud-services) If you are using third-party apps that implement a separate biometric authentication step you should investigate how those biometric templates will be protected.
 
----
 
 ## How to use biometrics
 
 Unless you have specific users with a particularly high physical attack risk, we recommend biometrics be enabled for users who wish to use them. More specifically, when using biometrics on mobile devices, you should:
 
--   Assess the security risks, privacy and performance of biometrics based on the considerations above. Manufacturer documentation can help with this, as well as researching any published vulnerabilities in the particular [device(s) you are intending to use](https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-devices).
--   Provide [guidance to your users](https://www.ncsc.gov.uk/collection/mobile-device-guidance/advising-end-users) on the use of biometrics, security risks, and the associated security policy.
--   Where necessary and if possible, use [mobile device management (MDM)](https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services) to manage use of biometrics in line with your organization’s [authentication](https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy) policy. More detailed guidance for particular operating systems can be found in the [BCSF platform specific guidance](https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides).
--   Ensure appropriate fallback mechanisms, such as device PIN or device password, are configured and security policies enforced, if possible, using [MDM](https://www.ncsc.gov.uk/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services).
+-   Assess the security risks, privacy and performance of biometrics based on the considerations above. Manufacturer documentation can help with this, as well as researching any published vulnerabilities in the particular [device(s) you are intending to use](/bronze-training/mobile-device-guidance/choosing-devices).
+-   Provide [guidance to your users](/bronze-training/mobile-device-guidance/advising-end-users) on the use of biometrics, security risks, and the associated security policy.
+-   Where necessary and if possible, use [mobile device management (MDM)](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services) to manage use of biometrics in line with your organization’s [authentication](/bronze-training/mobile-device-guidance/enterprise-authentication-policy) policy. More detailed guidance for particular operating systems can be found in the BCSF platform specific guidance..
+-   Ensure appropriate fallback mechanisms, such as device PIN or device password, are configured and security policies enforced, if possible, using [MDM](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services)
