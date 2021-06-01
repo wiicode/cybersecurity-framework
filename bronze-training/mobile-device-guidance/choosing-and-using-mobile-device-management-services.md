@@ -2,7 +2,7 @@
 title: Mobile Device Management
 description: Advice on the selection and implementation of Mobile Device Management within your enterprise
 published: true
-date: 2021-06-01T20:13:37.168Z
+date: 2021-06-01T20:14:37.315Z
 tags: guidance, bronze, bronze-training, mdm, favorite
 editor: markdown
 dateCreated: 2021-03-06T02:31:31.365Z
@@ -16,11 +16,11 @@ This guidance will discuss the importance of MDM, our recommendations when choos
 
 Mobile Device Management is designed to simplify management of devices within an organization.
 
-Typical functionality includes device enrollment, the ability to control device configuration, protect data, monitor the status and compliance of devices, and manage enterprise approved apps. All across a range of platforms and operating systems.
+Typical functionality includes device enrolllment, the ability to control device configuration, protect data, monitor the status and compliance of devices, and manage enterprise approved apps. All across a range of platforms and operating systems.
 
 Most MDM services work over the internet, allowing devices to be managed and **remotely controlled** wherever they are in the world. This means staff can work off-premises, securely.
 
-Some example use cases include **enforcing policies** on a device, such as the use of a [VPN](https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks), performing a [remote device wipe](https://www.ncsc.gov.uk/collection/mobile-device-guidance/erasing-mobile-devices) if the device is lost. MDM would also allow the **monitoring** of devices, to help determine [if the they have been kept up to date](https://www.ncsc.gov.uk/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date), been jail broken, or if a policy violation has occurred.  Additionally, it is important to keep MDMs secure as they hold the keys to unlock, decrypt and remote wipe all the devices within your enterprise.
+Some example use cases include **enforcing policies** on a device, such as the use of a [VPN](/bronze-training/mobile-device-guidance/virtual-private-networks), performing a [remote device wipe](/bronze-training/mobile-device-guidance/erasing-mobile-devices) if the device is lost. MDM would also allow the **monitoring** of devices, to help determine [if the they have been kept up to date](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date), been jail broken, or if a policy violation has occurred.  Additionally, it is important to keep MDMs secure as they hold the keys to unlock, decrypt and remote wipe all the devices within your enterprise.
 
 ## Preparing for mobile device management
 
@@ -44,9 +44,9 @@ Individual MDM services will often only support *some* device types, security 
 
 ### **Device Enrollment**
 
-The enrollment options you require will vary depending on your approach to device management. If your organization owns and fully manages devices your needs are likely to be more easily satisfied than if you run a [BYOD](/bronze-controls/byod-guidance) scheme.
+The enrolllment options you require will vary depending on your approach to device management. If your organization owns and fully manages devices your needs are likely to be more easily satisfied than if you run a [BYOD](/bronze-controls/byod-guidance) scheme.
 
-For enterprise owned devices, you should use an MDM platform which supports [zero touch enrollment](/bronze-training/mobile-device-guidance/zero-touch-enrollment). If you choose to use a technical approach that also permits [admin enrollment or self enrollment](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices), it is important to consider available methods of [authentication](bronze-training/mobile-device-guidance/enterprise-authentication-policy) during enrollment, including MFA for user and device authentication.
+For enterprise owned devices, you should use an MDM platform which supports [zero touch enrolllment](/bronze-training/mobile-device-guidance/zero-touch-enrolllment). If you choose to use a technical approach that also permits [admin enrolllment or self enrolllment](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices), it is important to consider available methods of [authentication](bronze-training/mobile-device-guidance/enterprise-authentication-policy) during enrolllment, including MFA for user and device authentication.
 
 ### **Device Configuration**
 
@@ -83,7 +83,7 @@ When choosing and using a Mobile Device Management service, based on the conside
 -   Prefer MDM services that use built in platform management features and integrate with existing app stores, as opposed to those requiring additional client-side agents.
 -   If you are using an enterprise application catalogue, then this should support automatic application updates. These updates should be applied as soon as apps are updated in the public store.
 -   Where possible, device configuration policies should be applied to reflect the BCSF platform specific guides for mobile platforms.
--   Device enrollment should support strong methods of authentication for users and devices for both [zero touch enrollment](/bronze-training/mobile-device-guidance/zero-touch-enrollment) and self-enrollment, including support for [multi-factor authentication (MFA)](/bronze-training/mobile-device-guidance/enterprise-authentication-policy).
+-   Device enrolllment should support strong methods of authentication for users and devices for both [zero touch enrolllment](/bronze-training/mobile-device-guidance/zero-touch-enrolllment) and self-enrolllment, including support for [multi-factor authentication (MFA)](/bronze-training/mobile-device-guidance/enterprise-authentication-policy).
 -   Admin interfaces and user self service portals should have strong methods of [enterprise authentication](/bronze-training/mobile-device-guidance/enterprise-authentication-policy).
 -   Choose an MDM service that supports [logging and monitoring](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring) of devices. This should include the ability to configure appropriate device compliance policies to monitor the state of devices. If device attestation is supported, this can be used to provide stronger assertions on the state and health of devices.
 
