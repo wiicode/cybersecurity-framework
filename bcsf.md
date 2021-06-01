@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-06-01T13:57:55.591Z
+date: 2021-06-01T18:12:01.978Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -59,38 +59,34 @@ Decisions about risk can be made at all levels of your organization when delegat
 ## Risk management standards
 Following a standardized risk management approach can help in achieving good cyber security governance. There are many such standards to choose from. Some of the most well-known are:
 
-### NIST Special Publication (SP) 800-37
-*Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy*
+| Standard | Summary |
+| -------- | ------  |
+|NIST Special Publication (SP) 800-37|*Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy*
+| |This publication provides guidelines for applying the Risk Management Framework (RMF) to information systems and organizations. The RMF includes a disciplined, structured, and flexible process for organizational asset valuation; security and privacy control selection, implementation, and assessment; system and control authorizations; and continuous monitoring. |
 
-This publication provides guidelines for applying the Risk Management Framework (RMF) to information systems and organizations. The RMF includes a disciplined, structured, and flexible process for organizational asset valuation; security and privacy control selection, implementation, and assessment; system and control authorizations; and continuous monitoring. 
+| |It also includes enterprise-level activities to help better prepare organizations to execute the RMF at the system level. The RMF promotes the concept of near real-time risk management and ongoing system authorization through the implementation of continuous monitoring processes; provides senior leaders and executives with the necessary information to make cost-effective, risk management decisions about the systems supporting their missions and business functions; and integrates security and privacy controls into the system development life cycle. |
 
-It also includes enterprise-level activities to help better prepare organizations to execute the RMF at the system level. The RMF promotes the concept of near real-time risk management and ongoing system authorization through the implementation of continuous monitoring processes; provides senior leaders and executives with the necessary information to make cost-effective, risk management decisions about the systems supporting their missions and business functions; and integrates security and privacy controls into the system development life cycle. 
+| |Applying the RMF tasks enterprise-wide helps to link essential risk management processes at the system level to risk management processes at the organization level. In addition, it establishes responsibility and accountability for the security and privacy controls deployed within organizational systems and inherited by those systems. |
 
-Applying the RMF tasks enterprise-wide helps to link essential risk management processes at the system level to risk management processes at the organization level. In addition, it establishes responsibility and accountability for the security and privacy controls deployed within organizational systems and inherited by those systems. 
+| |The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act.|
 
-The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act.
+| ISO 27001 | *An Information Security Management System can aid governance of cyber security risk* |
 
-### ISO 27001
-*An Information Security Management System can aid governance of cyber security risk*
+| |An Information Security Management System (ISMS) is a set of policies, procedures, and roles designed to ensure cyber security risks are identified and managed. Traditionally an ISMS is considered to be an information risk management system, however it can be used to manage cyber security risks to essential functions.|
 
-An Information Security Management System (ISMS) is a set of policies, procedures, and roles designed to ensure cyber security risks are identified and managed. Traditionally an ISMS is considered to be an information risk management system, however it can be used to manage cyber security risks to essential functions.
+| |A properly scoped and implemented ISMS can help your organization to meet requirements your organization might have to protect essential functions by putting in place policies, procedures, and roles which govern the organizational approach to managing cyber security risks to those functions.. |
 
-A properly scoped and implemented ISMS can help your organization to meet requirements your organization might have to protect essential functions by putting in place policies, procedures, and roles which govern the organizational approach to managing cyber security risks to those functions.. 
+| |ISO 27001 is one of many standards you can use to implement an ISMS. If your organization is intending to use ISO 27001, you should consider which elements will help achieve your organizational objectives - full compliance and certification may be unnecessary. |
 
-ISO 27001 is one of many standards you can use to implement an ISMS. If your organization is intending to use ISO 27001, you should consider which elements will help achieve your organizational objectives - full compliance and certification may be unnecessary. 
+| |Your organization must incorporate into the ISMS any relevant external requirements, for example direction from a regulator.  You should also set appropriate cyber security requirements for your supply chain to ensure their support in achieving yourcyber security and resilience objectives (see A4 Supply Chain Security).|
 
-Your organization must incorporate into the ISMS any relevant external requirements, for example direction from a regulator.  You should also set appropriate cyber security requirements for your supply chain to ensure their support in achieving yourcyber security and resilience objectives (see A4 Supply Chain Security).
+#### Section References 
+{.grid-list}
+- [BCSF Introduction to Security Governance](/bronze-training/background-topics/risk-1-intro)
+- [BCSF Board Toolkit](/bronze-training/background-boards)
+- [ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)
+{.links-list}
 
-### IEC 62443-2-1:2010
-An industrial automation and control system (IACS) cyber security management system (CSMS) that is relevant to organizations responsible for essential functions in some particular sectors.
-
-The CSMS defined in IEC 62443-2-1 is designed to build on ISO 27001 & 27002 for IACS environments, with the aim of aligning cyber security risk management with existing safety risk management practices. A management system framework is provided as a baseline, which organizations are encouraged to tailor for their own context.
-
-`References
-BCSF Introduction to Security Governance
-BCSF Board Toolkit
-ISO 27001
-IEC 62443-2-1:2010`
 
 # Mindful risk management (A.2)
 > Identification, assessment and understanding of security risks. And the establishment of an overall organizational approach to risk management.
@@ -117,11 +113,14 @@ Whichever approach you choose, the scope of your program must include all system
 
 Where industrial control and automation systems are in scope of the essential function, you should keep in mind that controls suitable for managing risks on the corporate IT network may be inappropriate or damaging in an operational technology environment. These systems will likely require a more tailored approach, and some frameworks and standards address specific concerns relating to such systems.
 
-`References
-BCSF Risk Management Guidance
-BCSF Assurance
-BCSF Penetration Testing Guidance
-BCSF Cloud Security Collection: Having confidence in cyber security`
+
+#### Section References 
+{.grid-list}
+- [BCSF Risk Management Guidance](/bronze-training/background-topics/risk-1-intro)
+- [BCSF Assurance](/bronze-training/background-topics/cloud-security-2-confidence)
+- [BCSF Cloud Security Collection](/silver-training/)
+{.links-list}
+
 
 # Mindful asset management (A.3)
 > Determining and understanding all systems and/or services required to maintain or support essential functions.
@@ -155,10 +154,13 @@ This standard aligns with ISO 27001 and can be used in conjunction with it or in
 
 ITIL best practice recommends a staged approach to IT asset management. You may find this useful for improving management of your IT assets, but must keep in mind that there may be assets and dependencies beyond the corporate IT domain as outlined above.
 
-`References
-ISO 27001/2
-ISO 55001 - Asset Management
-ITIL`
+#### Section References
+{.grid-list}
+- [ISO 27001/2](#)
+- [ISO 55001 - Asset Management](#)
+- [ITIL](#)
+{.links-list}
+
 
 # Mindful supply chain (A.3)
 > Understanding and managing the security risks to networks and information systems which arise from dependencies on external suppliers.
@@ -183,10 +185,13 @@ Organzations responsible for essential functions need to ensure that when third 
 - Ensure that any network connections or data sharing with third parties do not introduce unmanaged vulnerabilities that have the potential to affect the security of the essential function.
 - Confidence that third party suppliers are trustworthy such that malicious attempts to subvert the security of products or systems that could affect the essential function are managed.
 
-`References
-BCSF Supply Chain Security
-BCSF Cloud Security Principle 8: Supply Chain Security
-Cloud Security Alliance (CSA) Security, Trust & Assurance Registry (STAR)`
+#### Section References 
+{.grid-list}
+- [BCSF Supply Chain Security](/bronze-training/background-advanced/10-steps-risk-supply-chain-security)
+- [BCSF Advanced Security Principle 8: Supply Chain Security](/silver-training/cloudsecurity-8-supplychain)
+{.links-list}
+
+
 
 # Methodical service protection policies and processes (B.1)
 Defining and communicating appropriate organizational policies and processes to secure systems and data that support the operation of essential functions.
@@ -241,14 +246,12 @@ Suitable data and metrics should be defined prior to implementation to evaluate 
 ### Improving policies and processes
 Cyber security and resilience policies and processes should be designed to be adaptable, to fit the needs of the changing environment. organizations should regularly review their policies and processes in light of any recorded security breaches so that these documents and the organization’s security can be continually improved.
 
-`References
-HP & University College London whitepaper "The Compliance Budget"
-SANS blog on security costs to people
-SANS information security policy templates
-ISO/IEC 27001 & 27002
-IEC TS 62443-1-1 & 62443-2-1
-CPNI's Personnel and People Security
-The BCSF's You shape security`
+#### Section References 
+{.grid-list}
+- [SANS blog on security costs to people](https://www.sans.org/blog/managing-human-risk-start-with-the-risks/)
+- [SANS Policy Templates](https://www.sans.org/information-security-policy/)
+{.links-list}
+
 
 # Methodical identity and access control (B.2)
 > Understanding, documenting and controlling access to networks and information systems supporting essential functions.
@@ -275,12 +278,15 @@ The Introduction to identity and access management sets out security fundamental
 
 In addition to technical security, organizations should protect physical access to networks and information systems supporting the essential function, to prevent unauthorized access, tampering or data deletion. Some organizations may already have physical security measures in place to comply withnon-cyber regulatory frameworks. See CPNI guidance for further information.
 
-`References
-BCSF Introduction to identity and access management
-CPNI Physical Security guidance
-BS ISO/IEC 27002
-IEC 62443-2-1
-NIST Identity and Access Management publications, e.g. SP 800-63 suite "Digital Identity Guidelines"`
+
+#### Section References
+{.grid-list}
+- [BCSF Introduction to identity and access management](#)
+- [ISO/IEC 27002](#)
+- [NIST Identity and Access Management publication](#)
+- [SP 800-63 suite "Digital Identity Guidelines"](#)
+{.links-list}
+
 
 # Methodical data security (B.3)
 > Protecting stored or electronically transmitted data from actions that may cause an adverse impact on essential functions.
@@ -439,14 +445,17 @@ You should prevent the exploitation of known vulnerabilities in networks and inf
 - regular vulnerability and security assessments, e.g. penetration tests and vulnerability scans. BCSF guidance on penetration testing provides further detail. Operators should carefully consider their approach to the testing of live Operational Technology, as system operation or availability could be affected. Assurance could be gained without this additional risk by testing against non-operational environments or by testing individual components in a laboratory environment.
 - software that the essential function relies upon should be in active support, so vulnerabilities will be patched. You should provide additional protection where obsolete platforms cannot be easily replaced.
 
-`References
-BCSF Common Cyber Attacks: Reducing the Impact
-BCSF Mitigating malware
-BCSF Obsolete platforms security guidance
-BCSF Penetration testing
-BCSF Secure by default platforms
-IEC TS 62443-1-1
-ISO/IEC 27002`
+#### Section References 
+{.grid-list}
+- [BCSF Common Cyber Attacks: Reducing the Impact](/bronze-training/background-boards/board-planning-response)
+- [BCSF Mitigating malware](/silver-training/mitigating-ransomware)
+- [BCSF Obsolete platforms security guidance](#)
+- [BCSF Penetration testing](/bronze-checklists/bcsf-advanced-control-checklists)
+- [BCSF Secure by default platforms](/silver-training/end-user-device-guidance)
+- [ISO/IEC 27002](#)
+{.links-list}
+
+
 
 # Methodical Resilient networks and systems (B.5)
 > Building resilience against cyber attack.
@@ -485,13 +494,15 @@ In the event of a adverse event, you should be able to revert to backups of hard
 
 Suitable alternative backups may include paper-based information and manual processes. Other essential backups may include personnel with appropriate knowledge and access to up-to-date documentation. Consider how to make it easy to recover following an incident or compromise.
 
-`References
-BCSF Denial of Service (DoS) guidance
-IEC TS 62443-1-1
-IEC 62443-2-1
-HMG Emergency preparedness
-HMG Emergency Response and Recovery: Non statutory guidance accompanying the Civil Contingencies Act 2004
-The Business Continuity Institute has some freely available introductory business continuity guidance and members can access more detailed resources`
+#### Section References
+{.grid-list}
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+{.links-list}
 
 # Methodical Staff awareness and training (B.6)
 > Appropriately supporting staff to ensure they make a positive contribution to the cyber security of essential functions.
@@ -520,11 +531,15 @@ organizations responsible for essential functions should aim to create a positiv
 ### Communications
 These outcomes are best achieved when organizations actively engage with staff and communicate effectively with them about network and information system security and how it relates to their jobs. This should be more easily achieved where organizations create and promote a long-term security culture vision that is endorsed and supported by senior management, then make incremental, focused changes to address specific business issues. In some cases, particularly where an essential function is safety-related, an organization may be able to draw on activities supporting positive safety culture to build up the organization's cyber security culture.
 
-`References
-BCSF 10 Steps: User Education and Awareness
-CPNI's guidance on developing a security culture
-GCHQ certified training scheme
-The BCSF's You shape security`
+#### Section References
+{.grid-list}
+- [User Awarness](/bronze-training/background-advanced/10-steps-user-education)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+{.links-list}
 
 # Curious Security monitoring (C.1)
 > Monitoring to detect potential security problems and track the effectiveness of existing security measures.
@@ -593,15 +608,16 @@ Your monitoring strategy and capability should evolve with your business require
 
 Your tools should be configurable and adjustable to handle new datasets and your monitoring staff should be able to work with these changes. New IT systems should be designed to produce logging data that allows the appropriate level of monitoring, before they are made operational.
 
-`References
-BCSF Introduction to logging for security purposes
-10 Steps: Monitoring
-BCSF - SOC Buyer's Guide
-CREST - Protective Monitoring Guidance
-NIST - Continuous Security Monitoring
-NIST Guide to Intrusion Detection and Intrusion Prevention Systems
-ISO 27002 / 27019
-IEC 62443`
+#### Section References
+{.grid-list}
+- [Introduction to logging for security purposes](/bronze-controls/designing-controls/logging-for-security)
+- [Monitoring](/bronze-training/background-advanced/10-steps-monitoring)
+- [SOC Buyer's Guide](/silver-training/topic-soc-vendors)
+- [Continuous Security Monitoring](#)
+- [NIST Guide to Intrusion Detection and Intrusion Prevention Systems](#)
+- [ISO 27002 / 27019](#)
+{.links-list}
+
 
 # Curious Proactive security event discovery (C.2)
 > Detecting anomalous events in relevant network and information systems.
@@ -707,14 +723,15 @@ In addition to adhering to mandatory reporting requirements, organizations shoul
 
 Further guidance is found in Section 3 of NIST Computer Security Incident Handling Guide, Part 5 of CREST Computer Security Incident Response Guide or Part 4 of ISO 27035.
 
-`References
-BCSF 10 Steps: Incident Management
-NIST Computer Security Incident Handling Guide
-CREST Cyber Security Incident Response Guide
-Prepare section of ISO 27035
-CIR scheme
-ENISA Good practice guide for incident management
-BCSF Incident Management collection`
+#### Section References
+{.grid-list}
+- [Incident Management](/bronze-training/background-advanced/10-steps-incident-management)
+- [NIST Computer Security Incident Handling Guide](#)
+- [Prepare section of ISO 27035](#)
+- [ENISA Good practice guide for incident management](#)
+{.links-list}
+
+
 
 # Humble lessons learned (D.2)
 > Learning from incidents and implementing these lessons to improve the resilience of essential functions.
@@ -762,8 +779,15 @@ Many incidents go undetected for long periods. You should consider your organiza
 
 In determining adequate retention periods, you should consider how effective your monitoring capability is (i.e. how long might an incident go undetected), experience of past incidents and any examples available in threat intelligence. Ensure that, if an incident occurs, your organization would have sufficient data to perform the required level of post-incident analysis, learn lessons from the analysis, and report the right details to the right people (e.g. internal decision-makers or external regulators or competent authorities).
 
-`References
-BCSF 10 Steps: Incident Management
-Chapter 8 of ENISA Good Practice Incident Management Guide
-ISO 27035:2016 - Principles of Incident Management
-Section 3 NIST Computer Security Incident Handling Guide`
+#### Section References
+{.grid-list}
+- [Incident Management](/bronze-training/background-advanced/10-steps-incident-management)
+- [Chapter 8 of ENISA Good Practice Incident Management Guide](#)
+- [ISO 27035:2016 - Principles of Incident Management](#)
+- [Section 3 NIST Computer Security Incident Handling Guide](#)
+{.links-list}
+
+
+
+
+
