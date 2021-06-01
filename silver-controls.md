@@ -2,7 +2,7 @@
 title: Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
 published: true
-date: 2021-06-01T19:10:57.448Z
+date: 2021-06-01T19:14:25.611Z
 tags: checklist, home, silver, silver-controls
 editor: markdown
 dateCreated: 2021-02-23T01:06:15.574Z
@@ -11,9 +11,6 @@ dateCreated: 2021-02-23T01:06:15.574Z
 # Advanced Controls/Checklists
 BCSF Advanced Controls list contains `217` checklist items that tell your organization "**what**" you can do to meet your policy objectives. They are derived from our own internal operations and those of our customers.  
 
-
-
-## Where does this fit?
 Information governance often begins with a risk assessment and develop their information security programs from there.  BCSF proposes a more actionable approach to developing a program that follows this set of milestones.
 
 1. **Why?** Determine an high-level cyber security risk policy for your organization that informs stakeholders and vendors on why this matters to you. 
@@ -23,9 +20,6 @@ Information governance often begins with a risk assessment and develop their inf
 
 
 # Checklists
-> The checklists below span  **Bronze** and **Silver** policy and guidance content. They are visible to all users.
-{.is-warning}
-
 > When faced with a control item that seems daunting, consider the impacts if you avoided the risk alltogether. Sometimes stopping an activity is the best option. 
 {.is-info}
 
