@@ -1,9 +1,9 @@
 ---
-title: BCSF Advanced Control Checklists
+title: Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
 published: true
-date: 2021-03-02T04:05:00.582Z
-tags: checklist, bronze, home, bronze-controls
+date: 2021-06-01T19:10:57.448Z
+tags: checklist, home, silver, silver-controls
 editor: markdown
 dateCreated: 2021-02-23T01:06:15.574Z
 ---
