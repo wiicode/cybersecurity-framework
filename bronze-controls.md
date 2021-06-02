@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-02T13:17:07.530Z
+date: 2021-06-02T13:34:57.993Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -27,7 +27,9 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [SharePoint Governance](/bronze-controls/sharepoint-governance)
 - [Protecting SMS messages](/bronze-controls/protecting-sms-messages-used-in-critical-business-processes)
 - [Offline backups](/bronze-controls/offline-backups-in-an-online-world)
+- [Microsoft Office Macros](/bronze-controls/macro-security-for-microsoft-office)
 {.links-list}
+
 
 
 # Identity and Access Management
