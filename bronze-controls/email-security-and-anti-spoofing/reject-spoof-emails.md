@@ -2,7 +2,7 @@
 title: 5. Reject spoof emails
 description: When and how to update your DMARC policy to 'reject', and recommendations for keeping everyone in your organization informed and monitoring your records.
 published: true
-date: 2021-06-02T20:20:33.624Z
+date: 2021-06-02T20:24:07.113Z
 tags: bronze, bronze-controls, email, dmarc
 editor: markdown
 dateCreated: 2021-06-02T15:21:41.820Z
@@ -28,7 +28,9 @@ Starting with a small percentage will help ensure any mistakes don’t affect al
 
 **An example record applied to 50% of your email looks like this:**
 
-```v=DMARC1; p=reject; sp=reject; fo=1; pct=50; rua=mailto:dmarc@bentosecurity.org```
+```
+v=DMARC1; p=reject; sp=reject; fo=1; pct=50; rua=mailto:dmarc@bentosecurity.org
+```
 
 
 ### **Reject and quarantine**
