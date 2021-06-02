@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T20:44:57.693Z
+date: 2021-06-02T20:46:16.232Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: markdown
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -31,13 +31,10 @@ The list of email senders collected by your processing tool during this stage w
 A DMARC policy of `none` will give you time to understand whether you have configured DKIM and SPF correctly.
 
 
-
 ## How to create the DMARC record
 
-### **Note**
-
-In this example, we have used [***bentosecurity.org***](http://bentosecurity.org/)***.*** You should replace [***bentosecurity.org***](http://bentosecurity.org/) with your actual domain (which can be .gov, .com etc.). 
-
+> **Note** In this example, we have used [***bentosecurity.org***](http://bentosecurity.org/)***.*** You should replace [***bentosecurity.org***](http://bentosecurity.org/) with your actual domain (which can be .gov, .com etc.). 
+{.is-warning}
 
 
 Update your public DNS record as detailed below.
@@ -56,9 +53,9 @@ The email address in the record should be provided by the DMARC processing tool 
 
 “rua” is a comma separated list of URI(s) for aggregate report delivery.  This report contains details of the emails being sent from your domain, including whether they passed or failed the SPF and DKIM authentication checks. You can include up to 2 email addresses for which to send the aggregated data reports. If you’re eligible to use Mail Check and do, you need to include our email address, to ensure that you send the aggregated data to Mail Check - details are provided within Mail Check.
 
-### **Note**
+> **Note** In this ‘monitoring only phase’ we recommend keeping your DMARC record as simple as shown above.  You do not need to add additional ‘DMARC tags’ (see [https://tools.ietf.org/html/rfc7489#page-17](https://tools.ietf.org/html/rfc7489#page-17)) at this stage.
+{.is-info}
 
-In this ‘monitoring only phase’ we recommend keeping your DMARC record as simple as shown above.  You do not need to add additional ‘DMARC tags’ (see [https://tools.ietf.org/html/rfc7489#page-17](https://tools.ietf.org/html/rfc7489#page-17)) at this stage.
 
 Semi-colons are used to separate the tags.  Commas are used to separate multiple email addresses (where more than one is used). 
 
