@@ -2,7 +2,7 @@
 title: Using TLS to protect data
 description: How to configure the services that must be able to receive incoming connections from unknown clients or services.
 published: true
-date: 2021-06-02T21:59:42.572Z
+date: 2021-06-02T22:01:39.315Z
 tags: silver, sourced, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:32:05.089Z
@@ -12,9 +12,8 @@ dateCreated: 2021-02-22T00:32:05.089Z
 
 How to configure the services that must be able to receive incoming connections from unknown clients or services.
 
-This guidance outlines how to configure the services that must be able to receive incoming connections from unknown clients or services. Specifically it covers the scenarios of: operating a public website; embedded devices which need to communicate securely back to online services where certificate management and the overhead of IPsec would be too great; and supporting email transfer using Simple Mail Transfer Protocol (SMTP). This guidance does **not** address use of TLS for Virtual Private Networks (VPNs). The NCSC recommends the use of [IPsec to protect data in transit](https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data) in line with the [Cabinet Office End User Device Strategy](https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/261980/EUD_Security.pdf) as IPsec is a mature set of standards, widely available across many vendors of end user devices and networking equipment.
+This guidance outlines how to configure the services that must be able to receive incoming connections from unknown clients or services. Specifically it covers the scenarios of: operating a public website; embedded devices which need to communicate securely back to online services where certificate management and the overhead of IPsec would be too great; and supporting email transfer using Simple Mail Transfer Protocol (SMTP). This guidance does **not** address use of TLS for Virtual Private Networks (VPNs). 
 
----
 
 ## About TLS
 
@@ -22,11 +21,10 @@ Transport Layer Security (TLS) is a protocol which provides privacy between comm
 
 At the time of writing, the current version of TLS is version 1.2, which includes security improvements over version 1.0. The predecessor to the TLS protocol was the Secure Sockets Layer (SSL) protocol, all versions of which are now regarded as insecure.
 
----
 
 ## Deploying TLS for web servers
 
-Users accessing an organisation’s digital public services need to have confidence that they are accessing a legitimate service and that their communications remain private and free from interference. TLS is a protocol that provides this security.
+Users accessing an organization’s digital public services need to have confidence that they are accessing a legitimate service and that their communications remain private and free from interference. TLS is a protocol that provides this security.
 
 TLS used in the context of web servers is known as HTTPS (that is HTTP over TLS).
 
@@ -38,7 +36,7 @@ In Mozilla’s [advice on Server Side TLS](https://www.ssllabs.com/projects/bes
 
 You should configure the web server to prefer more recent versions of protocols and more secure options first. The server should also be configured **not** to revert to an older standard after the initial negotiation. [Mozilla’s guide](https://wiki.mozilla.org/Security/Server_Side_TLS#Prioritization_logic) provides some good recommendations on how to configure the prioritisation logic of your web server.
 
-For web services that will only be accessed by known (well-maintained) end user devices, then it should be possible to deploy a strict cryptographic profile. In these situations we recommend you use one of the [preferred TLS configurations given below](https://www.ncsc.gov.uk/guidance/tls-external-facing-services#profiles).
+For web services that will only be accessed by known (well-maintained) end user devices, then it should be possible to deploy a strict cryptographic profile. In these situations we recommend you use one of the [preferred TLS configurations given below](/guidance/tls-external-facing-services#profiles).
 
 ### **Secure configuration recommendations**
 
@@ -67,20 +65,18 @@ enable [HTTP Strict Transport Security (HSTS)](https://www.owasp.org/index.php/
 
 design new applications to use [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy), as it can be difficult to retrofit later
 
-server certificates should be acquired from [trustworthy and reputable sources](https://www.ncsc.gov.uk/guidance/tls-external-facing-services#choosing-a-certificate-authority)
+server certificates should be acquired from [trustworthy and reputable sources](/guidance/tls-external-facing-services#choosing-a-certificate-authority)
 
 publish [DNS Certificate Authority Authorization](https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization) (CAA) records to manage which Certificate Authorities will issue certificates for your domain.
 
 -   ensure you have a means of revoking compromised certificates for your services - you should be able to do this through your chosen Certificate Authority (CA)
 -   consider advising users if their web browsers are not supporting a sufficient set of TLS algorithms, and providing them with information on how to upgrade their web browser or operating system if appropriate
 
----
 
 ## Deploying TLS for mail servers
 
-TLS for mail servers guidance can be found [here](https://www.ncsc.gov.uk/guidance/email-security-and-anti-spoofing).
+TLS for mail servers guidance can be found [here](/guidance/email-security-and-anti-spoofing).
 
----
 
 ## Choosing a Certificate Authority
 
@@ -96,27 +92,27 @@ In order to have an X.509v3 certificate signed by a CA, you would normally gener
 
 If generating an RSA certificate, we recommend using the following parameters:
 
-2048-bit RSA with SHA256
+`2048-bit RSA with SHA256`
 
 If generating an ECC certificate, we recommend using the following parameters:
 
-ECDSA-256 with SHA256 on the P-256 curve
+`ECDSA-256 with SHA256 on the P-256 curve`
 
----
 
 ## Testing
 
 Given the wide range of configuration options available for TLS, we recommend that you regularly test the configuration of your web servers and mail servers by running automated scans. There are a number of publicly available tools to help test the TLS configuration of your web or mail server. Some tools you may find useful are:
 
-[Qualys SSL Server Test](https://www.ssllabs.com/ssltest/)
-
-Check TLS services from [checktls.com](http://www.checktls.com/index.html)
+- [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/)
+- Check TLS services from [checktls.com](http://www.checktls.com/index.html)
 
 These scans will identify most common issues and configuration problems. They should not be seen as a replacement for skilled penetration testing of your services, but if you have already used tools such as these to help identify and mitigate common issues, then penetration testers will have more time to spend ensuring there are not more subtle or unique flaws in your service.
 
-Note that whilst it is possible for others to test the ability for you to receive email securely, it is **not** possible for others to test the ability of your services to send email securely without your cooperation. You have to send an email to a testing service, such as that offered by [checktls.com](http://checktls.com/).
+> Note that while it is possible for others to test the ability for you to receive email securely, it is **not** possible for others to test the ability of your services to send email securely without your cooperation. You have to send an email to a testing service, such as that offered by [checktls.com](http://checktls.com/).
+{.is-info}
 
----
+
+
 
 ## Recommended cryptographic profiles for TLS
 
