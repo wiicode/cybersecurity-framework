@@ -2,17 +2,18 @@
 title: 6. Continuous improvement
 description: How to ensure that legitimate emails aren't lost once your DMARC policy is at 'reject' and that old systems can't be used to spoof email from your domains.
 published: true
-date: 2021-06-02T20:15:45.433Z
+date: 2021-06-02T20:15:56.475Z
 tags: bronze, bronze-training, bronze-controls, dmarc, emails
 editor: markdown
 dateCreated: 2021-06-02T15:27:00.573Z
 ---
 
-Most organisations will regularly add and remove email sending services as they introduce, refresh, and retire IT.
+> Most organisations will regularly add and remove email sending services as they introduce, refresh, and retire IT.
+{.is-info}
+
 
 In order to ensure that legitimate emails aren't lost, and that old systems can't be used to spoof email from your domains, you should put processes in place to ensure that your SPF and DKIM configurations are up to date.
 
----
 
 ## There are 2 main update mechanisms:
 
