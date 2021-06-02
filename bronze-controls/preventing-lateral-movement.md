@@ -2,7 +2,7 @@
 title: Preventing Lateral Movement
 description: Guidance for preventing lateral movement in enterprise networks.
 published: true
-date: 2021-05-28T03:20:14.218Z
+date: 2021-06-02T21:09:03.658Z
 tags: bronze, guidence
 editor: markdown
 dateCreated: 2021-05-28T02:08:46.934Z
@@ -15,7 +15,6 @@ This guidance explains how system owners can prevent and detect lateral movement
 
 Implementing the recommended security controls outlined below - including monitoring to detect the early stages of lateral movement - can reduce the potential for serious damage.
 
----
 
 ## Platform-specific guidance
 
