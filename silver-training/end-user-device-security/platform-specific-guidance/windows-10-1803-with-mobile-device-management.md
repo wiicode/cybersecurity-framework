@@ -2,7 +2,7 @@
 title: Windows 10 with MDM
 description: Secure configuration for Windows 10 (1803) with Mobile Device Management
 published: true
-date: 2021-06-02T22:07:34.358Z
+date: 2021-06-02T22:09:13.774Z
 tags: guidance, silver, platform-specific, silver-training
 editor: markdown
 dateCreated: 2021-03-10T02:24:42.173Z
@@ -58,7 +58,7 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 | **Platform integrity and application sandboxing** | No configuration is required. |
 | **Application whitelisting** | An enterprise configuration can be applied to implement application control using [AppLocker](https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview). A recommended sample configuration that only allows Administrator-installed applications to run is [provided below](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#applocker).<br><br>[Windows Defender Application Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune) can also be used to reinforce application control rules. As it does not offer the same granularity as AppLocker, the two technologies should be used alongside one another. A recommended sample configuration has also been [provided below](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#defender), the sample configuration allows applications from the private [Microsoft Store for Business](https://docs.microsoft.com/en-us/microsoft-store/microsoft-store-for-business-overview) to also be installed. <br><br>[AppLocker](https://docs.microsoft.com/en-gb/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-policies-design-guide) can be used to restrict which pre-installed Windows Apps are available to users. If the public Microsoft Store is enabled it can control which applications a user can install. |
 | **Malicious code detection and prevention** | Windows 10 includes [Windows Defender Antivirus](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) and [Windows Defender SmartScreen](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview). These attempt to detect malicious code for the platform. Cloud sample submission can be disabled. Alternatively, third party anti-malware products are available. If using a third-party product, those that implement the [Anti-Malware Scan Interface (AMSI)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn889587(v=vs.85).aspx) should be preferred, to improve compatibility with future Feature and Quality Updates.<br><br>The [Early Launch Anti-Malware (ELAM)](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/early-launch-antimalware) driver provides signature checking for known bad drivers on ELAM compliant systems that are configured to use Secure Boot.<br><br>Microsoft Store for Business or a Company Store can be used to distribute user-installable universal apps. Such stores should only contain vetted apps. If the public Microsoft Store is enabled, AppLocker and Windows Defender Application Control can be used to control which applications a user is able to install. Content-based attacks can be filtered by scanning capabilities in the enterprise. |
-| **Security policy enforcement** | Disable un-enrollment from the MDM service. Settings applied to the device via the MDM service cannot then be modified or removed by unprivileged users. Organizations using [Autopilot](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot) can force wiped devices to automatically enroll back into the MDM service, see the [Zero-touch provisioning section below](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#zero) for more details. |
+| **Security policy enforcement** | Disable un-enrolllment from the MDM service. Settings applied to the device via the MDM service cannot then be modified or removed by unprivileged users. Organizations using [Autopilot](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot) can force wiped devices to automatically enrolll back into the MDM service, see the [Zero-touch provisioning section below](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#zero) for more details. |
 | **External interface protection** | Interfaces can be configured using MDM policy. USB removable media can be blocked through MDM settings if required. Direct Memory Access (DMA) is possible from peripherals connected to some external interfaces including FireWire and Thunderbolt, unless disabled through MDM settings as detailed in [System Hardening](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#hard), or in the UEFI/BIOS. |
 | **Device updates** | Configure Windows Update to automatically download and install updates. If the Microsoft Store is enabled, it should be configured to automatically update Microsoft Store apps.<br><br>Some devices will allow the UEFI firmware to be updated automatically via Windows Update. Devices that do *not* implement this will require updates via another mechanism whenever new firmware is released. |
 | **Event collection** | Events such as sign-in information and general audit logs can be found within the AAD and Intune portal. More detailed diagnostic information from the device can be obtained using the [DiagnosticLog CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/diagnosticlog-csp). |
@@ -70,7 +70,7 @@ The steps below should be followed to prepare infrastructure for deployment of t
 
 1.  Procure, deploy and configure network components, including an approved IPsec VPN Gateway.
 2.  Configure Azure Active Directory (AAD) with the appropriate accounts and licenses to meet your organization’s needs. Set up and approve your [MDM solution to be authoritative over the directory](https://docs.microsoft.com/en-us/windows/client-management/mdm/azure-active-directory-integration-with-mdm).
-3.  Configure AAD to [automatically enroll connected devices](https://docs.microsoft.com/en-us/intune/windows-enrolll#enable-windows-10-automatic-enrolllment) into the chosen MDM solution.
+3.  Configure AAD to [automatically enrolll connected devices](https://docs.microsoft.com/en-us/intune/windows-enrollll#enable-windows-10-automatic-enrollllment) into the chosen MDM solution.
 4.  Configure users and groups according to the principle of least privilege.
 5.  Create MDM profiles for users in accordance with the settings later in this section.
 6.  Deploy an AppLocker rule set using MDM settings following guidance in the [Application allow listing section](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#whitelist). A sample configuration which allows only applications installed by an Administrator to run, is outlined in the [AppLocker](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#applocker) settings below.
@@ -79,20 +79,20 @@ The steps below should be followed to prepare infrastructure for deployment of t
 
 The steps below should be followed to provision each end user device, preparing it for distribution to end users:
 
-1.  By default, the user who joins the device to AAD and enrolls into MDM is placed into the Local Administrators group on that device. As such, users should **not** be instructed to enroll themselves. All device enrollment should be performed by administrators using administrative accounts. Alternatively, if using a correctly configured zero-touch deployment programme such as [Autopilot](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-10-autopilot), users will not be given admin privileges.
+1.  By default, the user who joins the device to AAD and enrollls into MDM is placed into the Local Administrators group on that device. As such, users should **not** be instructed to enrolll themselves. All device enrolllment should be performed by administrators using administrative accounts. Alternatively, if using a correctly configured zero-touch deployment programme such as [Autopilot](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-10-autopilot), users will not be given admin privileges.
 2.  Update the system firmware to the latest version available from the vendor. This will be called either a UEFI or BIOS update. This may not be required if your devices receive firmware updates via Windows Update.
 3.  Configure the system firmware to boot in UEFI mode, enable TPM, Secure Boot and virtualization extensions. Disable unused hardware interfaces, check the boot order to prioritize internal storage and set a password to prevent changes. Most of these settings will be available on devices that meet the standards set by [Microsoft for a highly secure Windows 10 device](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-highly-secure).
 4.  Deploy your organization’s standard desktop build using a clean [Windows 10 Enterprise image](https://www.microsoft.com/en-gb/software-download/windows10) or use a [Signature Edition](https://www.microsoft.com/en-PR/store/b/pcsignatureedition) device where re-imaging may not be needed.
-5.  Join the device to AAD and enroll it into your MDM either by:
-    1.  Promoting a dedicated provisioning account to become a [Device Enrolment Manager](https://docs.microsoft.com/en-us/intune-classic/deploy-use/enrolll-corporate-owned-devices-with-the-device-enrolllment-manager-in-microsoft-intune). Use this account to join AAD and enroll into your MDM.
+5.  Join the device to AAD and enrolll it into your MDM either by:
+    1.  Promoting a dedicated provisioning account to become a [Device Enrolment Manager](https://docs.microsoft.com/en-us/intune-classic/deploy-use/enrollll-corporate-owned-devices-with-the-device-enrollllment-manager-in-microsoft-intune). Use this account to join AAD and enrolll into your MDM.
     2.  Use the [Windows Configuration Designer tool](https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-install-icd) which is part of the [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit), to create a [provisioning package](https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-packages). Apply the provisioning package during the out-of-box experience (OOBE). The first account used to sign in will be added to the list of local administrators.
-    3.  Use an MDM-specific enrollment app.
+    3.  Use an MDM-specific enrolllment app.
 
 ### **Zero-touch provisioning steps** 
 
 Windows Autopilot is a collection of technologies used to set up and pre-configure devices directly from OEMs (Original Equipment Manufactures).
 
-Autopilot explicitly requires MDM automatic enrollment, details on how to set this up can be found [here](https://docs.microsoft.com/en-gb/intune/windows-enrolll), other requirements can be found [here](https://docs.microsoft.com/en-gb/partner-center/autopilot).
+Autopilot explicitly requires MDM automatic enrolllment, details on how to set this up can be found [here](https://docs.microsoft.com/en-gb/intune/windows-enrollll), other requirements can be found [here](https://docs.microsoft.com/en-gb/partner-center/autopilot).
 
 Organizations can use Autopilot on new or existing devices by:
 
@@ -113,7 +113,7 @@ Organizations can use Autopilot on new or existing devices by:
 5.  Provide end users with AAD username and password to log into new devices.
 6.  Give devices to end users ensuring they connect to the internet\* when they go through the OOBE for the first time.
 
-**\***Devices must connect to the internet when they go through OOBE. A device with no internet access will not be able to enroll into your organization's MDM and apply security configuration. 
+**\***Devices must connect to the internet when they go through OOBE. A device with no internet access will not be able to enrolll into your organization's MDM and apply security configuration. 
 
 ### **Recommended configuration profile for Autopilot:** 
 
@@ -127,8 +127,8 @@ The table below shows the additional recommended configuration admins should set
 
 | **Windows Autopilot deployment profile** | **Value(s)** |
 | --- | --- |
-| Device enrollment - Windows enrollment - Deployment Profiles | Deployment mode: User-Driven |
-| Device enrollment - Windows enrollment - Deployment Profiles<br><br>Out-of-box experience (OOBE) | End user license agreement (EULA): Show <br><br>Privacy Settings: Show<br><br>User account type: Standard |
+| Device enrolllment - Windows enrolllment - Deployment Profiles | Deployment mode: User-Driven |
+| Device enrolllment - Windows enrolllment - Deployment Profiles<br><br>Out-of-box experience (OOBE) | End user license agreement (EULA): Show <br><br>Privacy Settings: Show<br><br>User account type: Standard |
 
 
 
@@ -164,7 +164,7 @@ Organizations using Microsoft Intune can [download the below configuration as a
 | Device restrictions – Windows Spotlight<br><br>Windows Spotlight | Block |
 | Device restrictions – Windows Spotlight<br><br>Apps Suggestions in Ink Workspace | Block |
 | Device restrictions – General<br><br>Ink Workspace | Disabled on lock screen |
-| Device restrictions – General<br><br>Manual unenrollment | Block<br><br>Note - This policy setting is not applied if the computer is AAD joined and auto-enrollment is enabled. |
+| Device restrictions – General<br><br>Manual unenrolllment | Block<br><br>Note - This policy setting is not applied if the computer is AAD joined and auto-enrolllment is enabled. |
 
 ##   
   
@@ -190,7 +190,7 @@ Intune, along with other MDMs, implement a number of relevant settings as Fine G
 ###   
 **Azure Active Directory**
 
-A user’s Azure Active Directory password will normally only be used when enrollling against a device for the first time. It is not backed by a second factor or by [hardware-backed anti-hammer](https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering), even when Credential Guard is deployed. Different requirements can be set for different account types using [Fine Grained Password Policies.](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)) If the Azure Active Directory password is only used for device enrollment, it needs to be easy to type in but does not need to be memorable.
+A user’s Azure Active Directory password will normally only be used when enrolllling against a device for the first time. It is not backed by a second factor or by [hardware-backed anti-hammer](https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering), even when Credential Guard is deployed. Different requirements can be set for different account types using [Fine Grained Password Policies.](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)) If the Azure Active Directory password is only used for device enrolllment, it needs to be easy to type in but does not need to be memorable.
 
 ###   
 **Windows Hello for Business and Hardware Strengthening**
@@ -208,9 +208,9 @@ Users can choose to set a PIN after they have logged on to the device for the fi
 -   Use enhanced anti-spoofing, when available
 -   Allow phone sign-in
 
-Once a PIN is set, if the device has the right sensors, the user can also enroll a biometric to unlock it. The strength of the security of the different types of biometric sensor is difficult to measure. If the risks of enabling biometrics are understood and accepted, biometric authentication can be enabled.
+Once a PIN is set, if the device has the right sensors, the user can also enrolll a biometric to unlock it. The strength of the security of the different types of biometric sensor is difficult to measure. If the risks of enabling biometrics are understood and accepted, biometric authentication can be enabled.
 
-| **Device enrollment > Windows enrollment > Windows Hello for Business > Settings** |
+| **Device enrolllment > Windows enrolllment > Windows Hello for Business > Settings** |
 | --- |
 | Allow biometric authentication |
 
