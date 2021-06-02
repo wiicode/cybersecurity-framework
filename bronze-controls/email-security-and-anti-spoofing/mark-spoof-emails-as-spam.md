@@ -2,7 +2,7 @@
 title: 4. Mark spoof emails as spam
 description: When and how to update your DMARC policy to 'quarantine', and recommendations for keeping everyone in your organization informed of this change
 published: true
-date: 2021-06-02T20:23:53.797Z
+date: 2021-06-02T20:26:44.609Z
 tags: bronze, bronze-controls, dmarc
 editor: markdown
 dateCreated: 2021-06-02T15:20:35.580Z
@@ -45,24 +45,22 @@ v=DMARC1; p=quarantine; pct=50; rua=mailto:dmarc@bentosecurity.org
 v=DMARC1; p=quarantine; rua=mailto: dmarc@bentosecurity.org
 ```
 
----
 
 ## Keep everyone informed
 
-[While your DMARC policy was set to 'none'](/collection/email-security-and-anti-spoofing/implement-a-dmarc-policy-of-none), you will have identified most - if not all - of your legitimate sources of emails and modified your SPF and DKIM to include them.
+[While your DMARC policy was set to 'none'](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-), you will have identified most - if not all - of your legitimate sources of emails and modified your SPF and DKIM to include them.
 
-We recommend that you alert your management teams – especially marketing / communications – of your intention to progress to the DMARC policy of *'quarantine'*. 
+We recommend that you alert your management teams – especially marketing / communications – of your intention to progress to the DMARC policy of `quarantine`. 
 
-Ask that they alert you to any planned mass mailing campaigns (especially when using tools such as MailChimp). This will help you monitor and *analyze* activity as you move to *'quarantine'*.
+Ask that they alert you to any planned mass mailing campaigns (especially when using tools such as MailChimp). This will help you monitor and *analyze* activity as you move to `quarantine`.
 
 You should also implement a process to ensure that your SPF and DKIM configurations are current, as the email sending systems you use are likely to change over time.
 
----
 
 ## Monitor and update your records
 
-After updating your DNS records with a DMARC policy of *'quarantine'* at 100%, you should monitor your reports for at least 4 weeks to gain confidence that legitimate emails aren't being quarantined.
+After updating your DNS records with a DMARC policy of `quarantine` at `100%`, you should monitor your reports for at least 4 weeks to gain confidence that legitimate emails aren't being quarantined.
 
 ### **Progressing to a DMARC policy of** ***‘reject’***
 
-We recommend that you progress to a DMARC policy of *'reject'* when you are confident that you have correctly configured your DKIM and SPF records in your public DNS.
+We recommend that you progress to a DMARC policy of `reject` when you are confident that you have correctly configured your DKIM and SPF records in your public DNS.
