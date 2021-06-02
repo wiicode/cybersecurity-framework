@@ -2,13 +2,13 @@
 title: Supply chain security guidance
 description: Proposing a series of 12 principles, designed to help you establish effective control and oversight of your supply chain.
 published: true
-date: 2021-06-02T21:34:38.450Z
+date: 2021-06-02T21:35:01.751Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:44:31.086Z
 ---
 
-The guidance will provide organizations with an improved awareness of supply chain security, as well as helping to raise the baseline level of competence in this regard, through the continued adoption of good practice. Whilst beneficial, this guidance has not been written for organizations with national security (high assurance), requirements.
+The guidance will provide organizations with an improved awareness of supply chain security, as well as helping to raise the baseline level of competence in this regard, through the continued adoption of good practice. 
 
 Most organizations rely upon suppliers to deliver products, systems, and services. You probably have a number of suppliers yourself, it's how we do business. 
 
