@@ -2,7 +2,7 @@
 title: Reset and reprovision - Windows devices
 description: Discover the ways in which organisations can restore Windows devices from a misconfigured or potentially compromised state to a known-good state.
 published: true
-date: 2021-06-02T13:17:23.659Z
+date: 2021-06-02T13:20:25.174Z
 tags: bronze, bronze-training, sourced
 editor: markdown
 dateCreated: 2021-02-22T00:30:32.279Z
@@ -10,16 +10,16 @@ dateCreated: 2021-02-22T00:30:32.279Z
 
 # Reset and reprovision - Windows devices
 
-Discover the ways in which organisations can restore Windows devices from a misconfigured or potentially compromised state to a known-good state.
+Discover the ways in which organizations can restore Windows devices from a misconfigured or potentially compromised state to a known-good state.
 
-This guidance is for organisations deploying or redeploying Windows devices onto their networks. It describes the ways in which devices can be restored from a misconfigured or potentially compromised state to a known-good state, using Windows' native functionality.
+This guidance is for organizations deploying or redeploying Windows devices onto their networks. It describes the ways in which devices can be restored from a misconfigured or potentially compromised state to a known-good state, using Windows' native functionality.
 
 ## Windows devices can be reset using the following methods.
 
-1.  ['Reset this PC' - keep my files](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-windows-devices#keep)
-2.  ['Reset this PC' - remove everything](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-windows-devices#remove)
-3.  [Manual re-install](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-windows-devices#manual)
-4.  [Clearing the TPM (trusted platform module)](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-windows-devices#tpm)  
+**1.  'Reset this PC' - keep my files
+2.  'Reset this PC' - remove everything
+3.  Manual re-install
+4.  Clearing the TPM (trusted platform module)**
      
 
 Each of these methods is explained in full alongside the risks of using them. We then recommend methods to use in each of the following four common scenarios:
@@ -34,7 +34,7 @@ Use this reset method if a device is to be provisioned onto the corporate networ
 Use this reset method where a device is to be transferred between different employees, and is to be reset to factory settings so that the reprovisioning steps for that platform can be followed as if the device were new.
 
 **Scenario 4: Sanitising a device for release to lower security domain or sale**  
-Use this reset method if the device is to be transferred out of a secure environment and you wish to perform a best-endeavours sanitisation of the device.
+Use this reset method if the device is to be transferred out of a secure environment and you wish to perform a best-endeavours sanitization of the device.
 
 **Note:** Malware exists with the ability to infect the firmware of components, such as the BIOS of a motherboard. While the persistence of such malware is beyond the scope of this guidance, it is known to exist and its removal cannot be guaranteed with any of the methods discussed below.
 
@@ -174,7 +174,7 @@ Any malware that was present on the encrypted disk will be effectively deleted.�
 
 ## Reprovisioning scenarios for Windows devices
 
-For the four common reprovisionining scenarios outlined above, the NCSC recommend the following methods.  
+For the four common reprovisionining scenarios outlined above, the BCSF recommend the following methods.  
  
 
 ### **Scenario 1: Sanitising a device believed to be compromised with malware**
@@ -210,9 +210,9 @@ When preparing a device that has not been managed, you should assume it's carryi
 -   The **Just remove my files** option of **Reset this PC (Remove everything)** will **not** attempt to securely wipe data, allowing it to be recovered using forensic tools and techniques.
 -   **Manual re-install** provides the most certainty with regards to malware removal, but also takes more time and effort. However, it also presents the opportunity for mistakes to be made, or steps to be missed.
 
-### **Scenario 4: Sanitising a device for release to lower security domain or sale**
+### **Scenario 4: Sanitizing a device for release to lower security domain or sale**
 
-Microsoft recommend their **Reset this (Remove everything)** option when sanitising a device for sale. Use this provided the **Remove files and clean the drive** option method is selected, which makes forensic file recovery difficult.
+Microsoft recommend their **Reset this (Remove everything)** option when sanitizing a device for sale. Use this provided the **Remove files and clean the drive** option method is selected, which makes forensic file recovery difficult.
 
 If the drive is using BitLocker encryption, we recommend using **Reset this PC (Remove everything)**, as encryption metadata will be deleted making data recovery impossible. Or Clearing the TPM, as this removes the keys in the TPM used to decrypt the data.
 
