@@ -2,7 +2,7 @@
 title: Keeping devices and software up to date
 description: Advice for individuals and organisations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.
 published: true
-date: 2021-06-02T14:30:29.201Z
+date: 2021-06-02T14:30:48.979Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:46:26.042Z
@@ -14,7 +14,6 @@ To prevent known vulnerabilities from being exploited, all of this software must
 
 This guidance will help you understand the security risks posed by out of date devices, and advise you on how best to secure devices against the latest cyber security threats.
 
----
 
 ## Why keep your devices up to date?
 
@@ -28,7 +27,6 @@ Attackers who succeed in compromising your devices could potentially steal data
 
 Many devices and apps can install updates automatically, but sometimes they'll need a bit of help from the device user, so you'll need to keep an eye on updates in case they stop working.
 
----
 
 ## Preparation for installing updates
 
@@ -72,7 +70,6 @@ Users can often defer or decline updates - you might want to look into how you c
 -   When designing a device configuration, you should make sure that you don't lock down permissions to the point where apps can't be updated. Make sure you do thorough testing of a new configuration to ensure that updates work reliably.
 -   Many MDMs allow you to create an Enterprise application catalogue. These often include the ability to automatically update apps deployed through the catalogue.
 
----
 
 ## How to keep your devices up to date
 
@@ -91,7 +88,6 @@ Users can often defer or decline updates - you might want to look into how you c
 -   If you are a large organization, deploy a staged approach to update management so that nothing breaks when your devices update. For an example of how the BCSF has achieved this, you can read our blog on [updating without breaking things](/blog-post/ncsc-it-installing-software-updates-without-breaking-things).
 -   In addition to OS and application updates, ensure that processes are also in place to [automate firmware updates](/bronze-training/mobile-device-guidance/managing-mobile-device-firmware).
 
----
 
 ## More information
 
