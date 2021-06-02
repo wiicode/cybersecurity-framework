@@ -2,8 +2,8 @@
 title: Introduction to identity and access management
 description: This guidance provides a primer on the essential techniques, technologies and uses of access management.
 published: true
-date: 2021-02-21T03:17:00.631Z
-tags: access control, bronze, bronze-training, guidence
+date: 2021-06-02T21:45:42.831Z
+tags: guidance, bronze, bronze-training, access-control
 editor: markdown
 dateCreated: 2021-02-21T03:16:47.607Z
 ---
