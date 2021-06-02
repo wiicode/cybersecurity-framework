@@ -2,7 +2,7 @@
 title: 4. Mark spoof emails as spam
 description: When and how to update your DMARC policy to 'quarantine', and recommendations for keeping everyone in your organization informed of this change
 published: true
-date: 2021-06-02T20:26:44.609Z
+date: 2021-06-02T20:42:45.187Z
 tags: bronze, bronze-controls, dmarc
 editor: markdown
 dateCreated: 2021-06-02T15:20:35.580Z
@@ -64,3 +64,13 @@ After updating your DNS records with a DMARC policy of `quarantine` at `100%`, y
 ### **Progressing to a DMARC policy of** ***‘reject’***
 
 We recommend that you progress to a DMARC policy of `reject` when you are confident that you have correctly configured your DKIM and SPF records in your public DNS.
+
+# E-mail security and anti-spoofing
+
+- [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
+- [Protect email in transit](/bronze-controls/email-security-and-anti-spoofing/protect-email-in-transit)
+- [Configure anti-spoofing controls](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Send spoof emails to spam](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)
+- [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
+- [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
+{.grid-list}
