@@ -2,7 +2,7 @@
 title: Mitigating malware and ransomware attacks
 description: How to defend organisations against malware or ransomware attacks
 published: true
-date: 2021-06-02T21:51:02.275Z
+date: 2021-06-02T21:53:40.165Z
 tags: silver, security-operations, silver-training, ransomware
 editor: markdown
 dateCreated: 2021-02-22T03:02:19.092Z
@@ -26,15 +26,14 @@ Following this guidance will reduce:
 
 ## In this guidance
 
--   [What is malware?](/guidance/mitigating-malware-and-ransomware-attacks#whatismalware)
--   [Action 1: Make regular backups](/guidance/mitigating-malware-and-ransomware-attacks#makeregularbackups)
--   [Action 2: Prevent malware from being delivered and spreading to devices](/guidance/mitigating-malware-and-ransomware-attacks#preventmalwaredelivery)
--   [Action 3: Prevent malware from running on devices](/guidance/mitigating-malware-and-ransomware-attacks#preventmaliciouscode)
--   [Action 4: Prepare for an incident](/guidance/mitigating-malware-and-ransomware-attacks#limittheimpact)
--   [Steps to take if your organization is already infected](/guidance/mitigating-malware-and-ransomware-attacks#stepsifinfected)
--   [Further advice](/guidance/mitigating-malware-and-ransomware-attacks#furtheradvice)
+-   [What is malware?](#)
+-   [Action 1: Make regular backups](#)
+-   [Action 2: Prevent malware from being delivered and spreading to devices](#)
+-   [Action 3: Prevent malware from running on devices](#)
+-   [Action 4: Prepare for an incident](#)
+-   [Steps to take if your organization is already infected](#)
+-   [Further advice](#)
 
----
 
 ## What is malware?
 
@@ -49,7 +48,7 @@ Malware is _mal_icious soft_ware_, which - if able to run - can cause harm in ma
 
 ### **What is ransomware?**
 
-Ransomware is a type of malware that prevents you from accessing your computer (or the data that is stored on it). The computer itself may become locked, or the data on it might be stolen, deleted or encrypted. Some ransomware will also try to spread to other machines on the network, such as the [Wannacry malware](/blog-post/wannacry-ransomware-guidance-updates) that impacted the NHS in May 2017.
+Ransomware is a type of malware that prevents you from accessing your computer (or the data that is stored on it). The computer itself may become locked, or the data on it might be stolen, deleted or encrypted.
 
 Usually you're asked to contact the attacker via an anonymous email address or follow instructions on an anonymous web page, to make payment. The payment is invariably demanded in a cryptocurrency such as Bitcoin, in order to unlock your computer, or access your data. However, even if you pay the ransom, there is no guarantee that you will get access to your computer, or your files. Occasionally malware is *presented* as ransomware, but after the ransom is paid the files are not decrypted. This is known as [wiper malware](https://en.wikipedia.org/wiki/Wiper_(malware)). **For these reasons, it's essential that you always have a recent offline backup of your most important files and data**.
 
@@ -62,20 +61,20 @@ Law enforcement do not encourage, endorse, nor condone the payment of ransom dem
 -   you will be paying criminal groups
 -   you're more likely to be targeted in the future
 
-Attackers will also threaten to publish data if payment is not made. To counter this, organizations should take measures to minimize the impact of data exfiltration. The BCSF's [guidance on Protecting bulk personal data](/collection/protecting-bulk-personal-data) and the [Logging and protective monitoring guidance](/collection/mobile-device-guidance/logging-and-protective-monitoring) can help with this.
+Attackers will also threaten to publish data if payment is not made. To counter this, organizations should take measures to minimize the impact of data exfiltration. 
 
 ### **Using a defense in depth strategy**
 
 Since there's no way to **completely** protect your organization against malware infection, you should adopt a 'defense-in-depth' approach. This means using layers of defense with several mitigations at each layer. You'll have more opportunities to detect malware, and then stop it before it causes real harm to your organization. You should assume that some malware **will** infiltrate your organization, so you can take steps to limit the impact this would cause, and speed up your response.
 
----
+
 
 ## Action 1: Make regular backups
 
 Up-to-date backups are the most effective way of recovering from a ransomware attack, you should do the following.
 
 -   Make regular backups of your most important files - it will be different for every organization - check that you know how to restore files from the backup, and regularly test that it is working as expected.
--   Ensure you create offline backups that are kept separate, in a different location (ideally offsite), from your network and systems, or in a cloud service designed for this purpose, as ransomware actively targets backups to increase the likelihood of payment. Our blog on ['Offline backups in an online world](/blog-post/offline-backups-in-an-online-world)' provides useful additional advice for organizations.
+-   Ensure you create offline backups that are kept separate, in a different location (ideally offsite), from your network and systems, or in a cloud service designed for this purpose, as ransomware actively targets backups to increase the likelihood of payment. 
 -   Make multiple copies of files using different backup solutions and storage locations. You shouldn't rely on having two copies on a single removable drive, nor should you rely on multiple copies in a single cloud service.
 -   Make sure that the devices containing your backup (such as external hard drives and USB sticks) are **not** permanently connected to your network. Attackers will target connected backup devices and solutions to make recovery more difficult.
 -   You should ensure that your cloud service protects previous versions of the backup from being immediately deleted and allows you to restore to them. This will prevent both your live and backup data becoming inaccessible - cloud services often automatically synchronize immediately after your files have been replaced with encrypted copies.
@@ -83,9 +82,9 @@ Up-to-date backups are the most effective way of recovering from a ransomware at
 -   Scan backups for malware before you restore files. Ransomware may have infiltrated your network over a period of time, and replicated to backups before being discovered.
 -   Regularly patch products used for backup, so attackers cannot exploit any known vulnerabilities they might contain.
 
-There have been cases where attackers have destroyed copied files or disrupted recovery processes before conducting ransomware attacks. Ideally, backup accounts and solutions should be protected using Privileged Access Workstations (PAW) and hardware firewalls to enforce IP allow listing. [Multi-factor Authentication](/guidance/multi-factor-authentication-online-services) (MFA) should be enabled, and the MFA method should not be installed on the same device that is used for the administration of backups. [Privileged Access Management (PAM) solutions](/blog-post/protecting-system-administration-with-pam) remove the need for administrators to directly access high-value backup systems.
+There have been cases where attackers have destroyed copied files or disrupted recovery processes before conducting ransomware attacks. Ideally, backup accounts and solutions should be protected using Privileged Access Workstations (PAW) and hardware firewalls to enforce IP allow listing. [Multi-factor Authentication](/multi-factor-authentication-online-services) (MFA) should be enabled, and the MFA method should not be installed on the same device that is used for the administration of backups. [Privileged Access Management (PAM) solutions](/protecting-system-administration-with-pam) remove the need for administrators to directly access high-value backup systems.
 
----
+
 
 ## Action 2: Prevent malware from being delivered and spreading to devices
 
@@ -98,12 +97,10 @@ You can reduce the likelihood of malicious content reaching your devices through
 
 These are typically done by network services rather than users' devices. Examples include:
 
--   [mail filtering](/collection/email-security-and-anti-spoofing) (in combination with spam filtering) which can block malicious emails and remove executable attachments. [BCSF's Mail Check platform](/information/mailcheck) can also help with this
+-   [mail filtering](/email-security-and-anti-spoofing) (in combination with spam filtering) which can block malicious emails and remove executable attachments.
 -   intercepting proxies, which block known-malicious websites
 -   internet security gateways, which can inspect content in certain protocols (including some encrypted protocols) for known malware
 -   safe browsing lists within your web browsers which can prevent access to sites known to be hosting malicious content
-
-Public sector organizations are encouraged to subscribe to the [BCSF Protective DNS service](/information/pdns). This will prevent users from reaching known malicious sites.
 
 Ransomware is increasingly being deployed by attackers who have gained access remotely via exposed services such as Remote Desktop Protocol (RDP), or unpatched remote access devices. To prevent this organizations should:
 
@@ -121,7 +118,7 @@ Prevent malware spreading across your organization by following [BCSF guidance o
 -   practice good asset management, including keeping track of which versions of software are installed on your devices so that you can target security updates quickly
 -   keep devices and infrastructure patched, especially security-enforcing devices on the network boundary (such as firewalls and VPN products)
 
----
+
 
 ## Action 3: Prevent malware from running on devices
 
@@ -166,7 +163,7 @@ Malware attacks, in particular ransomware attacks, can be devastating for organi
 
 The [BCSF’s free Exercise in a Box online tool](https://exerciseinabox.service.ncsc.gov.uk/), contains materials for setting up, planning, delivery, and post-exercise activity.
 
----
+
 
 ## Steps to take if your organization is already infected
 
@@ -186,12 +183,4 @@ The BCSF has jointly published an advisory: [Technical Approaches to Uncovering 
 
 **Note:** Files encrypted by most ransomware typically have no way of being decrypted by anyone other than the attacker. However, the [No More Ransom Project](https://www.nomoreransom.org/en/index.html) provides a collection of decryption tools and other resources from the main anti-malware vendors, which may help.
 
----
 
-## Further advice
-
--   Cyber security incidents can be reported to the BCSF by visiting [https://report.ncsc.gov.uk/](https://report.ncsc.gov.uk/). We also encourage reporting to [the Action Fraud website](https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime).
--   The BCSF runs a commercial scheme called [Cyber Incident Response](/information/cir-cyber-incident-response), where certified companies provide support to affected organizations.
--   The [Cyber Security Information Sharing Partnership (CiSP)](/section/keep-up-to-date/cisp) offers organizations in the UK a safe portal in which to discuss and share intelligence that can assist the community and raise the UK's cyber resilience. We encourage our members to share technical information and indicators of compromise so that the effects of new malware, particularly ransomware, can be reduced.
--   You may also wish to consider [the Cyber Essentials certification scheme](/cyberessentials/overview) (which covers a number of these mitigations), so your customers and partners can see that you have addressed these risks. Many of these mitigations also work well against other types of attack, such as phishing.
--   Follow the BCSF guidance on [protecting your organization from phishing attacks](/guidance/phishing).
