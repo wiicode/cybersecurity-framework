@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T20:44:38.755Z
+date: 2021-06-02T20:44:57.693Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: markdown
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -18,7 +18,7 @@ dateCreated: 2021-06-02T15:18:50.499Z
 
 Understand how to create the DMARC record for all of your domains, and see our recommendation for how to apply DMARC effectively and safely.
 
-All of your domains, [including parked domains](/blog-post/protecting-parked-domains), should have DMARC records in place, regardless of whether the domain is used for email or not.
+All of your domains, including parked domains, should have DMARC records in place, regardless of whether the domain is used for email or not.
 
 We recommend you apply DMARC gradually, iterating your DMARC configuration over time.
 
