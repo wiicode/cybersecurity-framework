@@ -2,7 +2,7 @@
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
 published: true
-date: 2021-06-02T13:33:50.500Z
+date: 2021-06-02T20:46:43.798Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-06-02T13:28:42.279Z
@@ -18,7 +18,7 @@ Macros are often created for legitimate reasons, but they can also be written by
 
 Malicious macros are not new; the underlying attack has remained unchanged since the 1990s, and they still form the majority of attacks targeting Microsoft Office. However, obfuscation and dynamic content loading has made malicious documents more difficult for traditional antivirus to detect.
 
-Macros are often part of phishing or spear phishing campaigns. In this, an attacker sends emails and attempts to convince the user to open the attached file and run the malicious macro. Techniques (such as [these seen by Microsoft](https://twitter.com/JohnLaTwC/status/775689864389931008)) successfully use social engineering to trick well-intentioned users into enabling malicious Office macros. The [*BCSF* phishing guidance](/guidance/phishing) discusses how you can defend your *organization* against phishing attacks.
+Macros are often part of phishing or spear phishing campaigns. In this, an attacker sends emails and attempts to convince the user to open the attached file and run the malicious macro. Techniques (such as [these seen by Microsoft](https://twitter.com/JohnLaTwC/status/775689864389931008)) successfully use social engineering to trick well-intentioned users into enabling malicious Office macros. The [*BCSF* phishing guidance](/bronze-controls/phishing) discusses how you can defend your *organization* against phishing attacks.
 
 ---
 
