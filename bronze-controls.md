@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-02T13:34:57.993Z
+date: 2021-06-02T13:35:11.681Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -29,7 +29,6 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Offline backups](/bronze-controls/offline-backups-in-an-online-world)
 - [Microsoft Office Macros](/bronze-controls/macro-security-for-microsoft-office)
 {.links-list}
-
 
 
 # Identity and Access Management
