@@ -2,7 +2,7 @@
 title: Managing web browser security
 description: Advice for IT Admins on the management of security settings for web browsers
 published: true
-date: 2021-06-02T02:33:39.601Z
+date: 2021-06-02T02:34:56.474Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:40:36.791Z
@@ -73,12 +73,12 @@ We advise that you investigate the security of the browsers you use on your devi
 When choosing and using a web browser, based on the considerations above, we recommend the following steps:
 
 -   Choose which browser or browsers meet your organizational needs using the considerations above. This may be the one built in to your operating system (e.g. Edge or Safari), or a third-party product installed separately.
--   Review the [third-party applications guidance](/collection/mobile-device-guidance/using-third-party-applications), and apply the advice about reviewing and distributing third-party software to your browser deployment
+-   Review the [third-party applications guidance](/bronze-training/mobile-device-guidance/using-third-party-applications), and apply the advice about reviewing and distributing third-party software to your browser deployment
 -   Review any enterprise management guidance from the developers for the browser(s) that you have chosen to use.
 -   Develop the settings and policies that you deem important enough to enforce on your users' devices. Specifically, develop a policy around the installation of third-party extensions on your browser.
--   Where possible, use [Mobile Device Management (MDM)](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services) to enforce those policies.
--   Ensure [automatic updates](/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) are turned on for both the browser and it's extensions.
--   You may wish to include some security tips for browsing the web securely within your [user guidance](/collection/mobile-device-guidance/advising-end-users). These should include 'do *not browse the web when logged in as an administrator*', and *'install updates when prompted*'.
+-   Where possible, use [Mobile Device Management (MDM)](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services) to enforce those policies.
+-   Ensure [automatic updates](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) are turned on for both the browser and it's extensions.
+-   You may wish to include some security tips for browsing the web securely within your [user guidance](/bronze-training/mobile-device-guidance/advising-end-users). These should include 'do *not browse the web when logged in as an administrator*', and *'install updates when prompted*'.
 
 We recommend **not** disabling crucial usability features like JavaScript and Password Auto-fill. Whilst there have been security vulnerabilities in these features in the past, using the web reliably and securely can be very difficult without them enabled. 
 
