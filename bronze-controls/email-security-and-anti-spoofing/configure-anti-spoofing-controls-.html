@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T15:18:50.499Z
+date: 2021-06-02T15:19:32.395Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: ckeditor
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -119,4 +119,39 @@ dateCreated: 2021-06-02T15:18:50.499Z
 <p>SPF syntax is very sensitive to white space. This is one of the most common causes of errors in SPF records. In particular, the failure&nbsp;to put a spaces between the SPF terms (eg between IP addresses).</p>
 <p>We recommend that you either leave your draft public DNS record for a few hours and then double-check it, or ask a colleague to double-check it, before you publish it.&nbsp;</p>
 <p>The<i> NCSC </i>has guidance on the&nbsp;<a href="https://www.ncsc.gov.uk/collection/developers-collection/principles/produce-clean-maintainable-code">best practices for secure design and development.</a></p>
-<p>&nbsp;</p>
+<h1>Monitor,<i> analyse </i>and update your DNS records</h1>
+<p>Advice for when you have set up a DMARC policy of 'none', including monitoring your reports for at least two weeks and correcting any failures.</p>
+<p>Implementing&nbsp;a DMARC policy of 'none' on your domains won’t affect the delivery of your email but neither will it prevent illegitimate emails being sent from your domains. For this, you must at least implement a DMARC policy of ‘quarantine’.</p>
+<p>Before you do this, you must ensure that you have correctly configured DMARC&nbsp;<i><strong>and</strong>&nbsp;</i>SPF&nbsp;<i><strong>and</strong>&nbsp;</i>DKIM on your domains.</p>
+<h3><strong>The roles of SPF, DKIM and DMARC</strong></h3>
+<p>SPF provides host authenticity and DKIM provides a mechanism for checking message integrity.</p>
+<p>These protocols do not tell organisations how to handle email, nor do they provide feedback to you, as the sending <i>organisation</i>.</p>
+<p>This is the role of DMARC, which builds on top of SPF and DKIM.</p>
+<hr>
+<h2>When you have setup a DMARC policy of ‘none’</h2>
+<ul>
+  <li>The receiving<i> organisation </i>will not change how it processes email sent from your domain – legitimate or illegitimate</li>
+  <li>But you will get feedback from the recipient</li>
+</ul>
+<p>Within 24 hours of publishing your DNS records with a DMARC policy of ‘none’,&nbsp;you’ll&nbsp;start receiving email reports from major email recipient domains. These will come to the two addresses you specified in your DMARC record. The first of these should be&nbsp;<a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool">the anti-spoofing management tool you chose in Step 1</a>,&nbsp;and&nbsp;the second to&nbsp;<a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool">a back-up email address of your choice, if you included one</a>.</p>
+<p>The information in the reports will show:</p>
+<ul>
+  <li>Where the outgoing email from your domains originates (eg IP address)</li>
+  <li>The outcome of SPF and DKIM checks by the recipient – simply, whether it has passed or failed the SPF and DKIM checks.</li>
+</ul>
+<hr>
+<h2>Monitor your reports for at least 2 weeks</h2>
+<p>During this time, you might see a lot a ‘fail’ notices against the SPF and DKIM checks. You should also see a lot of legitimate sources passing checks. For example, you will<i> recognise </i>the IP addresses belonging to your <i>organisation</i>.</p>
+<p>The reports will contain information about:</p>
+<ul>
+  <li>Legitimate email received directly</li>
+  <li>Legitimate email which has been forwarded by intermediary systems, such as mailing lists</li>
+  <li>Spoofed emails</li>
+</ul>
+<p>You should use your anti-spoofing management tool to identify legitimate emails which are&nbsp;<i>not</i>&nbsp;passing either SPF or DKIM checks. You should then update your SPF or DKIM configurations so that they do.</p>
+<hr>
+<h2>Correcting failures</h2>
+<p>To correct SPF failures you should add the sending systems you use to your SPF record, either by IP address, or by reference to another SPF record.<br>To correct DKIM failures, you should ensure a valid DKIM key is published in the correct place in DNS, and that outbound emails are being signed with it.</p>
+<p>You may not<i> recognise </i>all of the sending systems listed in your reports. When this happens you should investigate to determine if a particular sending service is in use by your <i>organisation</i>.</p>
+<p>It will likely take a few iterations of investigating, updating records, and waiting to review reports will be needed before you can gain enough confidence that you've got SPF and DKIM working for all of your sending systems.</p>
+<p>Once you've reached this stage, you're ready to move to a DMARC policy of 'quarantine' which will provide anti-spoofing protections for your domain.</p>
