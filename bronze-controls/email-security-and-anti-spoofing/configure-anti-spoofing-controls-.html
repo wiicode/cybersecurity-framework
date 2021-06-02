@@ -1,0 +1,122 @@
+<!--
+title: 3. Configure anti-spoofing controls
+description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
+published: true
+date: 2021-06-02T15:18:50.499Z
+tags: bronze, bronze-controls, email, dmarc, dkim, spf
+editor: ckeditor
+dateCreated: 2021-06-02T15:18:50.499Z
+-->
+
+<h2>The following controls can be applied concurrently:</h2>
+<ul>
+  <li>Implement a&nbsp;<strong>DMARC&nbsp;</strong>policy of ‘none'</li>
+  <li>Create and iterate an&nbsp;<strong>SPF&nbsp;</strong>record&nbsp;including your mail email senders</li>
+  <li>Create and manage a&nbsp;<strong>DKIM</strong>&nbsp;record&nbsp;for all of your mail email senders</li>
+</ul>
+<h1>Implement a DMARC policy of ‘none’</h1>
+<p>Understand how to create the DMARC record for all of your domains, and see our recommendation for how to apply DMARC effectively and safely.</p>
+<p>All of your domains,&nbsp;<a href="https://www.ncsc.gov.uk/blog-post/protecting-parked-domains">including parked domains</a>, should have DMARC records in place, regardless of whether the domain is used for email or not.</p>
+<p>We recommend you apply DMARC gradually, iterating your DMARC configuration over time.</p>
+<p>Start by implementing a DMARC policy of ‘<i>none</i>’.&nbsp;You can view this policy as a ‘monitoring phase’, during which the DMARC processing tool you selected in Step 1 collects and reports on which systems and services are sending emails from your&nbsp;domains.&nbsp;<i>This does not interfere with your email traffic in any way.</i></p>
+<p>The list&nbsp;of email senders collected by your processing tool during this stage will probably include your legitimate internal email users and any third parties you use for things like marketing email campaigns.<i>&nbsp;It will also include any sources which are spoofing your domain.</i></p>
+<h3><strong>Take your time</strong></h3>
+<p>A DMARC policy of&nbsp;<i>'none'</i>&nbsp;will give you time to understand whether you have configured DKIM and SPF&nbsp;correctly.</p>
+<hr>
+<h2>How to create the DMARC record</h2>
+<h3><strong>Note</strong></h3>
+<p>In this example,&nbsp;we have used&nbsp;<a href="http://yourdomain.gov.uk/"><i><strong>yourdomain.gov.uk</strong></i></a><i><strong>.&nbsp;</strong></i>You should replace&nbsp;<a href="http://yourdomain.gov.uk/"><i><strong>yourdomain.gov.uk</strong></i></a><i><strong>&nbsp;</strong></i>with your actual domain (which can be .gov.uk, .com etc.).&nbsp;</p>
+<hr>
+<p>Update your public DNS record as detailed below.</p>
+<p>Your DMARC record name is:</p>
+<p><code>_dmarc.yourdomain.gov.uk</code></p>
+<p>It should be configured as a TXT record, with an initial value similar to this:</p>
+<p><code>v=DMARC1;p=none;rua=mailto:dmarc-rua@example.gov.uk</code></p>
+<p>The 'p=none' part of the record above specifies the requested policy that mail receivers should apply. &nbsp;A policy of 'none' means this DMARC record won’t affect the delivery of your email, but it will provide you with reports on where your outbound email appears to be coming from.&nbsp;</p>
+<p>The email address in the record should be provided by the DMARC processing tool you've chosen <i>(noting that dmarc-rua@example.gov.uk shown above is fictional)</i>. If the tool does not provide one, it should be a mailbox you have chosen or created for this purpose.</p>
+<p>“rua” is a comma separated list of URI(s) for aggregate report delivery.&nbsp; This report contains details of the emails being sent from your domain, including whether they passed or failed the SPF and DKIM authentication checks. You can include up to 2 email addresses for which to send the aggregated data reports. If you’re eligible to use Mail Check and do, you need to include our email address, to ensure that you send the aggregated data to Mail Check - details are provided within Mail Check.</p>
+<h3><strong>Note</strong></h3>
+<p>In this ‘monitoring only phase’ we recommend keeping your DMARC record as simple as shown above.&nbsp; You do not need to add additional ‘DMARC tags’ (see <a href="https://tools.ietf.org/html/rfc7489#page-17">https://tools.ietf.org/html/rfc7489#page-17</a>) at this stage.</p>
+<p>Semi-colons are used to separate the tags.&nbsp; Commas are used to separate multiple email addresses (where more than one is used).&nbsp;</p>
+<p>You do not need a semi-colon (or full stop) at the end of the DMARC record.&nbsp;</p>
+<h3><strong>DMARC Reports</strong></h3>
+<p>Within 24 hours of publishing your records you’ll start receiving email reports from&nbsp;<a href="http://dmarc.io/sources/">major email recipient domains</a>.&nbsp;These will come to the two addresses you specified in your DMARC record.</p>
+<p><strong>The information in the reports will show</strong></p>
+<ul>
+  <li>Where the outgoing email from your domains originates.</li>
+  <li>How it's being handled by the&nbsp;major recipients. In other words, whether it has passed or failed the DKIM and SPF checks undertaken by the recipient.</li>
+</ul>
+<p>&nbsp;</p>
+<h1>Create and manage a DKIM record</h1>
+<p>DKIM provides email authentication, which can be used to give the recipient server confidence an email came from a given address.</p>
+<p>When DKIM is in use, the sending email service adds a&nbsp;DKIM&nbsp;signature to its outbound email. The receiving email service retrieves the sender's DKIM public key, which has been published in its DNS records.</p>
+<p>The receiving email server verifies the signature on the email using the DKIM public key. If the signature is successfully verified, the DKIM check is marked as passed, which will contribute to the DMARC policy check.</p>
+<p>You should configure DKIM on domains you send email from, as it's a stronger authentication mechanism than SPF.&nbsp;It will help recipients validate the legitimacy of email which has passed through an email relay&nbsp;en-route.</p>
+<h3><strong>If you already have DKIM records</strong></h3>
+<p>If you already have DKIM records, you'll need to know the&nbsp;<a href="http://dkim.org/info/dkim-faq.html">DKIM selector</a>&nbsp;to find the record. You can find the selector in the&nbsp;<a href="https://support.google.com/mail/answer/22454?hl=en">header</a>&nbsp;of any email you send.</p>
+<hr>
+<h2>Creating a DKIM record and signing email</h2>
+<h3><strong>Generate the key</strong></h3>
+<p>How you go about creating and implementing a&nbsp;DKIM&nbsp;key will vary depending on your email service. If you use a cloud-based email service, your&nbsp;DKIM&nbsp;configuration will be automated to some extent. Look for a&nbsp;DKIM&nbsp;option in your administration panel, or contact your service provider.</p>
+<p>If you are configuring DKIM on your email servers directly, you will need to generate an RSA public/private key pair. We recommend you use a 2048-bit key. There are several good guides on how to generate RSA key pairs for&nbsp;<a href="https://winscp.net/eng/docs/ui_puttygen">Windows&nbsp;</a>or&nbsp;<a href="https://lxadm.com/Generating_DKIM_key_with_openssl">Linux</a>.</p>
+<p>DKIM&nbsp;keys do not expire, but you should rotate them&nbsp;periodically (we suggest every 12 months). Create a new key with a new selector and follow the same steps as above. Keep the old&nbsp;DNS&nbsp;record live for a few days after making changes, to give the&nbsp;DNS&nbsp;time to update.</p>
+<h3><strong>Create an entry in the public&nbsp;DNS&nbsp;record</strong></h3>
+<p>Add the&nbsp;DKIM&nbsp;signature to a TXT record in your&nbsp;DNS&nbsp;record. This is made up of a selector (the name of your record), the version, the key type, and the public key itself.</p>
+<p>Anyone receiving email which claims to be from you can verify the signature on the email with the key from your DNS. A successful verification proves the message hasn’t been tampered with in transit.</p>
+<p>Your DNS record should have the host, or record name of:</p>
+<p><code>selector._domainkey.yourdomain.gov.uk</code></p>
+<p>and the value:</p>
+<p><code>v=DKIM1, k-rsa,</code></p>
+<p>You can check this has been applied using a&nbsp;<a href="http://mxtoolbox.com/dkim.aspx">DKIM&nbsp;lookup service</a>&nbsp;and your selector. The result should look like:</p>
+<p><code>v=DKIM1; k=rsa;</code><br><code>p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG26OM/bk0vNm/TM2DnOQjPZNLIWspF4xtIX12LGHHjfushjsaudfysuf+DUigzM6h2oJMEdNt1S/CWVXW0pUBqfU0fzdw90+jyqOduh4cCnEk0z0w1w1j4xOYy0FLHhKoeoZJwWQFtwrlhrjxD6jM+sGeeRnbn2rQIDAQAB</code></p>
+<h3><strong>Apply DKIM signatures to outbound email</strong></h3>
+<p>How you achieve this will vary, depending on your email service. DKIM signatures may be applied by your filtering service rather than your email server. Ask your service provider for details.</p>
+<p>A DKIM signature should be the last addition to a message before it is released by an email server. Since modifying the email or its headers will change its cryptographic hash, it is necessary for any signatures or standard disclaimers to be applied&nbsp;<strong>before</strong>&nbsp;it is signed with DKIM.</p>
+<p>When using email scanning services on outbound email, ensure they are configured in a way that does not break the DKIM signature (e.g. through adding a disclaimer line to the bottom of the email body).</p>
+<h1>Create and iterate an SPF record</h1>
+<p>Sender Policy Framework (SPF) is a system of email authentication.</p>
+<p>SPF works by&nbsp;providing domain owners a way to publish a list of the IP addresses which should be trusted for a given domain.&nbsp;A receiving email service can then check that a sending email service has an&nbsp;IP address which appears in the sender's published list.</p>
+<p>If the IP address&nbsp;appears in the list of acceptable IPs, the receiving email service will forward the email to the recipient's inbox. If the receiving email service cannot confirm the IP address is valid, then it marks the email in accordance with the DMARC policy you have implemented on the domain the email is being sent from.</p>
+<hr>
+<h2>Create an SPF record</h2>
+<p>Create an&nbsp;SPF&nbsp;record in your public&nbsp;DNS, using all the IP addresses or address ranges from which you send email. You can use both IPv4 and IPv6 addresses. 3 examples of what an SPF record could look like are below:</p>
+<p>1. An example of a basic&nbsp;SPF&nbsp;record to be added to an <i>organisation</i>'s public DNS where it uses Google would look like this:<br>&nbsp;</p>
+<p><code>v=spf1 include:_spf.google.com ~all</code><br>&nbsp;</p>
+<p>2. This SPF record includes Google's IP ranges and a sending service with an IP address range:<br>&nbsp;</p>
+<p><code>v=spf1 include:_spf.google.com ip4:80.88.21.0/20 ~all</code><br>&nbsp;</p>
+<p>3. An example of a more complex record, with additional services and some dedicated IP addresses:<br>&nbsp;</p>
+<p><code>v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com ip6:2001:db8::/32 ip4:203.0.113.6 ~all</code><br>&nbsp;</p>
+<p><strong>NOTE:</strong>&nbsp;These examples are unique - you cannot just "copy and paste" them into your DNS for your <i>organisation</i>. If you use other email sending services, you need to add their domain or IP range to this record.</p>
+<p>You will need to check with your supplier to find the exact value in your case as it will not necessarily take this form (you can usually do this online, we recommend you search your email sending service and how to setup SPF records).</p>
+<h3><strong>Choosing emailing services</strong></h3>
+<p>When choosing services, look for ones that can provide&nbsp;an SPF record you can include,&nbsp;or a stable IP range. This will make it easier to maintain your&nbsp;SPF&nbsp;record.</p>
+<hr>
+<h2>Add all legitimate sources of email to your SPF records</h2>
+<p>You should ensure that all legitimate IP addresses are added to your SPF records.&nbsp; We recommend that you consult all departments across your<i> organisation </i>and ask, for example, whether they use any 3rd party mailing agents.&nbsp; If your<i> organisation </i>sends mass emails (for example, e-newsletters, e-magazines or e-bills), then it probably uses a 'mass marketing email service'.</p>
+<h3><strong>Mass marketing email services</strong></h3>
+<p>Email marketing services allow bulk-sending of emails to targeted mailing lists. If your communications, sales and/or marketing staff make use of this kind of service, you need to ensure they are sending authenticated mails, as this will make it less likely your <i>legitimate</i> marketing emails will end up as spam. That is, you need to ensure that you add the IP addresses to your SPF records and <a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/configure-anti-spoofing-controls-/create-and-manage-a-dkim-record">set up DKIM</a>.</p>
+<p>There are many such services. The&nbsp;<a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/further-reading">Further reading section</a>&nbsp;links to guidance on email authentication from two of the biggest: MailChimp and SendInBlue.</p>
+<hr>
+<h2>Understanding and overcoming SPF limitations</h2>
+<h3><strong>SPF record size limit of 450 bytes or fewer</strong></h3>
+<p>The SPF protocol limits the size of its record to 450 bytes (ie characters) or fewer.&nbsp; If your software does not provide a character count, which should include spaces, we recommend you search online for 'character counter' and confirm that your proposed SPF record is 450 bytes or fewer.&nbsp;&nbsp;</p>
+<p>Where your SPF record is greater than 450 bytes, we recommend that you create one or more sub-domains (see below).</p>
+<h3><strong>DNS lookup restrictions</strong></h3>
+<p>As part of evaluating whether an email message passes SPF authentication, a receiving mail server may have to make one or more DNS lookups.</p>
+<p>To check whether an email passes SPF authentication, receiving mail servers invariably have to undertake DNS lookups.&nbsp; The SPF protocol has some built-in protection – it protects receiving mail servers from&nbsp;<strong>denial of service attacks&nbsp;</strong>by limiting the number of domain lookups to 10.</p>
+<p>The DNS lookup limit is often breached by 'nested' lookups caused by the use of an 'include'.&nbsp; In the example above, whereby the SPF record includes <code>_spf.google.com</code>, looking up the contents of this record in DNS we find that it includes 3&nbsp;<code>google.com</code>&nbsp;subdomains (ie a total of 4 lookups). However, 'includes' are useful because they help overcome the above mentioned SPF record limit of 450 bytes or fewer.</p>
+<p>Your<i> organisation </i>might use a number of cloud services, Zendesk, Google Apps, mass mailing services, and so on – rapidly the 10 lookup restriction is breached.&nbsp;</p>
+<h3><strong>Use your tools</strong></h3>
+<p>Anti-spoofing management tools, including the<i> NCSC&nbsp;</i><strong>Mail Check&nbsp;</strong>platform, often include inline advisory messages and notify you where these SPF restrictions have been breached.</p>
+<hr>
+<h3><strong>Creating sub-domains</strong></h3>
+<p><strong>Sub domains will help you overcome the 450 bytes and maximum of 10 DNS lookup restrictions</strong></p>
+<p>Each sub-domain makes its own DNS request, and so has its own lookup and character limits. This gives you a tool to split off your various business functions into their own subdomains, each with 10 lookups and 450 characters.</p>
+<p>If you use 3rd party suppliers to send emails for you, we recommend creating a sub-domain each. For example, <code>marketing.yourorganisation.gov.uk</code> for your mass mail outs and newsletters.</p>
+<p>Not only do you solve the SPF problem, but by doing this, you gain greater visibility and control of each domain. And, if you identify fraudulent use, for example, you will be able to take quicker preventative action, limiting the negative impacts of legitimate email traffic on your other domains.</p>
+<figure class="image image_resized" style="width:630px;"><img src="https://www.ncsc.gov.uk/images/blur-codes-coding-577585.jpg?mpwidth=545&amp;mlwidth=737&amp;twidth=961&amp;dwidth=635&amp;dpr=2&amp;width=1736" alt="computer code"></figure>
+<h3><strong>SPF Errors</strong></h3>
+<p>SPF syntax is very sensitive to white space. This is one of the most common causes of errors in SPF records. In particular, the failure&nbsp;to put a spaces between the SPF terms (eg between IP addresses).</p>
+<p>We recommend that you either leave your draft public DNS record for a few hours and then double-check it, or ask a colleague to double-check it, before you publish it.&nbsp;</p>
+<p>The<i> NCSC </i>has guidance on the&nbsp;<a href="https://www.ncsc.gov.uk/collection/developers-collection/principles/produce-clean-maintainable-code">best practices for secure design and development.</a></p>
+<p>&nbsp;</p>
