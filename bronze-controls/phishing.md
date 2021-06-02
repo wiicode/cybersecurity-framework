@@ -2,7 +2,7 @@
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
 published: true
-date: 2021-06-02T15:35:13.669Z
+date: 2021-06-02T19:00:10.288Z
 tags: bronze, bronze-controls, phishing
 editor: markdown
 dateCreated: 2021-06-02T15:04:32.010Z
@@ -187,9 +187,8 @@ Knowing about an incident sooner rather than later allows you to limit the harm 
 **How do I do this?**
 
 -   Ensure users know in advance how they can report incidents. Bear in mind that they may be unable to access normal means of communication if their device is compromised.
--   Use a [security logging system](/guidance/introduction-logging-security-purposes) to pick up on incidents your users are not aware of. To collect this information, you can use monitoring tools built into your off-the-shelf services (such as cloud email security panels), build an in-house team, or outsource to a managed security monitoring service.
--   Smaller organizations that may lack dedicated logging resources may wish to try the [*BCSF*'s Logging Made Easy open source project](/blog-post/logging-made-easy), which provides a practical way to set up basic end-to-end Windows monitoring of your IT estate.
--   Once a monitoring capability has been set up, it needs to be [kept up to date](/blog-post/keeping-your-security-monitoring-effective) to ensure it remains effective.   
+-   Use a [security logging system](/silver-controls/checklist-systems-monitoring) to pick up on incidents your users are not aware of. To collect this information, you can use monitoring tools built into your off-the-shelf services (such as cloud email security panels), build an in-house team, or outsource to a managed security monitoring service.
+-   Once a monitoring capability has been set up, it needs to be kept up to date to ensure it remains effective.   
       
      
 
@@ -199,20 +198,9 @@ Once an incident is discovered, you need to know what to do to prevent any furth
 
 **How do I do this?**
 
--   Ensure that your *organization* knows what to do in the case of different types of incidents. For example, how will you force a password reset if the password is compromised? Who is responsible for removing malware from a device, and how will they do it? For more information, refer to the [Incident Management section of 10 Steps to Cyber Security](/guidance/10-steps-incident-management).
--   Incident response plans should be practiced before an incident occurs. The best way to do this is through exercising. If you're new to this, the *BCSF* have created [Exercise In A Box](/information/exercise-in-a-box), an online tool which helps you to find out how resilient you are to cyber attacks, and where you can *practice* your response in a safe environment.
+-   Ensure that your *organization* knows what to do in the case of different types of incidents. For example, how will you force a password reset if the password is compromised? Who is responsible for removing malware from a device, and how will they do it? For more information, refer to the [Incident Management section of 10 Steps to Cyber Security](/bronze-training/background-advanced/10-steps-incident-management).
+-   Incident response plans should be practiced before an incident occurs. The best way to do this is through exercising. 
 
----
-
-## Case study: how multi-layered phishing mitigations defended against Dridex malware
-
-The following real-world example illustrates how a company in the financial sector used effective **layered** mitigations to defend against phishing attacks. Reliance on any single layer would have missed some of the attacks, or in the case of relying on cleaning up quickly afterwards, be very costly and prohibitively time consuming.
-
-The company, which has around 4,000 employees, received 1,800 emails containing a number of variants of Dridex malware. The email claimed to be an invoice that needed urgent attention, which was relevant to the role of some of the recipients. It was not targeted at individual users with any personal information, but was well written, with good spelling and grammar.
-
-![](/static-assets/images/phshing_case_study.jpg)
-
-[Download the phishing mitigations case study below (pdf)](/guidance/phishing#downloads)
 
 ### **Summary of the phishing attack:**
 
