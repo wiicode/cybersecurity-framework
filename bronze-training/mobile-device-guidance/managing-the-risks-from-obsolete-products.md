@@ -2,7 +2,7 @@
 title: Obsolete products
 description: Reducing the risks from using out of date smartphones, tablets, laptops, desktop PCs, appliances or software applications.
 published: true
-date: 2021-06-02T13:37:10.858Z
+date: 2021-06-02T20:58:30.824Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:51:11.711Z
@@ -12,15 +12,14 @@ All software, including device operating systems, will eventually become out of 
 
 This guidance provides advice to organizations who are unable to fully migrate away from obsolete products before the end of their support dates.
 
-### **NOTE**
+> This guidance does *not* provide a risk-free way of continuing to use obsolete products, but will help to reduce the risks of doing so.
+> 
+> The only fully effective way to mitigate this risk is to migrate away from the obsolete product.
+{.is-info}
 
-This guidance does *not* provide a risk-free way of continuing to use obsolete products, but will help to reduce the risks of doing so.
 
-The only fully effective way to mitigate this risk is to migrate away from the obsolete product.
 
----
-
-## Why manage the risk from obsolete products?
+# Why manage the risk from obsolete products?
 
 Using obsolete products compounds two related problems:
 
@@ -33,9 +32,9 @@ When a product is no longer supported by its developer, there are limits on the 
 
 No combination of the protective measures described below will remove the risks posed by vulnerable software remaining in active use. You should work in parallel to migrate away from the obsolete products.
 
----
 
-## Preparation for the protection of obsolete products
+
+# Preparation for the protection of obsolete products
 
 When products become obsolete, you'll need to trade off the risks from continuing to use them with the costs of replacing or upgrading them.
 
@@ -47,9 +46,9 @@ If you decide it's time to upgrade your applications, where possible consider mo
 
 When [choosing new hardware or licensing new software](/bronze-training/mobile-device-guidance/choosing-devices), always consider the support lifetime of the product. This will help you ensure that your systems remain supported for as long as possible.
 
----
 
-## How to manage the risk from obsolete products
+
+# How to manage the risk from obsolete products
 
 The following steps apply to any software which is approaching the end of its support period.
 
@@ -64,9 +63,9 @@ There are two ways to reduce the risk:
 
 You should implement a combination of these two approaches. In the long-term, moving away from obsolete systems should be the goal.
 
----
 
-## Measures to reduce the likelihood of compromise
+
+# Measures to reduce the likelihood of compromise
 
 Exploits can only be successful if attackers are able to reach the vulnerable product. If untrusted data is prevented from reaching it, then exploitation via this route isn't possible. To achieve this, there are several steps you can take.
 
@@ -104,9 +103,9 @@ Obsolete servers should be checked to ensure that the services they offer are mi
 
 Wherever possible, migrate required services from obsolete servers to modern, supported servers or cloud services. Obsolete servers should not be used to provide remote app services, or other remote desktop facilities. Nor should they be relied upon where there is any expectation of separation between users or where the remote desktop solution is being used to provide security separation, within a network.
 
----
 
-## Apply mitigations to reduce the impact of compromise
+
+# Apply mitigations to reduce the impact of compromise
 
 An unpatched end user device that is directly exposed to malicious content is likely to end up compromised. The impact of compromise can be reduced by controlling access to enterprise services hosting sensitive data and improving the ability to detect attacks.
 
@@ -134,9 +133,9 @@ Products such as [antivirus, host-based and network-based intrusion detection s
 
 Timely response to security critical events becomes increasingly important if obsolete and vulnerable software is present within the enterprise environment. Actions to contain and eradicate the compromise should be swift to try and reduce any compromise spreading.
 
----
 
-## Understand third-party connections
+
+# Understand third-party connections
 
 If third party organizations use their own devices within your environment, or to connect in to it, you should understand whether they are running obsolete and vulnerable software - and to take action to address such risks. This could be the situation, for example, where you have suppliers managing services within your enterprise environment.
 
