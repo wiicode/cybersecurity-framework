@@ -2,7 +2,7 @@
 title: II. Establish control
 description: This section's principles will help you gain and maintain control of your supply chain.
 published: true
-date: 2021-06-02T21:29:06.645Z
+date: 2021-06-02T21:34:06.090Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:49:39.174Z
@@ -13,7 +13,7 @@ Once you gain better control of your supply chain you will be able to analyze st
 -   Identify any suppliers who continually fail to meet your security and performance expectations.
 -   Identify critical assets and any over-reliance on single suppliers. This will help you to build further diversity and redundancy into your planning.
 
----
+
 
 ## 4\. Communicate your view of security needs to your suppliers
 
@@ -24,7 +24,7 @@ You should decide whether you are willing to permit your suppliers to sub-contr
 
 Give your suppliers clear guidance on the criteria to use for such decisions (e.g. the types of contract that they can let with little/no recourse to you, and those where your prior approval and sign-off must always be sought). 
 
----
+
 
 ## 5\. Set and communicate minimum security requirements for your suppliers
 
@@ -44,7 +44,7 @@ Explain the rationale for these requirements to your suppliers, so they understa
 
 Include your minimum security requirements in the contracts you have with suppliers and in addition, require that your suppliers pass these down to any sub-contractors they might have.
 
----
+
 
 ## Four case studies - Setting the minimum standard
 
@@ -56,7 +56,7 @@ These requirements are not necessarily cumulative, but the measures you can impl
 
 ### **Protecting information that you share with suppliers**
 
-You must protect the information you share with your suppliers from any unauthorised access, modification or deletion, which could cause disruption to your organisation and its business. 
+You must protect the information you share with your suppliers from any unauthorized access, modification or deletion, which could cause disruption to your organization and its business. 
 
 ### **Example**
 
@@ -66,15 +66,12 @@ A supplier has a legacy application that wasn't fully patched, yet hosted some s
 
 ### **You should:**
 
--   Consider asking suppliers to use [Cyber Essentials](https://www.cyberessentials.ncsc.gov.uk/) as the baseline level of protection. It significantly reduces vulnerabilities to the most common internet based threats (hacking and phishing[1](https://www.ncsc.gov.uk/guidance/ii-establish-control#footnote1)). All suppliers to government are required to demonstrate how they will achieve its five technical controls. Where this level of commitment is not realistic, the new [Cyber Security Small Business Guide](https://www.ncsc.gov.uk/collection/small-business-guide) may provide a more achievable way for suppliers to begin to improve their resilience.
+-   Consider asking suppliers to use complete a BCSF Attestation project. 
 -   Where greater assurance is required and you want suppliers to be able to identify with confidence any potential attacker presence on their systems, require suppliers to understand their systems, implement security monitoring and develop an incident response capability.
--   To protect against a wider range of attacks, require suppliers to implement a holistic approach to security, following [10 Steps to Cyber Security](https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security), ISO27001 (or similar).
--   Where appropriate require personnel, physical and procedural controls to protect against fraud, theft, and insider threats. [All staff working on a contract should be screened](https://www.cpni.gov.uk/system/files/documents/61/e9/pre-employment-screening-A-good-practice-guide-edition-5.pdf), following the principles outlined by the Cabinet Office Baseline Protective Security Standard (BPSS), and additional checks (eg financial checks) added as required for the role.
--   Require the implementation of [ICO guidance](https://ico.org.uk/) for protecting and off-shoring personal information, where the personal information is stored, processed or handled as part of a contract.
--   Where suppliers use cloud-based services, you should understand that it is not possible to transfer complete responsibility or accountability for protecting information to the provider of that service. This is true in every case. Security requirements to protect information, systems and services should be reflected in the contracts and service agreements you have in place with suppliers, and should inform the choices they make about how the cloud service is deployed and delivered. For HMG, the [G-Cloud digital market place](https://www.digitalmarketplace.service.gov.uk/g-cloud), provides a range of service offerings that can be matched against your organisation's needs. As a minimum, it is recommended that suppliers follow NCSC's [cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security#curPage=/collection/cloud-security/implementing-the-cloud-security-principles) to frame their security needs.
--   Where information is held in a common data environment, whether or not this is cloud-based, it is recommended that this is reviewedusing the ‘Common Data Environments guidance available on the CPNI website at [https://www.cpni.gov.uk/digital-built-assets-and-environments](https://www.cpni.gov.uk/digital-built-assets-and-environments).
+-   To protect against a wider range of attacks, require suppliers to implement a holistic approach to security, following [10 Steps to Cyber Security](/bronze-training/background-advanced), ISO27001 (or similar).
+-   Where appropriate require personnel, physical and procedural controls to protect against fraud, theft, and insider threats. 
+-   Where suppliers use cloud-based services, you should understand that it is not possible to transfer complete responsibility or accountability for protecting information to the provider of that service. This is true in every case. Security requirements to protect information, systems and services should be reflected in the contracts and service agreements you have in place with suppliers, and should inform the choices they make about how the cloud service is deployed and delivered. As a minimum, it is recommended that suppliers follow BCSF's [cloud security principles](/silver-training) to frame their security needs.
 
-###### **1 Note that the NCSC has launched a number of new services under the Active Cyber Defence programme to improve basic cyber security. For example, Mail Check encourages the adoption of secure email protocols for the Public Sector. Anyone can register their DMARC/SPF records and they should. It may be worthwhile recommending these to your key suppliers too.** 
 
 ### **Specifying security requirements to a supplier**
 
@@ -90,7 +87,7 @@ You need absolute clarity about your security and functional needs. These must 
 
 -   Be aware of any known gaps in coverage of schemes like Cyber Essentials.
 -   Requiring additional controls to provide assurance about the product or service to be delivered. If for example, the contract relates to the development of new software tools, or the manufacturing of components, you will need to specify that the supplier follows best practice in these areas.
--   In cases where a supply chain is delivering a project or asset/facilities management using collaborative digital engineering systems such mitigation methods would not be effective, further guidance is available at….[https://www.cpni.gov.uk/digital-built-assets-and-environments](https://www.cpni.gov.uk/digital-built-assets-and-environments).
+-   In cases where a supply chain is delivering a project or asset/facilities management using collaborative digital engineering systems such mitigation methods would not be effective.
 -   Where a Cloud service is being delivered, you should follow the guidance detailed under Use Case A above.
 
 ### **Connecting a supplier's systems to yours**
@@ -107,20 +104,20 @@ Cyber criminals attacked a large commercial company exploiting unprotected suppl
 
 Ensure that the accesses you provide to your systems, services, information and premises is limited, controlled and monitored. This is true for both your supplier's people *and* their systems. These accesses should be reviewed periodically, and removed when no longer required.
 
--   If you intend that the supplier will perform the contracted work on your systems and premises, ensure these are appropriately segregated from the rest of your network. [10 Steps to Cyber Security, Network Security](https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security/the-10-steps/network-security) shows you how to do this.
+-   If you intend that the supplier will perform the contracted work on your systems and premises, ensure these are appropriately segregated from the rest of your network. [10 Steps to Cyber Security, Network Security](/bronze-training/background-advanced/10-steps-network-security) shows you how to do this.
 -   Access to contract-related information, contracted products or services should be limited on a 'least privilege' basis.
--   Have a secure means to exchange hard and soft copy information with your supplier. For guidance on hard copy exchanges see the Cabinet Office, Government Classification Scheme and for guidance on data in transit/exchanges see [10 Steps to Cyber Security, Home and Mobile Working](https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security) and the [Walled Gardens Architectural Pattern](https://www.ncsc.gov.uk/file/808/download?token=6Z2-pUBd).
--   Where organisations use operational technology as part of a system or to deliver services,  like other technology it should be treated as 'untrusted', and managed accordingly.
+-   Have a secure means to exchange hard and soft copy information with your supplier. For guidance on hard copy exchanges see the Cabinet Office, Government Classification Scheme and for guidance on data in transit/exchanges see [10 Steps to Cyber Security, Home and Mobile Working](/bronze-training/background-advanced).
+-   Where organizations use operational technology as part of a system or to deliver services,  like other technology it should be treated as 'untrusted', and managed accordingly.
 
-### **National security - a state actor may target you**
+### **Corporate security - a state actor may target you**
 
 You must be confident that your supply chain security can deal with attacks, and attempted subversion by state actors - but only in those circumstances where your threat model warrants it. 
 
 ### **Example**
 
-A security guard contracted to a defence company stole, and attempted to sell documents that detailed the electronic warfare systems used to protect UK and NATO ships, to a foreign intelligence service. 
+A security guard contracted to a defense company stole, and attempted to sell documents that detailed the electronic warfare systems used to protect US and NATO ships, to a foreign intelligence service. 
 
-In national security cases such as this, you will need to seek professional advice from the NCSC and CPNI, as this is beyond the scope of the guidance provided.
+In national security cases such as this, you will need to seek professional advice from the BCSF and CPNI, as this is beyond the scope of the guidance provided.
 
 ### **Matters will likely include:**
 
@@ -129,7 +126,6 @@ In national security cases such as this, you will need to seek professional advi
 -   Vulnerabilities that might arise in manufacturing or build processes.
 -   Additional measures to protect the privacy and identity of contracting partners and their procurement activities.
 
----
 
 ## 6\. Build security considerations into your contracting processes and require that your suppliers do the same
 
@@ -137,7 +133,7 @@ Build security considerations into your normal contracting processes. This will 
 
 ### **Evidence**
 
-Require prospective suppliers to provide evidence of their approach to security and their ability to meet the [minimum security requirements](https://www.ncsc.gov.uk/collection/supply-chain-security?curPage=/collection/supply-chain-security/principles-supply-chain-security/ii-establish-control) you have set at different stages of the contract competition.
+Require prospective suppliers to provide evidence of their approach to security and their ability to meet the minimum security requirements you have set at different stages of the contract competition.
 
 ### **Providing support**
 
@@ -152,7 +148,7 @@ You should:
 -   Seek assurance that your suppliers understand and support your approach to security and only ask them to take action or provide information where it is necessary to support the management of supply chain security risks.
 -   Ensure that contracts  clearly set out specific requirements for the return and deletion of your information and assets by a supplier on termination or transfer of that contract.
 
----
+
 
 ## 7\. Meet your own security responsibilities as a supplier and consumer
 
@@ -164,7 +160,7 @@ Welcome any audit interventions your customer might make, tell them about any is
 
 Challenge your customers if guidance covering their security needs is not forthcoming, and seek assurance that they are they happy with the measures you are taking.
 
----
+
 
 ## 8\. Raise awareness of security within your supply chain
 
@@ -172,13 +168,13 @@ Explain security risks to your suppliers using language they can understand. Enc
 
 ### **Set goals**
 
-Establish supply chain security awareness and education for appropriate staff. [NCSC and CPNI awareness materials](https://www.cpni.gov.uk/security-awareness-campaigns) may be useful.
+Establish supply chain security awareness and education for appropriate staff. 
 
 ### **Information sharing**
 
-Promote and adopt the sharing of security information across your supply chain to enable better understanding and anticipation of emerging security attacks. The [Cyber Security Information Sharing Partnership](https://www.ncsc.gov.uk/section/keep-up-to-date/cisp) (CiSP) is a great example of a free cyber security information sharing service. 
+Promote and adopt the sharing of security information across your supply chain to enable better understanding and anticipation of emerging security attacks. 
 
----
+
 
 ## 9\. Provide support for security incidents
 
