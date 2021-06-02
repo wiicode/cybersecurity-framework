@@ -2,7 +2,7 @@
 title: Email security and anti-spoofing
 description: A guide for IT managers and systems administrators
 published: true
-date: 2021-06-02T18:43:36.016Z
+date: 2021-06-02T18:43:38.374Z
 tags: bronze, bronze-training, bronze-controls, email
 editor: markdown
 dateCreated: 2021-06-02T15:12:04.641Z
