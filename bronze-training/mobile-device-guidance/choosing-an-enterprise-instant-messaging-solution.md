@@ -2,7 +2,7 @@
 title: Enterprise instant messaging
 description: Advice on assessing the security features of enterprise instant messaging systems for smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-02T02:52:18.322Z
+date: 2021-06-02T20:50:40.650Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:44:11.033Z
@@ -14,9 +14,8 @@ There are a variety of enterprise IM services, and features can vary between the
 
 This guidance outlines some of the important security-related aspects you'll need to consider when selecting which product(s) meet your needs.
 
----
 
-## Why secure your enterprise instant messaging?
+# Why secure your enterprise instant messaging?
 
 Instant messaging is fast, convenient, and enables rich communications between collaborators. However, these communications may contain sensitive corporate or personal data. Without understanding the security of these services, it is impossible to assess the risks to your data from using them.
 
@@ -24,9 +23,9 @@ If users are not given formal guidance on which services to use, they may turn t
 
 Regulated industries and public sector organizations may have additional strictures to comply with, including the need to audit communications between staff, or respond to information requests. If data is held within IM applications that don't permit enterprise audit, you may be unable to comply.
 
----
 
-## Preparation for secure instant messaging
+
+# Preparation for secure instant messaging
 
 Various features of a messaging service need to be considered before you choose a specific IM service. In particular, you should consider:
 
@@ -39,9 +38,9 @@ Various features of a messaging service need to be considered before you choose 
 -   How does backup and recovery of messages work, if devices are lost or stolen?
 -   If you decide to use or enable built-in messaging services on mobile platforms, you should think about the implications of using [built-in cloud accounts](/bronze-training/mobile-device-guidance/using-built-in-cloud-services) that this may require.
 
----
 
-## How to choose the right IM solution
+
+# How to choose the right IM solution
 
 To choose the correct Instant Messaging service for yourself or your organization, you should:
 
@@ -54,8 +53,8 @@ To choose the correct Instant Messaging service for yourself or your organizatio
 
 The BCSF has performed security assessments of several applications which implement the [Secure Chorus](https://www.securechorus.com/) protocol. 
 
----
 
-## More information
+
+# More information
 
 Most enterprise instant messaging products, and some consumer instant messaging products include in-depth documentation explaining how they work. Some are open source. You can use this information to help perform security assessments.
