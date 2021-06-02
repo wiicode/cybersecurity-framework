@@ -2,7 +2,7 @@
 title: Windows 10 with MDM
 description: Secure configuration for Windows 10 (1803) with Mobile Device Management
 published: true
-date: 2021-06-02T22:07:12.391Z
+date: 2021-06-02T22:07:34.358Z
 tags: guidance, silver, platform-specific, silver-training
 editor: markdown
 dateCreated: 2021-03-10T02:24:42.173Z
@@ -498,9 +498,7 @@ You should deploy VPN infrastructure configured either to support the PRIME or F
   
 If you are using a third-party VPN client, you should prefer one that has been built on top of the Windows 10 UWP VPN plug-in platform. These will likely integrate better into the platform and be more reliable, as the Windows platform is regularly updated.
 
-##   
-  
- 
+
 
 
 ## Enterprise Considerations
