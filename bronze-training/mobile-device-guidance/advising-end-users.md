@@ -2,7 +2,7 @@
 title: Advising end users
 description: Advising your organisation’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-02T13:40:23.240Z
+date: 2021-06-02T13:40:37.325Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:50:14.235Z
@@ -12,7 +12,6 @@ Once devices have been [provisioned and distributed](/bronze-training/mobile-dev
 
 In many cases, administrators can use *technical controls* such as MDM policies and security configuration to help automatically keep devices secure, but sometimes users will have to be informed of expectations and acceptable usage. These *procedural controls* will be needed to mitigate certain threats.
 
----
 
 ## Why give security advice to end users?
 
@@ -32,7 +31,6 @@ Providing clear guidance to users of mobile devices should form an important par
 
 It's important to remember that too much security can result in your employees becoming frustrated and unhappy with their work environment. You will need to find the correct balance between security and usability. User feedback is one method that can help determine if you have got this right.
 
----
 
 ## Preparing to advise end users
 
@@ -59,7 +57,6 @@ You should also consider developing training packages for users to ensure that t
 
 You can also use this training opportunity as a way to educate users on key threats they will face, and how to handle unexpected events. Such sessions can ensure staff are aware of common attacks such as email phishing.
 
----
 
 ## How to develop end user guidance
 
@@ -77,7 +74,6 @@ When developing user guidance:
 
 Disciplinary action should always be a last resort. Instead, you should promote positive security culture, encourage reporting of issues and highlight that security is there to support employees in their jobs.
 
----
 
 ## Recommend policies:
 
