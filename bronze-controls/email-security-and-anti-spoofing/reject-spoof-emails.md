@@ -2,7 +2,7 @@
 title: 5. Reject spoof emails
 description: When and how to update your DMARC policy to 'reject', and recommendations for keeping everyone in your organization informed and monitoring your records.
 published: true
-date: 2021-06-02T20:42:51.292Z
+date: 2021-06-02T20:43:00.257Z
 tags: bronze, bronze-controls, email, dmarc
 editor: markdown
 dateCreated: 2021-06-02T15:21:41.820Z
@@ -44,6 +44,14 @@ Notify your *organization*’s management team of your implementation plan and a
 
 If you experience any problems, you can revert to the DMARC policy of *p=quarantine* until you are ready to progress again.
 
+
+## Closely monitor and update your records
+
+After updating your DNS records with a DMARC policy of `reject`, we recommend that you closely monitor your reports for at least a 2 week period.
+
+> As `reject` is the final DMARC policy to implement, we recommend that you continue to monitor your controls.
+{.is-warning}
+
 # E-mail security and anti-spoofing
 
 - [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
@@ -53,10 +61,3 @@ If you experience any problems, you can revert to the DMARC policy of *p=quaran
 - [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
 - [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
 {.grid-list}
-
-## Closely monitor and update your records
-
-After updating your DNS records with a DMARC policy of `reject`, we recommend that you closely monitor your reports for at least a 2 week period.
-
-> As `reject` is the final DMARC policy to implement, we recommend that you continue to monitor your controls.
-{.is-warning}
