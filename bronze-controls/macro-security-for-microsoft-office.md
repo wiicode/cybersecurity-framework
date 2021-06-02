@@ -2,7 +2,7 @@
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
 published: true
-date: 2021-06-02T20:46:43.798Z
+date: 2021-06-02T20:46:56.957Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-06-02T13:28:42.279Z
@@ -14,7 +14,7 @@ This guidance describes how administrators can help protect their systems from m
 
 A macro is a small program that is often written to automate repetitive tasks in Microsoft Office applications. Macros have been historically used for a variety of reasons - from an individual automating part of their job, to organizations building entire processes and data flows. Macros are written in Visual Basic for Applications (VBA) and are saved as part of the Office file.
 
-Macros are often created for legitimate reasons, but they can also be written by attackers to gain access to or harm a system, or to bypass [other security controls](/collection/end-user-device-security) such as application allow listing. In fact, exploitation from malicious macros [is one of the top ways that organizations around the world are compromised today](https://cofense.com/microsoft-office-macros-still-leader-malware-delivery/). Malicious macros can do almost anything that other malware can do to your system, including emulating ransomware, stealing data, and emailing itself out to your contacts.
+Macros are often created for legitimate reasons, but they can also be written by attackers to gain access to or harm a system, or to bypass other security controls such as application allow listing. In fact, exploitation from malicious macros [is one of the top ways that organizations around the world are compromised today](https://cofense.com/microsoft-office-macros-still-leader-malware-delivery/). Malicious macros can do almost anything that other malware can do to your system, including emulating ransomware, stealing data, and emailing itself out to your contacts.
 
 Malicious macros are not new; the underlying attack has remained unchanged since the 1990s, and they still form the majority of attacks targeting Microsoft Office. However, obfuscation and dynamic content loading has made malicious documents more difficult for traditional antivirus to detect.
 
