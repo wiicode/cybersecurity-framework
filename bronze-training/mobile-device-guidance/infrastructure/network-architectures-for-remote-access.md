@@ -2,7 +2,7 @@
 title: Network architectures
 description: Advice for network architects and systems administrators on the design of remote access architecture for enterprise services
 published: true
-date: 2021-06-02T21:04:22.527Z
+date: 2021-06-02T21:04:51.042Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:55:47.973Z
@@ -11,11 +11,11 @@ dateCreated: 2021-03-06T02:55:47.973Z
 When deciding how to enable remote users to access enterprise resources, there are a number of security issues to take into account. This guidance outlines two approaches to this problem, *a traditional VPN-based remote access architecture*, and *a zero trust architecture*. 
 
 > If you have on-premises resources, using a **traditional VPN-based remote access architecture** - the *walled garden approach -* is one way of balancing remote usability with the risk of compromise.
-{.is-info}
+{.is-success}
 
 
-> If you have few or no on-premises services, the *zero trust architecture* can be very effective.
-{.is-info}
+> If you have few or no on-premises services, the **zero trust architecture** can be very effective.
+{.is-success}
 
 
 These two approaches are not the only options for enabling remote access, nor are they mutually exclusive. A hybrid approach can be taken if required, adopting properties from each.
