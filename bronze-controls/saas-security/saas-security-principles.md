@@ -2,22 +2,22 @@
 title: SaaS security principles
 description: A brief description of the criteria BCSF uses to evaluate the security of various 'Software as a Service' (SaaS) offerings
 published: true
-date: 2021-06-02T21:16:10.541Z
+date: 2021-06-02T21:16:36.737Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown
 dateCreated: 2021-05-29T19:50:11.623Z
 ---
 
-The table below lists each SaaS security principle, along with a brief description of its purpose, and the question the *NCSC* used to quiz the *organisation* on its support for this principle.
+The table below lists each SaaS security principle, along with a brief description of its purpose, and the question the *BCSF* used to quiz the *organization* on its support for this principle.
 
 The final column (**Sample output**) shows the kind of conclusions you may come to after scrutinising the service's website (or questioning their support staff).
 
 | **SaaS Security Principle** | **Question** | **Description** | **Sample output** |
 | --- | --- | --- | --- |
 | Data-in-transit protection between clients and service | Does the SaaS provider protect external data in transit using TLS? | Data should be protected as it transits between the client and the SaaS product.<br><br>Transport Layer Security (TLS) is a protocol which provides privacy between communicating applications and their users, or between communicating services. When a server and client communicate, well-configured TLS ensures that no third party can eavesdrop or tamper with any message.<br><br>At the time of writing, TLS 1.2 is the current version, and this includes security improvements over version 1.0. The predecessor to the TLS protocol was the Secure Sockets Layer (SSL) protocol, all versions of which are now regarded as insecure. | Yes |
-| Industry good practice external certificate configuration | Does the SaaS provider protect external data in transit using correctly configured certificates? | Certificates used within the external TLS connection should follow good practice.<br><br>The *NCSC* recommend a set of [preferred TLS profiles](https://www.ncsc.gov.uk/guidance/tls-external-facing-services) which SaaS providers are encouraged to adopt. | Unknown |
+| Industry good practice external certificate configuration | Does the SaaS provider protect external data in transit using correctly configured certificates? | Certificates used within the external TLS connection should follow good practice.<br><br>The *BCSF* recommend a set of [preferred TLS profiles](/guidance/tls-external-facing-services) which SaaS providers are encouraged to adopt. | Unknown |
 | Data-in-transit protection between microservices | Does the SaaS provider protect internal data in transit between services using encryption? | Data should be protected as it transits between a SaaS provider's microservices.<br><br>Since microservices can be hosted in different areas of a cloud service, data should be as protected between microservices as it is between client and service. | Yes |
-| Industry good practice internal certificate configuration | Does the SaaS provider protect internal data in transit between services using correctly configured certificates? | Certificates used within the internal TLS connection should follow good practice.<br><br>The *NCSC* recommend a set of [preferred TLS profiles](https://www.ncsc.gov.uk/guidance/tls-external-facing-services) which SaaS providers are encouraged to adopt. | Unknown |
+| Industry good practice internal certificate configuration | Does the SaaS provider protect internal data in transit between services using correctly configured certificates? | Certificates used within the internal TLS connection should follow good practice.<br><br>The *BCSF* recommend a set of [preferred TLS profiles](/guidance/tls-external-facing-services) which SaaS providers are encouraged to adopt. | Unknown |
 | API authentication and protection | If APIs are available, does the SaaS provider protect both internal and external APIs through an authentication method? | All externally exposed API queries which return protected information should require successful authentication before they can be called. | Yes (version dependent) |
 | Privilege separation | If there is a concept of privilege levels in the service, does the SaaS provider have the ability for low privilege users to be created? | The SaaS product should implement levels of privilege, and have authorisation mechanisms in place to enforce the separation of privileges between different types of account. | Yes |
 | Multi-factor authentication | If there is a concept of privilege levels, does the SaaS provider at least make 2FA/multi-factor authentication available on high privileged accounts? | The SaaS product should implement a method of requiring multi factor authentication to the service. Enabling multi factor authentication helps lower the impact of credential theft. | Yes |
