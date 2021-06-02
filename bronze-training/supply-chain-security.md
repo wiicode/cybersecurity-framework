@@ -2,7 +2,7 @@
 title: Supply chain security guidance
 description: Proposing a series of 12 principles, designed to help you establish effective control and oversight of your supply chain.
 published: true
-date: 2021-06-02T21:35:13.765Z
+date: 2021-06-02T21:35:31.054Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:44:31.086Z
@@ -16,6 +16,6 @@ But, supply chains can be large and complex, involving many suppliers doing many
 
 A series of high profile, very damaging attacks on companies has demonstrated that attackers have both the intent and ability to exploit vulnerabilities in supply chain security. This trend is real and growing. So, the need to act is clear.
 
-# A note on implementation
-Implementing these recommendations will take time, but the investment will be worthwhile. It will improve your overall resilience, reduce the number of business disruptions you suffer and the damage they cause.
-
+> **A note on implementation:**
+> Implementing these recommendations will take time, but the investment will be worthwhile. It will improve your overall resilience, reduce the number of business disruptions you suffer and the damage they cause.
+{.is-info}
