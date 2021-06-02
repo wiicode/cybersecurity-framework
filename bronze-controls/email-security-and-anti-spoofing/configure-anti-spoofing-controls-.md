@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T20:38:53.922Z
+date: 2021-06-02T20:42:36.681Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: markdown
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -303,3 +303,13 @@ It will likely take a few iterations of investigating, updating records, and wai
 
 > Once you've reached this stage, you're ready to move to a DMARC policy of `quarantine` which will provide anti-spoofing protections for your domain.
 {.is-success}
+
+# E-mail security and anti-spoofing
+
+- [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
+- [Protect email in transit](/bronze-controls/email-security-and-anti-spoofing/protect-email-in-transit)
+- [Configure anti-spoofing controls](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Send spoof emails to spam](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)
+- [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
+- [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
+{.grid-list}
