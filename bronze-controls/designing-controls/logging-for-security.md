@@ -2,7 +2,7 @@
 title: Introduction to logging for security purposes
 description: Laying the groundwork for incident readiness.
 published: true
-date: 2021-03-06T02:07:53.293Z
+date: 2021-06-02T21:09:34.496Z
 tags: bronze, bronze-training, security-operations
 editor: markdown
 dateCreated: 2021-02-21T03:22:50.683Z
@@ -132,7 +132,7 @@ For each log source you hold, you need to decide how long to store the data. Thi
 
 A logging source might only capture minimal information in its default configuration, giving you insufficient detail to accurately answer the incident questions. You should attempt to answer the incident question with the logs that are being captured. If you find yourself short of data, change configuration so you capture more detail.
 
-### Structuring the system: Centralised versus decentralized logging
+### Structuring the system: Centralized versus decentralized logging
 Once you begin planning how to collect your logs, you'll very likely have to decide between pulling them into a central store, and keeping them where they are.
 
 A centralized solution can be used to provide a standalone logging service. The more sources that feed into a centralized store, the more useful it will be, and the better the return on your investment. Centralising logging will also mean you don’t have to physically go to each machine when investigating an incident. This will create a more responsive system, requiring minimal resources to operate it.
