@@ -2,8 +2,8 @@
 title: Preventing Lateral Movement
 description: Guidance for preventing lateral movement in enterprise networks.
 published: true
-date: 2021-06-02T21:09:03.658Z
-tags: bronze, guidence
+date: 2021-06-02T21:46:34.655Z
+tags: guidance, bronze
 editor: markdown
 dateCreated: 2021-05-28T02:08:46.934Z
 ---
@@ -19,7 +19,6 @@ Implementing the recommended security controls outlined below - including monito
 ## Platform-specific guidance
 
 -   The steps below can be applied in networks regardless of the platforms in use. However, for guidance on specific platforms see our [Mobile Device Security Collection.](/silver-training/end-user-device-guidance)
--   To learn more about lateral movement in an enterprise environment (in this case using Windows infrastructure), please refer to the following whitepaper: [CERT-EU Security Whitepaper 17-002: Detecting Lateral Movements in Windows Infrastructure (PDF).](http://cert.europa.eu/static/WhitePapers/CERT-EU_SWP_17-002_Lateral_Movements.pdf)
 
 
 ## What is lateral movement?
