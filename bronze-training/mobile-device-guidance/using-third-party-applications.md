@@ -2,7 +2,7 @@
 title: Using third-party applications
 description: Advice on the assessment, distribution and use of third-party applications on smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-01T20:50:29.602Z
+date: 2021-06-02T02:49:46.486Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:43:20.060Z
@@ -30,8 +30,8 @@ Your organization will naturally want to take advantage of the productivity bene
 
 We advise thinking about this in two steps:
 
-1.  [Minimising the *likelihood*](/collection/mobile-device-guidance/using-third-party-applications#L1) that you will come to have malicious or insecure applications on your devices
-2.  [Minimising the *impact*](/collection/mobile-device-guidance/using-third-party-applications#impact) of any application being malicious or insecure
+1.  [Minimising the *likelihood*](bronze-training/mobile-device-guidance/using-third-party-applications) that you will come to have malicious or insecure applications on your devices
+2.  [Minimising the *impact*](bronze-training/mobile-device-guidance/using-third-party-applications) of any application being malicious or insecure
 
 ---
 
@@ -47,9 +47,9 @@ Most platforms enable you to strongly enforce which applications can run, but th
 
 On platforms with an application marketplace, you will be able to configure the device so that it will not run applications from any other source. You can then apply policies to only allow approved apps to install and run, what's know as *an allow list*. Conversely, you can specify a *deny list* of applications that are specifically prohibited.
 
-*Allow lists* are a much better strategy than *deny lists*. They can be joined up with software licensing and procurement activities in a lightweight approvals process. Allow/deny lists on most platforms can be configured using [Mobile Device Management](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services).
+*Allow lists* are a much better strategy than *deny lists*. They can be joined up with software licensing and procurement activities in a lightweight approvals process. Allow/deny lists on most platforms can be configured using [Mobile Device Management](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services).
 
-On some platforms, applications can be delivered through a variety of mechanisms, not just official marketplaces. In these cases, you may be required to manually configure trusted code signers, or allow specific application hashes. For example, on [Windows 10](/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809) you will likely want to use a combination of [App Locker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) and [Windows Defender Application Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) to ensure that only applications you trust will run. You can usually run these features in a 'reporting' mode, which won't actually block any applications, but will help you adopt the feature by reporting back the range of applications that are currently in use across your organization and *would* be blocked if you ran the features in 'enforcing' mode. 
+On some platforms, applications can be delivered through a variety of mechanisms, not just official marketplaces. In these cases, you may be required to manually configure trusted code signers, or allow specific application hashes. For example, on Windows 10 you will likely want to use a combination of [App Locker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) and [Windows Defender Application Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) to ensure that only applications you trust will run. You can usually run these features in a 'reporting' mode, which won't actually block any applications, but will help you adopt the feature by reporting back the range of applications that are currently in use across your organization and *would* be blocked if you ran the features in 'enforcing' mode. 
 
 #### **Formal assessment and assurance**
 
@@ -60,7 +60,7 @@ Many organizations provide databases of app assessments, sometimes including 'ri
 You can also use:
 
 -   [Common criteria](https://www.niap-ccevs.org/) assessments
--   [Commercial product assurance](/information/commercial-product-assurance-cpa) evaluated product reports
+-   [Commercial product assurance](/bronze-controls/saas-security) evaluated product reports
 
 You can perform in-house assessments using something like the [NIST approach](https://csrc.nist.gov/publications/detail/sp/800-163/rev-1/final), or contract out an assessment to a third party, who might follow a similar approach.
 
@@ -95,11 +95,11 @@ You should consider what application store checks look for. Most checks are for 
 
 #### **Security apps**
 
-On platforms where you can install applications from outside an application store, you might want to consider using [security apps or antivirus](/collection/mobile-device-guidance/antivirus-and-other-security-software) to lower the risk of executing malicious code. However, this approach only lowers the risk and does not remove it entirely.
+On platforms where you can install applications from outside an application store, you might want to consider using [security apps or antivirus](/bronze-training/mobile-device-guidance/antivirus-and-other-security-software) to lower the risk of executing malicious code. However, this approach only lowers the risk and does not remove it entirely.
 
 #### **Support and security updates**
 
-When using third-party applications on your devices, you should regularly update them to ensure that the latest security fixes are included. See [*keeping your devices and applications up-to-date*](/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) for further advice on this.
+When using third-party applications on your devices, you should regularly update them to ensure that the latest security fixes are included. See [*keeping your devices and applications up-to-date*](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) for further advice on this.
 
 ---
 
@@ -113,11 +113,11 @@ Most platforms provide a way for organizations to configure *containers* or *
 
 Whilst these spaces are not impermeable, they lower the risk that arbitrary third-party applications can access and potentially compromise sensitive work data. Your organization's third-party application policies can be more liberal if you are happy with the security level that this separation provides.
 
-These spaces are often part of a platform's bring your own device (BYOD) features. You should read our [guidance on BYOD](/collection/mobile-device-guidance/bring-your-own-device) if you are considering that approach.
+These spaces are often part of a platform's bring your own device (BYOD) features. You should read our [guidance on BYOD](/bronze-controls/byod-guidance) if you are considering that approach.
 
 #### **Policies on limiting risky apps to only the individuals that need them**
 
-Many [mobile device management](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services) products allow you to decide exactly which users are allowed to install and use an application.
+Many [mobile device management](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services) products allow you to decide exactly which users are allowed to install and use an application.
 
 If there are applications which you consider risky, but some users have a strong business need for them, you can consider allowing access for these users only.
 
@@ -129,7 +129,7 @@ When third-party applications are used, certain network architectures may become
 
 For example, if your devices have device-wide VPN access to a core network, then all third-party applications will also be able to access that core network. If there is any unprotected data on that network, then those applications may be able to access that data.
 
-[If you have adopted a zero-trust approach to your network design,](/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access) which requires authentication for every connection, your systems will be more resilient to this kind of attack.
+[If you have adopted a zero-trust approach to your network design,](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-accesss) which requires authentication for every connection, your systems will be more resilient to this kind of attack.
 
 #### **High-privilege applications**
 
@@ -147,7 +147,7 @@ Firstly, you should agree with key stakeholders what the acceptable level of ris
 
 -   What app behaviors will be prohibited or high-risk (e.g. accessing contacts on devices that sync with your global address list)?
 -   How will you assess a vendor as reputable?
--   Might the application make it difficult to comply with any regulations for auditing stored data (e.g. [freedom of information](https://ico.org.uk/for-organizations/guide-to-freedom-of-information/) requests)?
+-   Might the application make it difficult to comply with any regulations for auditing stored data?
 
 **Develop an applications approval process**
 
@@ -169,8 +169,8 @@ You should balance your assessment against user productivity needs:
 
 Where there are user requirements for applications that may present unacceptable levels of risk, there may be architectural approaches which can bring down the risk level:
 
--   Some platforms may provide the ability to enterprise manage which permissions a third-party application can request, [using MDM](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services). You can use these features to prevent risky apps accessing work data.
--   If the platform supports it, we recommend not allowing users to install arbitrary software from outside of curated app stores. Follow our [platform-specific guidance](/collection/mobile-device-guidance/platform-guides) for recommendations about how to achieve this. Enterprise app catalogues typically provide a good balance of security and flexibility for the platform.
--   Don't allow third-party apps to access work data unless they are doing a work-related function. This can be achieved by using a [*Corporately Owned, Personally Enabled (COPE)*](/collection/mobile-device-guidance/platform-guides) approach, or a [*Bring Your Own Device (BYOD)*](/collection/mobile-device-guidance/bring-your-own-device) approach. In both of these cases, you can enable users to install riskier apps outside of the trusted work space, prohibiting those applications from accessing work data.
--   Some platforms may provide additional [logging features](/collection/mobile-device-guidance/logging-and-protective-monitoring) that may enable you to take a *trust and verify* approach.
+-   Some platforms may provide the ability to enterprise manage which permissions a third-party application can request, [using MDM](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services). You can use these features to prevent risky apps accessing work data.
+-   If the platform supports it, we recommend not allowing users to install arbitrary software from outside of curated app stores. Follow our [platform-specific guidance](/bronze-training/platform-guides) for recommendations about how to achieve this. Enterprise app catalogues typically provide a good balance of security and flexibility for the platform.
+-   Don't allow third-party apps to access work data unless they are doing a work-related function. This can be achieved by using a [*Corporately Owned, Personally Enabled (COPE)*](/bronze-training/platform-guides) approach, or a [*Bring Your Own Device (BYOD)*](/bronze-controls/byod-guidance) approach. In both of these cases, you can enable users to install riskier apps outside of the trusted work space, prohibiting those applications from accessing work data.
+-   Some platforms may provide additional [logging features](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring) that may enable you to take a *trust and verify* approach.
 -   If using containers, the ideal approach is to have the personal container as part of the work profile (e.g. the [fully managed device with a work profile configuration of Android Enterprise](https://developers.google.com/android/work/terminology#fully_managed_device_with_a_work_profile)) rather than the converse of having work containers on a personal device, but the converse is often simpler. You might be able to have separate virtual machines for personal usage or riskier behavior as a compromise (e.g. for developers who need admin rights).
