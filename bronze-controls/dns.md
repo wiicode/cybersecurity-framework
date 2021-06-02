@@ -2,18 +2,18 @@
 title: Domain Name System
 description: 
 published: true
-date: 2021-02-13T23:45:02.492Z
+date: 2021-06-02T21:08:36.276Z
 tags: bronze, bronze-training, dns
 editor: markdown
 dateCreated: 2020-10-31T18:35:44.902Z
 ---
 
 **Policy**: Use a dedicated DNS provider such as RackSpace Cloud DNS or Amazon Route53 to manage DNS records independent of the organization's website host, mail host, and domain registrar.   For some organizations two exceptions can be made:
-- Office365 customers with GoDaddy will find that the convenience of automatic record management is so beneficial that managing DNS independently is difficult to justify.   Customers should note that GoDaddy is not SOC2 or ISO certified and should review vendor docs for security risks.
-- Google Domains customers  will find that the convenience of the entire system is too valuable to trade for the additional security. 
+- Office365 based organizations with GoDaddy will find that the convenience of automatic record management is so beneficial that managing DNS independently is difficult to justify.   Customers should note that GoDaddy is not SOC2 or ISO certified and should review vendor docs for security risks.
+- Google Domains based organizations will find that the convenience of the entire system is too valuable to trade for the additional security. 
 - e-Commerce only business that sees value and benefits from the e-Commerce platform controlling the DNS. 
 
-**Convenrience**:
+**Convenience**:
 Organizations often will choose to use the webhost's DNS because they area lead to believe that is necessary or simply hand over control.   Alternatively, organizations frequently will frequently leave the DNS at the registrar.  In both cases this makes web hosting and management extremely easy, but it leaves the mail-record management at risk and the domain subject to compromise.  
 
 **Control**:
