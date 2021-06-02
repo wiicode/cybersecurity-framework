@@ -2,7 +2,7 @@
 title: Logging and protective monitoring
 description: Using logging and monitoring to identify threats and protect smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-02T14:10:22.832Z
+date: 2021-06-02T14:11:57.144Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:47:21.441Z
@@ -16,7 +16,7 @@ Effective monitoring relies on proportionate, reliable logging and device manage
 
 ## Why use logging and protective monitoring?
 
-Many large-scale incidents have been shown to target individual hosts, from which attackers will attempt to further strengthen their access through [lateral movement techniques](/guidance/preventing-lateral-movement) such as [credential theft, account impersonation, use of legitimate network tools](https://www.microsoft.com/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/?source=mmpc) or [known exploits in outdated versions of network protocols](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/?source=mmpc) to propagate and compromise additional devices to access additional data and services.
+Many large-scale incidents have been shown to target individual hosts, from which attackers will attempt to further strengthen their access through [lateral movement techniques](/bronze-controls/preventing-lateral-movement) such as [credential theft, account impersonation, use of legitimate network tools](https://www.microsoft.com/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/?source=mmpc) or [known exploits in outdated versions of network protocols](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/?source=mmpc) to propagate and compromise additional devices to access additional data and services.
 
 Some of these more traditional techniques may not apply in cloud-only or [zero trust network architectures](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-access). However, monitoring device activity, health, and configuration arguably become *more* important when deciding whether to permit access to organizational services and data.
 
@@ -26,7 +26,7 @@ Logging and monitoring will help you to identify patterns of activity on your ne
 
 ## Preparation for logging and monitoring
 
-There are many types of events and signals that you may be able to collect from mobile devices. Monitoring of mobile devices should form part of your organization's wider approach to [logging](/guidance/introduction-logging-security-purposes) and [monitoring](/collection/10-steps-to-cyber-security/the-10-steps/monitoring). Very often, successful intrusion detection requires multiple sources of information.
+There are many types of events and signals that you may be able to collect from mobile devices. Monitoring of mobile devices should form part of your organization's wider approach to [logging](/bronze-training/background-advanced/10-steps-monitoring). Very often, successful intrusion detection requires multiple sources of information.
 
 In general terms, monitoring data could come from event-driven logs, such as website connections, or device configurations details, such as the current operating system version running on a device. 
 
@@ -74,7 +74,7 @@ The constraints of your mobile device management system, and the devices themsel
 
 **Establish a SOC**
 
-If your organization has the resources available, one solution is to [establish a security operation center (SOC)](/guidance/security-operations-center-soc-buyers-guide). This will help you manage and monitor security risks to your organization generally.
+If your organization has the resources available, one solution is to [establish a security operation center (SOC)](/silver-training/topic-soc-vendors). This will help you manage and monitor security risks to your organization generally.
 
 **Logging made easy**
 
