@@ -2,7 +2,7 @@
 title: Logging and protective monitoring
 description: Using logging and monitoring to identify threats and protect smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-02T14:11:57.144Z
+date: 2021-06-02T14:12:20.385Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:47:21.441Z
@@ -12,8 +12,6 @@ Security monitoring is central to the identification and detection of threats to
 
 Effective monitoring relies on proportionate, reliable logging and device management practices. This guidance is designed to give system and network admins advice on the logging and monitoring options available on mobile platforms.
 
----
-
 ## Why use logging and protective monitoring?
 
 Many large-scale incidents have been shown to target individual hosts, from which attackers will attempt to further strengthen their access through [lateral movement techniques](/bronze-controls/preventing-lateral-movement) such as [credential theft, account impersonation, use of legitimate network tools](https://www.microsoft.com/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/?source=mmpc) or [known exploits in outdated versions of network protocols](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/?source=mmpc) to propagate and compromise additional devices to access additional data and services.
@@ -22,7 +20,6 @@ Some of these more traditional techniques may not apply in cloud-only or [zero
 
 Logging and monitoring will help you to identify patterns of activity on your networks, which in turn provide indicators of compromise. In the event of incidents, logging data can help to more effectively identify the source and the extent of compromise.
 
----
 
 ## Preparation for logging and monitoring
 
@@ -42,7 +39,6 @@ As a first step, you should seek to understand the types and sources of data you
 
 You should carefully consider your access to, and use of, these data sources. Along with the logging and remote management capabilities of the mobile devices your organization is using, they will determine your ability to detect and respond to security incidents, or policy breaches.
 
----
 
 ## How to monitor and log
 
@@ -84,7 +80,6 @@ However, at the very least, you should have an effective logging system in place
 
 [LME](/blog-post/logging-made-easy) demonstrates that, with a modest investment of time and effort, it is possible to build a basic enterprise logging capability. 
 
----
 
 ## Technical notes
 
