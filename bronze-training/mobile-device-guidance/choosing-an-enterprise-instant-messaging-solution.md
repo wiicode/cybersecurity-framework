@@ -2,7 +2,7 @@
 title: Enterprise instant messaging
 description: Advice on assessing the security features of enterprise instant messaging systems for smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-01T20:50:47.524Z
+date: 2021-06-02T02:52:18.322Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:44:11.033Z
@@ -22,7 +22,7 @@ Instant messaging is fast, convenient, and enables rich communications between c
 
 If users are not given formal guidance on which services to use, they may turn to insecure methods of communication, such as SMS.
 
-Regulated industries and public sector organizations may have additional strictures to comply with, including the need to audit communications between staff, or respond to [Freedom of Information](https://ico.org.uk/for-organizations/guide-to-freedom-of-information/) requests. If data is held within IM applications that don't permit enterprise audit, you may be unable to comply.
+Regulated industries and public sector organizations may have additional strictures to comply with, including the need to audit communications between staff, or respond to information requests. If data is held within IM applications that don't permit enterprise audit, you may be unable to comply.
 
 ---
 
@@ -30,14 +30,14 @@ Regulated industries and public sector organizations may have additional strictu
 
 Various features of a messaging service need to be considered before you choose a specific IM service. In particular, you should consider:
 
--   The same things you would consider for any [third-party application](/collection/mobile-device-guidance/using-third-party-applications) running on your mobile devices. This includes assessing the reputation of the vendor, the likelihood that the application is insecure or malicious, and the impact to your organization should it be found to be so.
+-   The same things you would consider for any [third-party application](/bronze-training/mobile-device-guidance/using-third-party-applications) running on your mobile devices. This includes assessing the reputation of the vendor, the likelihood that the application is insecure or malicious, and the impact to your organization should it be found to be so.
 -   The security features provided by the IM service. This includes end-to-end encryption and enterprise single sign on. You may also want to look to see if any independent assessments have been performed on the application or protocols it uses, as well as any historic security issues there might have been.
 -   What data-loss prevention features do you want from an IM service, if any?
--   What [enterprise audit and monitoring](/collection/mobile-device-guidance/logging-and-protective-monitoring) features are offered by the service? This can improve threat detection and will be needed for business practice monitoring, as well as complying with any regulations you are required to obey.
+-   What [enterprise audit and monitoring](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring) features are offered by the service? This can improve threat detection and will be needed for business practice monitoring, as well as complying with any regulations you are required to obey.
 -   Is the information about your use of the messaging service exposed unnecessarily for monetisation or advertising purposes? Look for a clear privacy policy on how your information is used.
--   How and where are messages stored during transit? Our [Cloud security guidance](/collection/cloud-security) can help inform your assessment.
+-   How and where are messages stored during transit? Our [Cloud security guidance](/silver-training) can help inform your assessment.
 -   How does backup and recovery of messages work, if devices are lost or stolen?
--   If you decide to use or enable built-in messaging services on mobile platforms, you should think about the implications of using [built-in cloud accounts](/collection/mobile-device-guidance/using-built-in-cloud-services) that this may require.
+-   If you decide to use or enable built-in messaging services on mobile platforms, you should think about the implications of using [built-in cloud accounts](/bronze-training/mobile-device-guidance/using-built-in-cloud-services) that this may require.
 
 ---
 
@@ -47,12 +47,12 @@ To choose the correct Instant Messaging service for yourself or your organizatio
 
 -   Decide on which features are important to your organization's stakeholders.
 -   Build a shortlist of IM services that meet your business and regulatory requirements.
--   Conduct a security assessment of your potential Instant Messaging services, to ensure they comply with your requirements. Use the [BCSF Cloud Security Principles](/collection/cloud-security), or [BCSF SaaS Guidance](/collection/saas-security) as well as internal reviews and third-party assessments.
+-   Conduct a security assessment of your potential Instant Messaging services, to ensure they comply with your requirements. Use the [BCSF Cloud Security Principles](/silver-training), or [BCSF SaaS Guidance](/bronze-controls/saas-security/understanding-saas-security) as well as internal reviews and third-party assessments.
 -   Select, test and pilot an IM service from your shortlist that meets your requirements.
 -   Develop an acceptable use policy for your chosen IM service, and test it with with user community representatives.
--   Follow BCSF guidance on [deploying third-party applications securely](/collection/mobile-device-guidance/using-third-party-applications) when distributing the applications to your users. In particular, the use of enterprise application catalogues and automatic updates are recommended.
+-   Follow BCSF guidance on [deploying third-party applications securely](/bronze-training/mobile-device-guidance/using-third-party-applications) when distributing the applications to your users. In particular, the use of enterprise application catalogues and automatic updates are recommended.
 
-The BCSF has performed security assessments of several applications which implement the [Secure Chorus](https://www.securechorus.com/) protocol. Details of these can be found within the [Commercial Product Assurance](/cpa) products list. We recommend investigating these solutions as potential candidates for your organization.
+The BCSF has performed security assessments of several applications which implement the [Secure Chorus](https://www.securechorus.com/) protocol. 
 
 ---
 
