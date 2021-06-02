@@ -2,7 +2,7 @@
 title: Code of Conduct
 description: 
 published: true
-date: 2021-06-02T21:36:03.232Z
+date: 2021-06-02T21:36:21.946Z
 tags: bronze, bronze-controls, organization-and-management
 editor: markdown
 dateCreated: 2021-03-05T19:27:58.448Z
@@ -31,7 +31,7 @@ Orderly and efficient operation of {{organization.name}} requires that employees
 - Conduct that is illegal under federal, state, or local law.
 - Creating a disturbance on Company premises.
 - Use of abusive language.
-- Any rude, discourteous or unbusinesslike behavior, on or off Company premises, which is not protected by Section 7 of the National Labor Relations Act and that adversely affects Company services, operations, property, reputation or goodwill in the community, or interferes with work.
+- Any rude, discourteous or unbusinesslike behavior, on or off Company premises, which is not protected and that adversely affects Company services, operations, property, reputation or goodwill in the community, or interferes with work.
 - Insubordination or refusing to follow instructions from a supervisor or manager; refusal or unwillingness to accept a job assignment or to perform job requirements.
 - Leaving during scheduled work hours without permission; unauthorized absence from assigned work area during regularly scheduled work hours.
 - Sleeping during regular working hours.
