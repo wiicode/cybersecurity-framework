@@ -2,19 +2,19 @@
 title: macOS 10.14 Mojave
 description: Secure configuration for macOS 10.14 Mojave
 published: true
-date: 2021-06-02T22:02:55.278Z
+date: 2021-06-02T22:03:45.187Z
 tags: silver, sourced, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:24:14.551Z
 ---
 
-# macOS 10.14 Mojave
+> Secure configuration for macOS 10.14 Mojave
+{.is-info}
 
-Secure configuration for macOS 10.14 Mojave
 
 This guidance was developed following testing performed on MacBook Pro and MacBook Air devices running macOS 10.14 (Mojave)
 
-It's important to remember that this guidance has been conceived as a way to satisfy the [12 End User Device Security Principles](https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles). As such, it consists of recommendations and should not be seen as a set of mandatory instructions requiring no further thought.
+It's important to remember that this guidance has been conceived as a way to satisfy the [12 End User Device Security Principles](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles). As such, it consists of recommendations and should not be seen as a set of mandatory instructions requiring no further thought.
 
 Risk owners and administrators should agree a configuration which balances business requirements, usability and security.
 
@@ -50,12 +50,12 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 | --- | --- |
 | **Security Principle** | **Recommendation and Explanation** |
 | Data-in-transit protection | Use a Foundation Grade IPsec VPN client configured as per that product's security procedures to provide data-in-transit protection, or the native IPsec VPN client. |
-| Data-at-rest protection | Use FileVault 2 to provide full-volume encryption. As the disk encryption password on non-T2 devices is not tied to hardware, it needs to be strong enough to resist an offline brute-force attack. The required strength should be determined by your organisation’s authentication policy. Use *recovery key escrow* to store encrypted copies of device recovery keys for occasions when users forget their disk encryption passwords.<br><br>[Some MacBook Pro and Mac Pro devices](https://support.apple.com/en-gb/HT208862) from late 2017 and newer have a T2 security processor. The T2 processor is used to strengthen user authentication to the device by preventing brute force and physical attacks. No action is required to enable this behaviour on these devices. |
-| Authentication | On devices **without** a [T2 security processor](https://support.apple.com/en-gb/HT208862), either:<br><br>-   Users have two passwords – one for FileVault 2, and one to login and unlock their device (see Provisioning Steps for how to achieve this)<br>-   Or users have one password which fulfills both requirements.<br><br>The user should be required to authenticate to the device in line with your organisation’s authentication policy (see Authentication Policy).<br><br>This user’s login password derives a key which encrypts certificates and other credentials, giving access to organisational services.<br><br>[Some MacBook Pro and Mac Pro devices](https://support.apple.com/en-gb/HT208862) from late 2017 and newer have a T2 security processor, which is used to provide brute-force and physical attack protection for cryptographic keys. As a result, devices with a T2 processor can use much shorter login passcodes at no additional risk. Having a separate disk encryption passcode is not necessary. |
+| Data-at-rest protection | Use FileVault 2 to provide full-volume encryption. As the disk encryption password on non-T2 devices is not tied to hardware, it needs to be strong enough to resist an offline brute-force attack. The required strength should be determined by your organization’s authentication policy. Use *recovery key escrow* to store encrypted copies of device recovery keys for occasions when users forget their disk encryption passwords.<br><br>[Some MacBook Pro and Mac Pro devices](https://support.apple.com/en-gb/HT208862) from late 2017 and newer have a T2 security processor. The T2 processor is used to strengthen user authentication to the device by preventing brute force and physical attacks. No action is required to enable this behavior on these devices. |
+| Authentication | On devices **without** a [T2 security processor](https://support.apple.com/en-gb/HT208862), either:<br><br>-   Users have two passwords – one for FileVault 2, and one to login and unlock their device (see Provisioning Steps for how to achieve this)<br>-   Or users have one password which fulfillls both requirements.<br><br>The user should be required to authenticate to the device in line with your organization’s authentication policy (see Authentication Policy).<br><br>This user’s login password derives a key which encrypts certificates and other credentials, giving access to organizational services.<br><br>[Some MacBook Pro and Mac Pro devices](https://support.apple.com/en-gb/HT208862) from late 2017 and newer have a T2 security processor, which is used to provide brute-force and physical attack protection for cryptographic keys. As a result, devices with a T2 processor can use much shorter login passcodes at no additional risk. Having a separate disk encryption passcode is not necessary. |
 | Secure boot | Set an EFI (firmware) password to make it more difficult for an attacker to modify the boot process. However, with physical access to a device without a T2 processor, the boot process can still be compromised. |
 | Platform integrity and application sandboxing | System Integrity Protection (SIP) prevents users and applications from modifying files in several high-level directories. This feature is enabled by default in the OS and no user configuration is required. |
-| Application allow listing | Use the MDM to allow list default macOS applications. Use GateKeeper to prevent the installation and running of unsigned applications. An organisation application catalogue can also be used which only contains enterprise-approved or in-house applications. These should be verified to have valid Developer ID certificates, apps should have been properly [notarised](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/macos-10-14#notarised). |
-| Malicious code detection and prevention | XProtect is built into macOS. It has a limited signature set which is maintained by Apple to detect widespread malware. XProtect will also restrict vulnerable plugin versions (such as Java) to limit exposure. Several third-party anti-malware products also exist, which attempt to detect malicious code for this platform. Content-based attacks can be filtered by scanning capabilities in the organisation.<br><br>Further protection can be achieved by forcing apps to be **notarised**. A notarised app has been approved and confirmed by Apple that it does not contain malware. It also makes it easy for Apple to revoke any specific application if it subsequently found to be compromised after installation. |
+| Application allow listing | Use the MDM to allow list default macOS applications. Use GateKeeper to prevent the installation and running of unsigned applications. An organization application catalogue can also be used which only contains enterprise-approved or in-house applications. These should be verified to have valid Developer ID certificates, apps should have been properly [notarised](/collection/end-user-device-security/platform-specific-guidance/macos-10-14#notarised). |
+| Malicious code detection and prevention | XProtect is built into macOS. It has a limited signature set which is maintained by Apple to detect widespread malware. XProtect will also restrict vulnerable plugin versions (such as Java) to limit exposure. Several third-party anti-malware products also exist, which attempt to detect malicious code for this platform. Content-based attacks can be filtered by scanning capabilities in the organization.<br><br>Further protection can be achieved by forcing apps to be **notarised**. A notarised app has been approved and confirmed by Apple that it does not contain malware. It also makes it easy for Apple to revoke any specific application if it subsequently found to be compromised after installation. |
 | Security policy enforcement | Mark MDM profiles as non-removable so the user cannot remove them and alter their configuration. |
 | External interface protection | USB removable media can be blocked through MDM if required. If an EFI password is set, DMA is only possible when the device is booted and unlocked. |
 | Device Update Policy | MDM can be used to audit which App Store software and OS versions are installed on a device. The attached script will turn on automatic updates, but this cannot be achieved remotely with MDM. |
@@ -66,7 +66,7 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 
 All remote or mobile working scenarios should use a typical remote access architecture with a VPN terminating into an access layer (or DMZ). The following network diagram describes the recommended architecture for this platform.
 
-![](https://www.ncsc.gov.uk/static-assets/images/macos1013.png)
+![](/static-assets/images/macos1013.png)
 
 A Mobile Device Management server is required. Apple's macOS Server Profile Manager is sufficient for this purpose. Alternatively, third-party products exist which may offer additional functionality over and above Profile Manager.
 
@@ -74,7 +74,7 @@ A Mobile Device Management server is required. Apple's macOS Server Profile Man
 
 ## Preparation for deployment
 
-The steps below should be followed to prepare your organisation's infrastructure for hosting a deployment of these devices:
+The steps below should be followed to prepare your organization's infrastructure for hosting a deployment of these devices:
 
 -   Set up an MDM server (e.g. Profile Manager on macOS Server). This may require setting up the Open Directory component of a macOS Server.
 -   Ensure all Configuration Profiles are signed to prevent modification in transit, or post install
@@ -86,7 +86,7 @@ The steps below should be followed to prepare your organisation's infrastructure
     -   Exchange/Mail/Calendar Settings.
     -   Disabling access to the Preference Panes in Restrictions (macOS) for iCloud and Network as access to these could be used to disable the VPN.
 
-See the [Recommended Policies and Settings](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/macos-10-14#policies) section for more detail on the above.
+See the [Recommended Policies and Settings](/collection/end-user-device-security/platform-specific-guidance/macos-10-14#policies) section for more detail on the above.
 
 You can also consider creating policies in other sections of Profile Manager. In particular, we recommend that administrators:
 
@@ -98,7 +98,7 @@ You can also consider creating policies in other sections of Profile Manager. In
 
 **Device provisioning steps**
 
-Follow these steps to provision each end user device onto your organisation’s network in preparation for distribution to end users.
+Follow these steps to provision each end user device onto your organization’s network in preparation for distribution to end users.
 
 These instructions assume the device is new or the operating system has been wiped and reinstalled.
 
@@ -124,7 +124,7 @@ These instructions assume the device is new or the operating system has been wip
     -   Turn off initial iCloud login prompt for first user login. This will stop the user being prompted to use iCloud.
     -   To help prevent DMA and cold-boot attacks, set a Firmware Password  
          
-3.  The device should now be enrolled with the MDM server and the configuration profiles applied, including those to enforce FileVault and key escrow if not set locally
+3.  The device should now be enrollled with the MDM server and the configuration profiles applied, including those to enforce FileVault and key escrow if not set locally
 4.  At this stage, any additional third-party applications can be installed (e.g. productivity apps)
 5.  Distribute the device, disk encryption password and user password separately to the user
 6.  The user should then change their password and skip the Apple ID registration step at the next time they log on
@@ -138,7 +138,7 @@ The client machine is then connected to an imaging server in target disk mode. A
 
 *Note*
 
-Enabling FileVault 2 and MDM enrolment must only be done after the device has been imaged. This ensures that the cryptographic keys involved in these security features are unique. This, however, can be achieved during MDM enrolment using options under the 'FileVault' tab within the 'Security and Privacy' submenu, including the configuration of recovery key escrow.
+Enabling FileVault 2 and MDM enrollment must only be done after the device has been imaged. This ensures that the cryptographic keys involved in these security features are unique. This, however, can be achieved during MDM enrollment using options under the 'FileVault' tab within the 'Security and Privacy' submenu, including the configuration of recovery key escrow.
 
 Apple's website has a support article that contains details about [creating images for device-specific versions of macOS](http://support.apple.com/kb/HT5599).
 
@@ -165,7 +165,7 @@ The settings below are named as they appear in Apple Configurator and Profile Ma
 | Machine Authentication | Certificate |
 | Enable VPN on Demand | Yes |
 | **Restrictions Group** |     |
-| Restrict which system preferences are enabled | Yes<br><br>Profiles, Sharing and iCloud should be disallowed. Other panes may be disabled at the organisation's discretion. |
+| Restrict which system preferences are enabled | Yes<br><br>Profiles, Sharing and iCloud should be disallowed. Other panes may be disabled at the organization's discretion. |
 | Allow use of Game Center | No  |
 | Allow App Store app adoption | No  |
 | Restrict App Store to MDM installed apps and software updates | Yes |
@@ -191,9 +191,9 @@ The media access settings can be used to limit user access to removable media su
 
 ## Authentication policy
 
-Your organisation should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use the [NCSC's published password guidance](https://www.ncsc.gov.uk/collection/passwords) to help inform any password policy. An administrator should configure the relevant on-device settings in line with your authentication policy.
+Your organization should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use the [BCSF's published password guidance](/collection/passwords) to help inform any password policy. An administrator should configure the relevant on-device settings in line with your authentication policy.
 
-For further guidance on defining an authentication policy, see [the EUD Security Guidance introduction](https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview).
+For further guidance on defining an authentication policy, see [the EUD Security Guidance introduction](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview).
 
 To enforce this policy on macOS devices, the following settings are available, and should be set according to the policy:
 
@@ -212,7 +212,7 @@ For devices *with* a T2 processor, the login password cannot be brute forced off
 
 **VPN profile**
 
-The deployed VPN should be configured according to [NCSC PRIME profile for IPsec](https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data).
+The deployed VPN should be configured according to [BCSF PRIME profile for IPsec](/guidance/using-ipsec-protect-data).
 
 The recommended IPsec cipher suite profile for protecting information is called PRIME. A non-authoritative summary is provided in the table below:
 
@@ -248,23 +248,19 @@ In OS X 10.9, the mechanism for configuring the *VPN On Demand* settings changed
 -   Export the VPN configuration profile (unsigned) from the MDM as a .mobileconfig file. Convert this to text using \`plutil\` if required.
 -   Using a text editor, modify the XML configuration inside the exported file. Within the IKEv2 key, add rules for OnDemandEnabled & OnDemandRules as shown below:
 
+```
 IKEv2
-
 OnDemandEnabled
-
 1
-
 OnDemandRules
-
 Action
-
 Connect
+```
 
 -   Import the modified configuration to the MDM and deploy to the device
 
 In Profile Manager, it is possible to set the option 'Always on VPN (supervised only)'. However, this causes the profile install to fail on macOS devices, so the approach described above should be used instead. Note also that for a macOS device to successfully verify the VPN server certificate, the certificate must have a Subject Alternative Name (SAN) entry that matches the common name.
 
----
 
 ## Other considerations
 
@@ -284,7 +280,7 @@ If key escrow is not possible or multiple versions of macOS need to be supported
 
 In OS X 10.10, the extension feature was added. This allows application developers to extend the functionality of their application to third parties. As an example, the sharing extension could allow a user to share information to social network sites from an application.
 
-Your organisation should control which applications are installed in the environment and limit the ability for applications to interface to the user via Extensions. This can partially be configured as part of your organisation's MDM solution.
+Your organization should control which applications are installed in the environment and limit the ability for applications to interface to the user via Extensions. This can partially be configured as part of your organization's MDM solution.
 
 **Firewall Configuration**
 
