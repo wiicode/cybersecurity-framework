@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T20:27:00.244Z
+date: 2021-06-02T20:38:53.922Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: markdown
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -18,7 +18,7 @@ dateCreated: 2021-06-02T15:18:50.499Z
 
 Understand how to create the DMARC record for all of your domains, and see our recommendation for how to apply DMARC effectively and safely.
 
-All of your domains, [including parked domains](https://www.ncsc.gov.uk/blog-post/protecting-parked-domains), should have DMARC records in place, regardless of whether the domain is used for email or not.
+All of your domains, [including parked domains](/blog-post/protecting-parked-domains), should have DMARC records in place, regardless of whether the domain is used for email or not.
 
 We recommend you apply DMARC gradually, iterating your DMARC configuration over time.
 
@@ -28,23 +28,23 @@ The list of email senders collected by your processing tool during this stage w
 
 ### **Take your time**
 
-A DMARC policy of *'none'* will give you time to understand whether you have configured DKIM and SPF correctly.
+A DMARC policy of `none` will give you time to understand whether you have configured DKIM and SPF correctly.
 
----
+
 
 ## How to create the DMARC record
 
 ### **Note**
 
-In this example, we have used [***yourdomain.gov.uk***](http://yourdomain.gov.uk/)***.*** You should replace [***yourdomain.gov.uk***](http://yourdomain.gov.uk/) with your actual domain (which can be .gov.uk, .com etc.). 
+In this example, we have used [***bentosecurity.org***](http://bentosecurity.org/)***.*** You should replace [***bentosecurity.org***](http://bentosecurity.org/) with your actual domain (which can be .gov.uk, .com etc.). 
 
----
+
 
 Update your public DNS record as detailed below.
 
 Your DMARC record name is:
 
-`_dmarc.yourdomain.gov.uk`
+`_dmarc.bentosecurity.org`
 
 It should be configured as a TXT record, with an initial value similar to this:
 
@@ -87,7 +87,7 @@ You should configure DKIM on domains you send email from, as it's a stronger aut
 
 If you already have DKIM records, you'll need to know the [DKIM selector](http://dkim.org/info/dkim-faq.html) to find the record. You can find the selector in the [header](https://support.google.com/mail/answer/22454?hl=en) of any email you send.
 
----
+
 
 ## Creating a DKIM record and signing email
 
@@ -105,18 +105,45 @@ Add the DKIM signature to a TXT record in your DNS record. This is made up o
 
 Anyone receiving email which claims to be from you can verify the signature on the email with the key from your DNS. A successful verification proves the message hasn’t been tampered with in transit.
 
+### General Configuration 
 Your DNS record should have the host, or record name of:
 
-`selector._domainkey.yourdomain.gov.uk`
+```
+selector._domainkey.bentosecurity.org
+```
 
 and the value:
 
-`v=DKIM1, k-rsa,`
+```
+v=DKIM1, k-rsa,
+```
 
 You can check this has been applied using a [DKIM lookup service](http://mxtoolbox.com/dkim.aspx) and your selector. The result should look like:
 
-`v=DKIM1; k=rsa;`  
-`p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG26OM/bk0vNm/TM2DnOQjPZNLIWspF4xtIX12LGHHjfushjsaudfysuf+DUigzM6h2oJMEdNt1S/CWVXW0pUBqfU0fzdw90+jyqOduh4cCnEk0z0w1w1j4xOYy0FLHhKoeoZJwWQFtwrlhrjxD6jM+sGeeRnbn2rQIDAQAB`
+```
+v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG26OM/bk0vNm/TM2DnOQjPZNLIWspF4xtIX12LGHHjfushjsaudfysuf+DUigzM6h2oJMEdNt1S/CWVXW0pUBqfU0fzdw90+jyqOduh4cCnEk0z0w1w1j4xOYy0FLHhKoeoZJwWQFtwrlhrjxD6jM+sGeeRnbn2rQIDAQAB
+```
+
+### Microsoft 365 Exchange Online
+
+Microsoft 365 guidance is confusing, and we recommend following our process over the mix of documentation.  We recommend leveraging `CNAME` records instead of `TXT` records and pointing them at your `onmicrosoft.com` domain that has a validated DKIM configuration.
+
+> Substitute `bentosecurity.org` and `bentosecurity` for your domain and be extremely careful as your `onmicrosoft.com` domain may be different from your primary.
+{.is-warning}
+
+
+```
+CNAME
+Host:  selector1._domainkey.bentosecurity.org
+TTL: 3600
+Value: selector1-bentosecurity-org._domainkey.bentosecurity.onmicrosoft.com
+```
+```
+CNAME
+Host:  selector2._domainkey.bentosecurity.org
+TTL: 3600
+Value: selector2-bentosecurity-org._domainkey.bentosecurity.onmicrosoft.com
+```
 
 ### **Apply DKIM signatures to outbound email**
 
@@ -134,31 +161,37 @@ SPF works by providing domain owners a way to publish a list of the IP addresse
 
 If the IP address appears in the list of acceptable IPs, the receiving email service will forward the email to the recipient's inbox. If the receiving email service cannot confirm the IP address is valid, then it marks the email in accordance with the DMARC policy you have implemented on the domain the email is being sent from.
 
----
-
 ## Create an SPF record
 
 Create an SPF record in your public DNS, using all the IP addresses or address ranges from which you send email. You can use both IPv4 and IPv6 addresses. 3 examples of what an SPF record could look like are below:
 
-1\. An example of a basic SPF record to be added to an *organisation*'s public DNS where it uses Google would look like this:  
+1\. An example of a basic SPF record to be added to an *organization's public DNS where it uses Google would look like this:  
  
 
-`v=spf1 include:_spf.google.com ~all`  
+```
+v=spf1 include:_spf.google.com ~all
+```
  
 
 2\. This SPF record includes Google's IP ranges and a sending service with an IP address range:  
  
 
-`v=spf1 include:_spf.google.com ip4:80.88.21.0/20 ~all`  
+```
+v=spf1 include:_spf.google.com ip4:80.88.21.0/20 ~all
+```
  
 
 3\. An example of a more complex record, with additional services and some dedicated IP addresses:  
  
 
-`v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com ip6:2001:db8::/32 ip4:203.0.113.6 ~all`  
+```
+v=spf1 include:spf.protection.outlook.com include:mail.zendesk.com ip6:2001:db8::/32 ip4:203.0.113.6 ~all
+```
  
 
-**NOTE:** These examples are unique - you cannot just "copy and paste" them into your DNS for your *organisation*. If you use other email sending services, you need to add their domain or IP range to this record.
+> **NOTE:** These examples are unique - you cannot just "copy and paste" them into your DNS for your *organization*. If you use other email sending services, you need to add their domain or IP range to this record.
+{.is-info}
+
 
 You will need to check with your supplier to find the exact value in your case as it will not necessarily take this form (you can usually do this online, we recommend you search your email sending service and how to setup SPF records).
 
@@ -166,19 +199,15 @@ You will need to check with your supplier to find the exact value in your case a
 
 When choosing services, look for ones that can provide an SPF record you can include, or a stable IP range. This will make it easier to maintain your SPF record.
 
----
 
 ## Add all legitimate sources of email to your SPF records
 
-You should ensure that all legitimate IP addresses are added to your SPF records.  We recommend that you consult all departments across your *organisation* and ask, for example, whether they use any 3rd party mailing agents.  If your *organisation* sends mass emails (for example, e-newsletters, e-magazines or e-bills), then it probably uses a 'mass marketing email service'.
+You should ensure that all legitimate IP addresses are added to your SPF records.  We recommend that you consult all departments across your *organization* and ask, for example, whether they use any 3rd party mailing agents.  If your *organization* sends mass emails (for example, e-newsletters, e-magazines or e-bills), then it probably uses a 'mass marketing email service'.
 
 ### **Mass marketing email services**
 
-Email marketing services allow bulk-sending of emails to targeted mailing lists. If your communications, sales and/or marketing staff make use of this kind of service, you need to ensure they are sending authenticated mails, as this will make it less likely your *legitimate* marketing emails will end up as spam. That is, you need to ensure that you add the IP addresses to your SPF records and [set up DKIM](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/configure-anti-spoofing-controls-/create-and-manage-a-dkim-record).
+Email marketing services allow bulk-sending of emails to targeted mailing lists. If your communications, sales and/or marketing staff make use of this kind of service, you need to ensure they are sending authenticated mails, as this will make it less likely your *legitimate* marketing emails will end up as spam. That is, you need to ensure that you add the IP addresses to your SPF records and set up DKIM.
 
-There are many such services. The [Further reading section](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/further-reading) links to guidance on email authentication from two of the biggest: MailChimp and SendInBlue.
-
----
 
 ## Understanding and overcoming SPF limitations
 
@@ -196,13 +225,8 @@ To check whether an email passes SPF authentication, receiving mail servers inva
 
 The DNS lookup limit is often breached by 'nested' lookups caused by the use of an 'include'.  In the example above, whereby the SPF record includes `_spf.google.com`, looking up the contents of this record in DNS we find that it includes 3 `google.com` subdomains (ie a total of 4 lookups). However, 'includes' are useful because they help overcome the above mentioned SPF record limit of 450 bytes or fewer.
 
-Your *organisation* might use a number of cloud services, Zendesk, Google Apps, mass mailing services, and so on – rapidly the 10 lookup restriction is breached. 
+Your *organization* might use a number of cloud services, Zendesk, Google Apps, mass mailing services, and so on – rapidly the 10 lookup restriction is breached. 
 
-### **Use your tools**
-
-Anti-spoofing management tools, including the *NCSC* **Mail Check** platform, often include inline advisory messages and notify you where these SPF restrictions have been breached.
-
----
 
 ### **Creating sub-domains**
 
@@ -210,11 +234,10 @@ Anti-spoofing management tools, including the *NCSC* **Mail Check** platform, of
 
 Each sub-domain makes its own DNS request, and so has its own lookup and character limits. This gives you a tool to split off your various business functions into their own subdomains, each with 10 lookups and 450 characters.
 
-If you use 3rd party suppliers to send emails for you, we recommend creating a sub-domain each. For example, `marketing.yourorganisation.gov.uk` for your mass mail outs and newsletters.
+If you use 3rd party suppliers to send emails for you, we recommend creating a sub-domain each. For example, `marketing.bentosecurity.org` for your mass mail outs and newsletters.
 
 Not only do you solve the SPF problem, but by doing this, you gain greater visibility and control of each domain. And, if you identify fraudulent use, for example, you will be able to take quicker preventative action, limiting the negative impacts of legitimate email traffic on your other domains.
 
-![computer code](https://www.ncsc.gov.uk/images/blur-codes-coding-577585.jpg?mpwidth=545&mlwidth=737&twidth=961&dwidth=635&dpr=2&width=1736)
 
 ### **SPF Errors**
 
@@ -222,13 +245,12 @@ SPF syntax is very sensitive to white space. This is one of the most common caus
 
 We recommend that you either leave your draft public DNS record for a few hours and then double-check it, or ask a colleague to double-check it, before you publish it. 
 
-The *NCSC* has guidance on the [best practices for secure design and development.](https://www.ncsc.gov.uk/collection/developers-collection/principles/produce-clean-maintainable-code)
 
-# Monitor, *analyse* and update your DNS records
+# Monitor, *analyze* and update your DNS records
 
-Advice for when you have set up a DMARC policy of 'none', including monitoring your reports for at least two weeks and correcting any failures.
+Advice for when you have set up a DMARC policy of `none`, including monitoring your reports for at least two weeks and correcting any failures.
 
-Implementing a DMARC policy of 'none' on your domains won’t affect the delivery of your email but neither will it prevent illegitimate emails being sent from your domains. For this, you must at least implement a DMARC policy of ‘quarantine’.
+Implementing a DMARC policy of `none` on your domains won’t affect the delivery of your email but neither will it prevent illegitimate emails being sent from your domains. For this, you must at least implement a DMARC policy of `quarantine`.
 
 Before you do this, you must ensure that you have correctly configured DMARC ***and*** SPF ***and*** DKIM on your domains.
 
@@ -236,29 +258,29 @@ Before you do this, you must ensure that you have correctly configured DMARC **
 
 SPF provides host authenticity and DKIM provides a mechanism for checking message integrity.
 
-These protocols do not tell organisations how to handle email, nor do they provide feedback to you, as the sending *organisation*.
+These protocols do not tell organizations how to handle email, nor do they provide feedback to you, as the sending *organization*.
 
 This is the role of DMARC, which builds on top of SPF and DKIM.
 
----
+
 
 ## When you have setup a DMARC policy of ‘none’
 
--   The receiving *organisation* will not change how it processes email sent from your domain – legitimate or illegitimate
+-   The receiving *organization* will not change how it processes email sent from your domain – legitimate or illegitimate
 -   But you will get feedback from the recipient
 
-Within 24 hours of publishing your DNS records with a DMARC policy of ‘none’, you’ll start receiving email reports from major email recipient domains. These will come to the two addresses you specified in your DMARC record. The first of these should be [the anti-spoofing management tool you chose in Step 1](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool), and the second to [a back-up email address of your choice, if you included one](https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool).
+Within 24 hours of publishing your DNS records with a DMARC policy of `none`, you’ll start receiving email reports from major email recipient domains. These will come to the two addresses you specified in your DMARC record. 
 
 The information in the reports will show:
 
 -   Where the outgoing email from your domains originates (eg IP address)
 -   The outcome of SPF and DKIM checks by the recipient – simply, whether it has passed or failed the SPF and DKIM checks.
 
----
+
 
 ## Monitor your reports for at least 2 weeks
 
-During this time, you might see a lot a ‘fail’ notices against the SPF and DKIM checks. You should also see a lot of legitimate sources passing checks. For example, you will *recognise* the IP addresses belonging to your *organisation*.
+During this time, you might see a lot a `fail` notices against the SPF and DKIM checks. You should also see a lot of legitimate sources passing checks. For example, you will *recognize* the IP addresses belonging to your *organization*.
 
 The reports will contain information about:
 
@@ -268,15 +290,16 @@ The reports will contain information about:
 
 You should use your anti-spoofing management tool to identify legitimate emails which are *not* passing either SPF or DKIM checks. You should then update your SPF or DKIM configurations so that they do.
 
----
+
 
 ## Correcting failures
 
 To correct SPF failures you should add the sending systems you use to your SPF record, either by IP address, or by reference to another SPF record.  
 To correct DKIM failures, you should ensure a valid DKIM key is published in the correct place in DNS, and that outbound emails are being signed with it.
 
-You may not *recognise* all of the sending systems listed in your reports. When this happens you should investigate to determine if a particular sending service is in use by your *organisation*.
+You may not *recognize* all of the sending systems listed in your reports. When this happens you should investigate to determine if a particular sending service is in use by your *organization*.
 
 It will likely take a few iterations of investigating, updating records, and waiting to review reports will be needed before you can gain enough confidence that you've got SPF and DKIM working for all of your sending systems.
 
-Once you've reached this stage, you're ready to move to a DMARC policy of 'quarantine' which will provide anti-spoofing protections for your domain.
+> Once you've reached this stage, you're ready to move to a DMARC policy of `quarantine` which will provide anti-spoofing protections for your domain.
+{.is-success}
