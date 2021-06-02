@@ -2,23 +2,22 @@
 title: Securing macOS
 description: 
 published: true
-date: 2021-06-02T21:06:09.207Z
+date: 2021-06-02T21:06:38.355Z
 tags: bronze, bronze-training, security-operations
 editor: markdown
 dateCreated: 2021-01-08T05:15:52.652Z
 ---
 
-# macOS
-
-Secure configuration of macOS devices
+> Secure configuration of macOS devices
+{.is-info}
 
 macOS is the default operating system on Apple's Mac, iMac, and Macbook devices. Whilst this guide does not apply to any specific version of macOS, it was last tested on macOS 10.15 in November 2019.
 
-## Securing macOS
+# Securing macOS
 
 There are a number of configuration options which you can use to make the platform work within your company. However, we specifically recommend you implement technical and procedural controls relating to the following areas.
 
-### General recommendations
+## General recommendations
 
 For an enterprise deployment of macOS devices, you should:
 
@@ -30,7 +29,7 @@ For an enterprise deployment of macOS devices, you should:
 -   Use Apple Business Manager (ABM) to enroll and provision devices via zero touch enrollment. Using zero touch enrollment, the MDM can be configured to automatically provision the initial administrator account, and users will create non-administrative accounts during setup assistant.
 -   Consider whether you will deploy antivirus or other security software on macOS. A combination of Gatekeeper settings and the built-in Xprotect service is normally sufficient, but in some cases you may want additional protection.
 
-### Device configuration
+## Device configuration
 
 Once you have chosen your MDM service, architecture and approach to applications, you should then develop a device configuration which you can apply to enforce your technical controls. In particular, you should include policies that manage:
 
