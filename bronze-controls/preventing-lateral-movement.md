@@ -2,7 +2,7 @@
 title: Preventing Lateral Movement
 description: Guidance for preventing lateral movement in enterprise networks.
 published: true
-date: 2021-06-02T21:46:34.655Z
+date: 2021-06-02T22:10:35.270Z
 tags: guidance, bronze
 editor: markdown
 dateCreated: 2021-05-28T02:08:46.934Z
@@ -159,7 +159,7 @@ Knowing the location of the high value assets within a network allows you to pro
 
 You should be familiar with your network as a whole, including its structure and how it's used. Maintain an audit of all devices that can connect to the network, and update it regularly to help identify illegitimate use. Unusual activity can be present on the network protocol layer, but also in application-specific circumstances, such as credential usage and authentication events.
 
-Attackers will try to blend in with your usual network traffic using legitimate tools and systems to move laterally, meaning it is often overlooked by typical AV software and is much harder to spot. Being aware of the common tools and processes that an attacker could utilise will greatly increase your chances of identifying them.
+Attackers will try to blend in with your usual network traffic using legitimate tools and systems to move laterally, meaning it is often overlooked by typical AV software and is much harder to spot. Being aware of the common tools and processes that an attacker could utilize will greatly increase your chances of identifying them.
 
 The biggest challenge in network monitoring is identifying genuine security incidents, rather than false positives which are common in the large volume of ‘noise’ present in a network. Understanding your network and the typical *behavior* of its users can help alleviate the problem of false positives, as you become more adept at spotting unusual activity. By segmenting a network, you have the opportunity to focus monitoring on the focal points of traffic flow that are created between segments.
 
