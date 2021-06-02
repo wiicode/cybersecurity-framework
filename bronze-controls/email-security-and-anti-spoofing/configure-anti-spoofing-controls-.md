@@ -2,7 +2,7 @@
 title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-02T20:42:36.681Z
+date: 2021-06-02T20:44:38.755Z
 tags: bronze, bronze-controls, email, dmarc, dkim, spf
 editor: markdown
 dateCreated: 2021-06-02T15:18:50.499Z
@@ -36,7 +36,7 @@ A DMARC policy of `none` will give you time to understand whether you have con
 
 ### **Note**
 
-In this example, we have used [***bentosecurity.org***](http://bentosecurity.org/)***.*** You should replace [***bentosecurity.org***](http://bentosecurity.org/) with your actual domain (which can be .gov.uk, .com etc.). 
+In this example, we have used [***bentosecurity.org***](http://bentosecurity.org/)***.*** You should replace [***bentosecurity.org***](http://bentosecurity.org/) with your actual domain (which can be .gov, .com etc.). 
 
 
 
@@ -48,11 +48,11 @@ Your DMARC record name is:
 
 It should be configured as a TXT record, with an initial value similar to this:
 
-`v=DMARC1;p=none;rua=mailto:dmarc-rua@example.gov.uk`
+`v=DMARC1;p=none;rua=mailto:dmarc-rua@bentosecurity.org`
 
 The 'p=none' part of the record above specifies the requested policy that mail receivers should apply.  A policy of 'none' means this DMARC record won’t affect the delivery of your email, but it will provide you with reports on where your outbound email appears to be coming from. 
 
-The email address in the record should be provided by the DMARC processing tool you've chosen *(noting that dmarc-rua@example.gov.uk shown above is fictional)*. If the tool does not provide one, it should be a mailbox you have chosen or created for this purpose.
+The email address in the record should be provided by the DMARC processing tool you've chosen *(noting that dmarc-rua@bentosecurity.org shown above is fictional)*. If the tool does not provide one, it should be a mailbox you have chosen or created for this purpose.
 
 “rua” is a comma separated list of URI(s) for aggregate report delivery.  This report contains details of the emails being sent from your domain, including whether they passed or failed the SPF and DKIM authentication checks. You can include up to 2 email addresses for which to send the aggregated data reports. If you’re eligible to use Mail Check and do, you need to include our email address, to ensure that you send the aggregated data to Mail Check - details are provided within Mail Check.
 
