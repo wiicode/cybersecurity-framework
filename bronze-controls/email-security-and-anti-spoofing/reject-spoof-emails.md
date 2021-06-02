@@ -2,7 +2,7 @@
 title: 5. Reject spoof emails
 description: When and how to update your DMARC policy to 'reject', and recommendations for keeping everyone in your organization informed and monitoring your records.
 published: true
-date: 2021-06-02T20:24:07.113Z
+date: 2021-06-02T20:42:51.292Z
 tags: bronze, bronze-controls, email, dmarc
 editor: markdown
 dateCreated: 2021-06-02T15:21:41.820Z
@@ -44,6 +44,15 @@ Notify your *organization*’s management team of your implementation plan and a
 
 If you experience any problems, you can revert to the DMARC policy of *p=quarantine* until you are ready to progress again.
 
+# E-mail security and anti-spoofing
+
+- [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
+- [Protect email in transit](/bronze-controls/email-security-and-anti-spoofing/protect-email-in-transit)
+- [Configure anti-spoofing controls](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Send spoof emails to spam](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)
+- [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
+- [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
+{.grid-list}
 
 ## Closely monitor and update your records
 
