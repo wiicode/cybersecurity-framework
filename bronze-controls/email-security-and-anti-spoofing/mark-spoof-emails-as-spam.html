@@ -1,0 +1,37 @@
+<!--
+title: 4. Mark spoof emails as spam
+description: When and how to update your DMARC policy to 'quarantine', and recommendations for keeping everyone in your organization informed of this change
+published: true
+date: 2021-06-02T15:20:35.580Z
+tags: bronze, bronze-controls, dmarc
+editor: ckeditor
+dateCreated: 2021-06-02T15:20:35.580Z
+-->
+
+<p>You should move to a DMARC policy of ‘<i>quarantine</i>’ as soon as you are confident DKIM and SPF are configured correctly, and all known legitimate sources of email&nbsp;for your domain&nbsp;have been added to your records. Only then will spoof email be hampered.</p>
+<p>During the<i>&nbsp;‘quarantine phase,’</i>&nbsp;any failed email will be sent to spam/junk (where the recipient has this enabled). This means the messages are&nbsp;<strong>recoverable by the recipient</strong>.</p>
+<p>If you stop feeling confident about your controls, you can revert to the basic DMARC policy of&nbsp;<i>'none'</i>&nbsp;(and progress again to 'quarantine' when you gain confidence).</p>
+<p>Many organisations report being able to move on from a DMARC policy of ‘<i>none</i>’ after about 6 to 8 weeks.</p>
+<h3><strong>The effect of 'quarantine'</strong></h3>
+<p>Successfully applying a DMARC policy of 'quarantine' means that emails being sent from your domains, and failing the DKIM and SPF authentication checks, will be sent to the recipient's spam/junk folders.</p>
+<hr>
+<h2>Iterating a DMARC record</h2>
+<p>Your DMARC record will only start affecting the delivery of spoofed emails once you have a record of p=quarantine. The goal for this section is to help you get to that point.</p>
+<p>Once you’re confident you have a comprehensive SPF record and are DKIM signing outbound email, update your DMARC record to have a policy of p=quarantine and apply it to&nbsp;<i>a small percentage of your email</i>. This will instruct recipients to quarantine your chosen percentage of the emails which fail DMARC checks.&nbsp;</p>
+<p>Starting with a small percentage will help ensure any mistakes don’t affect all email delivery. Gradually increase the percentage to 100 as you confirm genuine email&nbsp;is being delivered using the&nbsp;anti-spoofing management tool,&nbsp;chosen in&nbsp;<a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool">Step 1</a>.</p>
+<p><strong>An example record – applying a DMARC quarantine policy to 50% of your email - with these modifications applied looks like this:</strong></p>
+<p><code>v=DMARC1;p=quarantine;pct=50;rua=mailto:dmarc@yourdomain.gov.uk</code></p>
+<p><strong>An example record – applying a DMARC quarantine policy to 100% of your email - with these modifications applied is:</strong></p>
+<p><code>v=DMARC1;p=quarantine;rua=mailto:dmarc@yourdomain.gov.uk</code></p>
+<hr>
+<h2>Keep everyone informed</h2>
+<p><a href="https://www.ncsc.gov.uk/collection/email-security-and-anti-spoofing/implement-a-dmarc-policy-of-none">While your DMARC policy was set to 'none'</a>, you will have identified most - if not all - of your legitimate sources of emails&nbsp;and&nbsp;modified your SPF and DKIM to include them.</p>
+<p>We recommend that you alert your management teams – especially marketing / communications – of your intention to progress to the DMARC policy of&nbsp;<i>'quarantine'</i>.&nbsp;</p>
+<p>Ask that they alert you to any planned mass mailing campaigns (especially when using tools such as&nbsp;MailChimp). This will help you monitor and<i> analyse </i>activity as you move to<i>&nbsp;'quarantine'</i>.</p>
+<p>You should also implement a process to ensure&nbsp;that your SPF and DKIM configurations are current, as the email sending systems you use are likely to change over time.</p>
+<hr>
+<h2>Monitor and update your records</h2>
+<p>After updating your DNS records with a DMARC policy of <i>'quarantine'</i> at 100%, you should monitor your reports for at least 4 weeks to&nbsp;gain confidence that legitimate emails aren't being quarantined.</p>
+<h3><strong>Progressing to a DMARC policy of </strong><i><strong>‘reject’</strong></i></h3>
+<p>We recommend that you progress to a DMARC policy of&nbsp;<i>'reject'&nbsp;</i>when you&nbsp;are confident that you have correctly configured your DKIM and SPF records in your public DNS.</p>
+<p>&nbsp;</p>
