@@ -2,13 +2,15 @@
 title: Managing web browser security
 description: Advice for IT Admins on the management of security settings for web browsers
 published: true
-date: 2021-06-01T20:49:19.420Z
+date: 2021-06-02T02:33:39.601Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:40:36.791Z
 ---
 
-In recent years browser security has steadily improved. Today, they are generally secure in their default state. As a result, the BCSF [no longer has detailed configuration guidance](/blog-post/parting-our-browser-guidance-such-sweet-sorrow) for each major browser. Instead, this high-level guidance will help you develop an approach to secure web browsing that works for your organization.
+> BCSF is focused on providing high-level guidance will help you develop an approach to secure web browsing that works for your organization.
+{.is-info}
+
 
 ---
 
@@ -22,7 +24,7 @@ The good news is that the most popular browsers are largely *secure by default. 
 
 ## Preparation for browser management
 
-In many respects, browsers should be managed in much the same way as any other [third party application.](/collection/mobile-device-guidance/using-third-party-applications) This includes using your approvals process to choose a web browser, ensuring a legitimate version of the browser is installed with secure app distribution, and ensuring updates are installed promptly.
+In many respects, browsers should be managed in much the same way as any other [third party application.](/bronze-training/mobile-device-guidance/using-third-party-applications) This includes using your approvals process to choose a web browser, ensuring a legitimate version of the browser is installed with secure app distribution, and ensuring updates are installed promptly.
 
 However, there are some additional factors:
 
@@ -37,7 +39,7 @@ When deciding, you should consider:
 -   **Security features:** Most popular web browsers have similar security features, but you may want to look specifically for:  
     -   Integration with safe browsing list services, so that known malicious or fraudulent sites are blocked (including known phishing sites)
     -   Sandboxing, including virtualization-based security (e.g. Windows Defender Application Guard)
--   **Platform support** for the devices and operating systems you use. If you make use of multiple operating systems in your organization, you may want to use a cross-platform browser to simplify management. Equally, if you're using [obsolete platforms](/collection/mobile-device-guidance/managing-the-risks-from-obsolete-products%20), you may want to use a more up-to-date third-party browser which supports the platform.
+-   **Platform support** for the devices and operating systems you use. If you make use of multiple operating systems in your organization, you may want to use a cross-platform browser to simplify management. Equally, if you're using obsolete platforms, you may want to use a more up-to-date third-party browser which supports the platform.
 -   **Enterprise management** capabilities, Including integration into the mobile device management service(s) you use.
 -   **Support dates:** Some browser developers support their products for longer, or have extended support versions. If you intend on having the same browser for a while, make sure you choose one that will be supported throughout the period.
 
@@ -46,16 +48,16 @@ When deciding, you should consider:
 We advise that you investigate the security of the browsers you use on your devices and configure settings to mitigate risks in the following areas.
 
 -   Enterprise management of the following features:
-    -   **Updates:** Users may [not have the most up-to-date](/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) version of the browser. If your browser is not updated, it may have known vulnerabilities that can be exploited by an attacker, resulting in the device becoming compromised. You may wish to consider a method to monitor which version of the browser your users have on their device.
-    -   **Malware protection:** Browsers are one of your first lines of defense against malware. Depending on your platform configuration, users may be able to download and run malicious executables. You should consider how this can be mitigated either with the use of [anti-virus software](/collection/mobile-device-guidance/antivirus-and-other-security-software) configured to scan downloads, or by [enforcing an application whitelisting policy.](/collection/mobile-device-guidance/using-third-party-applications)
+    -   **Updates:** Users may [not have the most up-to-date](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) version of the browser. If your browser is not updated, it may have known vulnerabilities that can be exploited by an attacker, resulting in the device becoming compromised. You may wish to consider a method to monitor which version of the browser your users have on their device.
+    -   **Malware protection:** Browsers are one of your first lines of defense against malware. Depending on your platform configuration, users may be able to download and run malicious executables. You should consider how this can be mitigated either with the use of [anti-virus software](/bronze-training/mobile-device-guidance/antivirus-and-other-security-software) configured to scan downloads, or by [enforcing an application whitelisting policy.](/bronze-training/mobile-device-guidance/using-third-party-applications)
     -   **Critical security features** such as preventing users bypassing certificate warnings.
-    -   **Sign-in to cloud synchronisation accounts:** like [built-in cloud accounts on mobile devices](/collection/mobile-device-guidance/using-built-in-cloud-services), third-party browsers often also have cloud accounts that users can sign in to. If you are concerned about risks from synchronisation of work data to personal accounts you might want to limit the ability to sign into those accounts from your devices' browsers.
+    -   **Sign-in to cloud synchronisation accounts:** like [built-in cloud accounts on mobile devices](/bronze-training/mobile-device-guidance/using-built-in-cloud-services), third-party browsers often also have cloud accounts that users can sign in to. If you are concerned about risks from synchronisation of work data to personal accounts you might want to limit the ability to sign into those accounts from your devices' browsers.
     -   **Browser plug-ins,** such as Java, Flash and Silverlight are one of the top ways that users devices are compromised. They are also rarely needed on the modern web, so you should think about how necessary they are to your organization.
     -   **Third-party extensions:** Browsers have many third party plugins/extensions available, but should you allow their use? A common example is an *advertisement blocker* extension. While such software may be useful, you should consider the following security risks:
-        -   As with any third-party software, you should consider the likelihood and impact should the application be malicious or vulnerable. This is a similar approach to considering which [third-party applications](/collection/mobile-device-guidance/using-third-party-applications) to allow on your devices.
+        -   As with any third-party software, you should consider the likelihood and impact should the application be malicious or vulnerable. This is a similar approach to considering which [third-party applications](/bronze-training/mobile-device-guidance/using-third-party-applications) to allow on your devices.
         -   Extensions typically have permissions to read or change the data on any websites a user visits. This could include sensitive or personal data.
         -   Extensions will increase the potential attack surface of your web browser, as this software may also contain security vulnerabilities. You should think about how you might keep users' extensions up to date.
--   Many users will want to use their browser's [built-in password manager](/blog-post/what-does-ncsc-think-password-managers) to save passwords and credentials, making it easy to use strong authentication strategies. For more information see broader [guidance on the use of password managers](/blog-post/what-does-ncsc-think-password-managers).
+-   Many users will want to use their browser's built-in password manager to save passwords and credentials, making it easy to use strong authentication strategies. For more information see broader guidance on the use of password managers.
 -   Configuration of privacy-related settings including cookies, *do not track,* and pop-up blocking might be useful to your organization, but are not required from a security perspective.
 -   Developer features such as the JavaScript Console might be useful to some users but can be used to facilitate social engineering attacks. You might want to disable them for users who don't need them.
 -   Some organizations may have a legal or policy need to configure users' browsers to enable traffic inspection. If this applies to you, you might want to also configure trusted certificates and/or proxy settings for the browser.
@@ -63,6 +65,10 @@ We advise that you investigate the security of the browsers you use on your devi
 ---
 
 ## How to manage browsers
+
+- [Start managing Chrome Browser *As an IT admin for a business or school, you can deploy Chrome Browser to users across Microsoft® Windows®, Apple® Mac®, and Linux computers. You can then manage 200+ policies that govern people's use of Chrome, such as the apps and extensions they can use, data security and privacy, their browsing experience, and more.*](https://support.google.com/chrome/a/answer/188446?hl=en)
+- [Configure Microsoft Edge using Mobile Device Management *Microsoft Edge enhances and extends the browser experience. It runs on Windows, macOS, iOS and Android devices.*](https://docs.microsoft.com/en-us/deployedge/configure-edge-with-mdm)
+{.links-list}
 
 When choosing and using a web browser, based on the considerations above, we recommend the following steps:
 
