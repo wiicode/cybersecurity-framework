@@ -2,7 +2,7 @@
 title: Using built-in cloud services
 description: Secure use of built-in cloud services on smartphones, tablets, laptops and desktop PCs.
 published: true
-date: 2021-06-01T20:49:59.971Z
+date: 2021-06-02T02:37:02.061Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:41:28.193Z
@@ -90,15 +90,15 @@ We have provided links below to details on built-in services for the most popula
 
 #### **For organizations**
 
-The [BCSF Cloud Security Guidance](/collection/cloud-security) provides detailed guidance for organizations on assessing the security of cloud services. This may help with assessing whether you permit use of built-in cloud services.
+The [BCSF Advanced Security Guidance](/silver-training) provides detailed guidance for organizations on assessing the security of cloud services. This may help with assessing whether you permit use of built-in cloud services.
 
-In scenarios where devices are enterprise owned and fully managed, the [BCSF detailed platform guidance](/collection/mobile-device-guidance/platform-guides) provides recommended settings for disabling access to built-in cloud services, if they are not required.
+In scenarios where devices are enterprise owned and fully managed, the [BCSF detailed platform guidance](/bronze-training/mobile-device-guidance/platform-guides) provides recommended settings for disabling access to built-in cloud services, if they are not required.
 
 In scenarios where devices require access to work *and* personal data, it will be likely that users, at least for personal accounts, will require access to use built-in cloud services. Most device manufacturers provide mechanisms for isolating work and personal data which can be managed with MDM.
 
 We have provided some links below for detail on the controls offered by **Windows 10**, **iOS**, and **Android**. 
 
-It's important to note that, if malware is present on the device, these technical controls can be circumvented. More extensive information can be found in the [bring your own device](/collection/mobile-device-guidance/bring-your-own-device/collection/mobile-device-guidance/bring-your-own-device) guidance.
+It's important to note that, if malware is present on the device, these technical controls can be circumvented. More extensive information can be found in the [bring your own device](/bronze-controls/byod-guidance) guidance.
 
 | **Platform** | **Feature** |
 | --- | --- |
