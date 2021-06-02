@@ -1,8 +1,8 @@
 ---
 title: Advising end users
-description: Advising your organisation’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs
+description: Advising your organization’s users on expected and acceptable uses of smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-02T13:40:37.325Z
+date: 2021-06-02T13:40:53.934Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:50:14.235Z
