@@ -2,7 +2,7 @@
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
 published: true
-date: 2021-06-02T20:46:56.957Z
+date: 2021-06-02T20:49:22.253Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-06-02T13:28:42.279Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-02T13:28:42.279Z
 
 This guidance describes how administrators can help protect their systems from malicious Microsoft Office macros. It outlines why macros are a threat, and the approaches you can take to protect your devices.
 
-## What are macros, and why are they a problem?
+# What are macros, and why are they a problem?
 
 A macro is a small program that is often written to automate repetitive tasks in Microsoft Office applications. Macros have been historically used for a variety of reasons - from an individual automating part of their job, to organizations building entire processes and data flows. Macros are written in Visual Basic for Applications (VBA) and are saved as part of the Office file.
 
@@ -20,9 +20,8 @@ Malicious macros are not new; the underlying attack has remained unchanged since
 
 Macros are often part of phishing or spear phishing campaigns. In this, an attacker sends emails and attempts to convince the user to open the attached file and run the malicious macro. Techniques (such as [these seen by Microsoft](https://twitter.com/JohnLaTwC/status/775689864389931008)) successfully use social engineering to trick well-intentioned users into enabling malicious Office macros. The [*BCSF* phishing guidance](/bronze-controls/phishing) discusses how you can defend your *organization* against phishing attacks.
 
----
 
-## Protecting your systems from malicious macros
+# Protecting your systems from malicious macros
 
 The only effective way to protect your systems against malicious macros is to disable macros across Office apps, and ensure users cannot re-enable them.
 
@@ -35,7 +34,7 @@ If you can’t yet turn macros off, you will need to find the combination of mit
 -   use an anti-malware product that integrates with the [Anti Malware Scan Interface (AMSI)](https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal) on Windows 10
 -   use the latest version of Office ([ideally the Monthly Channel](https://docs.microsoft.com/en-gb/DeployOffice/plan-office-365-proplus#step-3---choose-your-update-channels)) on the latest version of the platform
 
-#### **Tip 1. Disable macros where they're not used**
+### **Tip 1. Disable macros where they're not used**
 
 If your *organization* does not use macros, they should be turned off entirely. If you cannot yet turn macros off, you should work on replacing the macros that your business relies on, so that you can turn them off entirely in the future. Larger organizations should consider only enabling macros for the specific groups or teams that need them. This allows training to be better-focused and appropriately targeted for these smaller sets of users, to help them understand social engineering techniques and agree sensible protective measures.
 
@@ -47,7 +46,7 @@ You should note that:
 -   **Macros on Windows** are configured per-application. If you use macros in some Office applications and not others, you should disable them in the applications where they are not used. For example, if your *organization* only uses macros in Excel, you can disable them in Word, PowerPoint, Visio, Access and Publisher. Note that OneNote does not support macros.
 -   **Macros on macOS** are configured for the entire Office suite so you should aim to entirely disable them.
 
-#### **Tip 2. Reduce your dependency on macros**
+### **Tip 2. Reduce your dependency on macros**
 
 If you cannot turn off macros because you currently use them, you should work to reduce your dependency on them. You should *prioritize* replacing macros that are incompatible with the [attack surface reduction (ASR) rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) listed below. Recent alternatives to office automation that can replace macros include:
 
@@ -56,23 +55,21 @@ If you cannot turn off macros because you currently use them, you should work to
 -   building custom Web Applications that support business processes
 -   building on off-the-shelf serverless cloud components
 
-#### **Tip 3. Disable high-risk macro capabilities**
+### **Tip 3. Disable high-risk macro capabilities**
 
 Exploit Guard [attack surface reduction (ASR) rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) on Windows 10 can be configured to disable some of the abilities of malicious macros. Exploit Guard can be initially [run in audit mode](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/audit-windows-defender) to allow you to confirm that the macros that your *organization* uses will continue to work properly. ASR rules also affect the *behavior* of other Office features (such as Add-ins), so will require testing prior to broad deployment in organizations that rely on third party Office plugins.
 
 Office on macOS uses the platform’s sandbox to limit the damage caused by a malicious document. We recommend [strengthening the default configuration of the Office sandbox](https://docs.microsoft.com/en-us/deployoffice/mac/deploy-preferences-for-office-for-mac) to further reduce the impact of running malicious macros.
 
-#### **Tip 4. Use an antimalware product to detect malicious** ***behavior*** **in macros**
+### **Tip 4. Use an antimalware product to detect malicious** ***behavior*** **in macros**
 
 You can reduce the chance of a malicious macro reaching a user if you use an anti-malware product that includes behavioral analysis for macro-enabled Office documents. It could be a part of your email service, or a feature of the anti-malware software on the user’s device.
 
 Organizations using an antivirus that uses [Microsoft’s AMSI interface](https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal) (as recommended in the *BCSF*'s [EUD Guidance for Windows 10](/silver-training/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management) )) can detect malicious macros even if the malicious intent is cleverly disguised. You should configure the feature to **scan all documents**, as the default is to only scan those that Office has identified as having come from the Internet.
 
-![](/static-assets/images/guidance/malicious%20behavior.png)
-
 We recommend that devices connected to the Internet are configured in line with the *BCSF*’s [End User Devices Security Guidance](/silver-training/end-user-device-guidance). While application allow listing is unlikely to prevent malicious macros themselves from running, a configuration such as the one suggested in the guidance for [Windows 10](/silver-training/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management)) and [macOS](/silver-training/platform-specific-macOS) is often effective in blocking malware that is downloaded/extracted from the macro.
 
-#### **Tip 5. Disable macros unless they are in trusted files**
+### **Tip 5. Disable macros unless they are in trusted files**
 
 Organizations that have a code signing service can choose to configure Office on Windows to only allow digitally signed macros to run. This is lower risk than allowing an Office application to open any macro, as malicious macros are not usually signed by their authors.
 
@@ -80,15 +77,14 @@ Office on Windows can also be configured to only allow macros if the file is loa
 
 The antivirus integration described above does not apply to macros in trusted files by default, as many organizations rely on macros that exhibit similar behaviors to malware.
 
-#### **Tip 6. Block macros from the Internet**
+### **Tip 6. Block macros from the Internet**
 
 Office 2016 on Windows introduced the ability for an *organization* to [block macros in files received from the Internet](https://blogs.technet.microsoft.com/mmpc/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/). This makes it more difficult to trick the user into bypassing the warning. Macros are blocked from the Internet by default on [Windows 10 in S mode](https://www.microsoft.com/en-gb/windows/s-mode). This feature is **not** available on macOS.
 
 Note that it is usually **not** practical to block the file types that can contain macros as they can be found in commonly used legacy formats (such as .RTF .DOC and .DOT), as well as the newer formats that explicitly mark themselves as containing a macro (such as .DOCM and .DOTM).
 
----
 
-## Configuration options for Windows devices managed by the cloud
+# Configuration options for Windows devices managed by the cloud
 
 Most of the mitigation options above can be configured using the [Office Cloud Policy Service](https://docs.microsoft.com/en-us/deployoffice/overview-office-cloud-policy-service) (OCPS) for users that have signed into their Office applications using their work identity. This includes devices that are joined to Azure Active Directory. Some settings apply to Windows rather than Office, and can be configured via MDM.
 
@@ -96,7 +92,7 @@ Some settings can be applied separately for each Office application that you hav
 
 The service implements a subset of the user-based policies that are available in group policy. Microsoft publishes [documentation explaining the group policy settings](https://technet.microsoft.com/en-us/library/ee857085%28v=office.16%29.aspx) available for Office 365 ProPlus, Office 2016, and Office 2019.
 
-### **Configuration to disable the Office macro engine**
+## **Configuration to disable the Office macro engine**
 
 You can set a policy to disable macros across all Office applications:
 
@@ -111,7 +107,7 @@ If you choose to leave macros enabled for some applications, you should set the 
 | For each of Access, Excel, PowerPoint, Publisher, Project, Visio and Word:<br><br>VBA Macro Notification Settings | \[Application name\] | Disable all without notification |
 | Security settings for macros | Outlook | Never warn, disable all |
 
-### **Configuration to only allow digitally signed macros**
+## **Configuration to only allow digitally signed macros**
 
 You will need to set a group policy for each Office application that you want to configure. We suggest also configuring the recommended security mitigations in the following section, even if you only allow digitally signed macros across the Office suite.
 
@@ -120,7 +116,7 @@ You will need to set a group policy for each Office application that you want to
 | For each of Access, Excel, PowerPoint, Publisher, Project, Visio and Word:<br><br>VBA Macro Notification Settings | \[Application name\] | Disable all without notification |
 | Security settings for macros | Outlook | Warn for signed, disable unsigned |
 
-### **Configuration to enable recommended macro security mitigations**
+## **Configuration to enable recommended macro security mitigations**
 
 These settings are recommended for all Office deployments that allow any use of macros.
 
@@ -137,7 +133,7 @@ These settings are recommended for all Office deployments that allow any use of 
 | Endpoint protection – Windows Defender Exploit Guard – Attack Surface Reduction Win32 imports from Office macro code | Block |
 | Endpoint protection – Windows Defender Exploit Guard – Attack Surface Reduction Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions) | Block |
 
-### **Configuration to limit service data sent to Microsoft**
+## **Configuration to limit service data sent to Microsoft**
 
 If your *organization* is using the Security Policy Advisor, you will need to configure Office to allow just the required service data to be collected:
 
@@ -151,7 +147,7 @@ You can optionally also prevent diagnostic data from being sent to Microsoft:
 | --- | --- | --- |
 | Configure the level of diagnostic data sent by Office to Microsoft | Office | Neither |
 
----
+
 
 ## Configuration options for Windows devices managed by Group Policy
 
@@ -163,7 +159,7 @@ Some settings will need to be configured separately for each Office application 
 -   Microsoft also publishes a [security baseline for Office 2016 and Office 365 ProPlus](https://blogs.technet.microsoft.com/secguide/2018/02/13/security-baseline-for-office-2016-and-office-365-proplus-apps-final/). Their baseline includes their recommended security settings for the whole of the Office suite on Windows, including some of the settings recommended by this guidance.
 -   You may need to [install the Administrative Template Pack](https://www.microsoft.com/en-us/download/details.aspx?id=49030) for Office 365 ProPlus, Office 2019 and Office 2016 to be able to configure the Group Policies below.
 
-### **Configuration to disable the Office macro engine**
+## **Configuration to disable the Office macro engine**
 
 You can set a policy to disable macros across all Office applications:
 
@@ -180,7 +176,7 @@ If you choose to leave macros enabled for some applications, you should set the 
 | For Outlook:<br><br>User Configuration > Administrative Templates > Microsoft Access 2016 > Security > Trust Center > Security settings for macros | Warn for signed, disable unsigned |
 | For Publisher:<br><br>User Configuration > Administrative Templates > Microsoft Publisher 2016 > Security > Trust Center > VBA Macro Notification Settings | Enabled<br><br>Disable all without notification |
 
-### **Configuration to only allow digitally signed macros**
+## **Configuration to only allow digitally signed macros**
 
 You will need to set a group policy for each Office application that you want to configure. We suggest also configuring the recommended security mitigations in the following section, even if you only allow digitally signed macros across the Office suite.
 
@@ -191,7 +187,7 @@ You will need to set a group policy for each Office application that you want to
 | For Outlook:<br><br>User Configuration > Administrative Templates > Microsoft Access 2016 > Security > Trust Center > Security settings for macros | Never warn, disable all |
 | For Publisher:<br><br>User Configuration > Administrative Templates > Microsoft Publisher 2016 > Security > Trust Center > VBA Macro Notification Settings | Enabled<br><br>Disable all except digitally signed macros |
 
-### **Configuration to enable recommended macro security mitigations**
+## **Configuration to enable recommended macro security mitigations**
 
 These settings are recommended for all Office deployments that allow any use of macros.
 
@@ -202,7 +198,7 @@ These settings are recommended for all Office deployments that allow any use of 
 | For each of Excel, PowerPoint, Project, Visio and Word:<br><br>User Configuration > Administrative Templates > Microsoft \[*Application name*\] 2016 > \[*Application name*\] Settings > Security > Trust Center > Block macros from running in Office files from the Internet | Enabled |
 | For Outlook:<br><br>User Configuration > Administrative Templates > Microsoft \[*Application name*\] 2016 > Security > Trust Center > Block macros from running in Office files from the Internet<br><br>User Configuration > Administrative Templates > Microsoft Publisher 2016 > Security > Trust Center > VBA Macro Notification Settings | Enabled |
 
-### **Configuration to limit diagnostic data sent to Microsoft**
+## **Configuration to limit diagnostic data sent to Microsoft**
 
 If your *organization* is using the Security Policy Advisor, you will need to configure Office to allow just the *required diagnostic data* to be collected:
 
@@ -216,15 +212,14 @@ If not using the service, you can prevent diagnostic data from being collected e
 | --- | --- |
 | User Configuration > Administrative Templates > Microsoft Office 2016 > Privacy > Trust Center > Configure the level of diagnostic data sent by Office to Microsoft | Enabled<br><br>Neither |
 
----
 
-## Configuration options for macOS devices
+# Configuration options for macOS devices
 
 The mitigation options available on macOS can be deployed using an MDM across an enterprise. The recommended settings are available on version 16.16 of Office for Mac or newer.
 
 Microsoft publishes [documentation explaining preference settings](https://aka.ms/macvbsec) available for Office 2016 and Office 2019.
 
-### **Configuration to disable the Office macro engine**
+## **Configuration to disable the Office macro engine**
 
 This setting will configure all Office applications that support macros; macros cannot be disabled per-application.
 
@@ -232,7 +227,7 @@ This setting will configure all Office applications that support macros; macros 
 | --- | --- | --- |
 | com.microsoft.office | VisualBasicMacroExecutionState | DisabledWithoutWarnings |
 
-### **Configuration to enable recommended macro security mitigations** 
+## **Configuration to enable recommended macro security mitigations** 
 
 These settings are recommended for all Office deployments that allow any use of macros.
 
@@ -245,9 +240,8 @@ This setting will configure all Office applications that support macros; macros 
 | com.microsoft.office | DisableVisualBasicToBindToPopen | Yes |
 | com.microsoft.office | DisableVisualBasicMacScript | Yes |
 
----
 
-## Comparison of Microsoft Office versions
+# Comparison of Microsoft Office versions
 
 Some of the security-enabling features described above are only available in newer versions of Microsoft Office. Some features may also rely on Office being installed on a recent version of Windows 10 or macOS.
 
