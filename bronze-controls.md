@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-02T18:46:16.934Z
+date: 2021-06-02T18:53:18.657Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -42,7 +42,8 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # E-Mail Security
 >  Technologies for ensuring that the proper people in an enterprise have the appropriate access to technology resources.
 {.is-success}
-- [Protect your reputation with DMARC, DKIM, and SPF](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Anti-spoofing and email trust](/bronze-controls/email-security-and-anti-spoofing)
+- [Configure DMARC, DKIM, and SPF](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
 - [Protect against phishing, malware, and frauds.](/bronze-controls/phishing)
 {.links-list}
 
