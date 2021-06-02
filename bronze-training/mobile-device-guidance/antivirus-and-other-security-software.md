@@ -2,7 +2,7 @@
 title: Antivirus and other security software
 description: Advice on the selection, configuration and use of antivirus and other security software on smartphones, tablets, laptops and desktop PCs
 published: true
-date: 2021-06-01T20:48:42.554Z
+date: 2021-06-02T02:25:59.545Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:39:26.668Z
@@ -47,7 +47,7 @@ This will be true when:
 
 This means you should not need to use AV products on platforms like Chrome OS, Android and iOS in their default configuration.
 
-You can find advice on how to do achieve the same effect on other platforms in our [third-party applications guidance](/collection/mobile-device-guidance/using-third-party-applications), and in the [detailed platform guides](/collection/mobile-device-guidance/platform-guides) for the specific platforms.
+You can find advice on how to do achieve the same effect on other platforms in our [third-party applications guidance](/bronze-training/mobile-device-guidance/using-third-party-applications), and in the [detailed platform guides](/bronze-training/mobile-device-guidance/platform-guides) for the specific platforms.
 
 **2\. If you decide you need to use AV products on your devices, you need to decide which one(s).**
 
@@ -57,10 +57,10 @@ When deciding on which products to use, think about:
 
 -   Is third-party software required in order to protect your devices from malware?
 -   How will you keep the AV product up to date, including new signatures?
--   Using third-party AV that is still supported on [obsolete platforms](/collection/mobile-device-guidance/managing-the-risks-from-obsolete-products) might help manage some of the risks.
+-   Using third-party AV that is still supported on [obsolete platforms](/bronze-training/mobile-device-guidance/managing-the-risks-from-obsolete-products) might help manage some of the risks.
 -   There are a variety of commercial paid and free products available, and some may have additional features you may find useful. Conduct a survey to find out which ones meet your needs.
 -   We don't recommend using more than one AV product on any device, the security benefit of doing so is minimal and the products may conflict with each other, potentially causing device stability issues.
--   An infected device within an organization may quickly spread malware through your entire fleet of devices within your network, you should consider methods of [preventing lateral movement](/guidance/preventing-lateral-movement) if they become compromised.
+-   An infected device within an organization may quickly spread malware through your entire fleet of devices within your network, you should consider methods of [preventing lateral movement](/bronze-controls/preventing-lateral-movement) if they become compromised.
 
 ---
 
@@ -71,7 +71,7 @@ When choosing and configuring an AV or endpoint security application:
 -   If you are relying on built-in AV, you should ensure that it is enabled within your device configuration settings.
 -   Decide which of your devices need AV products using the considerations above. This will mostly depend on the platforms used within your organization.
 -   Choose an AV product - or selection of products - that meets your organization's needs and is compatible with the devices you use.
--   Ensure you [update the AV software](/collection/mobile-device-guidance/antivirus-and-other-security-softwar) when a new version is released and configure automatic updates where possible.
+-   Ensure you [update the AV software](/bronze-training/mobile-device-guidance/antivirus-and-other-security-software) when a new version is released and configure automatic updates where possible.
 -   Test the AV product on your devices, and ensure that it does not conflict with existing AV or endpoint security applications.
 
 ---
@@ -80,15 +80,15 @@ When choosing and configuring an AV or endpoint security application:
 
 ### **Android**
 
-Use an *allow lists* to manage [permitted third-party applications](/collection/mobile-device-guidance/using-third-party-applications) on Android. Disable installation of applications from unknown sources using your MDM.
+Use an *allow lists* to manage [permitted third-party applications](/bronze-training/mobile-device-guidance/using-third-party-applications) on Android. Disable installation of applications from unknown sources using your MDM.
 
 However, there’s also [Play Protect](https://support.google.com/accounts/answer/2812853?hl=en) which acts much like a traditional AV product and regularly scans apps, reducing the risk of malware being loaded onto the platform from an untrusted source.
 
-Ensure your Android devices are [kept up to date](/collection/mobile-device-guidance/keeping-devices-and-software-up-to-date) and are supported by the manufacturer so that you have the latest defenses against malware. Security updates in Android 10 will be distributed via Google Play. However, OEM-specific updates will still require independent patches from the manufacturer.
+Ensure your Android devices are [kept up to date](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) and are supported by the manufacturer so that you have the latest defenses against malware. Security updates in Android 10 will be distributed via Google Play. However, OEM-specific updates will still require independent patches from the manufacturer.
 
 ### **iOS**
 
-The risk of becoming infected by malware on iOS is minimal, though we still recommend the use of an *allow list* to manage [permitted third-party applications](/collection/mobile-device-guidance/using-third-party-applications) on iOS.
+The risk of becoming infected by malware on iOS is minimal, though we still recommend the use of an *allow list* to manage [permitted third-party applications](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) on iOS.
 
 Apple app review and your own third-party assessment process should combine to prevent malware from infecting your devices.
 
@@ -112,11 +112,11 @@ XProtect has a limited signature set, which is maintained by Apple to detect wid
 
 There is little evidence to suggest that AV is effective or necessary on Chrome OS.
 
-Enterprise administrators can (and should) enforce application control policies based on code signatures, as described in our [detailed platform guidance](/collection/mobile-device-guidance/platform-guides), reducing the risk of malware infection.
+Enterprise administrators can (and should) enforce application control policies based on code signatures, as described in our [detailed platform guidance](/bronze-training/mobile-device-guidance/platform-guides), reducing the risk of malware infection.
 
 Furthermore, Chrome OS only allows you to install software that has been authorized in their store (including Android store), so applications have been through the various checks that are implemented there.
 
-Users who configure their Chrome OS into Developer Mode may still be able to run malicious code, so Developer Mode should be prevented using [mobile device management](/collection/mobile-device-guidance/choosing-and-using-mobile-device-management-services), unless needed.
+Users who configure their Chrome OS into Developer Mode may still be able to run malicious code, so Developer Mode should be prevented using [mobile device management](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services), unless needed.
 
 ### **Linux**
 
