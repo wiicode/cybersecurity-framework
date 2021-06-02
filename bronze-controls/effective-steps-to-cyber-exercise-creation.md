@@ -2,7 +2,7 @@
 title: Effective steps to cyber exercise creation
 description: The following tips can help organisations create their own cyber incident response exercises.
 published: true
-date: 2021-06-02T22:05:11.397Z
+date: 2021-06-02T22:05:34.832Z
 tags: bronze, bronze-controls, validation
 editor: markdown
 dateCreated: 2021-05-29T20:12:11.745Z
@@ -27,7 +27,7 @@ Creating **bespoke** exercises allows you to tailor these to reflect **your** **
 
 ## Step 1: Be clear on what you want to exercise, and why
 
-Having clear objectives set from the start will ensure your approach remains focused. Consider conducting a risk analysis to identify the most critical parts of the business, and use the exercising to test this first. It is also important to make sure the teams being exercised have clear plans that inform how they should react to a cyber incident and that they understand. You will need well-defined response plans in place before you exercise; without these you have nothing to test. For more information on response plans, please refer to the [*BCSF*’s Small Business Guide: Response & Recovery](/collection/small-business-guidance--response-and-recovery/step-1-prepare-for-incidents).  
+Having clear objectives set from the start will ensure your approach remains focused. Consider conducting a risk analysis to identify the most critical parts of the business, and use the exercising to test this first. It is also important to make sure the teams being exercised have clear plans that inform how they should react to a cyber incident and that they understand. You will need well-defined response plans in place before you exercise; without these you have nothing to test. 
  
 
 **Tips**
