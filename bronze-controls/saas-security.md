@@ -2,7 +2,7 @@
 title: SaaS Security 
 description: Guidance for organizations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
 published: true
-date: 2021-06-02T21:24:58.364Z
+date: 2021-06-02T21:25:32.412Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown
 dateCreated: 2021-05-29T19:51:20.720Z
@@ -36,7 +36,7 @@ As our approach provides a minimum level of confidence, your [risk managemen
 - [Smartsheet security review *A security review of the Smartsheet application for managing collaborative work, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/smartsheet)
 - [Stride security review *A security review of the Stride enterprise communications tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/stride)
 - [Trello security review *A security review of the Trello Kanban-style collaboration tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/trello)
-- [Yammer security review *A security review of Yammer, an enterprise social networking service, based on the *BCSF*'s SaaS security principles.  *](/bronze-controls/saas-security/yammer)  
+- [Yammer security review *A security review of Yammer, an enterprise social networking service, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/yammer)  
 - [Zendesk security review *A security review of Zendesk, a ticketing system to improve customer relations, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/zendesk)
 {.links-list}
 
