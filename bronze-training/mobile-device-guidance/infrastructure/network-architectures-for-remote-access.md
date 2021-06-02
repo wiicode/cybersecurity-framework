@@ -2,7 +2,7 @@
 title: Network architectures
 description: Advice for network architects and systems administrators on the design of remote access architecture for enterprise services
 published: true
-date: 2021-06-02T21:02:23.924Z
+date: 2021-06-02T21:04:22.527Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:55:47.973Z
@@ -10,19 +10,22 @@ dateCreated: 2021-03-06T02:55:47.973Z
 
 When deciding how to enable remote users to access enterprise resources, there are a number of security issues to take into account. This guidance outlines two approaches to this problem, *a traditional VPN-based remote access architecture*, and *a zero trust architecture*. 
 
-If you have on-premises resources, using a [traditional VPN-based remote access architecture](https://www.ncsc.gov.uk/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access#trad) - the *walled garden approach -* is one way of balancing remote usability with the risk of compromise.
+> If you have on-premises resources, using a **traditional VPN-based remote access architecture** - the *walled garden approach -* is one way of balancing remote usability with the risk of compromise.
+{.is-info}
 
-If you have few or no on-premises services, the [*zero trust architecture*](https://www.ncsc.gov.uk/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access#zero) can be very effective.
+
+> If you have few or no on-premises services, the *zero trust architecture* can be very effective.
+{.is-info}
+
 
 These two approaches are not the only options for enabling remote access, nor are they mutually exclusive. A hybrid approach can be taken if required, adopting properties from each.
 
-If a traditional remote access approach is necessary, adopting some of the principles and defences from the *zero trust architecture* will help you mitigate additional threats, and make a transition to full *zero trust networking* easier in future.
+If a traditional remote access approach is necessary, adopting some of the principles and defenses from the *zero trust architecture* will help you mitigate additional threats, and make a transition to full *zero trust networking* easier in future.
 
-## 1. Traditional VPN-based remote access architecture
+# 1. Traditional VPN-based remote access architecture
 
 The traditional remote access architecture separates a remote access architecture into a strong outer perimeter and multiple internal layers that are separated using firewalls. 
 
-![](https://www.ncsc.gov.uk/static-assets/images/guidance/Walled%20Garden.png)
 
 ### **Key components**
 
@@ -35,7 +38,7 @@ At a high level, these layers of this *walled garden* are:
 
 ### **How to set up a traditional remote access architecture**
 
-Firstly, if you are designing a new network, consider following the *zero trust network* approach instead. The traditional architecture still makes sense where there is a considerable on-premises deployment and/or legacy services to use. However, a *zero trust* approach will likely be better for organisations predominantly consuming cloud services.
+Firstly, if you are designing a new network, consider following the *zero trust network* approach instead. The traditional architecture still makes sense where there is a considerable on-premises deployment and/or legacy services to use. However, a *zero trust* approach will likely be better for organizations predominantly consuming cloud services.
 
 With the traditional architecture, the solution – comprising all layers – should require both user and machine authentication before allowing access to enterprise services. Both of these should be tied together so that a particular user can only access their assigned device. Typically, the access layer will perform *machine* authentication, and the presentation layer will perform *user* authentication.
 
@@ -43,7 +46,7 @@ With the traditional architecture, the solution – comprising all layers – sh
 
 Some deployments will have a single set of services that are accessible to all remote users (and hence be very simple in design), others will require more complex authentication and authorisation solutions to enable different remote users to access specific services, potentially depending on device type. Which services the user and device can access will depend on the rules enforced within the access layer.
 
-The access layer should authenticate clients and terminate their virtual private network (VPN) connection. The access layer also provides defences against network-level attack on internal services, from the Internet. These defences may be included as part of the VPN service. If not, you may require a separate device, such as a firewall, on the network boundary, permitting only VPN traffic into the access layer.
+The access layer should authenticate clients and terminate their virtual private network (VPN) connection. The access layer also provides defenses against network-level attack on internal services, from the Internet. These defenses may be included as part of the VPN service. If not, you may require a separate device, such as a firewall, on the network boundary, permitting only VPN traffic into the access layer.
 
 Routing rules should be in place within the access layer to stop remote devices communicating with one another, unless explicitly required.
 
@@ -61,17 +64,15 @@ The use of abstraction in the presentation layer lowers the risk of a network at
 
 #### **Internet gateway**
 
-Some organisations require proxy servers to intercept traffic for monitoring or to block access to internet services. An internet gateway is typically used to achieve this, and will use custom CA certificates deployed to devices to enable it to inspect encrypted traffic.
+Some organizations require proxy servers to intercept traffic for monitoring or to block access to internet services. An internet gateway is typically used to achieve this, and will use custom CA certificates deployed to devices to enable it to inspect encrypted traffic.
 
-Whilst organisations  might be required by legislation to monitor users' traffic in a gateway, protective monitoring, for security reasons, is often more effective when deployed to devices via security configuration (see [detailed platform guides](https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides)) or [security applications](https://www.ncsc.gov.uk/collection/mobile-device-guidance/antivirus-and-other-security-software). Several other reasons to use intercepting proxies are given in the [VPN guidance](https://www.ncsc.gov.uk/collection/mobile-device-guidance/virtual-private-networks).
+Whilst organizations  might be required by legislation to monitor users' traffic in a gateway, protective monitoring, for security reasons, is often more effective when deployed to devices via security configuration (see [detailed platform guides](/collection/mobile-device-guidance/platform-guides)) or [security applications](/collection/mobile-device-guidance/antivirus-and-other-security-software). Several other reasons to use intercepting proxies are given in the [VPN guidance](/collection/mobile-device-guidance/virtual-private-networks).
 
-## 2. Zero trust architecture
+# 2. Zero trust architecture
 
 A zero trust architecture removes the inherent trust from the network while building confidence in each request. This is achieved through building context through strong authentication, authorisation, device health, and value of the data being accessed.
 
 Each connection is strongly authenticated and checked against permissible policies, with the connection being dropped if it is not explicitly allowed.
-
-![](https://www.ncsc.gov.uk/static-assets/images/guidance/byodpc.sdxml.png)
 
 This approach has many advantages if adopted correctly, but also presents additional risk if mistakes are made.
 
@@ -79,15 +80,15 @@ Whilst this article will not go into detail about how to implement a *zero trus
 
 ### **Preparing for a zero trust architecture**
 
-Whilst the architectural components look much simpler in a zero trust network approach, it is still important to implement authentication and encryption mechanisms to the same or to a greater standard. It also becomes more important to have a [strong device configuration](https://www.ncsc.gov.uk/collection/mobile-device-guidance/platform-guides), as the device is exposed to a larger set of risks. This section details some things you should think about when developing a zero trust architecture.
+Whilst the architectural components look much simpler in a zero trust network approach, it is still important to implement authentication and encryption mechanisms to the same or to a greater standard. It also becomes more important to have a [strong device configuration](/collection/mobile-device-guidance/platform-guides), as the device is exposed to a larger set of risks. This section details some things you should think about when developing a zero trust architecture.
 
 #### **Single strong source of user identity**
 
-User identities are the foundation of a zero trust approach. By consolidating users' roles into a single source of truth, you can build reliable rules for users accessing data. The usual approach would be to use a single user directory for your organisation and create accounts that are linked to individuals. Then to enable granular access control you can create specific roles for each user. The directory can then be used across all services you plan to use, both internally and externally.
+User identities are the foundation of a zero trust approach. By consolidating users' roles into a single source of truth, you can build reliable rules for users accessing data. The usual approach would be to use a single user directory for your organization and create accounts that are linked to individuals. Then to enable granular access control you can create specific roles for each user. The directory can then be used across all services you plan to use, both internally and externally.
 
 #### **User authentication**
 
-Users should be [strongly authenticated](https://www.ncsc.gov.uk/collection/mobile-device-guidance/enterprise-authentication-policy), using multi-factor authentication to mitigate password attacks. The authentication should use an enterprise single sign on (SSO) service, which accesses your single source of user identity. This automates and simplifies credential management for users. It also simplifies your joiners/movers/leavers processes. 
+Users should be [strongly authenticated](/collection/mobile-device-guidance/enterprise-authentication-policy), using multi-factor authentication to mitigate password attacks. The authentication should use an enterprise single sign on (SSO) service, which accesses your single source of user identity. This automates and simplifies credential management for users. It also simplifies your joiners/movers/leavers processes. 
 
 #### **Machine authentication**
 
@@ -105,13 +106,13 @@ Some authentication services are starting to include *device health attestation
 
 In the *traditional remote access architecture*, the presentation layer is used to restrict direct access to enterprise applications that should not be accessible to remote devices.
 
-In the *zero trust network approach*, it is not possible to control network routing like this, so authorisation enforcement must be implemented elsewhere. Typically, this will be at the authentication point. This could achieved with a reverse proxy service in front of an enterprise application, or a single sign-on service, which issues tokens to access enterprise applications. In either case, the service would decline to authorise access to the application if the access request was not compliant with policy.
+In the *zero trust network approach*, it is not possible to control network routing like this, so authorisation enforcement must be implemented elsewhere. Typically, this will be at the authentication point. This could achieved with a reverse proxy service in front of an enterprise application, or a single sign-on service, which issues tokens to access enterprise applications. In either case, the service would decline to authorize access to the application if the access request was not compliant with policy.
 
-Authentication services might also require specific preconditions to be satisfied before access is granted to an enterprise application. For example, you can require multi-factor authentication for *some* of your enterprise applications but not others. Similarly, you may authorise out-of-date devices to access MDM, but not corporate email.
+Authentication services might also require specific preconditions to be satisfied before access is granted to an enterprise application. For example, you can require multi-factor authentication for *some* of your enterprise applications but not others. Similarly, you may authorize out-of-date devices to access MDM, but not corporate email.
 
 #### **Access control policies within an application**
 
-Within an enterprise application, you may want to further control access to specific resources, using access control. Most services will allow you to grant access to specific authorised users, but a *zero trust network* approach also lets you incorporate more context into that access decision.
+Within an enterprise application, you may want to further control access to specific resources, using access control. Most services will allow you to grant access to specific authorized users, but a *zero trust network* approach also lets you incorporate more context into that access decision.
 
 For example, you may wish to require multi-factor authentication before users can access sensitive corporate documents held in your file store. Meanwhile, single factor authorisation could be used for low security documents within the same file store. This might be beneficial in a *bring your own device* (BYOD) deployment, where personal devices may be allowed to access a subset of corporate data.
 
@@ -127,4 +128,4 @@ If you choose to develop a zero-trust architecture, keep in mind that:
 -   Implement machine authentication, with credentials rooted in hardware, taking into account compliance and health attestation, if possible.
 -   Monitor logs from authentication services and enterprise applications.
 
-Where a full zero trust network approach cannot be adopted, implement the traditional remote access architecture and as many *zero trust networking* recommendations as possible
+Where a full zero trust network approach cannot be adopted, implement the traditional remote access architecture and as many *zero trust networking* recommendations as possible.
