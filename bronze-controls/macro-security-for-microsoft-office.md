@@ -2,7 +2,7 @@
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
 published: true
-date: 2021-06-02T13:29:04.700Z
+date: 2021-06-02T13:33:50.500Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-06-02T13:28:42.279Z
@@ -66,11 +66,11 @@ Office on macOS uses the platform’s sandbox to limit the damage caused by a ma
 
 You can reduce the chance of a malicious macro reaching a user if you use an anti-malware product that includes behavioral analysis for macro-enabled Office documents. It could be a part of your email service, or a feature of the anti-malware software on the user’s device.
 
-Organizations using an antivirus that uses [Microsoft’s AMSI interface](https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal) (as recommended in the *BCSF*'s [EUD Guidance for Windows 10](/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809)) can detect malicious macros even if the malicious intent is cleverly disguised. You should configure the feature to **scan all documents**, as the default is to only scan those that Office has identified as having come from the Internet.
+Organizations using an antivirus that uses [Microsoft’s AMSI interface](https://docs.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal) (as recommended in the *BCSF*'s [EUD Guidance for Windows 10](/silver-training/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management) )) can detect malicious macros even if the malicious intent is cleverly disguised. You should configure the feature to **scan all documents**, as the default is to only scan those that Office has identified as having come from the Internet.
 
 ![](/static-assets/images/guidance/malicious%20behavior.png)
 
-We recommend that devices connected to the Internet are configured in line with the *BCSF*’s [End User Devices Security Guidance](/collection/end-user-device-security). While application allow listing is unlikely to prevent malicious macros themselves from running, a configuration such as the one suggested in the guidance for [Windows 10](/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809) and [macOS](/collection/end-user-device-security/platform-specific-guidance/macos-10-14) is often effective in blocking malware that is downloaded/extracted from the macro.
+We recommend that devices connected to the Internet are configured in line with the *BCSF*’s [End User Devices Security Guidance](/silver-training/end-user-device-guidance). While application allow listing is unlikely to prevent malicious macros themselves from running, a configuration such as the one suggested in the guidance for [Windows 10](/silver-training/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management)) and [macOS](/silver-training/platform-specific-macOS) is often effective in blocking malware that is downloaded/extracted from the macro.
 
 #### **Tip 5. Disable macros unless they are in trusted files**
 
@@ -83,8 +83,6 @@ The antivirus integration described above does not apply to macros in trusted fi
 #### **Tip 6. Block macros from the Internet**
 
 Office 2016 on Windows introduced the ability for an *organization* to [block macros in files received from the Internet](https://blogs.technet.microsoft.com/mmpc/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/). This makes it more difficult to trick the user into bypassing the warning. Macros are blocked from the Internet by default on [Windows 10 in S mode](https://www.microsoft.com/en-gb/windows/s-mode). This feature is **not** available on macOS.
-
-![](/static-assets/images/guidance/block%20from%20interwebs.png)
 
 Note that it is usually **not** practical to block the file types that can contain macros as they can be found in commonly used legacy formats (such as .RTF .DOC and .DOT), as well as the newer formats that explicitly mark themselves as containing a macro (such as .DOCM and .DOTM).
 
@@ -260,7 +258,7 @@ Some of the security-enabling features described above are only available in new
 
 |     |     |     |     |     |     |     |
 | --- | --- | --- | --- | --- | --- | --- |
-| **Versions** | **Default Macro** ***Behaviour*** | **Disable Macros** | **Disable high risk capabilities** | **Macro execution scanned by AV** | **Block from the internet** | **Trusted files (signature or location)** |
+| **Versions** | **Default Macro** ***Behavior*** | **Disable Macros** | **Disable high risk capabilities** | **Macro execution scanned by AV** | **Block from the internet** | **Trusted files (signature or location)** |
 | Office 365 on Windows 10 | Block until the user clicks the *Enable Macros* button.<br><br>Macros from untrusted locations will be scanned by compatible AV.<br><br>Macros from untrusted locations are entirely blocked when using Windows 10 in S Mode. | Per application | Yes | Yes | Yes | Yes |
 | Office 365 on macOS | Block until the user clicks the *Enable Macros* button | For all applications | Yes | No  | No  | No  |
 | Office 2019, 2016, 2013<br><br>Office 365 on earlier versions of Windows | Block until the user clicks the *Enable Macros* button | Per application | No  | No  | Yes | Yes |
