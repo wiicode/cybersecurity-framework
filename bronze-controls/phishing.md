@@ -2,7 +2,7 @@
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
 published: true
-date: 2021-06-02T15:05:51.854Z
+date: 2021-06-02T15:35:13.669Z
 tags: bronze, bronze-controls, phishing
 editor: markdown
 dateCreated: 2021-06-02T15:04:32.010Z
@@ -11,12 +11,12 @@ dateCreated: 2021-06-02T15:04:32.010Z
 **Phishing attacks: defending your** ***organization*** provides a multi-layered set of mitigations to improve your *organization*'s resilience against phishing attacks, whilst minimising disruption to user productivity. The *defenses* suggested in this guidance are also useful against other types of cyber attack, and will help your *organization* become more resilient overall.
 
 -   This guidance is aimed at technology, operations or security staff responsible for designing and implementing *defenses* for medium to large organizations. This includes staff responsible for phishing training.
--   Staff within smaller organizations will also find this guidance useful, but should refer to the [*BCSF*'s Small Business Guide] beforehand.
+-   Staff within smaller organizations will also find this guidance useful, but should refer to the [Small Business Guide](/bronze-training/background-simple) beforehand.
 -   This guidance concludes with a real-world example that illustrates how a multi-layered approach prevented a phishing attack from damaging a major financial-sector *organization*.
 
-Note: The mitigations included in this guidance require a combination of technological, process, and people-based approaches. They must be considered as a whole for your *defenses* to be really effective. For example, if you want to encourage people to report suspicious emails, then you need to back that up with a technical means of doing so, and a process behind it that will provide timely feedback on the email they submitted.
+> The mitigations included in this guidance require a combination of technological, process, and people-based approaches. They must be considered as a whole for your *defenses* to be really effective. For example, if you want to encourage people to report suspicious emails, then you need to back that up with a technical means of doing so, and a process behind it that will provide timely feedback on the email they submitted.
+{.is-info}
 
----
 
 ## What is phishing?
 
@@ -34,15 +34,13 @@ The mitigations described here are mostly focused on preventing the impact of ph
 2.  From a *reputation* aspect, no *organization* wants their name becoming synonymous with scams and fraud.
 3.  The wider community will also benefit if your contacts (such as suppliers, partners and customers) are encouraged to register their details with DMARC. This can give you much greater assurance that the email asking for information (or money) actually comes from where you think.
 
-![DMARC](/images/DMARC.jpg?mpwidth=545&mlwidth=737&twidth=961&dwidth=635&dpr=2&width=1736)
 
-The *BCSF* are encouraging organizations to lead by example and [set up DMARC](https://www.gov.uk/government/publications/email-security-standards/domain-based-message-authentication-reporting-and-conformance-dmarc), and then start asking their contacts to do the same. It's in everyone's interest to promote widespread adoption, as the more organizations that take part, the harder it is for the phishers to succeed.
+*BCSF* is encouraging organizations to lead by example and **set up DMARC**, and then start asking their contacts to do the same. It's in everyone's interest to promote widespread adoption, as the more organizations that take part, the harder it is for the phishers to succeed.
 
----
 
 ## Phishing *defenses*: why you need a multi-layered approach
 
-Typical *defenses* against phishing often rely exclusively on users being able to spot phishing emails. [This approach will only have limited success](/blog-post/im-gonna-stop-you-little-phishie). Instead, you should widen your *defenses* to include more technical measures. This will improve your resilience against phishing attacks without disrupting the productivity of your users. You'll have multiple opportunities to detect a phishing attack, and then stop it before it causes harm. You also acknowledge that some attacks will get through, as this will help you plan for incidents, and *minimize* the damage caused.
+Typical *defenses* against phishing often rely exclusively on users being able to spot phishing emails. This approach will only have limited success. Instead, you should widen your *defenses* to include more technical measures. This will improve your resilience against phishing attacks without disrupting the productivity of your users. You'll have multiple opportunities to detect a phishing attack, and then stop it before it causes harm. You also acknowledge that some attacks will get through, as this will help you plan for incidents, and *minimize* the damage caused.
 
 This guidance splits the mitigations into four layers on which you can build your *defenses*:
 
@@ -54,13 +52,7 @@ This guidance splits the mitigations into four layers on which you can build you
 
 Some of the suggested mitigations may not be feasible within the context of your *organization*. If you can't implement all of them, try to address at least some of the mitigations **from within each of the layers**. The mitigations within each layer are summarised in the following infographic.
 
-### **Summary of multi-layered approach to phishing** ***defenses***
-
-![](/static-assets/images/phishing_infographic_final.jpg)
-
-[Download the phishing attacks infographic below (pdf)](/guidance/phishing#downloads)
-
----
+# Summary of multi-layered approach to phishing ***defenses***
 
 ## Layer 1: Make it difficult for attackers to reach your users
 
@@ -72,7 +64,7 @@ Attackers 'spoof' trusted emails, making **their** emails look like they were s
 
 **How do I do this?**
 
--   Make it harder for email from your domains to be spoofed by employing the anti-spoofing controls: [DMARC, SPF and DKIM](/collection/email-security-and-anti-spoofing), and encourage your contacts to do the same.”
+-   Make it harder for email from your domains to be spoofed by employing the anti-spoofing controls: **DMARC, SPF and DKIM**, and encourage your contacts to do the same.”
 
 ### **Reduce the information available to attackers**
 
@@ -81,10 +73,9 @@ Attackers use publicly available information about your *organization* and users
 **How do I do this?**
 
 -   Consider what visitors to your website need to know, and what detail is unnecessary (but could be useful for attackers)? This is particularly important for high profile members of your *organization*, as this information could be used to craft personalised whaling attacks (a type of spear phishing that targets a big phish, such as a board member who has access to valuable assets).
--   Help your staff understand how sharing their personal information can affect them and your *organization*, and develop this into a clear digital footprint policy for all users. [CPNI’s Digital Footprint Campaign](https://www.cpni.gov.uk/my-digital-footprint) contains a range of useful materials (including posters and booklets).
+-   Help your staff understand how sharing their personal information can affect them and your *organization*, and develop this into a clear digital footprint policy for all users. 
 -   Be aware of what your partners, contractors and suppliers give away about your *organization* online.  
-      
-     
+       
 
 ### **Filter or block incoming phishing emails**
 
@@ -99,7 +90,6 @@ Filtering or blocking a phishing email before it reaches your users not only red
 -   Filtering email on end user devices can offer an additional layer of *defense* against malicious emails. However, this should not compensate for ineffective server-based measures, that could block a large number of incoming phishing emails entirely.
 -   Email can be filtered or blocked using a variety of techniques including: IP addresses, domain names, email address white/black list, public spam and open relay black lists, attachment types, and malware detection.
 
----
 
 ## Layer 2: Help users identify and report suspected phishing emails
 
@@ -109,18 +99,17 @@ This section outlines how to help your staff spot phishing emails, and how to im
 
 Training your users - particularly in the form of phishing simulations - is the layer that is often over-emphasized in phishing *defense*. Your users cannot compensate for cyber security weaknesses elsewhere. Responding to emails and clicking on links is a huge part of the modern workplace, so it's unrealistic to expect users to remain vigilant all the time.
 
-Spotting phishing emails is hard, and spear phishing is even harder to detect. [Even experts from the *BCSF* struggle](/blog-post/serious-side-pranking). The advice given in many training packages, based on standard warnings and signs, will help your users spot some phishing emails, but they cannot teach everyone to spot all phishing emails.
+Spotting phishing emails is hard, and spear phishing is even harder to detect. The advice given in many training packages, based on standard warnings and signs, will help your users spot some phishing emails, but they cannot teach everyone to spot all phishing emails.
 
 **How do I do this?**
 
--   Make it clear that phishing messages can be difficult to spot, and you do not expect people to be able to identify them 100% of the time. Never punish users who are struggling to *recognize* phishing emails; [it's a bad idea for many reasons](/blog-post/trouble-phishing#section_3). Users who fear reprisals will not will not report mistakes promptly, if at all.
+-   Make it clear that phishing messages can be difficult to spot, and you do not expect people to be able to identify them 100% of the time. Never punish users who are struggling to *recognize* phishing emails; it's a bad idea for many reasons. Users who fear reprisals will not will not report mistakes promptly, if at all.
 -   Training should encourage your users' willingness to report future incidents, and re-assure them that it is OK to ask for further support when something looks suspicious. This message needs buy-in across all departments including HR, support and senior management.
 -   Ensure that your users understand the nature of the threat posed by phishing, especially those departments that may be more vulnerable to it. Customer-facing departments may receive high volumes of unsolicited emails, whereas staff authorized to access sensitive information, manage financial assets, or administer IT systems will be of greater interest to an attacker (and may be the target of a sophisticated spear phishing campaign). Ensure these more vulnerable staff are aware of the risks, and offer them additional support.
--   Help your users spot the common features of phishing messages, such as urgency or authority cues that pressure the user to act. [CPNI’s Don’t Take the Bait!](https://www.cpni.gov.uk/security-campaigns/don%E2%80%99t-take-bait-0) Campaign provides a range of materials to deliver security messages on this topic.
--   [Using phishing simulations will not make your *organization* more secure](/blog-post/trouble-phishing). Some companies have user training that gets the participants to craft their own phishing email, giving them a much richer view of the techniques used. Others are experimenting with workshops, quizzes and gamification, making a friendly competition between peers (rather than an 'us vs them' situation with security).  
+-   Help your users spot the common features of phishing messages, such as urgency or authority cues that pressure the user to act. 
+-   [Using phishing simulations will not make your *organization* more secure](/bronze-controls/phishing-simulation-campaigns). Some companies have user training that gets the participants to craft their own phishing email, giving them a much richer view of the techniques used. Others are experimenting with workshops, quizzes and gamification, making a friendly competition between peers (rather than an 'us vs them' situation with security).  
       
      
-
 ### **Make it easier for your users to** ***recognize*** **fraudulent requests**
 
 Attackers can exploit processes to trick users into handing over information (including passwords), or making *unauthorized* payments. Consider which processes could be mimicked by attackers, and how to review and improve them so phishing attacks are easier to spot.
@@ -138,7 +127,7 @@ In addition, think about how the emails you send to suppliers and customers will
 
 ### **Create an environment that encourages users to report phishing attempts**
 
-Building a [culture](/blog-post/growing-positive-security-cultures) where users can report phishing attempts (including ones that that are clicked on) gives you vital information about what types of phishing attacks are being used. You can also learn what type of emails are getting mistaken for phishing, and what impact this might be having on your *organization*.
+Building a culture where users can report phishing attempts (including ones that that are clicked on) gives you vital information about what types of phishing attacks are being used. You can also learn what type of emails are getting mistaken for phishing, and what impact this might be having on your *organization*.
 
 **How do I do this?**
 
@@ -147,7 +136,6 @@ Building a [culture](/blog-post/growing-positive-security-cultures) where users 
 -   Think about how you can use informal communication channels (through colleagues, teams, or internal message boards) to create an environment where it is easy for users to ‘ask out loud’ for support and guidance when they may be faced with a phishing attempt.
 -   Avoid creating a punishment or blame-oriented culture around phishing. It is important that users feel supported to come forward even when they have ‘clicked’ and later believe that something may be suspicious.
 
----
 
 ## Layer 3: Protect your *organization* from the effects of undetected phishing emails
 
@@ -155,15 +143,14 @@ Since it's not possible to stop all attacks, this section outlines how to *minim
 
 ### **Protect your devices from malware**
 
-Malware is often hidden in phishing emails, or in websites that they link to. [Well configured devices](/guidance/end-user-device-security) and good end point *defenses* can stop malware installing, even if the email is clicked. There are many other *defenses* against malware and you will need to consider your security needs and ways of working to ensure a good approach. Some *defenses* are specific to particular threats (such as [disabling macros](/guidance/macro-security-microsoft-office)) and some may not be appropriate for all devices (anti-malware software may be pre-installed on some devices and [not needed on others](/blog-post/av-or-not-av)). Finally, the impact of malware on your wider system will depend on how your system has been set up. For more information, see our [security design principles](/collection/cyber-security-design-principles/reducing-the-impact-of-compromise). 
+Malware is often hidden in phishing emails, or in websites that they link to. [Well configured devices](/silver-training/end-user-device-guidance) and good end point *defenses* can stop malware installing, even if the email is clicked. There are many other *defenses* against malware and you will need to consider your security needs and ways of working to ensure a good approach. Some *defenses* are specific to particular threats (such as [disabling macros](/bronze-controls/macro-security-for-microsoft-office) and some may not be appropriate for all devices (anti-malware software may be pre-installed on some devices and not needed on others. Finally, the impact of malware on your wider system will depend on how your system has been set up. For more information, see our [security design principles](/bronze-training/background-boards/board-planning-response).
 
 **How do I do this?**
 
 -   Prevent attackers from using known vulnerabilities by only using supported software and devices. Make sure that software and devices are always kept up to date with the latest patches.
 -   Prevent users accidentally installing malware from a phishing email, by limiting administrator accounts to those who need those privileges. People with administrator accounts should not use these accounts to check email or browse the web.
--   Read the *BCSF*'s [End user device (EUD) security guidance](/guidance/end-user-device-security).  
-      
-     
+-   Read the *BCSF*'s [End user device (EUD) security guidance](/silver-training/end-user-device-guidance).
+      
 
 ### **Protect your users from malicious websites**
 
@@ -173,8 +160,6 @@ Links to malicious websites are often a key part of a phishing email. However, i
 
 -   Most modern, up-to-date browsers will block known phishing and malware sites. Note that is not always the case on mobile devices.
 -   Organizations should run a proxy service, either in house or in the cloud, to block any attempt to reach websites which have been identified as hosting malware or phishing campaigns.
--   Public sector organizations should use the [Public Sector DNS service](/information/pdns), which will prevent users resolving domains known to be malicious.  
-      
      
 
 ### **Protect your accounts with effective authentication and authorisation**
@@ -183,15 +168,13 @@ Passwords are a key target for attackers, particularly if they are for accounts 
 
 **How do I do this?**
 
--   Add additional security to your login process by [setting up Two Factor Authentication (2FA)](/guidance/multi-factor-authentication-online-services), which is also called 'Two Step Verification' on some web services. Having a second factor means that an attacker cannot access an account using just a stolen password.
--   Consider using [password managers](/collection/passwords?curPage=/collection/passwords/password-manager-buyers-guide), some of which can *recognize* real websites and will not autofill on fake websites. Similarly, you could use a single sign-on method (where the device recognizes and signs into the real website automatically). Adopting these techniques means that manually entering passwords becomes unusual, and a user can more easily *recognize* a suspicious request.
+-   Add additional security to your login process by setting up **Two Factor Authentication (2FA)**, which is also called 'Two Step Verification' on some web services. Having a second factor means that an attacker cannot access an account using just a stolen password.
+-   Consider using **password managers**, some of which can *recognize* real websites and will not autofill on fake websites. Similarly, you could use a single sign-on method (where the device recognizes and signs into the real website automatically). Adopting these techniques means that manually entering passwords becomes unusual, and a user can more easily *recognize* a suspicious request.
 -   Consider using alternative login mechanisms (like biometrics or smartcards) that require more effort to steal than passwords.
 -   The damage an attacker can cause is proportionate to the privileges allocated to the credentials they have stolen. Only provide privileged access to people who need it for their roles. Regularly review these and revoke privileges if no longer needed.
 -   Remove or suspend accounts that are no longer being used, such as when a member of your *organization* leaves or moves to a new role.
--   Consider [reviewing your password policies](/collection/passwords?curPage=/collection/passwords/updating-your-approach). Doing so may (for example) reduce the chance likelihood of staff re-using passwords across home and work accounts.  
+-   Consider reviewing your password policies. Doing so may (for example) reduce the chance likelihood of staff re-using passwords across home and work accounts.  
      
-
----
 
 ## Layer 4: Respond quickly to incidents
 
