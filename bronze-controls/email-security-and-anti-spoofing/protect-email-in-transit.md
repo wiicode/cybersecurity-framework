@@ -2,7 +2,7 @@
 title: 2. Protect email in transit
 description: Where email is transferred over untrusted networks, such as the internet, its integrity and confidentially should be protected.
 published: true
-date: 2021-06-02T20:40:32.423Z
+date: 2021-06-02T20:42:14.123Z
 tags: bronze, bronze-controls, email
 editor: markdown
 dateCreated: 2021-06-02T15:15:55.745Z
@@ -49,3 +49,13 @@ With parties that you contact regularly by email (e.g. partner organizations), i
 In order for TLS connections to be established, the application connecting to your service will need to validate the identity of your server using the X.509v3 certificate which it presents.
 
 This means your service will need an X.509v3 certificate which is signed by an authority that the party connecting to your service recognizes and trusts. If you are using a cloud-based email provider, this is likely to be done for you, and can be easily tested. However, if you operate your own MTA, you should follow our advice on generating a private key and requesting a certificate from a Certificate Authority.
+
+# E-mail security and anti-spoofing
+
+- [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
+- [Protect email in transit](/bronze-controls/email-security-and-anti-spoofing/protect-email-in-transit)
+- [Configure anti-spoofing controls](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Send spoof emails to spam](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)
+- [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
+- [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
+{.grid-list}
