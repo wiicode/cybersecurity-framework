@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-05-29T20:03:03.020Z
+date: 2021-06-02T13:17:07.530Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -98,9 +98,9 @@ Device management is the process of managing the implementation, operation and m
 ## Device Management Operations
 ### Securing Devices
 {.grid-list}
-- [Securing Windows 10](/silver-training/platform-windows-10)
-- [Securing macOS](/bronze-controls/devices/macOS)
-- [Securing iOS](/bronze-controls/devices/iOSiPadOS)
+- [Securing Windows 10](/bronze-training/mobile-device-guidance/platform-guides/windows10)
+- [Securing macOS](/bronze-training/mobile-device-guidance/platform-guides/macOS)
+- [Securing iOS](/bronze-training/mobile-device-guidance/platform-guides/ios-and-ipados)
 {.links-list}
 
 ### Resetting Devices
