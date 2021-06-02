@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-02T13:35:11.681Z
+date: 2021-06-02T18:46:16.934Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -13,7 +13,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 >  Implementing processs for sticking to strategic direction, managing risks, and verifying that your systems work as designed today and will work as expected during an incident.
 {.is-success}
 
-{.grid-list}
+
 - [Code of Conduct](/bronze-controls/code-of-conduct)
 - [Incident Categories](/bronze-controls/incident-categories)
 {.links-list}
@@ -21,7 +21,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # Data Management
 >  Practices for classifying, managing, and storing your information/data electonically. 
 {.is-success}
-{.grid-list}
+
 - [Data Handling Controls](/bronze-controls/data-handling-controls)
 - [Secure sanitization of storage media](/bronze-controls/topic-sanitization)
 - [SharePoint Governance](/bronze-controls/sharepoint-governance)
@@ -34,9 +34,18 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # Identity and Access Management
 >  Technologies for ensuring that the proper people in an enterprise have the appropriate access to technology resources.
 {.is-success}
-{.grid-list}
 - [Introduction to identity and access management](/bronze-controls/designing-controls/identity-and-access-management)
+- [Password guidance](/bronze-training/passwords)
+- [Multi-factor authentication for online services](/bronze-training/passwords/multi-factor-authentication-online-services)
 {.links-list}
+
+# E-Mail Security
+>  Technologies for ensuring that the proper people in an enterprise have the appropriate access to technology resources.
+{.is-success}
+- [Protect your reputation with DMARC, DKIM, and SPF](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Protect against phishing, malware, and frauds.](/bronze-controls/phishing)
+{.links-list}
+
 
 # Device Management 
 Device management is the process of managing the implementation, operation and maintenance of a physical and/or virtual device. It is a broad term that includes various administrative tools and processes for the maintenance and upkeep of a computing, network, mobile and/or virtual device. Majority of this section emphasizes **Mobile Device Management**, which is an industry accepted term for nearly all **End-User Devices**. While historically **worksations** and **desktops** were treated differently from phones and tables, the convergence of these technologies has made them ubquitious. BCSF assumes that all **end-user devices** are mobile devices whether they are a workstation, desktop, laptop, phone, tablet, or thin-client. 
@@ -51,7 +60,7 @@ Device management is the process of managing the implementation, operation and m
 > 
 > The choices you make at this stage of your deployment can have a huge impact on the resulting security of your networks, so it’s important to get them right. The guides in this section will walk you through these key decisions, highlighting the security issues at stake and suggesting 'best practice' solutions where possible.
 {.is-info}
-{.grid-list}
+
 - [Choosing mobile devices *Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organization.*](/bronze-training/mobile-device-guidance/choosing-devices)
 - [Purchasing devices *Managing supply chain security when buying smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/purchasing-devices)
 - [Provisioning and distributing devices *Advice for IT administrators on how to provision and distribute smartphones, tablets and laptops to end users*](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices)
@@ -62,7 +71,7 @@ Device management is the process of managing the implementation, operation and m
 ### Policies and Settings
 > Once you’ve chosen which devices your staff will use and decided how they should use them, you’ll need to start thinking about how to configure these devices and the services on them. Ideally, there will be a combination of settings and controls which makes it easy for your users to get their jobs done but makes it hard for attackers to compromise your systems.
 {.is-info}
-{.grid-list}
+
 - [Using biometrics *Advice for IT system administrators on using biometric authentication on smartphones, tablets, laptops and desktop PCs.*](/bronze-training/mobile-device-guidance/using-biometrics-on-mobile-devices)
 - [Antivirus and other security software *Advice on the selection, configuration and use of antivirus and other security software on smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/antivirus-and-other-security-software)
 - [Managing web browser security *Advice for IT Admins on the management of security settings for web browsers*](/bronze-training/mobile-device-guidance/managing-web-browser-security)
@@ -76,7 +85,7 @@ Device management is the process of managing the implementation, operation and m
 > Even once your devices are in the hands of your users, there is still more work to do. In particular, you’ll want to make sure your deployment remains secure.
 {.is-info}
 
-{.grid-list}
+
 - [Erasing mobile devices *Advice for IT admins and individuals on the secure removal of data or malware from smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/erasing-mobile-devices)
 - [Keeping devices and software up to date *Advice for individuals and organizations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.*](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date)
 - [Logging and protective monitoring *Using logging and monitoring to identify threats and protect smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring)
@@ -90,7 +99,7 @@ Device management is the process of managing the implementation, operation and m
 ### Infrastructure
 > Any deployment of mobile devices will be built upon a network of supporting infrastructure. This section includes our guidance on how to develop, manage, and secure the systems which underpin your mobile devices.
 {.is-info}
-{.grid-list}
+
 - [Enterprise authentication policy *Implementing effective authentication on smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/enterprise-authentication-policy)
 - [Virtual Private Networks (VPNs) *Choosing, deploying and configuring VPN technologies*](/bronze-training/mobile-device-guidance/virtual-private-networks)
 - [Network architectures *Advice for network architects and systems administrators on the design of remote access architecture for enterprise services*](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-access)
@@ -98,14 +107,14 @@ Device management is the process of managing the implementation, operation and m
 
 ## Device Management Operations
 ### Securing Devices
-{.grid-list}
+
 - [Securing Windows 10](/bronze-training/mobile-device-guidance/platform-guides/windows10)
 - [Securing macOS](/bronze-training/mobile-device-guidance/platform-guides/macOS)
 - [Securing iOS](/bronze-training/mobile-device-guidance/platform-guides/ios-and-ipados)
 {.links-list}
 
 ### Resetting Devices
-{.grid-list}
+
 - [Reset and reprovision - Windows](/bronze-controls/devices/eud-factory-windows)
 - [Reset and reprovision - iOS](/bronze-controls/devices/eud-factory-ios)
 - [Reset and reprovision - Android](/bronze-controls/devices/eud-factory-android)
@@ -115,7 +124,7 @@ Device management is the process of managing the implementation, operation and m
 > Network management is the process of administering and managing computer networks. Services provided by this discipline include fault analysis, performance management, provisioning of networks and maintaining quality of service.
 {.is-success}
 
-{.grid-list}
+
 - [Domain Name System](/bronze-controls/dns)
 - [Preventing Lateral Movement](/bronze-controls/preventing-lateral-movement)
 {.links-list}
@@ -125,7 +134,7 @@ Device management is the process of managing the implementation, operation and m
 > System monitoring is essentially about checking the operation of devices and applications across the IT infrastructure, including measuring traffic and activity between different network components. It can also include catching discrete occurrences or patterns within event logs signaling errors or security issues.
 {.is-success}
 
-{.grid-list}
+
 - [Introduction to logging for security purposes](/bronze-controls/designing-controls/logging-for-security)
 {.links-list}
 
@@ -134,7 +143,7 @@ Device management is the process of managing the implementation, operation and m
 > Vulnerability management is the "cyclical practice of identifying, classifying, prioritizing, remediating, and mitigating" software vulnerabilities. Vulnerability management is integral to computer security and network security
 {.is-success}
 
-{.grid-list}
+
 - [Vulnerability Scanning Tools and Services](/bronze-controls/vulnerability-scanning-tools-and-services)
 - [Intelligent security tools](/bronze-training/background-topics/intelligent-security-tools)
 {.links-list}
@@ -144,7 +153,6 @@ Device management is the process of managing the implementation, operation and m
 {.is-success}
 
 
-{.grid-list}
 - [Understanding Software as a Service (SaaS) security](/bronze-controls/saas-security/understanding-saas-security)
 - [SaaS security principles](/bronze-controls/saas-security/saas-security-principles)
 - [Product Evaluations](/bronze-controls/saas-security)
