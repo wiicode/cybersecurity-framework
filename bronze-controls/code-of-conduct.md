@@ -2,7 +2,7 @@
 title: Code of Conduct
 description: 
 published: true
-date: 2021-03-05T19:27:58.448Z
+date: 2021-06-02T21:36:03.232Z
 tags: bronze, bronze-controls, organization-and-management
 editor: markdown
 dateCreated: 2021-03-05T19:27:58.448Z
@@ -15,7 +15,7 @@ Integrity and ethical values are essential elements of the control environment, 
 
 
 # BCSF Suggested Code of Conduct
-Orderly and efficient operation of {{organization.name}} requires that employees maintain proper standards of conduct and observe certain procedures. These guidelines are not intended to be all-inclusive. Nothing here is intended or will be construed to change or replace, in any manner, the at-will employment relationship between {{organization.name}} and the employee. Nothing here is intended to infringe upon employee rights under Section 7 of the National Labor Relations Act. {{organization.name}} views the following as inappropriate behavior:
+Orderly and efficient operation of {{organization.name}} requires that employees maintain proper standards of conduct and observe certain procedures. These guidelines are not intended to be all-inclusive. Nothing here is intended or will be construed to change or replace, in any manner, the at-will employment relationship between {{organization.name}} and the employee. {{organization.name}} views the following as inappropriate behavior:
 
 - Failure to follow the policies.
 - Negligence, carelessness or inconsiderate treatment of Company clients and their information.
