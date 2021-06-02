@@ -2,7 +2,7 @@
 title: Virtual Private Networks (VPNs)
 description: Choosing, deploying and configuring VPN technologies
 published: true
-date: 2021-06-02T21:00:11.187Z
+date: 2021-06-02T21:02:10.399Z
 tags: guidance, bronze, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:54:13.763Z
@@ -36,13 +36,13 @@ Protecting data in transit is one of the most important security aspects to cons
 
 ### **Do you need a VPN?**
 
-Whether you require a VPN will depend on the [network architecture](/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access) you use. For example, there would be little benefit in using a VPN if you've fully adopted a [zero-trust approach to networking](/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access).
+Whether you require a VPN will depend on the [network architecture](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-access) you use. For example, there would be little benefit in using a VPN if you've fully adopted a zero-trust approach to networking.
 
 Also, if none of the advantages of VPNs mentioned above apply to you, there is no need to use one. Even if some of those reasons apply to you, there may be alternative ways to address the base problem. Legacy services may not be needed on devices outside the firewall, or blocking access to illegal websites could be done on-device, if required.
 
 VPNs are complex to set up, require maintenance, and failure of a VPN could easily cause organization-wide outages.
 
-If you're using a [walled garden architecture](/collection/mobile-device-guidance/infrastructure/network-architectures-for-remote-access), or other architecture that requires end users' traffic to traverse untrusted networks and external firewalls then you should consider using a VPN. However, there are many aspects of a VPN to consider. These are addressed next.
+If you're using a [walled garden architecture](/bronze-training/mobile-device-guidance/infrastructure/network-architectures-for-remote-access), or other architecture that requires end users' traffic to traverse untrusted networks and external firewalls then you should consider using a VPN. However, there are many aspects of a VPN to consider. These are addressed next.
 
 ### **Protocols**
 
@@ -60,7 +60,7 @@ From a security perspective, with all other things equal, there is very little d
 
 We recommend client certificates for machine authentication, when using a VPN. Certificates have several advantages over Pre-Shared Keys (PSKs), including the ability to revoke just one certificate on your network and to store private keys securely (e.g. in a TPM or TEE), which we strongly recommend, when possible.
 
-For specific guidance on configuring cryptographic parameters, see the BCSF's separate guidance on [Using IPsec to protect data](/guidance/using-ipsec-protect-data) and [Using TLS to protect data](/guidance/tls-external-facing-services). As these recommended configurations are not always fully supported by built-in VPN clients on mobile operating systems. We also give per-platform recommendations in the per-platform mobile device guidance.
+For specific guidance on configuring cryptographic parameters, see the BCSF's separate guidance on [Using IPsec to protect data](/silver-training/topic-IPSec) and [Using TLS to protect data](/silver-training/topic-tls). As these recommended configurations are not always fully supported by built-in VPN clients on mobile operating systems. We also give per-platform recommendations in the per-platform mobile device guidance.
 
 By using weaker profiles or algorithms than those recommended below, you will increase the risk of data compromise while in transit over untrusted networks.
 
@@ -78,7 +78,7 @@ Only traffic which is routed over the VPN will be protected by it, so you might 
 
 Our guidance generally recommends forcing traffic down the VPN, and where possible, the per-platform guidance provides ways of achieving this. Where it's not possible to force traffic, this represents a risk to your data. However, forced connections can sometimes cause incompatibilities with captive portals on public Wi-Fi networks, unless the platform offers a solution for authenticating to them.
 
-Using an optional VPN allows users to disable the VPN and evade [protective monitoring and auditing](/collection/mobile-device-guidance/logging-and-protective-monitoring) services. This increases the risk of mobile devices being attacked over the network, and of users circumventing corporate policy restrictions.
+Using an optional VPN allows users to disable the VPN and evade [protective monitoring and auditing](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring) services. This increases the risk of mobile devices being attacked over the network, and of users circumventing corporate policy restrictions.
 
 ### **Initiating a VPN connection**
 
@@ -100,7 +100,7 @@ We advise you to use an automatic VPN, and where possible our per-platform guida
 
 ### **Full-device vs per-app VPN**
 
-Some operating systems and many third-party applications allow you to configure only certain applications to use a VPN on the device. This is mostly useful in a [Bring Your Own Device (BYOD) scenario](/collection/mobile-device-guidance/bring-your-own-device), where enterprises do not want network traffic from personal apps to traverse the corporate network. This approach can be used to prevent malicious personal apps attacking the corporate network, or to limit bandwidth consumption from data-intensive personal apps. A per-app VPN also enables latency-sensitive apps (such as VoIP applications) to avoid any increase in network latency from the VPN.
+Some operating systems and many third-party applications allow you to configure only certain applications to use a VPN on the device. This is mostly useful in a [Bring Your Own Device (BYOD) scenario](/silver-training/end-user-device-guidance), where enterprises do not want network traffic from personal apps to traverse the corporate network. This approach can be used to prevent malicious personal apps attacking the corporate network, or to limit bandwidth consumption from data-intensive personal apps. A per-app VPN also enables latency-sensitive apps (such as VoIP applications) to avoid any increase in network latency from the VPN.
 
 However, if deploying in this way, you need to define all the applications you want protected by the VPN in advance. As this is generally used in a BYOD scenario, users can always download another application to work around the per-app VPN restrictions. In some cases, it may not be possible to force system applications to use a per-app VPN.
 
@@ -125,7 +125,7 @@ We only recommend the use of managed tunnels in situations where the provider of
 1.  Information demonstrating that connections to the service are protected as well as they would be by the VPN (e.g. the use of mutual TLS authentication).
 2.  Definitive statements that the service uses dedicated IP endpoints, so that only traffic to that specific service will pass outside of the VPN.
 
-**And** where there’s a business requirement for users to access the service outside of the VPN - i.e. high-bandwidth services such as those [used for video conferencing](/guidance/video-conferencing-services-security-guidance-organizations). We would also recommend this approach to enable Wi-Fi captive portal helpers to function
+**And** where there’s a business requirement for users to access the service outside of the VPN - i.e. high-bandwidth services such as those used for video conferencing. We would also recommend this approach to enable Wi-Fi captive portal helpers to function
 
 ### **Captive portals**
 
@@ -137,7 +137,7 @@ Captive portals are the login pages present on some public Wi-Fi networks. To us
 
 **Or**
 
-2\. The platform itself can detect the presence of a captive portal and present the user with a captive portal assistant application to authenticate with before re-establishing the VPN. Some platforms, such as iOS and macOS have such an application built in. Assistants are available as a third-party application for some other platforms, such as Windows 10. We include a link to one we have developed in our [Windows 10 guidance](/collection/mobile-device-guidance/platform-guides).
+2\. The platform itself can detect the presence of a captive portal and present the user with a captive portal assistant application to authenticate with before re-establishing the VPN. Some platforms, such as iOS and macOS have such an application built in. Assistants are available as a third-party application for some other platforms, such as Windows 10. We include a link to one we have developed in our [Windows 10 guidance](/silver-training/platform-windows-10).
 
 The use of a captive portal assistant application is less risky and should be preferred if captive Wi-Fi networks are to be used. The risks of disabling forced VPNs are described earlier in this guidance.
 
