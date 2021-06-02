@@ -2,7 +2,7 @@
 title: Reset and reprovision - Android devices
 description: Discover the ways in which organisations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.
 published: true
-date: 2021-06-02T13:22:53.001Z
+date: 2021-06-02T13:23:31.921Z
 tags: bronze, bronze-training, sourced
 editor: markdown
 dateCreated: 2021-02-22T00:28:50.527Z
@@ -10,21 +10,21 @@ dateCreated: 2021-02-22T00:28:50.527Z
 
 # Reset and reprovision - Android devices
 
-Discover the ways in which organisations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.
+Discover the ways in which organizations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.
 
-The methods described here are not guaranteed data sanitisation methods; they may not completely erase data so it cannot be recovered. For more information about how to sanitise affordably, please refer to the NCSC guidance on [Secure sanitisation of storage media](https://www.ncsc.gov.uk/guidance/secure-sanitisation-storage-media).
+The methods described here are not guaranteed data sanitization methods; they may not completely erase data so it cannot be recovered. For more information about how to sanitize affordably, please refer to the BCSF guidance on [Secure sanitization of storage media](/bronze-controls/topic-sanitization).
 
-This guidance is for organisations deploying or redeploying Android devices onto their networks. It describes the ways in which devices can be restored from a misconfigured or potentially compromised state to a known-good state, using Android's native functionality.
+This guidance is for organizations deploying or redeploying Android devices onto their networks. It describes the ways in which devices can be restored from a misconfigured or potentially compromised state to a known-good state, using Android's native functionality.
 
 Android devices can be reset using two methods.
 
-1.  [Factory reset](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-android-devices#factory)
-2.  [Re-installation of stock firmware](https://www.ncsc.gov.uk/collection/end-user-device-security/factory-reset-and-reprovisioning/reset-and-reprovision-android-devices#firmware)  
+1.  Factory reset
+2.  Re-installation of stock firmware
      
 
 Each of these methods is explained in full alongside the risks of using them. We then recommend methods to use in each of the following four common scenarios:
 
-**Scenario1: Sanitising a device believed to be compromised with malware**  
+**Scenario1: Sanitizing a device believed to be compromised with malware**  
 Use this reset method if a user has reported that their device behaving strangely, or has executed potentially malicious code on the device. This method will remove any malware from the device so that it can be reused.
 
 **Scenario 2: Preparing a device which has not previously been managed**  
@@ -33,8 +33,8 @@ Use this reset method if a device is to be provisioned onto the corporate networ
 **Scenario 3: Reissuing a device to a different user in the same security environment**  
 Use this reset method where a device is to be transferred between different employees, and is to be reset to factory settings so that the reprovisioning steps for that platform can be followed as if the device were new.
 
-**Scenario 4: Sanitising a device for release to lower security domain or sale**  
-Use this reset method if the device is to be transferred out of a secure environment and you wish to perform a best-endeavours sanitisation of the device.
+**Scenario 4: Sanitizing a device for release to lower security domain or sale**  
+Use this reset method if the device is to be transferred out of a secure environment and you wish to perform a best-endeavours sanitization of the device.
 
 ## Factory reset
 
@@ -115,10 +115,10 @@ This method will overwrite the system partition, undoing modifications made by r
 
 ## Reprovisioning scenarios for Android devices
 
-For the four common reprovisioning scenarios outlined above, the NCSC recommend the following methods.  
+For the four common reprovisioning scenarios outlined above, the BCSF recommend the following methods.  
  
 
-### **Scenario 1: Sanitising device believed to be compromised with malware**
+### **Scenario 1: Sanitizing device believed to be compromised with malware**
 
 Malware within malicious applications can be removed using **factory reset**.
 
@@ -153,7 +153,7 @@ Performing a **factory reset** is sufficient to transfer a device in which per
 -   **Re-installing firmware** may void the warranty and relies on stock firmware images being made available by the manufacturer.  
      
 
-### **Scenario 4: Sanitising a device for release to lower security domain or sale**
+### **Scenario 4: Sanitizing a device for release to lower security domain or sale**
 
 As Android does not offer an official method to securely remove data from a device, it is recommended that an Android device is never released to lower security domain or sale.
 
