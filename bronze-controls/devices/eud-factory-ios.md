@@ -1,8 +1,8 @@
 ---
 title: Reset and reprovision - iOS devices
-description: Discover the ways in which organisations can restore iOS devices from a misconfigured or potentially compromised state to a known-good state.
+description: Discover the ways in which organizations can restore iOS devices from a misconfigured or potentially compromised state to a known-good state.
 published: true
-date: 2021-06-02T13:22:41.158Z
+date: 2021-06-24T18:21:30.726Z
 tags: bronze, bronze-training, sourced
 editor: markdown
 dateCreated: 2021-02-22T00:29:48.858Z
