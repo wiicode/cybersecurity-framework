@@ -1,8 +1,8 @@
 ---
 title: Using IPsec to protect data
-description: Guidance for organisations wishing to deploy or buy network encryption, using IPsec.
+description: Guidance for organizations wishing to deploy or buy network encryption, using IPsec.
 published: true
-date: 2021-06-24T18:19:56.015Z
+date: 2021-06-24T18:21:04.500Z
 tags: silver, topics, sourced, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:33:04.262Z
