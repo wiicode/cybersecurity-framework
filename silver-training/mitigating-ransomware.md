@@ -1,8 +1,8 @@
 ---
 title: Mitigating malware and ransomware attacks
-description: How to defend organisations against malware or ransomware attacks
+description: How to defend organizations against malware or ransomware attacks
 published: true
-date: 2021-06-02T21:53:40.165Z
+date: 2021-06-24T18:22:25.604Z
 tags: silver, security-operations, silver-training, ransomware
 editor: markdown
 dateCreated: 2021-02-22T03:02:19.092Z
