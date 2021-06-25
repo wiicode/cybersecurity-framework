@@ -1,8 +1,8 @@
 ---
 title: Effective steps to cyber exercise creation
-description: The following tips can help organisations create their own cyber incident response exercises.
+description: The following tips can help organizations create their own cyber incident response exercises.
 published: true
-date: 2021-06-02T22:05:34.832Z
+date: 2021-06-25T15:31:40.868Z
 tags: bronze, bronze-controls, validation
 editor: markdown
 dateCreated: 2021-05-29T20:12:11.745Z
