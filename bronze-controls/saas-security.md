@@ -1,11 +1,11 @@
 ---
-title: SaaS Security 
+title: SaaS Security
 description: Guidance for organizations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
 published: true
-date: 2021-06-02T21:25:32.412Z
+date: 2021-06-30T19:57:37.890Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown
-dateCreated: 2021-05-29T19:51:20.720Z
+dateCreated: 2021-06-30T19:50:38.851Z
 ---
 
 Software as a Service (SaaS) applications are increasingly popular. Many of us use them on a daily basis, so it's important we know how to check if they are suitably secure. To do this, the *BCSF* have developed a set of [SaaS security principles](/collection/saas-security?curPage=/collection/saas-security/saas-security-principles), derived from a slimmed down subset of *BCSF*'s cloud security principles]. These SaaS security principles represent our judgement as to the minimum set of security attributes you should seek to understand before using a SaaS offering.
@@ -18,8 +18,8 @@ As our approach provides a minimum level of confidence, your [risk managemen
 
 # In this collection
 
-- [Understanding Software as a Service (SaaS) security. *An outline of the *BCSF*'s approach to understanding the security of Software as a Service (SaaS) offerings.*](https://guides.techbento.com/en/bronze-controls/saas-security/understanding-saas-security)
-- [SaaS security principles *A brief description of the criteria developed by the *BCSF* to evaluate the security of various 'Software as a Service' (SaaS) offerings.*](https://guides.techbento.com/en/bronze-controls/saas-security/saas-security-principles)
+- [Understanding Software as a Service (SaaS) security. *An outline of the *BCSF*'s approach to understanding the security of Software as a Service (SaaS) offerings.*](/bronze-controls/saas-security/understanding-saas-security)
+- [SaaS security principles *A brief description of the criteria developed by the *BCSF* to evaluate the security of various 'Software as a Service' (SaaS) offerings.*](hbronze-controls/saas-security/saas-security-principles)
 {.links-list}
 
 
