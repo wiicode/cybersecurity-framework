@@ -1,16 +1,16 @@
 ---
-title: Three random words or #thinkrandom
+title: Three random words or
 description: 
 published: true
-date: 2021-05-28T02:48:50.513Z
+date: 2021-06-30T19:26:58.159Z
 tags: bronze, passwords
 editor: markdown
-dateCreated: 2021-05-27T22:13:14.345Z
+dateCreated: 2021-06-30T19:24:38.713Z
 ---
 
 You're probably aware that there’s a lot of guidance out there on what makes a good password — and it can be incredibly confusing. This blog post should help.
 
-For home users we are working with Cyber Aware, advising that you [create passwords using three random words](n/bronze-training/passwords/use-a-strong-and-separate-password-for-email). You just put them together, like '`coffeetrainfish`' or ‘`walltinshirt`’.
+For home users we are working with Cyber Aware, advising that you [create passwords using three random words](https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email). You just put them together, like 'coffeetrainfish' or ‘walltinshirt’.
 
 You can choose words that are memorable but should avoid those which might be easy to guess, such as 'onetwothree' or are closely related to you personally, such as the names of family members or pets.
 
@@ -24,7 +24,7 @@ There are some common ways that cyber criminals might try to compromise your use
 
 ### **It's obvious**
 
-You should try to ensure that your password isn't easy to guess. We all know that passwords protect things that are valuable to us but that doesn't stop the most common passwords consistently including '`password`', '`123456`', '`qwerty`', '`football`' and so on. Take a look at one of the many 'top 100' password lists to see what form the most common ones take.
+You should try to ensure that your password isn't easy to guess. We all know that passwords protect things that are valuable to us but that doesn't stop the most common passwords consistently including 'password', '123456', 'qwerty', 'football' and so on. Take a look at one of the many 'top 100' password lists to see what form the most common ones take.
 
 ### **Somebody else's bad**
 
@@ -32,7 +32,7 @@ There are frequently stories in the media about cyber-criminals breaking large n
 
 ### **Keylogging**
 
-There is a type of malicious software that, once on your system, attempts to log the keystrokes you make — including passwords. Of course, this will compromise any password entered, no matter how complex. The best *defense* here is keeping your software current and up to date.
+There is a type of malicious software that, once on your system, attempts to log the keystrokes you make — including passwords. Of course, this will compromise any password entered, no matter how complex. The best *defence* here is keeping your software current and up to date.
 
 ### **Smash the hash**
 
@@ -44,6 +44,7 @@ If a cyber criminal somehow gets hold of the list of password hashes there are s
 
 This might sound like a lot of work but with modern computing it really only takes seconds. If this doesn't work the cyber criminal could try to ‘brute force’ the hash. This means trying every possible combination of characters until the password is found. Long random passwords and the inclusion of special characters make this harder for a computer to work out.
 
+---
 
 ## Three random words
 
