@@ -1,8 +1,8 @@
 ---
 title: Supply chain security guidance
-description: Proposing a series of 12 principles, designed to help you establish effective control and oversight of your supply chain.
+description: Proposing a series of principles, designed to help you establish effective control and oversight of your supply chain.
 published: true
-date: 2021-06-30T02:30:01.118Z
+date: 2021-06-30T02:32:31.376Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:44:31.086Z
