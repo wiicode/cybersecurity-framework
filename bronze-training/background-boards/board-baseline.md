@@ -2,7 +2,7 @@
 title: Establishing your baseline and identifying what you care about most
 description: Understanding what technical assets you have, and how they're critical to your organization's objectives, are both key to effective risk management
 published: true
-date: 2021-06-30T02:08:29.246Z
+date: 2021-06-30T02:09:06.768Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown
 dateCreated: 2021-02-22T01:05:12.662Z
@@ -15,11 +15,11 @@ There are two tasks in this section, but we examine them side-by-side as the res
 
 While these two tasks have separate purposes, you will need to have some baseline of your technical estate in order to understand which parts of it are mission critical. At the same time, you will need some way to prioritize which areas to baseline, as doing this for your entire technical estate would be a very resource intensive task.
 
-## What should the Board do?
+# What should the Board do?
 
 ### **Work out what you care about the most**
 
-As with any other business risks, your organization will not be able to mitigate **all** cyber security risks at **all** times. So the Board will need to communicate key objectives (it might be 'providing a good service to customers and clients', for example) in order for the technical experts to focus on protecting the things that ensure these objectives are fulfilled.
+As with any other business risks, your organization will not be able to mitigate **all** cyber security risks at **all** times. So the Board will need to communicate key objectives (it might be 'providing a good service to customers and clients', for example) in order for the technical experts to focus on protecting the things that ensure these objectives are fulfillled.
 
 The Board should also consider what is most valuable to the organization. For example, the Board might know that a specific partner is crucial to the organization and that a compromise of their data would be catastrophic. This should be communicated to technical teams, so that they can prioritize protecting these 'crown jewels'. 
 
@@ -39,7 +39,7 @@ Your crown jewels are the things most valuable to your organization. They could
 -   your public-facing website
 -   industrial control systems
 
-## What should your organization do?
+# What should your organization do?
 
 ### **Work out where you are starting from**
 
@@ -49,7 +49,7 @@ Firstly, it influences the options you have. Knowing which systems are connected
 
 Secondly, it might influence your risk assessment. Sometimes a risk comes not from a threat to an important asset, but from a vulnerability in your organization's systems. Many incidents are the result of vulnerabilities in older, legacy systems, and the incidents arise not because the vulnerability can't be defended against, but because the organization didn't have a good enough understanding of their systems to realize they were exposed. 
 
-Understanding the **entirety** of your estate can be a daunting, or impossible, task - especially for organisations whose networks and systems have grown organically - but even a basic understanding will help and a good understanding of your priorities can help focus this task. 
+Understanding the **entirety** of your estate can be a daunting, or impossible, task - especially for organizations whose networks and systems have grown organically - but even a basic understanding will help and a good understanding of your priorities can help focus this task. 
 
 ### **Identify critical technical assets**
 
@@ -62,12 +62,11 @@ Based on the Board's priorities you need to identify what parts of the technical
 It can sometimes be difficult to identify these dependencies as they are such an integral part of your operation that they can be taken for granted, but the questions below can help. Doing this in conjunction with baselining your technical estate will also help to potentially identify assets that you weren't even aware of, and are actually critical to providing certain services.   
  
 
-## What does good look like?
+# What does good look like?
 
 The following questions can be used to generate productive discussions with your technical team. The aim is to identify what constitutes 'good' cyber security in terms of establishing your baseline and identifying what you care about most.
 
-###   
-**Q1. As an** organization**, do we have a clear understanding of how technical systems, processes or assets are contributing to achieving our objectives?**
+###   **Q1. As an** organization**, do we have a clear understanding of how technical systems, processes or assets are contributing to achieving our objectives?**
 
 Some questions to consider that may help in identifying these dependencies include:
 
@@ -77,8 +76,7 @@ What requirements must we meet (such as legal or contractual requirements) ?
 
 -   What do we **not** want to happen, how could that come about ?
 
-###   
-**Q2. As a Board, have we clearly communicated our priority objectives and do we have assurance that those priorities guide our cyber security efforts?**
+###   **Q2. As a Board, have we clearly communicated our priority objectives and do we have assurance that those priorities guide our cyber security efforts?**
 
 Cyber security strategy should be integrated into your organization's strategy and your strategic priorities should guide defensive efforts. A good organization should have a process for ensuring these strategies remain aligned and should be able to demonstrate how investment is focused on those priorities. 
 
@@ -89,8 +87,7 @@ For example, if a promise to customers about their privacy is a priority then yo
 -   prioritize defending these assets when implementing cyber security measures
 -   audit measures regularly
 
-###   
-**Q3. As an organization, how do we identify and keep track of systems, data or services that we are responsible for?**
+###   **Q3. As an organization, how do we identify and keep track of systems, data or services that we are responsible for?**
 
 If you are a large organization and your systems have grown organically, understanding the detail of your systems, devices and networks may be impractical. At a minimum you should be aware of what level of understanding you do have and the potential risks that any undocumented systems might pose. Ideally you want to start with a good idea of what your technical estate looks like and then have a process to ensure any changes are considered and recorded to keep the baseline up to date. This baseline might include information such as:
 
@@ -103,4 +100,4 @@ an up to date register of systems, including all internet-connected, partner-fac
 
 ### **Working with suppliers and partners**
 
-Most organisations will have suppliers or partners with whom they receive, provide or share information, systems or services. You must consider this in your baseline of your estate as these are potential entry points to your organization.
+Most organizations will have suppliers or partners with whom they receive, provide or share information, systems or services. You must consider this in your baseline of your estate as these are potential entry points to your organization.
