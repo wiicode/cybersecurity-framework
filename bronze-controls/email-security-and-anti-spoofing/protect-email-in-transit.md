@@ -2,10 +2,10 @@
 title: 2. Protect email in transit
 description: Where email is transferred over untrusted networks, such as the internet, its integrity and confidentially should be protected.
 published: true
-date: 2021-06-02T20:42:14.123Z
+date: 2021-06-30T19:39:21.877Z
 tags: bronze, bronze-controls, email
 editor: markdown
-dateCreated: 2021-06-02T15:15:55.745Z
+dateCreated: 2021-06-30T19:39:21.877Z
 ---
 
 Although it is possible to encrypt individual emails using protocols like [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) or [S/MIME](https://en.wikipedia.org/wiki/S/MIME), this requires the sender and recipient to have the necessary trust infrastructure in place. This is not likely to be possible for all the parties you communicate with. So, your email servers should be configured to support encryption of the communications channel that the email is sent over. This task is best handled by TLS.
