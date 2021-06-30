@@ -2,7 +2,7 @@
 title: Spray you, spray me: defending against password spraying attacks
 description: H how organizations can protect users' accounts from password spraying.
 published: true
-date: 2021-05-28T03:06:05.660Z
+date: 2021-06-30T02:57:43.405Z
 tags: guidance, bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T03:01:09.615Z
@@ -15,7 +15,7 @@ To understand how much of a problem this is, our resarch team has conducted a st
 -   75% of the participants’ organizations had accounts with passwords that featured in the top 1,000 passwords
 -   87% had accounts with passwords that featured in the top 10,000
 
-This data suggests that password spraying attacks are likely to have some success against these organizations, and many other organizations across the UK. Whilst account lockout policies may limit attackers to trying (for example) 10 passwords against a single account per day, the account lockout counters usually **reset** over time. This allows persistent attackers to try more passwords, and they can (and do) end up trying hundreds or even thousands of common passwords.
+This data suggests that password spraying attacks are likely to have some success against these organizations, and many other organizations. While account lockout policies may limit attackers to trying (for example) 10 passwords against a single account per day, the account lockout counters usually **reset** over time. This allows persistent attackers to try more passwords, and they can (and do) end up trying hundreds or even thousands of common passwords.
 
 Because of this, one of the questions the *BCSF* frequently get asked is how to mitigate password spraying attacks. High password complexity doesn’t guarantee that passwords will be more difficult for attackers to break, but it usually does make them harder for users to remember - thus driving weaker passwords and more password reuse overall. So instead, we often encourage users to disable complexity requirements and adopt other strategies such as [three random words](t(/bronze-training/passwords/three-random-words-or-thinkrandom-0). However, this means that the onus is now even more on users to pick 'good' passwords (that is, passwords that cannot easily be guessed), and network administrators ostensibly have very limited *defense* against password spraying attacks.
 
