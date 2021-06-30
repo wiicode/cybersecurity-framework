@@ -1,18 +1,16 @@
 ---
-title: BYOD Guidance
-description: 
+title: Bring Your Own Device (BYOD) Guidance
+description: Guidance for personal devices in organization environments.
 published: true
-date: 2021-06-30T03:00:28.521Z
-tags: bronze, bronze-training, security-operations
+date: 2021-06-30T03:01:09.866Z
+tags: bronze, bronze-training, security-operations, byod
 editor: markdown
 dateCreated: 2021-01-08T05:05:29.692Z
 ---
 
-# Bring Your Own Device (BYOD)
-
 Guidance for companies on enabling staff to use their own smartphones, tablets, laptops and desktop PCs to access work information. This guidance is for companies considering a ‘*Bring Your Own Device*’ (BYOD) approach. It describes the key security issues you'll need to consider in order to maximize the advantages of BYOD, while also minimizing the risks.
 
-Note that whilst we talk in this article about device *ownership* as distinguishing BYOD from more traditional management, it’s really device *management* that is important. If your users are happy to allow traditional full-device management of devices they own (effectively making it corporately issued), then you can continue to follow our detailed platform guidance.
+Note that while we talk in this article about device *ownership* as distinguishing BYOD from more traditional management, it’s really device *management* that is important. If your users are happy to allow traditional full-device management of devices they own (effectively making it corporately issued), then you can continue to follow our detailed platform guidance.
 
 ## Why use BYOD?
 
@@ -72,7 +70,7 @@ It is likely that you’ll need to develop your policy in conjunction with the t
 3.  Older or unsupported platform versions are more likely to contain security weaknesses and lack modern mitigations which makes them harder to exploit.
 4.  **What device policies will you enforce, and how will you enforce them?** You may be able to enforce some policies, including minimum passcode length and preventing copy and paste between work and personal apps. You will need to check your MDM service documentation for what policies are supported on your chosen devices.
 5.  **What service access policies will you enforce?** For example, you could use compliance policies and strong authentication to verify *devices* before they are allowed access to enterprise services if supported. Either way, strong *user* authentication including Multi-Factor Authentication is especially important for BYOD as it may not be possible to implement strong machine authentication for personal devices.
-6.  **How will individual services prevent personal devices from accessing sensitive data?** You might want to restrict access from personal devices to certain areas of a single service. For example, you may block access from personal devices to the most sensitive internal documents within your file storage services, whilst still allowing them to access less sensitive material in the same service.
+6.  **How will individual services prevent personal devices from accessing sensitive data?** You might want to restrict access from personal devices to certain areas of a single service. For example, you may block access from personal devices to the most sensitive internal documents within your file storage services, while still allowing them to access less sensitive material in the same service.
 7.  **How and where will you enforce these policies?** They could be enforced at an authentication service, network firewall, or on specific services.
 
 Security controls which adversely effect the usability of a device will drive down adoption and so undermine your approach. 
@@ -101,7 +99,7 @@ Since you may not be able to ensure that all personally owned devices are up to 
 
 You should consider using separate credentials for BYOD access to business systems. For example, usernames and passwords should not be shared between personally owned devices and the business desktop environment. Multi-factor authentication is also highly recommended. 
 
-As BYOD has very different enrollment processes to corporately owned devices – BYOD typically uses self-enrollment – securing device authentication to the same level as corporately owned devices may not be possible, and you will likely need to adopt a *trust on first use* approach for these devices. Nonetheless, using machine certificates stored in the dedicated, tamper-resistant hardware, present in many modern devices, can help improve machine authentication security. Alternatively, you can achieve similar results using applications which support secure storage for authentication credentials.
+As BYOD has very different enrolllment processes to corporately owned devices – BYOD typically uses self-enrolllment – securing device authentication to the same level as corporately owned devices may not be possible, and you will likely need to adopt a *trust on first use* approach for these devices. Nonetheless, using machine certificates stored in the dedicated, tamper-resistant hardware, present in many modern devices, can help improve machine authentication security. Alternatively, you can achieve similar results using applications which support secure storage for authentication credentials.
 
 ## Technical approaches for smartphones and tablets
 
@@ -144,7 +142,7 @@ This is a more risky approach because you have less control over each device.
 
 The corresponding features for this mode are:
 
--   Apple iOS [Device Management (without Supervision) (PDF),](https://www.apple.com/business/docs/resources/Managing_Devices_and_Corporate_Data_on_iOS.pdf) or User enrollment (iOS 13+ only)
+-   Apple iOS [Device Management (without Supervision) (PDF),](https://www.apple.com/business/docs/resources/Managing_Devices_and_Corporate_Data_on_iOS.pdf) or User enrolllment (iOS 13+ only)
 -   Android Enterprise - [Work profile](https://developers.google.com/android/work/overview)
 
 These modes let you enforce *some* device-wide configuration policies, as well as policies which protect corporate data within apps, or managed accounts.
@@ -159,7 +157,7 @@ A variety of third-party vendors – typically MDM vendors – also provide *con
 
 Sometimes there may be multiple container applications from the same vendor, which appear as separate apps, but behave as if they were one container.
 
-In general, whilst a container application approach provides less control of whole device settings, it tends to offer stronger controls for you to protect and isolate corporate data from the user’s personal applications. Many container applications can, for example, prohibit copy and paste actions across the container boundary.
+In general, while a container application approach provides less control of whole device settings, it tends to offer stronger controls for you to protect and isolate corporate data from the user’s personal applications. Many container applications can, for example, prohibit copy and paste actions across the container boundary.
 
 Container apps also allow for some monitoring of the device, including checking operating system versions. 
 
