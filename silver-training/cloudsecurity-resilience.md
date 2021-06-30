@@ -32,7 +32,7 @@ You will also need to understand how data-handling controls within the service a
 You should understand:
 
 -   In which countries your data will be stored, processed and managed. You should also consider how this affects your compliance with relevant legislation e.g. Data Protection Act (DPA)
--   Whether the legal jurisdiction(s) within which the service provider operates are acceptable to you  
+-   Whether the legal jurisdiction(s) within which the service provider operates are acceptable to you
      
 
 ### **Implementation approaches - Physical location and legal jurisdiction**
@@ -47,9 +47,6 @@ You should understand:
 
 Understanding the legal jurisdiction(s) to which your data is subject may be more complex than simply clarifying the physical locations where data is stored, processed or accessed by the service. It’s also necessary to consider the legal base and operating locations of the service provider, the governing legislation of any contracts, and the terms of use - or other agreements - between users of the service (or their suppliers) and the provider. It is important for organizations consuming cloud services to consider this topic and seek legal advice as necessary.
 
-### **Additional notes – Data Protection Act**
-
-Data protection legislation will apply if personal data is processed in a cloud service. The ICO has published [guidance](https://ico.org.uk/media/for-organizations/documents/1540/cloud_computing_guidance_for_organizations.pdf) on compliance with the Data Protection Act (DPA) in relation to cloud services. The DPA requires that personal data “shall not be transferred to any country or territory outside the European Economic Area (EEA) unless that country or territory ensures an adequate level of protection for the rights and freedoms of data subjects in relation to the processing of personal data.” There is a [list of countries](http://ec.europa.eu/justice/data-protection/international-transfers/adequacy/index_en.htm) considered by the European Commission to be adequate. There are also model contractual clauses that you may be able to use in your contract which can avoid you having to make your own assessment of adequacy. The ICO's advice on the use of model contractual clauses is [here](https://ico.org.uk/for-organizations/guide-to-data-protection/principle-8-international/).
 
 ### **Additional notes – Use of your data**
 

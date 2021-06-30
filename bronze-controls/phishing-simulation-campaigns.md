@@ -28,7 +28,7 @@ Lets be honest with each other. Phishing simulations aren't just about training.
 
 Metrics are extremely difficult to come by in the security space, and having a clear, quantitative metric that can show progress, in an area you care about, can be really seductive. But you need to look beyond the headline figures, and find out what it's really telling you. Is it really giving you an idea of your company's *defenses* against the real threats? The risk of living or dying by this single metric is: what happens when you make the test emails more sophisticated, for example to test spear phishing? This will do terrible things to your click rate. You can get any result you want by adjusting the emails you send out, which is hardly an objective measure of your *defenses*. And if you are on the receiving end of a metric that shows a vast improvement, you should be asking some very probing questions about how the simulation was designed, because it is likely that the emails are just too obvious.
 
-There may still be a role for this metric but you have to know what question you want to answer, and design your simulation systematically to answer it. For example, you might want to know which departments are more susceptible to phishing, or whether a new approach to training has had an effect. This could help you plan your *defenses* and offer support to where it most needed. The important thing is to approach it methodically and [design it carefully](https://www.cpni.gov.uk/system/files/documents/51/d7/phishing_simulations_guide.pdf) to avoid any unintended consequences, unnecessary disruption, or a meaningless result.
+There may still be a role for this metric but you have to know what question you want to answer, and design your simulation systematically to answer it. For example, you might want to know which departments are more susceptible to phishing, or whether a new approach to training has had an effect. This could help you plan your *defenses* and offer support to where it most needed. The important thing is to approach it methodically and [design it carefully](#) to avoid any unintended consequences, unnecessary disruption, or a meaningless result.
 
 ## The consequences of blaming users
 
@@ -49,9 +49,9 @@ It is not OK to blame the user for the following reasons:
 {.is-info}
 
 > ### **Training should be about building confidence and empowering users to make informed decisions.**
-> 
+>
 > Destroying their confidence by asking them to perform impossible tasks - and then calling them 'the weakest link' - is counterproductive.
-> 
+>
 > Even if a user clicks repeatedly, disciplinary action is not warranted. A user clicking three times in row may be a sign of a root cause (such as the requirements of their role, lack of necessary workplace adjustments, a high stress situation, or confusion about the current training material) or just bad luck. If a particular user appears to be struggling, try engaging with them to try and find out if there is another way to help. While there won't be an easy fix in every case, you may find some cases where a different business process, or a different approach to training, can make a real difference.
 {.is-info}
 
@@ -60,7 +60,7 @@ It is not OK to blame the user for the following reasons:
 
 There is clearly a need to provide information to your users; they are a vital layer in your *defenses*. If just one user reports a phish, you can get a head start on defending your company against that phishing campaign and every spotted email is one less opportunity for attackers...but phishing your own users isn't your only option.
 
-Try being more creative; some companies have had a lot of success with training that gets the participants to craft their own phishing email, giving them a much richer view of the influence techniques used. Others are experimenting with gamification, making a friendly competition between peers, rather than an 'us vs them' situation with security. 
+Try being more creative; some companies have had a lot of success with training that gets the participants to craft their own phishing email, giving them a much richer view of the influence techniques used. Others are experimenting with gamification, making a friendly competition between peers, rather than an 'us vs them' situation with security.
 
 And think about when you actually want to do training. Stopping a user to explain how they should have spotted your fake phish just after a click intuitively seems like a good idea, but if you lock someone's IT until they complete a lengthy course, you are causing a massive disruption to their working day. Besides, if it is really tedious, it might seem like punishment. Even if that wasn't your intention.
 

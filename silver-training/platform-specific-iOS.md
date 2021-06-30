@@ -45,7 +45,7 @@ When configured in this way, risk owners should be aware of the following techni
 
 ### **Overview**
 
-To meet the principles outlined in the [End User Devices Security Framework](https://www.gov.uk/government/publications/end-user-device-strategy-security-framework-and-controls), several recommendations are given in the table below.
+To meet the principles outlined in the [End User Devices Security Framework](#), several recommendations are given in the table below.
 
 | **Security Principle** | **Recommendation and Explanation** |
 | --- | --- |

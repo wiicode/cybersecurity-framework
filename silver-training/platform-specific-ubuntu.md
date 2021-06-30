@@ -39,7 +39,7 @@ When configured in this way, risk owners should be aware of the following techni
 
 ### **Overview**
 
-To meet the principles outlined in the [End User Devices Security Framework](https://www.gov.uk/government/publications/end-user-device-strategy-security-framework-and-controls), several recommendations are given in the table below.
+To meet the principles outlined in the [End User Devices Security Framework](#), several recommendations are given in the table below.
 
 | **Security Principle** | **Explanation** |
 | --- | --- |
@@ -68,14 +68,14 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 | Incident response | There is no native remote wipe functionality available for Ubuntu, but remote wipe functionality can be implemented with a configuration management system such as [Puppet](https://puppet.com/). This system could also destroy key material for encrypted hard drives or use a secure erase feature of the drive, if present.<br><br>Access to the enterprise network can be prevented by revoking the VPN client certificate associated with a lost or stolen device. Additionally, the client certificates for any other enterprise servers (such as email) that are stored on the device should be revoked. |
 | --- | --- |
 
-###   
+###
 **Recommended network architecture**
 
 All remote or mobile working scenarios should use a typical remote access architecture with a VPN terminating into an access layer (or DMZ). The following network diagram describes this set up. 
 
 ![](/static-assets/images/Ubuntu_PSN.PNG)
 
-**Preparation for deployment** 
+**Preparation for deployment**
 
 It is possible to deploy Ubuntu with the recommended configuration either via a Software Configuration Management (SCM) service or to deploy this configuration with the installer [“preseed” file](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) and the [post-install script](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) provided with this guidance.
 
@@ -107,11 +107,11 @@ For medium-large scale deployments consider implementing a Preboot Execution Env
 -   Highlight the “Install Ubuntu” menu item and press ‘e’ to edit the boot options.
 -   Replace the following kernel boot options:
 
-`file=/cdrom/preseed/ubuntu.seed` and only-ubiquity  
-respectively with:  
-`url=`[`https://provisioning.example.com/ubuntu.seed`](https://provisioning.example.com/ubuntu.seed) and automatic-ubiquity.   
-The final line should read:  
-`linux /casper/vmlinuz url=`[`https://provisioning.example.com/ubuntu.seed`](https://provisioning.example.com/ubuntu.seed) `boot=casper automatic-ubiquity quiet splash ---`   
+`file=/cdrom/preseed/ubuntu.seed` and only-ubiquity
+respectively with:
+`url=`[`https://provisioning.example.com/ubuntu.seed`](https://provisioning.example.com/ubuntu.seed) and automatic-ubiquity. 
+The final line should read:
+`linux /casper/vmlinuz url=`[`https://provisioning.example.com/ubuntu.seed`](https://provisioning.example.com/ubuntu.seed) `boot=casper automatic-ubiquity quiet splash ---` 
 This will instruct the installer to use the options defined in the preseed file.
 
 3\. Press F10 to boot the installer with the preseeded settings.

@@ -28,7 +28,7 @@ Risk owners and administrators should agree a configuration which balances busin
 
 ## Risk owners’ summary
 
-### **We recommend the following architectural choices for Windows 10:** 
+### **We recommend the following architectural choices for Windows 10:**
 
 -   All data from the device should be routed over a secure enterprise [Virtual Private Network (VPN)](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/vpns) to ensure the confidentiality and integrity of the traffic, and to allow the devices and data on them to be protected by enterprise protective monitoring solutions.
 -   Users are not permitted to install arbitrary third-party application on the device. Applications should be authorized by an administrator and deployed via a trusted mechanism.
@@ -51,7 +51,7 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 
 | **Security Principle** | **Explanation** |
 | --- | --- |
-| **Assured data-in-transit protection** | Use the [Windows 10 Built-In VPN Client](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/vpn-connection-type) configured as per the BCSF customisation guide (available from [enquiries@ncsc.gov.uk](mailto:enquiries@ncsc.gov.uk)).<br><br>Use certificates for user or machine credentials. [Windows Hello](https://support.microsoft.com/en-gb/help/17215/windows-10-what-is-hello) should be used to bind these credential to the device’s hardware.<br><br>Currently you cannot use MDM management to configure the built-in Windows firewall to explicitly block outbound connections when the VPN is not active. |
+| **Assured data-in-transit protection** | Use the [Windows 10 Built-In VPN Client](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/vpn-connection-type) configured as per the BCSF customisation guide (available from [box@bentosecurity.org](mailto:box@bentosecurity.org)).<br><br>Use certificates for user or machine credentials. [Windows Hello](https://support.microsoft.com/en-gb/help/17215/windows-10-what-is-hello) should be used to bind these credential to the device’s hardware.<br><br>Currently you cannot use MDM management to configure the built-in Windows firewall to explicitly block outbound connections when the VPN is not active. |
 | **Assured data-at-rest protection** | Use one of the following configurations to provide full volume encryption:<br><br>-   BitLocker with a TPM and PIN configured in alignment with the [BitLocker configuration settings](/collection/end-user-device-security/platform-specific-guidance/windows-10-1803-with-mobile-device-management#bitlocker). Note you will need to be an Administrator on the platform to enable TPM and PIN.<br>-   An independently assured CPA Foundation Grade, Data at Rest encryption product that supports UEFI and Windows Secure Boot, configured in alignment with the security procedures for that product.<br><br>If using BitLocker, ensure to back up the recovery key to AAD. <br><br>Windows 10 1803 (April Update) introduces [automatic encryption upon AAD join](https://docs.microsoft.com/en-us/windows/client-management/mdm/bitlocker-csp#AllowStandardUserEncryption). If you wish to set up pre-boot authentication such as BitLocker PIN, automatic encryption will need to be disabled and an administrator will need to set a BitLocker PIN on the device. <br><br>BitLocker is not [Foundation Grade](/information//foundation-grade-explained) certified. However, the BCSF has determined that the level of protection it provides is equivalent to Foundation Grade when configured as per this guidance. |
 | **Authentication** | The user implicitly authenticates to the device by decrypting BitLocker on boot.<br><br>The user then has a secondary credential to use when authenticating to the platform after boot and when unlocking the device. A good user experience will be achieved by enabling [Windows Hello for Business](https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-identity-verification) and allowing the user to log in with a [PIN code](https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password), this PIN code can be the same as the one used to authenticate to BitLocker. For both Windows Hello and traditional passwords, the credential derives a key which protects other credentials that give access to corporate services.<br><br>In an enterprise environment, the user will also be issued with an Azure Active Directory credential which will be required when they use a device for the first time.<br><br>Windows Hello for Business also permits [biometric unlock of devices](https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise) but the strength of its security is difficult to measure. In cases where there is a business requirement to use biometric authentication, and the risks of doing so are understood, biometric authentication can be enabled.<br><br>Accounts with administrative privileges should only be present on End User Devices used to perform administrative functions.<br><br>User accounts with administrative privileges should have a strong password and ideally a second factor to authenticate them to the platform at logon and unlock time. |
 | **Secure boot** | On Windows 10, this requirement is met on a correctly configured platform. Organizations deciding on new devices should aim for devices that meet the standards for firmware and hardware set out within this [Microsoft page](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-highly-secure).<br><br>A UEFI password can make it more difficult for an attacker to modify the boot process. With physical access, the boot process can still be compromised. |
@@ -88,7 +88,7 @@ The steps below should be followed to provision each end user device, preparing 
     2.  Use the [Windows Configuration Designer tool](https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-install-icd) which is part of the [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit), to create a [provisioning package](https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-packages). Apply the provisioning package during the out-of-box experience (OOBE). The first account used to sign in will be added to the list of local administrators.
     3.  Use an MDM-specific enrolllment app.
 
-### **Zero-touch provisioning steps** 
+### **Zero-touch provisioning steps**
 
 Windows Autopilot is a collection of technologies used to set up and pre-configure devices directly from OEMs (Original Equipment Manufactures).
 
@@ -104,7 +104,7 @@ Organizations can use Autopilot on new or existing devices by:
 4.  Provide end users with AAD username and password to log into new devices.
 5.  Ship devices directly to end users ensuring they are connected to the internet\* when they go through the OOBE for the first time.
 
-### **Existing devices** 
+### **Existing devices**
 
 1.  Reset or re-image existing devices
 2.  Run the [Windows Autopilot Info PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3) to gather the required device IDs.
@@ -115,7 +115,7 @@ Organizations can use Autopilot on new or existing devices by:
 
 **\***Devices must connect to the internet when they go through OOBE. A device with no internet access will not be able to enrolll into your organization's MDM and apply security configuration. 
 
-### **Recommended configuration profile for Autopilot:** 
+### **Recommended configuration profile for Autopilot:**
 
 The following options are automatically enabled for devices that are deployed with Autopilot:
 
@@ -144,8 +144,8 @@ Some of the configuration below utilises [ADMX-backed CSP polices](https://docs
 
 Organizations using Microsoft Intune can [download the below configuration as a zipped JSON file](https://s3.eu-west-2.amazonaws.com/eud-security-guidance/BCSF+-+Windows+10+(1803)+-+MDM.zip). The configuration can then be imported into Intune using a [Microsoft-provided import script](https://github.com/microsoftgraph/powershell-intune-samples/blob/master/DeviceConfiguration/DeviceConfiguration_Import_FromJSON.ps1).
 
-##   
-  
+##
+
  
 
 ## User Account Hardening
@@ -166,8 +166,8 @@ Organizations using Microsoft Intune can [download the below configuration as a
 | Device restrictions – General<br><br>Ink Workspace | Disabled on lock screen |
 | Device restrictions – General<br><br>Manual unenrolllment | Block<br><br>Note - This policy setting is not applied if the computer is AAD joined and auto-enrolllment is enabled. |
 
-##   
-  
+##
+
  
 
 
@@ -187,12 +187,12 @@ Intune, along with other MDMs, implement a number of relevant settings as Fine G
 | Device Restrictions - Password | Minimum password length<br><br>Required password type: Alphanumeric<br><br>Password complexity: Numbers, lowercase, uppercase and special characters required<br><br>Number of sign-in failures before wiping device<br><br>Directly Applies To: Administrators |
 | Device Restrictions - Password<br><br>Simple passwords | Block |
 
-###   
+###
 **Azure Active Directory**
 
 A user’s Azure Active Directory password will normally only be used when enrolllling against a device for the first time. It is not backed by a second factor or by [hardware-backed anti-hammer](https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering), even when Credential Guard is deployed. Different requirements can be set for different account types using [Fine Grained Password Policies.](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)) If the Azure Active Directory password is only used for device enrolllment, it needs to be easy to type in but does not need to be memorable.
 
-###   
+###
 **Windows Hello for Business and Hardware Strengthening**
 
 The user should log in to a device or unlock it using [Windows Hello for Business](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport). This user credential is tied to the physical device using a PIN or biometric. When run on [Windows 10 Certified devices](https://docs.microsoft.com/en-gb/windows-hardware/design/compatibility/whcp-specifications-policies) it provides hardware-backed [anti-hammer](https://docs.microsoft.com/en-us/windows/access-protection/hello-for-business/hello-overview). Windows Hello should only be enabled on devices that use a hardware security device.
@@ -216,8 +216,8 @@ Once a PIN is set, if the device has the right sensors, the user can also enroll
 
 The configuration provided in this guidance enables [Virtual Secure Mode and Credential Guard](https://blogs.technet.microsoft.com/ash/2016/03/02/windows-10-device-guard-and-credential-guard-demystified/) on supported devices. Biometrics should not be used unless these features are installed and enabled. Biometrics are enabled by default on Windows 10, so MDM policy should be used to disable biometrics if Virtual Secure Mode and Credential Guard are not being used.
 
-##   
-  
+##
+
  
 
 ## System Hardening
@@ -282,7 +282,7 @@ The configuration provided in this guidance enables [Virtual Secure Mode and Cr
 | Custom configuration<br><br>MSSLegacy/IPSourceRoutingProtectionLevel –<br><br>OMA-URI:<br><br>./Device/Vendor/MSFT/Policy/Config/MSSLegacy  <br>/IPSourceRoutingProtectionLevel | Data type: String (XML)<br><br>Value: <br><br>Highest Protection, source routing is completely disabled |
 | Custom configuration<br><br>MSSLegacy/IPv6SourceRoutingProtectionLevel –<br><br>OMA-URI:<br><br>./Device/Vendor/MSFT/Policy/Config/MSSLegacy  <br>/IPv6SourceRoutingProtectionLevel | Data type: String (XML)<br><br>Value: <br><br>Highest Protection, source routing is completely disabled |
 
-   
+ 
  
 
 MDM policy can be used to limit user access to removable media such as USB mass storage devices, if required by organizational policy. The settings can be found in Device restrictions > General > Removable storage
@@ -315,8 +315,8 @@ Configure Windows Defender Antivirus to enable [cloud-backed protections](https
 | Device Restrictions – Windows Defender Antivirus<br><br>Prompt users before sample submission | Send all data without prompting |
 | Device Restrictions – Windows Defender Antivirus<br><br>Submit samples consent | Send safe samples automatically |
 
-###   
-  
+###
+
  
 
 ### **Windows Defender SmartScreen configuration**
@@ -333,8 +333,8 @@ See below for a set of recommended settings:
 | Endpoint protection – Windows Defender SmartScreen<br><br>SmartScreen for apps and files | Enable |
 | Endpoint protection – Windows Defender SmartScreen<br><br>Unverified files execution | Block |
 
-###   
-  
+###
+
  
 
 ### **Windows Defender Exploit Guard configuration**
@@ -379,8 +379,8 @@ As Exploit Guard can cause compatibility issues with some applications, Microsof
 
 [Microsoft provide a technical document](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/enable-attack-surface-reduction) which shows a table of the various attack surface reduction rules, and what restrictions they impose.
 
-###   
-  
+###
+
  
 
 ### **Windows Defender Application Control configuration**
@@ -392,8 +392,8 @@ As Exploit Guard can cause compatibility issues with some applications, Microsof
 
 Only Windows components, Microsoft store apps, and reputable applications as defined by the [Intelligent Security Graph](https://www.microsoft.com/en-gb/security/intelligence) will be allowed to run.
 
-###   
-  
+###
+
  
 
 ### **Windows Defender Firewall configuration**
@@ -439,8 +439,8 @@ Scripting languages such as Visual Basic Scripting should be disabled unless the
 | Packaged app Enforcement Mode | Enforced |
 | Custom configuration<br><br>OMA-URI:<br><br>./Vendor/MSFT/AppLocker  <br>/ApplicationLaunchRestrictions  <br>/*GROUPNAME*/StoreApps/Policy<br><br>Data type: String (XML file) | Allow Everyone: All signed packaged apps<br><br>Exception: (Publisher) Microsoft.Getstarted<br><br>Exception: (Publisher) Microsoft.MicrosoftOfficeHub<br><br>Exception: (Publisher) Microsoft.SkypeApp<br><br>Exception: (Publisher) Microsoft.WindowsFeedback |
 
-###   
-  
+###
+
  
 
 ### **BitLocker configuration**
@@ -476,8 +476,8 @@ Users can change the PIN after they have logged on to the device for the first t
 | --- |
 | Minimum PIN Length > Minimum characters |
 
-###   
-  
+###
+
  
 
 ### **VPN configuration**
@@ -495,7 +495,7 @@ You should deploy VPN infrastructure configured either to support the PRIME or F
 | **ESP** | **Selection** |
 | Encryption | AES-128 in GCM-128 mode |
 
-  
+
 If you are using a third-party VPN client, you should prefer one that has been built on top of the Windows 10 UWP VPN plug-in platform. These will likely integrate better into the platform and be more reliable, as the Windows platform is regularly updated.
 
 
@@ -539,7 +539,7 @@ The Windows 10 Secure Boot process (on supported and correctly configured hardwa
 
 Firmware updates can be automated via Windows Update and you should prefer devices that support this. If your OEM (original equipment manufacturer) is not choosing to use that mechanism, you will need to periodically check with them to see what the most recent version of the firmware is and how to deploy it across an enterprise. 
 
-### **Application allow listing** 
+### **Application allow listing**
 
 When configuring additional application allow lists for a Windows device, it is important that the following conditions are considered:
 

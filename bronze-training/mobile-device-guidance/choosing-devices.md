@@ -99,7 +99,7 @@ If you're permitting [Bring Your Own Device (BYOD)](/bronze-controls/byod-guida
 
 In this case, it's likely not possible to impose any of the above security measures on your users, and your security may suffer as a result.
 
-Read our [Bring Your Own Device (BYOD) guidance](https://www.ncsc.gov.uk/collection/mobile-device-guidance/bring-your-own-device) for further details on this.
+Read our [Bring Your Own Device (BYOD) guidance](#) for further details on this.
 
 ## How to buy secure devices
 
