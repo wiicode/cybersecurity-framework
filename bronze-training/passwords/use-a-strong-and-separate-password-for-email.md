@@ -2,13 +2,11 @@
 title: Protect your email by using a strong and separate password
 description: Cyber criminals can use your email to access many of your personal accounts, leaving you vulnerable to identity theft.
 published: true
-date: 2021-06-30T19:30:59.438Z
+date: 2021-06-30T19:31:15.483Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-06-30T19:30:59.438Z
 ---
-
-## Protect your email by using a strong, separate password
 
 Cyber criminals can use your email to access many of your personal accounts and find out vital personal information, such as your bank details, address or date of birth.
 
