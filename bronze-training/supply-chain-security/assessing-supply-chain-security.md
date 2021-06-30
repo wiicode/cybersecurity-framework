@@ -1,0 +1,28 @@
+---
+title: Assessing supply chain security
+description: The table below gives you a series of scenarios against which to measure the security of your supply chain.
+published: true
+date: 2021-06-30T02:30:21.292Z
+tags: guidance, bronze, supply-chain
+editor: markdown
+dateCreated: 2021-03-10T02:05:04.036Z
+---
+
+The table below gives you a series of scenarios against which to measure the security of your supply chain.
+
+The idea is to give you some concrete examples of good and bad supply chain security, to help you begin the process of understanding your own situation.
+
+| **Good** | **Bad** |
+| --- | --- |
+| You [**understand the risks**](https://www.ncsc.gov.uk/collection/supply-chain-security?curPage=/collection/supply-chain-security/principles-supply-chain-security/understand-the-risks) suppliers may pose to you, your wider supply chain and the products and services you offers Know the sensitivity of information your suppliers hold and value of projects they are supporting. | You have a **poor understanding of the risks** that suppliers may pose to you, your wider supply chain and the products and services it offers. You do not know what data they hold, nor the value of projects they are supporting. |
+| **Know the full extent of your supply chain**, including sub-contractors. | **Only know your immediate suppliers**, but have limited/no knowledge of any sub-contractors. |
+| **Know the security arrangements of your suppliers**and routinely engage with them to confirm they are continuing to manage risks to your contract effectively. | Have no real idea about the security status of your supply chain, but **think they might be okay**. Fail to review this status. |
+| **Exercise control over your supply chain**, exercise your right to audit and/or require upward reporting by your suppliers to provide security assurance that all is working well. An audit request would not be your first interaction with the supplier. | Exercise **weak control over your supply chain**, lose sight of sub-contracting, fail to exercise audit rights, do not seek upward reporting. Often, the first engagement of your security team with the supplier will be for an audit following an incident. |
+| Based on your assessment of risks and the protections you deem are necessary, **set minimum security requirements for suppliers**, telling them what is expected in contracts. | **Fail to set minimum security requirements**, leaving it up to suppliers to do their own thing, even though they might not have the security awareness to understand what is needed, or know how to do this effectively. Or set minimum security requirements, but fail to match these to your assessment of the risk - potentially making security unachievable for many of your suppliers. |
+| **Differentiate the levels of protection required** to match the assessed risks to the specific contract. Ensuring these protections are justified, proportionate and achievable. | **Set a disproportionate ‘one size fits all’ approach** for all suppliers, regardless of the contract and assessed risks. Fail to ensure these controls are justified and achievable - potentially causing suppliers not to compete for contracts with you. |
+| Require that the **protections** you have deemed necessary in each case **are passed down throughout your supply chain.** Check to ensure it is happening. | Leave security to immediate suppliers to manage, but fail to mandate and/or check it is happening. |
+| **Meet your own responsibilities as a supplier** (and challenge your customers for guidance where it is lacking). Pass your customer’s requirements down and provide upward reporting. | **Neglect your responsibilities as a supplier**, or ignore any absence of customer guidance. Fail to pass requirements down, and/or fail to provide upward reporting. |
+| **Provide some guidance and support to suppliers responding to incidents.** Communicate lessons learned so others in your supply chain avoid 'known problems'. | **Offer no incident support to your suppliers,.** Fail to act or spot where 'known issues' might impact others in your supply chain, nor to warn others about these issues - potentially leading to greater disruption: with known issues hitting many suppliers. |
+| **Promote improvements to the cyber awareness of your suppliers.** Actively share best practice to raise standards. Encourage suppliers to subscribe to the free CISP threat intelligence service so they can better understand potential threats. | **Expect suppliers to anticipate developing cyber attacks** offering little or no support or advice, regardless of their security awareness and capabilities. |
+| **Build assurance measures into your minimum security requirements** (such as [Cyber Essentials Plus](https://www.cyberessentials.ncsc.gov.uk/getting-certified/), audits and [penetration tests](https://www.ncsc.gov.uk/guidance/penetration-testing)). These provide an independent view of the effectiveness of your suppliers security. | **Fail to include assurance measures into your security requirements**, trusting that your suppliers will do the right thing - regardless of whether they have enough knowledge or experience to know what is expected of them. |
+| **Monitor the effectiveness of the security measuresthat are in place.** Based on lessons learned from incidents, feedback from assurance activities, or from suppliers about issues, be prepared to revise or remove controls that are proving ineffective. | **Fail to monitor the effectiveness of security measures**. Fail to listen to feedback. Be unwilling to make changes, even when the evidence in favour of doing so is overwhelming. |
