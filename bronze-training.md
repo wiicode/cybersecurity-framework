@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals.
 published: true
-date: 2021-06-30T19:32:16.947Z
+date: 2021-06-30T19:56:25.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -35,7 +35,7 @@ The CIA triad is a model designed to guide policies for information security wit
 > This section is a prelude to **[Advanced Security Principles](/silver-training)** available in the Silver tier. 
 {.is-warning}
 
-- [Securing SaaS tools for your organization *Follow this guidance if you’re responsible for choosing, buying and managing Software as a Service (SaaS) tools in your organization.*](/bronze-training/securing-saas-tools-for-your-organisation)
+- [Securing SaaS tools for your organization *Follow this guidance if you’re responsible for choosing, buying and managing Software as a Service (SaaS) tools in your organization.*](/bronze-training/securing-saas-tools-for-your-organization)
 - [Cloud security guidance*This guidance collection will help you determine how confident you can be that a cloud service is secure enough to handle your data.*](/bronze-training/background-topics/cloud-security-1-intro)
 - [Having confidence in cyber security*Discover ways to gain confidence that the measures you have in place to reduce the chances of cyber security problems occurring are genuine and effective.*](/bronze-training/background-topics/cloud-security-2-confidence)
 - [Separation and cloud security*Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.*](/bronze-training/background-topics/cloud-security-3-separation)
