@@ -1,0 +1,56 @@
+<!--
+title: 11. External interface protection
+description: All external or less trusted interfaces of the service should be identified and appropriately defended.
+published: true
+date: 2021-02-22T01:42:23.216Z
+tags: silver, silver training, cloud-security-principles
+editor: ckeditor
+dateCreated: 2021-02-22T01:42:23.216Z
+-->
+
+<h1>11. External interface protection</h1>
+<p>All external or less trusted interfaces of the service should be identified and appropriately defended.</p>
+<p>If some of the interfaces exposed are private (such as management interfaces) then the impact of compromise may be more significant.</p>
+<p>You can use different models to connect to cloud services which expose your enterprise systems to varying levels of risk.</p>
+<h2><strong>Goals</strong></h2>
+<p>You:</p>
+<ul>
+  <li>understand what physical and logical interfaces your information is available from, and how access to your data is controlled</li>
+  <li>have sufficient confidence that the service identifies and authenticates users to an appropriate level over those interfaces&nbsp;<a href="https://www.ncsc.gov.uk/guidance/cloud-security-principle-10-identity-and-authentication">(see Principle 10</a>)</li>
+</ul>
+<h3><strong>Implementation – External interface protection</strong></h3>
+<p>Services can protect their data by limiting an attacker’s opportunity to connect. This can be done by only providing the service to a limited set of networks, locations or devices.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Internet</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Users connect to the service directly over the internet.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Since the service can be accessed from any internet connected device, attacks can be launched from anywhere. It is important therefore that the service provider has designed the external interfaces of their service to be robust to attack. The service provider should have a regime of continuous testing in place to ensure any publicly exposed interfaces remain secure.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Community network</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">Some cloud services (particularly community cloud services) may only connect directly to private community networks (e.g. the Public Services Network)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">If the cloud service is dedicated for the community, and only accessible via the community network, the service is likely to be less exposed to remote attackers. For an attacker to target your connection into the cloud service they would need to have access to the community network, through being part of the community or through having compromised someone who is.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Private network</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">Some services may provide dedicated connections in to your network.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Depending on the service design, attackers targeting cloud services only exposed to private networks may be forced to first compromise a private network.</p>
+          <p>However if the service also offers internet connectivity, then you should also review the guidance above.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes – Authentication in external interfaces</strong></h3>
+<p>Internet accessible services, particularly those which accept connections from any location, are more exposed to attacks, so having high confidence in the strength of authentication and access control will be particularly important.</p>
+<p><a href="https://www.ncsc.gov.uk/guidance/cloud-security-principle-10-identity-and-authentication">Principle 10</a>&nbsp;details common approaches to identification and authentication and explains the risks associated with each.</p>

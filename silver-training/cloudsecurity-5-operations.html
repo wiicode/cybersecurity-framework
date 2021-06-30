@@ -1,0 +1,197 @@
+<!--
+title: 5. Operational security
+description: The service needs to be operated and managed securely in order to impede, detect or prevent attacks. Good operational security should not require complex, bureaucratic, time consuming or expensive processes.
+published: true
+date: 2021-02-22T01:36:44.187Z
+tags: silver, silver training, cloud-security-principles
+editor: ckeditor
+dateCreated: 2021-02-22T01:36:44.187Z
+-->
+
+<h1>5. Operational security</h1>
+<p>The service needs to be operated and managed securely in order to impede, detect or prevent attacks. Good operational security should not require complex, bureaucratic, time consuming or expensive processes.</p>
+<h2>There are four elements to consider:</h2>
+<ul>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/operational-security#config">Configuration and change management</a>&nbsp;– you should ensure that changes to the system have been properly tested and authorised. Changes should not unexpectedly alter security properties</li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/operational-security#vulnerability">Vulnerability management</a>&nbsp;– you should identify and mitigate security issues in constituent components</li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/operational-security#protective">Protective monitoring</a>&nbsp;– you should put measures in place to detect attacks and unauthorised activity on the service</li>
+  <li><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/operational-security#incident">Incident management</a>&nbsp;– ensure you can respond to incidents and recover a secure, available service</li>
+</ul>
+<h2>5.1 Configuration and change management</h2>
+<p>You should have an accurate picture of the assets which make up the service, along with their configurations and dependencies.</p>
+<p>Changes which could affect the security of the service should be identified and managed. Unauthorised changes should be detected.</p>
+<p>Where change is not effectively managed, security vulnerabilities may be unwittingly introduced to a service. And even where there&nbsp;<i>is</i>&nbsp;awareness of the vulnerability, it may not be fully mitigated.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should have confidence that:</p>
+<ul>
+  <li>The status, location and configuration of service components (both hardware and software) are tracked throughout their lifetime.</li>
+  <li>Changes to the service are assessed for potential security impact. Then managed and tracked through to completion.</li>
+</ul>
+<h3><strong>Implementation - Configuration and change management</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Assertion that the goals are met</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider asserts the above goals are met.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">As with all service provider assertions, you need to decide whether you are content with the level of confidence this gives you.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Conformance with a recognised standard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A number of standards include controls which cover the need for configuration and change management processes:&nbsp;<br><a href="https://www.ncsc.gov.uk/collection/cloud-security/standards-and-definitions">CSA CCM v3.0</a><br><a href="https://www.ncsc.gov.uk/collection/cloud-security/standards-and-definitions">ISO/IEC 27001</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Good change and configuration management processes reduce (but do not eliminate) the chance of vulnerabilities being introduced to the configuration of a service.</p>
+          <p>Standards differ in terms of the level of detail applied, and those referenced cover the need for configuration and change management, rather than validation of the process. It is worth checking the scope of any certification to verify that configuration and change management processes were covered as part of the assessment.</p>
+          <p>Without good governance of the service (see&nbsp;<a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">Principle 4</a>) it is likely that change and configuration management practices will be ineffective.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes - Prioritising changes</strong></h3>
+<p>It’s important to have effective change management processes in place. But you must also realise that until the process is complete, your service remains vulnerable. Consequently, changes must be prioritised according to severity of risk.</p>
+<h2>5.2 Vulnerability management</h2>
+<p>Service providers should have a management processes in place to identify, triage and mitigate vulnerabilities. Services which don’t, will quickly become vulnerable to attack using publicly known methods and tools. See our guide on&nbsp;<a href="https://www.ncsc.gov.uk/guidance/vulnerability-management">vulnerability management</a>&nbsp;for more detail.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should have confidence that:</p>
+<ul>
+  <li>Potential new threats, vulnerabilities or exploitation techniques which could affect your service are assessed and corrective action is taken</li>
+  <li>Relevant sources of information relating to threat, vulnerability and exploitation techniques are monitored by the service provider</li>
+  <li>The severity of threats and vulnerabilities is considered within the context of the service and this information is used to prioritise the implementation of mitigations.</li>
+  <li>Using a suitable change management process, known vulnerabilities are tracked until mitigations have been deployed</li>
+  <li>You know service provider timescales for implementing mitigations and are happy with them</li>
+</ul>
+<h3><strong>Implementation - Vulnerability management</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Assertion that the goals are met</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider asserts the above goals are met.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">As with all service provider assertions, you need to decide whether you are content with the level of confidence this gives you.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Conformance with a recognised standard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A number of standards are appropriate to support vulnerability management. These have their own certification mechanisms:ISO/IEC 30111:2013&nbsp;<br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">CSA CCM v3.0</a><br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">ISO/IEC 27001</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>No vulnerability management process can defend against unknown (‘zero day’) vulnerabilities.</p>
+          <p>None of the standards referenced explicitly set out acceptable timescales for mitigation, so it is worth considering your requirements.</p>
+          <p>As a minimum, we advise that you seek services which support patching or vulnerability management within the timescales set out below.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes – Mitigation timescales</strong></h3>
+<p>Exploits for known vulnerabilities are frequently available, across the internet, within hours of release.&nbsp;<i>Organisations which mitigate and patch vulnerabilities in their services quickly have smaller windows of vulnerability.</i></p>
+<p>You should know whether your service provider patches vulnerabilities within acceptable timescales.</p>
+<p>If there is evidence to suggest that a vulnerability is being actively exploited in the wild, service providers will need to put mitigations in place&nbsp;<strong>immediately</strong>.</p>
+<p>If there is no evidence that a vulnerability is being actively exploited, the following timescales should be considered minimum good practice:</p>
+<ul>
+  <li>‘Critical’ patches should be deployed within hours</li>
+  <li>‘Important’ patches should be deployed within 2 weeks of a patch becoming available</li>
+  <li>‘Other’ patches deployed within 8 weeks of a patch becoming available</li>
+</ul>
+<p>‘Critical’, ‘Important’ and ‘Other’ are aligned to the following common vulnerability scoring systems:</p>
+<ul>
+  <li>National Vulnerability Database Vulnerability Severity ratings: ‘High’, ‘Medium’ and ‘Low’ respectively (these in turn are aligned to CVSS scores as set out by NIST)</li>
+  <li>Microsoft’s Security Bulletin Severity Rating System ratings: ‘Critical’, ‘Important’ and the two remaining levels (‘Moderate’ and ‘Low’) respectively.</li>
+</ul>
+<h2>5.3 Protective Monitoring</h2>
+<p>A service which does not effectively monitor for attack, misuse and malfunction will be unlikely to detect attacks (both successful and unsuccessful). As a result, it will be unable to quickly respond to potential compromises of your environments and data.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should have confidence that:</p>
+<ul>
+  <li>The service generates adequate audit events to support effective identification of suspicious activity</li>
+  <li>These events are analysed to identify potential compromises or inappropriate use of your service</li>
+  <li>The service provider takes prompt and appropriate action to address incidents</li>
+</ul>
+<h3><strong>Implementation – Protective monitoring</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Assertion that the goals are met</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider asserts the above goals are met.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">As with all service provider assertions, you need to decide whether you are content with the level of confidence this gives you.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Conformance with a recognised standard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A number of standards include controls which cover the need for effective protective monitoring processes:<br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">CSA CCM v3.0</a><br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">ISO/IEC 27001</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>Standards differ in terms of the level of detail applied, and those referenced cover the need for effective protective monitoring, rather than validation of the controls in place. It is worth checking the scope of any certification to verify that protective monitoring controls were covered as part of the assessment.</p>
+          <p>It is also advisable to check that any certification was performed by an independent and expert party.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes – Monitoring and analysis</strong></h3>
+<p>Services which do not collect relevant accounting and audit information are unlikely to detect and respond quickly to attacks, or attempted attacks.</p>
+<p>And where attacks are detected through other mechanisms, it will be difficult to identify the extent, duration and severity of compromise if relevant audit data is not available.</p>
+<p>Services which collect accounting and audit information&nbsp;<i>but do not have effective analysis</i>&nbsp;of that information are&nbsp;<i>equally unlikely to detect and respond quickly to attacks</i>. There’s no way of knowing whether unexamined data will be sufficient to support an investigation or prosecution, should one occur.</p>
+<h3><strong>Additional notes – Monitoring responsibility</strong></h3>
+<p>In IaaS and PaaS services users run their applications or software on top of the service. Providers are&nbsp;<i>unlikely</i>&nbsp;to offer protective monitoring for these applications,&nbsp;<i>unless</i>&nbsp;the consumer and service provider have worked together to design an appropriate solution.</p>
+<p>In these scenarios, it’s typically you, the service user, who will be responsible (and often best placed) to identify attacks against your applications or software. For this you will need your own monitoring systems.</p>
+<h2>5.4 Incident management</h2>
+<p>Unless carefully pre-planned incident management processes are in place, poor decisions are likely to be made when incidents do occur, potentially exacerbating the overall impact on users.</p>
+<p>These processes needn’t be complex or require large amounts of description, but good incident management will minimise the impact to users of security, reliability and environmental issues with a service.</p>
+<h3><strong>Goals</strong></h3>
+<p>You should have confidence that:</p>
+<ul>
+  <li>Incident management processes are in place for the service and are actively deployed in response to security incidents</li>
+  <li>Pre-defined processes are in place for responding to common types of incident and attack</li>
+  <li>A defined process and contact route exists for reporting of security incidents by consumers and external entities</li>
+  <li>Security incidents of relevance to you will be reported in acceptable timescales and formats</li>
+</ul>
+<h3><strong>Implementation – Incident management</strong></h3>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Approach</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;"><strong>Description</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;"><strong>Guidance</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Assertion that the goals are met</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">The service provider asserts the above goalsare met.</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;">As with all service provider assertions, you need to decide whether you are content with the level of confidence this gives you.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;">Conformance with a recognised standard</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">A number of standards include the need for incident management in line with the stated goals. These have their own supporting certification processes:&nbsp;<br>ISO/IEC 27035-1:2016<br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">CSA CCM v3.0</a><br><a href="https://www.ncsc.gov.uk/collection/cloud-security/implementing-the-cloud-security-principles/governance-framework">ISO/IEC 27001</a></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;">
+          <p>The standards referenced differ in terms of the level of detail applied. Some cover incident management controls in detail, whereas others simply require an incident management process to exist. It is worth checking the scope of any certification to verify what was actually assessed.</p>
+          <p>It is also advisable to check that any certification was performed by an independent and expert party.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h3><strong>Additional notes – Significant attacks and high availability</strong></h3>
+<p>Anyone publishing services which may be subjected to significant attacks (in terms of volume or technical capability) should use providers who can demonstrate robust, well tested and rehearsed incident management procedures.</p>
+<p>Denial of service attacks against public facing infrastructure by ‘hacktivist’ groups or serious criminals for financial gain can be a particularly demanding test of incident response processes, especially for users with a high availability requirement.</p>
