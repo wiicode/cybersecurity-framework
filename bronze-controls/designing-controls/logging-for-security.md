@@ -2,7 +2,7 @@
 title: Introduction to logging for security purposes
 description: Laying the groundwork for incident readiness.
 published: true
-date: 2021-06-02T21:09:34.496Z
+date: 2021-06-30T02:51:25.512Z
 tags: bronze, bronze-training, security-operations
 editor: markdown
 dateCreated: 2021-02-21T03:22:50.683Z
@@ -47,7 +47,7 @@ Your first step is to generate a list of logs that could be used to determine wh
 In the table below we've listed the common questions you're likely to be asked during the initial phases of a cyber incident. Working through these will help to focus your efforts and guide next steps.
 
 ### Accessing logs
-If you outsource much of your IT, as many UK public sector bodies do, it can be difficult to access logging data without making unforeseen demands on your suppliers. The table below is configured to help with this situation, giving you some flexibility in how you obtain your logging data.
+If you outsource much of your IT it can be difficult to access logging data without making unforeseen demands on your suppliers. The table below is configured to help with this situation, giving you some flexibility in how you obtain your logging data.
 
 For example, there are several ways to collect web browsing activity - through a web proxy, host-based agent or (in a limited form) from DNS. If one source is providing contractually difficult to obtain, try another. There are often many ways to capture the data you need.
 
