@@ -2,7 +2,7 @@
 title: Zendesk security review
 description: Zendesk is a ticketing system whose primary aim is to improve customer relations. It offers the ability to create, handle and track tickets, supported by multiple platforms. It also keeps a record of all communication for every ticket.
 published: true
-date: 2021-06-30T20:54:46.385Z
+date: 2021-06-30T20:55:16.158Z
 tags: bronze, bronze-controls, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:48:15.415Z
@@ -24,7 +24,7 @@ Zendesk is a ticketing system whose primary aim is to improve customer relations
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?<br><br>*The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Zendesk have an on call [24/7 security team](https://www.zendesk.com/product/zendesk-security/). Alongside this, Zendesk offer a bug bounty program via [HackerOne](https://hackerone.com/zendesk). |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Zendesk answer most security questions through [various pages on their website](https://www.zendesk.com/product/zendesk-security/). |
 
----
+
 
 ## Exporting data
 
