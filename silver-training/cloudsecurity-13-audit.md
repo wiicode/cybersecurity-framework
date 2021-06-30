@@ -2,10 +2,10 @@
 title: 13. Audit information for users
 description: You should be provided with the audit records needed to monitor access to your service and the data held within it.
 published: true
-date: 2021-06-30T18:13:12.671Z
-tags: silver, cloud-security-principles, silver-training
+date: 2021-06-30T18:51:52.093Z
+tags: silver, cloud-security-principles, silver training
 editor: markdown
-dateCreated: 2021-02-22T01:44:01.283Z
+dateCreated: 2021-06-30T18:47:06.415Z
 ---
 
 # 13\. Audit information for users
@@ -29,8 +29,8 @@ You should be:
 
 ## **Additional notes - Usability of audit data**
 
-Audit data is of limited value unless used as part of an effective [monitoring regime](/guidance/introduction-logging-security-purposes). Good monitoring requires a thorough understanding of the expected service usage.
+Audit data is of limited value unless used as part of an effective [monitoring regime](https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes). Good monitoring requires a thorough understanding of the expected service usage.
 
 For IaaS and PaaS services, the service provider or a third party may offer value-add protective monitoring services for workloads you've deployed. When considering these services, think about what support the service provider or third party would need to deliver an insightful service.
 
-Consider whether you require audit records to be held to specific standards, or be suitable for specific circumstances.
+Consider whether you require audit records to be held to specific standards, or be suitable for specific circumstances (e.g. such as being legally admissible in a UK court).
