@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals.
 published: true
-date: 2021-06-30T19:16:36.112Z
+date: 2021-06-30T19:32:16.947Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -20,7 +20,7 @@ The CIA triad is a model designed to guide policies for information security wit
 
 > BCSF Guides provide management, technical, and oversight guidence.  These two sections contain extensive information on creating your own security program. 
 {.is-success}
-
+ 
 
 - [Individual Security.*Comprehensive info for personal information security. Great for employees to practice cyber risk management, families, and even your organization's clients. Cyber security is important because smartphones, computers and the internet are now such a fundamental part of modern life, that it’s difficult to imagine how we’d function without them. From online banking and shopping, to email and social media, it’s more important than ever to take steps that can prevent cyber criminals getting hold of our accounts, data, and devices.*](/bronze-training/individual-cybersecurity)
 - [Passwords Collection.*This collection outlines the various password strategies that can help your organization remain secure, from technical defenses to helping your users manage their passwords. This guidance is primarily for system owners responsible for determining password policy.*](/bronze-training/passwords)
