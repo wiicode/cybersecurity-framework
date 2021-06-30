@@ -1,0 +1,89 @@
+<!--
+title: Zendesk security review
+description: Zendesk is a ticketing system whose primary aim is to improve customer relations. It offers the ability to create, handle and track tickets, supported by multiple platforms. It also keeps a record of all communication for every ticket.
+published: true
+date: 2021-06-30T20:48:15.415Z
+tags: bronze, bronze-controls, saas-security, saas
+editor: ckeditor
+dateCreated: 2021-06-30T20:48:15.415Z
+-->
+
+<p>Zendesk is a ticketing system whose primary aim is to improve customer relations. It offers the ability to create, handle and track tickets, supported by multiple platforms. It also keeps a record of all communication for every ticket.</p>
+<p>&nbsp;</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Question</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;" colspan="1"><strong>Answer</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;" colspan="1"><strong>Detail</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using TLS?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk uses HTTPS to transmit and receive data. TLS 1.2 is used to encrypt data whilst in transit between Zendesk servers and the user’s browser.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk meets the&nbsp;recommended cryptographic profiles for TLS&nbsp;as published by the <i>NCSC</i>. In addition the Zendesk domain currently gets an '<a href="https://www.ssllabs.com/ssltest/analyze.html?d=zendesk.com">A' rating from Qualys SSL Labs</a>. Note that this was performed on their top level domain, and not all subdomains that may be used for API calls.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using encryption?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether Zendesk protects internal data in transit using encryption.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether Zendesk protects internal data in transit using correctly configured certificates.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If APIs are available, does the SaaS provider protect both internal and external APIs through an authentication method?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk only allows&nbsp;<a href="https://developer.zendesk.com/rest_api/docs/core/introduction?_ga=1.100574360.784646381.1488377881#security-and-authentication">verified users</a>&nbsp;to make API requests.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels in the service, does the SaaS provider have the ability for low privilege users to be created?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1"><a href="https://support.zendesk.com/hc/en-us/articles/203661776-Understanding-Zendesk-Support-user-roles">Multiple roles</a>&nbsp;are available within the support user roles and end-users.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels, does the SaaS provider provide 2FA/multi-factor authentication on at least the high privileged accounts?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk currently provides&nbsp;<a href="https://support.zendesk.com/hc/en-us/articles/206373587-Using-2-factor-authentication">2FA</a>&nbsp;when using standard Zendesk support authentication. It is not available for agents or administrators using Google Authentication Services, JWT or SAML. However, other third-party applications can be employed when using these services. Zendesk also supports&nbsp;<a href="https://support.zendesk.com/hc/en-us/articles/203663826-Single-sign-on-SSO-options-in-Zendesk">SSO</a>&nbsp;(Single Sign On).</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider collect logs of events?</p>
+          <p><i>Types of log may include security logs and resource logs</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk states that logging is performed by their&nbsp;<a href="https://www.zendesk.com/product/zendesk-security/">Security Incident Event Management (SIEM)</a>&nbsp;System. These logs are then sent to the security teams who respond to triggered events.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Does the provider make logs available to the client?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk offers administrators access to audit logs. A full breakdown of the information they can see is available from the&nbsp;<a href="https://developer.zendesk.com/rest_api/docs/core/audit_logs">Zendesk developer site</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?</p>
+          <p><i>The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Zendesk have an on call&nbsp;<a href="https://www.zendesk.com/product/zendesk-security/">24/7 security team</a>. Alongside this, Zendesk offer a bug bounty program via&nbsp;<a href="https://hackerone.com/zendesk">HackerOne</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;" colspan="1">Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Zendesk answer most security questions through&nbsp;<a href="https://www.zendesk.com/product/zendesk-security/">various pages on their website</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Exporting data</h2>
+<p>Data can be exported from Zendesk in CSV or XML form by the administrator in versions Professional and Enterprise. A request can be put in for export of ticket data (CSV format) or user data (XML format) or a full data export (XML format). This feature is not activated by default, to enable the service the user must contact&nbsp;<a href="mailto:support@zendesk.com">support@zendesk.com</a>. More information on this can be found in the&nbsp;<a href="https://support.zendesk.com/hc/en-us/articles/203662346-Exporting-data-to-a-CSV-or-XML-file-Professional-and-Enterprise-">Zendesk documentation</a>.</p>
