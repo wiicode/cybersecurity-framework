@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-06-30T21:39:18.655Z
+date: 2021-06-30T21:44:04.352Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -449,7 +449,7 @@ You should prevent the exploitation of known vulnerabilities in networks and inf
 - [BCSF Common Cyber Attacks: Reducing the Impact](/bronze-training/background-boards/board-planning-response)
 - [BCSF Mitigating malware](/silver-training/mitigating-ransomware)
 - [BCSF Obsolete platforms security guidance](#)
-- [BCSF Penetration testing](/bronze-checklists/bcsf-advanced-control-checklists)
+- [BCSF Penetration testing](/bronze-training/penetration-testing)
 - [BCSF Secure by default platforms](/silver-training/end-user-device-guidance)
 - [ISO/IEC 27002](#)
 {.links-list}
