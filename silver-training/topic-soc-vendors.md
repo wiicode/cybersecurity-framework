@@ -1,8 +1,8 @@
 ---
 title: Security operations centre (SOC) buyers guide
-description: Guidance is for organisations that are considering procuring a Security Operations Centre (SOC) from a third party.
+description: Guidance is for organizations that are considering procuring a Security Operations Centre (SOC) from a third party.
 published: true
-date: 2021-06-24T18:16:04.629Z
+date: 2021-06-30T02:50:56.421Z
 tags: silver, sourced, security-operations, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:42:28.037Z
@@ -159,7 +159,7 @@ For example, you may have a small number staff who are constantly on the move. F
 
 SOC providers need to appreciate the different operational environments and business objectives of their customers. They should be able to adapt their offering in order to meet any changes in these requirements, in order to deliver a service which can continue to meet a customer’s needs. This involves learning from past experiences to deliver an improving service that strikes the right balance between cost of operations, security and customer fatigue.
 
-Suppliers should generate comprehensive and meaningful management information to help customers understand the patterns in incidents, near misses, root cause and methods of resolution. Retaining the right data, at the right level of detail, for the appropriate periods of time is therefore an important requirement. Note some data may be subject to UK statutory laws on retention.
+Suppliers should generate comprehensive and meaningful management information to help customers understand the patterns in incidents, near misses, root cause and methods of resolution. Retaining the right data, at the right level of detail, for the appropriate periods of time is therefore an important requirement. 
 
 
 ## Tools and technologies
