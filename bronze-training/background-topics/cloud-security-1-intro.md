@@ -55,4 +55,4 @@ Working through these steps will help you to identify cloud services which are s
 ##   
 **Further reading on risk management**
 
-For further advice on risk management please see our guide on [Risk management and risk analysis in practice](https://guides.techbento.com/t/risk-management-guidance).
+For further advice on risk management please see our guide on [Risk management and risk analysis in practice](https://guides.bentosecurity.org/t/risk-management-guidance).
