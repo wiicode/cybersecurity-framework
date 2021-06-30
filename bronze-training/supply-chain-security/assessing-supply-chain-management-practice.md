@@ -2,13 +2,13 @@
 title: Assessing supply chain management practice
 description: It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider.
 published: true
-date: 2021-06-30T02:45:30.055Z
+date: 2021-06-30T18:07:52.440Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T02:03:59.933Z
 ---
 
-It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider.
+It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider. 
 
 | **Good** | **Bad** |
 | --- | --- |
