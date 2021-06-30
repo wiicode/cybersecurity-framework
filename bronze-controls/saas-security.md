@@ -2,7 +2,7 @@
 title: SaaS Security
 description: Guidance for organizations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
 published: true
-date: 2021-06-30T19:57:37.890Z
+date: 2021-06-30T19:57:55.920Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown
 dateCreated: 2021-06-30T19:50:38.851Z
@@ -19,7 +19,7 @@ As our approach provides a minimum level of confidence, your [risk managemen
 # In this collection
 
 - [Understanding Software as a Service (SaaS) security. *An outline of the *BCSF*'s approach to understanding the security of Software as a Service (SaaS) offerings.*](/bronze-controls/saas-security/understanding-saas-security)
-- [SaaS security principles *A brief description of the criteria developed by the *BCSF* to evaluate the security of various 'Software as a Service' (SaaS) offerings.*](hbronze-controls/saas-security/saas-security-principles)
+- [SaaS security principles *A brief description of the criteria developed by the *BCSF* to evaluate the security of various 'Software as a Service' (SaaS) offerings.*](/bronze-controls/saas-security/saas-security-principles)
 {.links-list}
 
 
