@@ -2,7 +2,7 @@
 title: Password administration for system owners
 description: Password strategies that can help your organization remain secure.
 published: true
-date: 2021-06-30T19:28:19.302Z
+date: 2021-06-30T19:32:02.835Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-06-30T19:20:13.247Z
@@ -23,4 +23,4 @@ For information about how to use passwords at home, please refer to the followin
 - [Spray you, spray me: defending against password spraying attacks](/bronze-training/passwords/spray-you-spray-me-defending-against-password-spraying-attacks)
 - [Multi-factor authentication for online services](/bronze-training/passwords/multi-factor-authentication-online-services)
 {.links-list}
- 
+  
