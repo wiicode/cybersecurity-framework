@@ -2,7 +2,7 @@
 title: Supply chain security guidance
 description: Proposing a series of principles, designed to help you establish effective control and oversight of your supply chain.
 published: true
-date: 2021-06-30T02:35:36.966Z
+date: 2021-06-30T02:36:16.893Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:44:31.086Z
@@ -19,8 +19,8 @@ A series of high profile, very damaging attacks on companies has demonstrated th
 {.is-info}
 
 # 
-- [Assessing supply chain management practice *It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider.*](/bronze-training/supply-chain-security/assessing-supply-chain-management-practice)
 - [Assessing supply chain security *The table gives you a series of scenarios against which to measure the security of your supply chain.*](/bronze-training/supply-chain-security/assessing-supply-chain-security)
+- [Assessing supply chain management practice *It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider.*](/bronze-training/supply-chain-security/assessing-supply-chain-management-practice)
 - [Supply chain attack examples *Constantly evolving attacks mean organizations should ensure they also evolve defenses*](/bronze-training/supply-chain-security/supply-chain-attack-examples)
 {.links-list}
 
