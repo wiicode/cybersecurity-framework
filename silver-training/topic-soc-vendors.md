@@ -153,13 +153,13 @@ Together the ‘supplier’ and the ‘authority’ need to agree:
 
 During operation of your SOC service, your supplier is processing and analyzing security monitoring data and applying your policy, compliance and business rules to identify and verify security incidents. Should an incident occur, the supplier’s job is to respond according to the agreements in place with you, working to return the service to normal operations. As a SOC enters the operational phase, your resourcing overheads will diminish, but expect a number of false positives to occur while the supplier learns to understand the way your business operates.
 
-For example, you may have a small number staff who are constantly on the move. For these staff, a logon from an IP geolocated in Dubai (from a user who logged on six hours earlier from an IP in the UK) may at first *seem* suspicious, but is in fact not. Over time, a good supplier will learn what constitutes genuinely anomalous behavior. Until then, false positives can be a good opportunity to test the reporting chain.
+For example, you may have a small number staff who are constantly on the move. For these staff, a logon from an IP geolocated in Dubai (from a user who logged on six hours earlier from an IP in the US) may at first *seem* suspicious, but is in fact not. Over time, a good supplier will learn what constitutes genuinely anomalous behavior. Until then, false positives can be a good opportunity to test the reporting chain.
 
 ### **Continuous improvement**
 
 SOC providers need to appreciate the different operational environments and business objectives of their customers. They should be able to adapt their offering in order to meet any changes in these requirements, in order to deliver a service which can continue to meet a customer’s needs. This involves learning from past experiences to deliver an improving service that strikes the right balance between cost of operations, security and customer fatigue.
 
-Suppliers should generate comprehensive and meaningful management information to help customers understand the patterns in incidents, near misses, root cause and methods of resolution. Retaining the right data, at the right level of detail, for the appropriate periods of time is therefore an important requirement. 
+Suppliers should generate comprehensive and meaningful management information to help customers understand the patterns in incidents, near misses, root cause and methods of resolution. Retaining the right data, at the right level of detail, for the appropriate periods of time is therefore an important requirement.
 
 
 ## Tools and technologies
