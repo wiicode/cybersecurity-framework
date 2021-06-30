@@ -2,7 +2,7 @@
 title: 12. Secure service administration
 description: Systems used for administration of a cloud service will have highly privileged access to that service.
 published: true
-date: 2021-06-30T18:11:49.854Z
+date: 2021-06-30T18:12:39.233Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown
 dateCreated: 2021-02-22T01:43:15.042Z
@@ -12,7 +12,7 @@ dateCreated: 2021-02-22T01:43:15.042Z
 
 Systems used for administration of a cloud service will have highly privileged access to that service. Their compromise would have significant impact, including the means to bypass security controls and steal or manipulate large volumes of data.
 
-The design, implementation and management of administration systems should follow enterprise good practice, whilst recognising their high value to attackers.
+The design, implementation and management of administration systems should follow enterprise good practice, while recognizing their high value to attackers.
 
 ## Goals
 
@@ -23,13 +23,13 @@ You should:
 
 ### **Implementation - Secure service administration**
 
-*This table references our guidance on the* [*five basic systems administration models*](https://www.ncsc.gov.uk/guidance/systems-administration-architectures)
+*This table references our guidance on the* [*five basic systems administration models*](/guidance/systems-administration-architectures)
 
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
 | Unknown service management architecture | The service provider has not disclosed this information. | In this case it would be prudent to assume that the risks associated with the *Direct service administration* approach are present. |
-| Known service management architecture | The service provider has identified [which systems administration model](https://www.ncsc.gov.uk/guidance/systems-administration-architectures) is used to administer the service. | To understand the risks associated with different systems administration models see the corresponding row in [our guide](https://www.ncsc.gov.uk/guidance/systems-administration-architectures).<br><br>The level of assurance you have that the service provider’s assertions are correct can vary. You can obtain independent assurance from a suitably qualified security architect. |
-| Other | The service provider may believe that their systems administration approach is not covered by one of the models described in [our guide](https://www.ncsc.gov.uk/guidance/systems-administration-architectures). | In this case it will be for you to make your own assessment about the risks associated with the service provider's administration approach. |
+| Known service management architecture | The service provider has identified [which systems administration model](/guidance/systems-administration-architectures) is used to administer the service. | To understand the risks associated with different systems administration models see the corresponding row in [our guide](/guidance/systems-administration-architectures).<br><br>The level of assurance you have that the service provider’s assertions are correct can vary. You can obtain independent assurance from a suitably qualified security architect. |
+| Other | The service provider may believe that their systems administration approach is not covered by one of the models described in [our guide](/guidance/systems-administration-architectures). | In this case it will be for you to make your own assessment about the risks associated with the service provider's administration approach. |
 
 ### **Additional notes – Protecting administration devices**
 
