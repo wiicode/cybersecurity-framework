@@ -2,12 +2,11 @@
 title: Deep Dives
 description: A complete guide to your governance program
 published: true
-date: 2021-06-30T02:47:30.508Z
+date: 2021-06-30T20:02:44.953Z
 tags: guidance, governance, bronze, bronze-training, security-governance
 editor: markdown
 dateCreated: 2021-02-28T20:12:57.095Z
 ---
-
 
 # Mindfulness
 {.grid-list}
@@ -26,4 +25,14 @@ dateCreated: 2021-02-28T20:12:57.095Z
 - [The fundamentals of risk*This section focuses on the fundamental principles of risk management. Here, we won’t be talking about standards or policies, or even anything directly to do with cyber security. Rather, we'll be introducing some fundamental principles of risk management, which are relevant whether you’re studying disease outbreaks, the rise and fall of stock markets, or the risks of a cyber attack.*](/bronze-training/background-topics/risk-2-fundamentals)
 - [Get the basics right: risk management principles for cyber security*This section describes some basic risk management principles that will suffice for most small and medium sized enterprises (SMBs) or sole proprietors.*](/bronze-training/background-topics/risk-3-principles)
 - [Variety in risk information*Why recognizing different types of information is essential when assessing cyber risk. Risk information is any information which can influence a decision. Some organizations have a tendency to only accept certain types of information as legitimate risk information. Such limitations increase the chance of something important being missed.*](/bronze-training/background-topics/risk-4-riskinfo)
+{.links-list}
+
+## Cloud Security 
+> This section is a prelude to **[Advanced Security Principles](/silver-training)** available in the Silver tier. 
+{.is-warning}
+
+- [Securing SaaS tools for your organization *Follow this guidance if you’re responsible for choosing, buying and managing Software as a Service (SaaS) tools in your organization.*](/bronze-training/securing-saas-tools-for-your-organization)
+- [Cloud security guidance*This guidance collection will help you determine how confident you can be that a cloud service is secure enough to handle your data.*](/bronze-training/background-topics/cloud-security-1-intro)
+- [Having confidence in cyber security*Discover ways to gain confidence that the measures you have in place to reduce the chances of cyber security problems occurring are genuine and effective.*](/bronze-training/background-topics/cloud-security-2-confidence)
+- [Separation and cloud security*Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.*](/bronze-training/background-topics/cloud-security-3-separation)
 {.links-list}
