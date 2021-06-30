@@ -2,10 +2,10 @@
 title: 4. Mark spoof emails as spam
 description: When and how to update your DMARC policy to 'quarantine', and recommendations for keeping everyone in your organization informed of this change
 published: true
-date: 2021-06-02T20:42:45.187Z
-tags: bronze, bronze-controls, dmarc
+date: 2021-06-30T19:39:54.312Z
+tags: bronze, bronze-controls, email
 editor: markdown
-dateCreated: 2021-06-02T15:20:35.580Z
+dateCreated: 2021-06-30T19:39:54.312Z
 ---
 
 > You should move to a DMARC policy of `quarantine*` as soon as you are confident DKIM and SPF are configured correctly, and all known legitimate sources of email for your domain have been added to your records. Only then will spoof email be hampered.
