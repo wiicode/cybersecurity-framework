@@ -2,13 +2,15 @@
 title: Password policy: updating your approach
 description: Advice for system owners responsible for determining password policies and identity management within their organizations.
 published: true
-date: 2021-05-31T15:09:11.583Z
+date: 2021-06-30T19:29:44.876Z
 tags: bronze, passwords
 editor: markdown
-dateCreated: 2021-05-27T22:08:48.689Z
+dateCreated: 2021-06-30T19:29:44.876Z
 ---
 
-**Password policy: updating your approach** contains advice for system owners responsible for determining password policy. It may be useful also for anyone developing or maintaining these services used by organizations.
+> **Password policy: updating your approach** contains advice for system owners responsible for determining password policy. It may be useful also for anyone developing or maintaining these services used by organizations.
+{.is-info}
+
 
 The *BCSF Team* is working to reduce organizations' reliance on their users having to recall large numbers of complex passwords. This guidance advocates a greater reliance on **technical** ***defenses*** and ***organizational*** **processes**, with passwords forming just **one part** of your wider access control and identity management approach.
 
