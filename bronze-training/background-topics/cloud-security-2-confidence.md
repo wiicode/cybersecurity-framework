@@ -2,7 +2,7 @@
 title: Having confidence in cyber security
 description: Discover ways to gain confidence that the measures you have in place to reduce the chances of cyber security problems occurring are genuine and effective.
 published: true
-date: 2021-06-30T20:01:25.323Z
+date: 2021-06-30T20:02:02.613Z
 tags: risk management, bronze, bronze-training, cloud-security-guidance
 editor: markdown
 dateCreated: 2021-02-22T00:54:58.827Z
@@ -45,7 +45,7 @@ Commodity services often come with terms and conditions or license agreements wh
 
 ## 3\. Independent validation
 
-An independent and expert third party reviews and confirms your own efforts, or the commitments that have been made to you by a supplier. This can help you gain confidence in the claims or commitments made by the supplier. It can also reassure you that your own endeavors are well designed and implemented.
+An independent and expert third party reviews and confirms your own efforts, or the commitments that have been made to you by a supplier. This can help you gain confidence in the claims or commitments made by the supplier. It can also reassure you that your own endevors are well designed and implemented.
 
 ### **3.1 Validation by an independent third party**
 
