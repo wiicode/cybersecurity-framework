@@ -2,7 +2,7 @@
 title: Protecting SMS messages used in critical business processes
 description: Security advice for organizations using text messages to communicate with end users
 published: true
-date: 2021-05-28T03:08:21.339Z
+date: 2021-06-30T02:49:51.806Z
 tags: guidance, bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-05-28T02:34:40.137Z
@@ -19,12 +19,6 @@ These weaknesses mean that, where the value of the message content is of interes
 This guidance does not rule out the use of SMS for transmitting sensitive data. Instead, we advise that you should understand how your *organization* uses SMS, and determine whether to put in place additional controls. To aid with that process we outline common use cases for SMS, relevant threats to the technology and possible measures to defend against them.
 
 Mobile telecoms companies are aware of the problems with SMS and are actively working to close vulnerabilities. However, these are complex issues and it may be impossible to fully compensate for the inherent weaknesses of the system. So, any *organization* using SMS must have a clear understand of how and where the technology is used and take steps to mitigate or reduce associated risks, where appropriate.
-
-### **Audience**
-
-This advice is aimed at technical staff at UK enterprises using SMS, particularly system designers and engineers.
-
-Non-UK telecoms companies may have characteristics which would reduce the effectiveness of some of the suggested controls. For example, for the UK ‘roaming’ means the handset is (or appears to be) out of the country. In the USA and in other countries, it is possible for a handset to roam on another network whilst still in the country.
 
 
 ## Why SMS is popular
