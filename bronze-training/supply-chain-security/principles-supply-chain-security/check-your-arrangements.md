@@ -2,7 +2,7 @@
 title: III. Check your arrangements
 description: Businesses will need to gain confidence in their approach to establishing control over their supply chain.
 published: true
-date: 2021-06-30T02:13:08.041Z
+date: 2021-06-30T02:13:36.214Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:50:42.377Z
@@ -12,8 +12,8 @@ dateCreated: 2021-03-10T01:50:42.377Z
 
 Require those suppliers who are key to the security of your supply chain, via contracts, to provide upward reporting of security performance and to adhere to any risk management policies and processes.
 
--   Build the 'right to audit' into all contracts and exercise this. Require your suppliers to do the same for any contracts that they have let that relate to your contract and your organisation. (Note that this might not always be possible or desirable, particularly where this relates to a Cloud service).
--   Build, where justified, assurance requirements such as Cyber Essentials Plus, penetration tests, external audit or formal security certifications into your [security requirements](https://www.ncsc.gov.uk/collection/supply-chain-security?curPage=/collection/supply-chain-security/principles-supply-chain-security/ii-establish-control).
+-   Build the 'right to audit' into all contracts and exercise this. Require your suppliers to do the same for any contracts that they have let that relate to your contract and your organization. (Note that this might not always be possible or desirable, particularly where this relates to a Cloud service).
+-   Build, where justified, assurance requirements such as Cyber Essentials Plus, penetration tests, external audit or formal security certifications into your security requirements.
 -   Establish key performance indicators to measure the performance of your supply chain security management practice.
 -   Review and act on any findings and lessons learned.
--   Encourage suppliers to promote [good security behaviours](https://www.cpni.gov.uk/embedding-security-behaviour-change).
+-   Encourage suppliers to promote good security behaviors.
