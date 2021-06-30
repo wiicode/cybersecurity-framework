@@ -2,10 +2,10 @@
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
 published: true
-date: 2021-06-02T20:49:22.253Z
-tags: guidance, bronze, bronze-controls
+date: 2021-06-30T19:35:11.066Z
+tags: bronze, bronze-controls, apps
 editor: markdown
-dateCreated: 2021-06-02T13:28:42.279Z
+dateCreated: 2021-06-30T19:35:11.066Z
 ---
 
 This guidance describes how administrators can help protect their systems from malicious Microsoft Office macros. It outlines why macros are a threat, and the approaches you can take to protect your devices.
