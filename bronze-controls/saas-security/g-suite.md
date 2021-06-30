@@ -2,7 +2,7 @@
 title: Google Workspace security review
 description: Google Workspace is a collection of productivity tools including spreadsheets, word processing and calendar.
 published: true
-date: 2021-06-30T20:55:59.180Z
+date: 2021-06-30T20:56:19.065Z
 tags: bronze, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:52:08.243Z
@@ -22,7 +22,7 @@ dateCreated: 2021-06-30T20:52:08.243Z
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?<br><br>*The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Google has a dedicated security research team (Project Zero) according to their [white paper](https://static.googleusercontent.com/media/gsuite.google.com/en//intl/en/files/google-apps-security-and-compliance-whitepaper.pdf), who attempt to find vulnerabilities in their service. They also have a public bug bounty program. Google have also published their [Application Security Policy](https://www.google.com/about/appsecurity/) which details how they handle vulnerability reporting and management. |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Google publishes details of their security architecture in their [white paper](https://static.googleusercontent.com/media/gsuite.google.com/en//intl/en/files/google-apps-security-and-compliance-whitepaper.pdf) and within the FAQs on their site. Google's SOC3 [audit report](https://storage.googleapis.com/gfw-touched-accounts-pdfs/2017-google-apps-system-SOC3-report.pdf) provides details around the implemented security features in their products. |
 
----
+
 
 ## Exporting data
 
