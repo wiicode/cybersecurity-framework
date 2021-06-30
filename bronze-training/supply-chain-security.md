@@ -2,7 +2,7 @@
 title: Supply chain security guidance
 description: Proposing a series of principles, designed to help you establish effective control and oversight of your supply chain.
 published: true
-date: 2021-06-30T02:32:31.376Z
+date: 2021-06-30T02:35:36.966Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T01:44:31.086Z
@@ -25,7 +25,7 @@ A series of high profile, very damaging attacks on companies has demonstrated th
 {.links-list}
 
 # Supply Chain Security Principles
-- [The principles of supply chain security](/bronze-training/supply-chain-security/principles-supply-chain-security)
+The principles have been divided into four separate stages:
 - [I. Understand the risks](/bronze-training/supply-chain-security/principles-supply-chain-security/understand-the-risks)
 - [II. Establish control](/bronze-training/supply-chain-security/principles-supply-chain-security/ii-establish-control)
 - [III. Check your arrangements](/bronze-training/supply-chain-security/principles-supply-chain-security/check-your-arrangements)
