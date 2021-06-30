@@ -10,7 +10,7 @@ dateCreated: 2021-03-06T02:40:36.791Z
 
 > BCSF is focused on providing high-level guidance will help you develop an approach to secure web browsing that works for your organization.
 {.is-info}
-
+ 
 
 ---
 
@@ -36,7 +36,7 @@ When deciding, you should consider:
 
 -   **Compatibility:** While much less of a concern than it used to be, some of your corporate tools may only support a subset of browsers. However, if one of your web applications requires an old, unsupported browser and you can't migrate away from the application, then you should investigate ways of using a separate browser for accessing that web application and using a modern, secure web browser for everything else.
 -   **Performance**, including impact on battery life for mobile devices.
--   **Security features:** Most popular web browsers have similar security features, but you may want to look specifically for:  
+-   **Security features:** Most popular web browsers have similar security features, but you may want to look specifically for:
     -   Integration with safe browsing list services, so that known malicious or fraudulent sites are blocked (including known phishing sites)
     -   Sandboxing, including virtualization-based security (e.g. Windows Defender Application Guard)
 -   **Platform support** for the devices and operating systems you use. If you make use of multiple operating systems in your organization, you may want to use a cross-platform browser to simplify management. Equally, if you're using obsolete platforms, you may want to use a more up-to-date third-party browser which supports the platform.
