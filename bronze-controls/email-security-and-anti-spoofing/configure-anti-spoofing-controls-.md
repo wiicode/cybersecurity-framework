@@ -1,8 +1,8 @@
 ---
-title: Configure anti-spoofing controls
+title: 3. Configure anti-spoofing controls
 description: Configure anti-spoofing controls by implementing DMARC, creating and iterating an SPF record and creating and managing a DKIM record.
 published: true
-date: 2021-06-30T19:37:14.259Z
+date: 2021-06-30T19:40:13.307Z
 tags: bronze, bronze-controls, email
 editor: markdown
 dateCreated: 2021-06-30T19:37:14.259Z
