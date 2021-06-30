@@ -2,7 +2,7 @@
 title: Understanding the cyber security threat
 description: Organizations face different types of threat, so each Board's approach to cyber security will vary hugely.
 published: true
-date: 2021-06-30T02:18:31.972Z
+date: 2021-06-30T02:19:04.638Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown
 dateCreated: 2021-02-22T01:06:38.858Z
@@ -18,7 +18,7 @@ An understanding of the cyber security threat landscape will be key to helping t
 
 ### **Collaborate on security**
 
-One of the best sources of information on good practice and relevant threats can be your sector peers. Attackers often target a number of organisations in the same sector in a similar manner. Cultivating these collaborative relationships on security has two major benefits. Firstly, it can help make your own organization more resilient, through early warning of threats and improved cyber security practice. Secondly, it helps make the sector as a whole more resilient, which can reduce the appeal to potential attackers.   
+One of the best sources of information on good practice and relevant threats can be your sector peers. Attackers often target a number of organizations in the same sector in a similar manner. Cultivating these collaborative relationships on security has two major benefits. Firstly, it can help make your own organization more resilient, through early warning of threats and improved cyber security practice. Secondly, it helps make the sector as a whole more resilient, which can reduce the appeal to potential attackers.   
  
 
 ### **Assess the threat**
