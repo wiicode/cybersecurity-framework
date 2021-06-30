@@ -2,7 +2,7 @@
 title: Slack security review
 description: Slack is a real-time messaging and file sharing application designed to aid group collaboration.
 published: true
-date: 2021-06-30T20:56:03.793Z
+date: 2021-06-30T20:56:22.992Z
 tags: bronze, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:49:36.674Z
@@ -22,7 +22,6 @@ dateCreated: 2021-06-30T20:49:36.674Z
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?<br><br>*The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Slack has a dedicated CSIRT (Computer Security Incident Response Team) according to their [white paper](https://a.slack-edge.com/4c1ae/img/security_ent/Security_White_Paper.pdf#page=2). They also have a public bug bounty program via [HackerOne](https://hackerone.com/slack). |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Slack publishes details of their security architecture in their [white paper](https://a.slack-edge.com/4c1ae/img/security_ent/Security_White_Paper.pdf). |
 
----
 
 ## Exporting data
 
