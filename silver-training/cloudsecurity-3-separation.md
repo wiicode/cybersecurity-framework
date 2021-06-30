@@ -2,10 +2,10 @@
 title: 3. Separation between users
 description: A malicious or compromised user of the service should not be able to affect the service or data of another.
 published: true
-date: 2021-05-27T20:50:12.351Z
-tags: silver, cloud-security-principles, silver-training
+date: 2021-06-30T18:48:46.254Z
+tags: silver, cloud-security-principles, silver training
 editor: markdown
-dateCreated: 2021-02-22T01:34:53.622Z
+dateCreated: 2021-06-30T18:47:11.687Z
 ---
 
 # 3\. Separation between users
@@ -14,13 +14,13 @@ A malicious or compromised user of the service should not be able to affect the 
 
 ## Factors affecting user separation include:
 
--   where the separation controls are implemented – this is heavily influenced by the service model (e.g. IaaS, PaaS, SaaS)
+-   where the separation controls are implemented – this is heavily influenced by the service model (e.g. [IaaS, PaaS, SaaS](https://www.ncsc.gov.uk/guidance/cloud-security-standards-and-definitions))
 -   who you are sharing the service with - this is dictated by the deployment model (e.g. public, private or community cloud)
 -   the level of assurance available in the implementation of separation controls
 
 Note: In an IaaS service you should consider separation provided by compute, storage and networking components. Also, SaaS and PaaS services built upon IaaS may inherit some of the separation properties of the underlying IaaS infrastructure.
 
-For more information on the importance of separation requirements in cloud services, please refer to the [Separation Guide](/bronze-training/background-topics/cloud-security-3-separation)
+For more information on the importance of separation requirements in cloud services, please refer to the [Separation Guide](https://www.ncsc.gov.uk/guidance/separation-and-cloud-security).
 
 ## Goals
 
@@ -28,7 +28,7 @@ You:
 
 -   understand the types of user you share the service or platform with
 -   have confidence that the service provides sufficient separation of your data and service from other users of the service
--   have confidence that management of your service is kept separate from other users (covered separately as part of [Principle 9](/silver-training/cloudsecurity-9-management)
+-   have confidence that management of your service is kept separate from other users (covered separately as part of [Principle 9](https://www.ncsc.gov.uk/guidance/cloud-security-principle-9-secure-user-management))
 
 ## Implementation approaches – Separation of users
 
@@ -36,7 +36,7 @@ Note that combinations of the following approaches can be complementary. When us
 
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
-| Virtualization technologies (e.g. a hypervisor) provide separation between users | Compute separation is provided by a hypervisor. Network and storage virtualization techniques are also employed. | Assuming popular and well-designed virtualization technologies are used, then this is likely to provide stronger separation than other software controls.<br><br>Some virtualization products have been assessed against well-defined security standards, such as the Certified Product Assurance scheme. |
+| Virtualisation technologies (e.g. a hypervisor) provide separation between users | Compute separation is provided by a hypervisor. Network and storage virtualisation techniques are also employed. | Assuming popular and well-designed virtualisation technologies are used, then this is likely to provide stronger separation than other software controls.<br><br>Some virtualisation products have been assessed against well-defined security standards, such as the Certified Product Assurance scheme. |
 | Other software provides separation between users | Other software controls, such as operating systems, web servers or other applications, provide separation between users of the service. | In this scenario the attack surface available to a rogue user is much greater. Vulnerabilities or misconfiguration issues could lead to breaches.<br><br>In this scenario you should look to gain confidence in the implementation of separation controls. Look for evidence of:<br><br>-   regular penetration tests of infrastructure and any relevant web applications<br>-   security reviews of the design of the service<br>-   an engineering approach that ensures security is a key consideration in developing the service |
 
 ## Additional notes – Who you are sharing the service with
@@ -45,7 +45,7 @@ The degree of confidence you need to establish in the user separation measures e
 
 -   For **private** cloud services.
 
-Because a single organization should have a good understanding of all its uses for the cloud environment you may be comfortable with only having quite limited assurance in the separation of the service.
+Because a single organisation should have a good understanding of all its uses for the cloud environment you may be comfortable with only having quite limited assurance in the separation of the service.
 
 -   For **community** cloud services.
 
