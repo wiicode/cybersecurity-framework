@@ -1,11 +1,11 @@
 ---
-title: 6. Continuous improvement
+title: . Continuous improvement
 description: How to ensure that legitimate emails aren't lost once your DMARC policy is at 'reject' and that old systems can't be used to spoof email from your domains.
 published: true
-date: 2021-06-30T02:15:50.810Z
-tags: bronze, bronze-training, bronze-controls, dmarc, emails
+date: 2021-06-30T19:41:12.345Z
+tags: bronze, bronze-controls, email
 editor: markdown
-dateCreated: 2021-06-02T15:27:00.573Z
+dateCreated: 2021-06-30T19:41:12.345Z
 ---
 
 > Most organizations will regularly add and remove email sending services as they introduce, refresh, and retire IT.
