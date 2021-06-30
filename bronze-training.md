@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-06-30T02:29:04.787Z
+date: 2021-06-30T02:46:45.138Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -30,6 +30,6 @@ The CIA triad is a model designed to guide policies for information security wit
 - [Small Business Cyber Security in Ten Milestones.*The bare minimum owners and managers can do to meet current cyber security standards. This section covers risk management, secure configurations, mobile networking, incident management, malware, user access control, monitoring, network security, media controls, and training.*](/bronze-training/background-advanced)
 - [Deep Dives into Mindfulness, Governance, and Risk Management*In-depth exploration aimed at small to medium busniess owners, managers, and security professionals.  In this collection, we'll be outlining the fundamentals of risk management, and describing techniques you can use to manage cyber security risks. Focus is primarily on risk management principles that can be applied to all organizations, regardless of size.*](/bronze-training/background-topics)
 - [Boards and Company Leadership *Education for business owners and boards alike. Good cyber security is all about managing risks. The process for improving and governing cyber security will be similar to the process you use for other organizational risks.*](/bronze-training/background-boards)
-- [Supply Chain Guidance *Proposing a series of 12 principles, designed to help you establish effective control and oversight of your supply chain.*](/bronze-training/supply-chain-security)
+- [Supply Chain Guidance *Twelve principles, designed to help you establish effective control and oversight of your supply chain.*](/bronze-training/supply-chain-security)
 {.links-list}
 
