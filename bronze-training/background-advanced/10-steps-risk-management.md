@@ -2,7 +2,7 @@
 title: Risk Management Regime
 description: Why defining and communicating your Board’s Information Risk Management Regime is central to your organization’s overall cyber security strategy.
 published: true
-date: 2021-05-29T19:26:20.667Z
+date: 2021-06-30T02:57:01.878Z
 tags: risk management, bronze, bronze-training, 10-steps, sourced, adapted
 editor: markdown
 dateCreated: 2021-02-21T15:52:18.795Z
@@ -80,7 +80,7 @@ Whether you are new to cyber risk management, or you are trying to assess the ef
 
 ## Understand the risks you face and how to manage them
 - Use your chosen approach to identify, analyze, assess and prioritize risks and make decisions on how you are going to manage them. For example, are you going to mitigate a risk by applying some technical or non-technical control? Are you going to accept a risk and carry on without taking any further action to mitigate it? Are you going to transfer a risk to someone else (for example by considering cyber security insurance)? Or are you going to avoid a risk by changing what you do to eliminate the chance the risk occurring?
-- Ensure you are taking into consideration a wide variety in risk information, and seek out information from experts or trusted sources of information. You could also consider joining knowledge sharing partnerships within industry and government (such as the CiSP Information Sharing Platform, which allows UK organizations to share cyber threat information in a secure and confidential environment).
+- Ensure you are taking into consideration a wide variety in risk information, and seek out information from experts or trusted sources of information. You could also consider joining knowledge sharing partnerships within industry and government.
 - Remember that if you have chosen to apply controls to manage risk, you should ensure that those controls are proportionate to the risk, usable and do not adversely affect the way the business works.
 
 ## Communicate effectively about cyber risks and cyber risk management
