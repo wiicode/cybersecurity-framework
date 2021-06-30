@@ -1,7 +1,7 @@
 ---
 title: 4. Mark spoof emails as spam
 description: When and how to update your DMARC policy to 'quarantine', and recommendations for keeping everyone in your organization informed of this change
-published: false
+published: true
 date: 2021-06-30T19:39:54.312Z
 tags: bronze, bronze-controls, email
 editor: markdown

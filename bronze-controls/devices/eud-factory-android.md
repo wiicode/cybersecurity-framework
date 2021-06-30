@@ -1,7 +1,7 @@
 ---
 title: Reset and reprovision - Android devices
 description: Discover the ways in which organizations can restore Android devices from a misconfigured or potentially compromised state to a known-good state.
-published: false
+published: true
 date: 2021-06-02T13:23:31.921Z
 tags: bronze, bronze-training, sourced
 editor: markdown

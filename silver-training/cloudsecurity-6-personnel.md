@@ -1,7 +1,7 @@
 ---
 title: 6. Personnel security
 description: Where service provider personnel have access to your data and systems you need a high degree of confidence in their trustworthiness. 
-published: false
+published: true
 date: 2021-05-27T20:58:52.527Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown

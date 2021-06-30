@@ -1,7 +1,7 @@
 ---
 title: Why not move to the cloud?
 description: Will moving to the cloud fix all this?
-published: false
+published: true
 date: 2021-02-22T02:11:02.727Z
 tags: cloud-security-guidance, cloud-security-principles
 editor: markdown

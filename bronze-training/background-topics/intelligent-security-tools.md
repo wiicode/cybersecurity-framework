@@ -1,7 +1,7 @@
 ---
 title: Intelligent security tools
 description: Assessing intelligent tools for cyber security
-published: false
+published: true
 date: 2021-03-03T19:39:34.324Z
 tags: guidance, bronze, bronze-training, security-operations
 editor: markdown

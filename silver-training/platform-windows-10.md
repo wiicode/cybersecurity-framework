@@ -1,7 +1,7 @@
 ---
 title: Windows 10
 description: Secure configuration for Windows 10
-published: false
+published: true
 date: 2021-06-30T02:02:45.660Z
 tags: silver, sourced, platform-specific, silver-training
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: 5. Reject spoof emails
 description: When and how to update your DMARC policy to 'reject', and recommendations for keeping everyone in your organization informed and monitoring your records.
-published: false
+published: true
 date: 2021-06-30T19:40:43.755Z
 tags: bronze, bronze-controls, email
 editor: markdown

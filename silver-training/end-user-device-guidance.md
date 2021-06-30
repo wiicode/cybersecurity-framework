@@ -1,7 +1,7 @@
 ---
 title: End user device (EUD) security guidance
 description: Guidance for organizations deploying a range of end user device platforms as part of a remote working solution
-published: false
+published: true
 date: 2021-06-30T03:00:00.314Z
 tags: silver, device-management, silver-training
 editor: markdown

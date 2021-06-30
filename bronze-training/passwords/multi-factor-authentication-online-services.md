@@ -1,7 +1,7 @@
 ---
 title: Multi-factor authentication for online services
 description: Advice for organizations on implementing multi-factor authentication (or two-factor authentication) to protect against password guessing and theft on online services.
-published: false
+published: true
 date: 2021-06-30T19:25:39.323Z
 tags: guidance, bronze, passwords
 editor: markdown

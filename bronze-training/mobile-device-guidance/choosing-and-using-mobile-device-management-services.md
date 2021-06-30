@@ -1,7 +1,7 @@
 ---
 title: Mobile Device Management
 description: Advice on the selection and implementation of Mobile Device Management within your enterprise
-published: false
+published: true
 date: 2021-06-30T19:43:53.368Z
 tags: bronze, bronze-training, mdm
 editor: markdown

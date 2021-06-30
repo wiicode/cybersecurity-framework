@@ -1,7 +1,7 @@
 ---
 title: Bring Your Own Device (BYOD) Guidance
 description: Guidance for personal devices in organization environments.
-published: false
+published: true
 date: 2021-06-30T03:01:42.199Z
 tags: bronze, bronze-training, security-operations, byod
 editor: markdown

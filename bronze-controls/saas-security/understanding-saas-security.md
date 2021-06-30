@@ -1,7 +1,7 @@
 ---
 title: Understanding Software as a Service (SaaS) security
 description: An outline of the BCSF's approach to understanding the security of Software as a Service (SaaS) offerings.
-published: false
+published: true
 date: 2021-06-02T21:15:51.651Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown

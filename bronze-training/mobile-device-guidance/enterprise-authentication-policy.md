@@ -1,7 +1,7 @@
 ---
 title: Enterprise authentication policy
 description: Implementing effective authentication on smartphones, tablets, laptops and desktop PCs
-published: false
+published: true
 date: 2021-06-02T20:14:34.353Z
 tags: guidance, bronze, mdm
 editor: markdown

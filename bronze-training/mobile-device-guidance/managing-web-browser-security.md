@@ -1,7 +1,7 @@
 ---
 title: Managing web browser security
 description: Advice for IT Admins on the management of security settings for web browsers
-published: false
+published: true
 date: 2021-06-30T02:59:39.227Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown

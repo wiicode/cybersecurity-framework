@@ -1,7 +1,7 @@
 ---
 title: IV. Continuous improvement
 description: As your supply chain evolves, you'll need to continue improving and maintaining security.
-published: false
+published: true
 date: 2021-06-30T02:38:03.184Z
 tags: guidance, bronze, supply-chain
 editor: markdown

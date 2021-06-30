@@ -1,7 +1,7 @@
 ---
 title: Approaching enterprise technology with cyber security in mind
 description: How organizations can approach enterprise technology in order to deter cyber attacks.
-published: false
+published: true
 date: 2021-06-01T18:29:32.564Z
 tags: bronze, bronze-training, sourced, security-operations, favorite
 editor: markdown

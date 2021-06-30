@@ -1,7 +1,7 @@
 ---
 title: Deep Dives
 description: A complete guide to your governance program
-published: false
+published: true
 date: 2021-06-30T02:47:30.508Z
 tags: guidance, governance, bronze, bronze-training, security-governance
 editor: markdown

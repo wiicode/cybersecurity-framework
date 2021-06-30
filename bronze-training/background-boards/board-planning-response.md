@@ -1,7 +1,7 @@
 ---
 title: Planning your response to cyber incidents
 description: Good incident management will help reduce the financial and operational impact when they do occur.
-published: false
+published: true
 date: 2021-06-01T18:36:11.518Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown

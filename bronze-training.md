@@ -1,7 +1,7 @@
 ---
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals.
-published: false
+published: true
 date: 2021-06-30T19:32:16.947Z
 tags: 
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Silver Access
 description: 
-published: false
+published: true
 date: 2021-06-01T19:53:04.323Z
 tags: home, silver
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Managing user privileges
 description: Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
-published: false
+published: true
 date: 2021-05-29T19:08:32.987Z
 tags: bronze, bronze-training, 10-steps, sourced, access-control
 editor: markdown

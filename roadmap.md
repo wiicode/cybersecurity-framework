@@ -1,7 +1,7 @@
 ---
 title: release-notesc
 description: The past, present, and future of BCSF
-published: false
+published: true
 date: 2021-05-29T18:22:45.955Z
 tags: checklist, bronze
 editor: markdown

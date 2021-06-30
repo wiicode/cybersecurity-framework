@@ -1,7 +1,7 @@
 ---
 title: Secure Configuration
 description: Having an approach to identify baseline technology builds and processes for ensuring configuration management can greatly improve the security of systems.
-published: false
+published: true
 date: 2021-05-29T19:02:29.035Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown

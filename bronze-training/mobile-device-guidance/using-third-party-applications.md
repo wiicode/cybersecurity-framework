@@ -1,7 +1,7 @@
 ---
 title: Using third-party applications
 description: Advice on the assessment, distribution and use of third-party applications on smartphones, tablets, laptops and desktop PCs
-published: false
+published: true
 date: 2021-06-02T02:49:46.486Z
 tags: guidance, bronze, mdm
 editor: markdown

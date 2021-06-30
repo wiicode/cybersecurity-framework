@@ -1,7 +1,7 @@
 ---
 title: Securing SaaS tools for your organization
 description: Follow this guidance if you’re responsible for choosing, buying and managing Software as a Service (SaaS) tools in your organization.
-published: false
+published: true
 date: 2021-06-30T19:15:53.090Z
 tags: bronze, bronze-training, saas
 editor: markdown

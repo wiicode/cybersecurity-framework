@@ -1,7 +1,7 @@
 ---
 title: Three random words or
 description: 
-published: false
+published: true
 date: 2021-06-30T19:27:04.842Z
 tags: bronze, passwords
 editor: markdown

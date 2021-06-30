@@ -1,7 +1,7 @@
 ---
 title: 10. Identity and authentication
 description: All access to service interfaces should be constrained to authenticated and authorised individuals.
-published: false
+published: true
 date: 2021-06-30T18:50:35.559Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

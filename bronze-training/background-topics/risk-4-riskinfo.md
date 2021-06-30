@@ -1,7 +1,7 @@
 ---
 title: Variety in risk information
 description: Why recognizing different types of information is essential when assessing cyber risk.
-published: false
+published: true
 date: 2021-06-01T18:38:37.391Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown

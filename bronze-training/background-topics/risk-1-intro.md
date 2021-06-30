@@ -1,7 +1,7 @@
 ---
 title: Introduction to the risk management for cyber security guidance
 description: The BCSF risk management guidance will help you improve the decisions you make with regard to cyber security
-published: false
+published: true
 date: 2021-06-30T19:00:15.569Z
 tags: risk management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown

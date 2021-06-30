@@ -1,7 +1,7 @@
 ---
 title: Protect your management interfaces
 description: Why it's important to protect the interfaces used to manage your infrastructure, and some some recommendations on how you might do this.
-published: false
+published: true
 date: 2021-05-28T03:15:04.106Z
 tags: guidance, bronze
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Ubuntu 18.04 LTS
 description: Secure configuration for Ubuntu 18.04 LTS
-published: false
+published: true
 date: 2021-06-30T02:06:47.030Z
 tags: silver, sourced, silver-training
 editor: markdown

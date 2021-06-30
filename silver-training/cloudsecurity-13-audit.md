@@ -1,7 +1,7 @@
 ---
 title: 13. Audit information for users
 description: You should be provided with the audit records needed to monitor access to your service and the data held within it.
-published: false
+published: true
 date: 2021-06-30T18:52:02.874Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

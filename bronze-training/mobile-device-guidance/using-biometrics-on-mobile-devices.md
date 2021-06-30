@@ -1,7 +1,7 @@
 ---
 title: Using biometrics
 description: Advice for IT system administrators on using biometric authentication on smartphones, tablets, laptops and desktop PCs.
-published: false
+published: true
 date: 2021-06-01T20:47:26.095Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown

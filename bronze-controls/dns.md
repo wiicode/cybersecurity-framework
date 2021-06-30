@@ -1,7 +1,7 @@
 ---
 title: Domain Name System
 description: 
-published: false
+published: true
 date: 2021-06-02T21:08:36.276Z
 tags: bronze, bronze-training, dns
 editor: markdown

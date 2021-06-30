@@ -1,7 +1,7 @@
 ---
 title: Incident management
 description:  Investment in establishing effective incident management policies and processes will help to improve resilience, support business continuity, improve customer and stakeholder confidence and potentially reduce any impact.
-published: false
+published: true
 date: 2021-05-29T18:56:59.460Z
 tags: bronze, bronze-training, 10-steps, sourced, incident-management, security-operations
 editor: markdown

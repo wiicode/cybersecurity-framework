@@ -1,7 +1,7 @@
 ---
 title: The Tale of the Nigerian Prince
 description: Most people know about this story, but only a few understand why it exists.
-published: false
+published: true
 date: 2021-02-23T19:02:34.214Z
 tags: bronze, bronze-training
 editor: markdown

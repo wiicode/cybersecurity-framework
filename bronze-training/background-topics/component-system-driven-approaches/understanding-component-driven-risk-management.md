@@ -1,7 +1,7 @@
 ---
 title: Understanding component-driven risk management
 description: The principles of component-driven risk management in cyber security.
-published: false
+published: true
 date: 2021-06-30T01:58:46.468Z
 tags: risk-management, bronze, bronze-training, favorite, component-system-risk
 editor: markdown

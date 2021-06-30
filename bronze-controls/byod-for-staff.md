@@ -1,7 +1,7 @@
 ---
 title: BYOD Agreement
 description: Personal Smart Device Usage Agreement (BYOD - Bring Your Own Device)
-published: false
+published: true
 date: 2021-03-05T19:54:10.339Z
 tags: bronze, bronze-controls
 editor: markdown

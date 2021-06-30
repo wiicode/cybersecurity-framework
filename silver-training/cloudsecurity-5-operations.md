@@ -1,7 +1,7 @@
 ---
 title: 5. Operational security
 description: The service needs to be operated and managed securely in order to impede, detect or prevent attacks. Good operational security should not require complex, bureaucratic, time consuming or expensive processes.
-published: false
+published: true
 date: 2021-06-30T18:49:36.943Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

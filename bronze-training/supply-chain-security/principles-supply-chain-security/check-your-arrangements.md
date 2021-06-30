@@ -1,7 +1,7 @@
 ---
 title: III. Check your arrangements
 description: Businesses will need to gain confidence in their approach to establishing control over their supply chain.
-published: false
+published: true
 date: 2021-06-30T18:06:54.876Z
 tags: guidance, bronze, supply-chain
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: 12. Secure service administration
 description: Systems used for administration of a cloud service will have highly privileged access to that service.
-published: false
+published: true
 date: 2021-06-30T18:51:37.871Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

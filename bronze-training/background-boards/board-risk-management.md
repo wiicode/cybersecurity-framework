@@ -1,7 +1,7 @@
 ---
 title: Risk management for cyber security
 description: Good risk management will help you to make better, more informed decisions about your cyber security.
-published: false
+published: true
 date: 2021-06-30T02:07:59.649Z
 tags: risk-management, bronze, bronze-training, sourced, board
 editor: markdown

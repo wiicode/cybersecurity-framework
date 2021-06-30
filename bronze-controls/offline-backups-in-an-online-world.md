@@ -1,7 +1,7 @@
 ---
 title: Offline backups in an online world
 description: How to protect your backups that are stored in the public cloud.
-published: false
+published: true
 date: 2021-06-01T20:07:29.710Z
 tags: bronze, bronze-controls, data-management
 editor: markdown

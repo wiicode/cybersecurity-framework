@@ -1,7 +1,7 @@
 ---
 title: 9. Secure user management
 description: Your provider should make the tools available for you to securely manage your use of their service. 
-published: false
+published: true
 date: 2021-05-27T22:02:12.926Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown

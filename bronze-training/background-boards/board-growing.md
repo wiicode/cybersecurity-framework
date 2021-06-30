@@ -1,7 +1,7 @@
 ---
 title: Growing cyber security expertise
 description: As the demand for cyber security professionals grows, you need to plan ahead to ensure your organization can draw upon expertise.
-published: false
+published: true
 date: 2021-06-30T02:04:52.044Z
 tags: bronze, bronze-training, board
 editor: markdown

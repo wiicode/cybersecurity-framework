@@ -1,7 +1,7 @@
 ---
 title: Personal and Home Security
 description: 
-published: false
+published: true
 date: 2021-06-30T02:20:32.935Z
 tags: bronze, bronze-training, individuals
 editor: markdown

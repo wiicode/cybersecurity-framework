@@ -1,7 +1,7 @@
 ---
 title: Let them paste passwords
 description: Allow your website to accept pasted passwords - it makes your site more secure, not less.
-published: false
+published: true
 date: 2021-06-30T19:27:28.334Z
 tags: bronze, passwords
 editor: markdown

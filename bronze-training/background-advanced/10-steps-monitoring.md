@@ -1,7 +1,7 @@
 ---
 title: Monitoring
 description: System monitoring provides a capability that aims to detect actual or attempted attacks on systems and business services.
-published: false
+published: true
 date: 2021-05-29T18:38:27.724Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown

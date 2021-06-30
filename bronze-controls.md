@@ -1,7 +1,7 @@
 ---
 title: Procedures, Controls & Guides
 description: 
-published: false
+published: true
 date: 2021-06-30T02:20:08.844Z
 tags: bronze, home, bronze-controls
 editor: markdown

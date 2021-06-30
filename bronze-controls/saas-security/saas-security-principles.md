@@ -1,7 +1,7 @@
 ---
 title: SaaS security principles
 description: A brief description of the criteria BCSF uses to evaluate the security of various 'Software as a Service' (SaaS) offerings
-published: false
+published: true
 date: 2021-06-02T21:17:08.579Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown

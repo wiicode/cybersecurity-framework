@@ -1,7 +1,7 @@
 ---
 title: How to recover an infected device
 description: Advice for those concerned a device has been infected.
-published: false
+published: true
 date: 2021-02-21T00:06:10.712Z
 tags: bronze, bronze-training, individuals
 editor: markdown

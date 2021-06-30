@@ -1,7 +1,7 @@
 ---
 title: Small Business: Improving Your Posture
 description: How to improve your cybersecurity posture when starting at zero. 
-published: false
+published: true
 date: 2021-06-01T18:28:14.989Z
 tags: bronze, bronze-training
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Logging and protective monitoring
 description: Using logging and monitoring to identify threats and protect smartphones, tablets, laptops and desktop PCs
-published: false
+published: true
 date: 2021-06-02T14:12:20.385Z
 tags: guidance, bronze, mdm
 editor: markdown

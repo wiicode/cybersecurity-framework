@@ -1,7 +1,7 @@
 ---
 title: macOS 10.14 Mojave
 description: Secure configuration for macOS 10.14 Mojave
-published: false
+published: true
 date: 2021-06-02T22:03:45.187Z
 tags: silver, sourced, silver-training
 editor: markdown

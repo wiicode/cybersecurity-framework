@@ -1,7 +1,7 @@
 ---
 title: Using TLS to protect data
 description: How to configure the services that must be able to receive incoming connections from unknown clients or services.
-published: false
+published: true
 date: 2021-06-02T22:01:39.315Z
 tags: silver, sourced, silver-training
 editor: markdown

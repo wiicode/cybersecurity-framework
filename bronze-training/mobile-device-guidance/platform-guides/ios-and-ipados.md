@@ -1,7 +1,7 @@
 ---
 title: iOS and iPadOS
 description: Secure configuration and use of iOS and iPadOS devices
-published: false
+published: true
 date: 2021-03-10T01:04:55.071Z
 tags: guidance, bronze, mdm
 editor: markdown

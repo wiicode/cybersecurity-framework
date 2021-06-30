@@ -1,7 +1,7 @@
 ---
 title: Password manager buyers guide
 description: A guide to choosing the right type of password manager for your organization, and the security features you need to consider.
-published: false
+published: true
 date: 2021-05-28T02:43:37.672Z
 tags: bronze, passwords
 editor: markdown

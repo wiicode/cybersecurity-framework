@@ -1,7 +1,7 @@
 ---
 title: Antivirus and other security software
 description: Advice on the selection, configuration and use of antivirus and other security software on smartphones, tablets, laptops and desktop PCs
-published: false
+published: true
 date: 2021-06-02T02:25:59.545Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown

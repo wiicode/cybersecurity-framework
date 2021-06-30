@@ -1,7 +1,7 @@
 ---
 title: iOS 12
 description: Secure configuration for iOS 12
-published: false
+published: true
 date: 2021-06-02T22:02:30.050Z
 tags: silver, sourced, silver-training
 editor: markdown

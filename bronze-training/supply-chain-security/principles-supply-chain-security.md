@@ -1,7 +1,7 @@
 ---
 title: Principles of Supply Chain Security
 description: Twelve principles in four sections
-published: false
+published: true
 date: 2021-06-30T02:43:58.982Z
 tags: bronze, supply-chain
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: BENTO:GUIDES:DETAILS
 description: 
-published: false
+published: true
 date: 2021-05-29T17:45:39.083Z
 tags: bronze
 editor: markdown
