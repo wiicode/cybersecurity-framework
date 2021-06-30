@@ -2,7 +2,7 @@
 title: Personal and Home Security
 description: 
 published: true
-date: 2021-06-01T18:26:46.621Z
+date: 2021-06-30T02:20:32.935Z
 tags: bronze, bronze-training, individuals
 editor: markdown
 dateCreated: 2020-08-05T18:06:15.045Z
@@ -12,7 +12,7 @@ dateCreated: 2020-08-05T18:06:15.045Z
 {.is-info}
 
 # What is cyber security?
-Cyber security is the means by which individuals and organisations reduce the risk of being affected by cyber crime.
+Cyber security is the means by which individuals and organizations reduce the risk of being affected by cyber crime.
 
 Cyber security's core function is to protect the devices we all use (smartphones, laptops, tablets and computers), and the services we access online - both at home and work - from theft or damage. It's also about preventing unauthorized access to the vast amounts of personal information we store on these devices, and online.
 
@@ -112,7 +112,7 @@ You will need to manually turn on 2FA for most of your accounts. Not all account
 
 ##### Turn on 2FA for email
 
-- [Gmail](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome?pli=1)
+- [Gmail](https://myaccount.google.com/signinoptions/two-step-verification/enrolll-welcome?pli=1)
 - [Outlook](https://support.microsoft.com/en-us/account-billing/how-to-use-two-step-verification-with-your-microsoft-account-c7910146-672f-01e9-50a0-93b4585e7eb4)
 - [Yahoo](https://help.yahoo.com/kb/add-two-step-verification-extra-security-sln5013.html)
 
