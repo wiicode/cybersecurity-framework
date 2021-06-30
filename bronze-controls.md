@@ -2,12 +2,11 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-30T02:20:08.844Z
+date: 2021-06-30T19:59:01.258Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
 ---
-
 
 # Business/Organization Management
 >  Implementing processs for sticking to strategic direction, managing risks, and verifying that your systems work as designed today and will work as expected during an incident.
@@ -17,7 +16,7 @@ dateCreated: 2021-03-02T03:57:32.388Z
 - [Code of Conduct](/bronze-controls/code-of-conduct)
 - [Incident Categories](/bronze-controls/incident-categories)
 {.links-list}
-
+ 
 # Data Management
 >  Practices for classifying, managing, and storing your information/data electonically. 
 {.is-success}
