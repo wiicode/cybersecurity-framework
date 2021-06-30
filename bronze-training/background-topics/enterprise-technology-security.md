@@ -17,7 +17,7 @@ By 'enterprise technology', we mean the IT used to run your organization. This i
 - the networks which connect them together
 - the way in which these are operated
 
-The recommendations here are suitable for the vast majority of information. You may further enhance the security recommendations, but doing so will add to the cost whilst adding little benefit. If you believe this guidance is not sufficient to protect your data, please contact us so we might improve future versions of this guidance.
+The recommendations here are suitable for the vast majority of information. You may further enhance the security recommendations, but doing so will add to the cost while adding little benefit. If you believe this guidance is not sufficient to protect your data, please contact us so we might improve future versions of this guidance.
 
 # Principles for cyber secure enterprise technology
 In developing this guidance for enterprise, the following principles are assumed:

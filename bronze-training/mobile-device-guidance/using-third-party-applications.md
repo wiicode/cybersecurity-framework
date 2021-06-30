@@ -111,7 +111,7 @@ The second part of your approach should to reduce the impact of compromise, shou
 
 Most platforms provide a way for organizations to configure *containers* or *work profiles* that provide separation between personal apps and work data.
 
-Whilst these spaces are not impermeable, they lower the risk that arbitrary third-party applications can access and potentially compromise sensitive work data. Your organization's third-party application policies can be more liberal if you are happy with the security level that this separation provides.
+While these spaces are not impermeable, they lower the risk that arbitrary third-party applications can access and potentially compromise sensitive work data. Your organization's third-party application policies can be more liberal if you are happy with the security level that this separation provides.
 
 These spaces are often part of a platform's bring your own device (BYOD) features. You should read our [guidance on BYOD](/bronze-controls/byod-guidance) if you are considering that approach.
 

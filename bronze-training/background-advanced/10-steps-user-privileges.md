@@ -13,7 +13,7 @@ dateCreated: 2021-02-21T16:04:07.910Z
 
 
 # Summary 
-Access to data, systems and services need to be protected. Understanding who or what needs access, and under what conditions, is just as important as knowing who needs to be kept out. You must choose appropriate methods to establish and prove the identity of users, devices, or systems, with enough confidence to make access control decisions. A good approach to identity and access management will make it hard for attackers to pretend they are legitimate, whilst keeping it as simple as possible for legitimate users to access what they need.
+Access to data, systems and services need to be protected. Understanding who or what needs access, and under what conditions, is just as important as knowing who needs to be kept out. You must choose appropriate methods to establish and prove the identity of users, devices, or systems, with enough confidence to make access control decisions. A good approach to identity and access management will make it hard for attackers to pretend they are legitimate, while keeping it as simple as possible for legitimate users to access what they need.
 
 Giving users unnecessary system privileges or data access rights means that if the account is misused or compromised the impact will be more severe than it needs to be.
 

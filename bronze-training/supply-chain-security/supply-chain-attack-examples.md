@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-03-10T01:54:57.644Z
 ---
 
-Outlined in this section are examples of supply chain attacks that illustrate the challenges organizations face. Attacks are constantly evolving and you should ensure you keep up to date with these. Whilst these are primarily cyber attacks it is important to also consider threats such as fraud, theft and insiders.
+Outlined in this section are examples of supply chain attacks that illustrate the challenges organizations face. Attacks are constantly evolving and you should ensure you keep up to date with these. While these are primarily cyber attacks it is important to also consider threats such as fraud, theft and insiders.
 
 # Third party software providers
 > Learn about an example of a supply chain attack through a third party software provider, where a legitimate industrial control system is 'trojanised'.

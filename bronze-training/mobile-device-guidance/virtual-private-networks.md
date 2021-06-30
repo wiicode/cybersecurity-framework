@@ -52,7 +52,7 @@ Our recommendation is that IPsec be used for VPN access. IPsec is an open standa
 
 As an IPsec VPN client is built into many operating systems, no additional products are required to deploy a VPN. However, some third-party networks restrict or block IPsec traffic, so your mobile devices may, in certain situations, be unable to create the VPN connection.
 
-TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely inter-operate, so you will need to use both from the same vendor. Whilst TLS is standardized in a variety of [RFCs](https://en.wikipedia.org/wiki/Request_for_Comments), exactly how those protocols are used to create a VPN is not. However, TLS VPN connections can be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
+TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely inter-operate, so you will need to use both from the same vendor. While TLS is standardized in a variety of [RFCs](https://en.wikipedia.org/wiki/Request_for_Comments), exactly how those protocols are used to create a VPN is not. However, TLS VPN connections can be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
 
 From a security perspective, with all other things equal, there is very little difference in risk between using an IPsec and a TLS VPN.
 
@@ -90,7 +90,7 @@ To provide benefits, a VPN must establish a connection, remain connected while t
 
 ### **Distinguishing automatic from forced VPNs**
 
-We distinguish automatic from forced because on some platforms it is possible for the user to disable the automatic VPN, whilst the platform still enforces VPN routing. This effectively prevents network connections from the device until the user re-enables automatic connections.
+We distinguish automatic from forced because on some platforms it is possible for the user to disable the automatic VPN, while the platform still enforces VPN routing. This effectively prevents network connections from the device until the user re-enables automatic connections.
 
 Depending on whether the VPN is forced or optional, choosing between automatic, triggered and manual could be a usability decision rather than security.
 
@@ -108,7 +108,7 @@ Our per-platform guidance recommends - and provides a configuration for - settin
 
 ### **Split tunnelling**
 
-Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, whilst other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
+Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, while other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
 
 This is generally used when the VPN is providing access to internal services on a corporate network, without attempting to prevent other connections. For example, high-bandwidth applications could be permitted direct access to the internet without being routed via corporate infrastructure, to save on bandwidth costs. And, as with per-app VPNs, latency-sensitive applications, such as a VoIP client, could minimize network latency by connecting directly.
 

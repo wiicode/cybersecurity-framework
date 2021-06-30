@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-02T15:04:32.010Z
 ---
 
-**Phishing attacks: defending your** ***organization*** provides a multi-layered set of mitigations to improve your *organization*'s resilience against phishing attacks, whilst minimising disruption to user productivity. The *defenses* suggested in this guidance are also useful against other types of cyber attack, and will help your *organization* become more resilient overall.
+**Phishing attacks: defending your** ***organization*** provides a multi-layered set of mitigations to improve your *organization*'s resilience against phishing attacks, while minimising disruption to user productivity. The *defenses* suggested in this guidance are also useful against other types of cyber attack, and will help your *organization* become more resilient overall.
 
 -   This guidance is aimed at technology, operations or security staff responsible for designing and implementing *defenses* for medium to large organizations. This includes staff responsible for phishing training.
 -   Staff within smaller organizations will also find this guidance useful, but should refer to the [Small Business Guide](/bronze-training/background-simple) beforehand.

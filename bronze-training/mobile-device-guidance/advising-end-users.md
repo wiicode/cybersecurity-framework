@@ -19,7 +19,7 @@ Technical controls are necessary to ensure your organization's devices meet a mi
 
 The effectiveness of these policies depends on many things, including:
 
--   How easy the policies are for users to follow, whilst still being able to do their job
+-   How easy the policies are for users to follow, while still being able to do their job
 -   Understand how your users *really* work and how this should shape your security policies.
 -   Your ability to detect violations through [logging and monitoring](/bronze-training/mobile-device-guidance/logging-and-protective-monitoring)
 -   Communicating effectively with your employees, ensuring they understand the process for reporting issues and that it's important to do so

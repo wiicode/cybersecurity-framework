@@ -11,7 +11,7 @@ dateCreated: 2021-01-08T05:15:52.652Z
 > Secure configuration of macOS devices
 {.is-info}
 
-macOS is the default operating system on Apple's Mac, iMac, and Macbook devices. Whilst this guide does not apply to any specific version of macOS, it was last tested on macOS 10.15 in November 2019.
+macOS is the default operating system on Apple's Mac, iMac, and Macbook devices. While this guide does not apply to any specific version of macOS, it was last tested on macOS 10.15 in November 2019.
 
 # Securing macOS
 

@@ -66,7 +66,7 @@ The use of abstraction in the presentation layer lowers the risk of a network at
 
 Some organizations require proxy servers to intercept traffic for monitoring or to block access to internet services. An internet gateway is typically used to achieve this, and will use custom CA certificates deployed to devices to enable it to inspect encrypted traffic.
 
-Whilst organizations  might be required by legislation to monitor users' traffic in a gateway, protective monitoring, for security reasons, is often more effective when deployed to devices via security configuration (see [detailed platform guides](/collection/mobile-device-guidance/platform-guides)) or [security applications](/collection/mobile-device-guidance/antivirus-and-other-security-software). Several other reasons to use intercepting proxies are given in the [VPN guidance](/collection/mobile-device-guidance/virtual-private-networks).
+While organizations  might be required by legislation to monitor users' traffic in a gateway, protective monitoring, for security reasons, is often more effective when deployed to devices via security configuration (see [detailed platform guides](/collection/mobile-device-guidance/platform-guides)) or [security applications](/collection/mobile-device-guidance/antivirus-and-other-security-software). Several other reasons to use intercepting proxies are given in the [VPN guidance](/collection/mobile-device-guidance/virtual-private-networks).
 
 # 2. Zero trust architecture
 
@@ -76,11 +76,11 @@ Each connection is strongly authenticated and checked against permissible polici
 
 This approach has many advantages if adopted correctly, but also presents additional risk if mistakes are made.
 
-Whilst this article will not go into detail about how to implement a *zero trust* approach, we will give some high-level recommendations.
+While this article will not go into detail about how to implement a *zero trust* approach, we will give some high-level recommendations.
 
 ### **Preparing for a zero trust architecture**
 
-Whilst the architectural components look much simpler in a zero trust network approach, it is still important to implement authentication and encryption mechanisms to the same or to a greater standard. It also becomes more important to have a [strong device configuration](/collection/mobile-device-guidance/platform-guides), as the device is exposed to a larger set of risks. This section details some things you should think about when developing a zero trust architecture.
+While the architectural components look much simpler in a zero trust network approach, it is still important to implement authentication and encryption mechanisms to the same or to a greater standard. It also becomes more important to have a [strong device configuration](/collection/mobile-device-guidance/platform-guides), as the device is exposed to a larger set of risks. This section details some things you should think about when developing a zero trust architecture.
 
 #### **Single strong source of user identity**
 

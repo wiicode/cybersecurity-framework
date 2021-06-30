@@ -151,8 +151,8 @@ Just like the operating systems on your organization's devices, all the applicat
 
 When you use public Wi-Fi hotspots (for example in hotels or coffee shops), there is no way to easily find out who controls the hotspot, or to prove that it belongs to who you think it does. If you connect to these hotspots, somebody else could access:
 
-- what you're working on whilst connected
-- your private login details that many apps and web services maintain whilst you're logged on
+- what you're working on while connected
+- your private login details that many apps and web services maintain while you're logged on
 
 The simplest precaution is not to connect to the Internet using unknown hotspots, and instead use your mobile 3G or 4G mobile network, which will have built-in security. This means you can also use 'tethering' (where your other devices such as laptops share your 3G/4G connection), or a wireless 'dongle' provided by your mobile network. You can also use Virtual Private Networks (VPNs), a technique that encrypts your data before it is sent across the Internet. If you're using third party VPNs, you'll need the technical ability to configure it yourself, and should only use VPNs provided by reputable service providers.
 
@@ -181,7 +181,7 @@ If you are in charge of IT policies within your organization, make sure staff ar
 
 Passwords should be easy to remember, but hard for somebody else to guess. A good rule is 'make sure that somebody who knows you well, couldn't guess your password in 20 attempts'. Staff should also avoid using the most common passwords, which criminals can easily guess. The BCSF has some useful advice on how to choose a non-predictable password.
 
-Remember that your IT systems should not require staff to share accounts or passwords to get their job done. Make sure that every user has personal access to the right systems, and that the level of access given is always the lowest needed to do their job, whilst minimising unnecessary exposure to systems they don't need access to.
+Remember that your IT systems should not require staff to share accounts or passwords to get their job done. Make sure that every user has personal access to the right systems, and that the level of access given is always the lowest needed to do their job, while minimising unnecessary exposure to systems they don't need access to.
 
 ## Tip 4: Help your staff cope with 'password overload'
 

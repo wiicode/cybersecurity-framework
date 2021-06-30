@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-03-10T01:04:55.071Z
 ---
 
-iOS is the operating system which powers the iPhone and iPod Touch. iPadOS is a very similar platform and the security considerations are identical to iOS, so this guide refers to both platforms as "iOS". Whilst this guide does not apply to any specific version of iOS, it was last tested on iOS 13.1 in October 2019.
+iOS is the operating system which powers the iPhone and iPod Touch. iPadOS is a very similar platform and the security considerations are identical to iOS, so this guide refers to both platforms as "iOS". While this guide does not apply to any specific version of iOS, it was last tested on iOS 13.1 in October 2019.
 
 
 # Securing iOS and iPadOS

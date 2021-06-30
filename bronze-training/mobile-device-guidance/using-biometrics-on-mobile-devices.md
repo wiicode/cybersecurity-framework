@@ -10,7 +10,7 @@ dateCreated: 2021-03-06T02:38:31.201Z
 
 Biometrics are biological characteristics of an individual, such as face or fingerprint, which can be used to verify their identity.
 
-Use of fingerprint or face recognition for device authentication is now commonplace on smartphones and tablets. It is also increasingly becoming available on laptops. This guidance will present the benefits of using biometrics whilst also highlighting potential security risks.
+Use of fingerprint or face recognition for device authentication is now commonplace on smartphones and tablets. It is also increasingly becoming available on laptops. This guidance will present the benefits of using biometrics while also highlighting potential security risks.
 
 
 ## Why use biometrics?
@@ -56,7 +56,7 @@ As with any authentication mechanism, biometrics can have vulnerabilities and co
 
 A presentation attack involves an attempt by an impostor, using an artefact of some kind, to impersonate a valid user. Modern mobile devices usually include additional protections, such as 'liveness' checks, to prevent this sort of attack from working. Additionally, only a small number of biometric authentication attempts are allowed before a PIN or password must entered, protecting against brute-force attack.
 
-In some cases, weaknesses have been shown to exist in biometrics on smartphones. Examples include facial recognition not testing for alertness, making it possible for a device to be unlocked whilst a user is asleep, or has their eyes shut. You should research these weaknesses when choosing to use biometrics, or when [choosing which devices to use in your organization](/bronze-training/mobile-device-guidance/choosing-devices).
+In some cases, weaknesses have been shown to exist in biometrics on smartphones. Examples include facial recognition not testing for alertness, making it possible for a device to be unlocked while a user is asleep, or has their eyes shut. You should research these weaknesses when choosing to use biometrics, or when [choosing which devices to use in your organization](/bronze-training/mobile-device-guidance/choosing-devices).
 
 #### **Replay attacks**
 

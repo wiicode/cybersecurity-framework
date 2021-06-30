@@ -32,10 +32,10 @@ When configured in this way, risk owners should be aware of the following techni
 
 | **Security principle** | **Explanation of risks** |
 | --- | --- |
-| Data-in-transit protection | The built-in VPN cannot be configured into an 'always-on' mode. Whilst triggers can be used to cause the VPN to connect regularly, users can disable these triggers and disconnect the VPN. Without a supported always-on mode, there is a risk that data in transit can be compromised. |
+| Data-in-transit protection | The built-in VPN cannot be configured into an 'always-on' mode. While triggers can be used to cause the VPN to connect regularly, users can disable these triggers and disconnect the VPN. Without a supported always-on mode, there is a risk that data in transit can be compromised. |
 | Data-at-rest protection | On devices **without** a [T2 security processor](https://support.apple.com/en-gb/HT208862), FileVault 2 does not use any dedicated hardware to protect its keys. If an attacker can get physical access to the device, they can extract password hashes and perform an offline brute-force attack to recover the encryption password. As a result, passwords need to be much stronger to reduce this risk. |
 | Secure boot | On devices **without** a [T2 security processor](https://support.apple.com/en-gb/HT208862), secure boot is not supported, making it easier for malware or a physical attacker to compromise the boot process and for such a compromise to be undetectable. |
-| External interface protection | Most macOS devices have external interfaces which permit Direct Memory Access (DMA) from connected peripherals. Whilst the configuration in this section limits DMA to times when the user is logged in and the screen is unlocked, this still presents an opportunity for a local attacker to extract keys and data. |
+| External interface protection | Most macOS devices have external interfaces which permit Direct Memory Access (DMA) from connected peripherals. While the configuration in this section limits DMA to times when the user is logged in and the screen is unlocked, this still presents an opportunity for a local attacker to extract keys and data. |
 | Device update policy | You cannot force the user to update their device or software remotely. However, it is possible to turn on automatic updates locally. Third-party utilities may be available that can mitigate this issue. |
 
 ---

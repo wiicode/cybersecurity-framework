@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-02-22T01:14:00.674Z
 ---
 
-Incidents can have a huge impact on an organization in terms of cost, productivity and reputation. Being prepared to detect and quickly respond to incidents will help to prevent the attacker from inflicting further damage, so reducing the financial and operational impact. Handling the incident effectively whilst in the media spotlight will help to reduce the impact on your reputation. 
+Incidents can have a huge impact on an organization in terms of cost, productivity and reputation. Being prepared to detect and quickly respond to incidents will help to prevent the attacker from inflicting further damage, so reducing the financial and operational impact. Handling the incident effectively while in the media spotlight will help to reduce the impact on your reputation. 
 
 # What should the Board do?
 

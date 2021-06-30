@@ -182,7 +182,7 @@ Password managers supported by all your current (and intended) platforms will pr
 
 For cloud-sync password managers, sensitive data will be traversing untrusted networks between cloud and client, and vice versa. Data should only be transmitted to your authorized devices and not those of potential attackers. If this data is not protected, an attacker could intercept and read (or modify) the contents.
 
-Due to the varied usage of cloud-sync, the mobile device may be locked whilst information is being *synchronized* with it. This received data should also be securely protected until it can be added into the vault at unlock/decryption. Insecure encryption will render the vault contents accessible to attackers if they get access.
+Due to the varied usage of cloud-sync, the mobile device may be locked while information is being *synchronized* with it. This received data should also be securely protected until it can be added into the vault at unlock/decryption. Insecure encryption will render the vault contents accessible to attackers if they get access.
 
 **In summary:**
 

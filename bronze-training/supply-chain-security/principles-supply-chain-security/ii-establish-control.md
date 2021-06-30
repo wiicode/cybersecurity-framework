@@ -178,7 +178,7 @@ Promote and adopt the sharing of security information across your supply chain t
 
 ## 9\. Provide support for security incidents
 
-Whilst it is reasonable to expect your suppliers to manage security risks in accordance with the contract, you should be prepared to provide support and assistance if necessary where security incidents have the potential to affect your business or the wider supply chain.
+While it is reasonable to expect your suppliers to manage security risks in accordance with the contract, you should be prepared to provide support and assistance if necessary where security incidents have the potential to affect your business or the wider supply chain.
 
 ### **Make requirements clear**
 

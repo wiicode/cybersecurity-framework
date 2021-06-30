@@ -44,7 +44,7 @@ A backup client is a device with credentials to access your cloud storage. Cloud
 
 ### **Access control**
 
-Some cloud storage services offer more advanced access controls for identity and connectivity. If these controls are available, they should be configured to only allow authorized clients to create new backups (or append to existing ones), and deny connection requests while the storage is not in use ('cold'). If a ransomware infection occurs while your cloud backup is offline (denying connection requests), it will not be able to reach the cloud storage, giving you the same level of confidence as unplugging an on-premises storage drive. In the event of a ransomware incident occurring whilst your cloud backup is connected, ransomware acting with privilege to only create new data cannot overwrite your existing backups. This is comparable to traditional write-once storage (but is cheaper and more scalable).
+Some cloud storage services offer more advanced access controls for identity and connectivity. If these controls are available, they should be configured to only allow authorized clients to create new backups (or append to existing ones), and deny connection requests while the storage is not in use ('cold'). If a ransomware infection occurs while your cloud backup is offline (denying connection requests), it will not be able to reach the cloud storage, giving you the same level of confidence as unplugging an on-premises storage drive. In the event of a ransomware incident occurring while your cloud backup is connected, ransomware acting with privilege to only create new data cannot overwrite your existing backups. This is comparable to traditional write-once storage (but is cheaper and more scalable).
 
 ---
 

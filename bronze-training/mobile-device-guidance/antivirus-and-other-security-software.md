@@ -28,7 +28,7 @@ Using AV is one way of helping prevent infection, but there are many things to t
 
 AV products traditionally worked by scanning every file on a device and looking for malware by spotting known signatures. However, advances in malware and changes in underlying platforms have limited the effectiveness of this approach.
 
-Whilst malware is more capable now than in the past, many risks that traditional AV products protected against are now mitigated by default when the correct settings are implemented at the operating system level.
+While malware is more capable now than in the past, many risks that traditional AV products protected against are now mitigated by default when the correct settings are implemented at the operating system level.
 
 **What to look for in AV**
 

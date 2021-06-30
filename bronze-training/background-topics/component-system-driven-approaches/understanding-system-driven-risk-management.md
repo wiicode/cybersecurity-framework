@@ -73,7 +73,7 @@ This section provides a brief description of some system-driven cyber risk manag
 - There are many more techniques (not listed here) which apply these principles. The three included below (we believe) best illustrate the differences between these types of technique. If you think there are others which should be included in this page, please get in touch.
 
 ## STAMP
-STAMP (Systems-Theoretic Accident Model and Process) is a collection of techniques for modeling the causation of accidents. It has been developed by Professor Nancy Leveson and her colleagues at the Massachusetts Institute of Technology. Whilst STAMP originally focused on safety, the STAMP concepts have been adapted into a number of other contexts, some of which accommodate cyber security requirements.
+STAMP (Systems-Theoretic Accident Model and Process) is a collection of techniques for modeling the causation of accidents. It has been developed by Professor Nancy Leveson and her colleagues at the Massachusetts Institute of Technology. While STAMP originally focused on safety, the STAMP concepts have been adapted into a number of other contexts, some of which accommodate cyber security requirements.
 
 A lot of the language and concepts we introduced in our piece on the principles of system-driven risk assessments have been drawn from the STAMP framework.
 

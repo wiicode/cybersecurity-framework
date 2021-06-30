@@ -23,7 +23,7 @@ One of the best sources of information on good practice and relevant threats can
 
 ### **Assess the threat**
 
-Working out the 'threat actors' (the groups or individuals capable of carrying out a cyber attack) relevant to your organization can help you make decisions on what you are **actively** going to defend against. Whilst investing in a good baseline of cyber security controls will help defend your organization from the most common threats, implementing effective defenses against a more targeted or sustained attack can be costly. So dependent on the likelihood and impact of that threat, you may decide that it is not worth that additional investment.
+Working out the 'threat actors' (the groups or individuals capable of carrying out a cyber attack) relevant to your organization can help you make decisions on what you are **actively** going to defend against. While investing in a good baseline of cyber security controls will help defend your organization from the most common threats, implementing effective defenses against a more targeted or sustained attack can be costly. So dependent on the likelihood and impact of that threat, you may decide that it is not worth that additional investment.
 
 Ongoing discussion between the Board and experts will help you to prioritize the threats to actively defend against. The experts will have an in-depth understanding of the threat, and the Board will be able to identify the features of the organization that might make it an attractive target to attackers. It is also critical to have this discussion in advance of any decision that will significantly change the threat profile of the organization, in order to give technical staff the time to suitably adapt the organization's cyber security. 
 

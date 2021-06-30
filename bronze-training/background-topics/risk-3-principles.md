@@ -56,11 +56,11 @@ This all comes down to judgement. So if anyone tells you that a particular frame
 
 # Balance cyber risks against other types of risk
 
-Some security measures can reduce one *type* of risk, whilst increasing risk somewhere else.
+Some security measures can reduce one *type* of risk, while increasing risk somewhere else.
 
 For example, let's imagine you want your customers' online accounts to be secure, so you introduce strong password requirements on your website. This might reduce some risks, but it is likely to introduce the new risk of customers leaving your website and going to a competitor's (where the overall user experience is better).
 
-Whilst this isn't really a *cyber security* risk, it still affects your organization, and treating both risks as being separate and unconnected is unrealistic. So, when you decide to adopt a security measure, try to imagine any unintended consequences.
+While this isn't really a *cyber security* risk, it still affects your organization, and treating both risks as being separate and unconnected is unrealistic. So, when you decide to adopt a security measure, try to imagine any unintended consequences.
 
 # Learn from security solutions used by other organizations
 

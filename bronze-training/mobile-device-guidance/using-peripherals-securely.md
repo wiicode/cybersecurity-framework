@@ -66,7 +66,7 @@ Depending on the device, operating system and remote management capabilities, we
 -   For mobile devices, which have external interfaces that support DMA, installation of new DMA devices should be prevented when the device is locked.
 -   Device interfaces that can provide alternate boot paths or debugging capabilities should also have these features disabled if not required.
 -   Access to change required device settings should be restricted to admin users only. This includes operating system and firmware settings.
--   External interface adapters, such as USB data blockers, can also be purchased for different physical connections that can block data transfer, whilst still allowing for limited functionality such as charging support.
+-   External interface adapters, such as USB data blockers, can also be purchased for different physical connections that can block data transfer, while still allowing for limited functionality such as charging support.
 
 It should be noted that some of these technical controls may have to be managed and configured through the [device firmware settings](/bronze-training/mobile-device-guidance/managing-mobile-device-firmware), as well as through the operating system.
 

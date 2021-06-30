@@ -30,7 +30,7 @@ Services should be designed and developed to identify and mitigate threats to th
 
 ### **Additional notes – Secure development requirements**
 
-Secure development does not mean that all development must be done in-house, at secure facilities or by highly vetted personnel. Whilst these approaches may be appropriate for specialised components, it will often be better to choose mature, independently supported, off the shelf components.
+Secure development does not mean that all development must be done in-house, at secure facilities or by highly vetted personnel. While these approaches may be appropriate for specialised components, it will often be better to choose mature, independently supported, off the shelf components.
 
 Security should be considered throughout the design and development of the service. For example, during development of new features, potential attacks should be evaluated and effective mitigations designed to address them. Care must be taken to balance security, cost and usability.
 

@@ -23,7 +23,7 @@ Implementing the recommended security controls outlined below - including monito
 
 ## What is lateral movement?
 
-After an attacker has gained an initial foothold in a network, they will typically look to broaden and cement that foothold whilst gaining further access to valuable data or systems. This activity is known as lateral movement.
+After an attacker has gained an initial foothold in a network, they will typically look to broaden and cement that foothold while gaining further access to valuable data or systems. This activity is known as lateral movement.
 
 Following the initial compromise of a host, the first step in lateral movement is to perform internal reconnaissance of the network. This gives the attacker an idea of their location within the network, and its overall structure. To solidify their presence and maintain persistence, the attacker will usually try to compromise additional hosts and escalate their privileges, ultimately gaining control of their target (such as a domain controller, a critical system, or sensitive data).
 
@@ -98,7 +98,7 @@ Administrator accounts should be prevented from browsing the web and accessing e
 
 The principle of 'least privilege' (where accounts and users have the minimum amount of access needed to perform their role) should be implemented wherever possible. A tiering model for administrative accounts ensures they only have access to the specific administrative capabilities needed, rather than all of them. Using various tiers of administrative accounts limits the number of very high privileged accounts in use, and reduces the access an attacker gains if a lower privilege administrator account is compromised.
 
-Accounts with full privilege across an enterprise (such as a domain admin, global admin, or cloud admin account) should **not** normally be used. Whilst they are required for some tasks (such as initially building a network, performing upgrades, creating new privileged accounts, or disaster recovery), lower tier administrative accounts should be used for most other tasks.
+Accounts with full privilege across an enterprise (such as a domain admin, global admin, or cloud admin account) should **not** normally be used. While they are required for some tasks (such as initially building a network, performing upgrades, creating new privileged accounts, or disaster recovery), lower tier administrative accounts should be used for most other tasks.
 
 Using time-based privileged access can help reduce the impact of a leaked admin credential, especially as it will be audited every time the user requests or receives it. Identifying high-risk devices, services and users can help in planning granted privileges, ensuring that those with the highest risk have the lowest privileges.
 

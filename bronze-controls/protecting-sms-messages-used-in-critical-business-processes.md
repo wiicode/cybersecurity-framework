@@ -66,7 +66,7 @@ In some cases there may be alternatives to SMS, such as the Push Notifications o
 
 ### **3\. Protect the integrity of customer phone numbers**
 
-Whilst many attacks against SMS are complex and technical in nature, it's also possible to subvert SMS-reliant tasks by targeting the underlying database.
+While many attacks against SMS are complex and technical in nature, it's also possible to subvert SMS-reliant tasks by targeting the underlying database.
 
 For example, access to the database which holds customer’s genuine mobile numbers would allow an attacker to alter records, diverting SMS messages to a number under their control.
 
@@ -118,7 +118,7 @@ SS7 is a legacy protocol and was not built with the current interconnected and a
 
 There have been a small number of attacks where bad actors have manipulated the SS7 network to make it appear as if the customer’s device was roaming on a foreign network and are thus able to receive SMSs intended for the genuine customer. These attacks are targeted at specific users and are typically short in duration - long enough to capture the SMS and short enough to avoid detection.
 
-Whilst there is debate about how easy it would be to carry out SS7 attacks at scale, the possibility cannot be ruled out.
+While there is debate about how easy it would be to carry out SS7 attacks at scale, the possibility cannot be ruled out.
 
 #### **Suggested Controls**
 

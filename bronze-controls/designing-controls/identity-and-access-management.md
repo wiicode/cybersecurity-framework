@@ -76,7 +76,7 @@ Different methods of authentication have different strengths and limitations. Be
 - **hardware-backed certificate authentication** – a cryptographic key and certificate stored in a hardware chip on a user's device (such as a Trusted Platform Module) or on a user's smart card - they can provide high confidence in the identity of a user or device if supported by other physical and technical controls. However, to gain this confidence, the end user device upon which the token is utilized must be trusted
 - **biometric** – the use of an aspect of the user's physiology to identify them, such as a finger print or facial recognition.These can be useful for reducing the password burden on users. 
 
-Whilst they cannot be "shoulder surfed" by a nearby attacker, some forms are easier to spoof than others
+While they cannot be "shoulder surfed" by a nearby attacker, some forms are easier to spoof than others
 
 
 # Privileged user management
@@ -89,7 +89,7 @@ Anyone with access that enables them to affect change which would be felt beyond
 The most important aspect of privileged user management is ensuring that actions performed by privileged user accounts are indeed the actions of your privileged users, as opposed to a malicious third party. As well as strongly authenticating privileged users, there are other actions you can take to reduce the risk of privileged user accounts being misused: 
 
 - **issue separate user accounts and credentials** to users who have a need to perform both privileged and typical day-to-day functions - privileged accounts should not be used for reading email or browsing the web unless protections have been deployed to ensure such actions are performed in a less privileged user context
-- **avoid users perfoming privileged actions from untrusted device**s - unless you are confident in how an end user device has been secured, it is prudent to assume it has been compromised. The risk of allowing an untrusted device to connect to your systems increases with the level of functionality or information exposed to those devices, so whilst such access may be appropriate for some operations it may not be acceptable for all
+- **avoid users perfoming privileged actions from untrusted device**s - unless you are confident in how an end user device has been secured, it is prudent to assume it has been compromised. The risk of allowing an untrusted device to connect to your systems increases with the level of functionality or information exposed to those devices, so while such access may be appropriate for some operations it may not be acceptable for all
 - **when working across network boundaries or zones, prefer to "browse down" from the more trusted environment to the less trusted environment rather than "browse up"** - browse up occurs when a privileged function (such as operating an industrial control system or gaining console access to a production database server) is performed from a less trusted system or network. Given that we should assume the less trusted system is compromised, the integrity of the privileged action is undermined. To maintain the integrity of the more trusted environment a browse down approach should be used to perform functions in less trusted environments from within the more trusted one
 
 Some of the above techniques can have a detrimental effect on usability, and may be unpopular with privileged users. However, they can make a significant difference to the security of computer systems that employ them, and with thoughtful design, the impact on usability can be reduced.

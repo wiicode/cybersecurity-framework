@@ -37,7 +37,7 @@ When deciding how to buy devices, you should:
     -   How they will handle returns of faulty devices. For example, you may need to return devices which contain corporate data, so make sure you agree a [sanitization process](/bronze-controls/topic-sanitization) with them
     -   If they support your zero-touch enrolllment program(s)
     -   At what point they assign devices to you in their supply chain. Some suppliers may use just-in-time manufacturing for large orders and consequently overseas factories may be aware of the end customer for devices. Other suppliers may use domestic storage facilities and therefore provide a more limited opportunity for supply-chain attacks
--   How any of your **overseas users** might source devices whilst abroad
+-   How any of your **overseas users** might source devices while abroad
 -   How you will [**distribute devices**](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices) to your end users. Depending on configuration, devices may be vulnerable if intercepted while being distributed.
 
 # How to purchase devices
