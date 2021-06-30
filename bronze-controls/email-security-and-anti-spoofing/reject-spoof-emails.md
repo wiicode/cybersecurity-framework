@@ -2,10 +2,10 @@
 title: 5. Reject spoof emails
 description: When and how to update your DMARC policy to 'reject', and recommendations for keeping everyone in your organization informed and monitoring your records.
 published: true
-date: 2021-06-02T20:43:00.257Z
-tags: bronze, bronze-controls, email, dmarc
+date: 2021-06-30T19:40:43.755Z
+tags: bronze, bronze-controls, email
 editor: markdown
-dateCreated: 2021-06-02T15:21:41.820Z
+dateCreated: 2021-06-30T19:40:43.755Z
 ---
 
 At this point you should have identified and resolved any issues arising during the [“quarantine phase”](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam). As soon as you are confident DKIM and SPF are continuing to work correctly, you should move to a DMARC policy of `reject`. 
