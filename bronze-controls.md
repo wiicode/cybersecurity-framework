@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-02T18:53:42.563Z
+date: 2021-06-30T02:19:25.700Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -65,7 +65,7 @@ Device management is the process of managing the implementation, operation and m
 - [Choosing mobile devices *Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organization.*](/bronze-training/mobile-device-guidance/choosing-devices)
 - [Purchasing devices *Managing supply chain security when buying smartphones, tablets, laptops and desktop PCs*](/bronze-training/mobile-device-guidance/purchasing-devices)
 - [Provisioning and distributing devices *Advice for IT administrators on how to provision and distribute smartphones, tablets and laptops to end users*](/bronze-training/mobile-device-guidance/provisioning-and-distributing-devices)
-- [Zero-touch enrollment *Using zero-touch enrolllment to automatically provision smartphones, tablets and laptops*](/bronze-training/mobile-device-guidance/zero-touch-enrollment)
+- [Zero-touch enrolllment *Using zero-touch enrollllment to automatically provision smartphones, tablets and laptops*](/bronze-training/mobile-device-guidance/zero-touch-enrolllment)
 - [Mobile Device Management *Advice on the selection and implementation of Mobile Device Management within your enterprise*](/bronze-training/mobile-device-guidance/choosing-and-using-mobile-device-management-services)
 {.links-list}
 
@@ -150,7 +150,7 @@ Device management is the process of managing the implementation, operation and m
 {.links-list}
 
 # Software as a Service (SaaS) 
-> Guidance for organisations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
+> Guidance for organizations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
 {.is-success}
 
 
