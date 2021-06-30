@@ -2,10 +2,10 @@
 title: Password managers: how they help you secure passwords
 description: Need help remembering all your online passwords? Get a password manager.
 published: true
-date: 2021-05-28T02:37:59.689Z
+date: 2021-06-30T19:30:21.103Z
 tags: bronze, passwords
 editor: markdown
-dateCreated: 2021-05-27T22:11:34.368Z
+dateCreated: 2021-06-30T19:30:21.103Z
 ---
 
 ## What is a password manager?
