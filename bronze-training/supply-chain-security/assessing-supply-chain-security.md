@@ -2,13 +2,13 @@
 title: Assessing supply chain security
 description: The table below gives you a series of scenarios against which to measure the security of your supply chain.
 published: true
-date: 2021-06-30T02:45:57.832Z
+date: 2021-06-30T18:07:44.568Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T02:05:04.036Z
 ---
 
-The table below gives you a series of scenarios against which to measure the security of your supply chain.
+The table below gives you a series of scenarios against which to measure the security of your supply chain. 
 
 The idea is to give you some concrete examples of good and bad supply chain security, to help you begin the process of understanding your own situation.
 
