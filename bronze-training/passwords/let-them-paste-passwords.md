@@ -2,7 +2,7 @@
 title: Let them paste passwords
 description: Allow your website to accept pasted passwords - it makes your site more secure, not less.
 published: true
-date: 2021-06-30T02:54:30.128Z
+date: 2021-06-30T02:54:56.668Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T02:15:23.345Z
@@ -42,11 +42,11 @@ If password pasting is allowed, that represents a vulnerability where malicious 
 
 This *is* true, but it's also true that there are other ways to make guesses (for example through an API) that are just as easy for attackers to set up, but are **much** faster at guessing. The risk of brute force attacks using copy and paste is very small.
 
-### **Justification 2: 'Pasting passwords makes them easier to forget, because you have fewer chances to practise them'.**
+### **Justification 2: 'Pasting passwords makes them easier to forget, because you have fewer chances to practice them'.**
 
 It's true - in principle - that the more times you recall something, the easier it is next time.
 
-In the real world though, people are made to have passwords for things that they hardly ever use. This means there isn't enough time to practise, and therefore little chance of remembering. This whole justification only works if you assume, to begin with, that users *should* always have to try and remember their passwords - and that's not always true.
+In the real world though, people are made to have passwords for things that they hardly ever use. This means there isn't enough time to practice, and therefore little chance of remembering. This whole justification only works if you assume, to begin with, that users *should* always have to try and remember their passwords - and that's not always true.
 
 People are also made to have passwords for things they use so often they couldn't forget the password even if they wanted to (which is quite inconvenient if you're forced to change the password regularly), and typing in the rotten thing again and again eats into their day. Password managers are a stick these people lean on, and SPP kicks it away.
 
