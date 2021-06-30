@@ -1,0 +1,87 @@
+<!--
+title: Office 365 security review
+description: Microsoft Office 365 is a set of cloud-based productivity tools including word processing, spreadsheets and calendars
+published: true
+date: 2021-06-30T20:50:56.521Z
+tags: bronze, saas-security, saas
+editor: ckeditor
+dateCreated: 2021-06-30T20:50:56.521Z
+-->
+
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Question</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;" colspan="1"><strong>Answer</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;" colspan="1"><strong>Detail</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using TLS?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">According to their&nbsp;<a href="https://www.microsoft.com/en-us/trustcenter/security/office365-security#Secure-infrastructure">Trust Centre Documentation</a>&nbsp;Office 365 uses TLS. Even though it isn't explicitly stated, hands-on testing suggests that this is using TLS 1.2.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Office 365 meets the&nbsp;recommended cryptographic profiles for TLS&nbsp;as published by the BCSF. In addition the Office domain currently gets an&nbsp;<a href="https://www.ssllabs.com/ssltest/analyze.html?d=office.com">'A' rating from Qualys SSL Labs</a>. Note that this was performed on their top level domain, and not all subdomains that may be used for API calls.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using encryption?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">According to their&nbsp;<a href="https://www.microsoft.com/en-us/trustcenter/security/office365-security#Secure-infrastructure">Trust Centre Documentation</a>&nbsp;Microsoft encrypts all traffic in transit within their network using TLS and IPSec.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">According to their&nbsp;<a href="https://docs.microsoft.com/en-us/azure/security/security-azure-encryption-overview">Azure encryption overview</a>&nbsp;Microsoft uses TLS to protect all traffic in transit between services.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If APIs are available, does the SaaS provider protect both internal and external APIs through an authentication method?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">All API requests&nbsp;<a href="https://developer.microsoft.com/en-us/graph/docs/concepts/auth_v2_user">must be authorized by the user and use OAuth</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels in the service, does the SaaS provider have the ability for low privilege users to be created?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Users can have one of several roles with varying levels of permissions. Microsoft provides a set of prebuilt admin roles. This is described in the&nbsp;<a href="https://support.office.com/en-us/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d">Office 365 documentation</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels, does the SaaS provider provide 2FA/multi-factor authentication on at least the high privileged accounts?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Office 365 currently&nbsp;<a href="https://support.office.com/en-gb/article/Set-up-multi-factor-authentication-for-Office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6">provides multi-factor authentication via SMS or the Microsoft Authenticator app</a>. This can be enforced by Administrators for users within their domain. Office 365 also&nbsp;<a href="https://technet.microsoft.com/en-us/library/jj631606.aspx">integrates with Single Sign On (SSO)</a>&nbsp;options each of which may provide 2FA options.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider collect logs of events?</p>
+          <p><i>Types of log may include security logs and resource logs</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">As stated below, Microsoft stores a variety of logs - these are made available to a domain administrator. It is unknown as to the extent of internal logging.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Does the provider make logs available to the client?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Microsoft&nbsp;<a href="https://support.office.com/en-gb/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c">makes a variety of logs available to administrators</a>, this is all collated into an "audit log" including areas such as login and administrator actions on various individual parts of Office 365.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?</p>
+          <p><i>The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Microsoft has a dedicated security team, they also have a&nbsp;<a href="https://technet.microsoft.com/en-us/security/dn425036">public bug bounty program</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;" colspan="1">Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Microsoft publishes details of their security architecture in their&nbsp;<a href="https://www.microsoft.com/en-us/download/details.aspx?id=26552">white paper </a>and within the FAQs and TechNet articles on their site.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Exporting data</h2>
+<p>For information on exporting data from Office 365, refer to the&nbsp;<a href="https://products.office.com/en-us/business/office-365-online-data-portability">Office 365 Trust Center</a>.</p>
