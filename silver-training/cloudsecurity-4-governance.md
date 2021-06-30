@@ -2,10 +2,10 @@
 title: 4. Governance framework
 description: The service provider should have a security governance framework which coordinates and directs its management of the service and information within it. Any technical controls deployed outside of this framework will be fundamentally undermined.
 published: true
-date: 2021-05-27T20:52:10.782Z
-tags: silver, cloud-security-principles, silver-training
+date: 2021-06-30T18:49:09.047Z
+tags: silver, cloud-security-principles, silver training
 editor: markdown
-dateCreated: 2021-02-22T01:35:54.260Z
+dateCreated: 2021-06-30T18:47:14.373Z
 ---
 
 # 4\. Governance framework
@@ -29,5 +29,5 @@ Good governance will typically provide:
 
 | **Approach** | **Description** | **Guidance** |
 | --- | --- | --- |
-| Assertion that the goals are met | The service provider asserts the 4 points above are met by the provider in relation to the service. | As with all service provider assertions, you would need to decide whether you are content with the [level of confidence](/bronze-training/background-topics/cloud-security-2-confidence) this gives you. |
-| Conformance with a recognized standard | Some common security standards include controls which cover how well a governance framework manages a particular service. Examples include:   <br>[CSA CCM v3.0](#)   <br>[ISO/IEC 27001](#) | Standards differ in the level of detail applied. The scope of any supporting certification should be validated to ensure that the governance framework goals set out above are covered. |
+| Assertion that the goals are met | The service provider asserts the 4 points above are met by the provider in relation to the service. | As with all service provider assertions, you would need to decide whether you are content with the [level of confidence](https://www.ncsc.gov.uk/collection/cloud-security/having-confidence-in-cyber-security) this gives you. |
+| Conformance with a recognised standard | Some common security standards include controls which cover how well a governance framework manages a particular service. Examples include:   <br>[CSA CCM v3.0](https://www.ncsc.gov.uk/collection/cloud-security/standards-and-definitions)   <br>[ISO/IEC 27001](https://www.ncsc.gov.uk/collection/cloud-security/standards-and-definitions) | Standards differ in the level of detail applied. The scope of any supporting certification should be validated to ensure that the governance framework goals set out above are covered. |
