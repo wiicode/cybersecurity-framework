@@ -2,30 +2,28 @@
 title: Ubuntu 18.04 LTS
 description: Secure configuration for Ubuntu 18.04 LTS
 published: true
-date: 2021-06-30T02:05:48.596Z
+date: 2021-06-30T02:06:47.030Z
 tags: silver, sourced, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:26:26.123Z
 ---
 
-# Ubuntu 18.04 LTS
+# Ubuntu Secure Configuration
 
-Secure configuration for Ubuntu 18.04 LTS
+> This guidance was developed following testing on devices running Ubuntu **18.04** LTS.
+{.is-info}
 
-This guidance was developed following testing on devices running Ubuntu **18.04** LTS.
 
-It's important to remember that this guidance has been conceived as a way to satisfy the [12 End User Device Security Principles](https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles). As such, it consists of recommendations and should not be seen as a set of mandatory instructions requiring no further thought.
+It's important to remember that this guidance has been conceived as a way to satisfy the [12 End User Device Security Principles](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/eud-security-principles). As such, it consists of recommendations and should not be seen as a set of mandatory instructions requiring no further thought.
 
 Risk owners and administrators should agree a configuration which balances business requirements, usability and security.
-
----
 
 ## Risk owners' summary
 
 We recommend the following architectural choices for Ubuntu 18.04 LTS:
 
 -   All data should be routed over a secure enterprise VPN to ensure the confidentiality and integrity of the traffic, and to benefit from enterprise protective monitoring solutions.
--   Users should not be allowed to install arbitrary applications on the device. Applications should be authorised by an administrator and deployed via a trusted mechanism.
+-   Users should not be allowed to install arbitrary applications on the device. Applications should be authorized by an administrator and deployed via a trusted mechanism.
 -   Most users should have accounts with no administrative privileges. Users that require administrative privileges should use a separate unprivileged account for email and web browsing. It is recommended that local administrator accounts have a unique strong password per device.
 
 When configured in this way, risk owners should be aware of the following technical risks associated with this platform:
@@ -33,11 +31,9 @@ When configured in this way, risk owners should be aware of the following techni
 | **Security principle** | **Explanation of risks** |
 | --- | --- |
 | Data in transit | Users may choose to ignore certificate warnings leaving data in transit vulnerable to interception and alteration. |
-| Data at rest | The Linux Unified Key Setup (LUKS)/dm-crypt disk encryption solutions have not been independently assured to Foundation Grade, and do not support some of the [mandatory requirements expected from assured full disk encryption products](https://www.ncsc.gov.uk/static-assets/documents/CPA%20SC%20Software%20Full%20Disk%20Encryption%20v1-23.pdf). Without assurance there is a risk that data stored on the device could be compromised. However, the tpm-luks project can enable usage of Trusted Platform Modules (TPMs) by LUKS which may help meet more of these requirements. |
+| Data at rest | The Linux Unified Key Setup (LUKS)/dm-crypt disk encryption solutions have not been independently assured to Foundation Grade, and do not support some of the [mandatory requirements expected from assured full disk encryption products](/static-assets/documents/CPA%20SC%20Software%20Full%20Disk%20Encryption%20v1-23.pdf). Without assurance there is a risk that data stored on the device could be compromised. However, the tpm-luks project can enable usage of Trusted Platform Modules (TPMs) by LUKS which may help meet more of these requirements. |
 | Secure boot | Secure boot validates the bootloader, kernel and kernel modules. However, some boot-related files are not protected by default and could be modified by an attacker to tamper with the boot process. Hardening of the boot process can help mitigate the risk.<br><br>Ubuntu does not use any dedicated hardware to protect its disk encryption keys. If an attacker can get physical access to the device, they can perform an offline brute-force attack to recover the encryption password.<br><br>Encryption keys protecting sensitive data remain available to an attacker when the device is locked. This means that if the device is attacked while powered on and locked, keys and data on the device may be compromised without the attacker knowing the password. |
 | External interface protection | Whilst not specific to Ubuntu itself, many devices which can run Ubuntu have external interfaces which permit Direct Memory Access (DMA) from connected peripherals. This presents a local attacker with an opportunity to exfiltrate keys and data.<br><br>Software configuration of the FireWire and Thunderbolt interfaces can reduce the risk for these interfaces.  As of 18.04.1 this can be managed through the settings UI. |
-
----
 
 ## Administrators' deployment guide
 
@@ -51,9 +47,9 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 | --- | --- |
 | Data at rest | Use LUKS/dm-crypt to provide full volume encryption. |
 | --- | --- |
-| Authentication | The user has a different password to authenticate themselves to the device once they have entered the decryption password.<br><br>Alternatively, the user can implicitly authenticate to the device by decrypting the disk at boot time with their LUKS/dm-crypt password. This password unlocks a key which encrypts certificates and other credentials, giving access to enterprise services.<br><br>The user should be required to authenticate to the device in line with your organisation’s authentication policy (see [Authentication Policy](https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/authentication-policy)). |
+| Authentication | The user has a different password to authenticate themselves to the device once they have entered the decryption password.<br><br>Alternatively, the user can implicitly authenticate to the device by decrypting the disk at boot time with their LUKS/dm-crypt password. This password unlocks a key which encrypts certificates and other credentials, giving access to enterprise services.<br><br>The user should be required to authenticate to the device in line with your organization’s authentication policy (see [Authentication Policy](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/authentication-policy)). |
 | --- | --- |
-| Secure boot | Enable secure boot. Ubuntu validates the boot process but does not verify all boot-related files against tampering. Security benefit can be obtained by applying the configuration given in the [Recommended Policies and Settings section below](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#Policies), but this will not fully satisfy the secure boot recommendation. |
+| Secure boot | Enable secure boot. Ubuntu validates the boot process but does not verify all boot-related files against tampering. Security benefit can be obtained by applying the configuration given in the [Recommended Policies and Settings section below](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#Policies), but this will not fully satisfy the secure boot recommendation. |
 | --- | --- |
 | Platform integrity and application sandboxing | These requirements are met implicitly by the platform. Where available, [AppArmor](https://wiki.ubuntu.com/AppArmor) profiles limit applications’ access to the platform. Other applications can be configured to use AppArmor if required. Snap applications run confined in a [restricted sandbox](https://docs.ubuntu.com/core/en/guides/intro/security). |
 | --- | --- |
@@ -63,9 +59,9 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 | --- | --- |
 | Security policy enforcement | The enforcement of security policies will be conducted by various operating system components and third-party products, based upon configuration files contained in specific directories. These include Policy Kit rules, `DConf` settings, `PackageKit` rules, `gksu` settings and `gksudo` settings.<br><br>These configuration changes can be managed centrally from a Software Configuration Management server by using custom Ubuntu packages or deploying suitable configuration files.<br><br>Settings applied by the administrator cannot be modified by the user. |
 | --- | --- |
-| External interface protection | Interfaces can be configured using standard platform configuration files.<br><br>DMA is possible from some external interfaces including FireWire and Thunderbolt, as of 18.04.1. These interfaces can be managed through the settings UI. It is advisable to procure hardware which does not have external DMA interfaces present. If that’s not possible, we recommend [disabling the SBP-2 FireWire protocol](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#ext) and configuring a restrictive security level for Thunderbolt version 2 and above. |
+| External interface protection | Interfaces can be configured using standard platform configuration files.<br><br>DMA is possible from some external interfaces including FireWire and Thunderbolt, as of 18.04.1. These interfaces can be managed through the settings UI. It is advisable to procure hardware which does not have external DMA interfaces present. If that’s not possible, we recommend [disabling the SBP-2 FireWire protocol](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#ext) and configuring a restrictive security level for Thunderbolt version 2 and above. |
 | --- | --- |
-| Device updates | Operating system security updates can be configured to be automatically applied. Using the [recommended software update settings](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#softup), application updates are installed automatically when the device is switched on and fully booted. Snap applications are automatically updated by default multiple times a day. Additionally [Canonical LivePatch](https://www.ubuntu.com/server/livepatch) can be configured to dynamically patch the kernel at runtime, otherwise kernel updates are effective upon restart. |
+| Device updates | Operating system security updates can be configured to be automatically applied. Using the [recommended software update settings](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#softup), application updates are installed automatically when the device is switched on and fully booted. Snap applications are automatically updated by default multiple times a day. Additionally [Canonical LivePatch](https://www.ubuntu.com/server/livepatch) can be configured to dynamically patch the kernel at runtime, otherwise kernel updates are effective upon restart. |
 | --- | --- |
 | Event collection | By default, the majority of applications on Ubuntu will use RSyslog to output event logs. RSyslog can forward logs to a remote server which is most reliable when using TCP or the RELP protocol and can be secured with TLS encryption. RSyslog can also be configured to queue log messages when the remote server is unavailable and flush this queue to disk when the system is shutdown. This can avoid messages being discarded when connectivity to the central log server is unavailable.<br><br>Additional auditing can also be performed with `auditd` for specific events of interest to an administrator. |
 | --- | --- |
@@ -77,11 +73,11 @@ To meet the principles outlined in the [End User Devices Security Framework](ht
 
 All remote or mobile working scenarios should use a typical remote access architecture with a VPN terminating into an access layer (or DMZ). The following network diagram describes this set up. 
 
-![](https://www.ncsc.gov.uk/static-assets/images/Ubuntu_PSN.PNG)
+![](/static-assets/images/Ubuntu_PSN.PNG)
 
 **Preparation for deployment** 
 
-It is possible to deploy Ubuntu with the recommended configuration either via a Software Configuration Management (SCM) service or to deploy this configuration with the installer [“preseed” file](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) and the [post-install script](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) provided with this guidance.
+It is possible to deploy Ubuntu with the recommended configuration either via a Software Configuration Management (SCM) service or to deploy this configuration with the installer [“preseed” file](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) and the [post-install script](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#files) provided with this guidance.
 
 An automated deployment and SCM service are recommended to manage a large number of machines with differing requirements from a central location. Deployment by manually preseeding the installer and running a post-install script can be sufficient for small scale deployments.
 
@@ -97,7 +93,7 @@ If using a Software Configuration Management (SCM) service, the following steps 
 
 ### **Device provisioning steps**
 
-The following steps detail how to provision Ubuntu 18.04 LTS using the [preseed install file](https://www.ncsc.gov.uk/static-assets/documents/ubuntu_seed_.txt) and the [post-install script](https://www.ncsc.gov.uk/static-assets/documents/ubuntu1804_post_install.sh_.txt) provided with this guide. It is assumed that the preseed file and the post-install script are hosted on the network. As an example we will use the following URLs:
+The following steps detail how to provision Ubuntu 18.04 LTS using the [preseed install file](/static-assets/documents/ubuntu_seed_.txt) and the [post-install script](/static-assets/documents/ubuntu1804_post_install.sh_.txt) provided with this guide. It is assumed that the preseed file and the post-install script are hosted on the network. As an example we will use the following URLs:
 
 -   [https://provisioning.example.com/ubuntu.seed](https://provisioning.example.com/ubuntu.seed)
 -   [https://provisioning.example.com/post-install.sh](https://provisioning.example.com/post-install.sh)
@@ -158,11 +154,9 @@ b) Alternatively, if using an SCM, manually register the device with the SCM. It
 
 3\. Ubuntu’s graphical installer will be launched. The installer will only prompt for settings not included in the preseed file.
 
-##### **\*\* IT IS POSSIBLE TO CUSTOMISE THE PARTITIONING LAYOUT BY FOLLOWING THE INSTRUCTIONS IN THE “### PARTITIONING ###” SECTION OF THE PROVIDED** [**PRESEED FILE**](https://www.ncsc.gov.uk/static-assets/documents/ubuntu_seed_.txt)**.**
+##### **\*\* IT IS POSSIBLE TO CUSTOMISE THE PARTITIONING LAYOUT BY FOLLOWING THE INSTRUCTIONS IN THE “### PARTITIONING ###” SECTION OF THE PROVIDED** [**PRESEED FILE**](/static-assets/documents/ubuntu_seed_.txt)**.**
 
-##### **\*\*\* EXAMPLE COMMANDS ARE PROVIDED IN THE “### POST INSTALLATION COMMANDS ###” SECTION OF THE** [**PRESEED INSTALLATION FILE**](https://www.ncsc.gov.uk/static-assets/documents/ubuntu_seed_.txt)**.**
-
----
+##### **\*\*\* EXAMPLE COMMANDS ARE PROVIDED IN THE “### POST INSTALLATION COMMANDS ###” SECTION OF THE** [**PRESEED INSTALLATION FILE**](/static-assets/documents/ubuntu_seed_.txt)**.**
 
 ## Recommended policies and settings
 
@@ -172,9 +166,9 @@ Remember, any guidance points given here are recommendations - they are not mand
 
 ### **Authentication policy**
 
-Your organisation should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use the published [password guidance](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach) to help inform any password policy. An administrator should configure the relevant on-device settings in line with your authentication policy. 
+Your organization should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use the published [password guidance](/collection/passwords/updating-your-approach) to help inform any password policy. An administrator should configure the relevant on-device settings in line with your authentication policy. 
 
-For further guidance on defining an authentication policy, see the [EUD Security Guidance introduction](https://www.ncsc.gov.uk/collection/end-user-device-security).
+For further guidance on defining an authentication policy, see the [EUD Security Guidance introduction](/collection/end-user-device-security).
 
 The password requirements in Ubuntu Desktop can be configured in the `/etc/login.defs` file and via the Pluggable Authentication Module (PAM),
 
@@ -216,13 +210,11 @@ sudo dconf update
 
 For further information about configuring and locking down Gnome settings, refer [to the Gnome documentation](https://help.gnome.org/admin/system-admin-guide/stable/dconf-lockdown.html.en).
 
----
-
 ## Boot process hardening
 
-When Secure Boot is enabled, the boot chain is verified from UEFI down to the GRUB bootloader, the Linux kernel and the modules loaded by the kernel. While this provides mitigation against unauthorised changes to the boot process, in its default configuration, Ubuntu does not protect against all changes of boot-related files. For example, an attacker can modify the contents of the `grub.cfg` file.
+When Secure Boot is enabled, the boot chain is verified from UEFI down to the GRUB bootloader, the Linux kernel and the modules loaded by the kernel. While this provides mitigation against unauthorized changes to the boot process, in its default configuration, Ubuntu does not protect against all changes of boot-related files. For example, an attacker can modify the contents of the `grub.cfg` file.
 
-To minimise the risk of unauthorised changes to the boot process, consider implementing all of the following mitigations:
+To minimize the risk of unauthorized changes to the boot process, consider implementing all of the following mitigations:
 
 1.  Configure UEFI with no support for legacy BIOS and legacy boot option, and ensure Secure Boot is enabled
 2.  Configure a UEFI administration/setup password so that the UEFI configuration cannot be changed
@@ -266,8 +258,6 @@ For further information about working with Secure Boot in Ubuntu and using third
 -   [https://blog.ubuntu.com/2017/08/11/how-to-sign-things-for-secure-boot](https://blog.ubuntu.com/2017/08/11/how-to-sign-things-for-secure-boot)
 -   [https://wiki.ubuntu.com/UEFI/SecureBoot/DKMS](https://wiki.ubuntu.com/UEFI/SecureBoot/DKMS)
 
----
-
 ## Software management and automatic updates
 
 Ubuntu 18.04 LTS supports installation of software using DEB packages (via the APT package manager) and using snaps.
@@ -276,9 +266,9 @@ The two packaging formats can co-exist in the same environment, however they dif
 
 The snap packages are self-contained application binaries and they include any dependencies needed to run. A snap package will install to its own directory and it will run in application confinement, hence access to the system resources is restricted based on snap-specific security policies such as AppArmor profiles and seccomp filters.
 
-Authorised snap packages are available through the Ubuntu Store. When a snap is uploaded on the Ubuntu Store, it undergoes automatic reviews, which involve examining the snap package’s manifest files to verify the libraries used as well as the requested interfaces by reviewing the associated security policy. Where a known security issue affects a library in a snap, the developer is automatically informed that the snap requires an update. Applications that do not update in a timely manner can be removed from the store. Auditing is also configured for the installed application to ensure logging of unauthorised operations.
+Authorised snap packages are available through the Ubuntu Store. When a snap is uploaded on the Ubuntu Store, it undergoes automatic reviews, which involve examining the snap package’s manifest files to verify the libraries used as well as the requested interfaces by reviewing the associated security policy. Where a known security issue affects a library in a snap, the developer is automatically informed that the snap requires an update. Applications that do not update in a timely manner can be removed from the store. Auditing is also configured for the installed application to ensure logging of unauthorized operations.
 
-In order to ensure that the installation of snap packages does not introduce any risk to the security posture of your system, it is recommended that snap packages are only installed from the authorised Ubuntu Store and from trusted developers.
+In order to ensure that the installation of snap packages does not introduce any risk to the security posture of your system, it is recommended that snap packages are only installed from the authorized Ubuntu Store and from trusted developers.
 
 An additional security concern arises from the fact that the snap packages can bundle their own versions of system libraries, so they will not depend on the installation of other packages or libraries. In the event that a vulnerability in a system library is discovered, any snap packages that include the affected system library as a dependency will be vulnerable until the snap package’s developers push a secure version of the package. In traditional deployments i.e. using DEB packages, this would have been resolved when the distribution released security updates addressing the vulnerable system library.
 
@@ -306,7 +296,7 @@ Additional configuration settings are available in `/etc/apt/apt.conf.d/50unatte
 
 The upgrade schedule is managed via a `systemd` timer.
 
-The restriction that removes all executable permissions under `/tmp` (as mentioned in the “[Software restriction](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#rest)” section) may cause issues with the update process. When updates are running, the service may use the `/tmp` directory to store and execute files. To bypass this issue, the following lines can be added to `/etc/apt/apt.conf.d/99tmpexec`:
+The restriction that removes all executable permissions under `/tmp` (as mentioned in the “[Software restriction](/collection/end-user-device-security/platform-specific-guidance/ubuntu-18-04-lts#rest)” section) may cause issues with the update process. When updates are running, the service may use the `/tmp` directory to store and execute files. To bypass this issue, the following lines can be added to `/etc/apt/apt.conf.d/99tmpexec`:
 
 DPkg::Pre-Invoke{"mount -o remount,exec /tmp";}; DPkg::Post-Invoke {"mount -o remount /tmp";};
 
@@ -352,8 +342,6 @@ The status and configuration of Livepatch can be verified with the following com
 
 sudo canonical-livepatch status --verbose sudo canonical-livepatch config
 
----
-
 ## Software restriction
 
 A separate partition should be created for 
@@ -398,8 +386,6 @@ If shell access is not required it can be disabled. To do this, before creating 
 
 \# Disable shell access. sed -ie '/^SHELL=/ s/=.\*\\+/=\\/usr\\/sbin\\/nologin/' /etc/default/useradd sed -ie '/^DSHELL=/ s/=.\*\\+/=\\/usr\\/sbin\\/nologin/' /etc/adduser.conf
 
----
-
 ## User setup
 
 The default Ubuntu installer, Ubiquity, will create a user account during install. For the recommended configuration this user account should be considered to be the administrator of the system and not be assigned to the end user of the device. This user account will have sudo access with which it can perform administration tasks.
@@ -413,8 +399,6 @@ Remove read access to user home directories and set a more secure default umask
 -   In /etc/login.defsensure the line UMASK setting is set to 077. This configures the default permissions of new files to be accessible only by the owner of the file.
 
 \# Protect home directories sed -ie '/^DIR\_MODE=/ s/=\[0-9\]\*\\+/=0700/' /etc/adduser.conf sed -ie '/^UMASK\\s\\+/ s/022/077/' /etc/login.defs
-
----
 
 ## Privacy
 
@@ -458,11 +442,9 @@ Then run
 
 The "Connectivity Checker" sends pings to a Canonical server to check if it's online. This is enabled by default and can be turned off in the privacy section of the settings menu.  Alternatively, it can be configured to ping a different server by editing `/usr/lib/NetworkManager/conf.d/20-connectivity-ubuntu.conf.`
 
----
-
 ## VPN
 
-Use a Prime or Foundation Grade IPsec VPN client to provide data-in-transit protection in line with the [Using IPsec to protect data](https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data) guidance.
+Use a Prime or Foundation Grade IPsec VPN client to provide data-in-transit protection in line with the [Using IPsec to protect data](/guidance/using-ipsec-protect-data) guidance.
 
 Recommended IPsec profile configuration summary:
 
@@ -500,8 +482,6 @@ The `resolvconf` package can be installed and used to perform automated config
 
 \* Adjustments to the Apparmor policy for StrongSwan’s charon daemon may be required depending on the configuration.
 
----
-
 ## Firewall
 
 The firewall should be enabled and configured to block incoming connections.
@@ -526,11 +506,9 @@ sudo apt-get install -y iptables-persistent
 
 The post-install script provided with this guide enables the firewall using ufw with the default policy that allows outgoing connections and denies all incoming connections.
 
----
-
 ## Other considerations
 
-The following points are in addition to the common organisational considerations, and contain specific issues for Ubuntu deployments.
+The following points are in addition to the common organizational considerations, and contain specific issues for Ubuntu deployments.
 
 #### **Application whitelisting**
 
