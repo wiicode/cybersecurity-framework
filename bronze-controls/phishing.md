@@ -2,10 +2,10 @@
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
 published: true
-date: 2021-06-30T02:58:23.121Z
-tags: bronze, bronze-controls, phishing
+date: 2021-06-30T19:37:47.841Z
+tags: bronze, bronze-controls, email
 editor: markdown
-dateCreated: 2021-06-02T15:04:32.010Z
+dateCreated: 2021-06-30T19:37:47.841Z
 ---
 
 **Phishing attacks: defending your** ***organization*** provides a multi-layered set of mitigations to improve your *organization*'s resilience against phishing attacks, while minimising disruption to user productivity. The *defenses* suggested in this guidance are also useful against other types of cyber attack, and will help your *organization* become more resilient overall.
