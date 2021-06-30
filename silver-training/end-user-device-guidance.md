@@ -2,7 +2,7 @@
 title: End user device (EUD) security guidance
 description: Guidance for organizations deploying a range of end user device platforms as part of a remote working solution
 published: true
-date: 2021-06-30T02:53:37.950Z
+date: 2021-06-30T03:00:00.314Z
 tags: silver, device-management, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:05:36.507Z
@@ -185,7 +185,7 @@ When deciding which MDM to use with your deployment, there are several key consi
 Ensure that the selected MDM product can enforce the security policies that are recommended in the per-product security guidance. The range of capabilities varies between devices, so check that the MDM product can support all the platforms used by your organization.
 
 ### Product security
-MDM products are attractive targets for attackers. If they are able to compromise the MDM server an attacker will be able to perform remote administration and password resets on all enrolled devices. Compounding this, MDM servers are often placed in internet-accessible locations within the corporate network, directly exposing them to external attackers. Consequently, the reliability, robustness and security practices of the MDM product are extremely important.
+MDM products are attractive targets for attackers. If they are able to compromise the MDM server an attacker will be able to perform remote administration and password resets on all enrollled devices. Compounding this, MDM servers are often placed in internet-accessible locations within the corporate network, directly exposing them to external attackers. Consequently, the reliability, robustness and security practices of the MDM product are extremely important.
 
 When choosing an MDM product, consider its development lifecycle and your resultant confidence in the security of the product. Is there a good track record of fixing security issues? Are security incident management procedures in place to handle future problems? MDM products can be independently evaluated and certified to Foundation Grade, and details of such products can be found in the CPA certified products list.
 
@@ -193,7 +193,7 @@ When choosing an MDM product, consider its development lifecycle and your result
 Many MDM product vendors offer hosted versions of their product. Using cloud-based MDM products may decrease costs, but can increase risk. For example, other users of cloud services may be able to more easily attack or degrade the management service for your devices. If you’re considering using cloud-based MDM services, read the Cloud Security Guidance for information on managing the risks associated with using public cloud services.
 
 ### Bring Your Own Device (BYOD)
-Whilst ownership of a device makes many information security aspects much simpler, it is not a prerequisite of this guidance. What is necessary is that the device is placed under the management authority of the organization for the complete duration it is permitted to access the organization’s information.
+While ownership of a device makes many information security aspects much simpler, it is not a prerequisite of this guidance. What is necessary is that the device is placed under the management authority of the organization for the complete duration it is permitted to access the organization’s information.
 
 To ensure information security when using devices not owned by the organization, they should take control of device management at the point of provisioning, ensuring that the device is placed into a ‘known good’ state prior to allowing it to access information. Limitations of current technology mean that a ‘health check’ or ‘device status’ check is not sufficient to verify ‘known good’ - malware can easily subvert such a check. If possible, consider returning to an understood state such as by a firmware reinstall or wipe to factory state and replacing any existing configuration on it.
 
@@ -271,7 +271,7 @@ Keys or tokens are often short-lived credentials used to provide access to a ser
 
 ---
 
-These authentication mechanisms should be chosen and combined in a way which maximizes the usability of a device, whilst offering appropriate security.
+These authentication mechanisms should be chosen and combined in a way which maximizes the usability of a device, while offering appropriate security.
 
 For example a single user to device password authentication mechanism can be used, which subsequently allows access to a token or certificate used for time bounded device or service authentication.
 
@@ -317,7 +317,7 @@ Our recommendation is that IPsec be used for VPN access. IPsec is an open standa
 
 As an IPsec VPN client is built in to many operating systems, no additional products are required to deploy a VPN. However, some networks restrict or block IPsec traffic, so your EUDs may, in certain situations, be unable to create the VPN connection.
 
-TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely interoperate, so you will need to use both from the same vendor – whilst TLS is standardized in a variety of RFCs, exactly how those protocols are used to create a VPN is not. However, TLS VPN connections tend to be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
+TLS VPNs can also be used, though you will likely need to use a third-party client and server. In addition, products from different vendors will rarely interoperate, so you will need to use both from the same vendor – while TLS is standardized in a variety of RFCs, exactly how those protocols are used to create a VPN is not. However, TLS VPN connections tend to be more reliable when traversing Network Address Translation (NAT) devices, or enterprise firewalls.
 
 From a security perspective, with all other things equal, there is very little difference in risk between using an IPsec and a TLS VPN.
 
@@ -349,7 +349,7 @@ VPNs need to be established in order to provide benefits, remain connected while
 - Triggered VPNs are brought up whenever certain network connections from a defined list are made (internal intranet sites, for example)
 - Manual VPNs require the user of the device to initiate the VPN by explicitly deciding to take an action (such as launching an application and clicking connect). The user will likely need to take this step again if the connection drops during or after use
 
-> **Note**: We distinguish automatic from forced (in the previous section) because on some platforms it is possible for the user to disable the automatic VPN, whilst the platform still enforces VPN routing. This effectively prevents network connections from the device until the user re-enables automatic connections.
+> **Note**: We distinguish automatic from forced (in the previous section) because on some platforms it is possible for the user to disable the automatic VPN, while the platform still enforces VPN routing. This effectively prevents network connections from the device until the user re-enables automatic connections.
 > Depending on whether the VPN is forced or optional, choosing between automatic, triggered and manual could be a usability decision rather than security. If the VPN is forced but the initiation is manual, this will be a poor user experience as the device will not have any connectivity until the user manually starts the VPN. Conversely, if the VPN is optional, and the initiation is manual, then there is a risk of compromise from local attackers on an untrusted network, during the period when the device is not connected.
 {.is-warning}
 
@@ -363,7 +363,7 @@ However, if deploying in this way, you need to define all the applications you w
 BCSF’s per-platform EUD guidance recommends - and provides a configuration for - setting up a full-device VPN. Using a per-app VPN increases the risk that sensitive data may be sent outside the VPN by an application that is not included in a per-app VPN, or by a misconfiguration in the platform.
 
 ### Split tunnelling
-Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, whilst other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
+Like a per-app VPN, split tunnelling is a way of having some traffic use the VPN, while other traffic is permitted direct connectivity. This is generally achieved by only defining certain network routes (e.g. internal IP address ranges) as available via the VPN. The default gateway for all other traffic is then left as a direct connection.
 
 This is generally used when the VPN is providing access to internal services on a corporate network, without attempting to prevent other connections. For example, high-bandwidth applications could be permitted direct access to the internet without being routed via corporate infrastructure to save on bandwidth costs. And, as with per-app VPNs, latency-sensitive applications, such as a secure voice client, could minimize network latency by connecting directly.
 
