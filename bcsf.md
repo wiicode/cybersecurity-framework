@@ -8,30 +8,29 @@ editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
 ---
 
-> BCSF defines the best practices an organization follows to manage its cybersecurity risk for small organizations engaged in professional services. It is primarily developed from managed information technology service practices for legal, financial, retail, industrial, veterinary, and professional service companies.  
+> BCSF defines the best practices an organization follows to manage its cybersecurity risk for small organizations engaged in professional services. It is primarily developed from managed information technology service practices for legal, financial, retail, industrial, veterinary, and professional service companies.
 {.is-success}
 
 # General introduction
-> **BENTO:GUIDES** is the publishing platform for accessing **Bento Cyber Security Framework** and all supporting materials.  
+> **BENTO:GUIDES** is the publishing platform for accessing **Bento Cyber Security Framework** and all supporting materials.
 {.is-info}
 
-Bento Cyber Security Framework (BCSF) is an applied framework for small business cyber security. It is developed to help companies protect data, retain employees, and build trust with customers and vendors. 
+Bento Cyber Security Framework (BCSF) is an applied framework for small business cyber security. It is developed to help companies protect data, retain employees, and build trust with customers and vendors.
 
-BCSF recognizes the diversity among organizations. Each businesses will have different needs and requirements based on a number of factors. BCSF is meant to apply to any organization looking to build a cybersecurity program. 
+BCSF recognizes the diversity among organizations. Each businesses will have different needs and requirements based on a number of factors. BCSF is meant to apply to any organization looking to build a cybersecurity program.
 
-BCSF draws extensively on `CIS, NIST SP800-17, NIST 800-53, and ISO/IEC 27001` for developing BCSF and associated guidance. 
+BCSF draws extensively on `CIS, NIST SP800-17, NIST 800-53, and ISO/IEC 27001` for developing BCSF and associated guidance.
 
 As an applied framework, BCSF provides the general structure and specific guidance through supporting content. BCSF is designed to meet three key criteria:
-1. **Adoptable**:  developed with business owners in mind, the framework is written for boards, owners, and managers.  No technical knowledge necessary to understand the principles. 
+1. **Adoptable**:  developed with business owners in mind, the framework is written for boards, owners, and managers.  No technical knowledge necessary to understand the principles.
 2. **Actionable**: extended by **BENTO:GUIDES**, BCSF allows companies to easily access the framework and supporting materials for implmentation.
 3. **Affordable**: cyber security is an investment of time, resources, and energy.  BCSF focuses on resiliency mechanisms that are high value and can be efficiently implemented at the small business level.
 
 # BCSF Principles
-BCSF encourages you look at each problem or task with these four key principles in mind: 
-- [Be Mindful *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/emplotee/vendor having a bad moment, a bad experience, or worse.*](#)
-- [Be Methodical *When process exists - follow it every time.  Don’t let the pressures of time and noise distract you from process and methods.*](#)
-- [Be Curious *Take time to educate yourself, access documentation, and become familiar with the policy, process, and security documents your organization has made avaialble.*](#)
-- [Be Humble *Recognize that cybersecurity is a dynamic field and requires perpetual education, retrospection, and adjustment.*](#)
+BCSF encourages you look at each problem or task with these four key principles in mind:
+- [Be Mindful ------------------------------------- *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/emplotee/vendor having a bad moment, a bad experience, or worse.*](#)
+- [Be Methodical ------------------------------------- *When process exists - follow it every time.  Don’t let the pressures of time and noise distract you from process and methods.*](#)
+- [Be Curious ------------------------------------- *Take time to educate yourself, access documentation, and become familiar with the policy, process, and security documents your organization has made avaialble.*](#)
 {.links-list}
 
 
@@ -80,7 +79,7 @@ Following a standardized risk management approach can help in achieving good cyb
 
 | |Your organization must incorporate into the ISMS any relevant external requirements, for example direction from a regulator.  You should also set appropriate cyber security requirements for your supply chain to ensure their support in achieving yourcyber security and resilience objectives (see A4 Supply Chain Security).|
 
-#### Section References 
+#### Section References
 {.grid-list}
 - [BCSF Introduction to Security Governance](/bronze-training/background-topics/risk-1-intro)
 - [BCSF Board Toolkit](/bronze-training/background-boards)
@@ -107,14 +106,14 @@ There should be a systematic process in place to ensure that identified risks ar
 ## Guidance
 Our Risk Management guidance aims to help you to choose an approach that's right for your organization. Organizations responsible for essential functions are likely to benefit from a combination of a system-based approach, which looks at the interactions between components of the function, and a component-driven analysis, which considers the threats, vulnerabilities, and impacts relevant to particular critical components.
 
-Your organization should choose a method or framework for managing risk that fits with the organization's business and technology needs. 
+Your organization should choose a method or framework for managing risk that fits with the organization's business and technology needs.
 
 Whichever approach you choose, the scope of your program must include all systems relevant to the operation of essential functions. Simply following the minimum requirements of a standard or applying blanket controls across the organization is unlikely to adequately manage risks to critical systems.
 
 Where industrial control and automation systems are in scope of the essential function, you should keep in mind that controls suitable for managing risks on the corporate IT network may be inappropriate or damaging in an operational technology environment. These systems will likely require a more tailored approach, and some frameworks and standards address specific concerns relating to such systems.
 
 
-#### Section References 
+#### Section References
 {.grid-list}
 - [BCSF Risk Management Guidance](/bronze-training/background-topics/risk-1-intro)
 - [BCSF Assurance](/bronze-training/background-topics/cloud-security-2-confidence)
@@ -185,7 +184,7 @@ Organzations responsible for essential functions need to ensure that when third 
 - Ensure that any network connections or data sharing with third parties do not introduce unmanaged vulnerabilities that have the potential to affect the security of the essential function.
 - Confidence that third party suppliers are trustworthy such that malicious attempts to subvert the security of products or systems that could affect the essential function are managed.
 
-#### Section References 
+#### Section References
 {.grid-list}
 - [BCSF Supply Chain Security](/bronze-training/background-advanced/10-steps-risk-supply-chain-security)
 - [BCSF Advanced Security Principle 8: Supply Chain Security](/silver-training/cloudsecurity-8-supplychain)
@@ -246,7 +245,7 @@ Suitable data and metrics should be defined prior to implementation to evaluate 
 ### Improving policies and processes
 Cyber security and resilience policies and processes should be designed to be adaptable, to fit the needs of the changing environment. organizations should regularly review their policies and processes in light of any recorded security breaches so that these documents and the organization’s security can be continually improved.
 
-#### Section References 
+#### Section References
 {.grid-list}
 - [SANS blog on security costs to people](https://www.sans.org/blog/managing-human-risk-start-with-the-risks/)
 - [SANS Policy Templates](https://www.sans.org/information-security-policy/)
@@ -445,7 +444,7 @@ You should prevent the exploitation of known vulnerabilities in networks and inf
 - regular vulnerability and security assessments, e.g. penetration tests and vulnerability scans. BCSF guidance on penetration testing provides further detail. Operators should carefully consider their approach to the testing of live Operational Technology, as system operation or availability could be affected. Assurance could be gained without this additional risk by testing against non-operational environments or by testing individual components in a laboratory environment.
 - software that the essential function relies upon should be in active support, so vulnerabilities will be patched. You should provide additional protection where obsolete platforms cannot be easily replaced.
 
-#### Section References 
+#### Section References
 {.grid-list}
 - [BCSF Common Cyber Attacks: Reducing the Impact](/bronze-training/background-boards/board-planning-response)
 - [BCSF Mitigating malware](/silver-training/mitigating-ransomware)
@@ -657,7 +656,7 @@ The aim is to build on what is known of past attacks to hypothesize what new or 
 
 The science of anomaly detection, which goes beyond using pre-defined or prescriptive pattern matching, is a challenging but growing area. Capabilities like machine learning are increasingly being shown to have applicability and potential in the field of intrusion detection. However, if they are not well designed and executed, these technologies can be expensive, difficult to implement and can produce high false-alarm rates. organizations that want to use such tools should consult the BCSF's guidance on Intelligent Security Tools.
 
-# Humble response and recovery planning (D.1)
+# Methodical response and recovery planning (D.1)
 > Putting suitable incident management and mitigation processes in place.
 {.is-info}
 
@@ -733,7 +732,7 @@ Further guidance is found in Section 3 of NIST Computer Security Incident Handli
 
 
 
-# Humble lessons learned (D.2)
+# Curious lessons learned (D.2)
 > Learning from incidents and implementing these lessons to improve the resilience of essential functions.
 {.is-info}
 
@@ -786,8 +785,3 @@ In determining adequate retention periods, you should consider how effective you
 - [ISO 27035:2016 - Principles of Incident Management](#)
 - [Section 3 NIST Computer Security Incident Handling Guide](#)
 {.links-list}
-
-
-
-
-
