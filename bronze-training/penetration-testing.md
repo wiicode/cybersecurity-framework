@@ -2,39 +2,35 @@
 title: Penetration Testing
 description: 
 published: true
-date: 2021-06-30T21:44:46.870Z
+date: 2021-06-30T21:45:19.980Z
 tags: bronze, assurance
 editor: markdown
 dateCreated: 2021-06-30T21:44:37.593Z
 ---
 
-Penetration testing is a core tool for *analysing* the security of IT systems, but it's not a magic bullet.
+Penetration testing is a core tool for *analyzing* the security of IT systems, but it's not a magic bullet.
 
 This guidance will help you understand the proper commissioning and use of penetration tests. It will also help you to plan your routine security measures so that you gain maximum benefit from this powerful but expensive operation.
-
----
 
 ## What is penetration testing?
 
 For the purposes of this article, we will define penetration testing as: "A method for gaining assurance in the security of an IT system by attempting to breach some or all of that system's security, using the same tools and techniques as an adversary might."
 
-Penetration testing should be viewed as a method for gaining assurance in your *organisation*'s vulnerability assessment and management processes, not as a primary method for identifying vulnerabilities.
+Penetration testing should be viewed as a method for gaining assurance in your *organization*'s vulnerability assessment and management processes, not as a primary method for identifying vulnerabilities.
 
 A penetration test should be thought of as similar to a financial audit. Your finance team tracks expenditure and income day to day. An audit by an external group ensures that your internal team's processes are sufficient.
-
----
 
 ## Pen Testing: The ideal
 
 In an ideal world, you should know what the penetration testers are going to find, before they find it. Armed with a good understanding of the vulnerabilities present in your system, you can use third-party tests to verify your own expectations.
 
-Highly experienced penetration testers may find subtle issues which your internal processes have not picked up, but this should be the exception, not the rule. The aim should always be to use the findings of a penetration test report to improve your *organisation*'s internal vulnerability assessment and management processes.
+Highly experienced penetration testers may find subtle issues which your internal processes have not picked up, but this should be the exception, not the rule. The aim should always be to use the findings of a penetration test report to improve your *organization*'s internal vulnerability assessment and management processes.
 
 ### **What should a penetration test tell you?**
 
 Typically, penetration tests are used to identify the level of technical risk emanating from software and hardware vulnerabilities. Exactly what techniques are used, what targets are allowed, how much knowledge of the system is given to the testers beforehand and how much knowledge of the test is given to system administrators can vary within the same test regime.
 
-A [well-scoped](https://www.ncsc.gov.uk/guidance/penetration-testing#scope) penetration test can give confidence that the products and security controls tested have been configured in accordance with good practice and that there are no common or publicly known vulnerabilities in the tested components, *at the time of the test*.
+A [well-scoped](/guidance/penetration-testing#scope) penetration test can give confidence that the products and security controls tested have been configured in accordance with good practice and that there are no common or publicly known vulnerabilities in the tested components, *at the time of the test*.
 
 ### **What sort of system should be tested?**
 
@@ -42,17 +38,15 @@ Penetration Testing is an appropriate method for identifying the risks present o
 
 For product-specific testing, it is not an appropriate technique.
 
----
-
 ## Using penetration testing effectively
 
-A penetration test can only validate that your *organisation*'s IT systems are not vulnerable to *known issues* *on the day of the test*.
+A penetration test can only validate that your *organization*'s IT systems are not vulnerable to *known issues* *on the day of the test*.
 
 It's not uncommon for a year or more to elapse between penetration tests. So, vulnerabilities could exist for long periods of time without you knowing about them if this is your only means of validating security.
 
 Third party penetration tests should be performed by qualified and experienced staff only. By their nature, penetration tests cannot be entirely procedural, an exhaustive set of test cases cannot be drawn up. Therefore, the quality of a penetration test is closely linked to the abilities of the penetration testers involved.
 
-The *NCSC* recommends that HMG organisations use testers and companies which are part of the CHECK scheme. Non-governmental organisations should use teams qualified under one of these certification schemes: [CREST](http://www.crest-approved.org/), [Tiger scheme](https://www.tigerscheme.org/), [Cyber Scheme](https://www.thecyberscheme.org/).
+The *BCSF* recommends that HMG organizations use testers and companies which are part of the CHECK scheme. Non-governmental organizations should use teams qualified under one of these certification schemes: [CREST](http://www.crest-approved.org/), [Tiger scheme](https://www.tigerscheme.org/), [Cyber Scheme](https://www.thecyberscheme.org/).
 
 ### **Types of testing**
 
@@ -62,20 +56,20 @@ Penetration testers can be used to perform a wide-range of testing. The followin
 
 Tests can be carried out by testers armed with varying amounts of information about your system:
 
--   ***Whitebox testing -*** Full information about the target is shared with the testers. This type of testing confirms the efficacy of internal vulnerability assessment and management controls by identifying the existence of known software vulnerabilities and common misconfigurations in an *organisation*'s systems.   
+-   ***Whitebox testing -*** Full information about the target is shared with the testers. This type of testing confirms the efficacy of internal vulnerability assessment and management controls by identifying the existence of known software vulnerabilities and common misconfigurations in an *organization*'s systems.   
      
--   ***Blackbox testing -*** No information is shared with the testers about the internals of the target. This type of testing is performed from an external perspective and is aimed at identifying ways to access an *organisation*'s internal IT assets. This more accurately models the risk faced from attackers that are unknown or unaffiliated to the target *organisation*. However, the lack of information can also result in vulnerabilities remaining undiscovered in the time allocated for testing.
+-   ***Blackbox testing -*** No information is shared with the testers about the internals of the target. This type of testing is performed from an external perspective and is aimed at identifying ways to access an *organization*'s internal IT assets. This more accurately models the risk faced from attackers that are unknown or unaffiliated to the target *organization*. However, the lack of information can also result in vulnerabilities remaining undiscovered in the time allocated for testing.
 
 #### **2\. Test type**
 
 Each of the tests described below can be run as either a blackbox or whitebox operation:
 
--   ***Vulnerability identification in bespoke or niche software -*** Most commonly used in web applications. This type of testing must give feedback to developers on coding practices which [avoid introducing the categories of vulnerability identified](https://www.ncsc.gov.uk/guidance/cloud-security-principle-7-secure-development).  
+-   ***Vulnerability identification in bespoke or niche software -*** Most commonly used in web applications. This type of testing must give feedback to developers on coding practices which [avoid introducing the categories of vulnerability identified](/guidance/cloud-security-principle-7-secure-development).  
      
 
-***Scenario driven testing aimed at identifying vulnerabilities*** - The penetration testers explore a particular scenario to discover whether it leads to a vulnerability in your *defences*. Scenario's include: Lost laptop, *unauthorised* device connected to internal network, and compromised DMZ host, but there are many others possible. You should consider, based on previous incidents, which scenarios are most relevant to your *organisation*.
+***Scenario driven testing aimed at identifying vulnerabilities*** - The penetration testers explore a particular scenario to discover whether it leads to a vulnerability in your *defenses*. Scenario's include: Lost laptop, *unauthorized* device connected to internal network, and compromised DMZ host, but there are many others possible. You should consider, based on previous incidents, which scenarios are most relevant to your *organization*.
 
-***Scenario driven testing of detection and response capability*** - In this version of scenario driven testing, the aim is to also gauge the detection and response capabilities your *organisation* has in place. This will help you understand their efficacy and coverage in the particular scenario. This is an area of current work by the *NCSC*, further information will be available shortly, please [contact us](https://www.ncsc.gov.uk/section/about-this-website/contact-us) if you have a particular need in this area.
+***Scenario driven testing of detection and response capability*** - In this version of scenario driven testing, the aim is to also gauge the detection and response capabilities your *organization* has in place. This will help you understand their efficacy and coverage in the particular scenario. This is an area of current work by the *BCSF*, further information will be available shortly, please [contact us](/section/about-this-website/contact-us) if you have a particular need in this area.
 
 Note
 
@@ -89,9 +83,7 @@ Assessing whether defined security controls are functioning is not a valuable us
 
 A functional testing plan should always include **positive tests** (such as "The logon box comes up every time you try to log in and you aren't just allowed in").
 
-**Negative testing** may be included in your functional testing plan where the skills to perform it are available within your *organisation* (for example, verifying that 'You can't log in without the correct password').
-
----
+**Negative testing** may be included in your functional testing plan where the skills to perform it are available within your *organization* (for example, verifying that 'You can't log in without the correct password').
 
 ## A model penetration test engagement
 
@@ -117,14 +109,14 @@ Scoping a penetration test should involve:
 Where the goal of the test is to ensure good vulnerability management:
 
 1.  Risk owners should outline any areas of special concern
-2.  Technical staff should outline the technical boundaries of the *organisation*'s IT estate
+2.  Technical staff should outline the technical boundaries of the *organization*'s IT estate
 3.  The penetration test team should identify what testing they believe will give a full picture of the vulnerability status of the estate
 
 Assuming you have one, a current vulnerability assessment should be shared with the testers at this stage. Testing can then be designed to support a reasonable opinion on the accuracy and completeness of the internal vulnerability assessment.
 
 #### **Special requirements**
 
-During scoping, you should outline any issues which might impact on testing. This might include the need for out-of-hours testing, any critical systems where special handling restrictions are required, or other issues specific to your *organisation*.
+During scoping, you should outline any issues which might impact on testing. This might include the need for out-of-hours testing, any critical systems where special handling restrictions are required, or other issues specific to your *organization*.
 
 #### **Plan of action**
 
@@ -162,9 +154,9 @@ The decision on which would be the preferred option will generally be down to th
 The test report should include:
 
 -   Any security issues uncovered
--   An assessment by the test team as to the level of risk that each vulnerability exposes the *organisation* or system to
+-   An assessment by the test team as to the level of risk that each vulnerability exposes the *organization* or system to
 -   A method of resolving each issue found
--   An opinion on the accuracy of your *organisation*'s vulnerability assessment
+-   An opinion on the accuracy of your *organization*'s vulnerability assessment
 -   Advice on how to improve your internal vulnerability assessment process
 
 A debriefing can also be useful. At this meeting the test team run through their findings and you can request further information or clarification of any issues.
@@ -175,7 +167,7 @@ When rating vulnerabilities it is common for penetration testers (often at custo
 
 To simplify this measurement, CHECK reports are required to state the level of risk as HIGH, MEDIUM, LOW or INFORMATIONAL in descending order of criticality. For CHECK reports, scoring systems such as [CVSS](https://www.first.org/cvss/) may be used in addition to (but not in place of) this.
 
-Whilst vulnerabilities are ordinarily categorised at one of these levels in a consistent manner, exceptions can sometimes occur. For example, other mitigating controls in place could *minimise* the effectiveness of a vulnerability, or the presence of additional vulnerabilities could have a synergistic effect.
+While vulnerabilities are ordinarily categorized at one of these levels in a consistent manner, exceptions can sometimes occur. For example, other mitigating controls in place could *minimize* the effectiveness of a vulnerability, or the presence of additional vulnerabilities could have a synergistic effect.
 
 Any deviation from associating a vulnerability with its standard rating should be documented and justified by the penetration testing team.
 
@@ -183,11 +175,11 @@ Any deviation from associating a vulnerability with its standard rating should b
 
 1.  **Do your own assessment**
 
-The penetration test report should be assessed by your *organisation*'s [vulnerability management group](https://www.ncsc.gov.uk/guidance/vulnerability-management) in a similar manner to the results of an internal vulnerability assessment.
+The penetration test report should be assessed by your *organization*'s [vulnerability management group](/guidance/vulnerability-management) in a similar manner to the results of an internal vulnerability assessment.
 
 The penetration test team will have rated each issue found and given a potential solution. However, it's important to note that *risk assessment and decisions on the application of fixes are your responsibility.*
 
-The test team may not have had access to all details about a specific system or the potential business impact of the exploitation of a vulnerability. Consequently, they may rate issues either lower or higher than you. This process of assessing vulnerability levels should not be used to downplay issues - it should be a process of looking at issues and identifying the risk to your *organisation*.
+The test team may not have had access to all details about a specific system or the potential business impact of the exploitation of a vulnerability. Consequently, they may rate issues either lower or higher than you. This process of assessing vulnerability levels should not be used to downplay issues - it should be a process of looking at issues and identifying the risk to your *organization*.
 
 **2\. Previously unknown vulnerabilities**
 
