@@ -1,11 +1,11 @@
 ---
 title: Spray you, spray me: defending against password spraying attacks
-description: H how organizations can protect users' accounts from password spraying.
+description: How organizations can protect users' accounts from password spraying.
 published: true
-date: 2021-06-30T02:57:43.405Z
-tags: guidance, bronze, passwords
+date: 2021-06-30T19:31:49.744Z
+tags: bronze, passwords
 editor: markdown
-dateCreated: 2021-05-28T03:01:09.615Z
+dateCreated: 2021-06-30T19:31:49.744Z
 ---
 
 One common way that online accounts are breached is through *password spraying*, whereby lists of a small number of common passwords are used to brute force large numbers of accounts. These attacks are successful because for any given large set of users there will likely be some who are using very common passwords, and these attacks can slip under the radar of protective monitoring which only look at each account in isolation.
