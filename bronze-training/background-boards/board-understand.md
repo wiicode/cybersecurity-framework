@@ -2,7 +2,7 @@
 title: Understanding the cyber security threat
 description: Organizations face different types of threat, so each Board's approach to cyber security will vary hugely.
 published: true
-date: 2021-06-30T02:18:00.096Z
+date: 2021-06-30T02:18:31.972Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown
 dateCreated: 2021-02-22T01:06:38.858Z
@@ -47,7 +47,7 @@ You can also gather threat intelligence internally. You will likely have experie
 
 The following questions can be used to generate productive discussions with your technical team. The aim is to identify what constitutes 'good' cyber security in terms of understanding the cyber security threat to your organization. 
 
-###   **Q1. As an** organization**, which threats do we assess are relevant to our** organization**, and why?**
+###   **Q1. As an organization**, which threats do we assess are relevant to our organization, and why?**
 
 This assessment should:
 
@@ -56,7 +56,7 @@ This assessment should:
 -   be enriched by collaboration with key partners in your sector
 -   be supported by evidence from the attacks you have experienced to date
 
-###   **Q2. As an** organization**, how do we stay up to date with the cyber threat?**
+###   **Q2. As an organization, how do we stay up to date with the cyber threat?**
 
 You might:
 
@@ -65,7 +65,7 @@ You might:
 -   be part of a sector-specific intelligence sharing group
 -   have mechanisms for sharing key cyber threat updates internally
 
-###   **Q3. As an** organization**, how do we use threat intelligence to inform business as usual (BAU)?**
+###   **Q3. As an organization, how do we use threat intelligence to inform business as usual (BAU)?**
 
 This should be a continuous cycle with threat assessments informing BAU decisions, and BAU experience informing the threat assessments. Examples might be:
 
