@@ -2,7 +2,7 @@
 title: Jira security review
 description: Atlassian Jira is an issue tracking and planning tool, primarily aimed at software development.
 published: true
-date: 2021-06-30T20:55:53.251Z
+date: 2021-06-30T20:56:15.142Z
 tags: bronze, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:53:16.691Z
@@ -22,7 +22,6 @@ dateCreated: 2021-06-30T20:53:16.691Z
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?<br><br>*The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Atlassian indicate on their CAIQ that they have a clear incident response and patching system for all their services. They also have a [responsible disclosure](https://www.atlassian.com/trust/security) program. |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Atlassian's CAIQ is available to view and they have published a list of [Trust FAQs](https://www.atlassian.com/trust/faq). |
 
----
 
 ## Exporting data
 
