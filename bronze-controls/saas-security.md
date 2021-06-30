@@ -2,7 +2,7 @@
 title: SaaS Security
 description: Guidance for organizations looking to use, deploy, and understand the risks of adopting a range of popular Software as a Service (SaaS) applications.
 published: true
-date: 2021-06-30T19:57:55.920Z
+date: 2021-06-30T21:00:16.685Z
 tags: bronze, bronze-controls, saas-security
 editor: markdown
 dateCreated: 2021-06-30T19:50:38.851Z
@@ -28,15 +28,11 @@ As our approach provides a minimum level of confidence, your [risk managemen
 # Product evaluations
 - [Basecamp security review *A security review of the Basecamp project management tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/basecamp)
 - [Confluence security review *A security review of the Confluence collaborative working tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/confluence) 
-- [G Suite security review *A security review of Google's G Suite productivity tools, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/g-suite)
+- [Google Workspace security review *A security review of Google's G Suite productivity tools, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/g-suite)
 - [Jira security review *A security review of the Jira issue tracking and planning tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/jira)
 - [MailChimp security review *A security review of MailChimp, the email service provider, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/mailchimp)
-- [Office 365 security review *A security review of Microsoft Office 365 productivity tools, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/office-365)  
+- [Office 365 security review *A security review of Microsoft Office 365 productivity tools, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/office-365) 
 - [Slack security review *A security review of the Slack real-time messaging and file sharing application, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/slack)
-- [Smartsheet security review *A security review of the Smartsheet application for managing collaborative work, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/smartsheet)
-- [Stride security review *A security review of the Stride enterprise communications tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/stride)
-- [Trello security review *A security review of the Trello Kanban-style collaboration tool, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/trello)
-- [Yammer security review *A security review of Yammer, an enterprise social networking service, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/yammer)  
 - [Zendesk security review *A security review of Zendesk, a ticketing system to improve customer relations, based on the *BCSF*'s SaaS security principles.*](/bronze-controls/saas-security/zendesk)
 {.links-list}
 
