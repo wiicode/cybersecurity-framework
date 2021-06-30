@@ -2,7 +2,7 @@
 title: Basecamp security review
 description: Basecamp is a web-based project management and company-wide communication tool designed to improve the administration of small and large projects alike.
 published: true
-date: 2021-06-30T20:58:14.181Z
+date: 2021-06-30T20:58:17.711Z
 tags: bronze, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:58:06.327Z
@@ -24,7 +24,7 @@ dateCreated: 2021-06-30T20:58:06.327Z
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of? *The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Basecamp have a [security response procedure](https://basecamp.com/about/policies/security/response) whereby they encourage security researchers to email them vulnerability details using their public key. From here, Basecamp will correspond with the bug finder until the issue is resolved. |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Basecamp publishes the majority of the answers to the above security questions. They have recently released a [security whitepaper](https://basecamp.com/about/policies/security) on their security pages, that bring together information covered above. |
 
----
+
 
 ## Exporting data
 
