@@ -2,7 +2,7 @@
 title: Office 365 security review
 description: Microsoft Office 365 is a set of cloud-based productivity tools including word processing, spreadsheets and calendars
 published: true
-date: 2021-06-30T20:56:09.343Z
+date: 2021-06-30T20:56:26.559Z
 tags: bronze, saas-security, saas
 editor: markdown
 dateCreated: 2021-06-30T20:50:56.521Z
@@ -22,7 +22,7 @@ dateCreated: 2021-06-30T20:50:56.521Z
 | Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?<br><br>*The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.* | Yes | Microsoft has a dedicated security team, they also have a [public bug bounty program](https://technet.microsoft.com/en-us/security/dn425036). |
 | Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ? | Yes | Microsoft publishes details of their security architecture in their [white paper](https://www.microsoft.com/en-us/download/details.aspx?id=26552) and within the FAQs and TechNet articles on their site. |
 
----
+
 
 ## Exporting data
 
