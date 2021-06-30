@@ -2,7 +2,7 @@
 title: Managing web browser security
 description: Advice for IT Admins on the management of security settings for web browsers
 published: true
-date: 2021-06-02T02:34:56.474Z
+date: 2021-06-30T02:59:39.227Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
 dateCreated: 2021-03-06T02:40:36.791Z
@@ -34,7 +34,7 @@ Firstly, you will need to decide on which web browser or browsers to use.
 
 When deciding, you should consider:
 
--   **Compatibility:** Whilst much less of a concern than it used to be, some of your corporate tools may only support a subset of browsers. However, if one of your web applications requires an old, unsupported browser and you can't migrate away from the application, then you should investigate ways of using a separate browser for accessing that web application and using a modern, secure web browser for everything else.
+-   **Compatibility:** While much less of a concern than it used to be, some of your corporate tools may only support a subset of browsers. However, if one of your web applications requires an old, unsupported browser and you can't migrate away from the application, then you should investigate ways of using a separate browser for accessing that web application and using a modern, secure web browser for everything else.
 -   **Performance**, including impact on battery life for mobile devices.
 -   **Security features:** Most popular web browsers have similar security features, but you may want to look specifically for:  
     -   Integration with safe browsing list services, so that known malicious or fraudulent sites are blocked (including known phishing sites)
@@ -80,7 +80,7 @@ When choosing and using a web browser, based on the considerations above, we rec
 -   Ensure [automatic updates](/bronze-training/mobile-device-guidance/keeping-devices-and-software-up-to-date) are turned on for both the browser and it's extensions.
 -   You may wish to include some security tips for browsing the web securely within your [user guidance](/bronze-training/mobile-device-guidance/advising-end-users). These should include 'do *not browse the web when logged in as an administrator*', and *'install updates when prompted*'.
 
-We recommend **not** disabling crucial usability features like JavaScript and Password Auto-fill. Whilst there have been security vulnerabilities in these features in the past, using the web reliably and securely can be very difficult without them enabled. 
+We recommend **not** disabling crucial usability features like JavaScript and Password Auto-fill. While there have been security vulnerabilities in these features in the past, using the web reliably and securely can be very difficult without them enabled. 
 
 ---
 
