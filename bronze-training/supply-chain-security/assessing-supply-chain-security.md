@@ -2,7 +2,7 @@
 title: Assessing supply chain security
 description: The table below gives you a series of scenarios against which to measure the security of your supply chain.
 published: true
-date: 2021-06-30T02:30:56.973Z
+date: 2021-06-30T02:45:57.832Z
 tags: guidance, bronze, supply-chain
 editor: markdown
 dateCreated: 2021-03-10T02:05:04.036Z
@@ -25,4 +25,4 @@ The idea is to give you some concrete examples of good and bad supply chain secu
 | **Provide some guidance and support to suppliers responding to incidents.** Communicate lessons learned so others in your supply chain avoid 'known problems'. | **Offer no incident support to your suppliers,.** Fail to act or spot where 'known issues' might impact others in your supply chain, nor to warn others about these issues - potentially leading to greater disruption: with known issues hitting many suppliers. |
 | **Promote improvements to the cyber awareness of your suppliers.** Actively share best practice to raise standards. Encourage suppliers to subscribe to the free CISP threat intelligence service so they can better understand potential threats. | **Expect suppliers to anticipate developing cyber attacks** offering little or no support or advice, regardless of their security awareness and capabilities. |
 | **Build assurance measures into your minimum security requirements**. These provide an independent view of the effectiveness of your suppliers security. | **Fail to include assurance measures into your security requirements**, trusting that your suppliers will do the right thing - regardless of whether they have enough knowledge or experience to know what is expected of them. |
-| **Monitor the effectiveness of the security measuresthat are in place.** Based on lessons learned from incidents, feedback from assurance activities, or from suppliers about issues, be prepared to revise or remove controls that are proving ineffective. | **Fail to monitor the effectiveness of security measures**. Fail to listen to feedback. Be unwilling to make changes, even when the evidence in favour of doing so is overwhelming. |
+| **Monitor the effectiveness of the security measuresthat are in place.** Based on lessons learned from incidents, feedback from assurance activities, or from suppliers about issues, be prepared to revise or remove controls that are proving ineffective. | **Fail to monitor the effectiveness of security measures**. Fail to listen to feedback. Be unwilling to make changes, even when the evidence in favor of doing so is overwhelming. |
