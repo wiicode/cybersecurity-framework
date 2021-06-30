@@ -2,7 +2,7 @@
 title: 2. Asset protection and resilience
 description: User data, and the assets storing or processing it, should be protected against physical tampering, loss, damage or seizure.
 published: true
-date: 2021-05-27T20:31:14.983Z
+date: 2021-06-30T02:56:38.728Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown
 dateCreated: 2021-02-22T01:33:08.105Z
@@ -25,7 +25,7 @@ User data, and the assets storing or processing it, should be protected against 
 
 In order to understand the legal circumstances under which your data could be accessed without your consent you must identify the locations at which it is stored, processed and managed.
 
-You will also need to understand how data-handling controls within the service are enforced, relative to UK legislation. Inappropriate protection of user data could result in legal and regulatory sanction, or reputation damage.
+You will also need to understand how data-handling controls within the service are enforced, relative to regulations. Inappropriate protection of user data could result in legal and regulatory sanction, or reputation damage.
 
 ### **Goals**
 
