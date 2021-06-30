@@ -2,7 +2,7 @@
 title: Living with password re-use
 description: In a perfect world we'd use unique passwords for every online service. But the world isn't perfect...
 published: true
-date: 2021-05-28T02:57:27.792Z
+date: 2021-06-30T02:17:20.045Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T02:19:50.168Z
@@ -33,7 +33,7 @@ Never re-use passwords across **important** accounts. These are the 'high valu
 - cloud storage
 - platform accounts (like Apple, Microsoft or Google)
 - federated ID (where you log into one account using the credentials from another, usually Facebook or Google)
-- any account that you would be devastated to lose (for example your favourite social media accounts)
+- any account that you would be devastated to lose (for example your favorite social media accounts)
 
 
 ## When is it less risky to re-use passwords?
@@ -62,7 +62,7 @@ Here are three simple ways to help you avoid re-using passwords.
 
 ## Where do I start?
 
-We *realize* there's a lot of information to take in here. However, you don't need to organise all of your passwords straight away. You can make small steps, and every step will help.
+We *realize* there's a lot of information to take in here. However, you don't need to organize all of your passwords straight away. You can make small steps, and every step will help.
 
 Here is what the *BCSF* recommend you *prioritize*:
 
