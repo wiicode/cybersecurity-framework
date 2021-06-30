@@ -2,7 +2,7 @@
 title: 11. External interface protection
 description: All external or less trusted interfaces of the service should be identified and appropriately defended.
 published: true
-date: 2021-06-30T18:50:45.178Z
+date: 2021-06-30T18:51:18.044Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown
 dateCreated: 2021-06-30T18:47:01.154Z
@@ -21,7 +21,7 @@ You can use different models to connect to cloud services which expose your ente
 You:
 
 -   understand what physical and logical interfaces your information is available from, and how access to your data is controlled
--   have sufficient confidence that the service identifies and authenticates users to an appropriate level over those interfaces [(see Principle 10](https://www.ncsc.gov.uk/guidance/cloud-security-principle-10-identity-and-authentication))
+-   have sufficient confidence that the service identifies and authenticates users to an appropriate level over those interfaces [(see Principle 10](/guidance/cloud-security-principle-10-identity-and-authentication))
 
 ### **Implementation – External interface protection**
 
@@ -37,4 +37,4 @@ Services can protect their data by limiting an attacker’s opportunity to conne
 
 Internet accessible services, particularly those which accept connections from any location, are more exposed to attacks, so having high confidence in the strength of authentication and access control will be particularly important.
 
-[Principle 10](https://www.ncsc.gov.uk/guidance/cloud-security-principle-10-identity-and-authentication) details common approaches to identification and authentication and explains the risks associated with each.
+[Principle 10](/guidance/cloud-security-principle-10-identity-and-authentication) details common approaches to identification and authentication and explains the risks associated with each.
