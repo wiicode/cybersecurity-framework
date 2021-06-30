@@ -2,7 +2,7 @@
 title: Introduction to identity and access management
 description: This guidance provides a primer on the essential techniques, technologies and uses of access management.
 published: true
-date: 2021-06-02T21:45:42.831Z
+date: 2021-06-30T02:12:32.684Z
 tags: guidance, bronze, bronze-training, access-control
 editor: markdown
 dateCreated: 2021-02-21T03:16:47.607Z
@@ -42,7 +42,7 @@ An access management system is comprised of a number of technical components, in
 
 Identity and access management can be broken down into the following broad areas:
 
-- **Policy** - your strategy governing who is authorised to access systems, data or functionality, how they can request access, when their access should be revoked and whether any particular operations should require multiple users to collaborate
+- **Policy** - your strategy governing who is authorized to access systems, data or functionality, how they can request access, when their access should be revoked and whether any particular operations should require multiple users to collaborate
 - **Identity management** - how you establish the identity of a person, both at point of first contact and subsequent interactions with your systems or processes
 - **Privileged user management** - the additional processes and controls you should put in place to safeguard the most sensitive operations in the system
 - **Architectural design** - secure design of the computer systems that support the above areas
@@ -73,7 +73,7 @@ Different methods of authentication have different strengths and limitations. Be
 
 - **passwords** – the most basic form of credentials, used to authenticate a user based on something they know - however if the password becomes known or is guessed by an attacker, then they can impersonate the legitimate user
 - **two-factor authentication** – the "second factor" in this context should add something you have to the something you know - the second factor could be a physical token or your phone (such as through an authentication app or an SMS message). Adding a second factor considerably increases the difficulty for an attacker to subvert authentication checks, though some actors have shown they are capable of subverting some two-factor techniques, such as SMS messages
-- **hardware-backed certificate authentication** – a cryptographic key and certificate stored in a hardware chip on a user's device (such as a Trusted Platform Module) or on a user's smart card - they can provide high confidence in the identity of a user or device if supported by other physical and technical controls. However, to gain this confidence, the end user device upon which the token is utilised must be trusted
+- **hardware-backed certificate authentication** – a cryptographic key and certificate stored in a hardware chip on a user's device (such as a Trusted Platform Module) or on a user's smart card - they can provide high confidence in the identity of a user or device if supported by other physical and technical controls. However, to gain this confidence, the end user device upon which the token is utilized must be trusted
 - **biometric** – the use of an aspect of the user's physiology to identify them, such as a finger print or facial recognition.These can be useful for reducing the password burden on users. 
 
 Whilst they cannot be "shoulder surfed" by a nearby attacker, some forms are easier to spoof than others
@@ -115,7 +115,7 @@ We recommend that:
 
 # Operational technology (OT)
 
-In organisations that manage Operational Technology (OT) - such as industrial control systems in the energy sector - we recommend that:
+In organizations that manage Operational Technology (OT) - such as industrial control systems in the energy sector - we recommend that:
 
 - OT is not administered from an enterprise IT estate. As discussed earlier, this is considered “browse up,” and means that the integrity of your OT systems would be only as good as that of your IT estate.
 
