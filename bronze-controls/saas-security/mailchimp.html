@@ -1,0 +1,87 @@
+<!--
+title: Mailchimp security review
+description: MailChimp is an email service provider which allows users to send automated messages, marketing emails and targeted campaigns.
+published: true
+date: 2021-06-30T20:59:05.860Z
+tags: bronze, saas-security, saas
+editor: ckeditor
+dateCreated: 2021-06-30T20:59:05.860Z
+-->
+
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Question</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;" colspan="1"><strong>Answer</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;" colspan="1"><strong>Detail</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using TLS?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp uses TLS 1.2 but only specifies SSL within their documentation.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp meets the&nbsp;<a href="https://www.ncsc.gov.uk/guidance/tls-external-facing-services">recommended cryptographic profiles for TLS</a>&nbsp;as published by the <i>NCSC</i>. In addition, MailChimp currently gets an&nbsp;<a href="https://www.ssllabs.com/ssltest/analyze.html?d=mailchimp.com">'A' rating from Qualys SSL Labs</a>&nbsp;(Intermediate Certificate uses SHA1). Note that this was performed on their top level domain, and not all subdomains that may be used for API calls.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using encryption?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp specifies that&nbsp;<a href="https://kb.mailchimp.com/accounts/management/i-got-a-security-alert-in-my-browser">SSL is supported</a>&nbsp;throughout the entire application and that&nbsp;<a href="https://mailchimp.com/about/security/?_ga=1.103645440.1840623753.1488291707">sensitive data</a>&nbsp;is transmitted via SSL.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether MailChimp protects external data in transit using correctly configured certificates.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If APIs are available, does the SaaS provider protect both internal and external APIs through an authentication method?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Partial</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">All API requests made to MailChimp support authentication using&nbsp;<a href="http://developer.mailchimp.com/documentation/mailchimp/guides/get-started-with-mailchimp-api-3/#authentication">HTTP Basic Authentication and OAuth2</a>. However, this is not enforced.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels in the service, does the SaaS provider have the ability for low privilege users to be created?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp has a number of different&nbsp;<a href="http://kb.mailchimp.com/accounts/manage-users/manage-user-levels-in-your-account">roles</a>&nbsp;available.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels, does the SaaS provider provide 2FA/multi-factor authentication on at least the high privileged accounts?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp currently provides&nbsp;<a href="http://kb.mailchimp.com/accounts/login/set-up-a-two-factor-authentication-app-at-login">multi-factor authentication</a>&nbsp;via SMS or a specified app. Multi-factor authentication is not mandatory however, to encourage users MailChimp offers a discount to paying customers.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider collect logs of events?</p>
+          <p><i>Types of log may include security logs and resource logs</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">MailChimp does not comment about any detailed logging. However,&nbsp;<a href="http://kb.mailchimp.com/accounts/account-setup/activate-account-notifications?_ga=1.40152738.1840623753.1488291707">notifications</a>&nbsp;can be enabled for specific events.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Does the provider make logs available to the client?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether MailChimp provide logs to the client.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">
+          <p>Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of?</p>
+          <p><i>The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.</i></p>
+        </td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether MailChimp has a clear incident response and patching system in place.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;" colspan="1">Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Partial</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">From MailChimp's&nbsp;<a href="https://mailchimp.com/about/security/">security page</a>: "From time to time, companies ask us security questions about MailChimp. In general, we don't like to expose much information about our security practices, because it only helps the very people we're securing ourselves against.” However some information is made available but not in detail. As we&nbsp;<a href="https://www.ncsc.gov.uk/studio/blog-post/cloudy-chance-transparency">have mentioned in the past</a>&nbsp;we would like to see vendors being as transparent as possible when it comes to their security.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Exporting data</h2>
+<p>MailChimp allows an administrator or owner to&nbsp;<a href="http://kb.mailchimp.com/accounts/management/export-and-back-up-account-data">backup and export</a>&nbsp;the entire account once every 24 hours.</p>

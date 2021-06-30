@@ -1,0 +1,87 @@
+<!--
+title: Basecamp security review
+description: Basecamp is a web-based project management and company-wide communication tool designed to improve the administration of small and large projects alike.
+published: true
+date: 2021-06-30T20:58:06.327Z
+tags: bronze, saas-security, saas
+editor: ckeditor
+dateCreated: 2021-06-30T20:58:06.327Z
+-->
+
+<p><a href="https://basecamp.com/">Basecamp</a>&nbsp;is a web-based project management and company-wide communication tool designed to improve the administration of small and large projects alike. It offers a place for users to collaborate on projects through the uploading and sharing of documents within teams, as well as chat functionality and message boards for knowledge sharing amongst teams. Scheduling for meetings can also be managed within Basecamp, which integrates with third party email providers.</p>
+<figure class="table" style="width:635px;">
+  <table style="background-color:rgb(255, 255, 255);border-bottom:0px;border-left:0px;border-right:0px;border-top:0px;">
+    <thead>
+      <tr>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px;width:113px;"><strong>Question</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;width:261px;" colspan="1"><strong>Answer</strong></th>
+        <th style="border-bottom:3px solid rgb(5, 28, 72);border-left:0px;border-right:0px;border-top:0px !important;padding:0px 0px 16px 30px;" colspan="1"><strong>Detail</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using TLS?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Basecamp uses&nbsp;<a href="https://basecamp.com/about/policies/security">HTTPS to transmit and receive data</a>.&nbsp;<a href="https://basecamp.com/about/policies/privacy">TLS 1.2 is used to encrypt data</a>&nbsp;whilst in transit between Basecamp's servers and the user’s browser.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect external data in transit using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Basecamp meets the&nbsp;recommended cryptographic profiles for TLS&nbsp;as published by the BCSF. Basecamp currently gets an '<a href="https://www.ssllabs.com/ssltest/analyze.html?d=3.basecamp.com&amp;latest">A' rating from SSL Labs</a>. Note that this was performed on their top level domain, and not all subdomains that may be used for API calls.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using encryption?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether Basecamp protects internal data in transit between services using encryption. However, Basecamp does state that&nbsp;<a href="https://basecamp.com/about/policies/security">project data, messages, text documents and TODOs are&nbsp;<strong>not&nbsp;</strong>encrypted at rest</a>.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider protect internal data in transit between services using correctly configured certificates?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">&gt;Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether Basecamp protects internal data in transit using correctly configured certificates.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If APIs are available, does the SaaS provider protect both internal and external APIs through an authentication method?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes (version dependent)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">All Basecamp 3 APIs enquire the use of&nbsp;<a href="https://github.com/basecamp/bc3-api">OAuth 2.0 for authentication</a>. All public integrations of Basecamp 2 require the use of&nbsp;<a href="https://github.com/basecamp/bcx-api">OAuth 2.0 for API authentication</a>. Basecamp 2 does support HTTP basic authentication for private integrations. Basecamp Classic does&nbsp;<a href="https://github.com/basecamp/api/blob/master/sections/authentication.md"><strong>not</strong>&nbsp;require the use of OAuth 2.0</a>. Public integrations of Basecamp Classic are compatible with OAuth 2.0, but do not require it.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels in the service, does the SaaS provider have the ability for low privilege users to be created?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes (version dependent)</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Basecamp offers various account&nbsp;<a href="https://basecamp.com/help/3/guides/account/adminland">roles</a>: Admin, Owner and Non-admin user accounts.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">If there is a concept of privilege levels, does the SaaS provider provide 2FA/multi-factor authentication on at least the high privileged accounts?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Basecamp offers 2 factor authentication (2FA) in the form of ‘<a href="https://help.basecamp.com/sign-in/questions/460-how-do-i-set-up-and-use-phone-verification-for-logging-in">Phone Verification</a>&nbsp;(SMS)’ for all users. In the event the user loses access to their phone, security questions are set during the 2FA setup process which the user can use to unlock their account. They also support sign-in via Google accounts which support non-SMS 2FA.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider collect logs of events? <i>Types of log may include security logs and resource logs</i></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Unknown</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">At this time, it is unknown whether Basecamp collects logs of events.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;" colspan="1">Does the provider make logs available to the client?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Partial</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Currently, the only logs visible to Basecamp's clients are&nbsp;<a href="https://status.basecamp.com/">uptime statistics</a>&nbsp;of each of the Basecamp versions.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px 0px 16px;">Does the SaaS provider have a clear incident response and patching system in place to remedy any publicly reported issues in their service, or libraries that the service makes use of? <i>The provider’s previous track record on this is a good metric to see how they’ll cope with a new issue occurring.</i></td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 16px 30px;" colspan="1">Basecamp have a&nbsp;<a href="https://basecamp.com/about/policies/security/response">security response procedure</a>&nbsp;whereby they encourage security researchers to email them vulnerability details using their public key. From here, Basecamp will correspond with the bug finder until the issue is resolved.</td>
+      </tr>
+      <tr>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:0px;" colspan="1">Does the SaaS provider give clear and transparent details on their product and the implemented security features (i.e. how easy has it been to answer the above questions) ?</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Yes</td>
+        <td style="border-bottom:none;border-left:0px;border-right:0px;border-top:1px solid rgb(170, 170, 170);padding:16px 0px 0px 30px;" colspan="1">Basecamp publishes the majority of the answers to the above security questions. They have recently released a&nbsp;<a href="https://basecamp.com/about/policies/security">security whitepaper</a>&nbsp;on their security pages, that bring together information covered above.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<hr>
+<h2>Exporting data</h2>
+<ul>
+  <li>All Basecamp users in the consumer<i> organisation </i>have the ability to download individual documents that have been uploaded to projects.</li>
+  <li>Basecamp message posts can be copied out and pasted into a separate document, whilst making a note of the date and time it was posted.</li>
+  <li>Scheduling appointments can be downloaded in a variety of calendar formats so that users can add them to their calendar app of choice e.g. Outlook and Google Calendar.</li>
+  <li>Additionally Basecamp allows administrators to export and&nbsp;<a href="https://basecamp.com/help/2/guides/account/exports">download the entire <i>organisation</i>'s Basecamp</a>&nbsp;dashboard for offline viewing.</li>
+</ul>
