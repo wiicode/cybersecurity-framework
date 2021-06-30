@@ -2,7 +2,7 @@
 title: Separation and cloud security
 description: Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.
 published: true
-date: 2021-06-01T18:33:25.542Z
+date: 2021-06-30T02:51:49.375Z
 tags: risk management, bronze, bronze-training, cloud-security-guidance, favorite
 editor: markdown
 dateCreated: 2021-02-22T00:55:57.696Z
@@ -30,7 +30,7 @@ Community cloud services host users from a specific community, such as the publi
 
 These communities often have a shared risk appetite and generally expect members to conform to an agreed minimum standard or legal agreement.
 
-Community cloud providers can often tailor their offerings to match community requirements. For example, a service provider could choose to meet specific UK government standards for personnel security screening, or conform to the required standard to connect to a government community network. These tailored offerings can sometimes reduce risks relating to one or more of the [Advanced Security Principles](/silver-training).
+Community cloud providers can often tailor their offerings to match community requirements. For example, a service provider could choose to meet specific government standards for personnel security screening, or conform to the required standard to connect to a government community network. These tailored offerings can sometimes reduce risks relating to one or more of the [Advanced Security Principles](/silver-training).
 
 Dedicating a service to a single community (where there is trust between members of that community) reduces the risks associated with separation between users.
 
