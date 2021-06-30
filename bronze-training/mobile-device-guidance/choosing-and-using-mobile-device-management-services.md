@@ -2,10 +2,10 @@
 title: Mobile Device Management
 description: Advice on the selection and implementation of Mobile Device Management within your enterprise
 published: true
-date: 2021-06-01T20:14:37.315Z
-tags: guidance, bronze, bronze-training, mdm, favorite
+date: 2021-06-30T19:43:53.368Z
+tags: bronze, bronze-training, mdm
 editor: markdown
-dateCreated: 2021-03-06T02:31:31.365Z
+dateCreated: 2021-06-30T19:43:53.368Z
 ---
 
 A Mobile Device Management (MDM) service combines device applications, built-in device management features and infrastructure services. Together, these components allow your organization to remotely control, monitor, and enforce policies on employee devices.
