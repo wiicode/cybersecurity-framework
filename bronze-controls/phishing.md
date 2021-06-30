@@ -2,7 +2,7 @@
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
 published: true
-date: 2021-06-02T19:00:10.288Z
+date: 2021-06-30T02:58:23.121Z
 tags: bronze, bronze-controls, phishing
 editor: markdown
 dateCreated: 2021-06-02T15:04:32.010Z
@@ -28,7 +28,7 @@ Phishing emails can hit an *organization* of any size and type. You might get ca
 
 ### **Every** ***organization*** **can play a part**
 
-The mitigations described here are mostly focused on preventing the impact of phishing attacks within your *organization*, but they include some measures that will help protect the whole of the UK. For example, setting up DMARC stops phishers from spoofing your domain (that is, making their emails look like they come from your *organization*). There are numerous benefits in doing this:
+The mitigations described here are mostly focused on preventing the impact of phishing attacks within your *organization*, but they include some measures that will help protect the entire system. For example, setting up DMARC stops phishers from spoofing your domain (that is, making their emails look like they come from your *organization*). There are numerous benefits in doing this:
 
 1.  Your own company's genuine emails are more likely to reach the recipients' inboxes, rather than getting filtered out as spam.
 2.  From a *reputation* aspect, no *organization* wants their name becoming synonymous with scams and fraud.
