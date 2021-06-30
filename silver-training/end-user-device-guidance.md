@@ -1,8 +1,8 @@
 ---
 title: End user device (EUD) security guidance
-description: Guidance for organisations deploying a range of end user device platforms as part of a remote working solution
+description: Guidance for organizations deploying a range of end user device platforms as part of a remote working solution
 published: true
-date: 2021-03-05T19:56:31.485Z
+date: 2021-06-30T02:53:37.950Z
 tags: silver, device-management, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:05:36.507Z
@@ -313,7 +313,7 @@ This section highlights some aspects of VPN configuration you may wish to change
 ### Protocols
 The protocols most widely used for VPNs are Transport Layer Security (TLS) and IPsec. There are a variety of others, some of which (PPTP for example) have fallen out of use because of security concerns.
 
-Our recommendation is that IPsec be used for VPN access. IPsec is an open standard, meaning that anyone can build a client or server which will interoperate with other IPsec implementations. The UK EUD Security Strategy (for public sector organizations) advocates interoperability, open standards, and the use of native security controls.
+Our recommendation is that IPsec be used for VPN access. IPsec is an open standard, meaning that anyone can build a client or server which will interoperate with other IPsec implementations. The EUD Security Strategy advocates interoperability, open standards, and the use of native security controls.
 
 As an IPsec VPN client is built in to many operating systems, no additional products are required to deploy a VPN. However, some networks restrict or block IPsec traffic, so your EUDs may, in certain situations, be unable to create the VPN connection.
 
