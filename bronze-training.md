@@ -2,7 +2,7 @@
 title: Learning and Training
 description: Bronze (Core) level education, training, and awareness for boards, owners, managers, and IT professionals. 
 published: true
-date: 2021-06-30T02:46:45.138Z
+date: 2021-06-30T02:47:49.749Z
 tags: 
 editor: markdown
 dateCreated: 2020-08-05T18:12:08.265Z
@@ -33,3 +33,12 @@ The CIA triad is a model designed to guide policies for information security wit
 - [Supply Chain Guidance *Twelve principles, designed to help you establish effective control and oversight of your supply chain.*](/bronze-training/supply-chain-security)
 {.links-list}
 
+## Cloud Security 
+> This section is a prelude to **[Advanced Security Principles](/silver-training)** available in the Silver tier. 
+{.is-warning}
+
+{.grid-list}
+- [Cloud security guidance*This guidance collection will help you determine how confident you can be that a cloud service is secure enough to handle your data.*](/bronze-training/background-topics/cloud-security-1-intro)
+- [Having confidence in cyber security*Discover ways to gain confidence that the measures you have in place to reduce the chances of cyber security problems occurring are genuine and effective.*](/bronze-training/background-topics/cloud-security-2-confidence)
+- [Separation and cloud security*Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.*](/bronze-training/background-topics/cloud-security-3-separation)
+{.links-list}
