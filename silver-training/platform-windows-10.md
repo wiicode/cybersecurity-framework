@@ -2,7 +2,7 @@
 title: Windows 10
 description: Secure configuration for Windows 10
 published: true
-date: 2021-06-29T20:32:24.587Z
+date: 2021-06-30T02:01:21.094Z
 tags: silver, sourced, platform-specific, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:22:49.581Z
@@ -56,7 +56,7 @@ When configured in this way, risk owners should be aware of the following techni
 
 For all remote or mobile working scenarios, you should consider using a typical remote access architecture based on the Walled Garden Architectural Pattern. The following network diagram describes the recommended architecture for this platform. The remote device will need Active Directory access in order to authenticate and retrieve group policy.
 
-![](https://www.ncsc.gov.uk/static-assets/images/network%20arc.jpg)
+![](/static-assets/images/network%20arc.jpg)
 
 Figure 1: Recommended walled garden network architecture for Windows 10 deployments
 
@@ -71,7 +71,7 @@ The steps below should be followed to prepare your organizational infrastructure
 1.  Procure, deploy and configure network components, including an approved IPsec VPN Gateway.
 2.  Configure the [Microsoft Deployment Toolkit](https://technet.microsoft.com/en-us/windows/dn475741.aspx) to deploy your organization's standard desktop build, using a clean Windows 10 Enterprise image. Consider including credential management tools such as [LAPS](https://technet.microsoft.com/en-us/mt227395.aspx) and [MBAM](https://technet.microsoft.com/en-us/windows/hh826072.aspx).
 3.  Create Group Policies for user and computer groups in accordance with the settings later in this section, ensuring that the Microsoft Baseline settings have the lowest precedence when being deployed.
-4.  Deploy an AppLocker rule set using Group Policy following guidance in the [Application Whitelisting section](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#whitelist). A sample configuration, which allows only applications installed by an Administrator to run, is outlined in the Group Policy settings
+4.  Deploy an AppLocker rule set using Group Policy following guidance in the [Application Whitelisting section](/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#whitelist). A sample configuration, which allows only applications installed by an Administrator to run, is outlined in the Group Policy settings
 5.  Create Event Forwarding Subscriptions and configure Group Policy to forward at least AppLocker, Application, System and Security logs that have a level of Critical Error or Warning, to an event management system. 
 6.  Configure user groups according to the principle of least privilege. Where available, configure these users to be in the Protected Users group and apply Restricted Admin and Authentication Policy Silos to privileged users.
 7.  Deploy [System Center Configuration Manager (SCCM](https://docs.microsoft.com/en-us/sccm/index)) or additional OEM-dependent infrastructure if you wish to implement remote management of device firmware.
@@ -127,7 +127,7 @@ You should use the following Microsoft baseline GPO settings:
 
 ### **Authentication policy**
 
-Your organisation should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use our published [password guidance](https://www.ncsc.gov.uk/collection/passwords?curPage=/collection/passwords/updating-your-approach) to help inform any password policy.
+Your organization should have a consistent authentication policy which applies to all users and devices capable of accessing its data. You can use our published [password guidance](/collection/passwords?curPage=/collection/passwords/updating-your-approach) to help inform any password policy.
 
 An administrator should configure the relevant on-device settings in line with your authentication policy.
 
@@ -140,9 +140,9 @@ Windows 10 Enterprise implements a number of relevant settings as Fine Grained P
 
 ### **Active Directory**
 
-A user’s Active Directory password will normally only be used when enrolling against a device for the first time. It is not backed by a second factor or by hardware-backed [anti-hammer](https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering), even when Credential Guard is deployed.
+A user’s Active Directory password will normally only be used when enrollling against a device for the first time. It is not backed by a second factor or by hardware-backed [anti-hammer](https://docs.microsoft.com/en-us/windows/security/hardware-protection/tpm/tpm-fundamentals#anti-hammering), even when Credential Guard is deployed.
 
-Different requirements can be set for different account types using [Fine Grained Password Policies](https://technet.microsoft.com/en-us/library/cc770394(v=ws.10).aspx). If the Active Directory password is only used for device enrolment, it needs to be easy to type in but does not need to be memorable.
+Different requirements can be set for different account types using [Fine Grained Password Policies](https://technet.microsoft.com/en-us/library/cc770394(v=ws.10).aspx). If the Active Directory password is only used for device enrollment, it needs to be easy to type in but does not need to be memorable.
 
 ### **Windows Hello and Hardware Strengthening**
 
@@ -167,9 +167,9 @@ The configuration provided in this guidance enables [Virtual Secure Mode and Cr
 |     |     |
 | --- | --- |
 | **Group Policy** | **Value(s)** |
-| Computer Configuration > Administrative Templates > Windows Components > Data Collection and Preview Builds > Allow Telemetry | Enabled:<br><br>0 - Security<br><br>Note - If using Windows Update for Business this will need to be set to 1 (Basic).<br><br>See [Windows 10 feature updates](https://www.ncsc.gov.uk/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#enterpriseconsiderations) for more details. |
+| Computer Configuration > Administrative Templates > Windows Components > Data Collection and Preview Builds > Allow Telemetry | Enabled:<br><br>0 - Security<br><br>Note - If using Windows Update for Business this will need to be set to 1 (Basic).<br><br>See [Windows 10 feature updates](/collection/end-user-device-security/platform-specific-guidance/eud-security-guidance-windows-10-1809#enterpriseconsiderations) for more details. |
 | Computer Configuration > Administrative Templates > Windows Components > Windows Error Reporting > Disable Windows Error Reporting | Enabled |
-| Computer Configuration > Administrative Templates > System > Device Installation > Device Installation Restrictions > Prevent installation of devices that match these device IDs<br><br>*This policy prevents all Thunderbolt devices from being used and provides the strongest protection from DMA attacks. If organisations require the use of Thunderbolt devices, they should first check if the host supports* [*Kernel DMA protection*](https://docs.microsoft.com/en-us/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) *and has it enabled. If it is not supported, follow the* [*Microsoft guidance*](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-countermeasures) *to* [*disable new DMA devices when the computer is locked*](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings#disable-new-dma-devices-when-this-computer-is-locked). | Enabled: PCI\\CC\_0C0A<br><br>Also apply to matching devices that are already installed: Disabled |
+| Computer Configuration > Administrative Templates > System > Device Installation > Device Installation Restrictions > Prevent installation of devices that match these device IDs<br><br>*This policy prevents all Thunderbolt devices from being used and provides the strongest protection from DMA attacks. If organizations require the use of Thunderbolt devices, they should first check if the host supports* [*Kernel DMA protection*](https://docs.microsoft.com/en-us/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) *and has it enabled. If it is not supported, follow the* [*Microsoft guidance*](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-countermeasures) *to* [*disable new DMA devices when the computer is locked*](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings#disable-new-dma-devices-when-this-computer-is-locked). | Enabled: PCI\\CC\_0C0A<br><br>Also apply to matching devices that are already installed: Disabled |
 | Computer Configuration > Administrative Templates > System > Device Installation > Device Installation Restrictions > Prevent installation of drivers matching these device setup classes | Enabled:<br><br>{d48179be-ec20-11d1-b6b8-00c04fa372a7}<br><br>{7ebefbc0-3200-11d2-b4c2-00a0C9697d07}<br><br>{c06ff265-ae09-48f0-812c-16753d7cba83}<br><br>{6bdd1fc1-810f-11d0-bec7-08002be2092f}<br><br>Also apply to matching devices that are already installed: Disabled |
 | Computer Configuration > Administrative Templates > Windows Components > Store > Turn off Automatic Download and Install of updates | Disabled |
 | Computer Configuration > Administrative Templates > Windows Components > App runtime > Block launching Universal Windows apps with Windows Runtime API access from hosted content. | Enabled |
@@ -269,7 +269,7 @@ Users can change the PIN after they have logged on to the device for the first t
 
 The majority of Exploit Guard configuration is performed using an XML file, the location of which is specified through Group Policy. The XML file can be generated using the [Windows Defender Security Center application](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml#create-and-export-a-configuration-file), or [exported from EMET](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml#convert-an-emet-configuration-file-to-an-exploit-protection-configuration-file).
 
-As Exploit Guard can cause compatibility issues with some applications, Microsoft recommends that Exploit Guard policies are thoroughly tested before they are enforced across an organisation. "Audit mode" can be used to support this.
+As Exploit Guard can cause compatibility issues with some applications, Microsoft recommends that Exploit Guard policies are thoroughly tested before they are enforced across an organization. "Audit mode" can be used to support this.
 
 |     |     |
 | --- | --- |
@@ -381,7 +381,7 @@ The following UEFI settings should be applied. Some of these settings are hardwa
 | Boot Options | Restricted to only those that are required. Priority should be given to internal storage. |
 | Boot Order | Locked |
 | No Execute (NX) | Enabled |
-| Virtualisation Extensions | Enabled |
+| Virtualization Extensions | Enabled |
 | Input/Output Memory Management Unit (IOMMU) | Enabled |
 | Thunderbolt | Ports should be disabled if not required <br><br>If required<br><br>·              Disable Thunderbolt boot support if not required.<br><br>·              Disable Thunderbolt pre-boot module support.<br><br>·              Set a minimum Thunderbolt Security Level of User Authorization. |
 
@@ -409,13 +409,13 @@ In addition, some OEMs provide enhanced hardware-backed protection for the integ
 
 ## Enterprise considerations
 
-The following points are in addition to the [common enterprise considerations](https://www.ncsc.gov.uk/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/common-questions) and contain specific issues for Windows 10 deployments.
+The following points are in addition to the [common enterprise considerations](/collection/end-user-device-security?curPage=/collection/end-user-device-security/eud-overview/common-questions) and contain specific issues for Windows 10 deployments.
 
 ### **Windows 10 Enterprise feature updates**
 
 The Windows 10 [Semi-Annual Channel](https://blogs.technet.microsoft.com/windowsitpro/2017/07/27/waas-simplified-and-aligned/) receives [feature updates twice-per-year](https://support.microsoft.com/en-gb/help/4462896/updates-to-servicing-and-support-for-windows-10). All currently supported feature updates will be supported for 30 months from their original release date. All future feature updates with a targeted release month of September (starting with 1809) will be supported for 30 months from their release date. All future feature updates with a targeted release month of March (starting with 1903) will only be supported for 18 months from their release date.
 
-The BCSF recommends organizations deploy feature updates immediately to a targeted deployment to validate that the apps, devices and infrastructure used work well with the new release. Once validation is complete, begin deploying broadly. You can defer feature updates for up to 365 days from release. To help with this approach organisations using Azure Active Directory may deploy *Insider* *builds* to a select group of devices via the [Windows Insider Program for Business](https://insider.windows.com/en-us/for-business/).
+The BCSF recommends organizations deploy feature updates immediately to a targeted deployment to validate that the apps, devices and infrastructure used work well with the new release. Once validation is complete, begin deploying broadly. You can defer feature updates for up to 365 days from release. To help with this approach organizations using Azure Active Directory may deploy *Insider* *builds* to a select group of devices via the [Windows Insider Program for Business](https://insider.windows.com/en-us/for-business/).
 
 |     |     |
 | --- | --- |
@@ -426,7 +426,7 @@ The BCSF recommends organizations deploy feature updates immediately to a target
 
 **Monthly Quality Updates**, which include critical security and driver updates should be downloaded and installed automatically.
 
-If your organisation is using Windows Update for Business you will need to set the Telemetry level from 0 (Security) to 1 (Basic) for update policies to be honored, as no Windows update information is gathered when set to 0. If you are using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM) you will not be affected. For more information on Windows telemetry settings see [this document from Microsoft](https://docs.microsoft.com/en-us/windows/configuration/configure-windows-telemetry-in-your-organization) and for more information on configuring Windows Update for Business see [here](https://docs.microsoft.com/en-us/windows/deployment/update/waas-configure-wufb).
+If your organization is using Windows Update for Business you will need to set the Telemetry level from 0 (Security) to 1 (Basic) for update policies to be honored, as no Windows update information is gathered when set to 0. If you are using Windows Server Update Services (WSUS) or System Center Configuration Manager (SCCM) you will not be affected. For more information on Windows telemetry settings see [this document from Microsoft](https://docs.microsoft.com/en-us/windows/configuration/configure-windows-telemetry-in-your-organization) and for more information on configuring Windows Update for Business see [here](https://docs.microsoft.com/en-us/windows/deployment/update/waas-configure-wufb).
 
 When choosing third party products that alter the behavior of the platform (such as VPN clients, anti-malware tools, management agents and auditing tools), it is important to realize that these may also need to be updated to remain compatible with newer versions of Windows 10. Products are more likely to be supported on future versions of Windows 10 if they use legitimate API’s such as the Anti-Malware Scan Interface and the Windows Runtime API for VPN’s.
 
@@ -456,7 +456,7 @@ The suggested AppLocker configuration in this guidance will implement those rule
 
 ### **Universal applications**
 
-The configuration given above prevents users from accessing the Windows Store to install applications, but an organisation can still host its own store to distribute in-house applications to their employees, if required. This can be implemented either using the Microsoft Store for Business in the cloud, or via a Company Store app deployed to devices.
+The configuration given above prevents users from accessing the Windows Store to install applications, but an organization can still host its own store to distribute in-house applications to their employees, if required. This can be implemented either using the Microsoft Store for Business in the cloud, or via a Company Store app deployed to devices.
 
 If the Windows Store is enabled, users should explicitly use their corporate Microsoft ID to sign into the Store app rather than associating their work device with their personal Microsoft ID. AppLocker can be configured to only allow installation of apps that are on an enterprise-configured “allow” list. The Windows Store can be configured to automatically update any installed Universal applications. The same mechanism can also be used to remove Universal Apps that come with Windows – ones that the user is not allowed to run will be disallowed and removed from the Start menu.
 
