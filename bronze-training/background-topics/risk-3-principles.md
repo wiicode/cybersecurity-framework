@@ -1,6 +1,6 @@
 ---
 title: Get the basics right: risk management principles for cyber security
-description: Risk management principles that can be applied to all organisations, regardless of size.
+description: Risk management principles that can be applied to all organizations, regardless of size.
 published: true
 date: 2021-06-01T18:37:44.960Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance, favorite
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-03-05T01:54:51.578Z
 ---
 
-> The BCSF's risk management guidance is aimed at small and medium sized business (SMBs). 
+> The BCSF's risk management guidance is aimed at small and medium sized business (SMBs).
 {.is-info}
 
 

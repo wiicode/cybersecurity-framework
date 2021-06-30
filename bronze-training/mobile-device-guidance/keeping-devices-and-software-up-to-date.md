@@ -1,6 +1,6 @@
 ---
 title: Keeping devices and software up to date
-description: Advice for individuals and organisations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.
+description: Advice for individuals and organizations on keeping software on smartphones, tablets, laptops and desktop PCs up to date.
 published: true
 date: 2021-06-02T14:30:48.979Z
 tags: guidance, bronze, mdm
