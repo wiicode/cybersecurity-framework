@@ -2,7 +2,7 @@
 title: Windows 10
 description: Secure configuration for Windows 10
 published: true
-date: 2021-06-30T02:01:21.094Z
+date: 2021-06-30T02:02:45.660Z
 tags: silver, sourced, platform-specific, silver-training
 editor: markdown
 dateCreated: 2021-02-22T00:22:49.581Z
@@ -50,15 +50,9 @@ When configured in this way, risk owners should be aware of the following techni
 | **Event collection** | Event collection can be carried out using Windows Event Forwarding for central event log collection. |
 | **Incident response** | The combination of BitLocker drive encryption and enterprise revocation of user credentials are appropriate for managing this security recommendation. |
 
----
-
 ## Recommended network architecture
 
 For all remote or mobile working scenarios, you should consider using a typical remote access architecture based on the Walled Garden Architectural Pattern. The following network diagram describes the recommended architecture for this platform. The remote device will need Active Directory access in order to authenticate and retrieve group policy.
-
-![](/static-assets/images/network%20arc.jpg)
-
-Figure 1: Recommended walled garden network architecture for Windows 10 deployments
 
 Alternatively, consider a reduced presentation layer that allows direct access from the VPN gateway to internal services via the internal firewall. The inner firewall should be used to restrict access where possible.
 
@@ -344,8 +338,6 @@ You should deploy VPN infrastructure configured either to support the PRIME or F
 Since version 1709, Windows 10's built-in VPN client has supported [Device Tunnel](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) mode. This allows the computer to establish a tunnel prior to users logging in, so that policy or software updates can be obtained at startup. However, an always-on user VPN will still need to be configured to allow users to access corporate resources.
 
 If you are using a third-party VPN client, you should prefer one that has been built on top of the Windows 10 UWP VPN plug-in platform. These will likely integrate better into the platform and be more reliable, as the Windows platform is regularly updated.
-
----
 
 ## Device firmware
 
