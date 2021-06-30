@@ -2,7 +2,7 @@
 title: Understanding component-driven risk management
 description: The principles of component-driven risk management in cyber security.
 published: true
-date: 2021-06-30T01:58:06.371Z
+date: 2021-06-30T01:58:46.468Z
 tags: risk-management, bronze, bronze-training, favorite, component-system-risk
 editor: markdown
 dateCreated: 2021-03-05T01:19:52.855Z
@@ -52,7 +52,7 @@ One of the weaknesses of threat assessments is that a threat's capability can ch
 # Applying and communicating threat, vulnerability and impact
 Once these elements of risk have been assessed, the next step is to combine these assessments to identify which risks are most concerning. Some techniques do this by combining the assessments of threat, vulnerability and impact into a single measurement of risk for each system component. This is not as straightforward as some standards claim; the three components of risk are fundamentally different from each other, and comparing them is like comparing apples with oranges. Some approaches recommend the use of risk matrices to combine assessments of threat, vulnerability and impact.
 
-## Prioritising your risks
+## Prioritizing your risks
 Once the various threats, vulnerabilities and impacts have been assessed and combined to create a list of risks, they can be prioritized according to how concerning they are. This allows you to manage the most concerning risks first. You can communicate this prioritisation of risks in a variety of ways. For example, you could:
 
 - estimate the financial loss of an impact, if it were to be realized
