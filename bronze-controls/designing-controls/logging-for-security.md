@@ -1,7 +1,7 @@
 ---
 title: Introduction to logging for security purposes
 description: Laying the groundwork for incident readiness.
-published: true
+published: false
 date: 2021-06-30T02:51:25.512Z
 tags: bronze, bronze-training, security-operations
 editor: markdown

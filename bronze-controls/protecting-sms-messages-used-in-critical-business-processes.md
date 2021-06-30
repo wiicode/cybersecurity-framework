@@ -1,7 +1,7 @@
 ---
 title: Protecting SMS messages used in critical business processes
 description: Security advice for organizations using text messages to communicate with end users
-published: true
+published: false
 date: 2021-06-30T02:49:51.806Z
 tags: guidance, bronze, bronze-controls
 editor: markdown

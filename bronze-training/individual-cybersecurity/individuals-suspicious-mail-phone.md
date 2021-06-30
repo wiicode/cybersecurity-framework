@@ -1,7 +1,7 @@
 ---
 title: Dealing with suspicious emails, phone calls and text messages
 description: How to spot the most obvious signs of a scam, and what to do if you've already responded.
-published: true
+published: false
 date: 2021-06-30T02:05:20.452Z
 tags: bronze, bronze-training, individuals
 editor: markdown

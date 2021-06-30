@@ -1,7 +1,7 @@
 ---
 title: Choosing mobile devices
 description: Advice on how to choose which smartphones, tablets, laptops or desktop PCs to use in your organization.
-published: true
+published: false
 date: 2021-06-01T20:09:55.403Z
 tags: bronze, bronze-training, mdm
 editor: markdown

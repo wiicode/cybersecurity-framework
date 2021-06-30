@@ -1,7 +1,7 @@
 ---
 title: Social Media: how to use it safely
 description: Use privacy settings across social media platforms to manage your digital footprint.
-published: true
+published: false
 date: 2021-05-27T19:19:17.177Z
 tags: bronze, bronze-training, individuals
 editor: markdown

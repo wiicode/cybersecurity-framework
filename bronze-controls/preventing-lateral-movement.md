@@ -1,7 +1,7 @@
 ---
 title: Preventing Lateral Movement
 description: Guidance for preventing lateral movement in enterprise networks.
-published: true
+published: false
 date: 2021-06-02T22:10:35.270Z
 tags: guidance, bronze
 editor: markdown

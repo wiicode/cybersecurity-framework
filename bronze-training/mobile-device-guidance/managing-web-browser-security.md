@@ -1,7 +1,7 @@
 ---
 title: Managing web browser security
 description: Advice for IT Admins on the management of security settings for web browsers
-published: true
+published: false
 date: 2021-06-30T02:59:39.227Z
 tags: guidance, bronze, bronze-training, mdm
 editor: markdown
@@ -10,7 +10,7 @@ dateCreated: 2021-03-06T02:40:36.791Z
 
 > BCSF is focused on providing high-level guidance will help you develop an approach to secure web browsing that works for your organization.
 {.is-info}
- 
+
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Getting Started 
 description: Bronze (Core) Content Introduction
-published: true
+published: false
 date: 2021-05-27T19:31:11.956Z
 tags: bronze, home, adapted
 editor: markdown

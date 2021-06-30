@@ -1,7 +1,7 @@
 ---
 title: Erasing mobile devices
 description: Advice for IT admins and individuals on the secure removal of data or malware from smartphones, tablets, laptops and desktop PCs
-published: true
+published: false
 date: 2021-06-02T14:33:01.053Z
 tags: guidance, bronze, mdm
 editor: markdown

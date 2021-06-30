@@ -1,7 +1,7 @@
 ---
 title: 1. Choose an anti-spoofing management tool
 description: Find tools to help assess your email security and anti-spoofing measures.
-published: true
+published: false
 date: 2021-06-30T19:38:55.337Z
 tags: bronze, bronze-controls, email
 editor: markdown

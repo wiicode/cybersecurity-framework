@@ -1,7 +1,7 @@
 ---
 title: Home and mobile working
 description: Mobile working and remote system access offers great business benefits but exposes new risks that need to be managed. 
-published: true
+published: false
 date: 2021-03-03T19:20:32.420Z
 tags: bronze, bronze-training, 10-steps, sourced
 editor: markdown

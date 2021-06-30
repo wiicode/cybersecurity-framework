@@ -1,7 +1,7 @@
 ---
 title: Asset management
 description: Know what data and systems you manage, and what business need they support.
-published: true
+published: false
 date: 2021-05-29T19:31:06.211Z
 tags: bronze, bronze-training
 editor: markdown

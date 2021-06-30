@@ -1,7 +1,7 @@
 ---
 title: Reset and reprovision - Windows devices
 description: Discover the ways in which organizations can restore Windows devices from a misconfigured or potentially compromised state to a known-good state.
-published: true
+published: false
 date: 2021-06-24T18:21:55.862Z
 tags: bronze, bronze-training, sourced
 editor: markdown

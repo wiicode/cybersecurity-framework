@@ -1,7 +1,7 @@
 ---
 title: 14. Secure use of the service
 description: The security of cloud services and the data held within them can be undermined if you use the service poorly.
-published: true
+published: false
 date: 2021-06-30T18:52:21.698Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

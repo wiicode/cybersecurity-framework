@@ -1,7 +1,7 @@
 ---
 title: Network security
 description: The connections from your networks to the Internet, and other partner networks, expose your systems and technologies to attack. 
-published: true
+published: false
 date: 2021-03-03T19:27:59.599Z
 tags: bronze, bronze-training, 10-steps, sourced, security-operations
 editor: markdown

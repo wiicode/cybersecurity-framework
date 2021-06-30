@@ -1,7 +1,7 @@
 ---
 title: BENTO:GUIDES:SUBSCRIPTIONS:GOLD
 description: 
-published: true
+published: false
 date: 2021-06-30T18:43:07.571Z
 tags: home, gold
 editor: markdown

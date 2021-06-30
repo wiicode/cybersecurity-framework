@@ -1,7 +1,7 @@
 ---
 title: Example: SharePoint and OneDrive Governance
 description: Using SharePoint for storing critical business info. 
-published: true
+published: false
 date: 2021-03-09T02:28:58.713Z
 tags: governance, policy, bronze, bronze-controls
 editor: markdown

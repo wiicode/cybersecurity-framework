@@ -1,7 +1,7 @@
 ---
 title: Windows 10 with MDM
 description: Secure configuration for Windows 10 (1803) with Mobile Device Management
-published: true
+published: false
 date: 2021-06-02T22:09:13.774Z
 tags: guidance, silver, platform-specific, silver-training
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Spray you, spray me: defending against password spraying attacks
 description: How organizations can protect users' accounts from password spraying.
-published: true
+published: false
 date: 2021-06-30T19:31:49.744Z
 tags: bronze, passwords
 editor: markdown

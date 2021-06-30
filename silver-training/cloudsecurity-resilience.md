@@ -1,7 +1,7 @@
 ---
 title: 2. Asset protection and resilience
 description: User data, and the assets storing or processing it, should be protected against physical tampering, loss, damage or seizure.
-published: true
+published: false
 date: 2021-06-30T02:56:38.728Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown

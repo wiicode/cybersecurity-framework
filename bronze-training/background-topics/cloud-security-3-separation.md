@@ -1,7 +1,7 @@
 ---
 title: Separation and cloud security
 description: Learn about the two factors determining your security and assurance requirements when assessing the separation measures of a given cloud service.
-published: true
+published: false
 date: 2021-06-30T02:51:49.375Z
 tags: risk management, bronze, bronze-training, cloud-security-guidance, favorite
 editor: markdown

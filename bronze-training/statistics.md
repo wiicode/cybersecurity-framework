@@ -1,7 +1,7 @@
 ---
 title: Statistics
 description: 
-published: true
+published: false
 date: 2021-02-28T20:00:34.706Z
 tags: bronze, bronze-training
 editor: markdown

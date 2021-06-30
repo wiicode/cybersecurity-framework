@@ -1,7 +1,7 @@
 ---
 title: Supply chain security
 description: Guidance on how organizations can protect themselves in cyberspace.
-published: true
+published: false
 date: 2021-05-29T20:08:28.426Z
 tags: bronze, bronze-training
 editor: markdown

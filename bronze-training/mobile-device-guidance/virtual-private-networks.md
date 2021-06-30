@@ -1,7 +1,7 @@
 ---
 title: Virtual Private Networks (VPNs)
 description: Choosing, deploying and configuring VPN technologies
-published: true
+published: false
 date: 2021-06-02T21:02:10.399Z
 tags: guidance, bronze, mdm
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Incident Categories
 description: This page contains the ISO 27000k based incident categories every information security program needs to consider for continuity and recovery.
-published: true
+published: false
 date: 2021-03-05T19:34:08.062Z
 tags: bronze, bronze-controls
 editor: markdown

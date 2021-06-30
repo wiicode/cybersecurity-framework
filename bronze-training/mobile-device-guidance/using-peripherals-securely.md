@@ -1,7 +1,7 @@
 ---
 title: Using peripherals securely
 description: Advice for IT system administrators on the secure management of peripherals for smartphones, tablets, laptops and desktop PCs
-published: true
+published: false
 date: 2021-06-02T02:41:06.879Z
 tags: guidance, bronze, mdm
 editor: markdown

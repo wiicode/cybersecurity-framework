@@ -1,7 +1,7 @@
 ---
 title: Collaborating with suppliers and partners
 description: Cyber attacks on your suppliers can be just as damaging as an attack on your own networks.
-published: true
+published: false
 date: 2021-06-30T02:11:28.368Z
 tags: bronze, bronze-training, board, favorite
 editor: markdown

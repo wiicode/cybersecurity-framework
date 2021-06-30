@@ -1,7 +1,7 @@
 ---
 title: 11. External interface protection
 description: All external or less trusted interfaces of the service should be identified and appropriately defended.
-published: true
+published: false
 date: 2021-06-30T18:51:18.044Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

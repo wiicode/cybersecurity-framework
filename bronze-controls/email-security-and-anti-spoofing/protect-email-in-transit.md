@@ -1,7 +1,7 @@
 ---
 title: 2. Protect email in transit
 description: Where email is transferred over untrusted networks, such as the internet, its integrity and confidentially should be protected.
-published: true
+published: false
 date: 2021-06-30T19:39:21.877Z
 tags: bronze, bronze-controls, email
 editor: markdown

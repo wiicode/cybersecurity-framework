@@ -1,7 +1,7 @@
 ---
 title: 4. Governance framework
 description: The service provider should have a security governance framework which coordinates and directs its management of the service and information within it. Any technical controls deployed outside of this framework will be fundamentally undermined.
-published: true
+published: false
 date: 2021-06-30T18:49:18.733Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Component-driven and system-driven approaches
 description: An overview of component-driven (bottom up) and system-driven (top down) risk management techniques.
-published: true
+published: false
 date: 2021-06-30T01:59:42.304Z
 tags: risk-management, bronze, bronze-training, sourced, component-system-risk
 editor: markdown

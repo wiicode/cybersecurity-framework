@@ -1,7 +1,7 @@
 ---
 title: Network architectures
 description: Advice for network architects and systems administrators on the design of remote access architecture for enterprise services
-published: true
+published: false
 date: 2021-06-02T21:04:51.042Z
 tags: guidance, bronze, mdm
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Phishing Simulation Campaigns
 description: The Trouble with Phishing: Why phishing your own users cannot solve all your problems....and may cause a few more
-published: true
+published: false
 date: 2021-06-02T15:32:24.243Z
 tags: bronze, bronze-training, phishing, email
 editor: markdown

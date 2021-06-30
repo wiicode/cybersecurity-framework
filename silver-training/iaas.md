@@ -1,7 +1,7 @@
 ---
 title: IaaS - Managing your responsibilities
 description: An introduction to our 13 Infrastructure as a Service (IaaS) principles, the aims of the guidance, and how the guidance is structured.
-published: true
+published: false
 date: 2021-06-30T02:09:54.865Z
 tags: silver, iaas, silver-training
 editor: markdown

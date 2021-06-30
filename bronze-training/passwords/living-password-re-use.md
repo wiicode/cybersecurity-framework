@@ -1,7 +1,7 @@
 ---
 title: Living with password re-use
 description: In a perfect world we'd use unique passwords for every online service. But the world isn't perfect...
-published: true
+published: false
 date: 2021-06-30T19:27:47.106Z
 tags: bronze, passwords
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Platform guides
 description: Use the BCSF's mobile platform guides to help you configure and manage your organization's work devices, including guides for iOS, macOS, and Android.
-published: true
+published: false
 date: 2021-06-02T02:23:01.605Z
 tags: bronze-training, mdm
 editor: markdown

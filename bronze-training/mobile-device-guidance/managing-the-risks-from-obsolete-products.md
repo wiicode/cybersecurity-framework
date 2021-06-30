@@ -1,7 +1,7 @@
 ---
 title: Obsolete products
 description: Reducing the risks from using out of date smartphones, tablets, laptops, desktop PCs, appliances or software applications.
-published: true
+published: false
 date: 2021-06-02T20:58:30.824Z
 tags: guidance, bronze, mdm
 editor: markdown

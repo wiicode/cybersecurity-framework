@@ -1,7 +1,7 @@
 ---
 title: Assessing supply chain management practice
 description: It is expected that your will already be following good procurement and contracting practice. This guidance offers additional factors that you may consider.
-published: true
+published: false
 date: 2021-06-30T18:07:52.440Z
 tags: guidance, bronze, supply-chain
 editor: markdown

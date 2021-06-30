@@ -1,7 +1,7 @@
 ---
 title: Security Awareness Training
 description: 
-published: true
+published: false
 date: 2021-06-30T03:18:16.142Z
 tags: silver, silver-training
 editor: markdown

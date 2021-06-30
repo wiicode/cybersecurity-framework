@@ -1,7 +1,7 @@
 ---
 title: Managing mobile device firmware
 description: Advice for IT system administrators on firmware management for smartphones, tablets, laptops and desktop PCs
-published: true
+published: false
 date: 2021-06-02T14:07:49.401Z
 tags: guidance, bronze, mdm
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: Establishing your baseline and identifying what you care about most
 description: Understanding what technical assets you have, and how they're critical to your organization's objectives, are both key to effective risk management
-published: true
+published: false
 date: 2021-06-30T02:09:06.768Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown

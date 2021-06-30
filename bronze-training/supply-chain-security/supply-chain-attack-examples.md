@@ -1,7 +1,7 @@
 ---
 title: Supply chain attack examples
 description: Constantly evolving attacks mean organizations should ensure they also evolve defenses
-published: true
+published: false
 date: 2021-06-01T19:57:48.751Z
 tags: guidance, bronze, supply-chain
 editor: markdown

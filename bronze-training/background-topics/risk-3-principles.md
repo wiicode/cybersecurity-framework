@@ -1,7 +1,7 @@
 ---
 title: Get the basics right: risk management principles for cyber security
 description: Risk management principles that can be applied to all organizations, regardless of size.
-published: true
+published: false
 date: 2021-06-01T18:37:44.960Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance, favorite
 editor: markdown

@@ -1,7 +1,7 @@
 ---
 title: II. Establish control
 description: This section's principles will help you gain and maintain control of your supply chain.
-published: true
+published: false
 date: 2021-06-02T21:34:06.090Z
 tags: guidance, bronze, supply-chain
 editor: markdown

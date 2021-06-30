@@ -1,7 +1,7 @@
 ---
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
-published: true
+published: false
 date: 2021-06-30T19:37:47.841Z
 tags: bronze, bronze-controls, email
 editor: markdown

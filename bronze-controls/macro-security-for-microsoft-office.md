@@ -1,7 +1,7 @@
 ---
 title: Macro Security for Microsoft Office
 description: Why macros are a threat, and the approaches you can take to protect your systems.
-published: true
+published: false
 date: 2021-06-30T19:35:11.066Z
 tags: bronze, bronze-controls, apps
 editor: markdown

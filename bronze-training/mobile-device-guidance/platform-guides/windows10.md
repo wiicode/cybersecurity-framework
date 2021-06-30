@@ -1,7 +1,7 @@
 ---
 title: Securing Windows10
 description: 
-published: true
+published: false
 date: 2021-06-02T21:05:54.020Z
 tags: bronze, bronze-training, security-operations
 editor: markdown

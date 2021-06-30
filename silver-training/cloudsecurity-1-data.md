@@ -1,7 +1,7 @@
 ---
 title: 1. Data in transit protection
 description: User data transiting networks should be adequately protected against tampering and eavesdropping.
-published: true
+published: false
 date: 2021-06-30T18:48:22.435Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

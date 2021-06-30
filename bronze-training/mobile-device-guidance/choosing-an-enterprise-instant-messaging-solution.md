@@ -1,7 +1,7 @@
 ---
 title: Enterprise instant messaging
 description: Advice on assessing the security features of enterprise instant messaging systems for smartphones, tablets, laptops and desktop PCs
-published: true
+published: false
 date: 2021-06-02T20:50:40.650Z
 tags: guidance, bronze, mdm
 editor: markdown

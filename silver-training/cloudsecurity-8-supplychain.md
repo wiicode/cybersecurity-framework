@@ -1,7 +1,7 @@
 ---
 title: 8. Supply chain security
 description: The service provider should ensure that its supply chain satisfactorily supports all of the security principles which the service claims to implement.
-published: true
+published: false
 date: 2021-06-30T18:50:10.811Z
 tags: silver, cloud-security-principles, silver training
 editor: markdown

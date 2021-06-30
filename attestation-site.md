@@ -1,7 +1,7 @@
 ---
 title: BENTO:GUIDES:DETAILS:ATTESTATION
 description: BCSF subscriptions include attestation services and validation.  
-published: true
+published: false
 date: 2021-05-29T17:46:02.283Z
 tags: attestation, bronze
 editor: markdown

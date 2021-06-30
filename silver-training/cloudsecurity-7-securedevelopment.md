@@ -1,7 +1,7 @@
 ---
 title: 7. Secure development
 description: Services should be designed and developed to identify and mitigate threats to their security. Those which aren’t may be vulnerable to security issues which could compromise your data, cause loss of service or enable other malicious activity.
-published: true
+published: false
 date: 2021-05-27T21:58:13.983Z
 tags: silver, cloud-security-principles, silver-training
 editor: markdown

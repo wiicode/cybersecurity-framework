@@ -1,7 +1,7 @@
 ---
 title: Securing macOS
 description: 
-published: true
+published: false
 date: 2021-06-02T21:06:38.355Z
 tags: bronze, bronze-training, security-operations
 editor: markdown

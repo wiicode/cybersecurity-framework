@@ -1,7 +1,7 @@
 ---
 title: Advanced Control Checklists
 description: This collection of common controls is based on our internal operations.  
-published: true
+published: false
 date: 2021-06-01T19:56:17.119Z
 tags: checklist, home, silver, silver-controls
 editor: markdown

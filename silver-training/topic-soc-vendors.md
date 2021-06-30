@@ -1,7 +1,7 @@
 ---
 title: Security operations centre (SOC) buyers guide
 description: Guidance is for organizations that are considering procuring a Security Operations Centre (SOC) from a third party.
-published: true
+published: false
 date: 2021-06-30T02:50:56.421Z
 tags: silver, sourced, security-operations, silver-training
 editor: markdown

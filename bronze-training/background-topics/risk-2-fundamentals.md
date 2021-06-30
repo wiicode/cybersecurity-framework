@@ -1,7 +1,7 @@
 ---
 title: The fundamentals of risk
 description: Understanding the key principles that underpin the BCSF's risk management guidance for cyber security.
-published: true
+published: false
 date: 2021-05-27T20:17:05.448Z
 tags: risk-management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown

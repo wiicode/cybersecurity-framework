@@ -1,7 +1,7 @@
 ---
 title: Purchasing devices
 description: Managing supply chain security when buying smartphones, tablets, laptops and desktop PCs
-published: true
+published: false
 date: 2021-06-01T20:11:40.891Z
 tags: bronze, bronze-training, mdm
 editor: markdown

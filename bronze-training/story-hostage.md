@@ -1,7 +1,7 @@
 ---
 title: The Tale of the Hostage
 description: Quick background to ransomware
-published: true
+published: false
 date: 2021-02-20T18:42:59.751Z
 tags: bronze, bronze-training
 editor: markdown

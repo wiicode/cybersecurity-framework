@@ -1,7 +1,7 @@
 ---
 title: The Tale of the Secret Word
 description: Email Account Compromise
-published: true
+published: false
 date: 2021-02-20T18:50:31.932Z
 tags: bronze, bronze-training
 editor: markdown

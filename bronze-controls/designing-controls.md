@@ -1,7 +1,7 @@
 ---
 title: Designing Controls
 description: 
-published: true
+published: false
 date: 2021-06-01T20:09:13.518Z
 tags: bronze, bronze-controls
 editor: markdown
