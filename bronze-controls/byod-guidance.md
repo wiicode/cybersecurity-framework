@@ -2,7 +2,7 @@
 title: Bring Your Own Device (BYOD) Guidance
 description: Guidance for personal devices in organization environments.
 published: true
-date: 2021-06-30T03:01:09.866Z
+date: 2021-06-30T03:01:42.199Z
 tags: bronze, bronze-training, security-operations, byod
 editor: markdown
 dateCreated: 2021-01-08T05:05:29.692Z
@@ -38,9 +38,8 @@ However, with the right technical and procedural controls, many of these risks c
 -   Malicious exploitation of devices remains undetected due to lack of monitoring, potentially leading to further spread of malware
 -   Additional exposure of devices to threats as a result of being used in a broader personal context, such as user sharing devices or passwords with others
 
-### NOTE
-
-Many of these risks can also be present in corporately - managed solutions.
+> Many of these risks can also be present in corporately - managed solutions.
+{.is-warning}
 
 ## Developing a BYOD policy
 
