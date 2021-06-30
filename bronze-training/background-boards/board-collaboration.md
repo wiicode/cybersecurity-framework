@@ -2,7 +2,7 @@
 title: Collaborating with suppliers and partners
 description: Cyber attacks on your suppliers can be just as damaging as an attack on your own networks.
 published: true
-date: 2021-06-30T02:10:32.425Z
+date: 2021-06-30T02:11:28.368Z
 tags: bronze, bronze-training, board, favorite
 editor: markdown
 dateCreated: 2021-02-22T01:17:05.491Z
@@ -17,12 +17,11 @@ There are four reasons why cyber security is a key consideration when collabor
 
 Being able to demonstrate a good level of cyber security is increasingly a key component of supplier and provider contracts, and is already a requirement for many government contracts.
 
-## What should the Board do?
+# What should the Board do?
 
-###   
-**Build cyber security into every decision**
+###   **Build cyber security into every decision**
 
-All organisations will have a relationship with at least one other organization, be that the provider of your email service, or the developers of the accounting software you use, through to your traditional procurement supply chain. Most organisations will be reliant on multiple relationships. Each of these relationships will have a level of trust associated with them, normally some form of access to your systems, networks or data. There are three key things you therefore need to ensure:
+All organizations will have a relationship with at least one other organization, be that the provider of your email service, or the developers of the accounting software you use, through to your traditional procurement supply chain. Most organizations will be reliant on multiple relationships. Each of these relationships will have a level of trust associated with them, normally some form of access to your systems, networks or data. There are three key things you therefore need to ensure:
 
 1.  That this access doesn't provide a route for an attacker to gain access to your organization, either through deliberate action or unintentional consequence.
 2.  That any partner or supplier is handling any sensitive data appropriately and securely.
@@ -30,31 +29,29 @@ All organisations will have a relationship with at least one other organization
 
 Cyber security risk should be a key consideration in any decision on new relationships or collaborations. This includes decisions on suppliers, providers, mergers, acquisitions and partners.
 
-## What should your organization do?
+# What should your organization do?
 
-###   
-**Identify your full range of suppliers and partners, what security assurances you need from them, and communicate this clearly**
+###   **Identify your full range of suppliers and partners, what security assurances you need from them, and communicate this clearly**
 
 Review your current supply chain arrangements to ensure you are setting out your security needs clearly and identifying the actions you need to take as a result. If you yourself are a supplier, ensure you meet the security requirements set for you by your customer as a minimum.
 
 Ensure that the security requirements you set are justified and proportionate and match the assessed risks to your operations. Also be mindful of the current security status of your suppliers to give them time to make the necessary improvements.
 
-###   
-**Get assurance**
+> ###   **Get assurance**
+> 
+> Security should be built into all agreements from the start, and you should have confidence that your security needs are being met. Dependent on your relationship with the supplier or provider and your resources, you could seek assurance of this through testing, auditing or adherence to accreditation standards.
+{.is-warning}
 
-Security should be built into all agreements from the start, and you should have confidence that your security needs are being met. Dependent on your relationship with the supplier or provider and your resources, you could seek assurance of this through testing, auditing or adherence to accreditation standards.
 
-###   
-**Consider the implications if your supplier is compromised**
+###   **Consider the implications if your supplier is compromised**
 
 No matter how comprehensive your security agreements with your partners are, and no matter how well they implement their controls, you should assume that your partners **will** be compromised at some point. You should plan the security of your networks, systems and data accordingly with this assumption in mind. This is also worth considering in your security agreements; what are you expecting of them and their response? Do they have to notify you? Do they have to assist you if you are consequently also compromised?
 
-## What does good look like?
+# What does good look like?
 
 The following questions can be used to generate productive discussions with your technical team. The aim is to identify what constitutes 'good' cyber security in terms of supply chain security.
 
-###   
-**Q1. As an** organization**, how do we mitigate the risks associated with sharing data and systems with other organizations?**
+###   **Q1. As an** organization**, how do we mitigate the risks associated with sharing data and systems with other organizations?**
 
 You should:
 
@@ -70,21 +67,18 @@ To do this you might:
 -   Implement user and system authentication and authorization before access is granted.
 -   Audit any sensitive actions or data exchange/access.
 
-###   
-**Q2. As an** organization**, how do we ensure that cyber security is considered in every business decision?**
+###   **Q2. As an** organization**, how do we ensure that cyber security is considered in every business decision?**
 
 Security should be embedded in your culture and strategy, and should therefore be consciously considered in any decision regarding procurement, mergers or acquisitions. If there is a process for making those decisions, security can be explicitly identified as a relevant consideration and any conclusions recorded.
 
-###   
-**Q3. As an** organization**, are we confident that we are fulfilling our security requirements as a supplier?**
+###   **Q3. As an** organization**, are we confident that we are fulfillling our security requirements as a supplier?**
 
 If you are a supplier to other organizations you are exposed to an increased risk. Both a reputation risk (if your product causes your customer to be compromised) and also operational risk (since you now provide access to more, and potentially more valuable, organizations). You should:
 
 -   Know how you would respond should your organization be compromised, putting at risk partner networks you are connected to, or customer data you may hold.
 -   Have a good understanding of your customers and the impact they may have on your threat profile.
 
-###   
-**Q4. As a Board, do we have a clear strategy for using suppliers, and have we communicated it?**
+###   **Q4. As a Board, do we have a clear strategy for using suppliers, and have we communicated it?**
 
 If procurement and supplier decisions are devolved below the Board, have you clearly described:
 
