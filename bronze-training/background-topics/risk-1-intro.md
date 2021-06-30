@@ -2,7 +2,7 @@
 title: Introduction to the risk management for cyber security guidance
 description: The BCSF risk management guidance will help you improve the decisions you make with regard to cyber security
 published: true
-date: 2021-06-30T18:59:55.562Z
+date: 2021-06-30T19:00:15.569Z
 tags: risk management, bronze, bronze-training, sourced, risk-management-guidance
 editor: markdown
 dateCreated: 2021-06-30T18:59:42.278Z
@@ -25,13 +25,13 @@ This guidance is aimed at a range of different audiences, from non-technical sta
 The guidance as it stands presents two very different (but complementary) techniques of looking at risk.
 
 -   [Component-driven](/bronze-training/background-topics/component-system-driven-approaches/understanding-component-driven-risk-management) risk management focuses on technical components, and the threats and vulnerabilities they face.
--   [System-driven](/bronze-training/background-topics/component-system-driven-approaches/understanding-system-driven-risk-management) risk management takes the opposite view, and analyses systems as a whole.
+-   [System-driven](/bronze-training/background-topics/component-system-driven-approaches/understanding-system-driven-risk-management) risk management takes the opposite view, and analyzes systems as a whole.
 
 Note that we'll be introducing different techniques in future editions of this guidance. When we do, we'll describe the *types* of problem each technique is suitable (or not) to apply to. To be clear, we do **not** provide blueprints and step-by-step instructions on how to apply techniques that are already out there. But we will describe some of the core concepts behind each type of technique, and signpost to more detailed guidance on how techniques can be practically applied.
 
 # An end to 'tick-box' risk management
 
-As we will discuss in the [fundamentals of risk](/bronze-training/background-topics/risk-2-fundamentals) section, carrying out cyber risk management solely for 'compliance' purposes can lead to risk being managed in a 'tick-box' fashion, with unintended negative consequences. This can prevent organisations questioning whether they have ticked the right boxes, leading to overconfidence in how well risks have been managed.
+As we will discuss in the [fundamentals of risk](/bronze-training/background-topics/risk-2-fundamentals) section, carrying out cyber risk management solely for 'compliance' purposes can lead to risk being managed in a 'tick-box' fashion, with unintended negative consequences. This can prevent organizations questioning whether they have ticked the right boxes, leading to overconfidence in how well risks have been managed.
 
 For these reasons, this guidance is **not** prescriptive; tick-box risk management can be worse than no risk management at all. This is why we are introducing distinctly different types of cyber risk management technique in this guidance. **No single technique in this guidance will be useful in** ***every*** **situation**. When selecting a risk management technique to be applied to a particular cyber security problem, it is not sufficient to justify that selection by pointing to its presence in this guidance. You'll need to explain why the technique you've selected is relevant to your problem.
 
