@@ -2,7 +2,7 @@
 title: BENTO:GUIDES:HOME
 description: Welcome to BENTO:GUIDES, the cybersecurity information source for clients and guests.
 published: true
-date: 2021-05-29T18:18:52.591Z
+date: 2021-06-30T20:08:18.104Z
 tags: welcome, bronze
 editor: markdown
 dateCreated: 2020-08-05T17:54:57.644Z
@@ -22,6 +22,20 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 - [Bento Cyber Security Framework Guides *Library of articles, guides, policies, and procedures that educates and instructs how companies can implement cyber security strategy and processes based on BCSF.*](/bronze-controls)
 {.links-list}
 
+> **We built this resource with the following goals:**
+>
+> To enable companies to easily develop their information security governance.
+>
+> To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
+>
+> To give our clients actionable and relevant cybersecurity information.
+>
+> To reduce chaos and spotlight the information critical to cybersecurity success.
+>
+> To align information security practices with realistic needs and best practices.
+>
+> To disrupt traditional security awareness training offerings.
+{.is-info}
 
 ## Core Modules:
 
@@ -31,18 +45,8 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 - [Policies for Information Security *This is the heart of an information security program.*](/bronze-policies)
 - [Implementation Checklists *Outlines for your actionable steps*](/bronze-checklists)
 - [Guidance and Controls *Detailed implementation and oversight guidance*](/bronze-controls)
-
 {.links-list}
 
-
-**We built this resource with the following goals:**
-
-1. To enable companies to easily develop their information security governance.
-1. To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
-1. To give our clients actionable and relevant cybersecurity information.
-1. To reduce chaos and spotlight the information critical to cybersecurity success.
-1. To align information security practices with realistic needs and best practices.
-1. To disrupt traditional security awareness training offerings.
 
 
 
