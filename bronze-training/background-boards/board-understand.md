@@ -2,7 +2,7 @@
 title: Understanding the cyber security threat
 description: Organizations face different types of threat, so each Board's approach to cyber security will vary hugely.
 published: true
-date: 2021-06-30T02:17:35.670Z
+date: 2021-06-30T02:18:00.096Z
 tags: bronze, bronze-training, sourced, board
 editor: markdown
 dateCreated: 2021-02-22T01:06:38.858Z
@@ -10,10 +10,9 @@ dateCreated: 2021-02-22T01:06:38.858Z
 
 The type of threat faced is shaped by the nature of organization and the services an organization provides. Understanding the threats faced by your organization, either in its own right or because of who you work with, will enable you to tailor your organization's approach to cyber security investment accordingly. You need to consciously make the decision about what threat you are trying to defend against, otherwise you risk trying to defend against everything, and doing so ineffectively.  
 
-## What should the Board do?
+# What should the Board do?
 
-###   
-**Get an understanding of the threat**
+###   **Get an understanding of the threat**
 
 An understanding of the cyber security threat landscape will be key to helping the Board make well-informed governance decisions. The Board will already have insight into the threats or challenges facing their sector. This should be complemented by an awareness of the motivations of attackers, and a mechanism for staying up to date with key cyber security developments (for example, the growth of ransomware). 
 
@@ -32,7 +31,7 @@ Ongoing discussion between the Board and experts will help you to prioritize the
 
 When assessing the threat, you should consider not only the value that you might have as a standalone organization, but also the value you may represent as a route into another, possibly larger organization. 
 
-## What should your organization do?
+# What should your organization do?
 
 ### **Don't underestimate the impact of un-targeted attacks**
 
@@ -44,12 +43,11 @@ You will need different types of threat intelligence for different purposes. A g
 
 You can also gather threat intelligence internally. You will likely have experience of attacks on your own organization which can provide strategic insight into activities of threat actors, as well as tactical details on the methods of the threat actors. These specific details will likely come from *logging or monitoring* within your organization.
 
-## What does good look like?
+# What does good look like?
 
 The following questions can be used to generate productive discussions with your technical team. The aim is to identify what constitutes 'good' cyber security in terms of understanding the cyber security threat to your organization. 
 
-###   
-**Q1. As an** organization**, which threats do we assess are relevant to our** organization**, and why?**
+###   **Q1. As an** organization**, which threats do we assess are relevant to our** organization**, and why?**
 
 This assessment should:
 
@@ -58,8 +56,7 @@ This assessment should:
 -   be enriched by collaboration with key partners in your sector
 -   be supported by evidence from the attacks you have experienced to date
 
-###   
-**Q2. As an** organization**, how do we stay up to date with the cyber threat?**
+###   **Q2. As an** organization**, how do we stay up to date with the cyber threat?**
 
 You might:
 
@@ -68,8 +65,7 @@ You might:
 -   be part of a sector-specific intelligence sharing group
 -   have mechanisms for sharing key cyber threat updates internally
 
-###   
-**Q3. As an** organization**, how do we use threat intelligence to inform business as usual (BAU)?**
+###   **Q3. As an** organization**, how do we use threat intelligence to inform business as usual (BAU)?**
 
 This should be a continuous cycle with threat assessments informing BAU decisions, and BAU experience informing the threat assessments. Examples might be:
 
