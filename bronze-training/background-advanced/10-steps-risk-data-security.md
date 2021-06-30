@@ -1,6 +1,6 @@
 ---
 title: Data security
-description: Guidance on how organisations can protect themselves in cyberspace.
+description: Guidance on how organizations can protect themselves in cyberspace.
 published: true
 date: 2021-05-29T20:01:36.506Z
 tags: bronze, bronze-training
@@ -37,7 +37,7 @@ Data needs to be protected from *unauthorized* access, modification, or deletion
 -   Ensure interfaces that enable access to sensitive data are well defined and expose only the necessary functionality to reduce the opportunity for an attacker to abuse them. Access to bulk datasets should be rate-limited. Only grant the ability to run arbitrary queries over sensitive datasets to users if there is a legitimate business need and it's carefully monitored. This should be considered a privileged role.
 -   Log accesses to data and monitor for unusual queries, attempted bulk exports of data, and administrative access to detect possible compromises.
 -   Consider where you are relying on others to protect your data, such as in cloud services, in your supply chain or on staff's personal devices. Understand what measures you can take to protect your data, and what assurances you need to seek from the third parties.
--   Understand your legal responsibilities, including any regulations applicable to your sector. 
+-   Understand your legal responsibilities, including any regulations applicable to your sector.
 
 ## Back up your data
 

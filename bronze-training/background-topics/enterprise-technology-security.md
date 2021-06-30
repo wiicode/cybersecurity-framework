@@ -1,6 +1,6 @@
 ---
 title: Approaching enterprise technology with cyber security in mind
-description: How organisations can approach enterprise technology in order to deter cyber attacks.
+description: How organizations can approach enterprise technology in order to deter cyber attacks.
 published: true
 date: 2021-06-01T18:29:32.564Z
 tags: bronze, bronze-training, sourced, security-operations, favorite
@@ -67,4 +67,3 @@ It's important not to treat security as a one-off event, but instead as somethin
 The most important activity to prevent common cyber attacks is to keep your enterprise technology up to date, and to apply the latest security patches as they're made available. Our guidance on patching can help you understand the importance of this, and how to prioritize patching.
 
 Security operations can be run in-house or be provided by a third party. Our security operations guidance can help you make this decision, and describes the activities that an effective operations team should carry out.
-
