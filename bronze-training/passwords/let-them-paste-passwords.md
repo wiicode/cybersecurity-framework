@@ -2,7 +2,7 @@
 title: Let them paste passwords
 description: Allow your website to accept pasted passwords - it makes your site more secure, not less.
 published: true
-date: 2021-05-28T02:53:57.969Z
+date: 2021-06-30T02:54:30.128Z
 tags: bronze, passwords
 editor: markdown
 dateCreated: 2021-05-28T02:15:23.345Z
@@ -59,7 +59,6 @@ Many password managers copy your password to the clipboard so they can paste it 
 Passwords remaining in the clipboard might be more of an issue if you're manually copying and pasting your passwords from a document you have on your computer. You might forget to clear the clipboard. However it's not much of a risk because:
 
 -   Most password managers erase the clipboard as soon as they have pasted your password into the website, and some avoid the clipboard completely by typing in the password with a 'virtual keyboard' instead.
--   The web browser 'Internet Explorer 6' allows evil web pages to copy the clipboard; but very few people in the UK still use IE6 to browse the web.
 -   Viruses installed on your computer can have clipboard copiers on them, and grab your pasted passwords. That's still not a good reason for SPP though; when your computer gets infected you can't trust it *at all*. Viruses and other malware that copy the clipboard nearly always also copy every letter, number and symbol typed on your computer, including your passwords. They would steal your password whether or not it was in the clipboard, so you're not really gaining much by SPP.
 
 Rather than stopping password pasting, help your computers to avoid catching viruses in the first place by following our [guidance on securing enterprise IT](/bronze-training/background-topics/enterprise-technology-security). And install software updates - the IT version of eating your fruit and veg. It's one of the very best ways of securing your computer.
