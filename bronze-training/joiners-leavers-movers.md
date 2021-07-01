@@ -2,7 +2,7 @@
 title: joiners-leavers-movers
 description: 
 published: true
-date: 2021-07-01T21:07:29.482Z
+date: 2021-07-01T21:08:32.823Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T13:53:58.019Z
@@ -28,3 +28,10 @@ This is why manual processes appeal to small organizations, and when used method
 
 - [Checklist for offboarding those who leave the company.](#)
 {.links-list}
+
+## Movers
+
+- [Workflow for staff changing roles](#)
+{.links-list}
+
+
