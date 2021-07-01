@@ -1,3 +1,13 @@
+---
+title: joiners-sample-checklist
+description: 
+published: true
+date: 2021-07-01T20:46:33.472Z
+tags: 
+editor: markdown
+dateCreated: 2021-07-01T20:41:14.767Z
+---
+
 # New Employee or Contractor
 1. Request is assembled and includes:
     - Full name required for establishing the username.
@@ -67,7 +77,9 @@
     - Remove unused Dock items.
 
 # New Windows Device using Azure AD Join
-Note: Windows Devices are best managed through MDM which supports Group Policy Administration templates.
+> Windows Devices are best managed through MDM which supports Group Policy Administration templates and Windows Autopilot.
+{.is-warning}
+
 
 1. Verify system is Windows 10 (or 11) Pro/Business.
 2. If asked during initial setup "Set up for an organization"
@@ -110,7 +122,9 @@ Sign in using the Microsoft Online for Work account into the computer, this proc
 
 
 # New Windows Device using local Active Directory domain.
-Note: Unless using Windows Autopilot, it is exponentially easier to deploy Windows devices by refusing to connect to WiFi when they first power up.  By refusing WiFi connection Windows will offer a choice to create a local user setup which will then simplify the process known as "Domain Join."  Once WiFi is connected, that choices is no longer possible and the machine will complete a Microsoft 365 sign-in.
+> Unless using Windows Autopilot, it is exponentially easier to deploy Windows devices by refusing to connect to WiFi when they first power up.  By refusing WiFi connection Windows will offer a choice to create a local user setup which will then simplify the process known as "Domain Join."  Once WiFi is connected, that choices is no longer possible and the machine will complete a Microsoft 365 sign-in.
+{.is-danger}
+
 
 1. Verify system is Windows 10 (or 11) Pro/Business.
 2. Do not connect to WiFi and attempt to select all "local" or "skip" choices to arrive at a local user.  This procedure has changed frequently so prepare `your own steps` and maintain them.
