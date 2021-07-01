@@ -1,3 +1,13 @@
+---
+title: joiners-sample-workflow
+description: 
+published: true
+date: 2021-07-01T21:36:38.429Z
+tags: 
+editor: markdown
+dateCreated: 2021-07-01T21:31:35.387Z
+---
+
 In this example we use a Wiki system (such as BENTO:GUIDES) to store a checklist which a manager updates for a new hire, an operatons administrator completes, and then the list is cross-checked with access control settings.  Lastly, all involved parties sign-off on their work. Collectively, this page becomes a "Statement of Record" and meets most compliance requirements today.
 
 In general, BCSF recommends that small organizations using manual onboarding process consider:
@@ -6,9 +16,11 @@ In general, BCSF recommends that small organizations using manual onboarding pro
 - A training platform where users can view and acknowledge training has taken place.
 
 # Suggested Access Control Procedures
-| Stage 1: manager or authroized representative |
-| ----- |
-| The objective here is to have a have transactional record of permissions granted.  |
+## Stage 1: manager or authroized representative |
+
+>  The objective here is to have a have transactional record of permissions granted.  
+{.is-info}
+
 
 - [ ] Create a record set from `Staff Onboarding Template` and name it `New Staff - <name>`.
 - [ ] You may restrict access to this page on need-to-know basis.
@@ -22,10 +34,13 @@ In general, BCSF recommends that small organizations using manual onboarding pro
 - [ ] Hand over this sheet to `system adinistrator` for initial implementation.
 
 
-| Stage 2:  Security Administrator / App Owner |
-| ----- |
-| The objective here is to follow the process to assign rights. |
-The rule of thumb is to create the user 7 days before start, except in circumstances where waiting closer is beneficial to license compliance or to the department.
+## Stage 2:  Security Administrator / App Owner
+> The objective here is to follow the process to assign rights. 
+{.is-info}
+
+> The rule of thumb is to create the user 7 days before start, except in circumstances where waiting closer is beneficial to license compliance or to the department.
+{.is-success}
+
 
 - [ ] Read through the page and note any concerns, schedule creation date.
 - [ ] Assign Hardware
@@ -36,9 +51,11 @@ The rule of thumb is to create the user 7 days before start, except in circumsta
 - [ ] Sign request sheet.
 
 
-| STAGE 3: Manager (or authorized representative) |
-| ----- |
-| The objective here is to follow the process to verify. |
+## STAGE 3: Manager (or authorized representative)
+
+> The objective here is to follow the process to verify. 
+{.is-info}
+
 
 - [ ] Wait for notice of completion. Once it is performed, complete a [Managerial Review](#) for each application.
 - [ ] Sign request sheet.
