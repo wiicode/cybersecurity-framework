@@ -34,7 +34,7 @@ As an applied framework, BCSF provides the general structure and specific guidan
 - To align information security practices with realistic needs and best practices.
 - To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
 - To weave customer information governance into the daily practices of managed service providers.
-- To disrupt the IT industry by making cyber security management services transparent and accessible. 
+- To disrupt the IT industry by making cyber security management services transparent and accessible.
 {.grid-list}
 
 
@@ -73,23 +73,23 @@ Following a standardized risk management approach can help in achieving good cyb
 | Standard | Summary |
 | -------- | ------  |
 |NIST Special Publication (SP) 800-37|*Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy*
-| |This publication provides guidelines for applying the Risk Management Framework (RMF) to information systems and organizations. The RMF includes a disciplined, structured, and flexible process for organizational asset valuation; security and privacy control selection, implementation, and assessment; system and control authorizations; and continuous monitoring. |
+| | This publication provides guidelines for applying the Risk Management Framework (RMF) to information systems and organizations. The RMF includes a disciplined, structured, and flexible process for organizational asset valuation; security and privacy control selection, implementation, and assessment; system and control authorizations; and continuous monitoring. |
 
-| |It also includes enterprise-level activities to help better prepare organizations to execute the RMF at the system level. The RMF promotes the concept of near real-time risk management and ongoing system authorization through the implementation of continuous monitoring processes; provides senior leaders and executives with the necessary information to make cost-effective, risk management decisions about the systems supporting their missions and business functions; and integrates security and privacy controls into the system development life cycle. |
+| | It also includes enterprise-level activities to help better prepare organizations to execute the RMF at the system level. The RMF promotes the concept of near real-time risk management and ongoing system authorization through the implementation of continuous monitoring processes; provides senior leaders and executives with the necessary information to make cost-effective, risk management decisions about the systems supporting their missions and business functions; and integrates security and privacy controls into the system development life cycle. |
 
-| |Applying the RMF tasks enterprise-wide helps to link essential risk management processes at the system level to risk management processes at the organization level. In addition, it establishes responsibility and accountability for the security and privacy controls deployed within organizational systems and inherited by those systems. |
+| | Applying the RMF tasks enterprise-wide helps to link essential risk management processes at the system level to risk management processes at the organization level. In addition, it establishes responsibility and accountability for the security and privacy controls deployed within organizational systems and inherited by those systems. |
 
-| |The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act.|
+| | The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act. |
 
 | ISO 27001 | *An Information Security Management System can aid governance of cyber security risk* |
 
-| |An Information Security Management System (ISMS) is a set of policies, procedures, and roles designed to ensure cyber security risks are identified and managed. Traditionally an ISMS is considered to be an information risk management system, however it can be used to manage cyber security risks to essential functions.|
+| | An Information Security Management System (ISMS) is a set of policies, procedures, and roles designed to ensure cyber security risks are identified and managed. Traditionally an ISMS is considered to be an information risk management system, however it can be used to manage cyber security risks to essential functions.|
 
-| |A properly scoped and implemented ISMS can help your organization to meet requirements your organization might have to protect essential functions by putting in place policies, procedures, and roles which govern the organizational approach to managing cyber security risks to those functions.. |
+| | A properly scoped and implemented ISMS can help your organization to meet requirements your organization might have to protect essential functions by putting in place policies, procedures, and roles which govern the organizational approach to managing cyber security risks to those functions.. |
 
-| |ISO 27001 is one of many standards you can use to implement an ISMS. If your organization is intending to use ISO 27001, you should consider which elements will help achieve your organizational objectives - full compliance and certification may be unnecessary. |
+| | ISO 27001 is one of many standards you can use to implement an ISMS. If your organization is intending to use ISO 27001, you should consider which elements will help achieve your organizational objectives - full compliance and certification may be unnecessary. |
 
-| |Your organization must incorporate into the ISMS any relevant external requirements, for example direction from a regulator.  You should also set appropriate cyber security requirements for your supply chain to ensure their support in achieving yourcyber security and resilience objectives (see A4 Supply Chain Security).|
+| | Your organization must incorporate into the ISMS any relevant external requirements, for example direction from a regulator.  You should also set appropriate cyber security requirements for your supply chain to ensure their support in achieving yourcyber security and resilience objectives (see A4 Supply Chain Security). |
 
 #### Section References
 {.grid-list}
