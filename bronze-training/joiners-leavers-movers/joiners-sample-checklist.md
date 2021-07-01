@@ -1,12 +1,17 @@
 ---
-title: joiners-sample-checklist
-description: 
+title: Joiners: Sample checklist for onboarding staff or contractors.
+description: This list is developed for smaller organizations. 
 published: true
-date: 2021-07-01T20:49:35.118Z
+date: 2021-07-01T20:57:30.916Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T20:41:14.767Z
 ---
+
+Many small organizations use a manual and ad-hock process for onboarding new staff or contractors - that's fine.  Unless an organization has frequent turn-over rate, the appeal of auto-provisioning systems rests mostly in the security benefits it brings.  Automated systems reduce the effort as well as risks of human error.
+
+Some systems, such as [Blissfully](https://www.blissfully.com/) enable rapid and efficient people management.  Other systems, such as [Okta](https://www.okta.com), are primarily focused with the identity creation and access control elements. Both leverage [System for Cross-domain Identity Management (SCIM)](#) to "talk" to other systems and create accounts.  While these systems may have palateable usage costs, organizations are often surprised when the licensing fees are only the beginning.  Many SaaS applications today require top-tier access for SCIM capabilies increasings overall operational costs as much as 10x, and that increase does not include billable time to provision the environments and maintain them.
+
 
 # New Employee or Contractor
 > BCSF strongly recommends a "two key" approach to authorization and granting of access controls.  In most cases a manager requests specific items, an operations admin implements them, and then the permssions should be audited.  We provide additional guidance on this in our [Joiners Sample Worfklow](#) article. 
