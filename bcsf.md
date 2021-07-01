@@ -26,6 +26,18 @@ As an applied framework, BCSF provides the general structure and specific guidan
 2. **Actionable**: extended by **BENTO:GUIDES**, BCSF allows companies to easily access the framework and supporting materials for implmentation.
 3. **Affordable**: cyber security is an investment of time, resources, and energy.  BCSF focuses on resiliency mechanisms that are high value and can be efficiently implemented at the small business level.
 
+## We built this resource with the following goals:
+
+- To enable companies to develop their information security governance from one comprehsnive resource.
+- To give our clients actionable and relevant cybersecurity information.
+- To reduce chaos and spotlight the information critical to cybersecurity success.
+- To align information security practices with realistic needs and best practices.
+- To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
+- To weave customer information governance into the daily practices of managed service providers.
+- To disrupt the IT industry by making cyber security management services transparent and accessible. 
+{.grid-list}
+
+
 # Framework User Values
 When developing your information technology program based on our framework, you should embrace these values:
 - [Be Mindful ------------------------------------- *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/emplotee/vendor having a bad moment, a bad experience, or worse.*](#)

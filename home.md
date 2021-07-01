@@ -9,12 +9,12 @@ dateCreated: 2020-08-05T17:54:57.644Z
 ---
 
 # Welcome to BENTO:GUIDES!
-The objective behind **Bento Cyber Security Framework (BCSF)** is to promote realistic and practical controls against common threats to organizational infrastructure. BCSF will help you create an information security program that is based on standards and adapts to your organization's needs.  **BENTO:GUIDES** is the tool for learning about, developing, and maintaining your *BCSF-based* information security program. The tool gives you access to a collection of materials which you can use to build your own program. 
+The objective behind **Bento Cyber Security Framework (BCSF)** is to promote realistic and practical controls against common threats to organizational infrastructure. BCSF will help you create an information security program that is based on standards and adapts to your organization's needs.  **BENTO:GUIDES** is the tool for learning about, developing, and maintaining your *BCSF-based* information security program. The tool gives you access to a collection of materials which you can use to build your own program.
 
 ![bentosecurityprojectdiagram_v3.png](/public/bentosecurityprojectdiagram_v4.png =90%x)
 
 # Getting Started
-**BENTO:GUIDES** information security content and management platform for professional service companies. To get started, begin with our learning modules and educate yourself about cyber security for small companies.  From there, use our tiered content to build a security program by adopting **policies**, developing **controls**, and eventually attesting it all works properly by auditing and tracking **evidence**. 
+**BENTO:GUIDES** information security content and management platform for professional service companies. To get started, begin with our learning modules and educate yourself about cyber security for small companies.  From there, use our tiered content to build a security program by adopting **policies**, developing **controls**, and eventually attesting it all works properly by auditing and tracking **evidence**.
 
 ## The Framework:
 {.grid-list}
@@ -22,22 +22,9 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 - [Bento Cyber Security Framework Guides *Library of articles, guides, policies, and procedures that educates and instructs how companies can implement cyber security strategy and processes based on BCSF.*](/bronze-controls)
 {.links-list}
 
-> **We built this resource with the following goals:**
->
-> To enable companies to easily develop their information security governance.
->
-> To deliver attestation of information security practices to clients, insurance companies, vendors, and oversight organizations.
->
-> To give our clients actionable and relevant cybersecurity information.
->
-> To reduce chaos and spotlight the information critical to cybersecurity success.
->
-> To align information security practices with realistic needs and best practices.
->
-> To disrupt traditional security awareness training offerings.
-{.is-info}
-
 ## Core Modules:
+> These modules are part of the *Bronze* subscription to BentoSecurity and available to everyone.  Written for owners, board members, managers, system administrators, and emploees, the modules cover a plethora of cyber security information.  
+{.is-info}
 
 {.grid-list}
 - [Introduction to BCSF *Bronze Level access to all core content.*](/home-subscriptions-bronze)
@@ -46,7 +33,3 @@ The objective behind **Bento Cyber Security Framework (BCSF)** is to promote rea
 - [Implementation Checklists *Outlines for your actionable steps*](/bronze-checklists)
 - [Guidance and Controls *Detailed implementation and oversight guidance*](/bronze-controls)
 {.links-list}
-
-
-
-
