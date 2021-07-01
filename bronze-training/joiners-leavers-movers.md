@@ -2,7 +2,7 @@
 title: joiners-leavers-movers
 description: 
 published: true
-date: 2021-07-01T21:08:32.823Z
+date: 2021-07-01T21:35:20.160Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T13:53:58.019Z
@@ -19,7 +19,7 @@ This is why manual processes appeal to small organizations, and when used method
 
 ## Joiners
 
-- [Workflow with procedures for onboarding new employees (or contractors).](#)
+- [Workflow with procedures for onboarding new employees (or contractors).](/bronze-training/joiners-leavers-movers/joiners-sample-workflow)
 - [Checklist for onboarding new employees (or contractors) and their devices.](/bronze-training/joiners-leavers-movers/joiners-sample-checklist)
 {.links-list}
 
