@@ -2,13 +2,17 @@
 title: joiners-sample-checklist
 description: 
 published: true
-date: 2021-07-01T20:46:33.472Z
+date: 2021-07-01T20:49:35.118Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T20:41:14.767Z
 ---
 
 # New Employee or Contractor
+> BCSF strongly recommends a "two key" approach to authorization and granting of access controls.  In most cases a manager requests specific items, an operations admin implements them, and then the permssions should be audited.  We provide additional guidance on this in our [Joiners Sample Worfklow](#) article. 
+{.is-warning}
+
+
 1. Request is assembled and includes:
     - Full name required for establishing the username.
     - Start date
@@ -41,6 +45,9 @@ dateCreated: 2021-07-01T20:41:14.767Z
 
 
 # New macOS Device
+> macOS devices on 10.15 or above run strict privacy controls. Despite Device Enrollment, MDM, and profiles a user must manually consent to applications which record/transmit screen or allow remote access.  This is normal and organizations should plan accordingly. 
+{.is-info}
+
 1. Go to `provide your link` start the Mobile Device Management (MDM) installation process; be sure to complete the install/approval of the configuration profile.
 2. Install the necessary Remote Administration and Management Tool by `provide your steps.` You may also have specific instructions to install an MDM Agent application that extends MDM capabilities.
 3. Install corporate anti-malware software.
