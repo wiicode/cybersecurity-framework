@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-07-01T15:32:04.582Z
+date: 2021-07-01T15:33:34.264Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -79,8 +79,9 @@ Following a standardized risk management approach can help in achieving good cyb
 | | The RMF incorporates concepts from the Framework for Improving Critical Infrastructure Cybersecurity that complement the currently established risk management processes mandated by the Office of Management and Budget and the Federal Information Security Modernization Act. |
 
 
-| ISO 27001 | *An Information Security Management System can aid governance of cyber security risk* |
+| Standard | Summary | 
 | -------- | ------  |
+| ISO 27001 | ISO/IEC 27001 is an international standard on how to manage information security. The standard was originally published jointly by the International Organization for Standardization and the International Electrotechnical Commission in 2005 and then revised in 2013. |
 | | An Information Security Management System (ISMS) is a set of policies, procedures, and roles designed to ensure cyber security risks are identified and managed. Traditionally an ISMS is considered to be an information risk management system, however it can be used to manage cyber security risks to essential functions.|
 | | A properly scoped and implemented ISMS can help your organization to meet requirements your organization might have to protect essential functions by putting in place policies, procedures, and roles which govern the organizational approach to managing cyber security risks to those functions.. |
 | | ISO 27001 is one of many standards you can use to implement an ISMS. If your organization is intending to use ISO 27001, you should consider which elements will help achieve your organizational objectives - full compliance and certification may be unnecessary. |
