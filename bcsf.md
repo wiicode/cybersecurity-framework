@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-06-30T21:44:04.352Z
+date: 2021-07-01T15:30:48.262Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -97,7 +97,7 @@ Following a standardized risk management approach can help in achieving good cyb
 - [BCSF Board Toolkit](/bronze-training/background-boards)
 - [ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)
 {.links-list}
-
+ 
 
 # Mindful risk management (A.2)
 > Identification, assessment and understanding of security risks. And the establishment of an overall organizational approach to risk management.
