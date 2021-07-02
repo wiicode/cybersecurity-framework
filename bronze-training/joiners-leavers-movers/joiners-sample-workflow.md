@@ -2,7 +2,7 @@
 title: joiners-sample-workflow
 description: 
 published: true
-date: 2021-07-01T21:36:38.429Z
+date: 2021-07-02T14:16:31.986Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T21:31:35.387Z
@@ -16,7 +16,7 @@ In general, BCSF recommends that small organizations using manual onboarding pro
 - A training platform where users can view and acknowledge training has taken place.
 
 # Suggested Access Control Procedures
-## Stage 1: manager or authroized representative |
+## Stage 1: manager or authorized representative |
 
 >  The objective here is to have a have transactional record of permissions granted.  
 {.is-info}
