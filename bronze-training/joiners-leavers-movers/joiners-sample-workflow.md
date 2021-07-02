@@ -2,7 +2,7 @@
 title: joiners-sample-workflow
 description: 
 published: true
-date: 2021-07-02T14:16:31.986Z
+date: 2021-07-02T14:17:12.309Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-01T21:31:35.387Z
@@ -31,7 +31,7 @@ In general, BCSF recommends that small organizations using manual onboarding pro
     - [ ] New hardware needs to be purchased.
     - [ ] BYOD. If BYOD, consider the implications on BYOD Policy Supplement and Summary and Mobile Device Management.
 - [ ] Sign request sheet and formally authorize account creation.
-- [ ] Hand over this sheet to `system adinistrator` for initial implementation.
+- [ ] Hand over this sheet to `system administrator` for initial implementation.
 
 
 ## Stage 2:  Security Administrator / App Owner
