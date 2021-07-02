@@ -12,7 +12,7 @@ dateCreated: 2021-07-01T20:41:14.767Z
 > BCSF strongly recommends a "two key" approach to authorization and granting of access controls.  In most cases a manager requests specific items, an operations admin implements them, and then the permssions should be audited.  We provide additional guidance on this in our [Joiners Sample Worfklow](#) article.
 {.is-warning}
 
-
+ 
 1. Request is assembled and includes:
    - [ ] Full name required for establishing the username.
    - [ ] Start date
