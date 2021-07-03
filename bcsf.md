@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-07-02T14:33:13.989Z
+date: 2021-07-03T00:27:22.929Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -163,8 +163,8 @@ ITIL best practice recommends a staged approach to IT asset management. You may 
 
 #### Section References
 {.grid-list}
-- [ISO 27001/2](#)
-- [ISO 55001 - Asset Management](#)
+- [ISO 27001/2](https://www.iso.org/isoiec-27001-information-security.html)
+- [ISO 55001 - Asset Management](https://www.iso.org/standard/55089.html)
 - [ITIL](#)
 {.links-list}
 
