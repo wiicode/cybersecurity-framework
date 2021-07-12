@@ -2,7 +2,7 @@
 title: Procedures, Controls & Guides
 description: 
 published: true
-date: 2021-06-30T19:59:01.258Z
+date: 2021-07-12T16:00:22.880Z
 tags: bronze, home, bronze-controls
 editor: markdown
 dateCreated: 2021-03-02T03:57:32.388Z
@@ -41,10 +41,19 @@ dateCreated: 2021-03-02T03:57:32.388Z
 # E-Mail Security
 >  Technologies for ensuring that the proper people in an enterprise have the appropriate access to technology resources.
 {.is-success}
-- [Anti-spoofing and email trust](/bronze-controls/email-security-and-anti-spoofing)
+- [E-Mail Anti-Spoofing & Trust Collection](/bronze-controls/email-security-and-anti-spoofing)
 - [Configure DMARC, DKIM, and SPF](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
 - [Protect against phishing, malware, and frauds.](/bronze-controls/phishing)
 {.links-list}
+
+## E-Mail Anti-Spoofing & Trust Collection
+- [Choose an anti-spoofing management tool](/bronze-controls/email-security-and-anti-spoofing/choose-anti-spoofing-management-tool)
+- [Protect email in transit](/bronze-controls/email-security-and-anti-spoofing/protect-email-in-transit)
+- [Configure anti-spoofing controls](/bronze-controls/email-security-and-anti-spoofing/configure-anti-spoofing-controls-)
+- [Send spoof emails to spam](/bronze-controls/email-security-and-anti-spoofing/mark-spoof-emails-as-spam)
+- [Spoof emails being rejected](/bronze-controls/email-security-and-anti-spoofing/reject-spoof-emails)
+- [Continuous improvement](/bronze-controls/email-security-and-anti-spoofing/continuous-improvement)
+{.grid-list}
 
 
 # Device Management 
