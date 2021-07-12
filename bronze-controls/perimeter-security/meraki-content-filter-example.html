@@ -1,0 +1,47 @@
+<!--
+title: Cisco Meraki Content Filtration
+description: 
+published: true
+date: 2021-07-12T21:50:13.765Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-07-12T21:50:13.765Z
+-->
+
+<p>Cisco Meraki&nbsp;appliances and access points&nbsp;can be configured with Layer 7 firewall rules to block traffic by application&nbsp;or destination&nbsp;hostname. The MX can also perform "Content Filtering," which&nbsp;blocks access to websites based on their content. The MX can also&nbsp;redirect&nbsp;users to a "This website has been blocked by your network administrator" page, so a user understands why they cannot access a blocked site.</p>
+<p>This article covers the process of creating content filtering and layer 7 firewall rules on the MX Security Appliance, as well as troubleshooting the block page.&nbsp;</p>
+<p><i><strong>Note:</strong>&nbsp;While&nbsp;MR Access Points can be configured with Layer 7 firewall rules, they will not redirect users to a block page. To read about how to configure a Layer 7 firewall rule on an MR Access Point, please consult the following article - Creating a Layer 7 Firewall Rule</i></p>
+<h2><strong>Configuring Content Filtering</strong></h2>
+<p>To block user access to groups of websites or individual sites, follow the below instructions for creating a Content Filtering&nbsp;rule:</p>
+<ol>
+  <li>In Dashboard, navigate to <strong>Security appliance &gt;&nbsp;Configure &gt; Content Filtering</strong>.</li>
+  <li>To block a specific website or page, add the URL pattern for the webpage under <strong>URL Blocking &gt; Blocked URL Patterns</strong>. For more information on writing a URL Pattern, click the "Learn how URL blocking works" link in Dashboard, on the<strong> Content Filtering</strong> page.</li>
+  <li>To block a category of websites, select the website category under <strong>Category Filtering &gt; Blocked Website Categories</strong>. An example configuration with a blocked category can be seen below:</li>
+</ol>
+<figure class="image image_resized" style="width:664px;"><img src="https://documentation.meraki.com/@api/deki/files/1933/2017-07-26_11_21_16-Content_Filtering_-_Meraki_Dashboard.png?revision=1&amp;size=bestfit&amp;width=664&amp;height=700" alt=""></figure>
+<h2><strong>Configuring Layer 7 Firewall Rules</strong></h2>
+<p>To prevent a user from using a certain port/application, accessing a range of IP addresses, or using a certain category of web services, the network admin should configure a <strong>Layer 7 Firewall </strong>rule. Instructions for doing so are available on the following KB Article - Creating a Layer 7 Firewall Rule.</p>
+<h2><strong>Testing a Blocking Rule</strong></h2>
+<p><i><strong>Note: </strong>It may take several minutes for a new block rule to take effect. If the website remains available after this time, reference&nbsp;the Troubleshooting the Block Page section of this article. Please note that HTTPS requests will not result in a block page, refer to the Troubleshooting section for more details.</i></p>
+<ol>
+  <li>Use a non-whitelisted device to test the block rule. This device must be connected to the&nbsp;network behind a LAN port on the MX Security Appliance.</li>
+  <li>Open a browser on the device and clear the browsing cache. If the blocked website has been cached, the cached page will be displayed in the browser.</li>
+  <li>Try to access the blocked website in this browser. If a block page loads, similar to the image below,&nbsp;the block is successful. If the blocked site still loads or no block page appears, refer to the Troubleshooting section for next steps.</li>
+</ol>
+<figure class="image"><img src="https://documentation.meraki.com/@api/deki/files/971/0ee01014-035a-4fdf-9a48-2eab1f223d2e?revision=1" alt="0ee01014-035a-4fdf-9a48-2eab1f223d2e"></figure>
+<h2><strong>Troubleshooting</strong></h2>
+<p>The following instructions outline troubleshooting steps for a number of common issues regarding the block page:</p>
+<h3><strong>Blocked Site is Still Accessible</strong></h3>
+<ol>
+  <li>Make sure to clear the browser cache. If the blocked page has been cached by the browser, the cached page may still appear even though the block is working.</li>
+  <li>Verify that the client device is not whitelisted;&nbsp;a whitelisted device will not be affected by filtering rules on the MX.&nbsp;To check if the device has been whitelisted on the MX, consult the following article -&nbsp;Viewing Blocked and/or Whitelisted Devices on Meraki Dashboard</li>
+  <li>If the website should be blocked by a <strong>Blocked Website Category</strong>, it is possible that this particular site is not included under that category. Try including the site under <strong>Blocked URL Patterns </strong>to block that specific website.</li>
+  <li>If the website is listed as a <strong>Blocked URL Pattern</strong>, make sure the specific syntax of that rule matches the URL in the browser. For more information about the syntax of a URL pattern, click the "Learn how URL blocking works" link in Dashboard, on the <strong>Content Filtering</strong> page.</li>
+  <li>If the website is listed as a <strong>Blocked URL Pattern</strong>,&nbsp;verify&nbsp;the website does not perform a redirect to another URL.</li>
+</ol>
+<h3><strong>Block&nbsp;Page is Not Displayed</strong></h3>
+<ol>
+  <li>If your browser/the website is using HTTPS/SSL, the browser will not be forwarded to the block page.&nbsp;Due to the encrypted nature of SSL requests, the MX cannot decrypt and redirect HTTPS traffic.&nbsp;Instead, the MX will force the request to timeout (an example of which can bee seen in Fig. 3, below).</li>
+  <li>If the device is connected to a Cisco Meraki MR that has its own Layer 7 Firewall rules, the MR's firewall rules will apply before the Content Filtering/Layer 7 Firewall rules on the MX. Since the MR does not forward to a block page, the request will timeout instead of reaching a block page.</li>
+</ol>
+<figure class="image"><img src="https://documentation.meraki.com/@api/deki/files/5658/d27ae28a-df03-4af4-85ce-040c13b4e7d1?revision=1" alt="d27ae28a-df03-4af4-85ce-040c13b4e7d1"></figure>
