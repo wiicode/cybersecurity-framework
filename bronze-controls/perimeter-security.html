@@ -2,7 +2,7 @@
 title: Content Filtration, Layer 7 Firewalls, and Malware Protection
 description: In addition to IDS/IPS, organizations are encouraged to use filtration technologies to block certain websites and certain types of traffic. 
 published: true
-date: 2021-07-13T14:34:31.604Z
+date: 2021-07-13T19:46:42.638Z
 tags: bronze, bronze-controls, firewalls
 editor: ckeditor
 dateCreated: 2021-07-12T21:49:22.350Z
@@ -120,9 +120,12 @@ dateCreated: 2021-07-12T21:49:22.350Z
         <td><strong>Implementation Notes</strong></td>
       </tr>
       <tr>
-        <td>Boundary firewall</td>
+        <td>Boundary firewalls</td>
         <td>Firewall with content filtration, malware scanning, and Layer 7 configuration.</td>
-        <td>Content filters block generic classes of websites, malware scanning looks at malicious content in more detail, and Layer 7 config can be used to block problematic systems such as peer-to-peer file sharing. &nbsp;Common solutions include Cisco Meraki MX firewalls.</td>
+        <td>
+          <p>Content filters block generic classes of websites, malware scanning looks at malicious content in more detail, and Layer 7 config can be used to block problematic systems such as peer-to-peer file sharing. &nbsp;Common solutions include Cisco Meraki MX firewalls.</p>
+          <p>Optimal solution is to deploy AMP firewalls to each office, branch, and teleworker. &nbsp;When teleworker protections are not possible, a compensating control is done using company-owned hardware and DNS layer filtration (see next item).&nbsp;</p>
+        </td>
       </tr>
       <tr>
         <td>Secure Configuration</td>
