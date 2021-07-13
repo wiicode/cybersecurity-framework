@@ -2,7 +2,7 @@
 title: Guidance for websites, mass e-mail campaigns, and fax
 description: 
 published: true
-date: 2021-07-13T17:43:39.783Z
+date: 2021-07-13T18:28:07.512Z
 tags: bronze, bronze-controls, email
 editor: ckeditor
 dateCreated: 2021-07-12T18:16:06.629Z
@@ -147,7 +147,7 @@ dateCreated: 2021-07-12T18:16:06.629Z
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>Contact forms use webhooks or integrations to route data to other channels such as Slack, SalesForce, or Google Drive.&nbsp;</td>
+        <td>Contact forms use web-hooks or integrations to route data to other channels such as Slack, SalesForce, or Google Drive.&nbsp;</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -282,7 +282,8 @@ dateCreated: 2021-07-12T18:16:06.629Z
   <li>Do the same for a thank-you / confirmation email.</li>
 </ul>
 <p>Before talking about the first three points, the fourth one stands out on its own: &nbsp;the thank-you message is an exploitable asset. &nbsp;What typically happens is web-forms are analyzed by bots and malicious actors. If such bot can fill the form out with valid information, and then inject a malicious subject or comment, the thank-you message becomes a vector as it's content is now poisoned. &nbsp;This is why today's BCSF guidance strictly forbids the sending of form data inside confirmation messages to the senders on the form. &nbsp;The risk of spreading malicious content is simply too high.</p>
-<p>The first three points are best managed in the following ways:</p>
+<h3>Successful strategy examples:</h3>
+<h4>Transactional</h4>
 <figure class="table">
   <table>
     <tbody>
@@ -305,11 +306,10 @@ dateCreated: 2021-07-12T18:16:06.629Z
         <td>
           <p>Contact form has the ability use different</p>
           <ul>
-            <li>FROM: &nbsp;uses an organization approved value such as “noreply@bentosecurity.org”</li>
-            <li>REPLYTO: &nbsp;uses the form submitter's email address</li>
+            <li>FROM: &nbsp;uses an organization <strong>approved</strong> value such as “noreply@bentosecurity.org”.</li>
+            <li>REPLY TO: &nbsp;uses the form submitter's email address</li>
             <li>and user/account if required during transport.&nbsp;</li>
           </ul>
-          <p>&nbsp;</p>
         </td>
       </tr>
       <tr>
@@ -317,6 +317,106 @@ dateCreated: 2021-07-12T18:16:06.629Z
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>Contact form integrates with transactional email senders such as SendGrid, MailGun, SparkPost, PostMark, etc and uses API to send the request.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>No-Reply notification is sent to the submitter without form fields.&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h4>Dedicated SMTP</h4>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Yes</strong></td>
+        <td><strong>No</strong></td>
+        <td><strong>N/A</strong></td>
+        <td><strong>Strategy</strong></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact form forces HTTPS and securely transports data to recipients.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          <p>Contact form has the ability use different</p>
+          <ul>
+            <li>FROM: &nbsp;uses an organization <strong>approved</strong> value such as “noreply@bentosecurity.org”.</li>
+            <li>REPLY TO: &nbsp;uses the form submitter's email address</li>
+            <li>and user/account if required during transport.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact form uses SMTP with TLS for SMTP server and authenticated username and password for the send. &nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Conditional access permits dedicated mailbox to authenticate without MFA.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Notification is sent to the submitter with a usable REPLY TO address but without form field data.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h4>Web Hook / Integration</h4>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Yes</strong></td>
+        <td><strong>No</strong></td>
+        <td><strong>N/A</strong></td>
+        <td><strong>Strategy</strong></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact form forces HTTPS and securely transports data to recipients.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          <p>Contact form has the ability use different</p>
+          <ul>
+            <li>FROM: &nbsp;uses an organization <strong>approved</strong> value such as “noreply@bentosecurity.org”.</li>
+            <li>REPLY TO: &nbsp;uses the form submitter's email address</li>
+            <li>and user/account if required during transport.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Native integration connects, and successfully authenticates, to a function that writes this form data to a com channel or web application.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>The target application may have its own processor for sending notifications.&nbsp;</td>
       </tr>
     </tbody>
   </table>
