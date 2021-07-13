@@ -2,7 +2,7 @@
 title: Guidance for websites, mass e-mail campaigns, and fax
 description: 
 published: true
-date: 2021-07-13T16:56:30.453Z
+date: 2021-07-13T17:18:04.071Z
 tags: bronze, bronze-controls, email
 editor: ckeditor
 dateCreated: 2021-07-12T18:16:06.629Z
@@ -141,6 +141,18 @@ dateCreated: 2021-07-12T18:16:06.629Z
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>Contact forms use a sub-domain or a third-party domain in the FROM parameter.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms use webhooks or integrations to route data to other channels such as Slack, SalesForce, or Google Drive.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td>Organization uses a third-party form design and hosting service.</td>
       </tr>
       <tr>
@@ -160,6 +172,12 @@ dateCreated: 2021-07-12T18:16:06.629Z
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>Organization uses a mailbox to transport data, whether it be one in their primary email platform or one supplied by a third party.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization has configured transport-level rules to white-list, permit, or otherwise modify delivery of inbound contact forms to ensure delivery.&nbsp;</td>
       </tr>
     </tbody>
   </table>
@@ -228,8 +246,32 @@ dateCreated: 2021-07-12T18:16:06.629Z
 </figure>
 <p>&nbsp;</p>
 <h1>Understanding how e-mail through third-parties may flow.&nbsp;</h1>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<figure class="image image-style-align-right"><img src="/article_images/mailflow-diagram-webforms.png">
+  <figcaption>Email Webform Flow Diagram</figcaption>
+</figure>
+<p>Most organizations today rely on Exchange or Google Workspace (or similar mail systems) to handle organizational email. &nbsp;These systems offer standard mail filtration in the basic plans, encourage adoption of DMARC/DKIM/SPF to ensure trust in email, encourage use of MFA to restrict mailbox access, and finally offer advanced tiers of security solutions for additional threat protections. &nbsp;</p>
+<p>Web forms sending to these organizations must contend and adapt to all of those things to successfully deliver messages. &nbsp;While a contact form may seem simple, the lifecycle of the data inside the form - today - follows this general trend when designed correctly:</p>
+<ul>
+  <li>Feedback form securely accepts requestor data and builds the message.</li>
+  <li>Messages are sent with full SPF compliance to the target recipients.&nbsp;</li>
+  <li>Mail system receiving the message scans the message for threats and delivers the message to the target user or group.</li>
+</ul>
+<figure class="image image-style-align-right"><img src="/article_images/dkim-envelope-1.png"></figure>
+<p>Each of these milestones has a series of much smaller, and much more important, steps and decision points. &nbsp;Collectively, their job is to ensure that the purported sender of the message is the person whose email address is in the <strong>FROM</strong> field of the message. &nbsp;Let's put that into an analogy we all may understand better.</p>
+<figure class="image image-style-align-right"><img src="/article_images/dkim-letter-2.png"></figure>
+<p>Suppose you have a letter mailed to you in an envelope from “B. Baz”. &nbsp;If it is an analog envelope and letter, you put some amount of trust that Baz did send the letter, but you also have a few things you can do to try to validate it. For instance, you can look at the cancelled stamp and make a decision as to whether or not the post office the letter moved through makes sense for the letter. &nbsp;If you use a service called “Informed Delivery” you could verify the message went through the Post Office and was not just shoved into your mailbox. &nbsp;If the letter was important, actions on behalf of the sender could have been implemented to help underscore the importance &nbsp;- such as registered mail, priority, and certified. &nbsp;</p>
+<p>Mail systems that leverage filters, SPF, DMARC, and DKIM do all these extra checks to attempt to verify that sender, the message transport services, and the recipient are all valid. &nbsp;If we continue along this analog mail analogy one could say that these systems:</p>
+<ul>
+  <li>Attempt to verify the sender on the envelope matches the signature in the message.</li>
+  <li>Attempt to verify that the sender's address is real.</li>
+  <li>Attempt to verify the recipient address is real.</li>
+  <li>Attempt to verify that the content of the message is consistent with intent.</li>
+</ul>
+<p>Additionally, advanced threat protection will often</p>
+<ul>
+  <li>Read the email and assess if the subject matter is applicable to business.</li>
+  <li>Review relationships of the sender to recipient and attempt to determine if there is ample history or cause for the message to be routed.</li>
+</ul>
 <h1>Third-party email in real world practice.&nbsp;</h1>
 <h2>Website Feedback Forms</h2>
 <p>&nbsp;</p>
