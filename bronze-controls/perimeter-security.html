@@ -2,23 +2,27 @@
 title: Content Filtration, Layer 7 Firewalls, and Malware Protection
 description: In addition to IDS/IPS, organizations are encouraged to use filtration technologies to block certain websites and certain types of traffic. 
 published: true
-date: 2021-07-13T12:59:49.314Z
+date: 2021-07-13T14:20:48.326Z
 tags: bronze, bronze-controls, firewalls
 editor: ckeditor
 dateCreated: 2021-07-12T21:49:22.350Z
 -->
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>All organizations should ensure that unfettered access to the internet is not possible. &nbsp;When it comes to securing internet traffic, Bento Cyber Security Framework focuses primarily on <strong>detection and mitigation of malicious content</strong>. &nbsp;This strategy focuses on a small subset of risky vectors such as malicious websites, malicious downloads, and specific forms of traffic rather than attempt to control internet access as a whole. Despite the relatively narrow focus, the magnitude of effort in this area is large and can consume large chunks of IT/IS budgets. Considerations for this strategy include:</p>
 <ol>
   <li>Whether the organization <strong>owns perimeter hardware capable </strong>of managing traffic and <strong>can handle the work-load </strong>effectively. &nbsp;The second point is as important as the first, many appliances cannot scan traffic effectively unless they are sized up many times over. &nbsp;It's extremely difficult for boards/managers to understand the necessity to spend exponentially more than expected.</li>
+  <li>Whether the organization has completed a ransomware readiness assessment (or similar cybersecurity readiness) and reviewed recommendations. &nbsp;</li>
   <li>How the organization decides what is necessary and/or allowed. In most small environments internet is fairly open.</li>
-  <li>How users are protected when they are not in the office (at home, traveling, or on mobile).</li>
+  <li>What resources the organization has available to manage firewalls and content filters during day to day operations. &nbsp;</li>
+  <li>What tools and technologies protect users when inside the office, when traveling, when working from home, and when accessing company data on mobile devices.</li>
   <li>Understand the scope of devices being protected and how filtration technologies can affect all the devices which attempt to connect to the internet (https://www.nist.gov/itl/smallbusinesscyber/securing-data-devices).</li>
   <li>Whether existing management technologies permit deployment of security tools effectively.</li>
   <li>Whether the organization is capable of enforcing user-choice restrictions for internet browsers.</li>
   <li>Whether or not the browsers used are managed through enterprise-grade management technologies.</li>
 </ol>
-<p>The overall assessment, inventory, and understanding of these pieces is daunting, and the outcomes are not always clear. &nbsp;Therefore, BCSF recommends taking an approach where early detection and prevention of malicious content is the focus as this process has far more clear options and is less costly than the alternative. &nbsp;To be successful, most smaller organizations are better off breaking this area into smaller - manageable - problems and addressing them in context of the overall strategy than attempt to implement a comprehensive solution. Another term commonly used for this strategy is “layered defense”. &nbsp;</p>
+<p>BCSF recommends taking an approach where early detection and prevention of malicious content is the focus as this process has far more clear options and is less costly than the alternative. &nbsp;To be successful, most smaller organizations are better off breaking this area into smaller - manageable - problems and addressing them in context of the overall strategy than attempt to implement a comprehensive solution. Another term commonly used for this strategy is “layered defense”. &nbsp;</p>
 <p>While it is possible to block certain content from employee use, the inverse is not a practical or feasible approach. &nbsp;Organizations attempting ad-hock content filtration typically enter cycles of blocking and unblocking until a failure causing the entire system to be disabled. &nbsp; This is because most content sources leverage Content-Delivery-Networks and use major providers such as Amazon, CloudFlare, Microsoft Azure, and Google Cloud to supply content. The internet is a dynamic system and such attempts are often valueless and disruptive. Blocking all traffic - effectively and with assurance - requires extraordinary investment in filtration resources. For organizations in need of completely controlling web access on a granular scale for on-premise and remote workers, BCSF refers to NIST SP 800-46 (https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-46r2.pdf). &nbsp;</p>
 <h2>Components of a secure internet system</h2>
 <p>There are effective and affordable ways to reduce your <i>organization</i>’s exposure to the more common types of cyber attack on systems that are exposed to the Internet. The following subset of controls applied specifically to this approach:</p>
@@ -27,7 +31,9 @@ dateCreated: 2021-07-12T21:49:22.350Z
   <li><strong>secure configuration</strong> —&nbsp;restrict the functionality of every device, operating system and application to the minimum needed for business to function</li>
   <li><strong>malware protection</strong> —&nbsp;establish and maintain malware<i> defenses </i>to detect and respond to known attack code</li>
   <li><strong>patch management</strong> —&nbsp;patch known vulnerabilities with the latest version of the software, to prevent attacks which exploit software bugs</li>
+  <li><strong>device management</strong> – tools and processes that ensure master data is coordinated across the enterprise.</li>
   <li><strong>user access control</strong> —&nbsp;include limiting normal users’ execution permissions and enforcing the principle of least privilege</li>
+  <li><strong>insider threat detection</strong> – uses real-​time user activity and threat monitoring to detect early signs of insider threats.</li>
 </ul>
 <p>If your<i> organization </i>is likely to be targeted by a more technically capable attacker, give yourself greater confidence with additional focus on:</p>
 <ul>
@@ -35,13 +41,13 @@ dateCreated: 2021-07-12T21:49:22.350Z
   <li><strong>user training education and awareness</strong> —&nbsp;staff should understand their role in keeping your<i> organization </i>secure and report any unusual activity</li>
   <li><strong>security incident management</strong> —&nbsp;put plans in place to deal with an attack as an effective response will reduce the impact on your business</li>
 </ul>
-<h1>Suitable Controls</h1>
+<h1>Suitable Strategy for Controls</h1>
 <figure class="table">
   <table>
     <tbody>
       <tr>
         <td><strong>Effective Area</strong></td>
-        <td><strong>Control</strong></td>
+        <td><strong>Suggested Strategy</strong></td>
         <td><strong>Implementation Notes</strong></td>
       </tr>
       <tr>
@@ -51,8 +57,8 @@ dateCreated: 2021-07-12T21:49:22.350Z
       </tr>
       <tr>
         <td>Secure Configuration</td>
-        <td>DNS layer security (DNS Filtering) combined with Mobile Device Management and web gateway.&nbsp;</td>
-        <td>While boundary firewalls work only at the “office", a DNS layer solution applies to the device at all times. It can be used to further control web traffic and reduce what is accessible. &nbsp;This can also include other forms of software designed to affect application/site access. &nbsp;Common solutions include Cisco Umbrella or OpenDNS.&nbsp;</td>
+        <td>In this context, the scope is limited to web filtering. DNS layer security (DNS Filtering) combined with Mobile Device Management and web gateway.&nbsp;</td>
+        <td>While boundary firewalls work only at the “office", a DNS layer solution applies to the device at all times. It can be used to further control web traffic and reduce what is accessible. &nbsp;This can also include other forms of software designed to affect application/site access. &nbsp;Common solutions include Cisco Umbrella or OpenDNS.&nbsp; These are often the first layer defense but they typically require other solutions (such as MDM and virtual appliances) to meet objectives.&nbsp;</td>
       </tr>
       <tr>
         <td>Malware Protection</td>
@@ -65,10 +71,33 @@ dateCreated: 2021-07-12T21:49:22.350Z
         <td>Strong control over operating system patches, critical application patches, and drivers. Systems vary and are often bundled with RMM offered by your service provider.</td>
       </tr>
       <tr>
-        <td>User Access Control.</td>
-        <td>Limiting administrative privileges and assuring that device configuration matches organizational requirements.</td>
-        <td>Mobile Device Management on top of Remote Monitoring and Administration. Common vendors include Windows Intune, Cisco Meraki System Manager, JAMF.&nbsp;</td>
+        <td>Device Management</td>
+        <td>Enforce policy compliance and enable controls.&nbsp;</td>
+        <td>Mobile Device Management on top of Remote Monitoring and Administration. Common vendors include Windows Intune, Cisco Meraki System Manager, JAMF.&nbsp;&nbsp;</td>
+      </tr>
+      <tr>
+        <td>User Access Control</td>
+        <td>
+          <p>Limiting administrative privileges and assuring that device configuration matches organizational requirements.&nbsp;</p>
+          <p>For critical cloud services the strategy should be to enable organizations to apply conditional access, &nbsp;strong authentication, and reliable auditing.&nbsp;</p>
+        </td>
+        <td>
+          <p>Defined ACL policies for the organization, enforceable and auditable permission schemes and zero trust architecture*.</p>
+          <p>Communication/collaboration platforms such as Microsoft 365 and Google Workspace, both vendors offer advanced security and threat management solutions which enable organizations to manage access and have trust in authentication capabilities. &nbsp;Microsoft refers to to this as "EDR E5" and Google refers to this as Business Plus. &nbsp;These are being continuously revised and quarterly reviews of this technology should be baked into cyber security management.&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Insider Threat Detection</td>
+        <td>While ant-malware performs heuristics on software behavior, monitoring users for malicious activity (intentional and not) will assist with early detection of threats.</td>
+        <td>Behavior monitoring and active alert systems include employee monitoring software that runs on desktops and cloud application service brokers that analyze cloud application activity logs. &nbsp;Notable solutions include ActivTrak, WorkPuls, Cerebral, Microsoft Cloud Application Security, and Avanan.&nbsp;</td>
       </tr>
     </tbody>
   </table>
 </figure>
+<p>A zero trust architecture requires authorization for any person or device attempting to connect to a network or access network resources, even for users already within the network perimeter (realistically, with the cloud and mobile platforms blurring the network edge, there is no longer a static perimeter to guard).</p>
+<h1>References</h1>
+<ol>
+  <li>NIST SP 800-41, Guidelines on Firewalls and Firewall policy<br><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf</a>&nbsp;<br>&nbsp;</li>
+  <li>NIST SP 800-411, User's Guide to Telework and Bring Your Own Device (BYOD) Security<br><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-114r1.pdf">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-114r1.pdf</a>&nbsp;<br>&nbsp;</li>
+  <li>NIST SP 800-45, Guidelines on Electronic Mail Security<br><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-45ver2.pdf">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-45ver2.pdf</a></li>
+</ol>
