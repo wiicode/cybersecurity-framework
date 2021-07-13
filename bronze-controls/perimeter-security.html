@@ -2,24 +2,91 @@
 title: Content Filtration, Layer 7 Firewalls, and Malware Protection
 description: In addition to IDS/IPS, organizations are encouraged to use filtration technologies to block certain websites and certain types of traffic. 
 published: true
-date: 2021-07-13T14:20:56.019Z
+date: 2021-07-13T14:23:24.310Z
 tags: bronze, bronze-controls, firewalls
 editor: ckeditor
 dateCreated: 2021-07-12T21:49:22.350Z
 -->
 
-<p>All organizations should ensure that unfettered access to the internet is not possible. &nbsp;When it comes to securing internet traffic, Bento Cyber Security Framework focuses primarily on <strong>detection and mitigation of malicious content</strong>. &nbsp;This strategy focuses on a small subset of risky vectors such as malicious websites, malicious downloads, and specific forms of traffic rather than attempt to control internet access as a whole. Despite the relatively narrow focus, the magnitude of effort in this area is large and can consume large chunks of IT/IS budgets. Considerations for this strategy include:</p>
-<ol>
-  <li>Whether the organization <strong>owns perimeter hardware capable </strong>of managing traffic and <strong>can handle the work-load </strong>effectively. &nbsp;The second point is as important as the first, many appliances cannot scan traffic effectively unless they are sized up many times over. &nbsp;It's extremely difficult for boards/managers to understand the necessity to spend exponentially more than expected.</li>
-  <li>Whether the organization has completed a ransomware readiness assessment (or similar cybersecurity readiness) and reviewed recommendations. &nbsp;</li>
-  <li>How the organization decides what is necessary and/or allowed. In most small environments internet is fairly open.</li>
-  <li>What resources the organization has available to manage firewalls and content filters during day to day operations. &nbsp;</li>
-  <li>What tools and technologies protect users when inside the office, when traveling, when working from home, and when accessing company data on mobile devices.</li>
-  <li>Understand the scope of devices being protected and how filtration technologies can affect all the devices which attempt to connect to the internet (https://www.nist.gov/itl/smallbusinesscyber/securing-data-devices).</li>
-  <li>Whether existing management technologies permit deployment of security tools effectively.</li>
-  <li>Whether the organization is capable of enforcing user-choice restrictions for internet browsers.</li>
-  <li>Whether or not the browsers used are managed through enterprise-grade management technologies.</li>
-</ol>
+<p>All organizations should ensure that unfettered access to the internet is not possible. &nbsp;When it comes to securing internet traffic, Bento Cyber Security Framework focuses primarily on <strong>detection and mitigation of malicious content</strong>. &nbsp;This strategy focuses on a small subset of risky vectors such as malicious websites, malicious downloads, and specific forms of traffic rather than attempt to control internet access as a whole. Despite the relatively narrow focus, the magnitude of effort in this area is large and can consume large chunks of IT/IS budgets. Considerations for this strategy include:<br>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Whether the organization <strong>owns perimeter hardware capable </strong>of managing traffic and <strong>can handle the work-load </strong>effectively. &nbsp;The second point is as important as the first, many appliances cannot scan traffic effectively unless they are sized up many times over. &nbsp;It's extremely difficult for boards/managers to understand the necessity to spend exponentially more than expected.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Whether the organization has completed a ransomware readiness assessment (or similar cybersecurity readiness) and reviewed recommendations.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>How the organization decides what is necessary and/or allowed. In most small environments internet is fairly open.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>What resources the organization has available to manage firewalls and content filters during day to day operations. &nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>What tools and technologies protect users when inside the office, when traveling, when working from home, and when accessing company data on mobile devices.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Understand the scope of devices being protected and how filtration technologies can affect all the devices which attempt to connect to the internet*.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Whether existing management technologies permit deployment of security tools effectively.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Whether the organization is capable of enforcing user-choice restrictions for internet browsers.</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="todo-list">
+            <li><label class="todo-list__label"><input type="checkbox" disabled="disabled"></label></li>
+          </ul>
+        </td>
+        <td>Whether or not the browsers used are managed through enterprise-grade management technologies.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>BCSF recommends taking an approach where early detection and prevention of malicious content is the focus as this process has far more clear options and is less costly than the alternative. &nbsp;To be successful, most smaller organizations are better off breaking this area into smaller - manageable - problems and addressing them in context of the overall strategy than attempt to implement a comprehensive solution. Another term commonly used for this strategy is “layered defense”. &nbsp;</p>
 <p>While it is possible to block certain content from employee use, the inverse is not a practical or feasible approach. &nbsp;Organizations attempting ad-hock content filtration typically enter cycles of blocking and unblocking until a failure causing the entire system to be disabled. &nbsp; This is because most content sources leverage Content-Delivery-Networks and use major providers such as Amazon, CloudFlare, Microsoft Azure, and Google Cloud to supply content. The internet is a dynamic system and such attempts are often valueless and disruptive. Blocking all traffic - effectively and with assurance - requires extraordinary investment in filtration resources. For organizations in need of completely controlling web access on a granular scale for on-premise and remote workers, BCSF refers to NIST SP 800-46 (https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-46r2.pdf). &nbsp;</p>
 <h2>Components of a secure internet system</h2>
@@ -80,7 +147,7 @@ dateCreated: 2021-07-12T21:49:22.350Z
           <p>For critical cloud services the strategy should be to enable organizations to apply conditional access, &nbsp;strong authentication, and reliable auditing.&nbsp;</p>
         </td>
         <td>
-          <p>Defined ACL policies for the organization, enforceable and auditable permission schemes and zero trust architecture*.</p>
+          <p>Defined ACL policies for the organization, enforceable and auditable permission schemes and zero trust architecture**.</p>
           <p>Communication/collaboration platforms such as Microsoft 365 and Google Workspace, both vendors offer advanced security and threat management solutions which enable organizations to manage access and have trust in authentication capabilities. &nbsp;Microsoft refers to to this as "EDR E5" and Google refers to this as Business Plus. &nbsp;These are being continuously revised and quarterly reviews of this technology should be baked into cyber security management.&nbsp;</p>
         </td>
       </tr>
@@ -92,7 +159,8 @@ dateCreated: 2021-07-12T21:49:22.350Z
     </tbody>
   </table>
 </figure>
-<p>A zero trust architecture requires authorization for any person or device attempting to connect to a network or access network resources, even for users already within the network perimeter (realistically, with the cloud and mobile platforms blurring the network edge, there is no longer a static perimeter to guard).</p>
+<h4><br>Notes:</h4>
+<p>* https://www.nist.gov/itl/smallbusinesscyber/securing-data-devices<br>** A zero trust architecture requires authorization for any person or device attempting to connect to a network or access network resources, even for users already within the network perimeter (realistically, with the cloud and mobile platforms blurring the network edge, there is no longer a static perimeter to guard).</p>
 <h1>References</h1>
 <ol>
   <li>NIST SP 800-41, Guidelines on Firewalls and Firewall policy<br><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf</a>&nbsp;<br>&nbsp;</li>
