@@ -2,17 +2,14 @@
 title: Email security and anti-spoofing
 description: A guide for IT managers and systems administrators
 published: true
-date: 2021-07-12T15:58:34.507Z
+date: 2021-07-13T16:00:55.907Z
 tags: bronze, bronze-controls, favorite, email
 editor: markdown
 dateCreated: 2021-06-30T19:36:39.618Z
 ---
 
-> This guidance assumes readers have prior knowledge and experience of managing domains and email systems for their organizations.
-{.is-warning}
-
-
-This guidance is intended to help you secure your *organization*'s email systems, in two distinct ways:
+<img align="right" width="50%" src="/article_images/common-web-attacks.png">
+This guidance assumes readers have prior knowledge and experience of managing domains and email systems for their organizations and it is intended to help you secure your *organization*'s email systems, in two distinct ways:
 
 1. #### **By making it difficult for fake emails to be sent from your** ***organization*****'s domains.**
 
