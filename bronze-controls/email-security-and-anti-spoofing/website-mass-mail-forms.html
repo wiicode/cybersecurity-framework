@@ -2,7 +2,7 @@
 title: Guidance for websites, mass e-mail campaigns, and fax
 description: 
 published: true
-date: 2021-07-13T17:18:04.071Z
+date: 2021-07-13T17:43:39.783Z
 tags: bronze, bronze-controls, email
 editor: ckeditor
 dateCreated: 2021-07-12T18:16:06.629Z
@@ -259,7 +259,7 @@ dateCreated: 2021-07-12T18:16:06.629Z
 <figure class="image image-style-align-right"><img src="/article_images/dkim-envelope-1.png"></figure>
 <p>Each of these milestones has a series of much smaller, and much more important, steps and decision points. &nbsp;Collectively, their job is to ensure that the purported sender of the message is the person whose email address is in the <strong>FROM</strong> field of the message. &nbsp;Let's put that into an analogy we all may understand better.</p>
 <figure class="image image-style-align-right"><img src="/article_images/dkim-letter-2.png"></figure>
-<p>Suppose you have a letter mailed to you in an envelope from “B. Baz”. &nbsp;If it is an analog envelope and letter, you put some amount of trust that Baz did send the letter, but you also have a few things you can do to try to validate it. For instance, you can look at the cancelled stamp and make a decision as to whether or not the post office the letter moved through makes sense for the letter. &nbsp;If you use a service called “Informed Delivery” you could verify the message went through the Post Office and was not just shoved into your mailbox. &nbsp;If the letter was important, actions on behalf of the sender could have been implemented to help underscore the importance &nbsp;- such as registered mail, priority, and certified. &nbsp;</p>
+<p>Suppose you have a letter mailed to you in an envelope from “B. Baz”. &nbsp;If it is an analog envelope and letter, you put some amount of trust that Baz did send the letter, but you also have a few things you can do to try to validate it. For instance, you can look at the cancelled stamp and make a decision as to whether or not the post office the letter moved through makes sense for the letter. &nbsp;If you use a service called “Informed Delivery” you could verify the message went through the Post Office and was not just shoved into your mailbox. &nbsp;If the letter was important, actions on behalf of the sender could have been implemented to help underscore the importance &nbsp;- such as registered mail, priority, and certified. &nbsp;While none of these things are foolproof, they add to the credibility of the message and influence your trust. &nbsp; In e-mail speak, this is effectively called a “spam score”.</p>
 <p>Mail systems that leverage filters, SPF, DMARC, and DKIM do all these extra checks to attempt to verify that sender, the message transport services, and the recipient are all valid. &nbsp;If we continue along this analog mail analogy one could say that these systems:</p>
 <ul>
   <li>Attempt to verify the sender on the envelope matches the signature in the message.</li>
@@ -267,27 +267,105 @@ dateCreated: 2021-07-12T18:16:06.629Z
   <li>Attempt to verify the recipient address is real.</li>
   <li>Attempt to verify that the content of the message is consistent with intent.</li>
 </ul>
-<p>Additionally, advanced threat protection will often</p>
+<p>Additionally, advanced threat protection will often:</p>
 <ul>
   <li>Read the email and assess if the subject matter is applicable to business.</li>
   <li>Review relationships of the sender to recipient and attempt to determine if there is ample history or cause for the message to be routed.</li>
 </ul>
 <h1>Third-party email in real world practice.&nbsp;</h1>
 <h2>Website Feedback Forms</h2>
-<p>&nbsp;</p>
+<p>With all this validation it's no surprise that delivering a contact form from a web server to your mailbox can be daunting. &nbsp;Today,&nbsp;</p>
+<ul>
+  <li>The form must be able to properly set the FROM and the REPLY-TO e-mail addresses so the FROM always passes validation during transport.&nbsp;</li>
+  <li>Construct the message in a way that does not cause spam filters to think it's junk.&nbsp;</li>
+  <li>Transport the message through a valid mailbox, authorized SMTP server, or through a transactional email system.</li>
+  <li>Do the same for a thank-you / confirmation email.</li>
+</ul>
+<p>Before talking about the first three points, the fourth one stands out on its own: &nbsp;the thank-you message is an exploitable asset. &nbsp;What typically happens is web-forms are analyzed by bots and malicious actors. If such bot can fill the form out with valid information, and then inject a malicious subject or comment, the thank-you message becomes a vector as it's content is now poisoned. &nbsp;This is why today's BCSF guidance strictly forbids the sending of form data inside confirmation messages to the senders on the form. &nbsp;The risk of spreading malicious content is simply too high.</p>
+<p>The first three points are best managed in the following ways:</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Yes</strong></td>
+        <td><strong>No</strong></td>
+        <td><strong>N/A</strong></td>
+        <td><strong>Strategy</strong></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact form forces HTTPS and securely transports data to recipients.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          <p>Contact form has the ability use different</p>
+          <ul>
+            <li>FROM: &nbsp;uses an organization approved value such as “noreply@bentosecurity.org”</li>
+            <li>REPLYTO: &nbsp;uses the form submitter's email address</li>
+            <li>and user/account if required during transport.&nbsp;</li>
+          </ul>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact form integrates with transactional email senders such as SendGrid, MailGun, SparkPost, PostMark, etc and uses API to send the request.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <h2>Support Systems and Automatic Replies</h2>
 <p>Your support systems are also affected by e-mail protections. &nbsp;For example, if you use ZenDesk, you may have already realized that they implemented a programming change that prevented certain variables from working on the very first e-mail to avoid abuse. This affected all new tickets as follows:</p>
 <ul>
   <li>When a new ticket is created, it is not possible to include the body of the request in the confirmation message</li>
   <li>When a new ticket is created, the subject of the message is not honored and the only option is to send a generic subjects such as “Request Received.”</li>
 </ul>
-<h2>E-Mail Marketing</h2>
+<p>Support systems and CRM should:</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Yes</strong></td>
+        <td><strong>No</strong></td>
+        <td><strong>N/A</strong></td>
+        <td><strong>Strategy</strong></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Be authorized to send on your organization's behalf using SPF, DMARC, and DKIM.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Triggers/Macros that send the “thank you” message should be generic and include none of the submission. &nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Procedures must be in place to effectively create tickets on the behalf of customers which bear in mind the lack of detail in the initial message.&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>&nbsp;</p>
+<h2>E-Mail Marketing</h2>
+<p>E-mail marketing is most often sent with your organization's domain in the FROM field. &nbsp;All reputable mass mailing systems include detailed guidance on authorizing their systems to send on your behalf. &nbsp;Here is a sample:</p>
 <ul>
-  <li>MailChimp SPF &amp; DKIM: https://mailchimp.com/help/set-up-email-domain-authentication/</li>
+  <li>MailChimp SPF &amp; DKIM: <a href="https://mailchimp.com/help/set-up-email-domain-authentication/">https://mailchimp.com/help/set-up-email-domain-authentication/</a></li>
   <li>ConstantContact:<ul>
-      <li>DKIM: https://knowledgebase.constantcontact.com/articles/KnowledgeBase/39520-Set-Up-the-Self-Authentication-DKIM-Key-with-Your-Hosting-Provider?q=DKIM&amp;pnx=1&amp;lang=en_US</li>
-      <li>SPF: https://knowledgebase.constantcontact.com/articles/KnowledgeBase/34717-SPF-Self-Publishing-for-Email-Authentication?lang=en_US</li>
+      <li>DKIM: <a href="https://knowledgebase.constantcontact.com/articles/KnowledgeBase/39520-Set-Up-the-Self-Authentication-DKIM-Key-with-Your-Hosting-Provider?q=DKIM&amp;pnx=1&amp;lang=en_US">https://knowledgebase.constantcontact.com/articles/KnowledgeBase/39520-Set-Up-the-Self-Authentication-DKIM-Key-with-Your-Hosting-Provider?q=DKIM&amp;pnx=1&amp;lang=en_US</a></li>
+      <li>SPF: <a href="https://knowledgebase.constantcontact.com/articles/KnowledgeBase/34717-SPF-Self-Publishing-for-Email-Authentication?lang=en_US">https://knowledgebase.constantcontact.com/articles/KnowledgeBase/34717-SPF-Self-Publishing-for-Email-Authentication?lang=en_US</a></li>
     </ul>
   </li>
 </ul>
