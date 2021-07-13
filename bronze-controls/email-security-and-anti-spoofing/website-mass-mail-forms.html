@@ -2,7 +2,7 @@
 title: Guidance for websites, mass e-mail campaigns, and fax
 description: 
 published: true
-date: 2021-07-13T16:04:31.456Z
+date: 2021-07-13T16:39:50.992Z
 tags: bronze, bronze-controls, email
 editor: ckeditor
 dateCreated: 2021-07-12T18:16:06.629Z
@@ -10,7 +10,203 @@ dateCreated: 2021-07-12T18:16:06.629Z
 
 <figure class="image image-style-align-right image_resized" style="width:38.93%;"><img src="/article_images/common-web-attacks.png"></figure>
 <p>Major mail systems today, such as Exchange Online or Gmail, enforce a number of controls designed to thwart the spread of ransomware, reduce the chances of identity theft, minimize spear phishing, block malicious links, and filter out spam. Even in the most basic form, these systems can work against your organization's interest when it comes to collecting feedback / forms data from your digital marketing assets.&nbsp;</p>
-<p>When it comes to securing third-party e-mail forms and systems the implementation of BCSF's policy statement is not optional because many systems have already made systemic changes to force compliance. &nbsp;However, other systems - like your organization's website - may not have adapted and thus it is critical to understand and act as your organization be open to abuse or miss important e-mail communications.</p>
+<p>Before getting started, BCSF encourages to take stock of your feedback systems through the assessment below. &nbsp;Each statement represents a key component of an organization-wide implementation of feedback forms. In the least, a high number of “No” and “N/A” responses is indicative of problematic feedback form strategy.&nbsp;</p>
+<h4>&nbsp;Assessment:</h4>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Yes</strong></td>
+        <td><strong>No</strong></td>
+        <td><strong>N/A</strong></td>
+        <td><strong>Statement</strong></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization has valid SPF records with less than 10 lookups.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          <p>Organization has a valid DMARC record meeting the following conditions</p>
+          <ul>
+            <li>DMARC policy must be at enforcement – either “p=quarantine” or “p=reject” on the organizational domain</li>
+            <li>No&nbsp;sp=none or pct&lt;100</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization has a valid DKIM record. &nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization has a valid BIMI record.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization meets TLS 1.2 requirements and all support for “legacy” connections has been disabled.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization is able to enforce MFA/2FA authentication through conditional access.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization enforces MFA/2FA authentication globally (all mailboxes protected).</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization website(s) publish e-mail addresses.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization website(s) use contact forms.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms use the REPLY-TO parameter.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms use the FROM parameter.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms send a “thank you for your submission” email to requestor.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms include the <strong>form data</strong> in the requestor “thank-you” email including either the subject, comments, data or a combination of the three.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms offer flexible transport options and complete control over how a message with form data is sent.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Contact forms use the flexible transport options to send mail in a manner consistent with organizational policy.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization uses a third-party form design and hosting service.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization uses a third-party transactional email service to transport form data.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization uses a mailbox to transport form data.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Organization uses a mailbox to transport data, whether it be one in their primary email platform or one supplied by a third party.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h4><br>Problem Statements:</h4>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Yes</td>
+        <td>No</td>
+        <td>N/A</td>
+        <td>Statement</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Form data is sent to <strong>Junk/Spam</strong> or not received.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Requestors do not receive “thank-you” emails.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Replies to contact forms by staff are unanswered by the requestor.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h4><br>Activity Statements:</h4>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Yes</td>
+        <td>No</td>
+        <td>N/A</td>
+        <td>Statement</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Forms are routinely tested to verify functionality.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Form data is routinely reviewed.</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Data handling controls are applied to form data.</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
 <h1>Understanding how e-mail through third-parties may flow.&nbsp;</h1>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
