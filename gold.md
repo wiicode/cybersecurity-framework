@@ -2,7 +2,7 @@
 title: Expansion Pack 
 description: BCSF Expansion Pack for Gold and Platinum Customers
 published: true
-date: 2021-07-14T16:14:56.151Z
+date: 2021-07-14T16:15:25.343Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-14T16:14:56.151Z
@@ -11,5 +11,5 @@ dateCreated: 2021-07-14T16:14:56.151Z
 # Header
 Your content here
 
-- [Draft](#)
+- [Disaster Planning]((/gold/disaster-planning)
 {.links-list}
