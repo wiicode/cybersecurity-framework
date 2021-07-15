@@ -2,7 +2,7 @@
 title: Annual Exercise
 description: Blueprint for BCSF designed annual exercise in three parts.
 published: true
-date: 2021-07-15T00:51:36.943Z
+date: 2021-07-15T00:54:18.666Z
 tags: draft, gold, disaster-planning
 editor: markdown
 dateCreated: 2021-07-14T18:07:17.791Z
@@ -12,9 +12,9 @@ Organization and IT will meet for 3 hours and 20 minutes (to allow time for brea
 
 Periodic tests shall be performed by designated personnel authorized by organizational management to test the execution of business continuity and disaster recovery plans through:
 
--   Conducting disaster role-playing (“table-top”) sessions that allow participants to “walk through” the facets of the BCP, gaining familiarity with their responsibilities given a specific emergency scenario(s).
--   Perform a simulation of a possible disaster scenario with different realistic scenarios that test the effectiveness of BCP.
--   Wherever possible, accommodate any work stoppages due to the real testing of the BCP and DRP by appropriately scheduling simulations and other testing exercises.
+Conducting disaster role-playing (“table-top”) sessions that allow participants to “walk through” the facets of the BCP, gaining familiarity with their responsibilities given a specific emergency scenario(s).
+Perform a simulation of a possible disaster scenario with different realistic scenarios that test the effectiveness of BCP.
+Wherever possible, accommodate any work stoppages due to the real testing of the BCP and DRP by appropriately scheduling simulations and other testing exercises.
 
 After the completion of business continuity and disaster recovery plans, an assessment report shall be submitted to management. The results should clearly indicate whether the exercise/test was successful or not including corrective actions. Documented plans shall be updated based on the results of the tests performed.
 
@@ -22,16 +22,16 @@ After the completion of business continuity and disaster recovery plans, an asse
 
 |     | **Task** | **Details**  <br>**(Fill this out with materially significant details)** | **Links/Supplements**  <br>**(Fill this out with materially significant details)** |
 | --- | --- | --- | --- |
-| -   [ ] | Copy this page as a sub-page and name it "YYYY-annual-exercise" |     |     |
-| -   [ ] | Select a date for the table-top meeting |     |     |
-| -   [ ] | Select a date for real-world exercise |     |     |
-| -   [ ] | Select a date for risk assessment update |     |     |
-| -   [ ] | Select Participants and attach "Owner" information for any business process or asset that is tracked. |     |     |
-| -   [ ] | Participants must all prepare the following items:<br><br>-   Review owner information and decide whether it is missing items.<br>-   Understand the Recovery Point and Recovery Time objective for each asset they are responsible for.<br>-   Review the risk assessment information found under **vendor inventory**. |     |     |
-| -   [ ] | Select a security incident from  past **events/incidents** and it will be the first walk-through. <br><br>(This requires an established incident tracking process to exist) |     |     |
-| -   [ ] | Create or Select the second scenario from **Disaster Planning** for table-top walkthrough.  This scenario must affect a mission-critical system that affects customers directly.   <br>  <br>“It stops our customers, immediately, from being able to conduct business.” |     |     |
-| -   [ ] | Create or Select the third scenario from **Disaster Planning** for table-top walkthrough.  This scenario must be a mission-critical system that affects the organization primarily and should have a material impact on our customers as well.    <br>  <br>“It stops us from doing business.” |     |     |
-| -   [ ] | Prepare the scenarios/update them as needed. |     |     |
+| - [ ] | Copy this page as a sub-page and name it "YYYY-annual-exercise" |     |     |
+| - [ ] | Select a date for the table-top meeting |     |     |
+| - [ ] | Select a date for real-world exercise |     |     |
+| - [ ] | Select a date for risk assessment update |     |     |
+| - [ ] | Select Participants and attach "Owner" information for any business process or asset that is tracked. |     |     |
+| - [ ] | Participants must all prepare the following items:<br><br>Review owner information and decide whether it is missing items.<br>Understand the Recovery Point and Recovery Time objective for each asset they are responsible for.<br>Review the risk assessment information found under **vendor inventory**. |     |     |
+| - [ ] | Select a security incident from  past **events/incidents** and it will be the first walk-through. <br><br>(This requires an established incident tracking process to exist) |     |     |
+| - [ ] | Create or Select the second scenario from **Disaster Planning** for table-top walkthrough.  This scenario must affect a mission-critical system that affects customers directly.   <br>  <br>“It stops our customers, immediately, from being able to conduct business.” |     |     |
+| - [ ] | Create or Select the third scenario from **Disaster Planning** for table-top walkthrough.  This scenario must be a mission-critical system that affects the organization primarily and should have a material impact on our customers as well.    <br>  <br>“It stops us from doing business.” |     |     |
+| - [ ] | Prepare the scenarios/update them as needed. |     |     |
 
 # Structured Meeting Agenda
 
