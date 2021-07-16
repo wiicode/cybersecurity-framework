@@ -1,0 +1,79 @@
+<!--
+title: Compensating controls for information security controls that cannot be maintained during an adverse situation
+description: This document attempts to establish guidelines, procedures, or policies for securing our systems when normal controls are not available.  
+published: true
+date: 2021-07-16T02:36:22.563Z
+tags: silver, template-expansion-pack
+editor: ckeditor
+dateCreated: 2021-07-16T02:36:22.563Z
+-->
+
+<h1>Objectives</h1>
+<p>Compensating controls are not a short cut to compliance, they do not have a defined life-span, and are not here to make our compliance effort easier.&nbsp; &nbsp;However, in the context of our objectives, we need flexibility to respond to various known and unknown events that may affect our systems.&nbsp; We have this alternative process in place to give us flexibility as long as we do these three things:</p>
+<ul>
+  <li>Protect the confidentiality of information.</li>
+  <li>Capture all material changes to systems and configurations.</li>
+  <li>Restore mission critical systems quickly and recover all systems completely within promised availability windows.</li>
+</ul>
+<h1>Approach</h1>
+<p>To meet the above objectives we do the following:</p>
+<ul>
+  <li>Plan ahead.&nbsp; Our compliance and disaster process offers a variety of scenarios all of which enable our teams to solve specific issues, but also informs our teams about the though process and approach so that unknown issues are less of an obstacle.&nbsp; For this we leverage some internal assets including:<ul>
+      <li>Automation/scripting repositories&nbsp;</li>
+      <li>Operate multiple communication channels to enable information sharing, collaboration, and also maintain communication in the event of a disaster.<ul>
+          <li>Primary Example: <strong>Slack</strong> and&nbsp; <strong>Google Workspace</strong></li>
+          <li>Backup Example:&nbsp;<strong>Microsoft Teams</strong> and&nbsp;<strong>Microsoft Exchange Online</strong></li>
+        </ul>
+      </li>
+      <li>Maintain a transparent record of change which allow majority of staff to see "what changed last".</li>
+    </ul>
+  </li>
+  <li>Prepare written procedures/policies/documentation.<ul>
+      <li>Compliance and Policies</li>
+      <li>Continuity and Disaster Response</li>
+      <li>Information Technology Operations</li>
+    </ul>
+  </li>
+  <li>Cross-train.<ul>
+      <li>Use&nbsp; {{medium}} to share important information and expand our team's knowledge.</li>
+      <li>Document internal procedures for solving problems via {{medium}}</li>
+    </ul>
+  </li>
+</ul>
+<h1>General Policy</h1>
+<p>Should the BCP be activated, the {{name/role}} assumes leadership of the event and may delegate functions/tasks to the disaster response team.&nbsp; The &nbsp;{{name/role}} may nominate self, or another individual to act as the "Person in Command" of the incident.&nbsp; This person is then:</p>
+<ul>
+  <li>(a) is directly responsible for, and is the final authority as to, the response process.</li>
+  <li>(b) during an emergency requiring immediate action, the person in command may deviate from any rule of this part to the extent required to meet that emergency.</li>
+  <li>(c) the person in command who deviates from a rule under paragraph (b) of this section shall, upon the request of the &nbsp;{{name/role/team}}, send a written report of that deviation to the &nbsp;{{name/role/team}} and/or Board.</li>
+</ul>
+<h1>Record Keeping / Evidence Collection</h1>
+<p>To facilitate reporting in above paragraph (c), the response team is required to maintain a log of activities - as detailed as practical - during the event.&nbsp; Options for keeping this log are listed in order of importance/usefulness but can be mixed and matched to meet the circumstances:</p>
+<ul>
+  <li>Using screen capture/recording software to record activities.</li>
+  <li>Using the&nbsp;<strong>Security Incident Reporting</strong> form to manually log activities.</li>
+  <li>Using a living document such as Google Doc, OneDrive document, OneNote, Evernote or similar to track activities.</li>
+  <li>Taking screen shots frequently for later review.</li>
+  <li>Taking video/audio recordings.</li>
+  <li>Writing down notes on paper.</li>
+</ul>
+<p>In addition, logs and configuration files may not be destroyed during a security event, incident, or disaster.&nbsp; All log files must be preserved for review.&nbsp;</p>
+<h1>Automated Controls</h1>
+<ul>
+  <li>Scripts and automation systems all maintain logs/trails of all activities.</li>
+  <li>Volume Shadow Copy is enabled on all our systems which will be used to validate any log/config changes or deletions.</li>
+  <li>Log and file backups are enabled for all systems which will provide further cross-check.</li>
+</ul>
+<h1>Segregation of Duties</h1>
+<p>If the BCP plan is activated, a member of the {{team}} will assist the security/operations teams in restoring data and act as a "second pair of eyes" on the activities through whichever methods are practical.&nbsp; This can include</p>
+<ul>
+  <li>Screen sharing</li>
+  <li>Receiving updates</li>
+  <li>Tracking changes/logs.</li>
+</ul>
+<h1>Review/Report/Debrief</h1>
+<p>The "{{compliance-team}}" will be briefed at the next scheduled meeting (see <strong>Meeting notes</strong>) of the event and the team may ask for</p>
+<ul>
+  <li>a written report in addition to the documented evidence.</li>
+  <li>a comparative review of logs/configurations with backups to verify that all changes were recorded and no evidence was destroyed.</li>
+</ul>
