@@ -2,7 +2,7 @@
 title: Annual Exercise
 description: Blueprint for BCSF designed annual exercise in three parts.
 published: true
-date: 2021-07-15T01:01:16.900Z
+date: 2021-07-24T17:57:44.605Z
 tags: draft, gold, disaster-planning
 editor: markdown
 dateCreated: 2021-07-14T18:07:17.791Z
@@ -56,9 +56,12 @@ Three hours will go by fast here.  We're doing everything at once.  This agend
 | 180 | 200 | Chaos Monkey Briefing | Brief all parties about upcoming chaos monkey tests.Tests/Scenarios (allow for nomination of new scenarios)TimeframeExpected impacts |
 | N/A |     | Chaos Monkey Report | Chaos Monkey is expected to be completed within 14 days of this meeting and provide brief results of each test. |
 
-# Chaos Monkey (Real Environmental Tests).
+# Real Environmental Tests.
 
-Chaos Monkey are specific, realistic, and targeted failures often based on past experience.  They are intended to test our detection, communication, and recovery knowledge.  Each test needs specific break and fix documentation to be valid and must be detected and solved within 24 hours from the moment it is started.  We are interested in results. Failure is a result, as is a detection and resolution.   Note, not all of these tests need to be disruptive. We can test things we have mitigation activities for and simply make sure they work as expected.  
+Real Environmental Tests are specific, realistic, and targeted failures often based on past experience.  They are intended to test our detection, communication, and recovery knowledge.  Each test needs specific break and fix documentation to be valid and must be detected and solved within 24 hours from the moment it is started.  We are interested in results. Failure is a result, as is a detection and resolution.   
+
+> Note, not all of these tests need to be disruptive. We can test things we have mitigation activities for and simply make sure they work as expected.  
+{.is-warning}
 
 | Item | Scheduled Date | Lessons Learned / Briefing Notes |
 | --- | --- | --- |
