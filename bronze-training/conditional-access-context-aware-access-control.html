@@ -1,0 +1,86 @@
+<!--
+title: Understanding Conditional Access (Context-Aware) Control 
+description: This is a primer for business owners to understand why conditional access is important and how to begin to implement it. 
+published: true
+date: 2021-08-10T15:06:09.754Z
+tags: bronze, bronze-training, identity-management, conditional-access
+editor: ckeditor
+dateCreated: 2021-08-10T15:06:09.754Z
+-->
+
+<p>The modern security perimeter now extends beyond an organization's network to include user and device identity. Organizations can utilize these identity signals as part of their access control decisions. Conditional Access is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. &nbsp; Google's Context-Aware Access gives you control over which apps a user can access based on their context, such as whether their device complies with your IT policy.&nbsp;</p>
+<p>Conditional Access (or Context-Aware access) configuration requires that management create policies that make sense, and then those policies are translated to controls implemented at Azure AD, Google, or any identity service of choice. &nbsp; Because identity can span multiple services, these policies need to consider the core services in question and anything using them for authentication. &nbsp;We created <strong>typical use-cases </strong>for Conditional Access that serve smaller organizations best:</p>
+<ul>
+  <li><strong>Enforce MFA.&nbsp;</strong> This sounds counter-intuitive since you can enable MFA without Conditional Access. However enable and enforce are different.&nbsp; With Enable your only option is to voluntarily comply individuals. While you may think you can manage them, management is only available under Legacy MFA.&nbsp; In other words, to enforce MFA you must use Conditional Access unless you can turn on Security Defaults which then enforces it across the account.&nbsp; We generally want it on but find that the blanket approach to be disruptive and still fails to give that assurance you want. <i>We consider this the bare minimum standard for control.</i></li>
+  <li><strong>Guarantee use of modern authentication.&nbsp; </strong>This is a terribly difficult concept to communicate and understand, because Microsoft botched it.&nbsp; Legacy Auth and Modern Auth run side by side and each runs their own MFA system. They look and feel the same to the end-user for the most part, but they are materially different.&nbsp; The real life risk is that you can be getting MFA prompts and believe that all is well, only to discover that MFA Prompts are not required in certain conditions and thus someone could easily log into an M365 account.&nbsp; The scenario is due to a conflict in policies that is extremely difficult to detect unless you have an CA Enforce MFA policy properly configured.</li>
+  <li><strong>Retire legacy protocols</strong>. Conditional Access can easily turn-off insecure protocols for all users or selectively for some.&nbsp; This is a huge benefit and we strongly encourage the use of it.&nbsp; The journey there is not that simple, as you have to understand what's actually in-use and often it it is more pervasive than you expect.&nbsp; This policy is then the last-piece of a complex change.</li>
+  <li><strong>Expedite logins for trusted locations</strong>.&nbsp; While our financial services companies must protect every device at all times, law firms tend to have much more relaxed security.&nbsp; You may find that no MFA prompts inside your offices is desirable. We caution this use as it exposes a "malicious insider" vulnerability, is not aligned with "zero trust access" but it is convenient and sometimes this is acceptable.&nbsp; You weigh your risks.</li>
+  <li><strong>Enforce trusted location access</strong>. We can control what M365 resources are available to your tenant from trusted and non-trusted locations.&nbsp; This can be done on a per-app, per-protocol. or per user basis.&nbsp; While the ideal scenario is that you would <strong>only access M365 from trusted locations</strong>, that's often too complex for small offices.&nbsp; However, a more surgical approach can be setting it so that only certain apps, like Outlook Web Access, work within the office so that you limit the number of ingress points without completely locking down the tenant.</li>
+  <li><strong>Enforce device to service authentication</strong>.&nbsp; This requires extensive device control to be in place using Windows Intune, but it allows your organization to say that "only devices we explicitly trust will be able to connect to M365 services.</li>
+  <li><strong>Enforce hardware token authentication</strong>.&nbsp; Hardware tokens, such as FIDO2, are one of our favorite ways to protect services.&nbsp; They can be used in conjunction with the above items or as a compensating control for some of them (like device to service).&nbsp; Their implementations, however, are a bit difficult to explain because they are not uniform.&nbsp; &nbsp;There are, however, two great use-cases that shed light on what to expect:<ul>
+      <li>Microsoft uses FIDO2 for password-less authentication.&nbsp; It helps users spend less time entering passwords and more time using resources.</li>
+      <li>1Password uses FIDO2 as a multi-factor authentication.&nbsp; There you are expected to provide your user/pass/key but then you are also asked for your FIDO2 key to validate a connection.</li>
+    </ul>
+  </li>
+</ul>
+<p>Your organization should choose any, some, or all of these objectives or even create your own. Then use these objectives in controlling access.&nbsp;</p>
+<h1><strong>Considerations you need to make now:</strong></h1>
+<ol>
+  <li>Understand what control and protections mean to you.&nbsp; For that you need to understand what you are trying to protect.&nbsp; You can take our advice in part or as a whole or do your own.<ol>
+      <li>Consider the core service such as Microsoft 365, &nbsp;Google Workspace, Windows Active Directory, and any other primary identity service you may use.&nbsp;</li>
+      <li>Consider the components of your core services such as SharePoint which may benefit differently from controls imposed by such policies.</li>
+      <li>Consider the other services you use capable of SAML, OAUTH, or other connection protocols and see how they are affected by these rules.</li>
+    </ol>
+  </li>
+  <li>Decide if consolidating authentication should be part of this now, or later. It &nbsp;is unlikely that your organization will avoid consolidating identity services, so assume that this will happen. Think of this as more of a exercise in controlling scope and velocity of the changes rather than deciding whether or not do them.&nbsp;</li>
+  <li>As far as Legacy Protocols and Legacy Authentication - now it's time to dig into what that means to your organization.&nbsp; Your organization may realize that there are protocols in&nbsp;use far more than anticipated, especially when it comes to SMTP and EAS.&nbsp; That may affect people's use of devices. &nbsp;For example<ol>
+      <li>If you are using SMTP to authenticate websites or applications, you should read our <a href="https://guides.bentosecurity.org/en/bronze-controls/email-security-and-anti-spoofing/website-mass-mail-forms">https://guides.bentosecurity.org/en/bronze-controls/email-security-and-anti-spoofing/website-mass-mail-forms</a> as it is indirectly related to what you are doing and how you should approach it.</li>
+      <li>If you are using Messages or FaceTime contacts, or the native iOS Mail app -- all of those use EAS.</li>
+    </ol>
+  </li>
+  <li>Decide what you are willing to accept, what you are planning to control, and what you think is worth compensating control over direct control.&nbsp; &nbsp;In other words, a risk assessment, no matter how brief.</li>
+  <li>Implement in stages.&nbsp; This is a incremental effort that you do one stage at a time. &nbsp;See our Best Practices below.&nbsp;</li>
+</ol>
+<h1><strong>Is it worth it?</strong></h1>
+<p>Yes.&nbsp; Today's standards call for enforcing MFA.&nbsp; In 18-36 months zero-trust-access will be the de-facto standard for access control.&nbsp; This is based on a series of catastrophic events, like Kaseya's breach, and the executive order of the current administration to move government agencies to ZTA. The bullets on top of this article are all pieces of that ZTA policy.&nbsp; &nbsp;These are common-sense protection measures.&nbsp;</p>
+<h1>Best Practices for Roll Out</h1>
+<p>Follow these best practices to help ensure a smooth rollout of Conditional Access policies in your company. These best practices are based on customer feedback.</p>
+<h3>Avoid locking out employees, partners, or external collaborators</h3>
+<ul>
+  <li>Don’t block access to services, such as e-mail, that you use to share communications with your users (and that they also need to communicate with you).</li>
+  <li>Identify IP ranges that partners, external collaborators, and clients need.</li>
+  <li>Keep in mind that some &nbsp;services, such as Forms and Sites, don’t have a mobile app and will be blocked on phones.</li>
+</ul>
+<h3>Roll out device policies in phases</h3>
+<ul>
+  <li><strong>Discover</strong>—Enforce the use of Endpoint verification so you know which devices are accessing (or will be accessing)&nbsp; data. Find out information about each device, such as if it’s encrypted, &nbsp;running an up-to-date operating system, and if it’s a company-owned or personal device.<br>
+    <ul>
+      <li>Note that if you enforce&nbsp;a Conditional/Context-Aware device policy before the user can sign in to Endpoint verification, the user may get access denied even if their device meets the enforced Conditional/Context-Aware policy. This is because syncing the device attributes through Endpoint verification may take a few seconds. To avoid this, be sure to have&nbsp;users sign into Endpoint verification before you enforce a Conditional/Context-Aware device policy.</li>
+    </ul>
+  </li>
+  <li><strong>Remediate</strong>—Get your devices under IT management and in compliance with company standards in preparation for device policy enforcement. This should help reduce help desk tickets and support calls.</li>
+  <li><strong>Enforce</strong>—Enforce policies to restrict access to apps based on device context. Identify the organizations, sub-organizations, and groups, and then apply device policies in a phased rollout. Base your rollout plan on the device composition of each organization or group, and plan for sufficient help desk support.</li>
+</ul>
+<h1>Additional Details</h1>
+<ul>
+  <li>Microsoft Conditional Access: https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/plan-conditional-access</li>
+  <li>Google Context-Aware Access Control: https://support.google.com/a/answer/9275380?hl=en#zippy=</li>
+  <li>Okta Trust and Access Policies: https://help.okta.com/en/prod/Content/Topics/device-trust/SAML/Desktop/configure-conditional-access-policies-desktop.htm</li>
+</ul>
+<h1>Other Stuff</h1>
+<p>The following options are considered legacy authentication protocols described by Microsoft; they overlap with Google's “Less Secure Applications”.</p>
+<ul>
+  <li>Authenticated SMTP - Used by POP and IMAP clients to send email messages.</li>
+  <li>Autodiscover - Used by Outlook and EAS clients to find and connect to mailboxes in Exchange Online.</li>
+  <li>Exchange ActiveSync (EAS) - Used to connect to mailboxes in Exchange Online.</li>
+  <li>Exchange Online PowerShell - Used to connect to Exchange Online with remote PowerShell. If you block Basic authentication for Exchange Online PowerShell, you need to use the Exchange Online PowerShell Module to connect. For instructions, see&nbsp;<a href="https://docs.microsoft.com/en-us/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell">Connect to Exchange Online PowerShell using multi-factor authentication</a>.</li>
+  <li>Exchange Web Services (EWS) - A programming interface that's used by Outlook, Outlook for Mac, and third-party apps.</li>
+  <li>IMAP4 - Used by IMAP email clients.</li>
+  <li>MAPI over HTTP (MAPI/HTTP) - Used by Outlook 2010 and later.</li>
+  <li>Offline Address Book (OAB) - A copy of address list collections that are downloaded and used by Outlook.</li>
+  <li>Outlook Anywhere (RPC over HTTP) - Used by Outlook 2016 and earlier.</li>
+  <li>Outlook Service - Used by the Mail and Calendar app for Windows 10.</li>
+  <li>POP3 - Used by POP email clients.</li>
+  <li>Reporting Web Services - Used to retrieve report data in Exchange Online.</li>
+  <li>Other clients - Other protocols identified as utilizing legacy authentication.</li>
+</ul>
