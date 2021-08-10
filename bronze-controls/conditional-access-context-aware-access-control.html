@@ -2,14 +2,15 @@
 title: Understanding Conditional Access (Context-Aware) Control 
 description: This is a primer for business owners to understand why conditional access is important and how to begin to implement it. 
 published: true
-date: 2021-08-10T15:06:09.754Z
+date: 2021-08-10T15:12:54.543Z
 tags: bronze, bronze-training, identity-management, conditional-access
 editor: ckeditor
 dateCreated: 2021-08-10T15:06:09.754Z
 -->
 
 <p>The modern security perimeter now extends beyond an organization's network to include user and device identity. Organizations can utilize these identity signals as part of their access control decisions. Conditional Access is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. Conditional Access is at the heart of the new identity driven control plane. &nbsp; Google's Context-Aware Access gives you control over which apps a user can access based on their context, such as whether their device complies with your IT policy.&nbsp;</p>
-<p>Conditional Access (or Context-Aware access) configuration requires that management create policies that make sense, and then those policies are translated to controls implemented at Azure AD, Google, or any identity service of choice. &nbsp; Because identity can span multiple services, these policies need to consider the core services in question and anything using them for authentication. &nbsp;We created <strong>typical use-cases </strong>for Conditional Access that serve smaller organizations best:</p>
+<p>Conditional Access (or Context-Aware access) configuration requires that management create policies that make sense, and then those policies are translated to controls implemented at Azure AD, Google, or any identity service of choice. &nbsp; Because identity can span multiple services, these policies need to consider the core services in question and anything using them for authentication. &nbsp;</p>
+<h1><strong>Typical use-cases </strong>for Conditional Access</h1>
 <ul>
   <li><strong>Enforce MFA.&nbsp;</strong> This sounds counter-intuitive since you can enable MFA without Conditional Access. However enable and enforce are different.&nbsp; With Enable your only option is to voluntarily comply individuals. While you may think you can manage them, management is only available under Legacy MFA.&nbsp; In other words, to enforce MFA you must use Conditional Access unless you can turn on Security Defaults which then enforces it across the account.&nbsp; We generally want it on but find that the blanket approach to be disruptive and still fails to give that assurance you want. <i>We consider this the bare minimum standard for control.</i></li>
   <li><strong>Guarantee use of modern authentication.&nbsp; </strong>This is a terribly difficult concept to communicate and understand, because Microsoft botched it.&nbsp; Legacy Auth and Modern Auth run side by side and each runs their own MFA system. They look and feel the same to the end-user for the most part, but they are materially different.&nbsp; The real life risk is that you can be getting MFA prompts and believe that all is well, only to discover that MFA Prompts are not required in certain conditions and thus someone could easily log into an M365 account.&nbsp; The scenario is due to a conflict in policies that is extremely difficult to detect unless you have an CA Enforce MFA policy properly configured.</li>
@@ -27,19 +28,19 @@ dateCreated: 2021-08-10T15:06:09.754Z
 <h1><strong>Considerations you need to make now:</strong></h1>
 <ol>
   <li>Understand what control and protections mean to you.&nbsp; For that you need to understand what you are trying to protect.&nbsp; You can take our advice in part or as a whole or do your own.<ol>
-      <li>Consider the core service such as Microsoft 365, &nbsp;Google Workspace, Windows Active Directory, and any other primary identity service you may use.&nbsp;</li>
+      <li>Consider the core service such as Microsoft 365, &nbsp;Google Workspace, Windows Active Directory, and any other primary identity service you may use.</li>
       <li>Consider the components of your core services such as SharePoint which may benefit differently from controls imposed by such policies.</li>
       <li>Consider the other services you use capable of SAML, OAUTH, or other connection protocols and see how they are affected by these rules.</li>
     </ol>
   </li>
-  <li>Decide if consolidating authentication should be part of this now, or later. It &nbsp;is unlikely that your organization will avoid consolidating identity services, so assume that this will happen. Think of this as more of a exercise in controlling scope and velocity of the changes rather than deciding whether or not do them.&nbsp;</li>
+  <li>Decide if consolidating authentication should be part of this now, or later. It &nbsp;is unlikely that your organization will avoid consolidating identity services, so assume that this will happen. Think of this as more of a exercise in controlling scope and velocity of the changes rather than deciding whether or not do them.</li>
   <li>As far as Legacy Protocols and Legacy Authentication - now it's time to dig into what that means to your organization.&nbsp; Your organization may realize that there are protocols in&nbsp;use far more than anticipated, especially when it comes to SMTP and EAS.&nbsp; That may affect people's use of devices. &nbsp;For example<ol>
       <li>If you are using SMTP to authenticate websites or applications, you should read our <a href="https://guides.bentosecurity.org/en/bronze-controls/email-security-and-anti-spoofing/website-mass-mail-forms">https://guides.bentosecurity.org/en/bronze-controls/email-security-and-anti-spoofing/website-mass-mail-forms</a> as it is indirectly related to what you are doing and how you should approach it.</li>
       <li>If you are using Messages or FaceTime contacts, or the native iOS Mail app -- all of those use EAS.</li>
     </ol>
   </li>
   <li>Decide what you are willing to accept, what you are planning to control, and what you think is worth compensating control over direct control.&nbsp; &nbsp;In other words, a risk assessment, no matter how brief.</li>
-  <li>Implement in stages.&nbsp; This is a incremental effort that you do one stage at a time. &nbsp;See our Best Practices below.&nbsp;</li>
+  <li>Implement in stages.&nbsp; This is a incremental effort that you do one stage at a time. &nbsp;See our Best Practices below.</li>
 </ol>
 <h1><strong>Is it worth it?</strong></h1>
 <p>Yes.&nbsp; Today's standards call for enforcing MFA.&nbsp; In 18-36 months zero-trust-access will be the de-facto standard for access control.&nbsp; This is based on a series of catastrophic events, like Kaseya's breach, and the executive order of the current administration to move government agencies to ZTA. The bullets on top of this article are all pieces of that ZTA policy.&nbsp; &nbsp;These are common-sense protection measures.&nbsp;</p>
