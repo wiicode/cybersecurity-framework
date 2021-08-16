@@ -2,7 +2,7 @@
 title: TechBento Core Controls List with Recommendations
 description: This is a TechBento Recommends implementation of the BCSF Core.
 published: true
-date: 2021-08-15T22:57:54.285Z
+date: 2021-08-16T13:31:48.553Z
 tags: checklist, bronze, techbento
 editor: markdown
 dateCreated: 2021-08-15T22:57:54.285Z
@@ -13,8 +13,27 @@ dateCreated: 2021-08-15T22:57:54.285Z
 > These actions should be carried out by staff responsible for determining the overall cyber security policy.
 {.is-success}
 
+| Action Item | Resources or Recommendations |
+| ----------- | ---------------------------- |
+| Identify and record essential data for regular backups.  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
 
-- [ ] Identify and record essential data for regular backups. 
+
+- [ ] 
 - [ ] Create a password policy. 
 - [ ] Enforce a strong password policy and but avoid using forced/scheduled password changes. 
 - [ ] Enable user ability to change and rotate passwords on their terms.
@@ -31,6 +50,27 @@ dateCreated: 2021-08-15T22:57:54.285Z
 ## Technical actions 
 > These actions should be carried out by technical staff responsible for the setup and configuration of devices, networks and software.
 {.is-success}
+
+| Action Item | Resources or Recommendations |
+| ----------- | ---------------------------- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+
 - [ ] Secure the domain registrar account by randomizing the password, storing it safely, and enabling all available security features such as PIN, MFA, and security questions.
 - [ ] Configure anti-spoofing systems (DMARC, DKIM, and SPF) on your domains.
 - [ ] Purchase/Deploy advanced security protection for e-mail. 
@@ -67,6 +107,27 @@ dateCreated: 2021-08-15T22:57:54.285Z
 - [ ] Disable unnecessary services on organization workstations and servers.
 
 ## Hardware
+
+| Action Item | Resources or Recommendations |
+| ----------- | ---------------------------- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+
 - [ ] Purchase and deploy cloud-controlled security appliance(s).
 - [ ] Purchase and deploy cloud-controlled end-user gateways for mobile workers.
 - [ ] Purchase and deploy cloud-controlled enterprise WiFi access points.
@@ -75,6 +136,27 @@ dateCreated: 2021-08-15T22:57:54.285Z
 - [ ] Purchase hardware MFA keys. 
 
 ## Special Recommendations
+
+| Action Item | Resources or Recommendations |
+| ----------- | ---------------------------- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+
 - [ ] If your organization has ever used SolarWinds Orion versions 2019.4 through 2020.2.1 HF1, refer to CISA’s Emergency Directive ED 21-01, associated supplemental guidance, and CISA’s Activity Alert AA20-352A for additional guidance prior to applying patches.  Although ED 21-01 and associated guidance only apply to Federal Civilian Executive Branch agencies, CISA encourages non-federal entities to review them for recommendations on operating the SolarWinds Orion platform.
 - [ ] If using Apple products, sign up for Apple Business Manager (with DEP)
 
@@ -82,6 +164,27 @@ dateCreated: 2021-08-15T22:57:54.285Z
 
 > These actions should be carried out by staff responsible for implementing staff training and awareness. Every member of the team (including board members) needs enough knowledge to understand how cyber security impacts on their area of focus.
 {.is-success}
+
+| Action Item | Resources or Recommendations |
+| ----------- | ---------------------------- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+
 
 - [ ] Provide secure physical storage (e.g a locked cupboard) for your staff to write down and store passwords. 
 - [ ] Create a Cyber Security training plan that you can use for all staff. 
