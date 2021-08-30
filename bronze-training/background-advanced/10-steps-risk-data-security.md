@@ -2,10 +2,10 @@
 title: Data security
 description: Guidance on how organizations can protect themselves in cyberspace.
 published: true
-date: 2021-05-29T20:01:36.506Z
+date: 2021-08-30T14:27:02.519Z
 tags: bronze, bronze-training
 editor: markdown
-dateCreated: 2021-05-29T19:10:09.343Z
+dateCreated: 2021-06-30T18:33:15.346Z
 ---
 
 > Protect data where it is vulnerable.
@@ -42,7 +42,7 @@ Data needs to be protected from *unauthorized* access, modification, or deletion
 ## Back up your data
 
 -   Ensure you backup any data that is essential for running your business. This should include your business data as well as configuration data required to operate your systems. Having suitable backups will help you recover in the event of an incident, whether an accidental file deletion or a major cyber attack.
--   Have multiple backups of important files stored in different locations. The ‘3-2-1’ rule is a popular strategy that can be used in most scenarios; at least 3 copies, on 2 devices, and 1 offsite backup. This helps ensure that if one copy is compromised, there is at least one other copy intact. This is a key mitigation against ransomware as up-to-date backups will enable you to recover your data.
+-   Have multiple backups of important files stored in different locations. The [‘3-2-1’ rule](/bronze-controls/offline-backups-in-an-online-world) is a popular strategy that can be used in most scenarios; at least 3 copies, on 2 devices, and 1 offsite backup. This helps ensure that if one copy is compromised, there is at least one other copy intact. This is a key mitigation against ransomware as up-to-date backups will enable you to recover your data.
 -   Ensure that an offline backup is kept separate from your network, or in a cloud service designed for this purpose. Restrict access to credentials and servers used for backups because attackers may target your backups, either as a way to obtain your data or to destroy your ability to recover them. You should also ensure that previous versions of files are protected from accidental or malicious deletion, for example when using cloud synchronisation services for backups. You should also ensure that previous versions of files are protected from accidental or malicious deletion, for example when using cloud synchronisation services for backups.
 -   Retain backups for a period of time, rather than just have a single rolling backup as this does not provide much protection if an infection/damage isn't noticed before the backup is overwritten. Consider how long it may be before something is detected and ensure your backups are kept for longer (at least a month).
 -   Test your backups regularly and ensure you know how to restore files from a backup before you have to do it for real. Ensure you can gain access to your backups in the event of a complete system failure.
