@@ -2,7 +2,7 @@
 title: Phishing attacks: defending your organization
 description: How to defend your organization from email phishing attacks.
 published: true
-date: 2021-06-30T19:37:47.841Z
+date: 2021-09-10T13:44:20.079Z
 tags: bronze, bronze-controls, email
 editor: markdown
 dateCreated: 2021-06-30T19:37:47.841Z
@@ -107,7 +107,7 @@ Spotting phishing emails is hard, and spear phishing is even harder to detect. T
 -   Training should encourage your users' willingness to report future incidents, and re-assure them that it is OK to ask for further support when something looks suspicious. This message needs buy-in across all departments including HR, support and senior management.
 -   Ensure that your users understand the nature of the threat posed by phishing, especially those departments that may be more vulnerable to it. Customer-facing departments may receive high volumes of unsolicited emails, whereas staff authorized to access sensitive information, manage financial assets, or administer IT systems will be of greater interest to an attacker (and may be the target of a sophisticated spear phishing campaign). Ensure these more vulnerable staff are aware of the risks, and offer them additional support.
 -   Help your users spot the common features of phishing messages, such as urgency or authority cues that pressure the user to act. 
--   [Using phishing simulations will not make your *organization* more secure](/bronze-controls/phishing-simulation-campaigns). Some companies have user training that gets the participants to craft their own phishing email, giving them a much richer view of the techniques used. Others are experimenting with workshops, quizzes and gamification, making a friendly competition between peers (rather than an 'us vs them' situation with security).  
+-   BCSF is pivoting on use of phishing similations.  2021-Q3 guidance recommends organizations using Microsoft 365 leverage tools within the "Microsoft Attack Similator" and combine them with training resources to educate users.  Third-party phishing simulators remain a contested item within our team. 
       
      
 ### **Make it easier for your users to** ***recognize*** **fraudulent requests**
