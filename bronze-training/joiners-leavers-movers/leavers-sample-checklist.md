@@ -1,14 +1,14 @@
 ---
-title: Maintain data security after an employee leaves
+title: 	 Prevent unauthorized access after an employee leaves
 description: To prevent data leaks, revoke a user’s access to your organization’s data when they leave.
 published: true
-date: 2021-12-01T18:51:37.039Z
+date: 2021-12-01T18:52:03.384Z
 tags: bronze, bronze-controls
 editor: markdown
 dateCreated: 2021-12-01T18:51:37.038Z
 ---
 
-# Header
+# Maintain data security after an employee leaves
 As your organization's administrator,  keep your organization's data safe and secure when an user leaves by completing the following best practices:
 
 1. - Wipe any mobile devices
