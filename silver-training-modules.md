@@ -2,7 +2,7 @@
 title: Security Awareness Training
 description: 
 published: true
-date: 2022-02-27T21:21:12.749Z
+date: 2022-02-27T21:21:17.446Z
 tags: silver, silver-training
 editor: markdown
 dateCreated: 2021-03-02T03:19:02.660Z
@@ -11,4 +11,3 @@ dateCreated: 2021-03-02T03:19:02.660Z
 > Thank you for your interest. During Early Access we are not publishing Silver training content. 
 {.is-warning}
 
-![bentosecurityprojectdiagram_v4.png](/public/bentosecurityprojectdiagram_v4.png)
