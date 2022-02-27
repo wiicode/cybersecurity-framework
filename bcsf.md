@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2021-07-03T00:27:22.929Z
+date: 2022-02-27T21:28:40.876Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -473,7 +473,7 @@ You should prevent the exploitation of known vulnerabilities in networks and inf
 ## Principle
 *The organization builds resilience against cyber attack into the design, implementation, operation and management of systems that support the operation of essential functions.*
 
-Description
+## Description
 The essential functions performed by an organization should be resilient to cyber attack. Building upon B.4 (the technical protection of systems), organizations should ensure that not only is technology well built and maintained, but consideration is also given to how operation of the essential function can continue in the event of technology failure or compromise. In addition to technical means, this might include additional contingency capability such as manual processes to ensure functions can continue.
 
 organizations should ensure that systems are well maintained and administered through life. The devices and interfaces that are used for administration are frequently targeted, so should be well protected. Spear phishing remains a common method used to compromise accounts with privileged access. Preventing the use of these accounts for routine activities such as email and web browsing significantly limits the ability for a hacker to compromise them.
@@ -501,15 +501,6 @@ In the event of a adverse event, you should be able to revert to backups of hard
 
 Suitable alternative backups may include paper-based information and manual processes. Other essential backups may include personnel with appropriate knowledge and access to up-to-date documentation. Consider how to make it easy to recover following an incident or compromise.
 
-#### Section References
-{.grid-list}
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-{.links-list}
 
 # Methodical Staff awareness and training (B.6)
 > Appropriately supporting staff to ensure they make a positive contribution to the cyber security of essential functions.
@@ -541,11 +532,6 @@ These outcomes are best achieved when organizations actively engage with staff a
 #### Section References
 {.grid-list}
 - [User Awarness](/bronze-training/background-advanced/10-steps-user-education)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
 {.links-list}
 
 # Curious Security monitoring (C.1)
