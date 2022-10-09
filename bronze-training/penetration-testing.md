@@ -2,7 +2,7 @@
 title: Penetration Testing
 description: 
 published: true
-date: 2022-10-09T02:30:04.390Z
+date: 2022-10-09T02:31:30.650Z
 tags: bronze, assurance
 editor: markdown
 dateCreated: 2022-10-09T02:21:00.961Z
@@ -34,7 +34,7 @@ Highly experienced penetration testers may find subtle issues which your interna
 
 Typically, penetration tests are used to identify the level of technical risk emanating from software and hardware vulnerabilities. Exactly what techniques are used, what targets are allowed, how much knowledge of the system is given to the testers beforehand and how much knowledge of the test is given to system administrators can vary within the same test regime.
 
-A [well-scoped](https://www.ncsc.gov.uk/guidance/penetration-testing#scope) penetration test can give confidence that the products and security controls tested have been configured in accordance with good practice and that there are no common or publicly known vulnerabilities in the tested components, _at the time of the test_.
+A [well-scoped](#) penetration test can give confidence that the products and security controls tested have been configured in accordance with good practice and that there are no common or publicly known vulnerabilities in the tested components, _at the time of the test_.
 
 ### What sort of system should be tested?
 
@@ -52,7 +52,7 @@ It's not uncommon for a year or more to elapse between penetration tests. So, vu
 
 Third party penetration tests should be performed by qualified and experienced staff only. By their nature, penetration tests cannot be entirely procedural, an exhaustive set of test cases cannot be drawn up. Therefore, the quality of a penetration test is closely linked to the abilities of the penetration testers involved.
 
-The NCSC recommends that HMG organisations use testers and companies which are part of the CHECK scheme. Non-governmental organisations should use teams qualified under one of these certification schemes: [CREST](http://www.crest-approved.org/), [Tiger scheme](https://www.tigerscheme.org/), [Cyber Scheme](https://www.thecyberscheme.org/).
+The BCSF recommends that HMG organisations use testers and companies which are part of the CHECK scheme. Non-governmental organisations should use teams qualified under one of these certification schemes: [CREST](http://www.crest-approved.org/), [Tiger scheme](https://www.tigerscheme.org/), [Cyber Scheme](https://www.thecyberscheme.org/).
 
 ### Types of testing
 
@@ -70,11 +70,11 @@ Tests can be carried out by testers armed with varying amounts of information ab
 
 Each of the tests described below can be run as either a blackbox or whitebox operation:
 
-* _**Vulnerability identification in bespoke or niche software**_ - Most commonly used in web applications. This type of testing must give feedback to developers on coding practices which [avoid introducing the categories of vulnerability identified](https://www.ncsc.gov.uk/guidance/cloud-security-principle-7-secure-development).
+* _**Vulnerability identification in bespoke or niche software**_ - Most commonly used in web applications. This type of testing must give feedback to developers on coding practices which [avoid introducing the categories of vulnerability identified](#).
 
 * _**Scenario driven testing aimed at identifying vulnerabilities**_- The penetration testers explore a particular scenario to discover whether it leads to a vulnerability in your defences. Scenario's include: Lost laptop, unauthorised device connected to internal network, and compromised DMZ host, but there are many others possible. You should consider, based on previous incidents, which scenarios are most relevant to your organisation.
 
-* _**Scenario driven testing of detection and response capability**_ - In this version of scenario driven testing, the aim is to also gauge the detection and response capabilities your organisation has in place. This will help you understand their efficacy and coverage in the particular scenario. This is an area of current work by the NCSC, further information will be available shortly, please [contact us](https://www.ncsc.gov.uk/section/about-this-website/contact-us) if you have a particular need in this area.
+* _**Scenario driven testing of detection and response capability**_ - In this version of scenario driven testing, the aim is to also gauge the detection and response capabilities your organisation has in place. This will help you understand their efficacy and coverage in the particular scenario. This is an area of current work by the BCSF, further information will be available shortly, please [contact us](#) if you have a particular need in this area.
 
 ***
 
