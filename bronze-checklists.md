@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2023-10-05T14:59:28.549Z
+date: 2023-10-05T14:59:56.679Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -51,13 +51,11 @@ We split the list up into four areas you should consider when fortifying your bu
 
 - [ ] **Require multi-factor authentication (MFA) on company devices**. Requiring MFA for all accounts is more secure than requiring a password alone. 
 
+- [ ] **Monitor security health**. Security isn’t something you can check off and be done with, it’s an ongoing process. Consider partnering with ***Bento Cybersecurity Professional Services*** to formalize your information security and build an ongoing and proactive effort for risk management.  
 
 > **A Really Quick Guide to MFA**.
 **Microsoft Authenticator** and **Google Authenticator** are interchangeable and oftent the most convenient solution, but they have an allegience to their own systems.  Each will provide a better experience in their world.  A solid third-party option is ***1Password*** which can be used as an authenticator in addition to password storage and integrates exceptionally well into a good culture.  For reliable sync between devices, **Authy** shines with simplcity and capability.
 {.is-warning}
-
-
-- [ ] **Monitor security health**. Security isn’t something you can check off and be done with, it’s an ongoing process. Consider partnering with ***Bento Cybersecurity Professional Services*** to formalize your information security and build an ongoing and proactive effort for risk management.  
 
 
 # Take Care of Your Tech
