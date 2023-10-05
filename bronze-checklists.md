@@ -2,102 +2,96 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2021-06-01T19:33:37.747Z
+date: 2023-10-05T14:59:28.549Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
 ---
 
-BCSF provides a series of core and advanced check-lists for securing your environments.  These checklists, also known as control sets, describe activities ranging from **Asset** all the way to **Vulnerability** Management.  Before diving into checklists, be sure to review the [Learning and Training](/bronze-training) for critical understanding of why these controls exist and what they can do for your organization.
+Security doesn’t have to be complicated. We’ve adapted this checklist to help businesses identify what steps they need to take to keep their employees and their customers' information secure.
+
+We split the list up into four areas you should consider when fortifying your business against cybersecurity threats. While we can't cover everything here, by using these four sections as a guide, you'll be off to a great start*.
+
 
 {.grid-list}
-- [BCSF Layered Defense Example *This checklist is a relatively common example of activities/controls used by our customers. While it does not meet minimum standards for cyber security, it is a list that offers substantial value in risk-reduction when implemented.*](/bronze-checklists/layered-defense)
+- [Get a security and compliance solution.*Check out our very own **Bento Assurance HQ** developed by our team to inventory devices, systems, policies, controls and capture your ongoing and proactive effort.*](https://www.bentosecurity.com/assurancehq)
 {.links-list}
 
-# BCSF Core Controls List
-> It's normal to feel overwhelmed by cyber security.  There are no shortcuts, no silver bullets, no cheap fixes.  Fortunately, information security is fundamentally layered and incremental.  Below is the **most basic set of actions** your company can do to start improving your cyber security posture. If these seem a little too simple for you, great!, head over to [Advanced Controls](/silver-controls) for the comprehensive list. 
+{.grid-list}
+
+# Create a Security Culture
+> Creating a culture of security means giving your team the tools and guidance they need to work securely. The goal is to eliminate guesswork. When employees know how to work securely, they're much more likely to do so. With 82% of data breaches traced back to a human element, it’s important to empower employees to make smart security decisions at work. To learn more, you check out the [How to build a culture of security guide](https://1password.com/resources/culture-of-security/infographic-culture-of-security.pdf) from our friends at 1Password.
 {.is-info}
 
 
-## Policy actions 
+## Step 1.
 
-> These actions should be carried out by staff responsible for determining the overall cyber security policy.
-{.is-success}
+- [ ] **Create a cybersecurity training program**.  Ongoing security training will help keep your team knowledgeable about how to reduce risk and make smart security choices. Download our guide to creating an internal security training program.
+
+- [ ]  **Incorporate security into your onboarding experience**. Make it easy for new employees to get up to speed on your security policies so they set good habits from the get go.
+
+- [ ]  **Build policy compliance into employee reviews**. You’re only as strong as your weakest link. Security should be a part of everyone’s role at a company.
+
+- [ ]  **Reward security contributors**. Encourage your workers to share security concerns or ideas, then reward them for their participation.
+
+- [ ] **Make it easy to contact your security team**. Make sure employees know who is responsible for security within your business and how to contact them if there’s a problem.
+
+# Establish Access and Control Guidelines
+> Not everyone in your business needs access to everything. By creating guidelines around who has access to what and when, you can significantly reduce your threat landscape. Review, monitor, and control permissions so that people only have access to what they need.
+{.is-info}
 
 
-- [ ] Identify and record essential data for regular backups. 
-- [ ] Create a password policy. 
-- [ ] Enforce a strong password policy and but avoid using forced/scheduled password changes. 
-- [ ] Enable user ability to change and rotate passwords on their terms.
-- [ ] Decide what access controls your users need so they can access only the information and systems required for their job role (least privilege principle). 
-- [ ] Develop an incident response plan. 
-- [ ] Inventory, review, and document all of your materially signifcant vendors/applications/systems and develop a continuity policy for each. 
-- [ ] Conduct risk assessments of your critical apps and services.
-- [ ] Develop a training plan for staff. 
-- [ ] Determine how personal devices (BYOD) should be used and how will they be managed in the future as Microsoft and Google change support for unmanaged devices. 
-- [ ] Determine the approppriate level of insider threat detection. 
-- [ ] Write a clear procedure for onboarding staff (and workstations)
-- [ ] Write a clear procedure for offboarding staff (and retiring hardware)
+## Step 2.
 
-## Technical actions 
-> These actions should be carried out by technical staff responsible for the setup and configuration of devices, networks and software.
-{.is-success}
-- [ ] Secure the domain registrar account by randomizing the password, storing it safely, and enabling all available security features such as PIN, MFA, and security questions.
-- [ ] Configure anti-spoofing systems (DMARC, DKIM, and SPF) on your domains.
-- [ ] Purchase/Deploy advanced security protection for e-mail. 
-- [ ] Pirchase/Deploy an advanced authentication management technology for SaaS. 
-- [ ] Enable "external" email notification on inbound email. 
-- [ ] Purchase/Deploy a CASB system to monitor your Microsoft 365/G-Suite/DropBox/SharePoint/OneDrive.
-- [ ] Purchase/Deploy a third-party backup for your Microsoft/Google e-mail system.
-- [ ] Purchase/Deploy an insider threat detection product. 
-- [ ] Configure Data Loss Protection features of your Microsoft 365/Google Workspace environment. 
-- [ ] Use separate administrative accounts on separate administration workstations.
-- [ ] Implement the principle of least privilege on data access.
-- [ ] Enable a personal firewall on organization workstations that is configured to deny unsolicited connection requests.
-- [ ] Install and monitor centralized on Anti-virus software (endpoint defense tools)
-- [ ] Deploy sufficient environment/system/application monitoring and alerts to meet your expectations for uptime, detection, and resolution of issues.
-- [ ] Maintain up-to-date antivirus signatures and engines.
-- [ ] Block access to physical ports for staff who do not need them. 
-- [ ] Consider making a password manager available to your staff to secure their passwords. 
-- [ ] Review the star ratings before choosing one from an app store. 
-- [ ] Ensure data is being backed up to a backup platform e.g. portable hard drive and/or the cloud. 
-- [ ] Set automated back-up periods relevant to the needs of the business. 
-- [ ] Switch on password protection for all available devices. 
-- [ ] Change default passwords on all internet-enabled devices as per password policy. 
-- [ ] Install and turn on tracking applications for all available devices e.g. Find my iPhone. 
-- [ ] Enable two-factor authentication (MFA) for all important accounts (e.g email). 
-- [ ] Implement Local Administrator Password Solution (LAPS).
-- [ ] Apply restrictions to prevent users downloading 3rd party apps. 
-- [ ] Check for instances of common executables executing with the hash of another process (e.g., splunklogger.exe with the hash of procdump).
-- [ ] Install the latest software updates on all devices and switch on automatic updates with periodic checks. 
-- [ ] Ensure all applications on devices are up to date and automatic updates have been set to download as soon as they are released. 
-- [ ] Schedule regular manual checks on updates. 
-- [ ] Set up encryption on all office equipment. 
-- [ ] Use products such as Bitlocker for Windows using a Trusted Platform Module (TPM) with a PIN, or FileVault (on mac OS).
-- [ ] Secure Remote Desktop Protocol (RDP) and other remote access solutions using MFA and “jump boxes” for access.
-- [ ] Disable unnecessary services on organization workstations and servers.
+- [ ] **Mitigate risk by limiting who has access to what**. Employ the principle of least privilege when it comes to your security. By reducing who has access to what, you’re reducing your threat landscape. Always ask yourself if someone needs access to something to complete their work. If they don’t, they shouldn’t have access.
 
-## Hardware
-- [ ] Purchase and deploy cloud-controlled security appliance(s).
-- [ ] Purchase and deploy cloud-controlled end-user gateways for mobile workers.
-- [ ] Purchase and deploy cloud-controlled enterprise WiFi access points.
-- [ ] Purchase and deploy cloud-controlled smart switch(es).
-- [ ] Give each teleworker a company owned and managed computer.
-- [ ] Purchase hardware MFA keys. 
+- [ ] **Require strong, unique passwords on all employee accounts**. You can’t control whether a service you use has been breached, but you can encourage your team to use unique passwords for every account – so if there is a breach it won’t affect any of their other accounts..
 
-## Special Recommendations
-- [ ] If your organization has ever used SolarWinds Orion versions 2019.4 through 2020.2.1 HF1, refer to CISA’s Emergency Directive ED 21-01, associated supplemental guidance, and CISA’s Activity Alert AA20-352A for additional guidance prior to applying patches.  Although ED 21-01 and associated guidance only apply to Federal Civilian Executive Branch agencies, CISA encourages non-federal entities to review them for recommendations on operating the SolarWinds Orion platform.
-- [ ] If using Apple products, sign up for Apple Business Manager (with DEP)
+- [ ] **Implement a password manager**. A password manager like ***1Password*** makes it easy for your team to create and use strong, unique passwords. Learn more about why you need a password manager.  
 
-## Training and awareness actions
+- [ ] **Require multi-factor authentication (MFA) on company devices**. Requiring MFA for all accounts is more secure than requiring a password alone. 
 
-> These actions should be carried out by staff responsible for implementing staff training and awareness. Every member of the team (including board members) needs enough knowledge to understand how cyber security impacts on their area of focus.
-{.is-success}
 
-- [ ] Provide secure physical storage (e.g a locked cupboard) for your staff to write down and store passwords. 
-- [ ] Create a Cyber Security training plan that you can use for all staff. 
-- [ ] Include details of your ‘Password’ policy explaining how to create a non-predictable. 
-- [ ] Include how to spot the obvious signs of phishing. 
-- [ ] Include details of your reporting process if staff suspect phishing. 
-- [ ] Include details on how your business operates and how they deal with requests via email. Include details of Wi-Fi hotspot vulnerabilities and how to use alternative options (e.g VPN/ Mobile network).
-- [ ] Test their compliance. 
+> **A Really Quick Guide to MFA**.
+**Microsoft Authenticator** and **Google Authenticator** are interchangeable and oftent the most convenient solution, but they have an allegience to their own systems.  Each will provide a better experience in their world.  A solid third-party option is ***1Password*** which can be used as an authenticator in addition to password storage and integrates exceptionally well into a good culture.  For reliable sync between devices, **Authy** shines with simplcity and capability.
+{.is-warning}
+
+
+- [ ] **Monitor security health**. Security isn’t something you can check off and be done with, it’s an ongoing process. Consider partnering with ***Bento Cybersecurity Professional Services*** to formalize your information security and build an ongoing and proactive effort for risk management.  
+
+
+# Take Care of Your Tech
+> Keeping software and devices up-to-date can go a long way in protecting your business. It also helps to delete or archive data that no longer serves a purpose – thus reducing potential damage should your business be breached.
+{.is-info}
+
+
+## Step 3.
+
+- [ ] **Encrypt your hard drive/data**. Should anyone ever gain access to your hard drive or data, encryption renders that data useless.
+
+- [ ] **Require regular updates TO company devices**. Automatic software updates should be a requirement of your security policy – and employees should be encouraged to stay vigilant about updates. Since most updates are security-related, it’s important to make sure your employees are using the latest versions of any software that could be compromised.
+
+- [ ] **Create a data retention policy**. It’s important to set guidelines around what data you store (and for how long), and what you archive. Keeping information you don’t need could put you at higher risk if you’re ever caught up in a breach where that information is exposed.
+
+- [ ] **Implement a device management program**. Create rules around how employees use company devices to encourage smarter security. For example, require workers to use two browsers – one for work, and one for personal use.
+
+- [ ] **Secure your business network**. Use up-to-date firewall rules for your network and perform regular software updates, scheduled backups, and periodic reviews of your systems.
+
+- [ ] **Establish a tool review process**. Make it easy for your team to request new tools so they can stay productive while still aligning with the company’s security mandates.
+
+# Prepare Your Incident Response Early
+> With a [50% increase in global weekly cyberattacks per organization year-over-year](https://www.techradar.com/news/cyberattacks-on-businesses-saw-a-huge-rise-in-2021) the risks of a data breach grow every day. Putting security practices in place to prevent a breach is the first step in protecting your organization – the next is creating an incident response plan should you be breached.
+
+{.is-info}
+
+
+## Step 4.
+
+- [ ] **Create an incident response plan**. Treat breaches as an inevitability so you're always prepared should one occur. Check out our [Incident response guide](/bronze-training/background-advanced/10-steps-incident-management) to get started.
+
+- [ ] **Establish an incident response team**. If an incident does occur, you’ll want to react fast. Part of that is having a team ready to respond. Make sure everyone knows who’s on that team, and how to contact them.
+
+# Establish an Ongoing and Proactive Effort
+Schedule regular times throughout the year to review policies, training documentation, onboarding resources, tooling, and more. Make improvements and tweak your security as needed.
+
+No business is the same, so security policies and needs should be created to cater to your business’ needs. Use this checklist to review different parts of your security, and update wherever you need it.
