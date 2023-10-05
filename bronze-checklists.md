@@ -2,7 +2,7 @@
 title: Reasonable Information Security for Business
 description: Checklists Home Page
 published: true
-date: 2023-10-05T15:04:35.538Z
+date: 2023-10-05T15:05:11.796Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -79,7 +79,6 @@ We split the list up into four areas you should consider when fortifying your bu
 
 # Prepare Your Incident Response Early
 > With a [50% increase in global weekly cyberattacks per organization year-over-year](https://www.techradar.com/news/cyberattacks-on-businesses-saw-a-huge-rise-in-2021) the risks of a data breach grow every day. Putting security practices in place to prevent a breach is the first step in protecting your organization – the next is creating an incident response plan should you be breached.
-
 {.is-info}
 
 
