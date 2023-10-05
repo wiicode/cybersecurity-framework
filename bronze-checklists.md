@@ -1,8 +1,8 @@
 ---
-title: BCSF Checklists for Controls (Core)
+title: Reasonable Information Security for Business
 description: Checklists Home Page
 published: true
-date: 2023-10-05T15:04:00.554Z
+date: 2023-10-05T15:04:35.538Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
