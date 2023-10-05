@@ -2,7 +2,7 @@
 title: BCSF Checklists for Controls (Core)
 description: Checklists Home Page
 published: true
-date: 2023-10-05T14:59:56.679Z
+date: 2023-10-05T15:01:40.147Z
 tags: bronze, home
 editor: markdown
 dateCreated: 2021-02-20T19:51:26.918Z
@@ -14,7 +14,7 @@ We split the list up into four areas you should consider when fortifying your bu
 
 
 {.grid-list}
-- [Get a security and compliance solution.*Check out our very own **Bento Assurance HQ** developed by our team to inventory devices, systems, policies, controls and capture your ongoing and proactive effort.*](https://www.bentosecurity.com/assurancehq)
+- [Get a security and compliance solution.*Check out our very own **Bento Assurance HQ** developed by our team to inventory devices, systems, policies, controls and capture your ongoing and proactive effort. The software is included in all **Professional Services** engagements to accelerate your information security efforts.*](https://www.bentosecurity.com/assurancehq)
 {.links-list}
 
 {.grid-list}
