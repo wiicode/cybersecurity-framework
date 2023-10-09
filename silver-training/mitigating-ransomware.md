@@ -2,7 +2,7 @@
 title: Mitigating malware and ransomware attacks
 description: How to defend organizations against malware or ransomware attacks
 published: true
-date: 2023-10-09T12:02:57.906Z
+date: 2023-10-09T12:06:22.478Z
 tags: silver, security-operations, silver-training, ransomware
 editor: markdown
 dateCreated: 2021-02-22T03:02:19.092Z
@@ -16,11 +16,11 @@ Following this guidance will reduce:
 -   the spread of malware throughout your organization
 -   the impact of the infection
 
-**If you've already been infected with malware,** [**please refer to our list of urgent steps to take**](/guidance/mitigating-malware-and-ransomware-attacks#stepsifinfected)
+**If you've already been infected with malware,** [**please refer to our list of urgent steps to take**](/silver-training/mitigating-ransomware#stepsifinfected)
 
--   Smaller organizations should refer to the [BCSF's Small Business Guide](/collection/small-business-guide).
--   Larger organizations / enterprises should refer to the [BCSF's Mobile Device Guidance](/collection/mobile-device-guidance).
--   For information about protecting your devices at home, please read [our guidance especially written for individuals and families](/section/information-for/individuals-families#section_4).
+-   Smaller organizations should refer to the [BCSF's Small Business Guide](/bronze-training/background-advanced).
+-   Larger organizations / enterprises should refer to the [BCSF's Mobile Device Guidance](//bronze-training/mobile-device-guidance).
+-   For information about protecting your devices at home, please read [our guidance especially written for individuals and families](/bronze-training/individual-cybersecurity).
 
 ---
 
