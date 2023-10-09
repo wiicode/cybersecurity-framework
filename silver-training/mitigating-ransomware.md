@@ -2,7 +2,7 @@
 title: Mitigating malware and ransomware attacks
 description: How to defend organizations against malware or ransomware attacks
 published: true
-date: 2021-06-24T18:22:25.604Z
+date: 2023-10-09T12:02:57.906Z
 tags: silver, security-operations, silver-training, ransomware
 editor: markdown
 dateCreated: 2021-02-22T03:02:19.092Z
@@ -82,7 +82,7 @@ Up-to-date backups are the most effective way of recovering from a ransomware at
 -   Scan backups for malware before you restore files. Ransomware may have infiltrated your network over a period of time, and replicated to backups before being discovered.
 -   Regularly patch products used for backup, so attackers cannot exploit any known vulnerabilities they might contain.
 
-There have been cases where attackers have destroyed copied files or disrupted recovery processes before conducting ransomware attacks. Ideally, backup accounts and solutions should be protected using Privileged Access Workstations (PAW) and hardware firewalls to enforce IP allow listing. [Multi-factor Authentication](/multi-factor-authentication-online-services) (MFA) should be enabled, and the MFA method should not be installed on the same device that is used for the administration of backups. [Privileged Access Management (PAM) solutions](/protecting-system-administration-with-pam) remove the need for administrators to directly access high-value backup systems.
+There have been cases where attackers have destroyed copied files or disrupted recovery processes before conducting ransomware attacks. Ideally, backup accounts and solutions should be protected using Privileged Access Workstations (PAW) and hardware firewalls to enforce IP allow listing. [Multi-factor Authentication](/bronze-training/passwords/multi-factor-authentication-online-services) (MFA) should be enabled, and the MFA method should not be installed on the same device that is used for the administration of backups. [Privileged Access Management (PAM) solutions](/bronze-controls/designing-controls/identity-and-access-management) remove the need for administrators to directly access high-value backup systems.
 
 
 
