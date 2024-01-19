@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2022-02-27T21:28:40.876Z
+date: 2024-01-19T15:43:36.717Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -28,7 +28,7 @@ As an applied framework, BCSF provides the general structure and specific guidan
 
 ## We built this resource with the following goals:
 
-- To enable companies to develop their information security governance from one comprehsnive resource.
+- To enable companies to develop their information security governance from one comprehensive resource.
 - To give our clients actionable and relevant cybersecurity information.
 - To reduce chaos and spotlight the information critical to cybersecurity success.
 - To align information security practices with realistic needs and best practices.
