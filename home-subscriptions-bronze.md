@@ -2,7 +2,7 @@
 title: Getting Started
 description: Bronze (Core) Content Introduction
 published: true
-date: 2024-01-21T12:48:12.544Z
+date: 2024-01-21T12:48:38.699Z
 tags: bronze, home, adapted
 editor: markdown
 dateCreated: 2021-02-13T16:49:27.989Z
@@ -46,5 +46,5 @@ With sufficient understanding and the right relationships, you can put in place 
 
 # What support can the BCSF provide on cyber security?
 
-Bento Security's BCSF/Guides offer a compilation of useful documentation.  Bento Secruity's Professional Services provide cybersercurity and information technology management services.  Visit https://wwww.bentosecurity.com to learn more.
+Bento Security's BCSF/Guides offer a compilation of useful documentation.  Bento Security's Professional Services provide cybersercurity and information technology management services.  Visit https://wwww.bentosecurity.com to learn more.
 
