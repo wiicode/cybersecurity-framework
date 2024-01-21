@@ -2,7 +2,7 @@
 title: Getting Started
 description: Bronze (Core) Content Introduction
 published: true
-date: 2024-01-21T12:44:55.866Z
+date: 2024-01-21T12:48:12.544Z
 tags: bronze, home, adapted
 editor: markdown
 dateCreated: 2021-02-13T16:49:27.989Z
@@ -46,18 +46,5 @@ With sufficient understanding and the right relationships, you can put in place 
 
 # What support can the BCSF provide on cyber security?
 
-The BCSF Team provides cyber security guidance to small companies and supports the methods for implementing information security programs.  
-
--   **understands** cyber security, and summarizes this knowledge into practical guidance that we make available to all
--   **responds** to cyber security incidents to reduce the harm they cause to organizations
--   **connects** organizations with cyber security services providers
-
-Cyber security researchers can generally find 359 ways to compromise your systems, but not all will work for your business.  BCSF encourages companies delop their own materials rather than outousrce that responsibility to tools and subscriptions.  With that said, a subscription may be part of your program, but it should not be the whole process.  A successful program often includes:
-
-- Policies and Procedures training during onboarding and annually.
-- Regular team meetings where cyber security is given 1-5 minutes.
-- Case studies and stories of compromise for review.
-- Security Awareness testing. 
-- Insider threat detection. 
-- Auditing and control validation. 
+Bento Security's BCSF/Guides offer a compilation of useful documentation.  Bento Secruity's Professional Services provide cybersercurity and information technology management services.  Visit https://wwww.bentosecurity.com to learn more.
 
