@@ -2,7 +2,7 @@
 title: Bento Cyber Security Framework
 description: BCSF provides guidance for organizations responsible for vitally important services and activities.
 published: true
-date: 2024-01-19T15:43:36.717Z
+date: 2024-06-03T14:52:35.203Z
 tags: bcsf, bronze, framework
 editor: markdown
 dateCreated: 2021-02-21T02:36:41.481Z
@@ -40,7 +40,7 @@ As an applied framework, BCSF provides the general structure and specific guidan
 
 # Framework User Values
 When developing your information technology program based on our framework, you should embrace these values:
-- [Be Mindful ------------------------------------- *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/emplotee/vendor having a bad moment, a bad experience, or worse.*](#)
+- [Be Mindful ------------------------------------- *Consider the action you are doing and whether or not that action is in a chain of events that can lead to a customer/employee/vendor having a bad moment, a bad experience, or worse.*](#)
 - [Be Methodical ------------------------------------- *When process exists - follow it every time.  Don’t let the pressures of time and noise distract you from process and methods.*](#)
 - [Be Curious ------------------------------------- *Take time to educate yourself, access documentation, and become familiar with the policy, process, and security documents your organization has made avaialble.*](#)
 {.links-list}
